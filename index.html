@@ -1412,6 +1412,7 @@ body.noremind .c.illegal img{filter:none}
   </select>
   <span class="worn" id="worn"></span>
   <span class="stat" id="stat"></span>
+  <button class="btn" id="acct" hidden>Sign in</button>
 </header>
 
 <nav class="tabs">
@@ -1776,7 +1777,13 @@ const hasCore=()=>dlist().some(({c})=>c.tribal.length>0);
 const effMode=()=>G.mode||((G.coco!=null||hasCore())?"rec":null);
 
 function load(k,f){try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}}
-function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return 1}catch(e){toast("Storage full");return 0}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast("Storage full");return 0}
+  /* The one seam where local state becomes cloud state. Everything already
+     saves through here, so syncing a key is adding it to SYNCED — no call site
+     changes. Guarded because ACCT is declared at the bottom of the file and
+     save() runs during startup, before that line has been reached. */
+  try{if(typeof ACCT!=="undefined")ACCT.queue(k)}catch(e){}
+  return 1}
 function saveDecks(){save(K_DECKS,DECKS);checkPerfect60()}
 /* Sixty of one card is illegal in every format, so this can only ever be done
    on purpose. Checked on save rather than on add so it fires the moment the
@@ -5277,8 +5284,137 @@ const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
 showTab(load("fs3_tab","tDeck"));
 drawTitle();
+/* =========================================================================
+   Accounts — sign in with Google, carry decks / dust / staples between devices
+
+   Three rules this code follows, in priority order:
+
+   1. SIGNED OUT, THE SITE IS EXACTLY WHAT IT WAS. Everything below is
+      additive. No Supabase config, no network, blocked CDN, file:// with no
+      server — in every one of those cases the sign-in button hides itself and
+      not one other line of behaviour changes. The 33 suites run against a
+      logged-out page and must stay green without knowing this exists.
+
+   2. THE LIBRARY LOADS ONLY WHEN IT IS NEEDED. Nothing is fetched on a normal
+      visit. The script is pulled in on the first click of Sign in, or on load
+      only if a saved session is already sitting in localStorage. A visitor who
+      never signs in never pays for this.
+
+   3. CLOUD WINS — EXCEPT WHEN THE CLOUD IS EMPTY. Ben chose "cloud wins,
+      always". Taken literally that wipes a new user's work: a fresh account has
+      no rows, so signing in would replace five real decks with nothing. So the
+      rule is cloud-wins whenever the account holds anything at all, and a
+      first-ever sign-in pushes local up instead. No prompts, no merge.
+   ========================================================================= */
+const SB_URL="https://cwevqwisucaemfsffpsy.supabase.co";
+const SB_KEY="sb_publishable_1uLIyne_6GxEPtWbQoj7jg_4R1UUfmT";
+/* The keys that follow a person between devices. Must match the allowlist in
+   supabase-schema.sql — the database rejects anything else, on purpose. */
+const SYNCED=[K_DECKS,"fs3_dust",K_STAR];
+const SB_LIB="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js";
+
+const ACCT={
+  sb:null, user:null, pushing:null,
+
+  configured(){return /^https:\/\//.test(SB_URL)&&SB_KEY.length>20},
+
+  /* Supabase parks its session under sb-<ref>-auth-token. Reading that
+     directly is how we know whether to bother loading the library at all. */
+  hasSession(){try{return Object.keys(localStorage)
+      .some(k=>/^sb-.*-auth-token$/.test(k))}catch(e){return false}},
+
+  lib(){
+    if(window.supabase)return Promise.resolve(window.supabase);
+    return new Promise((ok,no)=>{
+      const s=document.createElement("script");
+      s.src=SB_LIB; s.async=true;
+      s.onload=()=>window.supabase?ok(window.supabase):no(new Error("no global"));
+      s.onerror=()=>no(new Error("script blocked"));
+      document.head.appendChild(s)})},
+
+  async client(){
+    if(this.sb)return this.sb;
+    const lib=await this.lib();
+    this.sb=lib.createClient(SB_URL,SB_KEY);
+    return this.sb},
+
+  /* Called once at startup. Deliberately silent on every failure path — an
+     account feature must never be the reason the site doesn't load. */
+  async boot(){
+    const b=$("acct");if(!b)return;
+    if(!this.configured())return;              // stays hidden, site unchanged
+    b.hidden=false;
+    b.onclick=()=>this.user?this.signOut():this.signIn();
+    if(!this.hasSession()&&!/[#&]access_token=/.test(location.hash))return;
+    try{
+      const sb=await this.client();
+      const {data}=await sb.auth.getSession();
+      if(data&&data.session){await this.arrive(data.session.user)}
+    }catch(e){/* offline, blocked, or logged out — the site carries on */}},
+
+  async signIn(){
+    try{
+      const sb=await this.client();
+      await sb.auth.signInWithOAuth({provider:"google",
+        options:{redirectTo:location.origin+location.pathname}})}
+    catch(e){toast("Couldn't reach sign-in — check your connection")}},
+
+  async signOut(){
+    try{const sb=await this.client();await sb.auth.signOut()}catch(e){}
+    this.user=null;this.paint();
+    toast("Signed out — your decks stay in this browser")},
+
+  /* Signed in. Pull what the account holds; if it holds nothing, this is a
+     first sign-in and local goes up instead. */
+  async arrive(user){
+    this.user=user;this.paint();
+    let rows=[];
+    try{
+      const sb=await this.client();
+      const r=await sb.from("user_state").select("key,value").in("key",SYNCED);
+      if(r.error)throw r.error;
+      rows=r.data||[]}
+    catch(e){toast("Signed in — couldn't reach your saved data");return}
+    if(rows.length){
+      rows.forEach(r=>{try{localStorage.setItem(r.key,JSON.stringify(r.value))}catch(e){}});
+      toast("Loaded your account");
+      location.reload();          // cheapest correct way to re-read every table
+    }else{
+      await this.push(SYNCED);
+      toast("Saved this browser's decks to your account")}},
+
+  /* Debounced so a burst of adds is one write, not forty. */
+  queue(key){
+    if(!this.user||SYNCED.indexOf(key)<0)return;
+    clearTimeout(this.pushing);
+    this.pushing=setTimeout(()=>this.push([key]),1200)},
+
+  async push(keys){
+    if(!this.user)return;
+    const rows=keys.map(k=>({user_id:this.user.id,key:k,
+      value:load(k,null)})).filter(r=>r.value!==null);
+    if(!rows.length)return;
+    try{
+      const sb=await this.client();
+      await sb.from("user_state").upsert(rows,{onConflict:"user_id,key"})}
+    catch(e){/* a failed sync must never interrupt deck building */}},
+
+  paint(){
+    const b=$("acct");if(!b)return;
+    const e=this.user&&(this.user.email||"");
+    b.textContent=this.user?("Sign out"+(e?" · "+e.split("@")[0]:"")):"Sign in";
+    b.title=this.user?"Signed in as "+e:"Sign in with Google to carry your decks between devices"}
+};
+window.ACCT=ACCT;   /* exposed so the suites can assert on it */
+
 setTimeout(jiggleArt,650);   // let the page settle before the switch waves
+/* ACCT is a const declared below this IIFE, so it is in the temporal dead zone
+   right now — calling it directly here is a load-time crash. Deferring by a
+   tick lets the rest of the file finish evaluating first. Same rule as MICKEYS
+   and CARDS: late constants are only ever touched from inside a function. */
+setTimeout(()=>{try{ACCT.boot()}catch(e){}},0);
 })();
+
 </script>
 </body>
 </html>
