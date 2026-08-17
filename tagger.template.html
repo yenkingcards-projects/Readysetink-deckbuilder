@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flounder Tagger</title>
+<style>
+:root{--bg:#08111f;--panel:#111f34;--panel2:#182b45;--line:#22395c;--line2:#33527f;
+ --tx:#e9f1fb;--mut:#89a5c6;--dim:#5f7c9f;--acc:#4fd0f7;--gold:#f7c95c;--good:#3fd995;--bad:#ff6b6b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font:15px/1.45 "Outfit",system-ui,-apple-system,sans-serif;min-height:100vh}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer;background:none;border:none}
+::-webkit-scrollbar{width:9px}::-webkit-scrollbar-thumb{background:var(--line2);border-radius:9px}
+header{display:flex;align-items:center;gap:12px;padding:10px 16px;background:#0c1828;border-bottom:1px solid var(--line);flex-wrap:wrap;position:sticky;top:0;z-index:20}
+header b{font-size:1.1rem}header .sp{flex:1}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.8rem}
+.btn:hover{border-color:var(--acc)}
+.btn.go{background:linear-gradient(135deg,var(--acc),#2596c4);border-color:transparent;color:#05202f;font-weight:700}
+.btn.bad:hover{border-color:var(--bad);color:#ffb0b0}
+.prog{height:6px;background:#0a1626;border-radius:99px;overflow:hidden;width:190px}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--good));transition:width .3s}
+.stat{font-size:.74rem;color:var(--dim);white-space:nowrap}
+main{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:18px;padding:16px;max-width:1300px;margin:0 auto}
+@media(max-width:820px){main{grid-template-columns:1fr}}
+.cardbox{position:sticky;top:64px}
+.cardbox img{width:100%;border-radius:12px;display:block;background:#0a1626;box-shadow:0 14px 40px -14px #000}
+/* The rotation lives on the wrapper, not the img, so the marker overlay turns
+   with it and a click lands in the art's own coordinates either way. */
+.shot{position:relative;display:block}
+.shot.loc{transform:rotate(90deg) scale(.72)}
+.shot.marking{cursor:crosshair}
+.shot.marking img{outline:2px solid var(--gold);outline-offset:3px;border-radius:12px}
+.spot{position:absolute;border-radius:50%;aspect-ratio:1;border:2px solid #fff;
+  box-shadow:0 0 0 2px rgba(0,0,0,.55),0 0 14px 4px rgba(255,255,255,.65);
+  transform:translate(-50%,-50%);cursor:pointer;background:rgba(255,255,255,.06)}
+.spot:hover{border-color:#ff6b6b;box-shadow:0 0 0 2px rgba(0,0,0,.55),0 0 14px 4px rgba(255,107,107,.7)}
+.markbar{display:flex;gap:8px;align-items:center;margin-top:9px;flex-wrap:wrap}
+.markbar input[type=range]{flex:1;min-width:110px}
+.cardname{margin-top:10px;font-size:1.05rem;font-weight:700}
+.cardmeta{font-size:.76rem;color:var(--dim);margin-top:2px}
+.nav{display:flex;gap:6px;margin-top:11px}
+.nav button{flex:1}
+.grp{margin-bottom:14px}
+.grp h3{font-size:.66rem;text-transform:uppercase;letter-spacing:.09em;color:var(--acc);font-weight:700;margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{border:1px solid var(--line);border-radius:8px;padding:6px 11px;font-size:.79rem;color:var(--mut);display:flex;align-items:center;gap:6px}
+.tag:hover{border-color:var(--line2);color:var(--tx)}
+.tag.on{background:var(--acc);border-color:var(--acc);color:#052235;font-weight:700}
+.tag kbd{font-size:.6rem;opacity:.55;border:1px solid currentColor;border-radius:3px;padding:0 3px}
+.alias{width:100%;background:#0a1626;border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:.85rem;margin-top:4px}
+.alias:focus{outline:none;border-color:var(--acc)}
+.hint{font-size:.71rem;color:var(--dim);margin-top:5px;line-height:1.5}
+.hint code{background:#0a1626;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:#a8dcf5}
+.filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.filters select,.filters input{background:#0a1626;border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:.79rem}
+.aliasnote{background:#0a1626;border:1px solid var(--line);border-left:2px solid var(--gold);border-radius:0 8px 8px 0;padding:9px 11px;font-size:.76rem;color:var(--mut);margin-bottom:12px}
+.aliasnote b{color:var(--gold)}
+.done{color:var(--good);font-size:.76rem}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--acc);
+ padding:9px 16px;border-radius:9px;font-size:.82rem;opacity:0;pointer-events:none;transition:opacity .25s;z-index:50}
+.toast.on{opacity:1}
+textarea{width:100%;height:190px;background:#0a1626;border:1px solid var(--line);border-radius:8px;
+ padding:10px;font:12px/1.5 ui-monospace,monospace;color:var(--tx)}
+.modal{position:fixed;inset:0;background:rgba(2,7,14,.88);display:none;align-items:center;justify-content:center;padding:20px;z-index:60}
+.modal.on{display:flex}
+.modal>div{background:var(--panel);border:1px solid var(--line2);border-radius:14px;padding:18px;max-width:620px;width:100%}
+.modal h2{font-size:1.05rem;margin-bottom:8px}
+</style>
+</head>
+<body>
+<header>
+  <b>🏷️ Flounder Tagger</b>
+  <div class="prog"><i id="pi" style="width:0%"></i></div>
+  <span class="stat" id="pstat"></span>
+  <div class="sp"></div>
+  <button class="btn" id="bImport">Import</button>
+  <button class="btn go" id="bExport">Export</button>
+</header>
+
+<main>
+  <div>
+    <div class="cardbox">
+      <div class="shot" id="shot"><img id="img" alt=""><div id="spots"></div></div>
+      <div class="markbar">
+        <button class="btn" id="bMark">🐭 Mark symbols</button>
+        <input type="range" id="mSize" min="3" max="20" value="7" title="circle size">
+        <span class="stat" id="mCount"></span>
+      </div>
+      <div class="cardname" id="cname">—</div>
+      <div class="cardmeta" id="cmeta"></div>
+      <div class="nav">
+        <button class="btn" id="bPrev">← Back</button>
+        <button class="btn" id="bSkip">Skip →</button>
+        <button class="btn go" id="bNext">Save &amp; next ⏎</button>
+      </div>
+      <div class="hint">Number/letter keys toggle tags · <code>Enter</code> save &amp; next ·
+        <code>←</code> <code>→</code> move · everything saves to this browser as you go.</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="filters">
+      <select id="fMode">
+        <option value="untagged">Untagged only</option>
+        <option value="all">All cards</option>
+        <option value="tagged">Tagged only</option>
+        <option value="marked">Symbol-marked only</option>
+      </select>
+      <select id="fSet"><option value="">All sets</option></select>
+      <input id="fQ" placeholder="find a card…" style="flex:1;min-width:130px">
+      <span class="stat" id="fCount"></span>
+    </div>
+
+    <div class="aliasnote" id="aliasNote"></div>
+
+    <div id="groups"></div>
+
+    <div class="grp">
+      <h3>Extra words for this card</h3>
+      <input class="alias" id="aliasIn" placeholder="anything you'd type to find this card — comma separated">
+      <div class="hint">Per-card only. For nicknames that apply to <b>every</b> card of a character
+        (Stitch → blue dog), edit <code>aliases</code> in art-tags.json instead — one entry covers all of them.</div>
+    </div>
+  </div>
+</main>
+
+<div class="modal" id="mIO"><div>
+  <h2 id="ioTitle">Export</h2>
+  <p class="hint" id="ioHint"></p>
+  <textarea id="ioBox" spellcheck="false"></textarea>
+  <div class="nav" style="margin-top:10px">
+    <button class="btn" id="ioClose">Close</button>
+    <button class="btn go" id="ioAction">Copy</button>
+  </div>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>var DATA=/*__DATA__*/;var SEED=/*__TAGS__*/;</script>
+<script>
+(function(){
+"use strict";
+
+/* ===================================================================
+   TAG VOCABULARY — edit freely. `k` is the keyboard shortcut.
+   Keep it to things you can settle in under a second per card;
+   anything you have to squint at will make tagging 2,500 cards
+   feel like work and the data will get noisy.
+   =================================================================== */
+const TAGS=[
+ {g:"Framing",items:[
+   {id:"closeup", l:"Close-up",     k:"1"},
+   {id:"midshot", l:"Mid shot",     k:"f"},
+   {id:"fullbody",l:"Full body",    k:"2"},
+   {id:"poster",  l:"Poster shot",  k:"g"},
+   {id:"feet",    l:"Feet visible", k:"3"}]},
+ {g:"Facing",items:[
+   {id:"left",   l:"Facing left",   k:"q"},
+   {id:"right",  l:"Facing right",  k:"w"},
+   {id:"forward",l:"Facing viewer", k:"e"},
+   {id:"away",   l:"Facing away",   k:"r"}]},
+ {g:"How many",items:[
+   {id:"solo",  l:"Just one",     k:"a"},
+   {id:"two",   l:"Two",          k:"s"},
+   {id:"crowd", l:"Three or more",k:"d"}]},
+ {g:"Pose",items:[
+   {id:"action",  l:"Action",   k:"z"},
+   {id:"standing",l:"Standing", k:"x"},
+   {id:"sitting", l:"Sitting",  k:"c"},
+   {id:"flying",  l:"Flying",   k:"v"},
+   {id:"sleeping",l:"Sleeping", k:"b"},
+   {id:"pointing",l:"Pointing", k:"h"},
+   {id:"waving",  l:"Waving",   k:"j"},
+   {id:"inviting",l:"Inviting", k:"k"}]},
+ {g:"Subject",items:[
+   {id:"animal",l:"Animal", k:"l"},
+   {id:"bird",  l:"Bird",   k:"m"}]},
+ {g:"Props",items:[
+   {id:"holding",   l:"Holding something",k:"4"},
+   {id:"weapon",    l:"Weapon",           k:"5"},
+   {id:"food",      l:"Food or drink",    k:"6"},
+   {id:"instrument",l:"Instrument",       k:"7"}]},
+ {g:"Setting",items:[
+   {id:"outdoors",l:"Outdoors", k:"t"},
+   {id:"indoors", l:"Indoors",  k:"y"},
+   {id:"water",   l:"Water",    k:"u"},
+   {id:"sky",     l:"Sky",      k:"i"},
+   {id:"night",   l:"Night",    k:"o"},
+   {id:"snow",    l:"Snow",     k:"p"}]},
+ {g:"Look",items:[
+   {id:"bw",     l:"Black & white",k:"8"},
+   {id:"sketch", l:"Sketch / alt art",k:"9"},
+   {id:"glowing",l:"Glowing / magic",k:"0"}]},
+ {g:"Lore & flavor",items:[
+   {id:"storylore",  l:"Story lore",            k:"n"},
+   {id:"flavorsrc",  l:"Flavor text from source"},
+   {id:"flavorlorc", l:"Flavor text from Lorcana"},
+   {id:"flavorsong", l:"Flavor text from a song"}]},
+ {g:"Ben's law",items:[
+   {id:"washhands", l:"Would make them wash hands before shaking hands with them"}]}
+];
+const ALL=TAGS.flatMap(g=>g.items);
+const BYKEY={};ALL.forEach(t=>{if(t.k)BYKEY[t.k]=t.id});
+
+const K="fs_arttags_v1";
+const $=i=>document.getElementById(i);
+const esc=s=>(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+let TT;function toast(m){const t=$("toast");t.textContent=m;t.classList.add("on");
+  clearTimeout(TT);TT=setTimeout(()=>t.classList.remove("on"),1800)}
+
+const CARDS=DATA.cards.map(c=>({...c,f:c.v?c.n+" - "+c.v:c.n}));
+const SETS=DATA.sets||{};
+
+// saved work wins over the seed file so a rebuild never eats your tagging
+let STORE=(()=>{try{return JSON.parse(localStorage.getItem(K))||null}catch(e){return null}})()
+        || {aliases:(SEED&&SEED.aliases)||{},cards:(SEED&&SEED.cards)||{}};
+if(SEED&&SEED.aliases)for(const k in SEED.aliases)if(!STORE.aliases[k])STORE.aliases[k]=SEED.aliases[k];
+const persist=()=>{try{localStorage.setItem(K,JSON.stringify(STORE))}catch(e){toast("Storage full!")}};
+
+let idx=0,list=[];
+
+function rec(f){return STORE.cards[f]||{t:[],a:[]}}
+function isTagged(f){const r=STORE.cards[f];return !!(r&&((r.t&&r.t.length)||(r.a&&r.a.length)))}
+
+function buildList(){
+  const mode=$("fMode").value,set=$("fSet").value,q=$("fQ").value.trim().toLowerCase();
+  list=CARDS.filter(c=>{
+    if(set&&c.s!==set)return false;
+    if(q&&!(c.f.toLowerCase().includes(q)||(c.sto||"").toLowerCase().includes(q)))return false;
+    if(mode==="untagged"&&isTagged(c.f))return false;
+    if(mode==="tagged"&&!isTagged(c.f))return false;
+    if(mode==="marked"&&!((STORE.cards[c.f]||{}).m||[]).length)return false;
+    return true;
+  });
+  if(idx>=list.length)idx=0;
+  $("fCount").textContent=list.length+" in queue";
+}
+function progress(){
+  const done=CARDS.filter(c=>isTagged(c.f)).length;
+  $("pi").style.width=(done/CARDS.length*100)+"%";
+  $("pstat").textContent=done+" / "+CARDS.length+" tagged ("+Math.round(done/CARDS.length*100)+"%)";
+}
+
+function draw(){
+  buildList();progress();
+  if(!list.length){
+    $("cname").textContent="Nothing left in this queue 🎉";
+    $("cmeta").textContent="Switch the filter to keep going.";
+    $("img").removeAttribute("src");$("groups").innerHTML="";$("aliasNote").textContent="";
+    return;
+  }
+  const c=list[Math.min(idx,list.length-1)],r=rec(c.f);
+  const im=$("img");im.src=c.imgL||c.img;
+  $("shot").className="shot"+(c.ty==="Location"?" loc":"")+(MARKING?" marking":"");
+  drawSpots();
+  $("cname").textContent=c.f;
+  $("cmeta").textContent=`${(SETS[c.s]||{}).name||"Set "+c.s} #${c.num} · ${c.ty} · ${(c.co||[]).join("/")}${c.sto?" · "+c.sto:""}`;
+
+  const al=STORE.aliases[c.n];
+  $("aliasNote").innerHTML=al&&al.length
+    ? `<b>${esc(c.n)}</b> already answers to: ${al.map(esc).join(", ")} — inherited by all ${
+        CARDS.filter(x=>x.n===c.n).length} ${esc(c.n)} cards.`
+    : `No nicknames yet for <b>${esc(c.n)}</b>. Add them under <code>aliases</code> in art-tags.json to cover every ${esc(c.n)} card at once.`;
+
+  $("groups").innerHTML=TAGS.map(g=>`<div class="grp"><h3>${g.g}</h3><div class="tags">`+
+    g.items.map(t=>`<button class="tag${r.t.includes(t.id)?" on":""}" data-t="${t.id}">
+      ${t.l}${t.k?`<kbd>${t.k.toUpperCase()}</kbd>`:""}</button>`).join("")+`</div></div>`).join("");
+  $("groups").querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>toggle(b.dataset.t));
+  $("aliasIn").value=(r.a||[]).join(", ");
+}
+
+/* ===== marking hidden mouse-shaped symbols =====
+   Coordinates are percentages of the card's own art, never pixels, so they hold
+   at any display size and for every printing of the same card. */
+let MARKING=false;
+const spotsOf=f=>(STORE.cards[f]||{}).m||[];
+function drawSpots(){
+  const c=list[Math.min(idx,list.length-1)];if(!c)return;
+  const m=spotsOf(c.f);
+  $("spots").innerHTML=m.map((s,i)=>
+    `<div class="spot" data-s="${i}" style="left:${s.x}%;top:${s.y}%;width:${s.r*2}%"></div>`).join("");
+  $("spots").querySelectorAll("[data-s]").forEach(d=>d.onclick=ev=>{
+    ev.stopPropagation();
+    if(!MARKING)return;
+    const r={...(STORE.cards[c.f]||{t:[],a:[]})};
+    r.m=spotsOf(c.f).filter((_,j)=>j!==+d.dataset.s);
+    if(!r.m.length)delete r.m;
+    STORE.cards[c.f]=r;persist();drawSpots();
+  });
+  $("mCount").textContent=m.length?`${m.length} marked`:"";
+}
+$("bMark").onclick=()=>{
+  MARKING=!MARKING;
+  $("bMark").classList.toggle("go",MARKING);
+  $("shot").classList.toggle("marking",MARKING);
+  toast(MARKING?"Click the symbol. Click a circle to remove it.":"Marking off");
+};
+$("shot").onclick=ev=>{
+  if(!MARKING||ev.target.classList.contains("spot"))return;
+  const c=list[Math.min(idx,list.length-1)];if(!c)return;
+  const im=$("img");
+  // offsetX/Y are in the image's own untransformed space, so a rotated
+  // location card records the same coordinates as an upright one
+  const x=(ev.offsetX/im.offsetWidth)*100, y=(ev.offsetY/im.offsetHeight)*100;
+  if(x<0||x>100||y<0||y>100)return;
+  const r={...(STORE.cards[c.f]||{t:[],a:[]})};
+  r.m=[...spotsOf(c.f),{x:+x.toFixed(1),y:+y.toFixed(1),r:+$("mSize").value}];
+  STORE.cards[c.f]=r;persist();drawSpots();
+};
+$("mSize").oninput=()=>{
+  const c=list[Math.min(idx,list.length-1)];if(!c)return;
+  const m=spotsOf(c.f);if(!m.length)return;
+  const r={...STORE.cards[c.f]};
+  r.m=m.map((s,i)=>i===m.length-1?{...s,r:+$("mSize").value}:s);   // resize the last one placed
+  STORE.cards[c.f]=r;persist();drawSpots();
+};
+
+function toggle(id){
+  const c=list[idx];if(!c)return;
+  const r={t:[...(rec(c.f).t||[])],a:[...(rec(c.f).a||[])]};
+  const i=r.t.indexOf(id);i<0?r.t.push(id):r.t.splice(i,1);
+  STORE.cards[c.f]=r;persist();
+  // repaint just this button so the queue doesn't shuffle under you mid-card
+  const btn=$("groups").querySelector(`[data-t="${id}"]`);
+  if(btn)btn.classList.toggle("on",i<0);
+  progress();
+}
+function saveAliases(){
+  const c=list[idx];if(!c)return;
+  const a=$("aliasIn").value.split(",").map(s=>s.trim()).filter(Boolean);
+  const r={t:[...(rec(c.f).t||[])],a};
+  if(!r.t.length&&!r.a.length)delete STORE.cards[c.f];else STORE.cards[c.f]=r;
+  persist();
+}
+function go(n){
+  saveAliases();
+  const wasUntagged=$("fMode").value==="untagged";
+  idx+=n;
+  // in "untagged" mode a saved card leaves the queue, so staying put IS advancing
+  if(wasUntagged&&n>0)idx-=1;
+  if(idx<0)idx=0;
+  buildList();
+  if(idx>=list.length)idx=Math.max(0,list.length-1);
+  draw();
+}
+
+$("bNext").onclick=()=>go(1);
+$("bSkip").onclick=()=>{idx++;buildList();if(idx>=list.length)idx=0;draw()};
+$("bPrev").onclick=()=>go(-1);
+["fMode","fSet"].forEach(id=>$(id).onchange=()=>{idx=0;draw()});
+$("fQ").oninput=()=>{idx=0;draw()};
+$("aliasIn").onchange=saveAliases;
+
+document.addEventListener("keydown",e=>{
+  if(e.target.tagName==="INPUT"||e.target.tagName==="TEXTAREA"){
+    if(e.key==="Enter"&&e.target.id==="aliasIn"){saveAliases();go(1)}
+    return;
+  }
+  if($("mIO").classList.contains("on"))return;
+  if(e.key==="Enter"){go(1);e.preventDefault();return}
+  if(e.key==="ArrowRight"){$("bSkip").click();e.preventDefault();return}
+  if(e.key==="ArrowLeft"){go(-1);e.preventDefault();return}
+  const id=BYKEY[e.key.toLowerCase()];
+  if(id){toggle(id);e.preventDefault()}
+});
+
+/* import / export */
+function openIO(mode){
+  $("mIO").classList.add("on");
+  if(mode==="export"){
+    $("ioTitle").textContent="Export tags";
+    $("ioHint").innerHTML="Paste this into <code>art-tags.json</code>, then rerun <code>build_flounder.py</code> to make the tags searchable.";
+    $("ioBox").value=JSON.stringify({aliases:STORE.aliases,cards:STORE.cards},null,1);
+    $("ioAction").textContent="Copy";
+    $("ioAction").onclick=()=>navigator.clipboard.writeText($("ioBox").value)
+      .then(()=>toast("Copied"),()=>toast("Select and copy manually"));
+  }else{
+    $("ioTitle").textContent="Import / merge tags";
+    $("ioHint").innerHTML="Paste a friend's export. Their tags merge into yours — on a clash, <b>yours win</b>.";
+    $("ioBox").value="";
+    $("ioAction").textContent="Merge";
+    $("ioAction").onclick=()=>{
+      try{
+        const o=JSON.parse($("ioBox").value);let na=0,nc=0;
+        for(const k in (o.aliases||{})) if(!STORE.aliases[k]){STORE.aliases[k]=o.aliases[k];na++}
+        for(const k in (o.cards||{}))   if(!STORE.cards[k]){STORE.cards[k]=o.cards[k];nc++}
+        persist();$("mIO").classList.remove("on");draw();
+        toast(`Merged ${nc} cards, ${na} alias sets`);
+      }catch(err){toast("That isn't valid JSON")}
+    };
+  }
+}
+$("bExport").onclick=()=>openIO("export");
+$("bImport").onclick=()=>openIO("import");
+$("ioClose").onclick=()=>$("mIO").classList.remove("on");
+
+/* init */
+$("fSet").innerHTML=`<option value="">All sets</option>`+
+  Object.entries(SETS).sort((a,b)=>(b[1].d||"").localeCompare(a[1].d||""))
+    .filter(([code])=>CARDS.some(c=>c.s===code))
+    .map(([code,o])=>`<option value="${esc(code)}">${esc(o.name)}</option>`).join("");
+draw();
+})();
+</script>
+</body>
+</html>

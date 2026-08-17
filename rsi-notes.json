@@ -1,0 +1,43 @@
+{
+ "_readme": [
+  "Ready Set Ink community notes — Ben's own rulings, interactions and play advice.",
+  "Deliberately SEPARATE from card-rules.json, which holds Ravensburger's official",
+  "Q&A from the Set Release Notes. The app shows them under different headings so a",
+  "community note can never be mistaken for an official ruling.",
+  "",
+  "Written in flounder-notes.html. Export from there and replace the 'cards' block",
+  "below wholesale — don't hand-edit and don't append a second JSON object.",
+  "",
+  "Shape:  \"Card Name - Version\": [ { t: the note, src: where it came from, d: YYYY-MM-DD } ]"
+ ],
+ "cards": {
+  "Mickey Mouse & Minnie Mouse - Adventuring Duo": [
+   {
+    "t": "All duo shift characters\nIf you duo shift on 2 characters and one is at a location and one is not at a location you can choose where your shifted character will be.",
+    "src": "",
+    "d": "2026-08-14"
+   }
+  ],
+  "Touch the Sky": [
+   {
+    "t": "To get the benefit of the drawing cards the ability needs to see that you moved a character to a location of yours for free. If you did not move you do not get to do the next part of the effect because it is dependent on the move. \nYou cannot move to a location that you area already at.",
+    "src": "",
+    "d": "2026-08-14"
+   }
+  ],
+  "Ariel - Ethereal Voice": [
+   {
+    "t": "If you sing put that thing back with Ariel - Ethereal Voice and choose Ariel the song card fully resolves first which would put Ariel back into your hand. Ariels ability command performance could be in the bag but the game would check if there is a card under them which is is not it is in your hand and that is private information.",
+    "src": "",
+    "d": "2026-08-14"
+   }
+  ],
+  "Put That Thing Back": [
+   {
+    "t": "If you sing put that thing back with Ariel - Ethereal Voice and choose Ariel the song card fully resolves first which would put Ariel back into your hand. Ariels ability command performance could be in the bag but the game would check if there is a card under them which is is not it is in your hand and that is private information.",
+    "src": "",
+    "d": "2026-08-14"
+   }
+  ]
+ }
+}
