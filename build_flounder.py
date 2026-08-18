@@ -434,16 +434,6 @@ blob = blob.replace("</", "<\\/")
 kindblob = json.dumps(NOTE_KINDS, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
 html = html.replace("/*__DATA__*/", blob).replace("/*__KINDS__*/", kindblob)
 
-# Supabase connection details. Both are public by design — the publishable key
-# identifies the project, it does not grant anything. What actually protects the
-# data is the row-level security installed by supabase-schema.sql, which lives
-# on the database and cannot be bypassed from the browser. Leaving these blank
-# is a supported state: the app hides the sign-in button and behaves exactly as
-# it did before accounts existed.
-SB_URL = "https://cwevqwisucaemfsffpsy.supabase.co"
-SB_KEY = "sb_publishable_1uLIyne_6GxEPtWbQoj7jg_4R1UUfmT"
-html = html.replace("/*__SB_URL__*/", SB_URL).replace("/*__SB_KEY__*/", SB_KEY)
-
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 log(f"✓ wrote {OUT}  ({len(html)/1024/1024:.2f} MB)")

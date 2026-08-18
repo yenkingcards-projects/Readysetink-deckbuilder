@@ -88,6 +88,103 @@ h1{font-size:26px;line-height:1.1;font-family:var(--display);font-weight:900;
 .lede{font-size:14px;line-height:1.6;color:var(--carbon);max-width:78ch}
 .gi{font-size:.9em;margin-right:6px;vertical-align:.04em}
 
+
+/* ---- collection checklist ---- */
+.collbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 10px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
+  padding:8px 10px;border-radius:2px;color:var(--carbon)}
+.collbar .sp{flex:1}
+/* [hidden] sets display:none at the lowest priority, so any display rule of
+   our own silently beats it. This one has to say so explicitly. */
+.clist{display:flex;flex-direction:column;gap:4px}
+.clist[hidden]{display:none}
+.crow{display:flex;align-items:center;gap:10px;background:var(--surface);
+  border:1px solid var(--line);border-radius:4px;padding:6px 10px;box-shadow:var(--bevel-in)}
+.crow.has{background:#fff8d6;border-color:var(--amber-press)}
+.crow .cnum{font-variant-numeric:tabular-nums;color:var(--deep);font-weight:700;min-width:46px}
+.crow .cnm{flex:1;color:var(--carbon);min-width:0}
+.crow .cnm i{font-style:normal;color:var(--deep)}
+.crow .crar{color:var(--deep);font-size:12px;min-width:74px}
+.crow .cq{display:flex;align-items:center;gap:4px}
+/* The label belongs to the button beside it, so it sits tight against the
+   minus rather than floating in a wide column of its own. */
+.crow .cq{gap:4px;margin-left:10px}
+.crow .cq em{font-style:normal;font-size:11px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--deep);margin-right:2px}
+.crow .cq b{min-width:20px;text-align:center;font-variant-numeric:tabular-nums}
+.crow .cq button{width:24px;height:24px;border:1px solid var(--chrome);border-radius:2px;
+  background:var(--amberc);color:var(--carbon);font-weight:800;line-height:1;
+  box-shadow:var(--bevel)}
+.crow .cq button:hover{background:var(--amber-press)}
+@media(max-width:760px){.crow{flex-wrap:wrap}.crow .crar{display:none}}
+/* ---- settings rows ---- */
+.prow{display:flex;align-items:center;gap:16px;background:var(--surface);
+  border:1px solid var(--line);border-radius:4px;padding:10px 12px;box-shadow:var(--bevel-in)}
+.prow p{color:var(--carbon);margin-top:3px;max-width:60ch}
+.prow>div{flex:1}
+/* Every collection affordance hides behind one class — see applyCollPref(). */
+body.nocoll .collonly{display:none!important}
+
+
+/* ---- borrow list ---- */
+.borrow{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+  box-shadow:var(--bevel-in);padding:12px 14px;margin-bottom:14px}
+.borrow .bhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.borrow .bhead .sp{flex:1}
+.borrow .bhead b{color:var(--carbon)}
+.borrow .bnote{color:var(--deep);font-size:12px;margin:4px 0 8px}
+.borrow .btext{width:100%;background:var(--platinum);border:1px solid var(--hairline);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:9px 11px;color:var(--carbon);
+  font-family:var(--sans);font-size:13px;line-height:1.5;resize:vertical}
+.bcust{background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:2px;
+  box-shadow:var(--bevel-in);padding:10px 12px;margin-bottom:10px;
+  display:flex;flex-wrap:wrap;gap:10px}
+.bcust label{display:flex;flex-direction:column;gap:3px;font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.bcust input,.bcust select{background:var(--surface);border:1px solid var(--line);
+  border-radius:2px;padding:5px 7px;font-size:13px;color:var(--carbon);
+  text-transform:none;letter-spacing:0;font-weight:400;min-width:180px}
+.bpick{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.bpick>b{flex:1 1 100%;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.bcust .bchk{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:400;
+  text-transform:none;letter-spacing:0;color:var(--carbon);flex-direction:row}
+.bchk i{font-style:normal;color:var(--deep)}
+
+
+.bsave{flex:1 1 100%;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  border-top:1px dotted var(--muted);padding-top:9px;margin-top:2px}
+.bsave span{font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--deep)}
+
+
+/* ---- confirm box ---- */
+.cfmbg{position:fixed;inset:0;background:rgba(32,38,56,.62);display:grid;place-items:center;z-index:900}
+.cfm{background:var(--surface);border:2px solid var(--chrome);border-radius:6px;
+  box-shadow:var(--bevel);padding:18px 20px;max-width:440px;width:calc(100% - 32px)}
+.cfm h3{font-size:15px;color:var(--carbon);margin-bottom:6px}
+.cfm p{color:var(--carbon);margin-bottom:14px}
+.cfmb{display:flex;gap:8px;justify-content:flex-end}
+/* ---- hover preview ---- */
+.cpv{position:fixed;z-index:950;pointer-events:none;width:250px;
+  border:2px solid var(--chrome);border-radius:6px;box-shadow:0 18px 44px -10px rgba(0,0,0,.8);
+  background:var(--platinum);overflow:hidden}
+.cpv img{display:block;width:100%}
+/* ---- collection sub-tabs ---- */
+.ctabs{display:flex;gap:0;margin:14px 0 0}
+.ctabs button{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  padding:7px 14px;border:1px solid var(--chrome);background:var(--platinum);color:var(--carbon);
+  box-shadow:var(--bevel);border-right:none}
+.ctabs button:last-child{border-right:1px solid var(--chrome)}
+.ctabs button.on{background:var(--carbon);color:var(--amberc)}
+.fastgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-top:10px}
+.fastgrid button{text-align:left;padding:10px 12px}
+.fastgrid button.bad{background:var(--bad);color:var(--surface);border-color:var(--bad)}
+.fastnote{color:var(--deep);font-size:12px;margin:10px 0 0}
+
+
+/* ---- rarity symbols ---- */
+.rsym{width:14px;height:14px;flex:0 0 14px;vertical-align:-2px;margin-right:5px}
+.crar{display:flex;align-items:center;gap:0}
+
 /* ---- plates ---- */
 .plate{background:var(--canvas);border:1px solid var(--chrome);box-shadow:var(--bevel)}
 .inset{background:var(--platinum);border:1px solid var(--hairline);box-shadow:var(--bevel-in)}
@@ -1001,7 +1098,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .chip:hover{border-color:var(--deep);color:var(--tx)}
 .chip .n{font-size:12px;color:var(--deep);font-variant-numeric:tabular-nums}
 .chip.on{background:var(--acc);border-color:var(--link);color:var(--surface);font-weight:700}
-.chip.on .n{color:#07394f}
+/* On the selected chip the fill is deep blue, where #07394f was 1.57:1 —
+   invisible, and caught by _test_v33 the moment the collection page put
+   counts inside selected chips. White is 7.82 on that fill. */
+.chip.on .n{color:var(--surface)}
 /* Recommendation highlighting is yellow — the highlighter-pen read. A thin
    yellow line on platinum is barely 1.3:1 against the surface, so the state is
    carried by a pale yellow fill plus a 2px ring, not by the line alone.
@@ -1402,6 +1502,8 @@ body.noremind .c.illegal img{filter:none}
 </style>
 </head>
 <body>
+<!-- rainbow gradient for the Enchanted ring, defined once -->
+
 <div id="bub"></div>
 
 <header>
@@ -1418,7 +1520,7 @@ body.noremind .c.illegal img{filter:none}
 <nav class="tabs">
   <button id="tDeck" class="on">Deck builder</button>
   <button id="tSearch">Search for cards</button>
-  <button id="tColl">My collection</button>
+  <button id="tColl" class="collonly">My collection</button>
   <button id="tDecks">Decks</button>
   <button id="tOther">Other</button>
 </nav>
@@ -1489,24 +1591,19 @@ body.noremind .c.illegal img{filter:none}
 <section class="view" id="vColl">
   <div class="page">
     <h1><span class="gi">📦</span>My collection</h1>
-    <p class="lede">Track which printings you actually own, then let the pull list tell you
+    <p class="lede">Mark which printings you actually own, then let the pull list tell you
       exactly what to fetch out of your binder for a deck.</p>
-    <div class="soon">
-      <b>Arrives with accounts.</b>
-      <p>A collection has to follow you between your phone and your desktop, so it needs to live
-      on the server rather than in one browser. It's the first thing switched on after login lands.</p>
-      <p>The groundwork is already done — every one of the
-      <b id="collN">0</b> printings is in the data, with its set, collector number and rarity, which is
-      what a collection has to point at. Decks stay name-based; your collection will be printing-based.</p>
-    </div>
-    <div class="soon">
-      <b>What it will do</b>
-      <ul>
-        <li>Mark how many of each printing you own, base or enchanted or promo.</li>
-        <li>Show a deck's pull list split into <i>have</i> and <i>need</i>.</li>
-        <li>Tell you which cards you're closest to finishing a set on.</li>
-      </ul>
-    </div>
+    <div id="collSum"></div>
+    <div id="collBody"></div>
+  </div>
+</section>
+
+<section class="view" id="vPref">
+  <div class="page">
+    <h1><span class="gi">⚙️</span>Settings</h1>
+    <p class="lede">Switches that change how the site behaves for you. Everything here is
+      remembered in this browser, and follows your account if you're signed in.</p>
+    <div id="prefBody"></div>
   </div>
 </section>
 
@@ -1560,7 +1657,7 @@ body.noremind .c.illegal img{filter:none}
 </footer>
 
 <div class="mtabs"><button id="mC" class="on">🔍 Cards</button><button id="mD">🗂️ Deck <span id="mN">0</span></button></div>
-<div class="mbg" id="mbg"><div class="modal" id="modal"></div></div>
+${""}<div class="mbg" id="mbg"><div class="modal" id="modal"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>var DATA=/*__DATA__*/;var KINDS=/*__KINDS__*/;</script>
@@ -1640,6 +1737,105 @@ const HEX={Amber:"#f0a832",Amethyst:"#a86fd8",Emerald:"#35c97a",Ruby:"#f0625f",S
 const FMT={infinity:{l:"Infinity",cap:2,max:4,min:60},core:{l:"Core",cap:2,max:4,min:60},coconut:{l:"Coconut",cap:3,max:1,min:60}};
 const FL={n:"Flounder",v:"Voice of Reason"};
 const K_DECKS="fs3_decks",K_STAR="fs3_stars",K_DVIEW="fs3_dview";
+const K_COLL="fs3_coll",K_COLLON="fs3_collon";
+
+/* ===================== rarity symbols =====================
+   Ben's shapes, drawn as inline SVG rather than image files: nothing to host,
+   crisp at any size, and — the reason it matters — they are ours. Reproducing
+   Ravensburger's own rarity marks would be the picture version of borrowing
+   their words, which PROJECT-NOTES already rules out for our own furniture.
+
+   Every shape carries a carbon outline. "White chevron" on a white list row is
+   otherwise invisible, and a symbol that means something has to be visible
+   against the surface it sits on, not just against the page.
+
+   The shape never carries the meaning alone — the rarity name is always beside
+   it, so nobody is relying on telling bronze from gold at 14 pixels. */
+const RARSYM={
+  "Common":     ['<circle cx="7" cy="7" r="5.2"/>',                      "#9aa3b2"],
+  "Uncommon":   ['<path d="M1.8 9.6 L7 3.4 L12.2 9.6 L10.4 11 L7 6.9 L3.6 11 Z"/>', "#ffffff"],
+  "Rare":       ['<path d="M7 1.8 L12.6 12 L1.4 12 Z"/>',                "#b0763a"],
+  "Super Rare": ['<path d="M7 1 L13 7 L7 13 L1 7 Z"/>',                  "#c3c9d4"],
+  "Legendary":  ['<path d="M7 1.2 L12.7 5.4 L10.5 12.2 L3.5 12.2 L1.3 5.4 Z"/>', "#e0b23c"],
+  /* Proposed, because these three exist in the data and Ben's list didn't
+     reach them: Special is promos and sits outside the ladder, Epic and Iconic
+     are the newer premium tiers. */
+  "Special":    ['<rect x="2" y="2" width="10" height="10"/>',           "#67748f"],
+  "Epic":       ['<path d="M7 1 L12.2 4 L12.2 10 L7 13 L1.8 10 L1.8 4 Z"/>', "#8f6bb0"],
+  "Iconic":     ['<path d="M7 1 L8.5 5.5 L13 7 L8.5 8.5 L7 13 L5.5 8.5 L1 7 L5.5 5.5 Z"/>', "#23758a"],
+};
+function rarSym(r){
+  if(r==="Enchanted")
+    return `<svg class="rsym" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5"
+      fill="none" stroke="url(#rsrain)" stroke-width="3"/><circle cx="7" cy="7" r="6.5"
+      fill="none" stroke="#202638" stroke-width="1"/></svg>`;
+  const d=RARSYM[r];if(!d)return "";
+  return `<svg class="rsym" viewBox="0 0 14 14" aria-hidden="true">${
+    d[0].replace("<","<").replace(/\/>$/,` fill="${d[1]}" stroke="#202638" stroke-width="1"/>`)}</svg>`}
+/* One gradient for the page rather than one per row — repeating an element id
+   hundreds of times is invalid even where browsers tolerate it. */
+const RAINDEF=`<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="rsrain" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#e0453c"/><stop offset="20%" stop-color="#e0913c"/>
+    <stop offset="40%" stop-color="#d8d23a"/><stop offset="60%" stop-color="#4e9c6b"/>
+    <stop offset="80%" stop-color="#3f7fd9"/><stop offset="100%" stop-color="#8f6bb0"/>
+  </linearGradient></defs></svg>`;
+const rarLabel=r=>`${rarSym(r)}<span>${esc(String(r||""))}</span>`;
+
+/* ===================== the collection =====================
+   A CARD is a name. A PRINTING is one physical version of it. Decks reference
+   names; a collection references printings, because you own the enchanted, not
+   "an Elsa".
+
+   Where a printing lives in the data: cards with more than one printing carry
+   them in pr[]; the 1,947 cards with only one carry it on the card itself.
+   1,947 + 1,295 = the 3,242 printings the notes describe. prints() papers over
+   that split so nothing downstream has to know about it.
+
+   Stored as {key: [normal, foil]} and sparse — only what you own is written,
+   so an empty collection costs two bytes rather than 3,242 zeroes. */
+const prints=c=>(c.pr&&c.pr.length)?c.pr
+  :[{s:c.s,num:c.num,r:c.r,i:c.img,l:c.imgL}];
+const pkey=(f,pr)=>f+"|"+pr.s+"|"+pr.num;
+let COLL=load(K_COLL,{});
+let COLLON=load(K_COLLON,true);
+const owned=k=>COLL[k]||[0,0];
+const ownTotal=k=>{const o=owned(k);return o[0]+o[1]};
+function setOwned(k,n,f){
+  n=Math.max(0,Math.min(99,n|0));f=Math.max(0,Math.min(99,f|0));
+  if(!n&&!f)delete COLL[k];else COLL[k]=[n,f];
+  save(K_COLL,COLL)}
+const collCopies=()=>Object.keys(COLL).reduce((a,k)=>a+COLL[k][0]+COLL[k][1],0);
+const collFoils=()=>Object.keys(COLL).reduce((a,k)=>a+COLL[k][1],0);
+
+/* Every printing in the game, flattened once and cached — the set checklist,
+   the pull list and the completion counts all walk this. */
+let ALLPR=null;
+function allPrintings(){
+  if(ALLPR)return ALLPR;
+  ALLPR=[];
+  CARDS.forEach(c=>prints(c).forEach(pr=>ALLPR.push({c,pr,k:pkey(c.f,pr)})));
+  return ALLPR}
+/* Sets, newest first, with how many printings each holds. */
+function setList(){
+  /* A card's sn is the name of ITS set, which is not the set of every printing
+     it has — a promo reprint of a First Chapter card still carries "The First
+     Chapter" on the card itself. Naming a set from whichever card happened to
+     be first therefore labelled six different sets "The First Chapter". A name
+     is only trustworthy when the printing IS that card's own set. */
+  const names={},m={};
+  CARDS.forEach(c=>{if(c.s!=null&&c.sn&&!names[c.s])names[c.s]=c.sn});
+  allPrintings().forEach(x=>{(m[x.pr.s]=m[x.pr.s]||
+    {s:x.pr.s,n:0,name:names[x.pr.s]||("Set "+x.pr.s)}).n++});
+  return Object.values(m).sort((a,b)=>
+    (parseInt(b.s,10)||0)-(parseInt(a.s,10)||0)||String(a.s).localeCompare(b.s))}
+/* Collector numbers are strings — "4a", "205". Sort numerically with the
+   variant letter as tiebreak, or #10 lands between #1 and #2. */
+/* Collector numbers arrive as strings ("4a", "205") for multi-printing cards
+   and as numbers for some single-printing ones, so coerce before comparing. */
+const numSort=(a,b)=>{
+  const na=parseInt(a,10)||0,nb=parseInt(b,10)||0;
+  return na-nb||String(a).localeCompare(String(b))};
 
 /* Ability chips, grouped. `re` runs on non-keyword ability text (`ef`), which
    already excludes keyword reminder text — that's what kept songs out of the
@@ -2495,7 +2691,7 @@ function openM(f,showPr){
       ${c.co.map(i=>`<span class="dot" style="background:${HEX[i]||"#666"}" title="${esc(i)}"></span>`).join("")}
       <span>${esc(c.co.join(" / "))}</span><span class="sep">·</span>
       <span>${P?esc(SETNAME(P.s)):esc(c.sn)} #${P?esc(P.num):esc(String(c.num))}</span><span class="sep">·</span>
-      <span>${P?esc(P.r):esc(c.r)}</span>${(P||c).ft&&(P||c).ft.length
+      <span>${rarLabel(P?P.r:c.r)}</span>${(P||c).ft&&(P||c).ft.length
         ?`<span class="foilbadge" title="Foil pattern, from LorcanaJSON">${esc(foilName(P||c))} foil</span>`:""}${c.sto?`<span class="sep">·</span><span>📖 ${esc(c.sto)}</span>`:""}
     </div>
     <div class="stats">
@@ -2533,7 +2729,7 @@ function openM(f,showPr){
       <div class="pgrid">${c.pr.map((x,i)=>`<button class="pcard${i===cur?" on":""}" data-pr="${i}">
         <span class="timg"><img src="${esc(x.i)}" loading="lazy" alt="">${foilLayer(x)}</span>
         <span class="ps">${esc(SETNAME(x.s))} #${esc(x.num)}</span>
-        <span class="pr2">${esc(x.r)}${x.pm?" · promo":""}</span></button>`).join("")}</div>
+        <span class="pr2">${rarLabel(x.r)}${x.pm?" · promo":""}</span></button>`).join("")}</div>
       <div class="hint" style="margin:8px 0 0">Decks don\'t care which printing you own —
         this only changes the art you see. Set a default in <b>Card images</b> in the sidebar.</div>
       </details>`})():""}
@@ -3020,6 +3216,10 @@ function renderGuideDeck(){
    are PHYSICALLY stored, not by anything to do with gameplay. Collector number
    is a string ("4a", "205") so it has to sort numerically with the variant
    letter as a tiebreak, otherwise #10 lands between #1 and #2. */
+/* People organise Lorcana in genuinely different ways, and a pull list is
+   useless if its order doesn't match the binder you're holding. Set-and-number
+   suits a set-order binder; franchise suits the people who file by film; ink
+   suits deck boxes. Each entry is [value, label]. */
 const PULLSORTS=[
  ["setnum",  "Set (newest first), then collector number"],
  ["setnumo", "Set (oldest first), then collector number"],
@@ -3027,14 +3227,29 @@ const PULLSORTS=[
  ["az",      "Card name, A–Z"],
  ["inkcost", "Ink, then cost, then name"],
  ["cost",    "Cost, then name"],
+ ["franc",   "Franchise, then card name"],
+ ["francink","Franchise, then ink, then name"],
+ ["inkaz",   "Ink, then card name"],
+ ["rarity",  "Rarity, then set and number"],
+ ["type",    "Card type, then name"],
+ ["class",   "Classification, then name"],
 ];
+/* Rarity is a ladder, not an alphabet — sorting it as text puts Common after
+   Uncommon and Enchanted first. */
+/* Ladder order for the rarity pull sheet. Epic and Iconic are newer tiers and
+   their exact rung is a guess — say the word if they sit elsewhere. */
+const RARORDER=["Common","Uncommon","Rare","Super Rare","Epic","Legendary",
+  "Iconic","Enchanted","Special","Promo"];
+const rarRank=r=>{const i=RARORDER.indexOf(r);return i<0?RARORDER.length:i};
 let PULLSORT=load("fs3_pullsort","setnum");
 const numKey=n=>{const m=String(n).match(/^(\d+)(.*)$/);
   return m?[parseInt(m[1],10),m[2]]:[9e9,String(n)]};
 function pullRows(){
   const d=deck();
   return dlist().map(({c,q})=>({q,c,
-    set:c.sn,setd:c.sd,num:String(c.num),r:c.r,name:c.f,ink:(c.co||[]).join("/"),cost:c.c}));
+    set:c.sn,setd:c.sd,num:String(c.num),r:c.r,name:c.f,ink:(c.co||[]).join("/"),cost:c.c,
+    franc:c.sto||"Other",ty:c.ty||"Other",
+    cls:(c.sub&&c.sub.length?c.sub[0]:"Unclassified")}));
 }
 function pullSorted(rows,mode){
   const byName=(a,b)=>a.name.localeCompare(b.name);
@@ -3049,11 +3264,22 @@ function pullSorted(rows,mode){
     az:     byName,
     inkcost:(a,b)=>a.ink.localeCompare(b.ink)||a.cost-b.cost||byName(a,b),
     cost:   (a,b)=>a.cost-b.cost||byName(a,b),
-  }[mode]||f_setnum;
+    franc:  (a,b)=>a.franc.localeCompare(b.franc)||byName(a,b),
+    francink:(a,b)=>a.franc.localeCompare(b.franc)||a.ink.localeCompare(b.ink)||byName(a,b),
+    inkaz:  (a,b)=>a.ink.localeCompare(b.ink)||byName(a,b),
+    rarity: (a,b)=>rarRank(a.r)-rarRank(b.r)||bySetNew(a,b)||byNum(a,b),
+    type:   (a,b)=>String(a.ty).localeCompare(String(b.ty))||byName(a,b),
+    class:  (a,b)=>a.cls.localeCompare(b.cls)||byName(a,b),
+  /* An unknown mode used to reference an identifier that does not exist, which
+     threw rather than falling back. A saved preference from an older build was
+     enough to break the page. */
+  }[mode]||((a,b)=>bySetNew(a,b)||byNum(a,b));
   return rows.slice().sort(f);
 }
 const pullGroupOf=(r,mode)=>({setnum:r.set,setnumo:r.set,setaz:r.set,
-  inkcost:r.ink,cost:"Cost "+r.cost,az:""}[mode]??"");
+  inkcost:r.ink,cost:"Cost "+r.cost,az:"",
+  franc:r.franc,francink:r.franc+" · "+r.ink,inkaz:r.ink,
+  rarity:r.r,type:r.ty,class:r.cls}[mode]??"");
 function renderPull(){
   const mode=PULLSORT,rows=pullSorted(pullRows(),mode);
   const d=deck(),tot=rows.reduce((a,r)=>a+r.q,0);
@@ -5019,6 +5245,194 @@ document.addEventListener("keydown",e=>{
   else if(e.key==="Escape"){RVIEW="menu";save("fs3_rview",RVIEW);renderRead()}
 });
 
+/* ===================== the borrow list =====================
+   What the pull list can't tell you: which cards you'd have to get hold of
+   before you could actually sleeve this deck up.
+
+   Counted by NAME, not by printing. A deck asks for "four Elsa - Snow Queen";
+   any four copies satisfy it, whatever art they carry. Counting shortfall per
+   printing would tell someone they were missing a card they were holding. */
+const BORROWDEF={greet:"Hey Friend,",ask:"borrow",when:"for the deck",
+  sort:"setnum",skip:[],close:"Thanks!"};
+/* Three layers: the built-in defaults, the template this person saved to their
+   profile, then whatever they are fiddling with right now. */
+let BORROW=Object.assign({},BORROWDEF,load("fs3_borrowdef",{}),load("fs3_borrow",{}));
+const ASKS=[["borrow","borrow them"],["trade","trade for them"],["buy","buy them off you"],
+  ["borrowbuy","borrow them, or buy them if you'd rather"]];
+const WHENS=[["for the deck","for the deck"],["just for the night","just for the night"],
+  ["for the championship","for the championship"],
+  ["until mine arrive in the mail","until mine arrive in the mail"],
+  ["for our next game night","for our next game night"],
+  ["for the weekend","for the weekend"],["","(don't mention how long)"]];
+
+/* How many copies of this card name I own, across every printing of it. */
+function ownedByName(c){return prints(c).reduce((a,pr)=>a+ownTotal(pkey(c.f,pr)),0)}
+function borrowRows(){
+  return dlist().map(({c,q})=>({c,q,have:ownedByName(c)}))
+    .filter(x=>x.have<x.q)
+    .map(x=>({...x,need:x.q-x.have}))}
+function borrowText(){
+  const rows=pullSorted(
+    borrowRows().filter(x=>BORROW.skip.indexOf(x.c.f)<0)
+      .map(x=>({...pullRows().find(r=>r.c.f===x.c.f),q:x.need})),
+    BORROW.sort);
+  if(!rows.length)return "";
+  const ask=(ASKS.find(a=>a[0]===BORROW.ask)||ASKS[0])[1];
+  const when=BORROW.when?" "+BORROW.when:"";
+  return `${BORROW.greet}\n\nI want to play a supercool deck but I don't have these cards. `
+    +`Could you look if you have them and let me know if I could ${ask}${when}?\n\n`
+    +rows.map(r=>`${r.q}x ${r.name} (${r.cost} cost, ${r.ink||"no ink"}, ${r.set})`).join("\n")
+    +(BORROW.close?`\n\n${BORROW.close}`:"")}
+
+/* A 16:9 picture of the cards being asked for, with a quantity on each, so the
+   ask can be sent as an image where a wall of text would be ignored.
+
+   Card art is served from another origin. A canvas that has drawn a
+   cross-origin image cannot be exported unless that server allows it, so the
+   images are requested with crossOrigin="anonymous" and any that fail are
+   drawn as a titled placeholder instead. A missing picture is a worse outcome
+   than a plain-looking one, so nothing here is allowed to throw. */
+function borrowImage(){
+  const rows=borrowRows().filter(x=>BORROW.skip.indexOf(x.c.f)<0);
+  if(!rows.length){toast("Nothing to picture — you have all of these");return}
+  const W=1920,H=1080,PAD=28,HEAD=96,GAP=16,AR=940/674;
+  /* Cards are portrait 674x940. Sizing the width from the canvas and the
+     height from whatever was left over stretched them into letterboxes, which
+     would visibly distort real art. Instead try every column count and keep
+     the one that fits the 16:9 frame with the cards biggest and their shape
+     intact. */
+  let cols=1,cw=0,ch=0;
+  for(let c=1;c<=8;c++){
+    const w=Math.floor((W-PAD*2-(c-1)*GAP)/c), h=Math.round(w*AR);
+    const rn=Math.ceil(rows.length/c);
+    if(HEAD+rn*h+(rn-1)*GAP+PAD<=H && w>cw){cols=c;cw=w;ch=h}}
+  /* Seven cards across six columns left one stranded on its own row with half
+     the picture empty. Spread them evenly instead: the same number of rows,
+     but no row more than one card longer than another. */
+  if(cw){const rn=Math.ceil(rows.length/cols);cols=Math.ceil(rows.length/rn);
+    cw=Math.floor((W-PAD*2-(cols-1)*GAP)/cols);ch=Math.round(cw*AR);
+    while(HEAD+rn*ch+(rn-1)*GAP+PAD>H){cw-=8;ch=Math.round(cw*AR)}}
+  if(!cw){ /* more cards than fit at any size — shrink to the tallest that does */
+    cols=8;cw=Math.floor((W-PAD*2-7*GAP)/8);
+    const rn=Math.ceil(rows.length/cols);
+    ch=Math.floor((H-HEAD-PAD-(rn-1)*GAP)/rn);cw=Math.round(ch/AR)}
+  const rowsN=Math.ceil(rows.length/cols);
+  const offX=Math.floor((W-(cols*cw+(cols-1)*GAP))/2);
+  const cv=document.createElement("canvas");cv.width=W;cv.height=H;
+  const x=cv.getContext("2d");
+  x.fillStyle="#6578a8";x.fillRect(0,0,W,H);
+  x.fillStyle="#202638";x.fillRect(0,0,W,HEAD-16);
+  x.fillStyle="#ffd400";x.font="700 40px Arial";
+  x.fillText("Cards I'm looking for",PAD,58);
+  x.fillStyle="#dce7f5";x.font="400 22px Arial";
+  x.fillText(`${rows.reduce((a,r)=>a+r.need,0)} cards · ${DECKS.cur}`,PAD,86);
+  let done=0;
+  const finish=()=>{
+    if(++done<rows.length)return;
+    try{
+      cv.toBlob(bl=>{
+        if(!bl){toast("Couldn't build the image");return}
+        const u=URL.createObjectURL(bl),a=document.createElement("a");
+        a.href=u;a.download="cards-im-looking-for.png";a.click();
+        setTimeout(()=>URL.revokeObjectURL(u),4000);
+        toast("Image saved")});
+    }catch(e){toast("The card art wouldn't allow an image export")}};
+  rows.forEach((r,i)=>{
+    const cx=offX+(i%cols)*(cw+GAP), cy=HEAD+Math.floor(i/cols)*(ch+GAP);
+    const draw=img=>{
+      try{
+        if(img)x.drawImage(img,cx,cy,cw,ch);
+        else{x.fillStyle="#dce7f5";x.fillRect(cx,cy,cw,ch);
+          x.fillStyle="#202638";x.font="700 20px Arial";
+          wrapText(x,r.c.f,cx+10,cy+72,cw-20,24)}
+        /* quantity badge */
+        const bw=Math.max(52,String(r.need).length*22+30);
+        x.fillStyle="#b2000e";x.fillRect(cx,cy,bw,44);
+        x.fillStyle="#ffffff";x.font="800 30px Arial";
+        x.fillText("×"+r.need,cx+12,cy+33);
+      }catch(e){}
+      finish()};
+    const src=(prints(r.c)[0]||{}).i||r.c.img;
+    if(!src)return draw(null);
+    /* An image request that neither loads nor errors leaves the export hanging
+       for ever with no feedback — which is exactly what a blocked or very slow
+       CDN does. Every card gets eight seconds, then it is drawn as a
+       placeholder and the picture is produced regardless. */
+    const im=new Image();im.crossOrigin="anonymous";
+    let settled=false;
+    const once=v=>{if(settled)return;settled=true;draw(v)};
+    const t=setTimeout(()=>once(null),8000);
+    im.onload=()=>{clearTimeout(t);once(im)};
+    im.onerror=()=>{clearTimeout(t);once(null)};
+    im.src=src});
+}
+function wrapText(x,t,px,py,max,lh){
+  const words=String(t).split(" ");let line="",y=py;
+  words.forEach(w=>{const test=line?line+" "+w:w;
+    if(x.measureText(test).width>max&&line){x.fillText(line,px,y);line=w;y+=lh}
+    else line=test});
+  if(line)x.fillText(line,px,y)}
+
+let BORROWOPEN=false;
+function renderBorrow(){
+  const box=$("borrowBox");if(!box)return;
+  const missing=borrowRows();
+  if(!COLLON||!missing.length){box.innerHTML="";return}
+  const kept=missing.filter(x=>BORROW.skip.indexOf(x.c.f)<0);
+  box.innerHTML=`<div class="borrow">
+    <div class="bhead">
+      <b>Looks like you don't have ${missing.reduce((a,x)=>a+x.need,0)} of these cards</b>
+      <span class="sp"></span>
+      <button class="btn" id="bCust">${BORROWOPEN?"Done":"Customise"}</button>
+      <button class="btn" id="bImg">🖼️ Save image</button>
+      <button class="btn go" id="bCopy">📋 Copy the message</button>
+    </div>
+    <p class="bnote">Copy this and send it to someone who might lend them to you.</p>
+    ${BORROWOPEN?`<div class="bcust">
+      <label>Greeting<input id="bGreet" value="${esc(BORROW.greet)}"></label>
+      <label>Asking to<select id="bAsk">${ASKS.map(([v,l])=>
+        `<option value="${v}"${BORROW.ask===v?" selected":""}>${esc(l)}</option>`).join("")}</select></label>
+      <label>For how long<select id="bWhen">${WHENS.map(([v,l])=>
+        `<option value="${esc(v)}"${BORROW.when===v?" selected":""}>${esc(l)}</option>`).join("")}</select></label>
+      <label>List order<select id="bSort">${PULLSORTS.map(([v,l])=>
+        `<option value="${v}"${BORROW.sort===v?" selected":""}>${esc(l)}</option>`).join("")}</select></label>
+      <label>Sign off<input id="bClose" value="${esc(BORROW.close)}"></label>
+      <div class="bpick"><b>Leave any of these out</b>
+        ${missing.map(x=>`<label class="bchk"><input type="checkbox" data-bskip="${esc(x.c.f)}"
+          ${BORROW.skip.indexOf(x.c.f)<0?" checked":""}> ${esc(x.c.f)} <i>×${x.need}</i></label>`).join("")}</div>
+      <div class="bsave">
+        <button class="btn go" id="bDefault">Save this as my default</button>
+        <span>${BORROW.saved?"Saved — new decks start from this.":"These settings apply to this browser until you save them."}</span>
+      </div>
+    </div>`:""}
+    <textarea class="btext" id="bText" readonly rows="${Math.min(18,7+kept.length)}">${esc(borrowText())}</textarea>
+  </div>`;
+  $("bCust").onclick=()=>{BORROWOPEN=!BORROWOPEN;renderBorrow()};
+  $("bCopy").onclick=()=>{const t=$("bText");t.select();
+    try{document.execCommand("copy")}catch(e){}
+    toast("Message copied")};
+  const bd=$("bDefault");
+  if(bd)bd.onclick=()=>{
+    /* The skip list is per-deck by nature — the cards you happen to be missing
+       today are not a preference — so it is deliberately not part of the saved
+       template. Everything else is. */
+    BORROW.saved=true;
+    const tpl={greet:BORROW.greet,ask:BORROW.ask,when:BORROW.when,
+      sort:BORROW.sort,close:BORROW.close,saved:true};
+    save("fs3_borrowdef",tpl);save("fs3_borrow",BORROW);
+    toast("Saved as your default");renderBorrow()};
+  const bi=$("bImg");
+  if(bi)bi.onclick=()=>{toast("Building the image…");borrowImage()};
+  const put=(id,k)=>{const el=$(id);if(el)el.onchange=()=>{
+    BORROW[k]=el.value;save("fs3_borrow",BORROW);renderBorrow()}};
+  put("bGreet","greet");put("bAsk","ask");put("bWhen","when");
+  put("bSort","sort");put("bClose","close");
+  box.querySelectorAll("[data-bskip]").forEach(cb=>cb.onchange=()=>{
+    const f=cb.dataset.bskip,i=BORROW.skip.indexOf(f);
+    if(cb.checked){if(i>=0)BORROW.skip.splice(i,1)}else if(i<0)BORROW.skip.push(f);
+    save("fs3_borrow",BORROW);renderBorrow()});
+}
+
 /* ===================== decks page ===================== */
 function renderDecksPage(){
   const names=Object.keys(DECKS.list);
@@ -5044,10 +5458,12 @@ function renderDecksPage(){
       <button class="btn" id="pullCopy">📋 Copy</button>
       <button class="btn go" id="pullPrint">🖨️ Print</button>
     </div>
+    <div id="borrowBox" class="collonly"></div>
     ${renderPull()}
   </div>`;
   $("deckspage").querySelectorAll("[data-dk]").forEach(b=>b.onclick=()=>{
     DECKS.cur=b.dataset.dk;saveDecks();$("fmt").value=deck().fmt;render()});
+  renderBorrow();
   $("pullSort").onchange=e=>{PULLSORT=e.target.value;save("fs3_pullsort",PULLSORT);renderDecksPage()};
   $("pullCopy").onclick=()=>navigator.clipboard.writeText(pullText())
     .then(()=>toast("Pull list copied"),()=>toast("Copy failed"));
@@ -5075,6 +5491,7 @@ const OTHER_GROUPS=[
  {g:"",chips:[
    ["Dust & secrets","Earn dust for doing normal things. Spend it on titles and the site's easter eggs.","dust"],
    ["Contribute","Tag art, write rules text, send it in. The vague search only works because people describe cards.","contrib"],
+   ["Settings","Switches that change how the site behaves for you.","pref"],
    ["Read every card","Every card in release order, one at a time. Pick a set and an ink — that's one video.","read"],
    ["Getting started","New here? Start with this.","start"],
    ["Error cards","What counts as an error, what gets replaced, and every known errata.","err"],
@@ -5103,6 +5520,170 @@ const OTHER_GROUPS=[
 /* Every sub-page of the Other tab: which view to switch on, and what draws it.
    Anything not in here falls back to the menu, so a typo shows the menu rather
    than a blank screen. */
+/* ===================== collection views =====================
+   Two ways in, because they suit different moments. The set checklist is for
+   cataloguing a binder in one sitting; the stepper in the card modal is for
+   the one card you just pulled. Both write through setOwned(). */
+/* A confirm in this site's own chrome. window.confirm() is an operating-system
+   dialog that ignores every rule in the design system, and these actions —
+   marking four of 261 cards, or clearing a whole set — are worth a beat. */
+function confirmBox(title,body,okLabel,danger){
+  return new Promise(done=>{
+    const w=document.createElement("div");w.className="cfmbg";
+    w.innerHTML=`<div class="cfm" role="dialog" aria-modal="true">
+      <h3>${esc(title)}</h3><p>${esc(body)}</p>
+      <div class="cfmb">
+        <button class="btn" data-no>Cancel</button>
+        <button class="btn ${danger?"bad go":"go"}" data-yes>${esc(okLabel)}</button>
+      </div></div>`;
+    document.body.appendChild(w);
+    const shut=v=>{w.remove();document.removeEventListener("keydown",key);done(v)};
+    const key=e=>{if(e.key==="Escape")shut(false);
+      if(e.key==="Enter")shut(true)};
+    w.querySelector("[data-no]").onclick=()=>shut(false);
+    w.querySelector("[data-yes]").onclick=()=>shut(true);
+    w.onclick=e=>{if(e.target===w)shut(false)};
+    document.addEventListener("keydown",key);
+    w.querySelector("[data-yes]").focus()})}
+
+/* Hover a card name for two seconds and its art appears at the pointer. Two
+   seconds because a shorter delay fires while you are simply reading down the
+   list, which is worse than not having it at all. */
+let PVT=null,PVEL=null;
+function cardPreview(el,card){
+  el.addEventListener("mouseenter",()=>{
+    clearTimeout(PVT);
+    PVT=setTimeout(()=>{
+      const src=(prints(card)[0]||{}).l||(prints(card)[0]||{}).i||card.imgL||card.img;
+      if(!src)return;
+      PVEL=document.createElement("div");PVEL.className="cpv";
+      PVEL.innerHTML=`<img src="${esc(String(src))}" alt="">`;
+      document.body.appendChild(PVEL);
+      move(lastX,lastY)},2000)});
+  el.addEventListener("mousemove",e=>{lastX=e.clientX;lastY=e.clientY;
+    if(PVEL)move(e.clientX,e.clientY)});
+  el.addEventListener("mouseleave",()=>{clearTimeout(PVT);
+    if(PVEL){PVEL.remove();PVEL=null}});
+  function move(x,y){
+    if(!PVEL)return;
+    const w=250,h=349;
+    /* Flip to the other side of the pointer near an edge so the card is never
+       clipped by the window. */
+    const left=x+18+w>innerWidth?x-18-w:x+18;
+    const top=Math.max(6,Math.min(innerHeight-h-6,y-h/2));
+    PVEL.style.left=left+"px";PVEL.style.top=top+"px"}
+}
+let lastX=0,lastY=0;
+
+let COLLSET=load("fs3_collset",null);
+let COLLTAB=load("fs3_colltab","list");
+/* [id, label, quantity, rarities-it-applies-to]. A null rarity list means the
+   whole set. Kept as data so adding "4 of all Super Rares" is one line. */
+const FASTBULK=[
+  ["all4","Own 4 of each card",4,null],
+  ["all1","Own 1 of each card",1,null],
+  ["c4","Own 4 of all Commons",4,["Common"]],
+  ["u4","Own 4 of all Uncommons",4,["Uncommon"]],
+  ["r4","Own 4 of all Rares",4,["Rare"]],
+  ["cur4","Own 4 of Commons, Uncommons and Rares",4,["Common","Uncommon","Rare"]],
+  ["sr4","Own 4 of all Super Rares",4,["Super Rare"]],
+  ["l4","Own 4 of all Legendaries",4,["Legendary"]],
+  ["clear","Clear this set",0,null],
+];
+
+function renderColl(){
+  const sets=setList(), total=allPrintings().length;
+  if(!COLLSET||!sets.some(x=>x.s===COLLSET))COLLSET=sets.length?sets[0].s:null;
+  const distinct=Object.keys(COLL).length;
+  $("collSum").innerHTML=`<div class="stats">
+    <div class="stt"><b>${collCopies().toLocaleString()}</b><i>Cards owned</i></div>
+    <div class="stt"><b>${distinct.toLocaleString()}</b><i>Printings</i></div>
+    <div class="stt"><b>${collFoils().toLocaleString()}</b><i>Foils</i></div>
+    <div class="stt"><b>${Math.round(distinct/total*100)}%</b><i>of <span id="collN">${total.toLocaleString()}</span></i></div>
+  </div>`;
+  const rows=allPrintings().filter(x=>x.pr.s===COLLSET)
+    .sort((a,b)=>numSort(a.pr.num,b.pr.num));
+  const have=rows.filter(x=>ownTotal(x.k)).length;
+  $("collBody").innerHTML=`
+    <h3 class="sec2">Choose a set</h3>
+    <div class="chips">${sets.map(x=>{
+      const mine=allPrintings().filter(y=>y.pr.s===x.s&&ownTotal(y.k)).length;
+      return `<button class="chip${x.s===COLLSET?" on":""}" data-cset="${esc(String(x.s))}">
+        <span>${esc(String(x.name))}</span><span class="n">${mine}/${x.n}</span></button>`}).join("")}</div>
+    <div class="ctabs">
+      <button data-ctab="list" class="${COLLTAB==="list"?"on":""}">Checklist</button>
+      <button data-ctab="fast" class="${COLLTAB==="fast"?"on":""}">Fast entry</button>
+    </div>
+    ${COLLTAB==="fast"?`<div class="fastpanel">
+      <div class="collbar"><b>${have} of ${rows.length} in this set</b></div>
+      <div class="fastgrid">
+        ${FASTBULK.map(([id,label,qty,rar])=>
+          `<button class="btn${qty===0?" bad":""}" data-fast="${id}">${esc(label)}</button>`).join("")}
+      </div>
+      <p class="fastnote">These change a lot of rows at once, so each one asks first.
+        Foil counts are left alone — marking a playset doesn't claim you own four foils.</p>
+    </div>`:""}
+    <div class="clist"${COLLTAB==="fast"?' hidden':''}>${rows.map(x=>{
+      const o=owned(x.k);
+      return `<div class="crow${o[0]+o[1]?" has":""}" data-k="${esc(String(x.k))}">
+        <span class="cnum">#${esc(String(x.pr.num))}</span>
+        <span class="cnm">${esc(x.c.n)}${x.c.v?` <i>${esc(x.c.v)}</i>`:""}</span>
+        <span class="crar">${rarLabel(x.pr.r)}</span>
+        <span class="cq"><em>Normal</em>
+          <button data-cm="n">−</button><b>${o[0]}</b><button data-cp="n">+</button></span>
+        <span class="cq"><em>Foil</em>
+          <button data-cm="f">−</button><b>${o[1]}</b><button data-cp="f">+</button></span>
+      </div>`}).join("")}</div>`;
+  $("collBody").querySelectorAll("[data-cset]").forEach(b=>b.onclick=()=>{
+    COLLSET=b.dataset.cset;save("fs3_collset",COLLSET);renderColl()});
+  $("collBody").querySelectorAll("[data-ctab]").forEach(b=>b.onclick=()=>{
+    COLLTAB=b.dataset.ctab;save("fs3_colltab",COLLTAB);renderColl()});
+  $("collBody").querySelectorAll("[data-fast]").forEach(b=>b.onclick=async()=>{
+    const spec=FASTBULK.find(f=>f[0]===b.dataset.fast);if(!spec)return;
+    const [,label,qty,rar]=spec;
+    const hit=rows.filter(x=>!rar||rar.indexOf(x.pr.r)>=0);
+    if(!hit.length){toast("No cards of that rarity in this set");return}
+    const setName=(sets.find(x=>x.s===COLLSET)||{}).name||"this set";
+    const ok=await confirmBox(label,
+      qty===0
+        ? `This sets ${hit.length} rows in ${setName} back to zero, foils included. It can't be undone.`
+        : `This marks ${qty} of ${hit.length} ${rar?"cards of that rarity":"cards"} in ${setName}. Anything you already own at a different number will be overwritten.`,
+      qty===0?"Clear them":`Mark ${qty} of each`, qty===0);
+    if(!ok)return;
+    hit.forEach(x=>{const o=owned(x.k);setOwned(x.k,qty,qty?o[1]:0)});
+    toast(qty?`Marked ${qty} of ${hit.length} cards`:`Cleared ${hit.length} rows`);
+    renderColl()});
+  $("collBody").querySelectorAll(".crow").forEach(row=>{
+    const k=row.dataset.k;
+    const nm=row.querySelector(".cnm"),rec=rows.find(x=>x.k===k);
+    if(nm&&rec)cardPreview(nm,rec.c);
+    row.querySelectorAll("[data-cp],[data-cm]").forEach(btn=>btn.onclick=()=>{
+      const o=owned(k).slice();
+      const which=btn.dataset.cp||btn.dataset.cm, up=!!btn.dataset.cp;
+      const i=which==="f"?1:0;
+      o[i]=Math.max(0,o[i]+(up?1:-1));
+      setOwned(k,o[0],o[1]);renderColl()})});
+}
+
+/* Settings. Only one switch so far, but the page is the right home for the
+   next one rather than another tile on the Other menu. */
+function renderPrefs(){
+  $("prefBody").innerHTML=`
+    <div class="prow">
+      <div><b>Collection tracking</b>
+        <p>Adds the owned/foil steppers to card pages and turns on the My collection tab.
+        Switch it off if you only came here to search and build decks.</p></div>
+      <button class="btn" id="pfColl">${COLLON?"On":"Off"}</button>
+    </div>`;
+  $("pfColl").onclick=()=>{
+    COLLON=!COLLON;save(K_COLLON,COLLON);renderPrefs();applyCollPref();
+    toast(COLLON?"Collection features on":"Collection features off")};
+  applyCollPref();
+}
+/* One class on <body> hides every collection affordance at once, so a new one
+   added later is covered by default rather than needing to be remembered. */
+function applyCollPref(){document.body.classList.toggle("nocoll",!COLLON)}
+
 const OPAGES={
   read:  ["vRead",   ()=>renderRead()],
   guess: ["vGuess",  ()=>renderGuess()],
@@ -5119,6 +5700,7 @@ const OPAGES={
   click: ["vClick",  ()=>renderClicker()],
   hex:   ["vHex",    ()=>renderOutpost()],
   cred:  ["vCred",   ()=>renderCredits()],
+  pref:  ["vPref",   ()=>renderPrefs()],
 };
 function renderOther(){
   const groups=OTHER_GROUPS
@@ -5140,7 +5722,7 @@ function renderOther(){
    difference is whether the deck rail is on screen — because maintaining two
    copies of the search UI would guarantee they drift apart. */
 const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
-const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred"];
+const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref"];
 let TAB="tDeck",SUB=load("fs3_sub","manual");
 function showTab(t){
   TAB=t;save("fs3_tab",t);
@@ -5151,7 +5733,7 @@ function showTab(t){
   $("subsw").classList.toggle("hide",t!=="tDeck");
   if(t==="tDeck")       $(guided?"vGuide":"vSearch").classList.add("on");
   else if(t==="tSearch")$("vSearch").classList.add("on");
-  else if(t==="tColl")  $("vColl").classList.add("on");
+  else if(t==="tColl"){$("vColl").classList.add("on");renderColl()}
   else if(t==="tDecks"){$("vDecks").classList.add("on");renderDecksPage()}
   else if(t==="tOther"){
     /* One table, not a chain of fourteen else-ifs. A chain is how the default
@@ -5282,6 +5864,8 @@ $("fmt").value=deck().fmt;
 render();
 const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
+try{document.body.insertAdjacentHTML("afterbegin",RAINDEF)}catch(e){}
+applyCollPref();
 showTab(load("fs3_tab","tDeck"));
 drawTitle();
 /* =========================================================================
@@ -5312,9 +5896,10 @@ const SB_KEY="/*__SB_KEY__*/";
    supabase-schema.sql — the database rejects anything else, on purpose. */
 const SYNCED=[K_DECKS,"fs3_dust",K_STAR];
 const SB_LIB="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js";
+const PULLED="fs3_pulled";   /* one cloud pull per tab — see arrive() */
 
 const ACCT={
-  sb:null, user:null, pushing:null,
+  sb:null, user:null, pushing:{},
 
   configured(){return /^https:\/\//.test(SB_URL)&&SB_KEY.length>20},
 
@@ -5361,11 +5946,34 @@ const ACCT={
 
   async signOut(){
     try{const sb=await this.client();await sb.auth.signOut()}catch(e){}
+    try{sessionStorage.removeItem(PULLED)}catch(e){}   // so signing back in pulls again
     this.user=null;this.paint();
     toast("Signed out — your decks stay in this browser")},
 
   /* Signed in. Pull what the account holds; if it holds nothing, this is a
-     first sign-in and local goes up instead. */
+     first sign-in and local goes up instead.
+
+     THE RELOAD LOOP, and why it is now impossible.
+
+     DECKS, DUST and STARS are read into memory once at startup, so applying
+     freshly pulled data means reloading the page. The first version reloaded
+     whenever the account had any rows at all — but the reload re-ran this
+     function, found the same rows, and reloaded again. Forever. Ben hit it as
+     a flashing page that kept jumping between tabs.
+
+     A "have I already pulled this tab" flag stops the loop, but still costs a
+     reload on every new tab, which is a visible flicker for no reason.
+
+     So the test is not "does the account have rows" but "is any of it actually
+     different from what this browser already has". On a normal visit — the
+     same person, the same data — nothing differs, so nothing is written and
+     nothing reloads. A reload now only happens when there is genuinely
+     something new to show, which is the only time it is worth a flash.
+
+     The sessionStorage flag stays as a second line of defence: even if a
+     comparison somehow always disagreed, the reload could happen once per tab
+     and no more. Two independent guards, because a loop that makes the site
+     unusable is worse than almost any other bug here. */
   async arrive(user){
     this.user=user;this.paint();
     let rows=[];
@@ -5375,19 +5983,41 @@ const ACCT={
       if(r.error)throw r.error;
       rows=r.data||[]}
     catch(e){toast("Signed in — couldn't reach your saved data");return}
-    if(rows.length){
-      rows.forEach(r=>{try{localStorage.setItem(r.key,JSON.stringify(r.value))}catch(e){}});
-      toast("Loaded your account");
-      location.reload();          // cheapest correct way to re-read every table
-    }else{
-      await this.push(SYNCED);
-      toast("Saved this browser's decks to your account")}},
 
-  /* Debounced so a burst of adds is one write, not forty. */
+    if(!rows.length){                       // first ever sign-in: local goes up
+      await this.push(SYNCED);
+      toast("Saved this browser's decks to your account");return}
+
+    /* Write only what genuinely differs. JSON.stringify of a value that came
+       out of JSON.parse is stable enough for this: both sides originate from
+       the same serialiser, so key order matches. */
+    let changed=0;
+    rows.forEach(r=>{
+      try{
+        const incoming=JSON.stringify(r.value);
+        if(localStorage.getItem(r.key)===incoming)return;   // already identical
+        localStorage.setItem(r.key,incoming);changed++
+      }catch(e){}});
+    if(!changed)return;                     // nothing new — no write, no reload
+
+    let already=false;
+    try{already=!!sessionStorage.getItem(PULLED);
+        sessionStorage.setItem(PULLED,"1")}catch(e){}
+    if(already)return;                      // belt and braces: never twice a tab
+    this.reload()},
+
+  /* Indirection so a test can watch for the reload without navigating. The
+     loop bug was invisible to every existing suite precisely because nothing
+     could observe this call. */
+  reload(){location.reload()},
+
+  /* Debounced so a burst of adds is one write, not forty. One timer per key —
+     a single shared timer meant saving a deck and a star inside the same
+     second pushed only whichever landed last, and silently dropped the other. */
   queue(key){
     if(!this.user||SYNCED.indexOf(key)<0)return;
-    clearTimeout(this.pushing);
-    this.pushing=setTimeout(()=>this.push([key]),1200)},
+    clearTimeout(this.pushing[key]);
+    this.pushing[key]=setTimeout(()=>this.push([key]),1200)},
 
   async push(keys){
     if(!this.user)return;
@@ -5406,6 +6036,11 @@ const ACCT={
     b.title=this.user?"Signed in as "+e:"Sign in with Google to carry your decks between devices"}
 };
 window.ACCT=ACCT;   /* exposed so the suites can assert on it */
+/* Same reason: the collection lives inside the IIFE, so a test has no way to
+   reach it otherwise. Read-only helpers plus the two writers the suites need. */
+window.COLLAPI={allPrintings,prints,pkey,owned,ownTotal,setOwned,
+  copies:()=>collCopies(),foils:()=>collFoils(),
+  raw:()=>COLL,setOf:s=>allPrintings().filter(x=>x.pr.s===s)};
 
 setTimeout(jiggleArt,650);   // let the page settle before the switch waves
 /* ACCT is a const declared below this IIFE, so it is in the temporal dead zone
