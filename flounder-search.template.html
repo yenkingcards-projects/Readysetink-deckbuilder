@@ -67,6 +67,63 @@
   --bevel:inset 0 1px 0 rgba(255,255,255,.34),inset 0 -1px 0 var(--chrome);
   --bevel-in:inset 0 1px 0 var(--chrome),inset 0 -1px 0 rgba(255,255,255,.28);
 }
+
+/* ===================== dark mode =====================
+   A second palette, not an inversion. Every value below was measured against
+   the surface it actually lands on and clears the same AAA (7:1) bar the light
+   theme holds — _test_v33 now audits both themes, so a dark-only regression
+   can't slip through.
+
+   Two things flip rather than darken:
+   · The action red goes LIGHTER and takes a dark label. White on any red dark
+     enough to sit on this background is around 3:1; a light coral with carbon
+     text is 7.38. Same logic that put --signal-deep in the light theme,
+     pointing the other way.
+   · The bevel reverses. The design system's depth is "bright top edge, shadow
+     beneath". On a dark canvas the bright edge has to be much subtler or every
+     plate glows. */
+body.dark{
+  --canvas:#161b28; --canvas-soft:#252d40; --periwinkle:#212838;
+  --lavender:#2b3350; --ice:#243044; --platinum:#2a3145; --surface:#212838;
+  --carbon:#0e121b; --chrome:#3f4a68; --muted:#4a5573; --hairline:#64719a;
+  --primary:#5a8ff0; --signal:#ff7a70; --signal-deep:#ff7a70;
+  --amberc:#ffd400; --navgold:#ffd400; --amber-press:#e6bf00;
+  --action-orange:#ffab5e; --shimmer:#7fb2ff;
+  --link:#9dc0ff; --deep:#b6cff8; --teal:#5fc4dc; --decksred:#ff8f85;
+  --bg:#161b28; --bg2:#0e121b; --panel:#212838; --panel2:#212838;
+  --line:#64719a; --line2:#3f4a68;
+  --tx:#e9eefb; --mut:#b6cff8; --dim:#b6cff8;
+  --on-dark:#e9eefb; --on-dark-soft:#c3d2f0;
+  --acc:#9dc0ff; --acc2:#5a8ff0; --gold:#ffd400; --good:#6fd39a; --bad:#ff8f85;
+  --bevel:inset 0 1px 0 rgba(255,255,255,.10),inset 0 -1px 0 rgba(0,0,0,.55);
+  --bevel-in:inset 0 1px 0 rgba(0,0,0,.55),inset 0 -1px 0 rgba(255,255,255,.08);
+}
+/* The few places a literal light colour was baked in and would now glare. */
+body.dark .btn.go{color:var(--carbon)}
+body.dark .btn.bad,body.dark .fastgrid button.bad{color:var(--carbon)}
+body.dark .crow.has{background:#3a3520;border-color:var(--amber-press)}
+body.dark .chip.rec{background:#3a3520}
+body.dark .acrow:hover,body.dark .acrow.on{background:#3a3520}
+body.dark .pull{background:var(--surface);color:var(--tx)}
+body.dark .pull h2,body.dark .pull td.q{color:var(--tx)}
+body.dark .pull .sub,body.dark .pull td.no,body.dark .pull td.ra{color:var(--deep)}
+body.dark .pull td{border-bottom-color:var(--line2)}
+body.dark .cfm,body.dark .modal{background:var(--surface)}
+body.dark #q::placeholder{color:var(--deep);opacity:.6}
+/* The art/franchise switches dim their own label to signal "off". That dimming
+   was tuned against a white page; on a dark one it pushed the text under the
+   bar, so the label keeps full strength here and "off" is carried by the knob
+   and the border instead. */
+/* Native form controls don't inherit the theme — a select left alone renders
+   its own dark text on the OS chrome and disappears here. */
+body.dark select,body.dark input,body.dark textarea,body.dark option{
+  background:var(--surface);color:var(--tx);border-color:var(--line)}
+body.dark input[type=file]{color:var(--tx)}
+body.dark .swx .lb{opacity:1;filter:none}
+body.dark .swx.on .lb{color:var(--carbon)}
+/* Printing is always on white paper, whatever the screen is doing. */
+@media print{body.dark{--surface:#fff;--tx:#111;--platinum:#fff;--deep:#555}}
+
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--canvas);color:var(--tx);min-height:100vh;font-size:14px;line-height:1.5;
   font-family:var(--sans);
@@ -80,19 +137,19 @@ button{cursor:pointer;background:none;border:none}
 /* ---- the chrome voice: uppercase Arial Bold, half a pixel of tracking ---- */
 h1,h2,h3,h4{font-family:var(--sans);font-weight:700}
 h1{font-size:26px;line-height:1.1;font-family:var(--display);font-weight:900;
-  letter-spacing:0;color:var(--surface);
+  letter-spacing:0;color:#ffffff;
   /* box-art logotype: heavy outline plus a hard offset shadow, no blur */
   text-shadow:2px 2px 0 var(--carbon),
     -1px -1px 0 var(--chrome),1px -1px 0 var(--chrome),
     -1px 1px 0 var(--chrome),1px 1px 0 var(--chrome)}
-.lede{font-size:14px;line-height:1.6;color:var(--carbon);max-width:78ch}
+.lede{font-size:14px;line-height:1.6;color:var(--tx);max-width:78ch}
 .gi{font-size:.9em;margin-right:6px;vertical-align:.04em}
 
 
 /* ---- collection checklist ---- */
 .collbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 10px;
   background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
-  padding:8px 10px;border-radius:2px;color:var(--carbon)}
+  padding:8px 10px;border-radius:2px;color:var(--tx)}
 .collbar .sp{flex:1}
 /* [hidden] sets display:none at the lowest priority, so any display rule of
    our own silently beats it. This one has to say so explicitly. */
@@ -102,7 +159,7 @@ h1{font-size:26px;line-height:1.1;font-family:var(--display);font-weight:900;
   border:1px solid var(--line);border-radius:4px;padding:6px 10px;box-shadow:var(--bevel-in)}
 .crow.has{background:#fff8d6;border-color:var(--amber-press)}
 .crow .cnum{font-variant-numeric:tabular-nums;color:var(--deep);font-weight:700;min-width:46px}
-.crow .cnm{flex:1;color:var(--carbon);min-width:0}
+.crow .cnm{flex:1;color:var(--tx);min-width:0}
 .crow .cnm i{font-style:normal;color:var(--deep)}
 .crow .crar{color:var(--deep);font-size:12px;min-width:74px}
 .crow .cq{display:flex;align-items:center;gap:4px}
@@ -120,21 +177,24 @@ h1{font-size:26px;line-height:1.1;font-family:var(--display);font-weight:900;
 /* ---- settings rows ---- */
 .prow{display:flex;align-items:center;gap:16px;background:var(--surface);
   border:1px solid var(--line);border-radius:4px;padding:10px 12px;box-shadow:var(--bevel-in)}
-.prow p{color:var(--carbon);margin-top:3px;max-width:60ch}
+.prow p{color:var(--tx);margin-top:3px;max-width:60ch}
 .prow>div{flex:1}
 /* Every collection affordance hides behind one class — see applyCollPref(). */
 body.nocoll .collonly{display:none!important}
 
 
+/* The borrow list is a thing you send someone, not part of the sheet you walk
+   your binder with, so it is kept off the printout entirely. */
+@media print{.borrow{display:none!important}}
 /* ---- borrow list ---- */
 .borrow{background:var(--surface);border:1px solid var(--line);border-radius:4px;
   box-shadow:var(--bevel-in);padding:12px 14px;margin-bottom:14px}
 .borrow .bhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .borrow .bhead .sp{flex:1}
-.borrow .bhead b{color:var(--carbon)}
+.borrow .bhead b{color:var(--tx)}
 .borrow .bnote{color:var(--deep);font-size:12px;margin:4px 0 8px}
 .borrow .btext{width:100%;background:var(--platinum);border:1px solid var(--hairline);
-  box-shadow:var(--bevel-in);border-radius:2px;padding:9px 11px;color:var(--carbon);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:9px 11px;color:var(--tx);
   font-family:var(--sans);font-size:13px;line-height:1.5;resize:vertical}
 .bcust{background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:2px;
   box-shadow:var(--bevel-in);padding:10px 12px;margin-bottom:10px;
@@ -142,12 +202,12 @@ body.nocoll .collonly{display:none!important}
 .bcust label{display:flex;flex-direction:column;gap:3px;font-size:11px;font-weight:700;
   text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
 .bcust input,.bcust select{background:var(--surface);border:1px solid var(--line);
-  border-radius:2px;padding:5px 7px;font-size:13px;color:var(--carbon);
+  border-radius:2px;padding:5px 7px;font-size:13px;color:var(--tx);
   text-transform:none;letter-spacing:0;font-weight:400;min-width:180px}
 .bpick{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
 .bpick>b{flex:1 1 100%;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
 .bcust .bchk{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:400;
-  text-transform:none;letter-spacing:0;color:var(--carbon);flex-direction:row}
+  text-transform:none;letter-spacing:0;color:var(--tx);flex-direction:row}
 .bchk i{font-style:normal;color:var(--deep)}
 
 
@@ -160,8 +220,8 @@ body.nocoll .collonly{display:none!important}
 .cfmbg{position:fixed;inset:0;background:rgba(32,38,56,.62);display:grid;place-items:center;z-index:900}
 .cfm{background:var(--surface);border:2px solid var(--chrome);border-radius:6px;
   box-shadow:var(--bevel);padding:18px 20px;max-width:440px;width:calc(100% - 32px)}
-.cfm h3{font-size:15px;color:var(--carbon);margin-bottom:6px}
-.cfm p{color:var(--carbon);margin-bottom:14px}
+.cfm h3{font-size:15px;color:var(--tx);margin-bottom:6px}
+.cfm p{color:var(--tx);margin-bottom:14px}
 .cfmb{display:flex;gap:8px;justify-content:flex-end}
 /* ---- hover preview ---- */
 .cpv{position:fixed;z-index:950;pointer-events:none;width:250px;
@@ -171,7 +231,7 @@ body.nocoll .collonly{display:none!important}
 /* ---- collection sub-tabs ---- */
 .ctabs{display:flex;gap:0;margin:14px 0 0}
 .ctabs button{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
-  padding:7px 14px;border:1px solid var(--chrome);background:var(--platinum);color:var(--carbon);
+  padding:7px 14px;border:1px solid var(--chrome);background:var(--platinum);color:var(--tx);
   box-shadow:var(--bevel);border-right:none}
 .ctabs button:last-child{border-right:1px solid var(--chrome)}
 .ctabs button.on{background:var(--carbon);color:var(--amberc)}
@@ -185,6 +245,114 @@ body.nocoll .collonly{display:none!important}
 .rsym{width:14px;height:14px;flex:0 0 14px;vertical-align:-2px;margin-right:5px}
 .crar{display:flex;align-items:center;gap:0}
 
+
+/* ---- collection rows in the card modal ---- */
+.mcoll{margin-top:12px;background:var(--canvas-soft);border:1px solid var(--hairline);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:9px 11px}
+.mcoll>b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--deep);margin-bottom:6px}
+.mcr{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--surface);
+  border:1px solid var(--line);border-radius:2px;padding:5px 8px;margin-bottom:4px}
+.mcr:last-child{margin-bottom:0}
+.mcn{flex:1;display:flex;align-items:center;color:var(--tx);min-width:150px}
+.mcn i{font-style:normal;color:var(--deep);margin-left:5px}
+
+
+/* ---- csv import ---- */
+.imp{margin-top:14px;background:var(--surface);border:1px solid var(--line);
+  box-shadow:var(--bevel-in);border-radius:4px;padding:11px 13px}
+.imp>b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.imp p{color:var(--tx);margin:5px 0 9px;max-width:70ch}
+.imp input[type=file]{font-size:12px;color:var(--tx)}
+.impok{color:var(--tx)}
+.impbad{color:var(--bad);font-weight:700}
+.impmiss{color:var(--deep);font-size:12px}
+.impbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+
+
+.soonlbl{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep);
+  background:var(--platinum);border:1px solid var(--hairline);border-radius:2px;padding:2px 6px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn[disabled]:hover{background:var(--amberc)}
+
+
+.prow{margin-bottom:8px}
+.prow.soon{opacity:.6}
+.prow.soon b{color:var(--deep)}
+#prefBack{margin-bottom:14px}
+
+
+/* ---- deck bar ---- */
+.deckbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:10px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
+  border-radius:2px;padding:7px 10px}
+.deckbar .sp{flex:1}
+.deckbar .dbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.deckbar b{color:var(--tx)}
+.dbdirty{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  background:var(--amberc);color:var(--carbon);border:1px solid var(--amber-press);
+  border-radius:2px;padding:2px 6px}
+body.browse .deckbar{display:none}
+/* ---- the save burst ---- */
+.spark{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:940}
+@media(prefers-reduced-motion:reduce){.spark{display:none}}
+
+
+.npin{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:2px;
+  padding:8px 10px;font-size:14px;color:var(--tx);margin-bottom:14px;font-family:var(--sans)}
+
+
+/* ---- deck gallery ---- */
+.dkgal{margin:14px 0}
+.dgh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
+  border-radius:2px;padding:7px 10px}
+.dgh .sp{flex:1}
+.dgh b{color:var(--tx)}
+.dgh span{color:var(--deep);font-size:12px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px}
+.dgrid.big{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.dgc{position:relative;margin:0;background:var(--surface);border:1px solid var(--chrome);
+  border-radius:4px;overflow:hidden;box-shadow:var(--bevel);cursor:pointer}
+.dgc:hover{border-color:var(--amber-press);box-shadow:0 0 0 3px var(--amberc),var(--bevel)}
+.dgc img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;background:var(--platinum)}
+.dgph{aspect-ratio:674/940;display:grid;place-items:center;text-align:center;padding:8px;
+  background:var(--platinum);color:var(--deep);font-size:12px}
+.dgq{position:absolute;top:4px;left:4px;background:var(--carbon);color:var(--amberc);
+  font-weight:800;font-size:13px;padding:1px 7px;border-radius:2px;border:1px solid var(--amber-press)}
+.dgc figcaption{padding:5px 6px;font-size:12px;color:var(--tx);line-height:1.25}
+@media print{.dkgal{display:none!important}}
+
+
+/* ---- search suggestions ---- */
+.acbox{position:relative;z-index:70;margin:-4px 0 10px;background:var(--surface);
+  border:1px solid var(--chrome);border-radius:2px;box-shadow:var(--bevel);overflow:hidden}
+.acbox[hidden]{display:none}
+.acrow{display:flex;width:100%;align-items:baseline;gap:10px;text-align:left;
+  padding:7px 11px;border:none;border-bottom:1px solid var(--line);background:var(--surface);
+  color:var(--tx)}
+.acrow:last-child{border-bottom:none}
+.acrow:hover,.acrow.on{background:#fff8d6}
+.acn{flex:1}
+.acn i{font-style:normal;color:var(--deep)}
+.acm{font-size:12px;color:var(--deep);white-space:nowrap}
+/* ---- did you mean ---- */
+.dym{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--amber-press);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:10px 12px;margin:10px 13px;color:var(--tx)}
+.dym b{margin-right:6px}
+.dym button{background:var(--platinum);border:1px solid var(--line);border-radius:2px;
+  padding:3px 9px;margin:3px 5px 0 0;color:var(--deep);font-weight:700}
+.dym button:hover{background:#fff8d6;border-color:var(--amber-press)}
+
+
+.prow.locked{opacity:.75}
+.prow.locked b{display:flex;align-items:center;gap:8px}
+
+/* --carbon is the SLAB colour (nav, footer, dark buttons). --tx is the TEXT
+   colour. They are the same value in the light theme, which is why the two got
+   conflated — and why dark mode surfaced 37 places where dark text sat on a
+   dark plate. Text uses --tx; only labels sitting on a light accent fill
+   (Action Yellow) keep --carbon, because that fill stays light in both themes. */
 /* ---- plates ---- */
 .plate{background:var(--canvas);border:1px solid var(--chrome);box-shadow:var(--bevel)}
 .inset{background:var(--platinum);border:1px solid var(--hairline);box-shadow:var(--bevel-in)}
@@ -219,7 +387,7 @@ header{display:flex;align-items:center;gap:14px;padding:7px 12px;background:var(
 .logo b{font-size:16px;white-space:nowrap;font-family:var(--display);font-weight:900;
   color:var(--deep);background:var(--surface);border-radius:9999px;
   padding:3px 13px 4px;letter-spacing:-.02em;border:1px solid var(--chrome)}
-.logo span{font-size:12px;color:var(--canvas-soft);font-family:var(--sans);letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo span{font-size:12px;color:var(--on-dark-soft);font-family:var(--sans);letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:900px){.logo span{display:none}}
 header .sp{flex:1}
 header select{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:6px 9px;font-size:12.8px}
@@ -232,7 +400,7 @@ header select{background:var(--panel);border:1px solid var(--line);border-radius
    hierarchy — do not flatten these into one. */
 nav.tabs{display:flex;gap:0;padding:0 8px;background:var(--canvas-soft);
   border-bottom:1px solid var(--chrome);box-shadow:var(--bevel);flex-wrap:wrap}
-nav.tabs button{font-family:var(--sans);color:var(--carbon);padding:6px 14px;font-size:12px;
+nav.tabs button{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
   font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:0;
   border-right:1px solid rgba(51,74,136,.3)}
 nav.tabs button:hover{background:rgba(255,255,255,.4)}
@@ -244,9 +412,9 @@ nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
   border:1px solid var(--chrome);box-shadow:var(--bevel);border-radius:6px 6px 0 0}
 .page h1+.lede{margin:0 0 16px;padding:10px 16px 12px;background:var(--canvas-soft);
   border:1px solid var(--chrome);border-top:none;box-shadow:var(--bevel);
-  border-radius:0 0 6px 6px;color:var(--carbon)}
+  border-radius:0 0 6px 6px;color:var(--tx)}
 /* Section header strip — silkscreened legend over each module. */
-.sec2{background:var(--canvas-soft);color:var(--carbon)!important;border:1px solid var(--chrome);
+.sec2{background:var(--canvas-soft);color:var(--tx)!important;border:1px solid var(--chrome);
   box-shadow:var(--bevel);padding:5px 10px;margin:16px 0 8px;border-radius:0;
   font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
 .sec2::before{content:"\2261  ";opacity:.6}
@@ -269,7 +437,7 @@ body.browse .wrap{grid-template-columns:250px 1fr}
 .page h1{font-size:30px}
 
 .soon{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--acc);
-  border-radius:0 11px 11px 0;padding:14px 16px;margin-bottom:12px;font-size:13.44px;line-height:1.65;color:var(--carbon)}
+  border-radius:0 11px 11px 0;padding:14px 16px;margin-bottom:12px;font-size:13.44px;line-height:1.65;color:var(--tx)}
 .soon b{color:var(--link);display:block;margin-bottom:5px}
 .soon p{margin-bottom:8px}.soon p:last-child{margin-bottom:0}
 .soon li{margin:0 0 4px 18px}
@@ -298,19 +466,19 @@ body.browse .wrap{grid-template-columns:250px 1fr}
 .wih i{width:12px;height:12px;border-radius:50%;background:var(--ic);
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
 .wih span{margin-left:auto;font-size:12px;color:var(--deep);font-weight:600}
-.wink p{font-size:12.16px;line-height:1.55;color:var(--carbon);margin:0}
+.wink p{font-size:12.16px;line-height:1.55;color:var(--tx);margin:0}
 .wsets{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;margin-top:11px}
 .wset{display:flex;gap:11px;align-items:center;background:var(--platinum);border:1px solid var(--line);
   border-radius:2px;padding:9px 12px}
 .wset .wn{width:24px;height:24px;flex:none;border-radius:50%;background:var(--panel2);
-  border:1px solid var(--line2);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--carbon)}
+  border:1px solid var(--line2);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--tx)}
 .wset b{display:block;font-size:13.28px;line-height:1.3}
 .wset span{display:block;font-size:12px;color:var(--deep)}
 /* ===== historic leaks =================================================== */
 .leakwarn{background:rgba(247,201,92,.08);border:1px solid rgba(247,201,92,.45);
   border-radius:2px;padding:15px 18px;margin-bottom:18px}
 .leakwarn b{display:block;color:var(--gold);font-size:15.2px;margin-bottom:6px}
-.leakwarn p{font-size:13.12px;line-height:1.65;color:var(--carbon);margin-bottom:7px}
+.leakwarn p{font-size:13.12px;line-height:1.65;color:var(--tx);margin-bottom:7px}
 .leakwarn p:last-child{margin-bottom:0}
 .leaks{display:flex;flex-direction:column;gap:11px}
 .leak{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--acc);
@@ -323,7 +491,7 @@ body.browse .wrap{grid-template-columns:250px 1fr}
 .lkl{display:grid;grid-template-columns:130px 1fr;gap:5px 14px;font-size:12.8px;line-height:1.6}
 @media(max-width:600px){.lkl{grid-template-columns:1fr;gap:2px}.lkl dt{margin-top:7px}}
 .lkl dt{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--deep);padding-top:3px}
-.lkl dd{color:var(--carbon)}
+.lkl dd{color:var(--tx)}
 .lkf{font-size:12px;color:var(--deep);margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
 /* ===== hidden mickeys =================================================== */
 .micks{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:11px;margin-bottom:6px}
@@ -334,7 +502,7 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 .mick img{aspect-ratio:674/940;object-fit:cover}
 .mick .mkph{height:103px;display:grid;place-items:center;font-size:1.6rem;color:var(--deep)}
 .mkt{font-size:14.08px;font-weight:700;margin-bottom:4px;line-height:1.3}
-.mkw{font-size:12.32px;color:var(--carbon);line-height:1.55}
+.mkw{font-size:12.32px;color:var(--tx);line-height:1.55}
 /* ===== deck upgrades ==================================================== */
 .ups{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:9px;margin-bottom:6px}
 .up{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--line2);
@@ -369,7 +537,7 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
   border-radius:0 11px 11px 0;padding:12px 15px}
 .err.open{border-left-color:var(--gold)}
 .err .ec{font-size:14.4px;font-weight:700;margin-bottom:4px}
-.err .ew{font-size:12.64px;color:var(--carbon);line-height:1.55}
+.err .ew{font-size:12.64px;color:var(--tx);line-height:1.55}
 .err .ef{font-size:12px;color:var(--deep);margin-top:7px}
 .err.open .ef{color:var(--gold)}
 .err .lang{font-size:12px;font-weight:600;color:var(--link);border:1px solid var(--line2);
@@ -378,12 +546,12 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 /* ===== contribute ======================================================= */
 .cstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:18px}
 .cstat div{background:var(--platinum);border:1px solid var(--line);border-radius:2px;padding:14px;text-align:center}
-.cstat b{display:block;font-size:1.7rem;font-weight:800;color:var(--carbon);line-height:1}
+.cstat b{display:block;font-size:1.7rem;font-weight:800;color:var(--tx);line-height:1}
 .cstat i{display:block;font-style:normal;font-size:12px;text-transform:uppercase;
   letter-spacing:.08em;color:var(--deep);margin-top:6px}
 .ctile{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:16px 18px;margin-bottom:11px}
 .ctile h3{font-size:1rem;margin-bottom:7px}
-.ctile p{font-size:13.28px;line-height:1.65;color:var(--carbon);margin-bottom:7px}
+.ctile p{font-size:13.28px;line-height:1.65;color:var(--tx);margin-bottom:7px}
 .ctile p:last-child{margin-bottom:0}
 .ctile .small{font-size:12px;color:var(--deep)}
 .ctile a{color:var(--link)}
@@ -404,15 +572,15 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 /* ===== sites + credits ================================================== */
 .sites{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
 /* Footer is part of the carbon command layer, same halftone as the nav. */
-.foot{margin:24px 0 0;padding:16px 18px;background:var(--carbon);
+.foot{margin:24px 0 0;padding:9px 18px;background:var(--carbon);
   background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
   background-size:4px 4px;border-top:2px solid var(--chrome);
   display:flex;gap:20px;flex-wrap:wrap;
-  font-family:var(--sans);font-size:12px;color:var(--canvas-soft);
+  font-family:var(--sans);font-size:11.5px;color:var(--canvas-soft);
   position:relative;z-index:1}
 .foot a{color:var(--link)}
 .foot a:hover{color:var(--surface)}
-.fdis{flex:1;min-width:260px;text-align:right;max-width:52ch}
+.fdis{flex:1;min-width:260px;text-align:right;max-width:52ch;color:var(--on-dark-soft)}
 @media(max-width:700px){.fdis{text-align:left}}
 .cwhat{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.09em;
   color:var(--deep);margin-bottom:5px;line-height:1.6}
@@ -421,9 +589,9 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
   border-radius:4px;padding:12px 15px}
 .cred a{text-decoration:none}
 .cred b{font-size:14.4px;color:var(--link)}
-.cred p{font-size:12.32px;color:var(--carbon);line-height:1.55;margin-top:4px}
+.cred p{font-size:12.32px;color:var(--tx);line-height:1.55;margin-top:4px}
 .disclaimer{background:var(--platinum);border:1px solid var(--line2);border-radius:2px;padding:16px 19px}
-.disclaimer p{font-size:12.96px;line-height:1.7;color:var(--carbon);margin-bottom:10px}
+.disclaimer p{font-size:12.96px;line-height:1.7;color:var(--tx);margin-bottom:10px}
 .disclaimer p:last-child{margin-bottom:0}
 /* This plate is platinum, where --link is 6.30 — under the 7:1 bar. Links on
    platinum take the deeper step (8.69). --link is for links on white. */
@@ -509,7 +677,7 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 .clickhud{display:flex;flex-direction:column;gap:9px}
 .clickhud div{background:var(--platinum);border:1px solid var(--line);border-radius:2px;
   padding:14px 20px;text-align:center;min-width:170px}
-.clickhud b{display:block;font-size:1.8rem;font-weight:800;color:var(--carbon);line-height:1}
+.clickhud b{display:block;font-size:1.8rem;font-weight:800;color:var(--tx);line-height:1}
 .clickhud i{display:block;font-style:normal;font-size:12px;text-transform:uppercase;
   letter-spacing:.09em;color:var(--deep);margin-top:6px}
 /* ===== patron / prestige / respects / quiz polish ======================== */
@@ -518,11 +686,11 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 .patron.on{border-color:rgba(63,217,149,.45);background:rgba(63,217,149,.08)}
 .patron b{display:block;font-size:15.2px;margin-bottom:4px;color:var(--gold)}
 .patron.on b{color:var(--good)}
-.patron p{font-size:12.96px;color:var(--carbon);line-height:1.6;margin-bottom:10px}
+.patron p{font-size:12.96px;color:var(--tx);line-height:1.6;margin-bottom:10px}
 .prestige{background:rgba(143,107,176,.12);
   border:1px solid rgba(185,140,255,.5);border-radius:2px;padding:15px 18px;margin:16px 0}
 .prestige b{display:block;color:#d5b8ff;font-size:15.2px;margin-bottom:4px}
-.prestige p{font-size:12.96px;color:var(--carbon);margin-bottom:10px}
+.prestige p{font-size:12.96px;color:var(--tx);margin-bottom:10px}
 .prestige.done{border-color:rgba(247,201,92,.6)}
 @keyframes radiate{0%,100%{filter:hue-rotate(0) brightness(1)}50%{filter:hue-rotate(40deg) brightness(1.35)}}
 .tit.radiant{border-color:#d5b8ff;box-shadow:0 0 22px -4px rgba(185,140,255,.75);animation:radiate 3s ease-in-out infinite}
@@ -570,11 +738,11 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 /* keyboard cursor */
 .c.kb{outline:3px solid var(--amberc);outline-offset:2px;z-index:20}
 .kbhint{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;
-  color:var(--carbon);background:var(--canvas-soft);border:1px solid var(--hairline);
+  color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
   box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px;margin-left:auto}
 .kbhint kbd{font-family:var(--sans);font-size:12px;font-weight:700;background:var(--surface);
   border:1px solid var(--chrome);border-bottom-width:2px;border-radius:2px;padding:1px 5px;
-  color:var(--carbon)}
+  color:var(--tx)}
 @media(max-width:900px){.kbhint{display:none}}
 @media(prefers-reduced-motion:reduce){.fly{display:none}.c.add,.bump{animation:none}}
 
@@ -587,7 +755,7 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
   animation:qrise .34s cubic-bezier(.2,.9,.3,1.2)}
 .qreveal img{width:min(320px,42vw);height:auto;display:block;border:1px solid var(--chrome);border-radius:6px}
 .qrn{flex:1;min-width:120px}
-.qrn b{display:block;font-family:var(--display);font-weight:900;font-size:22px;color:var(--carbon);line-height:1.1}
+.qrn b{display:block;font-family:var(--display);font-weight:900;font-size:22px;color:var(--tx);line-height:1.1}
 .qrn span{display:block;font-size:13px;color:var(--deep);margin-top:2px}
 @keyframes qrise{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
 @media(max-width:620px){.qreveal{flex-direction:column;align-items:flex-start}
@@ -600,7 +768,7 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
   box-shadow:var(--bevel-in);padding:10px 12px;border-radius:4px}
 .lbrd h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
   color:var(--deep);margin-bottom:6px}
-.lbrd .lbrow{display:flex;justify-content:space-between;font-size:12px;color:var(--carbon);
+.lbrd .lbrow{display:flex;justify-content:space-between;font-size:12px;color:var(--tx);
   padding:3px 0;border-bottom:1px dotted var(--muted)}
 .lbrd .lbrow:last-child{border-bottom:none}
 .lbrd .lbsoon{font-size:12px;color:var(--deep);margin-top:6px}
@@ -646,7 +814,7 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 @keyframes prpulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.22)}}
 @media(prefers-reduced-motion:reduce){.pr *{animation:none!important}.pr{animation:none!important}}
 .titb{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.hidwrap>summary{cursor:pointer;background:var(--canvas-soft);color:var(--carbon);
+.hidwrap>summary{cursor:pointer;background:var(--canvas-soft);color:var(--tx);
   border:1px solid var(--chrome);box-shadow:var(--bevel);padding:5px 10px;margin:16px 0 0;
   font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;list-style:none}
 .hidwrap>summary::-webkit-details-marker{display:none}
@@ -655,13 +823,13 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 /* a title riding along on a deck header */
 .dtitle{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;
   letter-spacing:.5px;padding:2px 7px;border:1px solid var(--chrome);background:var(--canvas-soft);
-  color:var(--carbon);margin-left:8px;vertical-align:.1em}
+  color:var(--tx);margin-left:8px;vertical-align:.1em}
 
 /* ---- Outpost ---- */
 .ores{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;margin:12px 0}
 .ore{background:var(--platinum);border:1px solid var(--chrome);box-shadow:var(--bevel-in);
   padding:6px 12px;min-width:96px;border-radius:4px}
-.ore b{display:block;font-size:17px;font-weight:900;font-family:var(--display);color:var(--carbon);line-height:1.1}
+.ore b{display:block;font-size:17px;font-weight:900;font-family:var(--display);color:var(--tx);line-height:1.1}
 .ore i{display:block;font-style:normal;font-size:12px;font-weight:700;text-transform:uppercase;
   letter-spacing:.5px;color:var(--deep)}
 .ore u{display:block;text-decoration:none;font-size:12px;color:var(--deep)}
@@ -694,11 +862,11 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .hqt b{font-family:var(--display);font-weight:900;font-size:15px}
 .hqt span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.9}
 .hqb{padding:12px}
-.hqy{font-size:12px;color:var(--carbon);margin-bottom:10px}
-.hqy b{color:var(--carbon)}
+.hqy{font-size:12px;color:var(--tx);margin-bottom:10px}
+.hqy b{color:var(--tx)}
 .blds{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px}
 .bld{text-align:left;background:var(--platinum);border:1px solid var(--hairline);
-  box-shadow:var(--bevel-in);padding:8px 10px;border-radius:4px;color:var(--carbon)}
+  box-shadow:var(--bevel-in);padding:8px 10px;border-radius:4px;color:var(--tx)}
 .bld b{display:block;font-size:12px;margin-bottom:3px}
 .bld i{display:block;font-style:normal;font-size:12px;color:var(--deep);line-height:1.35;margin-bottom:5px}
 .bld u{display:block;text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;
@@ -807,14 +975,14 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .tit.hid:not(.own) .tt{color:var(--deep);letter-spacing:.18em}
 .tit.hid:not(.own) .td{font-style:italic}
 .lockd{font-size:12px;color:var(--deep);border:1px dashed var(--line2);border-radius:2px;padding:3px 11px;display:inline-block}
-.hn{font-size:12px;color:var(--carbon);font-weight:700;margin-left:6px}
+.hn{font-size:12px;color:var(--tx);font-weight:700;margin-left:6px}
 .tit.blur{position:relative;overflow:hidden}
 .tit.blur::after{content:"?";position:absolute;top:13px;right:15px;font-size:1.4rem;
   font-weight:800;color:var(--gold);opacity:.55}
 .dbal{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;background:var(--panel);
   border:1px solid var(--line);border-left:2px solid var(--gold);border-radius:0 12px 12px 0;
   padding:14px 17px;margin-bottom:20px}
-.dbal b{color:var(--carbon)!important;font-size:2rem;font-weight:800;color:var(--gold);line-height:1}
+.dbal b{color:var(--tx)!important;font-size:2rem;font-weight:800;color:var(--gold);line-height:1}
 .dbal span{font-size:12.8px;color:var(--deep)}
 .dbal i{flex:1 0 100%;font-style:normal;font-size:12px;color:var(--deep);margin-top:4px}
 h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--link);
@@ -840,12 +1008,12 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
   background:var(--platinum);border:1px solid var(--line2);box-shadow:0 18px 44px -18px #000}
 .gframe img{position:absolute;display:block;image-rendering:auto;transition:width .35s ease,left .35s ease,top .35s ease}
 .gzoom{display:flex;align-items:center;gap:11px;margin-top:11px}
-.gw{font-size:12px;color:var(--carbon);background:var(--canvas-soft);border:1px solid var(--hairline);
+.gw{font-size:12px;color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
   padding:4px 9px;border-radius:2px}
-.gw b{color:var(--carbon);font-size:14px}
+.gw b{color:var(--tx);font-size:14px}
 .gscore{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
 .gscore div{background:var(--platinum);border:1px solid var(--line);border-radius:2px;padding:8px 4px;text-align:center}
-.gscore b{display:block;font-size:1.15rem;font-weight:800;color:var(--carbon)}
+.gscore b{display:block;font-size:1.15rem;font-weight:800;color:var(--tx)}
 .gscore i{display:block;font-style:normal;font-size:12px;text-transform:uppercase;
   letter-spacing:.1em;color:var(--deep);margin-top:3px}
 .gopts{display:flex;flex-direction:column;gap:8px}
@@ -933,9 +1101,23 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .rtext .rulings{max-height:none}
 /* ===== decks page + pull list =========================================== */
 .dkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:11px;margin-bottom:22px}
-.dkcard{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px;text-align:left}
+/* Unselected decks sit back on platinum; the one you're editing comes forward
+   onto white. --panel and --surface resolve to the same white in the light
+   palette, so using those two would have made the difference invisible. */
+.dkcard{background:var(--platinum);border:1px solid var(--line);border-radius:4px;padding:14px;text-align:left;
+  position:relative;border-left:5px solid var(--line)}
 .dkcard:hover{border-color:var(--deep)}
-.dkcard.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+/* The selected deck used to be marked with --gold, which in the light palette
+   resolves to the same deep blue as :hover — so the current deck looked
+   identical to whichever one your mouse happened to be over. It now gets the
+   Action Yellow rail, a lifted plate and a badge saying so in words. */
+.dkcard.on{border-color:var(--chrome);border-left-color:var(--amberc);
+  background:var(--surface);box-shadow:var(--bevel),0 0 0 2px var(--chrome)}
+.dkcard.on h3{color:var(--tx)}
+.dkcur{display:inline-block;margin-left:7px;vertical-align:2px;
+  background:var(--amberc);color:var(--carbon);font-size:10px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:2px;
+  border:1px solid var(--hairline)}
 .dkcard h3{font-size:15.2px;margin-bottom:3px}
 .dkcard .dm{font-size:12px;color:var(--deep)}
 .dkcard .inks{display:flex;gap:3px;margin-top:8px}
@@ -957,6 +1139,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 @media print{
   body{background:#fff}
   header,nav.tabs,.mtabs,#bub,.pullbar,.dkgrid,.page h1,.lede,.toast{display:none!important}
+  /* A pull sheet is a shopping list you carry to a shop. The Community Code
+     disclaimer is a condition of publishing the SITE, not of every sheet of
+     paper it prints, so the footer comes off the printout. */
+  .foot{display:none!important}
   .view{display:none!important}.view#vDecks{display:block!important}
   .pull{padding:0;border-radius:0}
   .page{max-width:none;padding:0}
@@ -966,6 +1152,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .sfield{display:flex;flex-wrap:wrap;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);
   border-radius:2px;padding:7px 8px}
 .sfield:focus-within{border-color:var(--link)}
+#q::placeholder{color:var(--deep);opacity:.55}
 .sfield input{flex:1;min-width:160px;background:none;border:none;outline:none;padding:5px 6px;font-size:14.72px}
 .sfield input::placeholder{color:var(--deep)}
 .pill{display:inline-flex;align-items:center;gap:5px;background:var(--panel2);border:1px solid var(--line2);
@@ -987,7 +1174,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
   background:#3a5680;display:grid;place-items:center;font-size:12px;font-style:normal;
   filter:grayscale(1) opacity(.75);
   transition:transform .3s cubic-bezier(.5,1.7,.5,1),background .25s,filter .25s}
-.swx .lb{font-size:12px;font-weight:700;color:var(--carbon);background:var(--canvas-soft);padding:2px 7px;border-radius:2px;transition:color .25s;white-space:nowrap}
+.swx .lb{font-size:12px;font-weight:700;color:var(--tx);background:var(--platinum);padding:2px 7px;border-radius:2px;transition:color .25s;white-space:nowrap}
 .swx:hover{border-color:var(--deep)}
 .swx:hover .lb{color:var(--deep)}
 .swx.on{background:rgba(79,208,247,.1);border-color:var(--link);box-shadow:0 0 16px -4px rgba(79,208,247,.55)}
@@ -1000,7 +1187,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .swx.sto.on .kn i{background:var(--gold)}
 .swx.sto.on .lb{color:var(--link)}
 .swx:active .kn i{width:26px}
-.tghint{font-size:12px;color:var(--carbon);line-height:1.4;background:var(--canvas-soft);
+.tghint{font-size:12px;color:var(--tx);line-height:1.4;background:var(--canvas-soft);
   border:1px solid var(--hairline);padding:4px 8px;border-radius:2px}
 /* a quick shimmy when you land on the search page, so the switch gets noticed */
 @keyframes swjig{0%,100%{transform:rotate(0) translateX(0)}
@@ -1035,10 +1222,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .btn.go:hover{background:#8f000b}
 /* Right-rail command button: a carbon slab, sharp. */
 .btn.dark{background:var(--carbon);color:var(--surface);border-radius:0}
-.btn.outline{background:var(--surface);color:var(--carbon);border-color:var(--deep);box-shadow:var(--bevel)}
+.btn.outline{background:var(--surface);color:var(--tx);border-color:var(--deep);box-shadow:var(--bevel)}
 /* Hints used to sit on bare canvas at 1.17:1. They now carry their own pale
    inset, which is both readable and closer to the system's "inset panel". */
-.hint{font-size:12px;color:var(--carbon);margin-top:7px;line-height:1.55;
+.hint{font-size:12px;color:var(--tx);margin-top:7px;line-height:1.55;
   background:var(--canvas-soft);border:1px solid var(--hairline);
   box-shadow:var(--bevel-in);padding:6px 9px;border-radius:2px}
 .hint code{background:var(--surface);border:1px solid var(--hairline);border-radius:2px;
@@ -1072,7 +1259,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .exprow{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
 .groups{margin-top:2px}
 .grp{margin-bottom:8px}
-.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--carbon);
+.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--tx);
   font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--deep);margin:0 0 5px 2px;font-weight:700}
 .grp>summary::-webkit-details-marker{display:none}
 .grp>summary::before{content:"▸";transition:transform .15s}
@@ -1094,7 +1281,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 @media(max-width:1000px){.chips{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.chips{grid-template-columns:1fr}}
 .chip{display:flex;align-items:center;justify-content:space-between;gap:6px;background:var(--platinum);
-  border:1px solid var(--line);border-radius:4px;padding:7px 10px;font-size:12.48px;color:var(--deep);text-align:left;box-shadow:var(--bevel-in);color:var(--carbon);font-size:12px}
+  border:1px solid var(--line);border-radius:4px;padding:7px 10px;font-size:12.48px;color:var(--deep);text-align:left;box-shadow:var(--bevel-in);color:var(--tx);font-size:12px}
 .chip:hover{border-color:var(--deep);color:var(--tx)}
 .chip .n{font-size:12px;color:var(--deep);font-variant-numeric:tabular-nums}
 .chip.on{background:var(--acc);border-color:var(--link);color:var(--surface);font-weight:700}
@@ -1130,7 +1317,7 @@ details.sec>summary .c{margin-left:auto;font-size:12px;color:var(--deep);text-tr
 .sb{padding:2px 0 10px}
 .inks{display:flex;flex-wrap:wrap;gap:5px}
 .ic{border:1px solid var(--chrome);border-radius:2px;padding:4px 9px;font-size:12px;
-  color:var(--carbon);background:var(--surface);box-shadow:var(--bevel)}
+  color:var(--tx);background:var(--surface);box-shadow:var(--bevel)}
 .ic:hover{border-color:var(--deep);color:var(--tx)}
 .ic.on{color:#06121f;font-weight:700}
 .ic[data-v=Amber].on{background:var(--amber);border-color:var(--amber)}
@@ -1242,7 +1429,7 @@ body.browse .c .shift{display:none!important}
 .locframe img{position:absolute;top:50%;left:50%;width:71.7%;height:auto;max-width:none;
   transform:translate(-50%,-50%) rotate(90deg);display:block;border-radius:2px}
 .locnote{background:var(--platinum);border:1px solid var(--line);border-left:2px solid var(--acc);
-  border-radius:0 8px 8px 0;padding:10px 12px;margin-top:12px;font-size:12.16px;line-height:1.55;color:var(--carbon)}
+  border-radius:0 8px 8px 0;padding:10px 12px;margin-top:12px;font-size:12.16px;line-height:1.55;color:var(--tx)}
 .locnote b{color:var(--link);display:block;margin-bottom:5px;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
 .locnote li{margin:0 0 3px 16px}
 .locnote .src{color:var(--deep);font-size:12px;margin-top:6px}
@@ -1425,7 +1612,7 @@ body.noremind .c.illegal img{filter:none}
 .ruling{background:var(--platinum);border:1px solid var(--line);border-left:2px solid var(--gold);
   border-radius:0 8px 8px 0;padding:9px 11px;margin-bottom:7px}
 .ruling .q{font-size:12.64px;font-weight:700;color:var(--gold);margin-bottom:4px}
-.ruling .a{font-size:12.48px;line-height:1.5;color:var(--carbon)}
+.ruling .a{font-size:12.48px;line-height:1.5;color:var(--tx)}
 .ruling .src{font-size:12px;color:var(--deep);margin-top:5px}
 /* community notes are visually distinct from official Q&A so nobody mistakes
    one for the other — teal rail and a different heading colour */
@@ -1509,9 +1696,6 @@ body.noremind .c.illegal img{filter:none}
 <header>
   <div class="logo"><span class="f">🐠</span><b>Ready Set Ink</b><span>the best cards are the friends you make along the way</span></div>
   <div class="sp"></div>
-  <select id="fmt" title="Format — sets legality and ink limit">
-    <option value="infinity">Infinity</option><option value="core">Core</option><option value="coconut">Coconut</option>
-  </select>
   <span class="worn" id="worn"></span>
   <span class="stat" id="stat"></span>
   <button class="btn" id="acct" hidden>Sign in</button>
@@ -1532,6 +1716,19 @@ body.noremind .c.illegal img{filter:none}
 
 <main>
 <section class="view on" id="vSearch">
+  <!-- Deck bar: only shown on the Deck builder tab (body.browse hides it), which
+       is why the format selector moved here from the masthead — format belongs
+       to a deck, so it belongs beside the deck. -->
+  <div class="deckbar" id="deckbar">
+    <span class="dbl">Deck</span>
+    <b id="dbName">New deck</b>
+    <span id="dbDirty" class="dbdirty" hidden>unsaved</span>
+    <select id="fmt" title="Format — sets legality and ink limit">
+      <option value="infinity">Infinity</option><option value="core">Core</option><option value="coconut">Coconut</option>
+    </select>
+    <span class="sp"></span>
+    <button class="btn go" id="dbSave">Save deck</button>
+  </div>
   <div class="sfield" id="sf"><input id="q" type="text" placeholder="Search — describe the art like &quot;blue dog&quot; or &quot;sea witch&quot;, or type a keyword and press Enter"></div>
   <div class="srow toggles">
     <button class="swx" id="tgTag" aria-pressed="false">
@@ -1841,10 +2038,77 @@ const numSort=(a,b)=>{
    already excludes keyword reminder text — that's what kept songs out of the
    cost-reduction filter. */
 const HIDDEN_KINDS=["take","video"];
+
+/* ---- location and item interaction ----------------------------------------
+   "text:location" returns 131 cards and mixes two opposite decks together: the
+   cards that BUILD a location board and the cards that tear one down. Ben
+   wanted them separated, so each direction gets its own predicate.
+
+   LOC_HELP is deliberately written as a list of things a location deck DOES —
+   standing at one, moving to one, playing one cheaper, healing one, buffing
+   your own — rather than "mentions location and doesn't say banish". The
+   negative phrasing fails on cards that do both, and on the three locations
+   whose payoff IS banishing themselves (Pride Lands - Jungle Oasis, Sugar Rush
+   Speedway - Finish Line, Sleepy Hollow - The Bridge), which are location
+   payoffs and not location hate.
+
+   `characters? here` is in the positive list on purpose: on a Location card,
+   "here" means "at this location", so a location that rewards you for standing
+   on it is exactly the payoff a location deck is looking for. */
+const LOC_HELP=new RegExp([
+  "at a location","at locations","your locations",
+  "locations? (?:gain|gains|get|gets) ",
+  "move\\w* (?:[^.]{0,70}?)\\bto (?:a|that|another|one of your|the same) location",
+  "whenever you play a location","play a location (?:card )?(?:from|with)",
+  "for each location you have in play","if you have a location in play",
+  "next location you play","less to play locations",
+  "remove up to \\d+ damage from chosen (?:character or )?location",
+  "reveal a location card","return a location card from your discard",
+  "location card named","this location gets \\+","location's ◊",
+  "banish this location","characters? here\\b"
+].join("|"),"i");
+/* The mirror: everything that removes, bounces, inks or burns a location that
+   isn't yours. "banish this location" is excluded by construction — it never
+   appears here — and so is anything scoped "of yours". */
+const LOC_HATE=new RegExp([
+  "banish (?:chosen|all opposing) (?:item or )?location",
+  "one of their locations",
+  "deal (?:\\d+ )?damage to chosen (?:damaged )?character or location",
+  "deal \\d+ damage to chosen location",
+  "return (?:a )?chosen [^.]{0,60}?\\blocation\\b[^.]{0,45}?to their player's hand",
+  "put chosen item or location into its player's inkwell",
+  "discards? a location card",
+  "item or location of theirs and banish"
+].join("|"),"i");
+/* Items get the same treatment, minus the synergy half — "your items" already
+   has plenty of routes through the Inventor and Detective classifications.
+   `(?!\\s+of yours)` is what keeps the eight cards that sacrifice their OWN
+   item for value (Maurice, Gaston - Arrogant Showoff, Belle - Apprentice
+   Inventor) out of a removal list. */
+const ITEM_HATE=new RegExp([
+  "banish chosen item(?! of yours)",
+  "banish all opposing items","one of their items",
+  "return chosen [^.]{0,60}?\\bitem\\b[^.]{0,45}?to (?:its|their) player's hand",
+  "put chosen item(?: or location)? into its player's inkwell",
+  "opposing items","item or location of theirs and banish"
+].join("|"),"i");
+/* Pings: one damage at a time. The chip exists because a Robin's Bow deck and
+   a Be Prepared deck are not the same deck — pings want damage-count payoffs
+   (Ratigan's Party, damaged-character triggers), not board wipes. Moving a
+   counter counts: the damage still lands on something of theirs. */
+const PING=/deals? 1 damage|put 1 damage counter|puts? a damage counter|move 1 damage counter/i;
+
 const GROUPS=[
  {g:"Staples & tribes",chips:[
    {id:"staple",l:"★ Staples",fn:c=>isStar(c.f)},
-   {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0}]},
+   {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0},
+   /* Lilo & Stitch is one of the few franchises with a matching mechanical
+      classification, and the two don't fully overlap: Alien picks up the
+      Experiments and the Galactic Council cards that aren't filed under the
+      film, while the film picks up Nani and David, who aren't Aliens. A deck
+      wants both, so the chip is the union. */
+   {id:"lilo",l:"👽 Lilo & Stitch + Aliens",
+     fn:c=>c.sto==="Lilo & Stitch"||c.sub.includes("Alien")}]},
  {g:"Card advantage",chips:[
    {id:"draw", l:"Draws a card",        re:/draws?\s+(a|\d+)?\s*cards?/i},
    {id:"topx", l:"Looks at top X cards",re:/look at the top \d+/i},
@@ -1855,7 +2119,14 @@ const GROUPS=[
    // Rules 8.8.3 — Resist only reduces damage that is DEALT; put/moved damage ignores it
    {id:"pierce",l:"🗡️ Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
    {id:"banish",l:"Banishes",       re:/banish/i},
+   {id:"ping",  l:"🎯 Pings (1 damage)",fn:c=>PING.test(c.ef||"")},
+   {id:"itemhate",l:"🔨 Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
    {id:"discard",l:"Discards",      re:/discard/i}]},
+ /* Locations, split into the two decks that "text:location" used to return
+    mixed together. */
+ {g:"Locations",chips:[
+   {id:"locsyn", l:"🏰 Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
+   {id:"lochate",l:"💥 Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
  {g:"Protection",chips:[
    {id:"heal",  l:"Removes damage",     re:/removes?\s+(up to\s+)?\d*\s*damage/i},
    {id:"nochal",l:"Can't be challenged",re:/can't be challenged/i}]},
@@ -1938,6 +2209,15 @@ const CHIPWORDS={
  boost:["boost"],
  boostcheap:["cheap boost"],
  tribal:["tribal","tribe boost"],
+ locsyn:["location synergy","locations","location deck","location payoff",
+         "location support","loves locations","benefits locations"],
+ lochate:["location nerfs","location nerf","location hate","location removal",
+          "kill locations","banish locations","anti location"],
+ itemhate:["item nerfs","item nerf","item hate","item removal","artifact removal",
+           "kill items","banish items","anti item"],
+ ping:["pings","ping","ping damage","pings damage","chip damage","1 damage"],
+ lilo:["lilo","stitch","aliens","alien","lilo and stitch","lilo & stitch",
+       "experiments"],
  shift:["shift"],
  sing:["song payoff","sing payoff"],
 };
@@ -1959,10 +2239,13 @@ const S={q:"",ab:new Set(),ink:new Set(),dual:false,type:new Set(),rar:new Set()
   tagS:load("fs3_tagS",true),stoS:load("fs3_stoS",false)};
 let DVIEW=load(K_DVIEW,"img");
 let DANA=load("fs3_dana",false);
-let DECKS=load(K_DECKS,{cur:"Main",list:{Main:{fmt:"infinity",coco:null,cards:{}}}});
+let DECKS=load(K_DECKS,{cur:"New deck",list:{"New deck":{fmt:"infinity",coco:null,cards:{}}}});
 /* First-run nudge: "click to add" shows until the very first card lands in the
    starter deck. The moment they add one they've worked it out, so it stops. */
-const tipsOn=()=>TAB!=="tSearch"&&DECKS.cur==="Main"&&!dtotal();
+/* The first-run nudge belongs to an untouched draft. It used to test for the
+   literal name "Main"; the starting deck is now the draft, so it names the
+   constant rather than a string that has already changed once. */
+const tipsOn=()=>TAB!=="tSearch"&&DECKS.cur===DRAFT&&!dtotal();
 const G={coco:null,pair:null,copies:null,staples:null,mode:null};
 /* Nick Wilde's Coconut text calls out one item by name, so that step offers it
    directly instead of making you go and search for it. */
@@ -1981,6 +2264,9 @@ function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast(
   try{if(typeof ACCT!=="undefined")ACCT.queue(k)}catch(e){}
   return 1}
 function saveDecks(){save(K_DECKS,DECKS);checkPerfect60()}
+/* Card changes still persist immediately — nobody should lose a list to a
+   closed tab — but they mark the deck unsaved so the bar says so. */
+function touchDeck(){saveDecks();if(typeof markDirty==="function")markDirty(true)}
 /* Sixty of one card is illegal in every format, so this can only ever be done
    on purpose. Checked on save rather than on add so it fires the moment the
    sixtieth lands, whichever route put it there. */
@@ -2411,7 +2697,10 @@ function tile(c){
        :`<img src="${_im}" loading="lazy" alt="${esc(c.f)}">`)
     :`<div class="ph">${esc(c.f)}</div>`;
   // once a copy is in the deck, offer to find its Shift target
-  const wantShift=q&&!ban&&(hasShift(c)||c.sub.includes("Floodborn"))&&shiftTargets(c).length;
+  /* Search for cards is read-only, so the shift-target prompt is suppressed
+     here too — it was the last control on a tile that could still put a card
+     into a deck from the browsing tab. */
+  const wantShift=TAB!=="tSearch"&&q&&!ban&&(hasShift(c)||c.sub.includes("Floodborn"))&&shiftTargets(c).length;
   const bad=illegalReason(c),four=coconut4x(c);
   if(four)tags.push(`<span style="background:var(--link);color:var(--surface);font-weight:800">CAN HAVE 4×</span>`);
   return `<div class="c${ban?" banned":""}${isLoc(c)?" loc":""}${bad&&!ban?" illegal":""}${
@@ -2430,7 +2719,17 @@ function tile(c){
 function renderGrid(){
   const all=sortC(filt()),g=$("grid");
   $("ct").innerHTML=`<b>${all.length.toLocaleString()}</b> card${all.length===1?"":"s"}`;
-  if(!all.length){g.innerHTML=`<div class="empty">No cards match.</div>`;return}
+  if(!all.length){
+    /* Nothing found is the one moment a spelling guess earns its place. Offered
+       on the typed text only — a filter chip that matches nothing is a
+       deliberate choice, not a typo. */
+    const guesses=(typeof didYouMean==="function"&&S.q&&S.q.trim())?didYouMean(S.q):[];
+    g.innerHTML=`<div class="empty">No cards match.</div>`+
+      (guesses.length?`<div class="dym"><b>Did you mean</b>${
+        guesses.map(c=>`<button data-dym="${esc(c.f)}">${esc(c.f)}</button>`).join("")}</div>`:"");
+    g.querySelectorAll("[data-dym]").forEach(b=>b.onclick=()=>{
+      $("q").value=b.dataset.dym;S.q=b.dataset.dym;S.limit=150;acClose();render()});
+    return}
   const show=all.slice(0,S.limit);
   g.innerHTML=show.map(tile).join("")+(all.length>S.limit
     ?`<div class="more"><button class="btn" id="mo">Show more (${(all.length-S.limit).toLocaleString()} left)</button></div>`:"");
@@ -2592,9 +2891,15 @@ function bindGrid(){
       const l=el.querySelector(".syml");if(l)l.remove()};
   });
   g.querySelectorAll("[data-i]").forEach(b=>b.onclick=e=>{e.stopPropagation();openM(b.dataset.i)});
-  g.querySelectorAll("[data-plus]").forEach(b=>b.onclick=e=>{e.stopPropagation();addCard(b.dataset.plus)});
-  g.querySelectorAll("[data-minus]").forEach(b=>b.onclick=e=>{e.stopPropagation();delCard(b.dataset.minus)});
-  g.querySelectorAll("[data-sh]").forEach(b=>b.onclick=e=>{e.stopPropagation();openShift(b.dataset.sh)});
+  /* These four run over the whole grid, so the early `return` above — which
+     only skips the per-tile bindings — never reached them. On the Search tab a
+     stepper that survived a re-render could still change the deck. Nothing
+     that writes to a deck gets wired here at all now. */
+  if(TAB!=="tSearch"){
+    g.querySelectorAll("[data-plus]").forEach(b=>b.onclick=e=>{e.stopPropagation();addCard(b.dataset.plus)});
+    g.querySelectorAll("[data-minus]").forEach(b=>b.onclick=e=>{e.stopPropagation();delCard(b.dataset.minus)});
+    g.querySelectorAll("[data-sh]").forEach(b=>b.onclick=e=>{e.stopPropagation();openShift(b.dataset.sh)});
+  }
   const mo=$("mo");if(mo)mo.onclick=()=>{S.limit+=150;renderGrid()};
   bindDrop();
   if(KBI>=0)kbFocus(KBI);
@@ -2761,7 +3066,8 @@ function openM(f,showPr){
         :`<button class="btn bad" id="mr" style="font-size:1.2rem;padding:4px 16px">−</button>
           <span style="font-size:1.15rem;font-weight:800;min-width:34px;text-align:center">${deck().cards[c.f]||0}</span>
           <button class="btn go" id="ma" style="font-size:1.2rem;padding:4px 16px">+</button>`}
-      <button class="btn" id="ms">${isStar(c.f)?"★ Untag staple":"☆ Tag as staple"}</button></div></div>`;
+      <button class="btn" id="ms">${isStar(c.f)?"★ Untag staple":"☆ Tag as staple"}</button></div>
+    ${collRows(c)}</div>`;
   $("mbg").classList.add("on");
   if(c.f==="Hiram Flaversham - Toymaker")unlockHidden("h_rat");
   if(c.f==="Bucky - Squirrel Squeak Tutor")unlockHidden("h_grave");
@@ -2771,6 +3077,7 @@ function openM(f,showPr){
   $("mx").onclick=()=>$("mbg").classList.remove("on");
   const ma=$("ma");if(ma)ma.onclick=()=>{addCard(c.f);openM(c.f)};
   const mr=$("mr");if(mr)mr.onclick=()=>{delCard(c.f);openM(c.f)};
+  wireCollRows(c);
   $("ms").onclick=()=>{STARS.has(c.f)?STARS.delete(c.f):STARS.add(c.f);save(K_STAR,[...STARS]);
     if(STARS.size>=10)award("curator");openM(c.f);render()};
   const sy=$("symBtn");
@@ -2787,7 +3094,7 @@ function openM(f,showPr){
        then clearly a joke you're welcome to keep making. */
     const n=DUST.bucky||0;
     const pay=n===0?500:n<=10?50:5;
-    DUST.bucky=n+1;DUST.bal+=pay;save(DUSTKEY,DUST);
+    DUST.bucky=n+1;dustGain(pay);
     fb.value="";toast(`🪦 +${N(pay)} dust`);openM(c.f);
   };
   const prs=$("prs");if(prs)prs.ontoggle=()=>{PROPEN=prs.open;save("fs3_propen",PROPEN)};
@@ -2838,10 +3145,10 @@ function addCard(f){
   if(f==="Christopher Robin - Hunny Sage"&&!SALTED){SALTED=true;
     alert("🧂 SALT WARNING\n\nThis is a bad card. You might think it's cool, but when you "+
           "play it against any real deck you may become salty.");}
-  const d=deck();d.cards[f]=(d.cards[f]||0)+1;saveDecks();renderDeck();refreshTiles();
+  const d=deck();d.cards[f]=(d.cards[f]||0)+1;touchDeck();renderDeck();refreshTiles();
   award("firstcard");return true}
 function delCard(f){const d=deck();if(!d.cards[f])return;d.cards[f]--;
-  if(d.cards[f]<=0)delete d.cards[f];saveDecks();renderDeck();refreshTiles()}
+  if(d.cards[f]<=0)delete d.cards[f];touchDeck();renderDeck();refreshTiles()}
 function dlist(){return Object.entries(deck().cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q,f})).filter(x=>x.c)}
 function dtotal(){return Object.values(deck().cards).reduce((a,b)=>a+b,0)}
 
@@ -3464,7 +3771,7 @@ function renderAqua(){
     if(!AQ)return;
     AQ.st.secs++;save(AQKEY,AQ.st);
     const se=$("aqSecs");if(se)se.textContent=N(AQ.st.secs);
-    if(AQ.st.secs%10===0){DUST.bal+=1;AQ.earn++;save(DUSTKEY,DUST);
+    if(AQ.st.secs%10===0){if(dustGain(1))AQ.earn++;
       const de=$("aqDust");if(de)de.textContent=N(AQ.earn);}
   },1000);
   const step=()=>{
@@ -3537,7 +3844,7 @@ function renderAqua(){
         f.el.remove();
         const pay=f.coco?20:2;
         AQ.st.fed++;if(f.coco)AQ.st.coco=(AQ.st.coco||0)+1;
-        DUST.bal+=pay;AQ.earn+=pay;save(DUSTKEY,DUST);save(AQKEY,AQ.st);
+        AQ.earn+=dustGain(pay);save(AQKEY,AQ.st);
         const fe=$("aqFed");if(fe)fe.textContent=N(AQ.st.fed);
         const ce=$("aqCoco");if(ce)ce.textContent=N(AQ.st.coco||0);
         const de=$("aqDust");if(de)de.textContent=N(AQ.earn);
@@ -3850,7 +4157,7 @@ function renderClicker(){
     h.style.setProperty("--dx",(Math.random()*60-30)+"px");
     card.appendChild(h);setTimeout(()=>h.remove(),1400);
     st.clicks++;save(CLICKKEY,st);lbPost("click",st.clicks);
-    DUST.bal+=1;earned++;save(DUSTKEY,DUST);
+    if(dustGain(1))earned++;
     $("clN").textContent=N(st.clicks);$("clD").textContent=N(earned);
     card.classList.remove("pop");void card.offsetWidth;card.classList.add("pop");
     if(st.clicks>=500)unlockHidden("h_click");
@@ -4422,7 +4729,7 @@ function renderContrib(){
     <div class="ctile">
       <h3>📤 Sending it in</h3>
       <p>Hit <b>Export</b> in either tool and mail the JSON to
-        <a href="mailto:benjamindacy@gmail.com?subject=Flounder%20Search%20contribution">benjamindacy@gmail.com</a>.
+        <a href="mailto:lorcana707@gmail.com?subject=Ready%20Set%20Ink%20contribution">lorcana707@gmail.com</a>.
         I check it over and it goes live on the next build.</p>
       <p class="small">Both tools store everything in your own browser until you export, so nothing
         leaves your machine unless you send it.</p>
@@ -4563,7 +4870,7 @@ function renderQuiz(){
     if(QZ.done)return;
     const win=b.dataset.q===QZ.answer.f;
     QZ.done=b.dataset.q;QZ.won=win?worth:0;
-    if(win){DUST.bal+=QZ.won;
+    if(win){dustGain(QZ.won);
       DUST.quiz=[...new Set([...(DUST.quiz||[]),QMODE])];
       QSTREAK[QMODE]=(QSTREAK[QMODE]||0)+1;
       lbPost(QMODE==="reveal"?"reveal":QMODE,QSTREAK[QMODE]);
@@ -4678,7 +4985,7 @@ function unlockHidden(id){
   if((DUST.hidden||[]).includes(id))return false;
   const h=HIDDEN.find(x=>x.id===id);if(!h)return false;
   DUST.hidden=(DUST.hidden||[]).concat(id);
-  if(h.dust)DUST.bal+=h.dust;
+  if(h.dust)dustGain(h.dust);
   if(!DUST.wear)DUST.wear=id;
   save(DUSTKEY,DUST);
   toast(`🎖 Hidden title — ${h.t}`+(h.dust?` · +${N(h.dust)} dust`:""));drawTitle();
@@ -4701,10 +5008,49 @@ const SECRETS=[
   r:"Every Flounder card gets an animated rainbow ring, and after a second of hovering a beam of "+
     "light opens out of the top of it. He is the site's namesake and he gets the hero treatment."},
 ];
+/* ===================== the dust switch =====================
+   Every route that earns dust goes through here. It used to be eight separate
+   "DUST.bal+=" lines scattered across the games, the aquarium and the quiz —
+   a switch that has to be remembered in eight places is a switch that will be
+   forgotten in one of them.
+
+   Off means: no more dust is earned, the balance is left exactly as it was
+   (turning it back on doesn't cost anyone what they had), the Dust tile leaves
+   the Other menu, and the worn title becomes Stick in the Mud. */
+let DUSTON=load("fs3_duston",true);
+let DARK=load("fs3_dark",false);
+/* Dark mode is a patron perk. The check is CLIENT-SIDE, which means it is an
+   honour-system lock and not a paywall — exactly like the dust note by DUSTKEY.
+   Before anyone is charged for this, isPatron() has to ask the server, because
+   right now a determined visitor can set one localStorage value and have it.
+   That is fine while nothing has been paid; it stops being fine the moment it
+   has been. */
+const isPatron=()=>!!(DUST&&DUST.patron)||PATRON_ON===true;
+/* Dark mode is free for everybody until the end of 25 December 2026, then it
+   goes back to being a patron perk. Two reasons to do it this way round rather
+   than just ungating it: nobody switches on a theme they've never seen, so the
+   window is the advert; and the perk machinery stays wired the whole time, so
+   the date passing is the only thing that has to happen — not a rebuild.
+
+   The boundary is the END of the 25th in the visitor's own timezone (26 Dec
+   00:00 local). A UTC cutoff would take the theme away mid-Christmas-Day for
+   anyone west of Greenwich. Move or delete DARK_FREE_UNTIL to change it; if
+   it's null the perk gate applies immediately. */
+const DARK_FREE_UNTIL=new Date(2026,11,26,0,0,0).getTime();
+const darkFree=()=>DARK_FREE_UNTIL!=null&&Date.now()<DARK_FREE_UNTIL;
+/* The one question the rest of the file asks: may this visitor have it? */
+const darkOK=()=>isPatron()||darkFree();
+let GAMESON=load("fs3_gameson",true);
+const STICK={id:"t_stick",t:"Stick in the Mud",d:"You turned dust off. Respect."};
+function dustGain(n){
+  if(!DUSTON||!n)return 0;
+  DUST.bal+=n;save(DUSTKEY,DUST);return n}
+
 function award(id){
   const a=ACHIEVEMENTS.find(x=>x.id===id);
   if(!a||DUST.got[id])return false;                   // one payout per achievement, ever
-  DUST.got[id]=Date.now();DUST.bal+=a.d;save(DUSTKEY,DUST);
+  if(!DUSTON)return false;                            // nothing is earned while it's off
+  DUST.got[id]=Date.now();dustGain(a.d);
   toast(`🏆 ${a.t} · +${N(a.d)} dust`);
   if($("vGuess").classList.contains("on")||$("vOther").classList.contains("on"))renderOther&&0;
   return true;
@@ -4716,7 +5062,7 @@ const dustSpend=n=>{if(DUST.bal<n)return false;DUST.bal-=n;save(DUSTKEY,DUST);re
 const PATRON_DUST=250000;
 function grantPatron(){
   if(!PATRON_ON||DUST.patron)return false;
-  DUST.patron=true;DUST.bal+=PATRON_DUST;save(DUSTKEY,DUST);
+  DUST.patron=true;dustGain(PATRON_DUST);DUST.patron=true;save(DUSTKEY,DUST);
   toast(`💛 Patron dust — +${N(PATRON_DUST)}`);drawTitle();return true;
 }
 /* Prestige. Buy Flounderborn a SECOND time and it turns radiant. Invisible
@@ -4791,8 +5137,12 @@ function titleChip(){
     lv?`<span class="prb">\u2726${lv}</span>`:""}</span>`;
 }
 function drawTitle(){
-  const t=TITLES.find(x=>x.id===DUST.wear)||HIDDEN.find(x=>x.id===DUST.wear);
   const e=$("worn");if(!e)return;
+  /* Dust switched off wears Stick in the Mud instead — the earned title is not
+     lost, it just isn't what you're showing while you're opted out. */
+  if(typeof DUSTON!=="undefined"&&!DUSTON){
+    e.textContent=STICK.t;e.style.display="";e.className="wtit";return}
+  const t=TITLES.find(x=>x.id===DUST.wear)||HIDDEN.find(x=>x.id===DUST.wear);
   e.textContent=t?t.t:"";e.style.display=t?"":"none";
   e.className="wtit"+(t?prClass(t.id):"");
 }
@@ -5004,7 +5354,7 @@ function renderGuess(){
       if(GS.streak>=5)award("streak5");
       if(GS.streak>=10)unlockHidden("h_ten");
       lbPost("guess",GS.best);
-      DUST.bal+=GQ.won;save(DUSTKEY,DUST)}   // the points themselves are dust
+      dustGain(GQ.won)}                       // the points themselves are dust
     else{QSTREAK.guess=0;GS.streak=0}
     save("fs3_guess",GS);renderGuess();
     if(pickedRight)toast(`+${GQ.won} · streak ${GS.streak}`);
@@ -5245,6 +5595,136 @@ document.addEventListener("keydown",e=>{
   else if(e.key==="Escape"){RVIEW="menu";save("fs3_rview",RVIEW);renderRead()}
 });
 
+/* Collection controls inside the card modal — one row per printing, because
+   this is where you land after finding a card you just pulled. Hidden wholesale
+   by the settings toggle via .collonly. */
+function collRows(c){
+  const rs=prints(c);
+  return `<div class="mcoll collonly">
+    <b>In my collection</b>
+    ${rs.map((pr,i)=>{
+      const k=pkey(c.f,pr),o=owned(k);
+      const setn=(setList().find(x=>x.s===pr.s)||{}).name||("Set "+pr.s);
+      return `<div class="mcr" data-mk="${esc(String(k))}">
+        <span class="mcn">${rarSym(pr.r)}${esc(String(setn))} <i>#${esc(String(pr.num))}</i></span>
+        <span class="cq"><em>Normal</em><button data-mm="n">−</button><b>${o[0]}</b><button data-mp="n">+</button></span>
+        <span class="cq"><em>Foil</em><button data-mm="f">−</button><b>${o[1]}</b><button data-mp="f">+</button></span>
+      </div>`}).join("")}
+  </div>`}
+function wireCollRows(c){
+  const box=document.querySelector("#modal .mcoll");if(!box)return;
+  box.querySelectorAll(".mcr").forEach(row=>{
+    const k=row.dataset.mk;
+    row.querySelectorAll("[data-mp],[data-mm]").forEach(btn=>btn.onclick=()=>{
+      const o=owned(k).slice(),which=btn.dataset.mp||btn.dataset.mm,up=!!btn.dataset.mp;
+      const i=which==="f"?1:0;
+      o[i]=Math.max(0,o[i]+(up?1:-1));
+      setOwned(k,o[0],o[1]);openM(c.f)})})}
+
+/* Add a saved deck's cards to the collection.
+   A deck names cards; a collection names printings, so this takes the BASE
+   printing — the ordinary one from the card's own set — as Ben chose.
+   It only touches cards you have none of, so pressing it twice never inflates
+   a count, and a card you already own at the enchanted is left alone. */
+function deckToCollection(){
+  const rows=dlist();
+  let added=0,skipped=0,cards=0;
+  rows.forEach(({c,q})=>{
+    if(ownedByName(c)>0){skipped++;return}
+    const base=prints(c)[0];
+    setOwned(pkey(c.f,base),q,0);
+    added++;cards+=q});
+  return {added,skipped,cards,total:rows.length}}
+
+/* ===================== explicit deck saving =====================
+   Ben's ask: a deck isn't yours until you press Save and name it.
+
+   What changed. Every add and remove still writes to localStorage — losing
+   someone's work to a closed tab would be indefensible — but the deck you are
+   building is a DRAFT, held under a reserved name, and only becomes a real
+   entry in the Decks tab when it is saved. Signing in starts a fresh draft, so
+   you never inherit somebody else's half-built list on a shared computer.
+
+   DRAFT is a name nobody can type: the save dialog rejects it. */
+const DRAFT="New deck";
+let DECKDIRTY=load("fs3_deckdirty",false);
+function markDirty(v){DECKDIRTY=v;save("fs3_deckdirty",v);paintDeckBar()}
+function paintDeckBar(){
+  const n=$("dbName"),d=$("dbDirty");if(!n)return;
+  n.textContent=DECKS.cur;
+  if(d)d.hidden=!DECKDIRTY;
+  const sv=$("dbSave");
+  if(sv)sv.textContent=(DECKS.cur===DRAFT)?"Save deck":"Save changes";
+}
+
+/* 10 dust and a small burst of particles. The burst is decoration over a save
+   that has already happened, so it can fail silently and nothing is lost. */
+function sparkBurst(x,y){
+  try{
+    if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    const cols=["#ffd400","#e6bf00","#ffffff","#8fb6ff","#2f6fed"];
+    for(let i=0;i<26;i++){
+      const el=document.createElement("div");
+      el.className="spark";
+      el.style.background=cols[i%cols.length];
+      el.style.left=x+"px";el.style.top=y+"px";
+      document.body.appendChild(el);
+      const ang=(Math.PI*2*i)/26+(i%3)*0.12;
+      const dist=70+(i%7)*16;
+      el.animate([
+        {transform:"translate(0,0) scale(1)",opacity:1},
+        {transform:`translate(${Math.cos(ang)*dist}px,${Math.sin(ang)*dist+34}px) scale(.3)`,opacity:0}
+      ],{duration:750+(i%5)*90,easing:"cubic-bezier(.16,.7,.3,1)"})
+        .onfinish=()=>el.remove();
+    }
+  }catch(e){}
+}
+
+async function saveDeckPrompt(ev){
+  const cards=dlist();
+  if(!cards.length){toast("Nothing to save yet — add some cards first");return}
+  let name=DECKS.cur;
+  if(DECKS.cur===DRAFT){
+    name=await namePrompt("Save this deck","What do you want to call it?","");
+    if(name===null)return;
+    name=String(name).trim();
+    if(!name){toast("A deck needs a name");return}
+    if(name===DRAFT){toast(`"${DRAFT}" is reserved — pick another name`);return}
+    if(DECKS.list[name]){
+      const ok=await confirmBox("That name is taken",
+        `You already have a deck called "${name}". Saving will replace it.`,"Replace it",true);
+      if(!ok)return}
+    /* Move the draft's contents to the chosen name and start a fresh draft. */
+    DECKS.list[name]={...DECKS.list[DRAFT]};
+    DECKS.list[DRAFT]={fmt:DECKS.list[DRAFT].fmt,coco:DECKS.list[DRAFT].coco,cards:{}};
+    DECKS.cur=name;
+  }
+  saveDecks();markDirty(false);
+  const paid=dustGain(10);
+  if(ev&&ev.clientX)sparkBurst(ev.clientX,ev.clientY);
+  toast(paid?`Saved "${name}" · +10 dust`:`Saved "${name}"`);
+  renderDeck&&renderDeck();
+}
+
+/* A text prompt in the site's chrome, same reasoning as confirmBox. */
+function namePrompt(title,body,initial){
+  return new Promise(done=>{
+    const w=document.createElement("div");w.className="cfmbg";
+    w.innerHTML=`<div class="cfm"><h3>${esc(title)}</h3><p>${esc(body)}</p>
+      <input class="npin" id="npIn" maxlength="48" value="${esc(initial||"")}">
+      <div class="cfmb"><button class="btn" data-no>Cancel</button>
+      <button class="btn go" data-yes>Save</button></div></div>`;
+    document.body.appendChild(w);
+    const inp=w.querySelector("#npIn");
+    const shut=v=>{w.remove();document.removeEventListener("keydown",key);done(v)};
+    const key=e=>{if(e.key==="Escape")shut(null);
+      if(e.key==="Enter")shut(inp.value)};
+    w.querySelector("[data-no]").onclick=()=>shut(null);
+    w.querySelector("[data-yes]").onclick=()=>shut(inp.value);
+    w.onclick=e=>{if(e.target===w)shut(null)};
+    document.addEventListener("keydown",key);
+    inp.focus();inp.select()})}
+
 /* ===================== the borrow list =====================
    What the pull list can't tell you: which cards you'd have to get hold of
    before you could actually sleeve this deck up.
@@ -5258,7 +5738,8 @@ const BORROWDEF={greet:"Hey Friend,",ask:"borrow",when:"for the deck",
    profile, then whatever they are fiddling with right now. */
 let BORROW=Object.assign({},BORROWDEF,load("fs3_borrowdef",{}),load("fs3_borrow",{}));
 const ASKS=[["borrow","borrow them"],["trade","trade for them"],["buy","buy them off you"],
-  ["borrowbuy","borrow them, or buy them if you'd rather"]];
+  ["borrowbuy","borrow them, or buy them if you'd rather"],
+  ["any","borrow, trade or buy them — whatever suits you"]];
 const WHENS=[["for the deck","for the deck"],["just for the night","just for the night"],
   ["for the championship","for the championship"],
   ["until mine arrive in the mail","until mine arrive in the mail"],
@@ -5279,7 +5760,9 @@ function borrowText(){
   if(!rows.length)return "";
   const ask=(ASKS.find(a=>a[0]===BORROW.ask)||ASKS[0])[1];
   const when=BORROW.when?" "+BORROW.when:"";
-  return `${BORROW.greet}\n\nI want to play a supercool deck but I don't have these cards. `
+  /* Single break after the greeting — a text message, not a letter. The blank
+     line only separates the ask from the list. */
+  return `${BORROW.greet}\nI want to play a supercool deck but I don't have these cards. `
     +`Could you look if you have them and let me know if I could ${ask}${when}?\n\n`
     +rows.map(r=>`${r.q}x ${r.name} (${r.cost} cost, ${r.ink||"no ink"}, ${r.set})`).join("\n")
     +(BORROW.close?`\n\n${BORROW.close}`:"")}
@@ -5384,7 +5867,8 @@ function renderBorrow(){
       <b>Looks like you don't have ${missing.reduce((a,x)=>a+x.need,0)} of these cards</b>
       <span class="sp"></span>
       <button class="btn" id="bCust">${BORROWOPEN?"Done":"Customise"}</button>
-      <button class="btn" id="bImg">🖼️ Save image</button>
+      <button class="btn" id="bImg" disabled title="The card art is served from another site that doesn't allow it to be re-saved">🖼️ Save image</button>
+      <span class="soonlbl">Coming soon</span>
       <button class="btn go" id="bCopy">📋 Copy the message</button>
     </div>
     <p class="bnote">Copy this and send it to someone who might lend them to you.</p>
@@ -5421,8 +5905,12 @@ function renderBorrow(){
       sort:BORROW.sort,close:BORROW.close,saved:true};
     save("fs3_borrowdef",tpl);save("fs3_borrow",BORROW);
     toast("Saved as your default");renderBorrow()};
-  const bi=$("bImg");
-  if(bi)bi.onclick=()=>{toast("Building the image…");borrowImage()};
+  /* Left wired but disabled. The layout works — what doesn't is the card art:
+     it is served from another origin, and a canvas that has drawn a
+     cross-origin image can only be exported if that server permits it. The
+     real fix is to proxy the images through our own domain, which is now
+     possible on Vercel. Until then this would silently produce a picture of
+     empty rectangles, which is worse than not offering it. */
   const put=(id,k)=>{const el=$(id);if(el)el.onchange=()=>{
     BORROW[k]=el.value;save("fs3_borrow",BORROW);renderBorrow()}};
   put("bGreet","greet");put("bAsk","ask");put("bWhen","when");
@@ -5433,6 +5921,50 @@ function renderBorrow(){
     save("fs3_borrow",BORROW);renderBorrow()});
 }
 
+/* The cards in the chosen deck, as pictures. The list views tell you what is in
+   a deck; this tells you what it looks like, which is how most people actually
+   recognise their own decks. Sorted by ink then cost — the order a deck is
+   usually laid out on a table. */
+function deckGallery(){
+  const rows=dlist();
+  if(!rows.length)return `<div class="empty" style="padding:18px">
+    "${esc(DECKS.cur)}" is empty. Add cards on the Deck builder tab.</div>`;
+  const sorted=rows.slice().sort((a,b)=>
+    String((a.c.co||[])[0]||"").localeCompare(String((b.c.co||[])[0]||""))
+    ||a.c.c-b.c.c||a.c.f.localeCompare(b.c.f));
+  const tot=rows.reduce((n,r)=>n+r.q,0);
+  const inks=[...new Set(rows.flatMap(r=>r.c.co||[]))];
+  return `<div class="dkgal">
+    <div class="dgh">
+      <b>${esc(DECKS.cur)}</b>
+      <span>${tot} cards · ${sorted.length} different · ${esc(inks.join(" / ")||"no ink")}</span>
+      <span class="sp"></span>
+      <button class="btn" id="dgCopy">📋 Copy deck list</button>
+      <button class="btn" id="dgBig">🔍 ${DGBIG?"Smaller":"Bigger"}</button>
+    </div>
+    <div class="dgrid${DGBIG?" big":""}">${sorted.map(({c,q})=>`
+      <figure class="dgc" data-dgo="${esc(c.f)}" title="${esc(c.f)}">
+        ${c.img?`<img src="${esc(String(c.img))}" alt="${esc(c.f)}" loading="lazy">`
+               :`<div class="dgph">${esc(c.f)}</div>`}
+        <span class="dgq">${q}</span>
+        <figcaption>${esc(c.n)}</figcaption>
+      </figure>`).join("")}</div>
+  </div>`}
+let DGBIG=load("fs3_dgbig",false);
+function wireGallery(){
+  const g=$("deckspage");if(!g)return;
+  const cp=$("dgCopy");
+  if(cp)cp.onclick=()=>{
+    const txt=dlist().map(({c,q})=>`${q} ${c.f}`).join("\n");
+    const ta=document.createElement("textarea");ta.value=txt;
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy")}catch(e){}
+    ta.remove();toast("Deck list copied")};
+  const bg=$("dgBig");
+  if(bg)bg.onclick=()=>{DGBIG=!DGBIG;save("fs3_dgbig",DGBIG);renderDecksPage()};
+  g.querySelectorAll("[data-dgo]").forEach(el=>el.onclick=()=>openM(el.dataset.dgo));
+}
+
 /* ===================== decks page ===================== */
 function renderDecksPage(){
   const names=Object.keys(DECKS.list);
@@ -5441,8 +5973,10 @@ function renderDecksPage(){
       .filter(x=>x.c);
     const tot=L.reduce((a,x)=>a+x.q,0),inks=new Set();
     L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
-    return `<button class="dkcard${n===DECKS.cur?" on":""}" data-dk="${esc(n)}">
-      <h3>${esc(n)}${titleChip()}</h3>
+    const cur=n===DECKS.cur;
+    return `<button class="dkcard${cur?" on":""}" data-dk="${esc(n)}"${
+        cur?' aria-current="true"':""}>
+      <h3>${esc(n)}${titleChip()}${cur?`<span class="dkcur">Editing</span>`:""}</h3>
       <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
       <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
     </button>`}).join("");
@@ -5451,18 +5985,34 @@ function renderDecksPage(){
     <p class="lede">Every deck you've saved. Pick one to make a pull list — the running order
       you'd actually walk your binder in.</p>
     <div class="dkgrid">${cards}</div>
+    ${deckGallery()}
     <div class="pullbar">
       <b style="font-size:13px;background:var(--canvas-soft);padding:3px 8px;border-radius:2px">Pull list</b>
       <select id="pullSort">${PULLSORTS.map(([v,l])=>
         `<option value="${v}"${PULLSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select>
+      <button class="btn collonly" id="pullToColl">📦 Add this deck to my collection</button>
       <button class="btn" id="pullCopy">📋 Copy</button>
       <button class="btn go" id="pullPrint">🖨️ Print</button>
     </div>
     <div id="borrowBox" class="collonly"></div>
     ${renderPull()}
   </div>`;
+  wireGallery();
   $("deckspage").querySelectorAll("[data-dk]").forEach(b=>b.onclick=()=>{
-    DECKS.cur=b.dataset.dk;saveDecks();$("fmt").value=deck().fmt;render()});
+    DECKS.cur=b.dataset.dk;saveDecks();markDirty(false);$("fmt").value=deck().fmt;render();paintDeckBar()});
+  const ptc=$("pullToColl");
+  if(ptc)ptc.onclick=async()=>{
+    const d=dlist();
+    if(!d.length){toast("This deck is empty");return}
+    const fresh=d.filter(({c})=>ownedByName(c)===0).length;
+    if(!fresh){toast("Every card in this deck is already in your collection");return}
+    const ok=await confirmBox("Add this deck to my collection",
+      `This marks ${fresh} of the ${d.length} cards in this deck as owned, using the ordinary printing from each card's own set. The ${d.length-fresh} you already own are left exactly as they are.`,
+      "Add them");
+    if(!ok)return;
+    const r=deckToCollection();
+    toast(`Added ${r.cards} cards · left ${r.skipped} alone`);
+    renderBorrow()};
   renderBorrow();
   $("pullSort").onchange=e=>{PULLSORT=e.target.value;save("fs3_pullsort",PULLSORT);renderDecksPage()};
   $("pullCopy").onclick=()=>navigator.clipboard.writeText(pullText())
@@ -5520,6 +6070,122 @@ const OTHER_GROUPS=[
 /* Every sub-page of the Other tab: which view to switch on, and what draws it.
    Anything not in here falls back to the menu, so a typo shows the menu rather
    than a blank screen. */
+/* ===================== CSV import =====================
+   There is no standard Lorcana collection export. Dreamborn, spreadsheets
+   people keep by hand, and every deck site name their columns differently, so
+   this reads headers loosely rather than demanding one shape. It matches on
+   (name, set, number) when those are present and falls back to the name alone,
+   which is what a hand-kept spreadsheet usually has.
+
+   Nothing is written until the person has seen what matched. An import that
+   silently drops half a binder is worse than one that refuses. */
+const CSVCOL={
+  name:["name","card","card name","cardname","title"],
+  set:["set","set code","setcode","set number","expansion"],
+  num:["number","card number","cardnumber","collector number","collectornumber","no","#"],
+  qty:["count","quantity","qty","amount","have","normal","regular","copies"],
+  foil:["foil","foils","foil count","foilcount","is foil","holo"],
+};
+/* A CSV parser that copes with quoted fields containing commas and newlines —
+   card names have commas in them, so a split(",") would corrupt real rows. */
+function csvParse(text){
+  const rows=[];let row=[],cell="",q=false;
+  for(let i=0;i<text.length;i++){
+    const ch=text[i];
+    if(q){
+      if(ch==='"'&&text[i+1]==='"'){cell+='"';i++}
+      else if(ch==='"')q=false;
+      else cell+=ch}
+    else if(ch==='"')q=true;
+    else if(ch===","){row.push(cell);cell=""}
+    else if(ch==="\n"){row.push(cell);rows.push(row);row=[];cell=""}
+    else if(ch!=="\r")cell+=ch}
+  if(cell.length||row.length){row.push(cell);rows.push(row)}
+  return rows.filter(r=>r.some(c=>String(c).trim()!==""))}
+
+const normName=n=>String(n||"").toLowerCase()
+  .replace(/[’']/g,"'").replace(/\s*[-–—]\s*/g," - ").replace(/\s+/g," ").trim();
+
+function csvAnalyse(text){
+  const rows=csvParse(text);
+  if(rows.length<2)return {error:"That file doesn't have a header row and at least one card."};
+  const head=rows[0].map(h=>String(h).toLowerCase().trim());
+  const find=keys=>{for(let i=0;i<head.length;i++)if(keys.indexOf(head[i])>=0)return i;return -1};
+  const ci={};Object.keys(CSVCOL).forEach(k=>ci[k]=find(CSVCOL[k]));
+  if(ci.name<0)return {error:"Couldn't find a column of card names. It should be headed Name, Card, or Card Name."};
+
+  /* Index every printing twice: exactly, and by name alone for spreadsheets
+     that only have names. */
+  const byFull={},byName={};
+  allPrintings().forEach(x=>{
+    byFull[normName(x.c.f)+"|"+String(x.pr.s)+"|"+String(x.pr.num)]=x;
+    const n=normName(x.c.f);
+    if(!byName[n])byName[n]=x;});
+
+  const hits=[],misses=[];
+  for(let r=1;r<rows.length;r++){
+    const cell=i=>i>=0&&rows[r][i]!=null?String(rows[r][i]).trim():"";
+    const nm=cell(ci.name);if(!nm)continue;
+    const qty=Math.max(0,parseInt(cell(ci.qty)||"1",10)||0);
+    const foil=Math.max(0,parseInt(cell(ci.foil)||"0",10)||0);
+    if(!qty&&!foil)continue;
+    const key=normName(nm)+"|"+cell(ci.set)+"|"+cell(ci.num);
+    const hit=byFull[key]||byName[normName(nm)];
+    if(hit)hits.push({k:hit.k,name:hit.c.f,qty,foil});
+    else misses.push(nm)}
+  return {hits,misses,rows:rows.length-1}}
+
+function csvApply(hits,mode){
+  let touched=0,copies=0;
+  hits.forEach(h=>{
+    const o=owned(h.k);
+    const n=mode==="add"?o[0]+h.qty:h.qty;
+    const f=mode==="add"?o[1]+h.foil:h.foil;
+    setOwned(h.k,n,f);touched++;copies+=h.qty+h.foil});
+  return {touched,copies}}
+
+let CSVPEND=null;
+function renderImport(){
+  const box=$("collImport");if(!box)return;
+  box.innerHTML=`<div class="imp">
+    <b>Import a CSV</b>
+    <p>A file with a column of card names. Count, foil count, set and collector number
+      are used when they're there. Nothing is written until you've seen what matched.</p>
+    <input type="file" id="csvFile" accept=".csv,text/csv,text/plain">
+    <div id="csvOut"></div>
+  </div>`;
+  $("csvFile").onchange=e=>{
+    const f=e.target.files&&e.target.files[0];if(!f)return;
+    const rd=new FileReader();
+    rd.onload=()=>{
+      const res=csvAnalyse(String(rd.result||""));
+      const out=$("csvOut");
+      if(res.error){out.innerHTML=`<p class="impbad">${esc(res.error)}</p>`;return}
+      CSVPEND=res.hits;
+      out.innerHTML=`
+        <p class="impok"><b>${res.hits.length}</b> of ${res.rows} rows matched a card.
+          ${res.misses.length?`<span class="impbad">${res.misses.length} didn't.</span>`:""}</p>
+        ${res.misses.length?`<p class="impmiss">Not recognised: ${
+          esc(res.misses.slice(0,8).join(" · "))}${res.misses.length>8?" …":""}</p>`:""}
+        <div class="impbtns">
+          <button class="btn go" data-imp="add">Add to what I own</button>
+          <button class="btn" data-imp="set">Replace my counts</button>
+        </div>`;
+      out.querySelectorAll("[data-imp]").forEach(b=>b.onclick=async()=>{
+        const mode=b.dataset.imp;
+        const ok=await confirmBox(
+          mode==="add"?"Add these to my collection":"Replace my counts",
+          mode==="add"
+            ? `Adds the imported numbers on top of what you already own, across ${CSVPEND.length} printings.`
+            : `Sets ${CSVPEND.length} printings to exactly the numbers in the file, overwriting what's there. Anything not in the file is left alone.`,
+          mode==="add"?"Add them":"Replace them", mode!=="add");
+        if(!ok)return;
+        const r=csvApply(CSVPEND,mode);
+        toast(`Imported ${r.copies} cards across ${r.touched} printings`);
+        renderColl()})};
+    rd.onerror=()=>{$("csvOut").innerHTML=`<p class="impbad">Couldn't read that file.</p>`};
+    rd.readAsText(f)}}
+
 /* ===================== collection views =====================
    Two ways in, because they suit different moments. The set checklist is for
    cataloguing a binder in one sitting; the stepper in the card modal is for
@@ -5622,6 +6288,7 @@ function renderColl(){
       </div>
       <p class="fastnote">These change a lot of rows at once, so each one asks first.
         Foil counts are left alone — marking a playset doesn't claim you own four foils.</p>
+      <div id="collImport"></div>
     </div>`:""}
     <div class="clist"${COLLTAB==="fast"?' hidden':''}>${rows.map(x=>{
       const o=owned(x.k);
@@ -5636,6 +6303,7 @@ function renderColl(){
       </div>`}).join("")}</div>`;
   $("collBody").querySelectorAll("[data-cset]").forEach(b=>b.onclick=()=>{
     COLLSET=b.dataset.cset;save("fs3_collset",COLLSET);renderColl()});
+  renderImport();
   $("collBody").querySelectorAll("[data-ctab]").forEach(b=>b.onclick=()=>{
     COLLTAB=b.dataset.ctab;save("fs3_colltab",COLLTAB);renderColl()});
   $("collBody").querySelectorAll("[data-fast]").forEach(b=>b.onclick=async()=>{
@@ -5665,23 +6333,76 @@ function renderColl(){
       setOwned(k,o[0],o[1]);renderColl()})});
 }
 
+/* Parked settings. Not rendered — see the note in renderPrefs. Kept as data so
+   that shipping one is moving a line, not rewriting the page from a changelog. */
+const PREF_SOON=[
+  ["Sync across devices","Choose what follows you between your phone and your computer, rather than all of it.","pfSync"],
+  ["Clans","Trade boards, clan tags and shared collections. Designed, parked — see CLANS-design.","pfClan"],
+  ["Contribution review","Approve art tags and rules notes sent in by other people before they go live.","pfRev"],
+  ["Patron perks","Recognition and badges. Deliberately not access — the disclaimer forbids charging for that.","pfPat"],
+  ["Card price data","What a printing is worth, on the card page and in the collection totals.","pfPrice"]];
+
 /* Settings. Only one switch so far, but the page is the right home for the
    next one rather than another tile on the Other menu. */
 function renderPrefs(){
-  $("prefBody").innerHTML=`
-    <div class="prow">
-      <div><b>Collection tracking</b>
-        <p>Adds the owned/foil steppers to card pages and turns on the My collection tab.
-        Switch it off if you only came here to search and build decks.</p></div>
-      <button class="btn" id="pfColl">${COLLON?"On":"Off"}</button>
+  const row=(title,body,btnId,state,off)=>`
+    <div class="prow${off?" soon":""}">
+      <div><b>${esc(title)}</b><p>${esc(body)}</p>
+        ${off?`<span class="soonlbl">Coming soon</span>`:""}</div>
+      <button class="btn" id="${btnId}"${off?" disabled":""}>${off?"—":(state?"On":"Off")}</button>
     </div>`;
-  $("pfColl").onclick=()=>{
-    COLLON=!COLLON;save(K_COLLON,COLLON);renderPrefs();applyCollPref();
-    toast(COLLON?"Collection features on":"Collection features off")};
-  applyCollPref();
+  $("prefBody").innerHTML=`
+    <button class="btn" id="prefBack">← Back to Other</button>
+    <h3 class="sec2">What's switched on</h3>
+    ${row("Collection tracking",
+      "Adds the owned and foil steppers to card pages and turns on the My collection tab. Switch it off if you only came here to search and build decks.",
+      "pfColl",COLLON)}
+    ${row("Mini games",
+      "Guess the card, the aquarium, Outpost and the rest. Off hides them from the Other menu.",
+      "pfGames",GAMESON)}
+    ${row("Dust",
+      "Dust, titles and the things they unlock. Off stops you earning any more — your balance is kept exactly as it is, the Dust tile leaves the Other menu, and your title becomes Stick in the Mud. Turn it back on and everything returns.",
+      "pfDust",DUSTON)}
+    ${darkOK()
+      ? row("Dark mode",
+          "The whole site in carbon and slate, held at the same AAA contrast as the light theme. Printing stays on white paper regardless."
+            +(isPatron()?"":" Free for everyone until 25 December 2026, then it goes back to being a patron perk."),
+          "pfDark",DARK)
+      : `<div class="prow locked">
+          <div><b>Dark mode <span class="soonlbl">Patron perk</span></b>
+            <p>The whole site in carbon and slate, at the same contrast as the light
+            theme. Supporting Ready Set Ink switches it on.</p></div>
+          <button class="btn" disabled>Locked</button>
+        </div>`}`;
+    /* The "Not built yet" list is hidden at Ben's request — a settings page
+       that is mostly disabled switches reads as an unfinished site rather than
+       as a roadmap. The rows are kept in PREF_SOON below rather than deleted,
+       so each one comes back by moving it up here when it's real. */
+  $("prefBack").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+  const flip=(id,get,set,msg)=>{const b=$(id);if(!b||b.disabled)return;
+    b.onclick=()=>{set(!get());renderPrefs();applyPrefs();toast(msg(get()))}};
+  flip("pfColl",()=>COLLON,v=>{COLLON=v;save(K_COLLON,v)},
+    v=>v?"Collection features on":"Collection features off");
+  flip("pfGames",()=>GAMESON,v=>{GAMESON=v;save("fs3_gameson",v)},
+    v=>v?"Mini games on":"Mini games off");
+  flip("pfDust",()=>DUSTON,v=>{DUSTON=v;save("fs3_duston",v)},
+    v=>v?"Dust back on":"Dust off — you keep what you had");
+  flip("pfDark",()=>DARK,v=>{DARK=v;save("fs3_dark",v)},
+    v=>v?"Dark mode on":"Back to the light theme");
+  applyPrefs();
 }
-/* One class on <body> hides every collection affordance at once, so a new one
-   added later is covered by default rather than needing to be remembered. */
+/* One place that applies every switch, so a new one can't be half-wired. */
+function applyPrefs(){
+  applyCollPref();
+  /* Locked out of the perk means locked out of the look, even if the stored
+     preference says otherwise — otherwise cancelling a pledge, or the free
+     window closing, would leave the theme switched on for ever. The preference
+     itself is never cleared, so renewing brings it straight back. */
+  document.body.classList.toggle("dark",DARK&&darkOK());
+  document.body.classList.toggle("nogames",!GAMESON);
+  document.body.classList.toggle("nodust",!DUSTON);
+  drawTitle&&drawTitle();
+}
 function applyCollPref(){document.body.classList.toggle("nocoll",!COLLON)}
 
 const OPAGES={
@@ -5702,9 +6423,19 @@ const OPAGES={
   cred:  ["vCred",   ()=>renderCredits()],
   pref:  ["vPref",   ()=>renderPrefs()],
 };
+/* Pages that belong to a switch. Turning the switch off takes the tile out of
+   the menu; the page itself still works if you know the URL, exactly like OFF. */
+/* The three guessing games are "quiz:ability", "quiz:flavour", "quiz:reveal",
+   so this matches on the prefix — listing them individually is how the next
+   one added would quietly escape the switch. */
+const GAMEPAGES=["guess","quiz","aqua","click","hex"];
+const isGamePage=p=>GAMEPAGES.some(g=>p===g||p.indexOf(g+":")===0);
 function renderOther(){
+  const hidden=p=>OFF.includes(p)
+    ||(!GAMESON&&isGamePage(p))
+    ||(!DUSTON&&p==="dust");
   const groups=OTHER_GROUPS
-    .map(gr=>({...gr,chips:gr.chips.filter(([,,page])=>!OFF.includes(page))}))
+    .map(gr=>({...gr,chips:gr.chips.filter(([,,page])=>!hidden(page))}))
     .filter(gr=>gr.chips.length);
   $("otherTiles").innerHTML=groups.map(gr=>
     (gr.g?`<h3 class="sec2 ogh">${esc(gr.g)}</h3>`:"")+
@@ -5723,9 +6454,23 @@ function renderOther(){
    copies of the search UI would guarantee they drift apart. */
 const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
 const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref"];
-let TAB="tDeck",SUB=load("fs3_sub","manual");
+/* TAB is read from storage HERE rather than being left at "tDeck" until
+   showTab() runs at the bottom of the file. The grid is rendered before that
+   line, and tile() and bindGrid() both branch on TAB — so booting straight
+   into Search used to build the tiles in deck-builder mode and wire the
+   click-to-add handler to every one of them. showTab() then swapped the view
+   class without re-rendering, and the handlers survived: one click on any card
+   put it in your deck, on the tab that is supposed to be read-only. */
+let TAB=(()=>{const t=load("fs3_tab","tDeck");return TABS.includes(t)?t:"tDeck"})();
+let SUB=load("fs3_sub","manual");
 function showTab(t){
+  /* Search and the deck builder share one grid, so crossing between them
+     changes what every tile is allowed to do. Re-render rather than just
+     swapping a class, or the handlers from the tab you left stay live on the
+     tab you arrived at. */
+  const wasBrowse=TAB==="tSearch",nowBrowse=t==="tSearch";
   TAB=t;save("fs3_tab",t);
+  if(wasBrowse!==nowBrowse&&typeof render==="function")render();
   TABS.forEach(x=>$(x).classList.toggle("on",x===t));
   const guided=(t==="tDeck"&&SUB==="guided");
   VIEWS.forEach(v=>$(v).classList.remove("on"));
@@ -5817,8 +6562,85 @@ $("tgSto").onclick=()=>{S.stoS=!S.stoS;save("fs3_stoS",S.stoS);drawToggles();S.l
   if(S.stoS&&S.tagS)unlockHidden("h_wide");
   toast(S.stoS?"Franchise names included":"Franchise names excluded")};
 drawToggles();
+/* ===================== typing help =====================
+   Two of the most-cited complaints about deck builders are that card names
+   have to be typed in full, and that one wrong letter returns nothing at all.
+   Both are worth fixing here in particular, because this site's whole promise
+   is finding a card you only half remember.
+
+   ACSUG is the suggestion list under the box. Ranking is deliberate: a name
+   that STARTS with what you typed beats one where a later word starts with it,
+   which beats a plain substring. That ordering is what makes the first row
+   almost always the one you wanted. */
+let ACI=-1, ACLIST=[];
+const acNorm=t=>String(t||"").toLowerCase().replace(/[’']/g,"'").trim();
+function acRank(name,q){
+  const n=acNorm(name);
+  if(n.startsWith(q))return 0;
+  if(n.split(/[\s\-]+/).some(w=>w.startsWith(q)))return 1;
+  return n.includes(q)?2:9}
+function acFind(raw){
+  const q=acNorm(raw);
+  if(q.length<2||/[:"]/.test(raw))return [];   // not while typing a filter token
+  const out=[];
+  for(const c of CARDS){
+    const r=acRank(c.f,q);
+    if(r<9)out.push({c,r});
+    if(out.length>400)break}
+  return out.sort((a,b)=>a.r-b.r||a.c.f.length-b.c.f.length
+    ||a.c.f.localeCompare(b.c.f)).slice(0,8).map(x=>x.c)}
+
+/* Edit distance, capped — we only care whether it's within a letter or two, so
+   a full matrix on 2,543 names would be wasted work. */
+function editDist(a,b,cap){
+  if(Math.abs(a.length-b.length)>cap)return cap+1;
+  let prev=Array.from({length:b.length+1},(_,i)=>i);
+  for(let i=1;i<=a.length;i++){
+    const cur=[i];let best=i;
+    for(let j=1;j<=b.length;j++){
+      cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));
+      if(cur[j]<best)best=cur[j]}
+    if(best>cap)return cap+1;
+    prev=cur}
+  return prev[b.length]}
+/* "Did you mean" — only offered when the search found nothing, because that is
+   the only moment it helps rather than second-guesses you. */
+function didYouMean(raw){
+  const q=acNorm(raw);
+  if(q.length<4||q.length>40)return [];
+  const cap=q.length<=6?1:2;
+  const hits=[];
+  for(const c of CARDS){
+    const n=acNorm(c.n);                       // the name, not the full title
+    const d=editDist(q,n,cap);
+    if(d<=cap)hits.push({c,d});
+    if(hits.length>30)break}
+  return hits.sort((a,b)=>a.d-b.d).slice(0,5).map(x=>x.c)}
+
+function acRender(){
+  let box=$("acbox");
+  if(!box){box=document.createElement("div");box.id="acbox";box.className="acbox";
+    $("sf").parentNode.insertBefore(box,$("sf").nextSibling)}
+  if(!ACLIST.length){box.innerHTML="";box.hidden=true;return}
+  box.hidden=false;
+  box.innerHTML=ACLIST.map((c,i)=>`
+    <button class="acrow${i===ACI?" on":""}" data-ac="${esc(c.f)}">
+      <span class="acn">${esc(c.n)}${c.v?` <i>${esc(c.v)}</i>`:""}</span>
+      <span class="acm">${esc(String((c.co||[]).join("/")||""))} · ${c.c} cost</span>
+    </button>`).join("");
+  box.querySelectorAll("[data-ac]").forEach(b=>b.onclick=()=>acPick(b.dataset.ac));
+}
+function acPick(full){
+  acClose();
+  S.q='name:"'+full.replace(/ - .*$/,"")+'"';
+  $("q").value=full;S.limit=150;render();
+  const t=[...document.querySelectorAll("#grid .c")].find(x=>x.dataset.f===full);
+  if(t)t.scrollIntoView({block:"center"})}
+function acClose(){ACLIST=[];ACI=-1;const b=$("acbox");if(b){b.innerHTML="";b.hidden=true}}
+
 let qT;$("q").oninput=e=>{S.q=e.target.value;S.limit=150;
   if(/\brat\b/i.test(S.q))RATSEARCH=true;
+  ACLIST=acFind(e.target.value);ACI=-1;acRender();
   clearTimeout(qT);
   qT=setTimeout(()=>{render();if(S.q.trim().length>2)maybePulse()},140)};
 $("q").onkeydown=e=>{
@@ -5829,8 +6651,18 @@ $("q").onkeydown=e=>{
     const xs=$("sf").querySelectorAll(".pill .x");
     if(xs.length){e.preventDefault();xs[xs.length-1].click()}
     return}
+  /* Arrows only steer the suggestion list while it is open, so the grid's own
+     arrow navigation is untouched the rest of the time. */
+  if(ACLIST.length){
+    if(e.key==="ArrowDown"){e.preventDefault();ACI=(ACI+1)%ACLIST.length;acRender();return}
+    if(e.key==="ArrowUp"){e.preventDefault();ACI=(ACI-1+ACLIST.length)%ACLIST.length;acRender();return}
+    if(e.key==="Escape"){e.preventDefault();acClose();return}
+    if(e.key==="Enter"&&ACI>=0){e.preventDefault();acPick(ACLIST[ACI].f);return}}
   if(e.key!=="Enter")return;
+  acClose();
   if(tryToken($("q").value)){$("q").value="";S.q="";S.limit=150;render()}};
+document.addEventListener("click",e=>{
+  if(!e.target.closest||(!e.target.closest("#acbox")&&e.target.id!=="q"))acClose()});
 $("sf").onclick=e=>{if(e.target.id!=="q"&&!e.target.classList.contains("x"))$("q").focus()};
 $("sort").onchange=e=>{S.sort=e.target.value;renderGrid()};
 $("fmt").onchange=e=>{const d=deck();d.fmt=e.target.value;saveDecks();
@@ -5865,7 +6697,10 @@ render();
 const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
 try{document.body.insertAdjacentHTML("afterbegin",RAINDEF)}catch(e){}
-applyCollPref();
+const dbs=$("dbSave");
+if(dbs)dbs.onclick=e=>saveDeckPrompt(e);
+paintDeckBar();
+applyPrefs();
 showTab(load("fs3_tab","tDeck"));
 drawTitle();
 /* =========================================================================
@@ -5894,7 +6729,7 @@ const SB_URL="/*__SB_URL__*/";
 const SB_KEY="/*__SB_KEY__*/";
 /* The keys that follow a person between devices. Must match the allowlist in
    supabase-schema.sql — the database rejects anything else, on purpose. */
-const SYNCED=[K_DECKS,"fs3_dust",K_STAR];
+const SYNCED=[K_DECKS,"fs3_dust",K_STAR,K_COLL,"fs3_borrowdef"];
 const SB_LIB="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js";
 const PULLED="fs3_pulled";   /* one cloud pull per tab — see arrive() */
 
@@ -5976,6 +6811,23 @@ const ACCT={
      unusable is worse than almost any other bug here. */
   async arrive(user){
     this.user=user;this.paint();
+    /* A fresh draft on sign-in. On a shared computer you should never open the
+       deck builder onto somebody else's half-built list — saved decks are
+       still all there in the Decks tab. */
+    try{
+      const d=DECKS.list[DRAFT];
+      if(d&&Object.keys(d.cards||{}).length){
+        /* A fresh draft on sign-in, as asked — but an unsaved deck is still
+           someone's work, so it is put aside under its own name rather than
+           binned. Nothing is destroyed by logging in. */
+        let nm="Unsaved deck",i=2;
+        while(DECKS.list[nm])nm="Unsaved deck "+(i++);
+        DECKS.list[nm]={...d};
+        toast(`Your unsaved deck was kept as "${nm}"`);
+      }
+      if(d)DECKS.list[DRAFT]={fmt:d.fmt,coco:null,cards:{}};
+      DECKS.cur=DRAFT;saveDecks();markDirty(false);paintDeckBar();
+    }catch(e){}
     let rows=[];
     try{
       const sb=await this.client();
@@ -6024,10 +6876,19 @@ const ACCT={
     const rows=keys.map(k=>({user_id:this.user.id,key:k,
       value:load(k,null)})).filter(r=>r.value!==null);
     if(!rows.length)return;
+    let sb;
+    try{sb=await this.client()}catch(e){return}
     try{
-      const sb=await this.client();
-      await sb.from("user_state").upsert(rows,{onConflict:"user_id,key"})}
-    catch(e){/* a failed sync must never interrupt deck building */}},
+      const r=await sb.from("user_state").upsert(rows,{onConflict:"user_id,key"});
+      if(!r.error)return;
+      /* One rejected key sinks the whole batch — the database allowlists which
+         keys may be written, so a key added to the app before the matching SQL
+         has been run takes every other key down with it. Falling back to one
+         row at a time means a new feature can never stop decks from saving. */
+      for(const row of rows){
+        try{await sb.from("user_state").upsert([row],{onConflict:"user_id,key"})}
+        catch(e){}}
+    }catch(e){/* a failed sync must never interrupt deck building */}},
 
   paint(){
     const b=$("acct");if(!b)return;

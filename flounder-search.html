@@ -572,11 +572,11 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 /* ===== sites + credits ================================================== */
 .sites{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
 /* Footer is part of the carbon command layer, same halftone as the nav. */
-.foot{margin:24px 0 0;padding:16px 18px;background:var(--carbon);
+.foot{margin:24px 0 0;padding:9px 18px;background:var(--carbon);
   background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
   background-size:4px 4px;border-top:2px solid var(--chrome);
   display:flex;gap:20px;flex-wrap:wrap;
-  font-family:var(--sans);font-size:12px;color:var(--canvas-soft);
+  font-family:var(--sans);font-size:11.5px;color:var(--canvas-soft);
   position:relative;z-index:1}
 .foot a{color:var(--link)}
 .foot a:hover{color:var(--surface)}
@@ -1101,9 +1101,23 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .rtext .rulings{max-height:none}
 /* ===== decks page + pull list =========================================== */
 .dkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:11px;margin-bottom:22px}
-.dkcard{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px;text-align:left}
+/* Unselected decks sit back on platinum; the one you're editing comes forward
+   onto white. --panel and --surface resolve to the same white in the light
+   palette, so using those two would have made the difference invisible. */
+.dkcard{background:var(--platinum);border:1px solid var(--line);border-radius:4px;padding:14px;text-align:left;
+  position:relative;border-left:5px solid var(--line)}
 .dkcard:hover{border-color:var(--deep)}
-.dkcard.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+/* The selected deck used to be marked with --gold, which in the light palette
+   resolves to the same deep blue as :hover — so the current deck looked
+   identical to whichever one your mouse happened to be over. It now gets the
+   Action Yellow rail, a lifted plate and a badge saying so in words. */
+.dkcard.on{border-color:var(--chrome);border-left-color:var(--amberc);
+  background:var(--surface);box-shadow:var(--bevel),0 0 0 2px var(--chrome)}
+.dkcard.on h3{color:var(--tx)}
+.dkcur{display:inline-block;margin-left:7px;vertical-align:2px;
+  background:var(--amberc);color:var(--carbon);font-size:10px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:2px;
+  border:1px solid var(--hairline)}
 .dkcard h3{font-size:15.2px;margin-bottom:3px}
 .dkcard .dm{font-size:12px;color:var(--deep)}
 .dkcard .inks{display:flex;gap:3px;margin-top:8px}
@@ -1125,6 +1139,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 @media print{
   body{background:#fff}
   header,nav.tabs,.mtabs,#bub,.pullbar,.dkgrid,.page h1,.lede,.toast{display:none!important}
+  /* A pull sheet is a shopping list you carry to a shop. The Community Code
+     disclaimer is a condition of publishing the SITE, not of every sheet of
+     paper it prints, so the footer comes off the printout. */
+  .foot{display:none!important}
   .view{display:none!important}.view#vDecks{display:block!important}
   .pull{padding:0;border-radius:0}
   .page{max-width:none;padding:0}
@@ -2020,10 +2038,77 @@ const numSort=(a,b)=>{
    already excludes keyword reminder text — that's what kept songs out of the
    cost-reduction filter. */
 const HIDDEN_KINDS=["take","video"];
+
+/* ---- location and item interaction ----------------------------------------
+   "text:location" returns 131 cards and mixes two opposite decks together: the
+   cards that BUILD a location board and the cards that tear one down. Ben
+   wanted them separated, so each direction gets its own predicate.
+
+   LOC_HELP is deliberately written as a list of things a location deck DOES —
+   standing at one, moving to one, playing one cheaper, healing one, buffing
+   your own — rather than "mentions location and doesn't say banish". The
+   negative phrasing fails on cards that do both, and on the three locations
+   whose payoff IS banishing themselves (Pride Lands - Jungle Oasis, Sugar Rush
+   Speedway - Finish Line, Sleepy Hollow - The Bridge), which are location
+   payoffs and not location hate.
+
+   `characters? here` is in the positive list on purpose: on a Location card,
+   "here" means "at this location", so a location that rewards you for standing
+   on it is exactly the payoff a location deck is looking for. */
+const LOC_HELP=new RegExp([
+  "at a location","at locations","your locations",
+  "locations? (?:gain|gains|get|gets) ",
+  "move\\w* (?:[^.]{0,70}?)\\bto (?:a|that|another|one of your|the same) location",
+  "whenever you play a location","play a location (?:card )?(?:from|with)",
+  "for each location you have in play","if you have a location in play",
+  "next location you play","less to play locations",
+  "remove up to \\d+ damage from chosen (?:character or )?location",
+  "reveal a location card","return a location card from your discard",
+  "location card named","this location gets \\+","location's ◊",
+  "banish this location","characters? here\\b"
+].join("|"),"i");
+/* The mirror: everything that removes, bounces, inks or burns a location that
+   isn't yours. "banish this location" is excluded by construction — it never
+   appears here — and so is anything scoped "of yours". */
+const LOC_HATE=new RegExp([
+  "banish (?:chosen|all opposing) (?:item or )?location",
+  "one of their locations",
+  "deal (?:\\d+ )?damage to chosen (?:damaged )?character or location",
+  "deal \\d+ damage to chosen location",
+  "return (?:a )?chosen [^.]{0,60}?\\blocation\\b[^.]{0,45}?to their player's hand",
+  "put chosen item or location into its player's inkwell",
+  "discards? a location card",
+  "item or location of theirs and banish"
+].join("|"),"i");
+/* Items get the same treatment, minus the synergy half — "your items" already
+   has plenty of routes through the Inventor and Detective classifications.
+   `(?!\\s+of yours)` is what keeps the eight cards that sacrifice their OWN
+   item for value (Maurice, Gaston - Arrogant Showoff, Belle - Apprentice
+   Inventor) out of a removal list. */
+const ITEM_HATE=new RegExp([
+  "banish chosen item(?! of yours)",
+  "banish all opposing items","one of their items",
+  "return chosen [^.]{0,60}?\\bitem\\b[^.]{0,45}?to (?:its|their) player's hand",
+  "put chosen item(?: or location)? into its player's inkwell",
+  "opposing items","item or location of theirs and banish"
+].join("|"),"i");
+/* Pings: one damage at a time. The chip exists because a Robin's Bow deck and
+   a Be Prepared deck are not the same deck — pings want damage-count payoffs
+   (Ratigan's Party, damaged-character triggers), not board wipes. Moving a
+   counter counts: the damage still lands on something of theirs. */
+const PING=/deals? 1 damage|put 1 damage counter|puts? a damage counter|move 1 damage counter/i;
+
 const GROUPS=[
  {g:"Staples & tribes",chips:[
    {id:"staple",l:"★ Staples",fn:c=>isStar(c.f)},
-   {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0}]},
+   {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0},
+   /* Lilo & Stitch is one of the few franchises with a matching mechanical
+      classification, and the two don't fully overlap: Alien picks up the
+      Experiments and the Galactic Council cards that aren't filed under the
+      film, while the film picks up Nani and David, who aren't Aliens. A deck
+      wants both, so the chip is the union. */
+   {id:"lilo",l:"👽 Lilo & Stitch + Aliens",
+     fn:c=>c.sto==="Lilo & Stitch"||c.sub.includes("Alien")}]},
  {g:"Card advantage",chips:[
    {id:"draw", l:"Draws a card",        re:/draws?\s+(a|\d+)?\s*cards?/i},
    {id:"topx", l:"Looks at top X cards",re:/look at the top \d+/i},
@@ -2034,7 +2119,14 @@ const GROUPS=[
    // Rules 8.8.3 — Resist only reduces damage that is DEALT; put/moved damage ignores it
    {id:"pierce",l:"🗡️ Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
    {id:"banish",l:"Banishes",       re:/banish/i},
+   {id:"ping",  l:"🎯 Pings (1 damage)",fn:c=>PING.test(c.ef||"")},
+   {id:"itemhate",l:"🔨 Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
    {id:"discard",l:"Discards",      re:/discard/i}]},
+ /* Locations, split into the two decks that "text:location" used to return
+    mixed together. */
+ {g:"Locations",chips:[
+   {id:"locsyn", l:"🏰 Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
+   {id:"lochate",l:"💥 Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
  {g:"Protection",chips:[
    {id:"heal",  l:"Removes damage",     re:/removes?\s+(up to\s+)?\d*\s*damage/i},
    {id:"nochal",l:"Can't be challenged",re:/can't be challenged/i}]},
@@ -2117,6 +2209,15 @@ const CHIPWORDS={
  boost:["boost"],
  boostcheap:["cheap boost"],
  tribal:["tribal","tribe boost"],
+ locsyn:["location synergy","locations","location deck","location payoff",
+         "location support","loves locations","benefits locations"],
+ lochate:["location nerfs","location nerf","location hate","location removal",
+          "kill locations","banish locations","anti location"],
+ itemhate:["item nerfs","item nerf","item hate","item removal","artifact removal",
+           "kill items","banish items","anti item"],
+ ping:["pings","ping","ping damage","pings damage","chip damage","1 damage"],
+ lilo:["lilo","stitch","aliens","alien","lilo and stitch","lilo & stitch",
+       "experiments"],
  shift:["shift"],
  sing:["song payoff","sing payoff"],
 };
@@ -2596,7 +2697,10 @@ function tile(c){
        :`<img src="${_im}" loading="lazy" alt="${esc(c.f)}">`)
     :`<div class="ph">${esc(c.f)}</div>`;
   // once a copy is in the deck, offer to find its Shift target
-  const wantShift=q&&!ban&&(hasShift(c)||c.sub.includes("Floodborn"))&&shiftTargets(c).length;
+  /* Search for cards is read-only, so the shift-target prompt is suppressed
+     here too — it was the last control on a tile that could still put a card
+     into a deck from the browsing tab. */
+  const wantShift=TAB!=="tSearch"&&q&&!ban&&(hasShift(c)||c.sub.includes("Floodborn"))&&shiftTargets(c).length;
   const bad=illegalReason(c),four=coconut4x(c);
   if(four)tags.push(`<span style="background:var(--link);color:var(--surface);font-weight:800">CAN HAVE 4×</span>`);
   return `<div class="c${ban?" banned":""}${isLoc(c)?" loc":""}${bad&&!ban?" illegal":""}${
@@ -2787,9 +2891,15 @@ function bindGrid(){
       const l=el.querySelector(".syml");if(l)l.remove()};
   });
   g.querySelectorAll("[data-i]").forEach(b=>b.onclick=e=>{e.stopPropagation();openM(b.dataset.i)});
-  g.querySelectorAll("[data-plus]").forEach(b=>b.onclick=e=>{e.stopPropagation();addCard(b.dataset.plus)});
-  g.querySelectorAll("[data-minus]").forEach(b=>b.onclick=e=>{e.stopPropagation();delCard(b.dataset.minus)});
-  g.querySelectorAll("[data-sh]").forEach(b=>b.onclick=e=>{e.stopPropagation();openShift(b.dataset.sh)});
+  /* These four run over the whole grid, so the early `return` above — which
+     only skips the per-tile bindings — never reached them. On the Search tab a
+     stepper that survived a re-render could still change the deck. Nothing
+     that writes to a deck gets wired here at all now. */
+  if(TAB!=="tSearch"){
+    g.querySelectorAll("[data-plus]").forEach(b=>b.onclick=e=>{e.stopPropagation();addCard(b.dataset.plus)});
+    g.querySelectorAll("[data-minus]").forEach(b=>b.onclick=e=>{e.stopPropagation();delCard(b.dataset.minus)});
+    g.querySelectorAll("[data-sh]").forEach(b=>b.onclick=e=>{e.stopPropagation();openShift(b.dataset.sh)});
+  }
   const mo=$("mo");if(mo)mo.onclick=()=>{S.limit+=150;renderGrid()};
   bindDrop();
   if(KBI>=0)kbFocus(KBI);
@@ -4619,7 +4729,7 @@ function renderContrib(){
     <div class="ctile">
       <h3>📤 Sending it in</h3>
       <p>Hit <b>Export</b> in either tool and mail the JSON to
-        <a href="mailto:benjamindacy@gmail.com?subject=Flounder%20Search%20contribution">benjamindacy@gmail.com</a>.
+        <a href="mailto:lorcana707@gmail.com?subject=Ready%20Set%20Ink%20contribution">lorcana707@gmail.com</a>.
         I check it over and it goes live on the next build.</p>
       <p class="small">Both tools store everything in your own browser until you export, so nothing
         leaves your machine unless you send it.</p>
@@ -4916,6 +5026,20 @@ let DARK=load("fs3_dark",false);
    That is fine while nothing has been paid; it stops being fine the moment it
    has been. */
 const isPatron=()=>!!(DUST&&DUST.patron)||PATRON_ON===true;
+/* Dark mode is free for everybody until the end of 25 December 2026, then it
+   goes back to being a patron perk. Two reasons to do it this way round rather
+   than just ungating it: nobody switches on a theme they've never seen, so the
+   window is the advert; and the perk machinery stays wired the whole time, so
+   the date passing is the only thing that has to happen — not a rebuild.
+
+   The boundary is the END of the 25th in the visitor's own timezone (26 Dec
+   00:00 local). A UTC cutoff would take the theme away mid-Christmas-Day for
+   anyone west of Greenwich. Move or delete DARK_FREE_UNTIL to change it; if
+   it's null the perk gate applies immediately. */
+const DARK_FREE_UNTIL=new Date(2026,11,26,0,0,0).getTime();
+const darkFree=()=>DARK_FREE_UNTIL!=null&&Date.now()<DARK_FREE_UNTIL;
+/* The one question the rest of the file asks: may this visitor have it? */
+const darkOK=()=>isPatron()||darkFree();
 let GAMESON=load("fs3_gameson",true);
 const STICK={id:"t_stick",t:"Stick in the Mud",d:"You turned dust off. Respect."};
 function dustGain(n){
@@ -5849,8 +5973,10 @@ function renderDecksPage(){
       .filter(x=>x.c);
     const tot=L.reduce((a,x)=>a+x.q,0),inks=new Set();
     L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
-    return `<button class="dkcard${n===DECKS.cur?" on":""}" data-dk="${esc(n)}">
-      <h3>${esc(n)}${titleChip()}</h3>
+    const cur=n===DECKS.cur;
+    return `<button class="dkcard${cur?" on":""}" data-dk="${esc(n)}"${
+        cur?' aria-current="true"':""}>
+      <h3>${esc(n)}${titleChip()}${cur?`<span class="dkcur">Editing</span>`:""}</h3>
       <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
       <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
     </button>`}).join("");
@@ -6207,6 +6333,15 @@ function renderColl(){
       setOwned(k,o[0],o[1]);renderColl()})});
 }
 
+/* Parked settings. Not rendered — see the note in renderPrefs. Kept as data so
+   that shipping one is moving a line, not rewriting the page from a changelog. */
+const PREF_SOON=[
+  ["Sync across devices","Choose what follows you between your phone and your computer, rather than all of it.","pfSync"],
+  ["Clans","Trade boards, clan tags and shared collections. Designed, parked — see CLANS-design.","pfClan"],
+  ["Contribution review","Approve art tags and rules notes sent in by other people before they go live.","pfRev"],
+  ["Patron perks","Recognition and badges. Deliberately not access — the disclaimer forbids charging for that.","pfPat"],
+  ["Card price data","What a printing is worth, on the card page and in the collection totals.","pfPrice"]];
+
 /* Settings. Only one switch so far, but the page is the right home for the
    next one rather than another tile on the Other menu. */
 function renderPrefs(){
@@ -6228,22 +6363,21 @@ function renderPrefs(){
     ${row("Dust",
       "Dust, titles and the things they unlock. Off stops you earning any more — your balance is kept exactly as it is, the Dust tile leaves the Other menu, and your title becomes Stick in the Mud. Turn it back on and everything returns.",
       "pfDust",DUSTON)}
-    ${isPatron()
+    ${darkOK()
       ? row("Dark mode",
-          "The whole site in carbon and slate, held at the same AAA contrast as the light theme. Printing stays on white paper regardless.",
+          "The whole site in carbon and slate, held at the same AAA contrast as the light theme. Printing stays on white paper regardless."
+            +(isPatron()?"":" Free for everyone until 25 December 2026, then it goes back to being a patron perk."),
           "pfDark",DARK)
       : `<div class="prow locked">
           <div><b>Dark mode <span class="soonlbl">Patron perk</span></b>
             <p>The whole site in carbon and slate, at the same contrast as the light
             theme. Supporting Ready Set Ink switches it on.</p></div>
           <button class="btn" disabled>Locked</button>
-        </div>`}
-    <h3 class="sec2">Not built yet</h3>
-    ${row("Sync across devices","Choose what follows you between your phone and your computer, rather than all of it.","pfSync",false,true)}
-    ${row("Clans","Trade boards, clan tags and shared collections. Designed, parked — see CLANS-design.","pfClan",false,true)}
-    ${row("Contribution review","Approve art tags and rules notes sent in by other people before they go live.","pfRev",false,true)}
-    ${row("Patron perks","Recognition and badges. Deliberately not access — the disclaimer forbids charging for that.","pfPat",false,true)}
-    ${row("Card price data","What a printing is worth, on the card page and in the collection totals.","pfPrice",false,true)}`;
+        </div>`}`;
+    /* The "Not built yet" list is hidden at Ben's request — a settings page
+       that is mostly disabled switches reads as an unfinished site rather than
+       as a roadmap. The rows are kept in PREF_SOON below rather than deleted,
+       so each one comes back by moving it up here when it's real. */
   $("prefBack").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
   const flip=(id,get,set,msg)=>{const b=$(id);if(!b||b.disabled)return;
     b.onclick=()=>{set(!get());renderPrefs();applyPrefs();toast(msg(get()))}};
@@ -6261,9 +6395,10 @@ function renderPrefs(){
 function applyPrefs(){
   applyCollPref();
   /* Locked out of the perk means locked out of the look, even if the stored
-     preference says otherwise — otherwise cancelling a pledge would leave the
-     theme switched on for ever. */
-  document.body.classList.toggle("dark",DARK&&isPatron());
+     preference says otherwise — otherwise cancelling a pledge, or the free
+     window closing, would leave the theme switched on for ever. The preference
+     itself is never cleared, so renewing brings it straight back. */
+  document.body.classList.toggle("dark",DARK&&darkOK());
   document.body.classList.toggle("nogames",!GAMESON);
   document.body.classList.toggle("nodust",!DUSTON);
   drawTitle&&drawTitle();
@@ -6319,9 +6454,23 @@ function renderOther(){
    copies of the search UI would guarantee they drift apart. */
 const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
 const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref"];
-let TAB="tDeck",SUB=load("fs3_sub","manual");
+/* TAB is read from storage HERE rather than being left at "tDeck" until
+   showTab() runs at the bottom of the file. The grid is rendered before that
+   line, and tile() and bindGrid() both branch on TAB — so booting straight
+   into Search used to build the tiles in deck-builder mode and wire the
+   click-to-add handler to every one of them. showTab() then swapped the view
+   class without re-rendering, and the handlers survived: one click on any card
+   put it in your deck, on the tab that is supposed to be read-only. */
+let TAB=(()=>{const t=load("fs3_tab","tDeck");return TABS.includes(t)?t:"tDeck"})();
+let SUB=load("fs3_sub","manual");
 function showTab(t){
+  /* Search and the deck builder share one grid, so crossing between them
+     changes what every tile is allowed to do. Re-render rather than just
+     swapping a class, or the handlers from the tab you left stay live on the
+     tab you arrived at. */
+  const wasBrowse=TAB==="tSearch",nowBrowse=t==="tSearch";
   TAB=t;save("fs3_tab",t);
+  if(wasBrowse!==nowBrowse&&typeof render==="function")render();
   TABS.forEach(x=>$(x).classList.toggle("on",x===t));
   const guided=(t==="tDeck"&&SUB==="guided");
   VIEWS.forEach(v=>$(v).classList.remove("on"));
