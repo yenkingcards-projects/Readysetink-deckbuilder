@@ -109,7 +109,9 @@ body.dark .pull h2,body.dark .pull td.q{color:var(--tx)}
 body.dark .pull .sub,body.dark .pull td.no,body.dark .pull td.ra{color:var(--deep)}
 body.dark .pull td{border-bottom-color:var(--line2)}
 body.dark .cfm,body.dark .modal{background:var(--surface)}
-body.dark #q::placeholder{color:var(--deep);opacity:.6}
+/* Matches the light theme's .38. Dark mode needs a touch more alpha to read at
+   all against the slate field, but not so much that an empty box looks full. */
+body.dark #q::placeholder,body.dark .sfield input::placeholder{color:var(--deep);opacity:.45}
 /* The art/franchise switches dim their own label to signal "off". That dimming
    was tuned against a white page; on a dark one it pushed the text under the
    bar, so the label keeps full strength here and "off" is carried by the knob
@@ -229,6 +231,19 @@ body.nocoll .collonly{display:none!important}
   background:var(--platinum);overflow:hidden}
 .cpv img{display:block;width:100%}
 /* ---- collection sub-tabs ---- */
+/* Illumineer's Quest sets, folded away under one block. */
+.otherset{margin-top:9px;border:1px solid var(--hairline);border-radius:4px;
+  background:var(--canvas-soft);box-shadow:var(--bevel-in)}
+.otherset>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;
+  padding:8px 11px;font-size:11.5px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--tx)}
+.otherset>summary::-webkit-details-marker{display:none}
+.otherset>summary::before{content:"▸";font-size:11px;transition:transform .15s}
+.otherset[open]>summary::before{transform:rotate(90deg)}
+.otherset>summary .n{background:var(--surface);border:1px solid var(--line);
+  border-radius:2px;padding:1px 7px;font-size:11px;letter-spacing:0;color:var(--deep)}
+.otherset .chips{padding:0 11px 11px}
+.fastlede{color:var(--tx);font-size:13.5px;line-height:1.6;margin:14px 0 12px;max-width:70ch}
 .ctabs{display:flex;gap:0;margin:14px 0 0}
 .ctabs button{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
   padding:7px 14px;border:1px solid var(--chrome);background:var(--platinum);color:var(--tx);
@@ -572,16 +587,21 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 /* ===== sites + credits ================================================== */
 .sites{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
 /* Footer is part of the carbon command layer, same halftone as the nav. */
-.foot{margin:24px 0 0;padding:9px 18px;background:var(--carbon);
+/* The disclaimer, now that it lives in Settings instead of under every page.
+   Centred, on the carbon command layer so it reads as a statement rather than
+   as another settings row, and given room to breathe — it is the one piece of
+   text on this site that exists because someone else's policy says it must. */
+.legal{margin:0 0 18px;padding:16px 20px;background:var(--carbon);
   background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
-  background-size:4px 4px;border-top:2px solid var(--chrome);
-  display:flex;gap:20px;flex-wrap:wrap;
-  font-family:var(--sans);font-size:11.5px;color:var(--canvas-soft);
-  position:relative;z-index:1}
-.foot a{color:var(--link)}
-.foot a:hover{color:var(--surface)}
-.fdis{flex:1;min-width:260px;text-align:right;max-width:52ch;color:var(--on-dark-soft)}
-@media(max-width:700px){.fdis{text-align:left}}
+  background-size:4px 4px;border:1px solid var(--chrome);border-radius:4px;
+  font-family:var(--sans);font-size:12.5px;line-height:1.75;
+  color:var(--on-dark-soft);text-align:center}
+.legal b{display:block;color:var(--surface);font-size:11px;text-transform:uppercase;
+  letter-spacing:.09em;margin-bottom:7px}
+.legal p{margin:0 auto;max-width:60ch}
+.legal p+p{margin-top:8px}
+.legal a{color:var(--shimmer)}
+.legal a:hover{color:var(--surface)}
 .cwhat{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.09em;
   color:var(--deep);margin-bottom:5px;line-height:1.6}
 .creds{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
@@ -736,7 +756,11 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .bump{animation:bump .38s cubic-bezier(.3,1.5,.5,1)}
 @keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.34)}100%{transform:scale(1)}}
 /* keyboard cursor */
-.c.kb{outline:3px solid var(--amberc);outline-offset:2px;z-index:20}
+/* The keyboard cursor gets the same halo as hover, so building with the arrow
+   keys looks like building with the mouse. Outline rather than box-shadow for
+   the ring itself, because the outline survives the tile's overflow:hidden. */
+.c.kb{outline:3px solid var(--amberc);outline-offset:2px;z-index:20;
+  box-shadow:0 0 14px 2px rgba(255,212,0,.66),0 0 30px 10px rgba(255,212,0,.3)}
 .kbhint{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;
   color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
   box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px;margin-left:auto}
@@ -1114,6 +1138,18 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .dkcard.on{border-color:var(--chrome);border-left-color:var(--amberc);
   background:var(--surface);box-shadow:var(--bevel),0 0 0 2px var(--chrome)}
 .dkcard.on h3{color:var(--tx)}
+/* Rename sits inside the deck card. It's a <span role=button> rather than a
+   real <button> because the card itself is already a button and HTML forbids
+   nesting one inside another — the browser silently unnests them, which breaks
+   the card's own click handler. Keyboard support is wired by hand to make up
+   for it. */
+.dkren{position:absolute;right:9px;bottom:9px;font-size:11px;font-weight:700;
+  color:var(--link);background:var(--surface);border:1px solid var(--line);
+  border-radius:2px;padding:2px 7px;opacity:0;transition:opacity .12s;cursor:pointer}
+.dkcard:hover .dkren,.dkcard:focus-within .dkren{opacity:1}
+.dkren:hover{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.dkren:focus{opacity:1;outline:2px solid var(--link);outline-offset:1px}
+@media(hover:none){.dkren{opacity:1}}
 .dkcur{display:inline-block;margin-left:7px;vertical-align:2px;
   background:var(--amberc);color:var(--carbon);font-size:10px;font-weight:800;
   text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:2px;
@@ -1141,8 +1177,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
   header,nav.tabs,.mtabs,#bub,.pullbar,.dkgrid,.page h1,.lede,.toast{display:none!important}
   /* A pull sheet is a shopping list you carry to a shop. The Community Code
      disclaimer is a condition of publishing the SITE, not of every sheet of
-     paper it prints, so the footer comes off the printout. */
-  .foot{display:none!important}
+     paper it prints. The running footer is gone entirely now, but the rule
+     stays as a belt-and-braces guard for the Settings block, in case anyone
+     ever prints that page. */
+  .foot,.legal{display:none!important}
   .view{display:none!important}.view#vDecks{display:block!important}
   .pull{padding:0;border-radius:0}
   .page{max-width:none;padding:0}
@@ -1152,9 +1190,14 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .sfield{display:flex;flex-wrap:wrap;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);
   border-radius:2px;padding:7px 8px}
 .sfield:focus-within{border-color:var(--link)}
-#q::placeholder{color:var(--deep);opacity:.55}
+/* Placeholder text is an invitation, not content — it should sit back far
+   enough that an empty box doesn't read as a full one. This is deliberately
+   below the contrast floor the rest of the site holds to, which is allowed:
+   WCAG exempts placeholder text, and nothing here is information you need. The
+   two rules are merged because the later, weaker one used to win and quietly
+   undo the opacity set above it. */
 .sfield input{flex:1;min-width:160px;background:none;border:none;outline:none;padding:5px 6px;font-size:14.72px}
-.sfield input::placeholder{color:var(--deep)}
+#q::placeholder,.sfield input::placeholder{color:var(--deep);opacity:.38}
 .pill{display:inline-flex;align-items:center;gap:5px;background:var(--panel2);border:1px solid var(--line2);
   border-radius:2px;padding:3px 5px 3px 9px;font-size:12px;max-width:250px}
 .pill .pt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -1300,11 +1343,42 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 
 /* layout */
 .wrap{display:grid;grid-template-columns:230px minmax(0,1fr) 330px;gap:14px;margin-top:14px;align-items:start}
-@media(max-width:1240px){.wrap{grid-template-columns:220px minmax(0,1fr)}}
-@media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}}
+/* Collapsed, the filter column gives its width back to the card grid rather
+   than leaving a 230px gutter of nothing. :has() does this with no JS; where
+   it isn't supported the column simply stays put, which is untidy but works. */
+.wrap:has(> #side:not([open])){grid-template-columns:auto minmax(0,1fr) 330px}
+@media(max-width:1240px){.wrap{grid-template-columns:220px minmax(0,1fr)}
+  .wrap:has(> #side:not([open])){grid-template-columns:auto minmax(0,1fr)}}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}
+  .wrap:has(> #side:not([open])){grid-template-columns:1fr}}
 .side,.deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
 .side,.deck{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto;padding:11px}
 @media(max-width:900px){.side,.deck{position:static;max-height:none}}
+
+/* ---- the Filters spine ---- */
+.side{padding:0}
+.side>#sidebody{padding:11px}
+.sidesum{list-style:none;cursor:pointer;display:flex;align-items:center;gap:7px;
+  padding:10px 11px;background:var(--carbon);color:var(--on-dark);
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:4px 4px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;
+  border-radius:6px 6px 0 0;position:sticky;top:0;z-index:2}
+.sidesum::-webkit-details-marker{display:none}
+.sidesum::before{content:"▸";font-size:11px;transition:transform .15s}
+.side[open] .sidesum::before{transform:rotate(90deg)}
+.side:not([open]) .sidesum{border-radius:6px}
+.sidesum .fcnt{background:var(--amberc);color:var(--carbon);border-radius:2px;
+  padding:1px 6px;font-size:10.5px;letter-spacing:.04em}
+.sidesum .fcnt:empty{display:none}
+/* Closed on a wide screen the whole panel becomes a vertical spine, so the
+   word "Filters" is still readable while costing ~40px instead of 230px. */
+@media(min-width:901px){
+  .side:not([open]) .sidesum{writing-mode:vertical-rl;padding:12px 10px;gap:9px}
+  .side:not([open]) .sidesum::before{transform:rotate(90deg)}
+  .side:not([open]) .sidesum .fcnt{writing-mode:horizontal-tb}
+}
+@media print{.side{display:none!important}}
 
 details.sec{border-bottom:1px solid var(--line)}
 details.sec:last-child{border-bottom:none}
@@ -1351,8 +1425,18 @@ details.sec>summary .c{margin-left:auto;font-size:12px;color:var(--deep);text-tr
    on a blue-grey canvas barely registered — the card just looked like it had a
    slightly different edge. Yellow is the only hue on the page that means
    "here", so a ring of it reads instantly against the periwinkle. */
+/* Three layers, in order: the crisp 3px ring that says exactly where the card
+   ends, then two soft amber halos at 14px and 30px that bleed outward, then the
+   drop shadow that lifts it off the page. The ring is what keeps it legible —
+   glow on its own reads as blur rather than selection — and the halos are what
+   make it glow. Both halos are pure alpha, so they layer over card art and
+   canvas alike without tinting either. */
 .c:hover{border-color:var(--amber-press);z-index:60;transform:scale(1.55);
-  box-shadow:0 0 0 3px var(--amberc),0 18px 44px -10px rgba(0,0,0,.85);
+  box-shadow:
+    0 0 0 3px var(--amberc),
+    0 0 14px 2px rgba(255,212,0,.72),
+    0 0 30px 10px rgba(255,212,0,.34),
+    0 18px 44px -10px rgba(0,0,0,.85);
   transition-delay:1s,0s,1s}
 .c:hover .nm{font-size:12px}
 @media(hover:none){.c:hover{transform:none;box-shadow:none}}
@@ -1523,6 +1607,25 @@ body.noremind .c.illegal img{filter:none}
 .vtog button{border:1px solid var(--line);border-radius:2px;padding:2px 8px;font-size:12px;color:var(--deep)}
 .vtog button.on{background:var(--acc);border-color:var(--link);color:var(--surface);font-weight:700}
 .deck h3.hd{display:flex;align-items:center;gap:6px}
+/* ---- format picker, inside the deck panel ----
+   Segmented buttons rather than a dropdown: three options that change the
+   rules of the deck should all be visible at once, and the one in force should
+   be obvious without opening anything. */
+.fmtpick{margin:10px 0 12px;padding:9px 10px;background:var(--canvas-soft);
+  border:1px solid var(--hairline);border-radius:4px;box-shadow:var(--bevel-in)}
+.fmtlbl{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--deep);margin-bottom:6px}
+.fmtbtns{display:flex;gap:0}
+.fmtb{flex:1;padding:7px 4px;font-size:12.5px;font-weight:700;
+  background:var(--surface);color:var(--tx);
+  border:1px solid var(--chrome);border-right-width:0;cursor:pointer}
+.fmtb:first-child{border-radius:2px 0 0 2px}
+.fmtb:last-child{border-right-width:1px;border-radius:0 2px 2px 0}
+.fmtb:hover{background:var(--platinum)}
+.fmtb.on{background:var(--amberc);color:var(--carbon);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -2px 0 var(--amber-press);
+  position:relative;z-index:1;border-color:var(--carbon)}
+.fmtwhy{margin-top:7px;font-size:11.5px;line-height:1.5;color:var(--tx)}
 .curveT{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
 .curveT div{border:1px solid var(--line);border-radius:2px;padding:6px 4px;text-align:center;font-size:12px;color:var(--deep)}
 .curveT div.hit{border-color:var(--good);box-shadow:0 0 0 1px var(--good) inset;color:var(--good)}
@@ -1723,13 +1826,10 @@ body.noremind .c.illegal img{filter:none}
     <span class="dbl">Deck</span>
     <b id="dbName">New deck</b>
     <span id="dbDirty" class="dbdirty" hidden>unsaved</span>
-    <select id="fmt" title="Format — sets legality and ink limit">
-      <option value="infinity">Infinity</option><option value="core">Core</option><option value="coconut">Coconut</option>
-    </select>
     <span class="sp"></span>
     <button class="btn go" id="dbSave">Save deck</button>
   </div>
-  <div class="sfield" id="sf"><input id="q" type="text" placeholder="Search — describe the art like &quot;blue dog&quot; or &quot;sea witch&quot;, or type a keyword and press Enter"></div>
+  <div class="sfield" id="sf"><input id="q" type="text" placeholder="Try one of our special searches"></div>
   <div class="srow toggles">
     <button class="swx" id="tgTag" aria-pressed="false">
       <span class="kn"><i>🎨</i></span><span class="lb">Search art</span></button>
@@ -1760,7 +1860,15 @@ body.noremind .c.illegal img{filter:none}
     </div>
   </details>
   <div class="wrap">
-    <aside class="side" id="side"></aside>
+    <!-- Filters collapse to a narrow spine. Closed by default: the sidebar is
+         twelve stacked sections and it was the first thing a newcomer saw, on
+         a site whose actual promise is "type what you half-remember". The open
+         state is remembered per browser, so anyone who lives in the filters
+         opens it once and never thinks about it again. -->
+    <details class="side" id="side">
+      <summary class="sidesum"><span class="sst">Filters</span><span class="fcnt" id="fcnt"></span></summary>
+      <div id="sidebody"></div>
+    </details>
     <section class="cards">
       <div class="rbar"><div class="ct" id="ct">—</div>
         <select id="sort">
@@ -1841,20 +1949,17 @@ body.noremind .c.illegal img{filter:none}
   </div>
 </section>
 </main>
-<!-- The Sources tile is hidden from the Other menu, so attribution and the
-     disclaimer live here instead, on every page. Both are obligations, not
-     decoration — they don't get switched off with the tile. -->
-<!-- Source credits (LorcanaJSON, Lorcast, Ravensburger rulings) live on the
-     Sources page only, at Ben's request. The Disney/Ravensburger disclaimer
-     stays here because that one is a condition of the Community Code Policy
-     rather than a courtesy credit, and it has to be visible. -->
-<footer class="foot">
-  <span class="fdis">Not published, endorsed or approved by Disney or Ravensburger.
-    Free to use, always — we're expressly prohibited from charging for it.</span>
-</footer>
+<!-- The running footer is gone at Ben's request. The Disney/Ravensburger
+     disclaimer is a condition of the Community Code Policy, so it has not been
+     deleted — it moved to a permanent, always-reachable block at the top of
+     Settings, and the full version stays on the Sources page. What it no
+     longer does is repeat itself under every screen. -->
 
 <div class="mtabs"><button id="mC" class="on">🔍 Cards</button><button id="mD">🗂️ Deck <span id="mN">0</span></button></div>
-${""}<div class="mbg" id="mbg"><div class="modal" id="modal"></div></div>
+<!-- There used to be a literal ${""} here. It was a template-literal fragment
+     stranded in plain HTML — nothing evaluates this file as a template, so the
+     browser printed the four characters on the page, just under the footer. -->
+<div class="mbg" id="mbg"><div class="modal" id="modal"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>var DATA=/*__DATA__*/;var KINDS=/*__KINDS__*/;</script>
@@ -1932,6 +2037,13 @@ const COCO=[
 const INKS=["Amber","Amethyst","Emerald","Ruby","Sapphire","Steel"];
 const HEX={Amber:"#f0a832",Amethyst:"#a86fd8",Emerald:"#35c97a",Ruby:"#f0625f",Sapphire:"#4a9fe0",Steel:"#9fb0c4"};
 const FMT={infinity:{l:"Infinity",cap:2,max:4,min:60},core:{l:"Core",cap:2,max:4,min:60},coconut:{l:"Coconut",cap:3,max:1,min:60}};
+/* One line each, shown under the picker. Format is the single setting that
+   changes what counts as a legal deck, and "Core" means nothing to someone who
+   has just arrived — the rules belong on screen, not in a title attribute. */
+const FMT_BLURB={
+  infinity:"Every card ever printed. 2 inks, up to 4 copies of a card, 60 minimum.",
+  core:"Only cards from the current Core sets. 2 inks, up to 4 copies, 60 minimum.",
+  coconut:"Singleton — one copy of each card, 3 inks, led by a Coconut. 60 minimum."};
 const FL={n:"Flounder",v:"Voice of Reason"};
 const K_DECKS="fs3_decks",K_STAR="fs3_stars",K_DVIEW="fs3_dview";
 const K_COLL="fs3_coll",K_COLLON="fs3_collon";
@@ -2581,7 +2693,7 @@ function renderSide(){
     : `<div class="hint" style="margin:0">No art tags yet. Tag cards in <b>flounder-tagger.html</b>,
         export, paste into art-tags.json and rerun the build.</div>`;
 
-  $("side").innerHTML=
+  $("sidebody").innerHTML=
     sec("ink","Ink",inkB,S.ink.size?S.ink.size+" on":"",S.ink.size<cap)+
     sec("tag","Art tags",tagB,S.tag.size?S.tag.size+" on":"",false)+
     sec("type","Type",tyB,S.type.size?S.type.size+" on":"",true)+
@@ -2594,6 +2706,15 @@ function renderSide(){
     sec("stat","Strength / Willpower / Lore",statB,"",false)+
     sec("misc","Inkable & Set",miscB,"",false)+
     sec("pref","Card images",prefB,PREF==="base"?"":PREF,false);
+
+  /* Collapsed, the panel has to say whether anything is hidden inside it —
+     otherwise a filter left on becomes an invisible reason the grid is empty.
+     Counting every facet, not just the tick-boxes, so a cost range or a set
+     picked and forgotten is announced too. */
+  const nRange=[S.cost,S.st,S.wi,S.lo].filter(r=>r[0]!=null||r[1]!=null).length;
+  const nOn=S.ink.size+S.type.size+S.rar.size+S.kw.size+S.cls.size+S.sto.size+S.tag.size+S.art.size
+    +nRange+(S.dual?1:0)+(S.set?1:0)+(S.inkwell!=="any"?1:0);
+  const fc=$("fcnt");if(fc)fc.textContent=nOn?nOn+" on":"";
 
   const sd=$("side");
   sd.querySelectorAll("[data-ink]").forEach(b=>b.onclick=()=>{const v=b.dataset.ink;
@@ -3017,11 +3138,11 @@ function openM(f,showPr){
     <div class="tx">${esc(c.tx)||"(no rules text)"}</div>
     ${isLoc(c)?LOC_NOTE:""}
     ${hasSym(c)?`<div class="symbox">
-      <span class="symt">🐭 There's a mouse-shaped symbol hiding in this art.</span>
+      <span class="symt">🐭 There's a Hidden Mousey in this art.</span>
       ${(c.mk&&c.mk.length)
         ?`<button class="btn" id="symBtn">Show me where</button>`
         :`<span class="hint">Nobody has marked exactly where yet —
-            <b>${esc(MICKDESC(c.f)||"see the mouse-shaped symbols page")}</b></span>`}
+            <b>${esc(MICKDESC(c.f)||"see the Hidden Mouseys page")}</b></span>`}
     </div>`:""}
     ${c.f==="Bucky - Squirrel Squeak Tutor"?`<div class="respect">
       <label for="fbox">🪦 Press F to pay respects</label>
@@ -3161,7 +3282,20 @@ function renderDeck(){
       <button id="vImg" class="${DVIEW==="img"?"on":""}">Images</button></span></h3>
     <div class="row"><select id="dsel">${
     names.map(n=>`<option${n===DECKS.cur?" selected":""}>${esc(n)}</option>`).join("")}</select>
-    <button class="btn" id="dnew">+</button><button class="btn bad" id="ddel">🗑</button></div>
+    <button class="btn" id="dnew" title="New deck">+</button>
+    <button class="btn" id="dren" title="Rename this deck">✏️</button>
+    <button class="btn bad" id="ddel" title="Delete this deck">🗑</button></div>
+    <!-- Format lives here, not in the bar above. It decides how many inks you
+         may use, how many copies of a card, and which cards are legal at all —
+         every warning below is downstream of it. As a bare dropdown in the
+         masthead it read as a page setting; here it reads as part of the deck,
+         which is what it is. -->
+    <div class="fmtpick" id="fmtpick">
+      <div class="fmtlbl">Format</div>
+      <div class="fmtbtns">${Object.entries(FMT).map(([k,f])=>
+        `<button class="fmtb${k===d.fmt?" on":""}" data-fmt="${k}">${esc(f.l)}</button>`).join("")}</div>
+      <div class="fmtwhy">${esc(FMT_BLURB[d.fmt]||"")}</div>
+    </div>
     <div class="prog"><i style="width:${Math.min(100,tot/F.min*100)}%"></i></div>
     <div class="st">${tot} / ${F.min} cards · ${F.l}</div>`;
 
@@ -3235,8 +3369,10 @@ function renderDeck(){
   $("dnew").onclick=()=>{const n=prompt("Deck name:","Deck "+(names.length+1));
     if(n&&!DECKS.list[n]){DECKS.list[n]={fmt:d.fmt,coco:null,cards:{}};DECKS.cur=n;saveDecks();
       award("named");if(Object.keys(DECKS.list).length>=3)award("deck2");render()}};
+  $("dren").onclick=()=>renameDeck(DECKS.cur);
   $("ddel").onclick=()=>{if(names.length<2){toast("Keep at least one deck");return}
     if(confirm('Delete deck "'+DECKS.cur+'"?')){delete DECKS.list[DECKS.cur];DECKS.cur=Object.keys(DECKS.list)[0];saveDecks();render()}};
+  $("fmtpick").querySelectorAll("[data-fmt]").forEach(b=>b.onclick=()=>setFmt(b.dataset.fmt));
   const cs=$("csel");if(cs)cs.onchange=e=>{d.coco=e.target.value===""?null:+e.target.value;saveDecks();renderDeck()};
   $("dx").onclick=()=>{if(confirm("Clear all cards?")){d.cards={};saveDecks();render()}};
   const rm=$("drm");
@@ -3473,7 +3609,7 @@ function renderGuide(){
         <span>${esc(c.t)}</span></button>`).join("");
     $("cg").querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{
       const i=+b.dataset.c;G.coco=i;G.pair=null;G.copies=null;G.staples=null;G.mode=null;
-      const d=deck();d.fmt="coconut";d.coco=i;saveDecks();$("fmt").value="coconut";
+      const d=deck();d.fmt="coconut";d.coco=i;saveDecks();
       S.ink=new Set([COCO[i].i]);renderGuide();render()})};
   draw();
   if($("gq"))$("gq").oninput=draw;
@@ -4377,10 +4513,12 @@ function renderMickeys(){
   const total=MICKEYS.flatMap(g=>g.cards).filter(x=>x.c).length;
   $("mickpage").innerHTML=`<div class="page">
     <button class="btn" id="mkExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">🐭</span>Hidden mouse-shaped symbols</h1>
-    <p class="lede">The tradition started at EPCOT in 1982, when Imagineers were forbidden from putting
-      Disney characters in the park and hid a certain silhouette everywhere instead. Lorcana's artists
-      kept it up. ${total} cards so far, with where to look on each — click any card to open it.</p>
+    <h1><span class="gi">🐭</span>Hidden Mouseys</h1>
+    <p class="lede">It started at EPCOT in 1982. Imagineers were banned from putting Disney characters
+      in the park, so they hid a certain silhouette everywhere instead — in railings, in carpet, in
+      the cracks of a rock wall — and dared you to find it. Lorcana's artists never stopped.
+      <b>${total} confirmed so far</b>, and once you've seen a few you will not be able to stop
+      looking. Click any card to open it, then hit <b>Show me where</b>.</p>
     ${bad.length?`<div class="up bad"><div class="uw">⚠ ${bad.length} entr${bad.length===1?"y":"ies"}
       name a card that isn't in the database: ${esc(bad.map(x=>x.c).join(", "))}</div></div>`:""}
     ${MICKEYS.map(g=>`
@@ -5725,6 +5863,33 @@ function namePrompt(title,body,initial){
     document.addEventListener("keydown",key);
     inp.focus();inp.select()})}
 
+/* Rename a deck.
+
+   DECKS.list is keyed BY NAME, so a rename is a re-key, not a field edit: the
+   entry has to be rebuilt under the new key and the old one deleted. Rebuilt
+   in the original insertion order rather than moved to the end, because the
+   decks list is rendered straight from Object.keys — renaming a deck should
+   not silently reorder the shelf.
+
+   Also updates DECKS.cur when it pointed at the old name, or the builder would
+   be left editing a deck that no longer exists. */
+async function renameDeck(old){
+  if(!DECKS.list[old])return;
+  const raw=await namePrompt("Rename deck",
+    `“${old}” becomes whatever you type. The cards, format and Coconut all come with it.`,old);
+  if(raw==null)return;
+  const n=raw.trim();
+  if(!n||n===old)return;
+  if(DECKS.list[n]){toast(`You already have a deck called “${n}”`);return}
+  const rebuilt={};
+  for(const k of Object.keys(DECKS.list))rebuilt[k===old?n:k]=DECKS.list[k];
+  DECKS.list=rebuilt;
+  if(DECKS.cur===old)DECKS.cur=n;
+  saveDecks();award("named");
+  render();paintDeckBar();
+  if($("vDecks").classList.contains("on"))renderDecksPage();
+  toast(`Renamed to “${n}”`)}
+
 /* ===================== the borrow list =====================
    What the pull list can't tell you: which cards you'd have to get hold of
    before you could actually sleeve this deck up.
@@ -5979,6 +6144,8 @@ function renderDecksPage(){
       <h3>${esc(n)}${titleChip()}${cur?`<span class="dkcur">Editing</span>`:""}</h3>
       <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
       <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
+      <span class="dkren" data-ren="${esc(n)}" role="button" tabindex="0"
+        title="Rename this deck">✏️ Rename</span>
     </button>`}).join("");
   $("deckspage").innerHTML=`<div class="page">
     <h1><span class="gi">🗂️</span>Decks</h1>
@@ -5994,12 +6161,21 @@ function renderDecksPage(){
       <button class="btn" id="pullCopy">📋 Copy</button>
       <button class="btn go" id="pullPrint">🖨️ Print</button>
     </div>
-    <div id="borrowBox" class="collonly"></div>
     ${renderPull()}
+    <!-- The borrow list sits BELOW the pull sheet. It used to sit above it,
+         which put "cards you haven't got" between you and the list you came
+         to this page for. It reads better as a footnote to the pull sheet
+         anyway: here is everything, and here is the part you'll need help
+         with. -->
+    <div id="borrowBox" class="collonly"></div>
   </div>`;
   wireGallery();
+  $("deckspage").querySelectorAll("[data-ren]").forEach(el=>{
+    const go=e=>{e.stopPropagation();e.preventDefault();renameDeck(el.dataset.ren)};
+    el.onclick=go;
+    el.onkeydown=e=>{if(e.key==="Enter"||e.key===" ")go(e)}});
   $("deckspage").querySelectorAll("[data-dk]").forEach(b=>b.onclick=()=>{
-    DECKS.cur=b.dataset.dk;saveDecks();markDirty(false);$("fmt").value=deck().fmt;render();paintDeckBar()});
+    DECKS.cur=b.dataset.dk;saveDecks();markDirty(false);render();paintDeckBar()});
   const ptc=$("pullToColl");
   if(ptc)ptc.onclick=async()=>{
     const d=dlist();
@@ -6046,7 +6222,10 @@ const OTHER_GROUPS=[
    ["Getting started","New here? Start with this.","start"],
    ["Error cards","What counts as an error, what gets replaced, and every known errata.","err"],
    ["Deck upgrades","Point it at a deck and it tells you what's wrong and what to add.","upg"],
-   ["Mouse-shaped symbols","Nineteen cards with a familiar silhouette hiding in the art, and exactly where to look.","mick"],
+   /* No emoji in the tile heading — _test_v30 holds that line for the whole
+      menu, so the site survives a reskin. The 🐭 lives on the page's own h1,
+      where the .gi icon slot already exists for exactly this. */
+   ["Hidden Mouseys","Artists have been smuggling a certain silhouette onto these cards since day one. Here's every one we've found — and exactly where to look.","mick"],
    ["Historic leaks","A record of leaks past, published deliberately late. Never live, never spoilers.","leak"],
    ["Worldbuilding","What Lorcana actually is — the Illuminary, glimmers, the inks, and where the story has gone.","world"],
    ["Sources & credits","Where to play online, where to read the news, and everyone whose work this is built on.","cred"],
@@ -6270,17 +6449,45 @@ function renderColl(){
   const rows=allPrintings().filter(x=>x.pr.s===COLLSET)
     .sort((a,b)=>numSort(a.pr.num,b.pr.num));
   const have=rows.filter(x=>ownTotal(x.k)).length;
+  /* The set chips, with the three Illumineer's Quest boxes folded away.
+     They're campaign products, not main sets: 66 cards nobody plays in a
+     constructed deck, sitting in the same row as The First Chapter and taking
+     up a third of it. Closed by default, and the block says how many you have
+     so nothing is hidden — just tidied. */
+  const isMain=x=>/^\d+$/.test(String(x.s));
+  const chip=x=>{
+    const mine=allPrintings().filter(y=>y.pr.s===x.s&&ownTotal(y.k)).length;
+    /* The set's own name already begins "Illumineer's Quest:", which is pure
+       repetition once they're inside a block that says so. */
+    const label=String(x.name).replace(/^Illumineer's Quest:\s*/,"");
+    return `<button class="chip${x.s===COLLSET?" on":""}" data-cset="${esc(String(x.s))}">
+      <span>${esc(label)}</span><span class="n">${mine}/${x.n}</span></button>`};
+  const main=sets.filter(isMain),other=sets.filter(x=>!isMain(x));
+  const otherMine=other.reduce((a,x)=>
+    a+allPrintings().filter(y=>y.pr.s===x.s&&ownTotal(y.k)).length,0);
+  const otherTot=other.reduce((a,x)=>a+x.n,0);
+  const setPicker=`
+    <div class="chips">${main.map(chip).join("")}</div>
+    ${other.length?`<details class="otherset"${other.some(x=>x.s===COLLSET)?" open":""}>
+      <summary>Other sets<span class="n">${otherMine}/${otherTot}</span></summary>
+      <div class="chips">${other.map(chip).join("")}</div>
+    </details>`:""}`;
+
   $("collBody").innerHTML=`
-    <h3 class="sec2">Choose a set</h3>
-    <div class="chips">${sets.map(x=>{
-      const mine=allPrintings().filter(y=>y.pr.s===x.s&&ownTotal(y.k)).length;
-      return `<button class="chip${x.s===COLLSET?" on":""}" data-cset="${esc(String(x.s))}">
-        <span>${esc(String(x.name))}</span><span class="n">${mine}/${x.n}</span></button>`}).join("")}</div>
+    <!-- Top-level tabs, above the set picker: browsing a set and bulk-loading
+         a collection are two different jobs. Bulk entry and CSV import used to
+         be a sub-tab underneath the set chips, which put the "I already own
+         thousands of these" path behind a "pick one set" step. -->
     <div class="ctabs">
-      <button data-ctab="list" class="${COLLTAB==="list"?"on":""}">Checklist</button>
-      <button data-ctab="fast" class="${COLLTAB==="fast"?"on":""}">Fast entry</button>
+      <button data-ctab="list" class="${COLLTAB==="list"?"on":""}">📋 My checklist</button>
+      <button data-ctab="fast" class="${COLLTAB==="fast"?"on":""}">📥 Transfer Your Collection</button>
     </div>
     ${COLLTAB==="fast"?`<div class="fastpanel">
+      <p class="fastlede">Already have a collection? Bring it over in one go rather than
+        ticking three thousand boxes.</p>
+      <div id="collImport"></div>
+      <h3 class="sec2">Or fill a whole set at once</h3>
+      ${setPicker}
       <div class="collbar"><b>${have} of ${rows.length} in this set</b></div>
       <div class="fastgrid">
         ${FASTBULK.map(([id,label,qty,rar])=>
@@ -6288,8 +6495,9 @@ function renderColl(){
       </div>
       <p class="fastnote">These change a lot of rows at once, so each one asks first.
         Foil counts are left alone — marking a playset doesn't claim you own four foils.</p>
-      <div id="collImport"></div>
-    </div>`:""}
+    </div>`:`
+    <h3 class="sec2">Choose a set</h3>
+    ${setPicker}`}
     <div class="clist"${COLLTAB==="fast"?' hidden':''}>${rows.map(x=>{
       const o=owned(x.k);
       return `<div class="crow${o[0]+o[1]?" has":""}" data-k="${esc(String(x.k))}">
@@ -6351,8 +6559,36 @@ function renderPrefs(){
         ${off?`<span class="soonlbl">Coming soon</span>`:""}</div>
       <button class="btn" id="${btnId}"${off?" disabled":""}>${off?"—":(state?"On":"Off")}</button>
     </div>`;
+  /* Sign-in status, in the one place someone goes looking when a thing didn't
+     save. Signed out this says nothing at all — the site is a local tool and
+     an account is optional, so nagging about it would be wrong. */
+  const SYNCLBL={fs3_decks:"decks",fs3_dust:"dust and titles",fs3_stars:"starred staples",
+    fs3_coll:"collection",fs3_borrowdef:"borrow message"};
+  const sr=(window.ACCT&&ACCT.syncReport&&ACCT.syncReport())||null;
+  const syncRow=!sr?"":`
+    <div class="prow${sr.refused.length?" locked":""}">
+      <div><b>Sync</b><p>${sr.refused.length
+        ? "The database is refusing to store your "
+          +sr.refused.map(k=>SYNCLBL[k]||k).join(" and ")
+          +". Everything still saves in this browser — it just isn't following you"
+          +" between devices. Running supabase-add-collection.sql fixes it."
+        : sr.saved.length
+          ? "Saving to your account: "+sr.saved.map(k=>SYNCLBL[k]||k).join(", ")+"."
+          : "Signed in. Nothing has needed saving yet this visit — change something"
+            +" and this line will tell you whether it reached your account."}</p></div>
+      <button class="btn" disabled>${sr.refused.length?"Partial":"OK"}</button>
+    </div>`;
   $("prefBody").innerHTML=`
     <button class="btn" id="prefBack">← Back to Other</button>
+    <div class="legal">
+      <b>Disney Lorcana TCG</b>
+      <p>Ready Set Ink is unofficial fan content. Not published, endorsed or
+        approved by Disney or Ravensburger. Free to use, always — we're
+        expressly prohibited from charging for it.</p>
+      <p>© Disney. Disney Lorcana is operated by Ravensburger, an official
+        licensee of Disney.</p>
+    </div>
+    ${syncRow?`<h3 class="sec2">Your account</h3>${syncRow}`:""}
     <h3 class="sec2">What's switched on</h3>
     ${row("Collection tracking",
       "Adds the owned and foil steppers to card pages and turns on the My collection tab. Switch it off if you only came here to search and build decks.",
@@ -6665,9 +6901,18 @@ document.addEventListener("click",e=>{
   if(!e.target.closest||(!e.target.closest("#acbox")&&e.target.id!=="q"))acClose()});
 $("sf").onclick=e=>{if(e.target.id!=="q"&&!e.target.classList.contains("x"))$("q").focus()};
 $("sort").onchange=e=>{S.sort=e.target.value;renderGrid()};
-$("fmt").onchange=e=>{const d=deck();d.fmt=e.target.value;saveDecks();
-  const cap=FMT[d.fmt].cap;while(S.ink.size>cap)S.ink.delete([...S.ink].pop());
-  S.limit=150;render()};
+/* The format used to be a <select> in the masthead, so four places did
+   `$("fmt").value=...` to keep it in step. The picker is now rebuilt by
+   renderDeck() from the deck itself, which means there is nothing to keep in
+   step — but the ink-cap trim still has to happen exactly once, wherever the
+   change comes from. That is what this function is for. */
+function setFmt(v){
+  if(!FMT[v])return;
+  const d=deck();if(d.fmt===v)return;
+  d.fmt=v;saveDecks();markDirty(true);
+  const cap=FMT[v].cap;
+  while(S.ink.size>cap)S.ink.delete([...S.ink].pop());
+  S.limit=150;render();paintDeckBar()}
 TABS.forEach(t=>$(t).onclick=()=>showTab(t));
 $("mManual").onclick=()=>{SUB="manual";save("fs3_sub",SUB);showTab("tDeck")};
 $("mGuided").onclick=()=>{SUB="guided";save("fs3_sub",SUB);showTab("tDeck")};
@@ -6690,9 +6935,13 @@ function render(){renderPills();renderChips();renderSide();renderGrid();renderDe
 
 init();
 rollLbl();
-$("fmt").value=deck().fmt;
 if(location.hash.startsWith("#d="))fromHash();
-$("fmt").value=deck().fmt;
+/* Filters start closed and remember whichever way you leave them. Wired here
+   rather than in renderSide() because renderSide re-runs on every keystroke —
+   binding a toggle handler there would stack hundreds of them. */
+(()=>{const sd=$("side");if(!sd)return;
+  sd.open=load("fs3_sideopen",false);
+  sd.addEventListener("toggle",()=>save("fs3_sideopen",sd.open));})();
 render();
 const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
@@ -6880,15 +7129,29 @@ const ACCT={
     try{sb=await this.client()}catch(e){return}
     try{
       const r=await sb.from("user_state").upsert(rows,{onConflict:"user_id,key"});
-      if(!r.error)return;
+      if(!r.error){rows.forEach(row=>{this.sync[row.key]="ok"});return}
       /* One rejected key sinks the whole batch — the database allowlists which
          keys may be written, so a key added to the app before the matching SQL
          has been run takes every other key down with it. Falling back to one
          row at a time means a new feature can never stop decks from saving. */
       for(const row of rows){
-        try{await sb.from("user_state").upsert([row],{onConflict:"user_id,key"})}
-        catch(e){}}
+        try{const one=await sb.from("user_state").upsert([row],{onConflict:"user_id,key"});
+          this.sync[row.key]=one.error?"refused":"ok"}
+        catch(e){this.sync[row.key]="refused"}}
     }catch(e){/* a failed sync must never interrupt deck building */}},
+
+  /* Which keys the database is actually accepting. The per-key fallback above
+     is the right behaviour — one refused key must never stop decks saving —
+     but it used to swallow the refusal completely, so the only symptom of a
+     missing migration was a collection that quietly never left the browser.
+     Recording the outcome costs nothing and lets the Settings page say so. */
+  sync:{},
+  syncReport(){
+    if(!this.user)return null;
+    const refused=SYNCED.filter(k=>this.sync[k]==="refused");
+    const saved=SYNCED.filter(k=>this.sync[k]==="ok");
+    return {refused,saved,
+      untested:SYNCED.filter(k=>!this.sync[k])}},
 
   paint(){
     const b=$("acct");if(!b)return;
