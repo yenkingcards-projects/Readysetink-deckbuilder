@@ -446,7 +446,10 @@ main{padding:12px 12px 32px;max-width:1800px;margin:0 auto}
 /* Search-for-cards is the same grid without the deck rail, so browsing gets
    the full width. One class rather than a second copy of the whole view. */
 body.browse .deck,body.browse .subsw,body.browse .mtabs{display:none!important}
-body.browse .wrap{grid-template-columns:250px 1fr}
+/* Filters left the grid; the deck panel is hidden here. So Search is one
+   full-width column of cards — this still reserved 250px for a sidebar that
+   is no longer in .wrap, squeezing the grid into a single column. */
+body.browse .wrap{grid-template-columns:minmax(0,1fr)}
 .page{max-width:1000px;margin:0 auto;padding:0 0 32px}
 /* size only — the rule, spacing and drop cap are set once at the top */
 .page h1{font-size:30px}
@@ -763,7 +766,22 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
   box-shadow:0 0 14px 2px rgba(255,212,0,.66),0 0 30px 10px rgba(255,212,0,.3)}
 .kbhint{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;
   color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
-  box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px;margin-left:auto}
+  box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px}
+/* ---- card view settings ---- */
+.cvset{position:relative}
+.cvset>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:700;padding:6px 12px;border:1px solid var(--chrome);
+  border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
+.cvset>summary::marker{content:"";font-size:0}
+.cvset>summary::-webkit-details-marker{display:none}
+.cvset>summary::before{content:"\2699";font-size:13px}
+.cvset>summary:hover{background:var(--platinum)}
+.cvset[open]>summary{background:var(--carbon);color:var(--on-dark);border-color:var(--carbon)}
+.cvbody{position:absolute;top:calc(100% + 5px);left:0;z-index:80;min-width:330px;
+  display:flex;flex-direction:column;gap:9px;padding:11px;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:4px;
+  box-shadow:0 14px 34px -12px rgba(0,0,0,.5)}
+@media(max-width:900px){.cvbody{position:static;min-width:0;box-shadow:none;border:none;padding:9px 0}}
 .kbhint kbd{font-family:var(--sans);font-size:12px;font-weight:700;background:var(--surface);
   border:1px solid var(--chrome);border-bottom-width:2px;border-radius:2px;padding:1px 5px;
   color:var(--tx)}
@@ -1146,6 +1164,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
    nesting one inside another — the browser silently unnests them, which breaks
    the card's own click handler. Keyboard support is wired by hand to make up
    for it. */
+.dkname{cursor:text;border-bottom:1px dashed transparent;padding-bottom:1px}
+.dkcard:hover .dkname{border-bottom-color:var(--link)}
+.dkname:hover{color:var(--link)}
+.dkname:focus{outline:2px solid var(--link);outline-offset:2px}
 .dkren{position:absolute;right:9px;bottom:9px;font-size:11px;font-weight:700;
   color:var(--link);background:var(--surface);border:1px solid var(--line);
   border-radius:2px;padding:2px 7px;opacity:0;transition:opacity .12s;cursor:pointer}
@@ -1331,11 +1353,80 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 @media(max-width:600px){.cocon{flex-basis:100%}}
 /* small card grid used inside guided steps */
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;max-height:400px;overflow-y:auto;margin-top:9px}
-.mcard{position:relative;border-radius:2px;overflow:hidden;background:var(--panel2);border:1px solid var(--line)}
+.mcard{position:relative;border-radius:2px;overflow:hidden;background:var(--surface);border:1px solid var(--chrome)}
 .mcard:hover{border-color:var(--link)}
 .mcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;cursor:pointer}
-.mcard .t{padding:3px 5px;font-size:12px;line-height:1.2}
+/* Was dark blue on a blue plate — unreadable. White plate, carbon text. */
+.mcard .t{padding:5px 6px;font-size:12px;line-height:1.3;background:var(--surface);
+  color:var(--tx);border-top:1px solid var(--line)}
 .mcard .badge{position:absolute;top:3px;right:3px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:0 4px;border-radius:2px}
+/* ---- guided: pick vs prebuilt ---- */
+.gtabs{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:11px}
+.gtabs button{font-size:12.5px;font-weight:700;padding:8px 15px;border:1px solid var(--chrome);
+  border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
+.gtabs button:hover{background:var(--platinum)}
+.gtabs button.on{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.gtabs .or{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--deep)}
+.blist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.brow{border:1px solid var(--hairline);border-radius:4px;background:var(--surface);overflow:hidden}
+.brow.on{border-color:var(--chrome);box-shadow:var(--bevel)}
+.bhead{display:grid;grid-template-columns:14px minmax(150px,1.1fr) 2.4fr 18px;gap:11px;
+  align-items:center;width:100%;text-align:left;padding:10px 12px;background:var(--canvas-soft)}
+.bhead:hover{background:var(--ice)}
+.brow.on .bhead{background:var(--carbon);color:var(--on-dark)}
+.brow.on .bhead .bt{color:var(--on-dark-soft)}
+.bhead .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.bhead .bn{font-size:13.5px;font-weight:700}
+.bhead .bn em{font-style:normal;font-weight:400;color:var(--deep);display:block;font-size:12px}
+.brow.on .bhead .bn em{color:var(--on-dark-soft)}
+.bhead .bt{font-size:12px;line-height:1.45;color:var(--tx)}
+.bhead .bx{text-align:right;font-size:12px}
+@media(max-width:820px){.bhead{grid-template-columns:14px 1fr 18px}.bhead .bt{display:none}}
+.bbody{padding:12px;border-top:1px solid var(--line)}
+.binks{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12.5px;margin-bottom:11px}
+.binks i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.binks .bsing{color:var(--deep)}
+.bcols{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px}
+.bcol h4{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--deep);
+  margin-bottom:5px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.bcol h4 span{float:right;color:var(--tx)}
+.bcard{display:block;width:100%;text-align:left;font-size:12.5px;line-height:1.35;
+  padding:3px 5px;border-radius:2px;color:var(--tx)}
+.bcard:hover{background:var(--amberc);color:var(--carbon)}
+.bcard b{margin-right:4px}
+.bcard em{font-style:normal;color:var(--deep);display:block;font-size:11.5px}
+.bcard:hover em{color:var(--carbon)}
+.bplan{background:var(--canvas-soft);border:1px solid var(--hairline);border-left:4px solid var(--amberc);
+  border-radius:4px;padding:12px 14px;margin-bottom:13px}
+.bplan .bp{font-size:13.5px;line-height:1.6;color:var(--tx);margin:0 0 10px;max-width:82ch}
+.bturns{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-bottom:10px}
+.bturns div{background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:7px 9px;font-size:12.5px;line-height:1.45;color:var(--tx)}
+.bturns span{display:block;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--link);margin-bottom:3px}
+.bgoal{margin:0;font-size:13px;line-height:1.55;color:var(--tx)}
+.bgoal b{color:var(--link)}
+.bkey{font-size:11px;color:var(--deep)}
+.bhand{background:var(--surface);border:1px solid var(--hairline);border-radius:4px;
+  padding:11px 13px;margin-bottom:13px}
+.bhand h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--link);margin-bottom:8px}
+.bhcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}
+.bhc{display:flex;align-items:center;gap:7px;text-align:left;padding:6px 8px;
+  border:1px solid var(--line);border-radius:3px;background:var(--canvas-soft);color:var(--tx)}
+.bhc:hover{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.bhcost{flex:none;width:20px;height:20px;border-radius:50%;background:var(--carbon);color:var(--amberc);
+  font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.bhn{flex:1;min-width:0;font-size:12px;font-weight:700;line-height:1.25}
+.bhn em{display:block;font-style:normal;font-weight:400;font-size:11px;color:var(--deep)}
+.bhc:hover .bhn em{color:var(--carbon)}
+.bhink{color:var(--link);font-size:11px}
+.bhc:hover .bhink{color:var(--carbon)}
+.bhnote{font-size:11.5px;color:var(--deep);margin:8px 0 0}
+.bcard.top{background:#fff8d6;border-left:3px solid var(--amberc);font-weight:700}
+.bcard.top:hover{background:var(--amberc)}
+.bstar{color:var(--amber-press);margin-right:3px}
+.bacts{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
 .mlist{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .mlist button{background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:4px 8px;font-size:12px;color:var(--deep);text-align:left}
 .mlist button:hover{border-color:var(--link);color:var(--tx)}
@@ -1363,7 +1454,20 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 
 /* layout */
 /* Filters left the grid, so the wrap is cards + deck. */
-.wrap{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;margin-top:14px;align-items:start}
+/* The deck column is draggable on desktop. --deckw is written by the grip and
+   restored from localStorage, so a wide deck panel with big card images is a
+   preference, not something you re-drag every visit. */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) var(--deckw,330px);gap:14px;margin-top:14px;align-items:start}
+/* The grip hangs off .wrap, not off .deck — inside the deck panel it was
+   clipped by overflow-y:auto and scrolled away with the card list. */
+.wrap{position:relative}
+.dgrip{position:absolute;top:0;bottom:0;width:14px;cursor:col-resize;z-index:6;
+  right:calc(var(--deckw,330px) + 3px)}
+.dgrip::before{content:"";position:absolute;left:5px;top:50%;transform:translateY(-50%);
+  width:4px;height:46px;border-radius:2px;background:var(--hairline);transition:background .12s}
+.dgrip:hover::before,.dgrip.on::before{background:var(--amberc)}
+body.resizing{cursor:col-resize;user-select:none}
+@media(max-width:900px){.dgrip{display:none}.wrap{--deckw:auto!important}}
 @media(max-width:1240px){.wrap{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}}
 .deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
@@ -1381,9 +1485,20 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
    obvious once the filters went full width. */
 .special>summary::marker,.grp>summary::marker,details.sec>summary::marker,
 .otherset>summary::marker,.hidwrap>summary::marker{content:"";font-size:0}
-.filters .sec{break-inside:avoid}
-#sidebody{columns:230px;column-gap:16px}
-@media(max-width:600px){#sidebody{columns:1}}
+/* Readability, not density. Each section is a card with its own heading and
+   white space; the previous version was bare rules in raw CSS columns, which
+   let a section split across a column break mid-list. */
+#sidebody{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
+  gap:11px;align-items:start}
+.filters details.sec{border:1px solid var(--hairline);border-radius:4px;
+  background:var(--canvas-soft);box-shadow:var(--bevel-in);overflow:hidden}
+.filters details.sec>summary{padding:9px 11px;font-size:11.5px;letter-spacing:.08em;
+  color:var(--tx);background:var(--platinum);border-bottom:1px solid transparent}
+.filters details.sec[open]>summary{border-bottom-color:var(--hairline)}
+.filters details.sec>summary:hover{background:var(--ice)}
+.filters .sb{padding:10px 11px}
+.filters .list{max-height:230px}
+.filters .secn{color:var(--link);font-weight:700}
 .filters>summary .cnt{background:var(--amberc);color:var(--carbon);border-radius:2px;
   padding:1px 7px;font-weight:700;font-size:11px}
 .filters>summary .cnt:empty{display:none;}
@@ -1607,8 +1722,30 @@ body.noremind .c.illegal img{filter:none}
 .curve div{flex:1;background:var(--acc2);border-radius:2px;min-height:2px;position:relative}
 .curve div b{position:absolute;top:-13px;left:0;right:0;text-align:center;font-size:12px;color:var(--deep);font-weight:500}
 .cx{display:flex;gap:3px;font-size:12px;color:var(--deep)}.cx div{flex:1;text-align:center}
+/* ---- deck stats ---- */
+.dstats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
+.dstat{background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:4px;
+  box-shadow:var(--bevel-in);padding:7px 4px;text-align:center}
+.dstat b{display:block;font-size:17px;font-weight:800;color:var(--tx);line-height:1.15}
+.dstat i{font-style:normal;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep)}
+.dstat.warn{background:#fff2f2;border-color:var(--bad)}
+.dstat.warn b{color:var(--bad)}
+.curveW{display:flex;align-items:flex-end;gap:3px;height:96px;margin:4px 0 5px}
+.cbar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+  height:100%;gap:2px}
+.cbar .cn{font-size:11px;font-weight:700;color:var(--tx);min-height:14px}
+.cbar .cfill{width:100%;background:var(--primary);border-radius:2px 2px 0 0;min-height:2px}
+.cbar .cl{font-size:11px;color:var(--deep)}
+.inkleg,.tyleg{display:flex;flex-wrap:wrap;gap:4px 11px;font-size:11.5px;color:var(--tx);margin-top:5px}
+.inkleg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.tyleg{color:var(--deep);border-top:1px solid var(--line);padding-top:6px;margin-top:7px}
+.inkleg b,.tyleg b{color:var(--tx)}
+.dsortrow{display:flex;align-items:center;gap:7px;margin:12px 0 2px}
+.dsortrow label{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--deep)}
+.dsortrow select{flex:1;font-size:12.5px;padding:4px 6px}
 .ibar{display:flex;height:8px;border-radius:2px;overflow:hidden;margin:6px 0}
-.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:6px;margin-top:9px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px;margin-top:9px}
 .dcard{position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--panel2)}
 .dcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block}
 .dcard .dq{position:absolute;top:2px;left:2px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:0 4px;border-radius:2px}
@@ -1889,14 +2026,21 @@ body.noremind .c.illegal img{filter:none}
         </select></div>
       <div class="gtools">
         <button class="btn" id="clr2">Clear all filters</button>
-        <button class="btn" id="tgRemind">Reminder tags: on</button>
-        <div class="kbhint"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move
-          · <kbd>Enter</kbd> add · <kbd>4</kbd> playset · <kbd>⌫</kbd> remove
-          · <kbd>/</kbd> search · drag a card to the deck</div>
+        <!-- One menu instead of a permanent wall of keyboard hints. The legend
+             is worth reading once and never again, so it lives behind a click. -->
+        <details class="cvset" id="cvset">
+          <summary>Card view settings</summary>
+          <div class="cvbody">
+            <button class="btn" id="tgRemind">Reminder tags: on</button>
+            <div class="kbhint"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move
+              · <kbd>Enter</kbd> add · <kbd>4</kbd> playset · <kbd>⌫</kbd> remove
+              · <kbd>/</kbd> search · drag a card to the deck</div>
+          </div>
+        </details>
       </div>
       <div class="grid" id="grid"></div>
     </section>
-    <aside class="deck" id="deck"></aside>
+    <aside class="deck" id="deck" style="position:relative"></aside>
   </div>
 </section>
 
@@ -2039,20 +2183,29 @@ const COCO=[
  {n:"Tinker Bell",v:"Giant Fairy",i:"Steel",t:"Whenever another of your abilities or actions damages an opposing character, deal 1 more damage to it.",hook:c=>/deals?\s+.{0,20}damage/i.test(c.ef),rec:["damage","pierce"]},
  {n:"Sisu",v:"Emboldened Warrior",i:"Ruby",t:"All characters with more strength than each opposing character can quest the turn they're played.",hook:c=>(c.st||0)>=5,rec:["pump","chall","staple"]},
  {n:"Pocahontas",v:"Peacekeeper",i:"Amber",t:"Once during your turn, choose a character. Until the start of your next turn they get +1 lore, can't challenge, and must quest if able.",hook:c=>(c.lo||0)>=2,rec:["lore","nochal"]},
- {n:"Dumbo",v:"Ninth Wonder of the Universe",i:"Amethyst",t:"You may use the exert abilities of your characters the turn they're played.",hook:c=>c.at.includes("activated"),rec:["exert","activated","draw"]}
+ {n:"Dumbo",v:"Ninth Wonder of the Universe",i:"Amethyst",t:"You may use the exert abilities of your characters the turn they're played.",/* EXERT abilities, not every activated one. `at:["activated"]` includes
+   cards whose activated ability has no exert cost at all — Cobra Bubbles
+   was being pulled in and starred, which is the opposite of the point. An
+   exert ability writes the symbol as a cost, before the dash. */
+  hook:c=>/(\{E\}|⟳)[^.]{0,14}[-–—]/.test(c.tx||""),rec:["exert","activated","draw"]}
 ];
 
 
 const INKS=["Amber","Amethyst","Emerald","Ruby","Sapphire","Steel"];
 const HEX={Amber:"#f0a832",Amethyst:"#a86fd8",Emerald:"#35c97a",Ruby:"#f0625f",Sapphire:"#4a9fe0",Steel:"#9fb0c4"};
-const FMT={infinity:{l:"Infinity",cap:2,max:4,min:60},core:{l:"Core",cap:2,max:4,min:60},coconut:{l:"Coconut",cap:3,max:1,min:60}};
+const FMT={infinity:{l:"Infinity",cap:2,max:4,min:60},core:{l:"Core",cap:2,max:4,min:60},coconut:{l:"Coconut",cap:3,max:1,min:60},/* No rules at all: every ink, any number of copies, no minimum. Nothing is
+   ever flagged illegal, so the warnings panel stays quiet. */
+freeform:{l:"Freeform",cap:6,max:99,min:0}};
 /* One line each, shown under the picker. Format is the single setting that
    changes what counts as a legal deck, and "Core" means nothing to someone who
    has just arrived — the rules belong on screen, not in a title attribute. */
+/* Shown in this order — the ones people actually build in first. */
+const FMT_ORDER=["coconut","core","infinity","freeform"];
 const FMT_BLURB={
   infinity:"Every card ever printed. 2 inks, up to 4 copies of a card, 60 minimum.",
   core:"Only cards from the current Core sets. 2 inks, up to 4 copies, 60 minimum.",
-  coconut:"Singleton — one copy of each card, 3 inks, led by a Coconut. 60 minimum."};
+  coconut:"Singleton — one copy of each card, 3 inks, led by a Coconut. 60 minimum.",
+  freeform:"No rules. Any inks, any number of copies, any size. Nothing is flagged."};
 const FL={n:"Flounder",v:"Voice of Reason"};
 const K_DECKS="fs3_decks",K_STAR="fs3_stars",K_DVIEW="fs3_dview";
 const K_COLL="fs3_coll",K_COLLON="fs3_collon";
@@ -2217,7 +2370,17 @@ const ITEM_HATE=new RegExp([
    a Be Prepared deck are not the same deck — pings want damage-count payoffs
    (Ratigan's Party, damaged-character triggers), not board wipes. Moving a
    counter counts: the damage still lands on something of theirs. */
-const PING=/deals? 1 damage|put 1 damage counter|puts? a damage counter|move 1 damage counter/i;
+const PING=new RegExp([
+  /* One or two at a time, from any trigger — on play, on quest, on banishing
+     something in a challenge (Tinker Bell - Giant Fairy), whenever an item is
+     banished. Three or more is removal, not a ping, and belongs to a different
+     deck. */
+  "deals? (?:up to )?[12] damage",
+  "deal (?:up to )?[12] damage",
+  "puts? (?:up to )?[12] damage counter",
+  "puts? a damage counter",
+  "move (?:up to )?[12] damage counter"
+].join("|"),"i");
 
 const GROUPS=[
  /* Staples stands alone. It is the only chip in the table that filters by YOUR
@@ -2235,7 +2398,7 @@ const GROUPS=[
       Experiments and the Galactic Council cards that aren't filed under the
       film, while the film picks up Nani and David, who aren't Aliens. A deck
       wants both, so the chip is the union. */
-   {id:"lilo",l:"👽 Lilo & Stitch + Aliens",
+   {id:"lilo",l:"Lilo & Stitch + Aliens",
      fn:c=>c.sto==="Lilo & Stitch"||c.sub.includes("Alien")}]},
  {g:"Card advantage",chips:[
    {id:"draw", l:"Draws a card",        re:/draws?\s+(a|\d+)?\s*cards?/i},
@@ -2245,16 +2408,16 @@ const GROUPS=[
  {g:"Removal & damage",chips:[
    {id:"damage",l:"Deals damage",   re:/deals?\s+.{0,15}damage/i},
    // Rules 8.8.3 — Resist only reduces damage that is DEALT; put/moved damage ignores it
-   {id:"pierce",l:"🗡️ Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
+   {id:"pierce",l:"Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
    {id:"banish",l:"Banishes",       re:/banish/i},
-   {id:"ping",  l:"🎯 Pings (1 damage)",fn:c=>PING.test(c.ef||"")},
-   {id:"itemhate",l:"🔨 Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
+   {id:"ping",  l:"Pings damage",fn:c=>PING.test(c.ef||"")},
+   {id:"itemhate",l:"Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
    {id:"discard",l:"Discards",      re:/discard/i}]},
  /* Locations, split into the two decks that "text:location" used to return
     mixed together. */
  {g:"Locations",chips:[
-   {id:"locsyn", l:"🏰 Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
-   {id:"lochate",l:"💥 Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
+   {id:"locsyn", l:"Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
+   {id:"lochate",l:"Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
  {g:"Protection",chips:[
    {id:"heal",  l:"Removes damage",     re:/removes?\s+(up to\s+)?\d*\s*damage/i},
    {id:"nochal",l:"Can't be challenged",re:/can't be challenged/i}]},
@@ -2316,7 +2479,9 @@ const GROUPS=[
    {id:"anynote",l:"Any extra notes",     fn:c=>(c.ru||[]).length>0||(c.rsi||[]).length>0},
    /* Ben's take and Video are written but not surfaced yet — flip HIDDEN_KINDS
       to [] when he's ready and both chips come back. */
-   ...KINDS.filter(k=>!HIDDEN_KINDS.includes(k.k)).map(k=>({id:"nk_"+k.k,l:k.i+" "+k.l,
+   /* Label only — the kind's emoji stays on the note itself, where it carries
+      meaning; in a row of filter chips it was just noise. */
+   ...KINDS.filter(k=>!HIDDEN_KINDS.includes(k.k)).map(k=>({id:"nk_"+k.k,l:k.l,
      fn:c=>(c.rsi||[]).some(n=>(n.k||"ruling")===k.k)}))]}
 ];
 const AB=GROUPS.flatMap(g=>g.chips);
@@ -2343,7 +2508,7 @@ const CHIPWORDS={
           "kill locations","banish locations","anti location"],
  itemhate:["item nerfs","item nerf","item hate","item removal","artifact removal",
            "kill items","banish items","anti item"],
- ping:["pings","ping","ping damage","pings damage","chip damage","1 damage"],
+ ping:["pings","ping","ping damage","pings damage","chip damage","1 damage","2 damage"],
  lilo:["lilo","stitch","aliens","alien","lilo and stitch","lilo & stitch",
        "experiments"],
  shift:["shift"],
@@ -2366,6 +2531,7 @@ const S={q:"",ab:new Set(),ink:new Set(),dual:false,type:new Set(),rar:new Set()
      FRANCHISE sidebar facets and Enter-to-tokenise pills work either way. */
   tagS:load("fs3_tagS",true),stoS:load("fs3_stoS",false)};
 let DVIEW=load(K_DVIEW,"img");
+let DSORT=load("fs3_dsort","cost");
 let DANA=load("fs3_dana",false);
 let DECKS=load(K_DECKS,{cur:"New deck",list:{"New deck":{fmt:"infinity",coco:null,cards:{}}}});
 /* First-run nudge: "click to add" shows until the very first card lands in the
@@ -3334,7 +3500,10 @@ function delCard(f){const d=deck();if(!d.cards[f])return;d.cards[f]--;
 function dlist(){return Object.entries(deck().cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q,f})).filter(x=>x.c)}
 function dtotal(){return Object.values(deck().cards).reduce((a,b)=>a+b,0)}
 
-function renderDeck(){
+/* `host` lets the guided view reuse this whole panel. Everything below binds
+   through it rather than through a hard-coded "deck". */
+function renderDeck(hostId){
+  const HOST=$(hostId||"deck");if(!HOST)return;
   const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
   $("mN").textContent=tot;
   const names=Object.keys(DECKS.list);
@@ -3345,7 +3514,8 @@ function renderDeck(){
          the top of the page. They belong to the deck, so they live in the deck
          panel now. -->
     <div class="dhead">
-      <div class="dhname"><b id="dbName">${esc(DECKS.cur)}</b>
+      <div class="dhname"><b id="dbName" class="dkname" role="button" tabindex="0"
+        title="Click to rename">${esc(DECKS.cur)}</b>
         <span id="dbDirty" class="dbdirty"${DECKDIRTY?"":" hidden"}>unsaved</span></div>
       <button class="btn go" id="dbSave">${DECKS.cur===DRAFT?"Save deck":"Save changes"}</button>
     </div>
@@ -3361,7 +3531,7 @@ function renderDeck(){
          which is what it is. -->
     <div class="fmtpick" id="fmtpick">
       <div class="fmtlbl">Format</div>
-      <div class="fmtbtns">${Object.entries(FMT).map(([k,f])=>
+      <div class="fmtbtns">${FMT_ORDER.map(k=>[k,FMT[k]]).map(([k,f])=>
         `<button class="fmtb${k===d.fmt?" on":""}" data-fmt="${k}">${esc(f.l)}</button>`).join("")}</div>
       <div class="fmtwhy">${esc(FMT_BLURB[d.fmt]||"")}</div>
     </div>
@@ -3377,14 +3547,35 @@ function renderDeck(){
   }
 
   if(tot){
-    const cv=[0,0,0,0,0,0,0,0];let ink=0;const ic={},ty={};
-    L.forEach(({c,q})=>{cv[Math.min(7,c.c)]+=q;if(c.ik)ink+=q;
+    const cv=[0,0,0,0,0,0,0,0];let ink=0,pips=0;const ic={},ty={};
+    L.forEach(({c,q})=>{cv[Math.min(7,c.c)]+=q;if(c.ik)ink+=q;pips+=c.c*q;
       c.co.forEach(i=>ic[i]=(ic[i]||0)+q);ty[c.ty]=(ty[c.ty]||0)+q});
     const mx=Math.max(...cv,1),icT=Object.values(ic).reduce((a,b)=>a+b,0)||1;
-    h+=`<h3>Stats</h3><div class="curve">${cv.map(v=>`<div style="height:${v/mx*100}%"><b>${v||""}</b></div>`).join("")}</div>
-      <div class="cx">${["0","1","2","3","4","5","6","7+"].map(l=>`<div>${l}</div>`).join("")}</div>
-      <div class="ibar">${Object.entries(ic).map(([i,n])=>`<i style="width:${n/icT*100}%;background:${HEX[i]||"#666"}"></i>`).join("")}</div>
-      <div class="st">Inkable ${Math.round(ink/tot*100)}% (${ink}) · ${Object.entries(ty).map(([t,n])=>t+" "+n).join(" · ")}</div>`;
+    const avg=(pips/tot).toFixed(1),inkPc=Math.round(ink/tot*100);
+    /* Four numbers a deck is actually judged on, then the curve. The curve
+       carries its own counts and a share-of-deck line, because "7 cards" means
+       nothing without "that's 12% of the deck". Inkable is flagged red under
+       40% — that's the number that decides whether the deck functions. */
+    h+=`<h3>Stats</h3>
+      <div class="dstats">
+        <div class="dstat"><b>${tot}</b><i>cards</i></div>
+        <div class="dstat"><b>${avg}</b><i>avg cost</i></div>
+        <div class="dstat${inkPc<40?" warn":""}"><b>${inkPc}%</b><i>inkable</i></div>
+        <div class="dstat"><b>${Object.keys(ic).length}</b><i>ink${Object.keys(ic).length===1?"":"s"}</i></div>
+      </div>
+      <div class="curveW">
+        ${cv.map((v,i)=>`<div class="cbar"${v?"":' class="cbar z"'}>
+          <span class="cn">${v||""}</span>
+          <div class="cfill" style="height:${Math.round(v/mx*100)}%"></div>
+          <span class="cl">${i===7?"7+":i}</span></div>`).join("")}
+      </div>
+      <div class="st">Cost curve · ${cv.slice(0,4).reduce((a,b)=>a+b,0)} cards at 3 ink or less
+        (${Math.round(cv.slice(0,4).reduce((a,b)=>a+b,0)/tot*100)}%)</div>
+      <div class="ibar">${Object.entries(ic).map(([i,n])=>`<i style="width:${n/icT*100}%;background:${HEX[i]||"#666"}" title="${esc(i)} ${n}"></i>`).join("")}</div>
+      <div class="inkleg">${Object.entries(ic).sort((a,b)=>b[1]-a[1]).map(([i,n])=>
+        `<span><i style="background:${HEX[i]||"#666"}"></i>${esc(i)} <b>${n}</b></span>`).join("")}</div>
+      <div class="tyleg">${Object.entries(ty).sort((a,b)=>b[1]-a[1]).map(([t,n])=>
+        `<span>${esc(t)} <b>${n}</b></span>`).join("")}</div>`;
   }
 
   const w=[],inks=new Set();L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
@@ -3416,7 +3607,14 @@ function renderDeck(){
       <div id="hb"></div></div></details>`;
   }
   // − on the LEFT, + on the RIGHT
-  const sorted=L.sort((a,b)=>a.c.c-b.c.c||a.f.localeCompare(b.f));
+  const SORTS={cost:(a,b)=>a.c.c-b.c.c||a.f.localeCompare(b.f),
+    ink:(a,b)=>(a.c.co[0]||"").localeCompare(b.c.co[0]||"")||a.c.c-b.c.c,
+    set:(a,b)=>String(b.c.sd||"").localeCompare(String(a.c.sd||""))||(a.c.num||0)-(b.c.num||0),
+    name:(a,b)=>a.f.localeCompare(b.f)};
+  const sorted=L.slice().sort(SORTS[DSORT]||SORTS.cost);
+  h+=`<div class="dsortrow"><label>Sort</label><select id="dsort">${
+    [["cost","Cost"],["ink","Ink"],["set","Set — newest"],["name","Name"]].map(([v,l])=>
+      `<option value="${v}"${DSORT===v?" selected":""}>${l}</option>`).join("")}</select></div>`;
   h+=DVIEW==="img"
     ? `<div class="dgrid">${sorted.map(({c,q,f})=>
         `<div class="dcard">${c.img?`<img src="${c.img}" data-o="${esc(f)}" title="${esc(c.f)}">`
@@ -3430,8 +3628,29 @@ function renderDeck(){
          <span class="n" data-o="${esc(f)}">${esc(c.n)} <span style="color:var(--deep)">${esc(c.v)}</span></span>
          <button data-p="${esc(f)}" title="Add one">+</button></div>`).join("")
         ||`<div class="empty" style="padding:18px 6px">Click a card to add it.</div>`}</div>`;
-  $("deck").innerHTML=h;
+  HOST.innerHTML=h;
 
+  const ds=$("dsort");
+  if(ds)ds.onchange=e=>{DSORT=e.target.value;save("fs3_dsort",DSORT);renderDeck()};
+  /* Drag the left edge of the deck panel to widen it. */
+  (()=>{
+    const dk=HOST;
+    const wrap=dk.closest(".wrap");if(!wrap||wrap.querySelector(":scope > .dgrip"))return;
+    const g=document.createElement("div");g.className="dgrip";g.title="Drag to resize";
+    wrap.appendChild(g);
+    g.addEventListener("pointerdown",ev=>{
+      ev.preventDefault();g.classList.add("on");document.body.classList.add("resizing");
+      const move=e=>{
+        /* Measured from the RIGHT edge of the wrap, so the panel grows as you
+           drag left — which is the direction that feels correct. */
+        const w=Math.round(wrap.getBoundingClientRect().right-e.clientX);
+        const clamped=Math.max(280,Math.min(w,Math.round(window.innerWidth*0.7)));
+        wrap.style.setProperty("--deckw",clamped+"px")};
+      const up=()=>{g.classList.remove("on");document.body.classList.remove("resizing");
+        save("fs3_deckw",wrap.style.getPropertyValue("--deckw"));
+        window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up)};
+      window.addEventListener("pointermove",move);window.addEventListener("pointerup",up)});
+  })();
   $("vList").onclick=()=>{DVIEW="list";save(K_DVIEW,DVIEW);renderDeck()};
   $("vImg").onclick=()=>{DVIEW="img";save(K_DVIEW,DVIEW);renderDeck()};
   $("dsel").onchange=e=>{DECKS.cur=e.target.value;saveDecks();S.limit=150;render()};
@@ -3441,6 +3660,9 @@ function renderDeck(){
   /* Save is rebuilt with the panel on every render, so it is rebound here
      rather than once at boot the way the old top bar was. */
   const dbs=$("dbSave");if(dbs)dbs.onclick=e=>saveDeckPrompt(e);
+  const dbn=$("dbName");
+  if(dbn){dbn.onclick=()=>renameDeck(DECKS.cur);
+    dbn.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();renameDeck(DECKS.cur)}}}
   $("dren").onclick=()=>renameDeck(DECKS.cur);
   $("ddel").onclick=()=>{if(names.length<2){toast("Keep at least one deck");return}
     if(confirm('Delete deck "'+DECKS.cur+'"?')){delete DECKS.list[DECKS.cur];DECKS.cur=Object.keys(DECKS.list)[0];saveDecks();render()}};
@@ -3453,9 +3675,9 @@ function renderDeck(){
   $("dc").onclick=()=>navigator.clipboard.writeText(deckText()).then(()=>toast("Copied"),()=>toast("Copy failed"));
   $("dim").onclick=importText;
   const dh=$("dh");if(dh)dh.onclick=hand;
-  $("deck").querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>addCard(b.dataset.p));
-  $("deck").querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>delCard(b.dataset.m));
-  $("deck").querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>openM(b.dataset.o));
+  HOST.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>addCard(b.dataset.p));
+  HOST.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>delCard(b.dataset.m));
+  HOST.querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>openM(b.dataset.o));
 }
 /* Rough archetype read from the curve and what the deck actually does.
    Deliberately coarse — it's a sanity check, not a verdict. */
@@ -3542,6 +3764,148 @@ function pairFor(idx){
   const gap=others[2]&&others[2][1]?((others[1][1]-others[2][1])/others[2][1]*100):999;
   return{best:[others[0][0],others[1][0]],all:others,conf:gap>=15?"strong":(gap>=6?"ok":"close")};
 }
+/* ===================== prebuilt Coconut decks =====================
+   Generated from the card data, not hand-typed. Eighteen hand-written 60-card
+   lists would be stale the day a set drops; this rebuilds from whatever is in
+   the database, so a prebuilt deck is always legal and always current.
+
+   It is a good deck, not a tournament list. Say so on the page.
+
+   How a card earns its place, in order of weight:
+     hook      — the Coconut's own text cares about it. This is the deck.
+     synergy   — it matches one of the Coconut's recommended filters.
+     staple    — it is on the starred list, i.e. it is just strong.
+     inkable   — a singleton deck that can't ink is a dead deck.
+   Then the picks are laid into a cost curve, so it doesn't end up as sixty
+   six-drops with the best scores. */
+/* One paragraph per Coconut: the plan, the first three turns, and the one
+   thing you are trying to do. Written to be skimmed — you should know whether
+   you want this deck before you read a single card name. */
+const COCO_PLAN={
+"Scar":{p:"A Steel goodstuff pile that gets a discount every single turn. Every Ally is a rate cheat, so the deck is stuffed with them and just plays a bigger board than you should be able to.",t:["Ink, then a 1-cost Ally for free.","Ink, drop a 3-cost Ally for 2 and hold up a trick.","Ink, Scar himself, and start chaining Allies at a discount."],g:"Out-body them by turn five and never spend full price on a creature again."},
+"Ariel":{p:"Princesses sing, songs cost nothing, and every song turns into free lore. It's a combo deck wearing an Amber shirt — the songs aren't for their effects, they're the trigger.",t:["Ink, play a cheap Princess.","Ink, sing a song off her — lore before you've even quested.","Ink, Ariel, then sing twice and watch the counter jump."],g:"Win on lore from singing, not from questing. If they kill your Princess, sing another one out."},
+"Winnie the Pooh":{p:"Every vanilla body — no ability, just stats — becomes a cantrip. The deck deliberately runs the boring cards nobody drafts, because in this shell they all draw a card.",t:["Ink, play a plain 1-drop.","Ink, plain 2-drop.","Ink, Pooh, then every dumb body from here draws."],g:"Never run out of cards. Grind them out with a board that refills itself."},
+"Stitch":{p:"A free play every turn, forever. Fill the deck with 2-and-unders so the free slot is never dead, and load Lilo and Stitch names for the lore kicker.",t:["Ink, play a 2-drop.","Ink, 2-drop, and Stitch's free play if he's down.","Ink, Stitch, then two bodies a turn from here."],g:"Out-tempo them. You get an extra card of value every turn they don't."},
+"Ursula":{p:"Your characters sing far above their cost, so the expensive game-swinging songs come down on turn three. Ursula names count as +2, so the deck runs plenty of them.",t:["Ink, cheap body.","Ink, another body — you're building singers, not attackers.","Ink, sing a 5-cost song off a 3-cost character."],g:"Cast the big songs several turns early and swing the game before they're ready."},
+"Mickey Mouse":{p:"Every Mickey in the deck has Shift 2, from hand, deck or discard. That turns a pile of expensive Mickeys into a chain of 2-cost upgrades.",t:["Ink, cheap Mickey.","Ink, Shift a bigger Mickey onto him for 2.","Ink, Shift again — you're four ink ahead already."],g:"Climb the Mickey ladder for 2 a step and present a body they can't answer."},
+"Mufasa":{p:"Ramp. Pay 5 once a turn to bank two more ink, then dump something enormous well before it's fair.",t:["Ink, cheap body.","Ink, hold.","Ink, then start banking two extra ink a turn."],g:"Get to your top end three turns early. Everything cheap in here just survives until then."},
+"Nick Wilde":{p:"Four Pawpsicles is the whole joke. Flood items, then cash four of them in for four lore in one click, repeatedly.",t:["Ink, Pawpsicle.","Ink, two more items.","Ink, Nick, then start converting items into lore."],g:"Four lore a turn from cards they can't interact with. Items are the fuel, not the plan."},
+"Snow White":{p:"A tribal counting deck. Get seven differently-named Dwarfs across hand, discard and play, flip Snow White once, and every character you own gains +2 lore for the rest of the game.",t:["Ink, a Dwarf.","Ink, another Dwarf — different name, always.","Ink, a third, and start counting toward seven."],g:"Hit the count, flip her, then quest with everything. Before that you're just playing bodies."},
+"Donald Duck":{p:"Boost costs one less, and so does everything with Boost. It's a ramp-and-value deck where the discount applies twice on the same card.",t:["Ink, cheap Boost card.","Ink, play and Boost in the same turn for the price of one.","Ink, Donald, and everything after is a discount."],g:"Play a bigger card than your ink says every turn from three onward."},
+"Mr. Incredible":{p:"Supers get Rush and a free exert on the way in. It's aggro with built-in removal — every body both attacks immediately and taps their blocker.",t:["Ink, cheap Super.","Ink, Super with Rush — challenge straight away.","Ink, Mr. Incredible, then every Super is a two-for-one."],g:"Kill them by turn seven. Every character you play should be trading or attacking the same turn."},
+"Moana":{p:"An extra ink every turn while a Moana, Heihei or Pua is out. It's the smoothest ramp in the format and the deck is built to always have one of those three down.",t:["Ink, Heihei or Pua.","Ink twice — you're already a turn ahead.","Ink twice, then a 4-drop on turn three."],g:"Be permanently one to two ink ahead, and spend the lead on cards they can't match yet."},
+"John Silver":{p:"Locations that don't die. Every character standing at a location makes it tougher, so the deck builds a board that quietly accumulates lore while being very hard to remove.",t:["Ink, cheap body.","Ink, drop a location.","Ink, move characters onto it — now it's Resist 2 or 3."],g:"Win on location lore. They have to deal with a thing that gets harder to kill every turn."},
+"Robin Hood":{p:"A free Robin's Bow on turn one, four Robins allowed, and a deck full of ping damage. Death by a thousand cuts.",t:["Free Robin's Bow, ink, go.","Ink, ping something and drop a body.","Ink, Robin, and now every ping is part of a machine."],g:"Control the board with small repeatable damage, then quest through the wreckage."},
+"Tinker Bell":{p:"Every ability or action that damages an opposing character does one more. It turns a pile of 1-damage pings into 2-damage removal, which changes what dies.",t:["Ink, cheap body.","Ink, a pinger.","Ink, Tinker Bell — now every ping kills a 2-toughness card."],g:"Convert cheap chip damage into a real removal suite. The deck is all damage triggers on purpose."},
+"Sisu":{p:"Anything bigger than their whole board can quest the turn it lands. Play big, pump bigger, quest immediately — no summoning sickness on the cards that matter.",t:["Ink, cheap body.","Ink, a pump effect or a big body.","Ink, Sisu, then quest with a fresh fatty."],g:"Big stats, immediate lore. Every buff in here exists to clear the 'bigger than theirs' bar."},
+"Pocahontas":{p:"Pick a character each turn: it gains lore, can't challenge, and has to quest. A pure lore-race deck that turns any body into a questing machine.",t:["Ink, cheap body.","Ink, another body.","Ink, Pocahontas, then start pointing at whoever should quest."],g:"Race to twenty. The deck avoids combat entirely — you're not trying to fight them."},
+"Dumbo":{p:"Exert abilities work the turn a character lands. Every tap-to-do-something card in the deck becomes an enters-play effect instead.",t:["Ink, cheap body with an exert ability.","Ink, another one — still sitting idle for now.","Ink, Dumbo, then every exert ability fires immediately."],g:"Get instant value out of cards everyone else has to wait a turn on."}};
+const COCO_CURVE=[0,4,10,12,11,8,6,5];   // by cost, 0..7+ — 56 cards
+function cocoDeck(idx){
+  const co=COCO[idx];if(!co)return null;
+  /* pairFor() ranks inks by DENSITY — what share of that ink cares about the
+     Coconut — which is the right answer for the guided build's advice, but the
+     wrong one here. For a prebuilt deck what matters is the raw number of
+     payoff cards you can actually put in it. Moana is the clear case: her
+     payoffs are the cards NAMED Moana, Heihei or Pua, and density was steering
+     her away from the inks that hold the most of them. */
+  const legalPool=CARDS.filter(c=>legal(c));
+  const hooks=legalPool.filter(c=>{try{return !!co.hook(c)}catch(e){return false}});
+  /* Score whole PAIRS, not single inks. Counting per-ink credited a dual-ink
+     card to both of its inks — so Amber looked like it held a Pua, when that
+     Pua is Amber/Amethyst and is unplayable unless Amethyst is in the deck
+     too. Fifteen pairs is nothing to check exactly. */
+  const others=INKS.filter(i=>i!==co.i);
+  let inks=[co.i,others[0],others[1]],bestN=-1,bestNames=-1;
+  for(let a=0;a<others.length;a++)for(let b2=a+1;b2<others.length;b2++){
+    const set=new Set([co.i,others[a],others[b2]]);
+    const hit=hooks.filter(c=>c.co.length&&c.co.every(i=>set.has(i)));
+    const n=hit.length;
+    /* Ties break on how many DIFFERENT names the pair reaches. This is a
+       singleton format, so eight Moanas plus two Puas is a more resilient
+       deck than ten Moanas — and it is what makes Moana's list actually
+       contain a Pua. (Heihei has no card in Lorcana yet, so her text names a
+       creature that cannot be included.) */
+    const names=new Set(hit.map(c=>c.n)).size;
+    if(n>bestN||(n===bestN&&names>bestNames)){
+      bestN=n;bestNames=names;inks=[co.i,others[a],others[b2]]}}
+  const iset=new Set(inks);
+  const self=CARDS.find(x=>x.n===co.n&&x.v===co.v);
+  const recIds=co.rec||[];
+  const pool=CARDS.filter(c=>legal(c)&&c.co.length&&c.co.every(i=>iset.has(i))
+    &&!(self&&c.f===self.f)&&!isQuest(c)&&c.f!==BANNED);
+  const score=c=>{
+    let n=0;
+    try{if(co.hook(c))n+=6}catch(e){}
+    recIds.forEach(id=>{if(c.ab&&c.ab.has(id))n+=3});
+    if(isStar(c.f))n+=3;
+    if(c.ik)n+=1;
+    if(c.tribal&&c.tribal.length)n+=1;
+    /* Refinements after looking at the first pass, which was picking a lot of
+       vanilla bodies that happened to be inkable:
+       - Lore is how you win, so a character that quests for 2+ is worth more
+         than one that quests for 1 at the same cost.
+       - Rate matters: stats-per-ink separates a good 3-drop from a bad one.
+       - A card with no rules text and no lore is filler. Push it down unless
+         the Coconut specifically wants vanillas (Pooh).
+       - Cards that draw, remove or ramp carry games; nudge them up. */
+    if(c.ty==="Character"){
+      if((c.lo||0)>=3)n+=3; else if((c.lo||0)===2)n+=2; else if((c.lo||0)===1)n+=0.5;
+      const rate=((c.st||0)+(c.wi||0))/Math.max(1,c.c);
+      if(rate>=3)n+=1.5; else if(rate>=2.2)n+=0.75;
+    }
+    if(c.ab){
+      ["draw","banish","cheap","ramp","tutor"].forEach(id=>{if(c.ab.has(id))n+=1});
+      if(!c.tx&&!recIds.includes("vanilla"))n-=2;
+    }
+    if((c.ru||[]).length)n+=0.25;
+    return n};
+  const ranked=pool.map(c=>({c,s:score(c)}))
+    /* Deterministic: the same Coconut always yields the same deck. Ties break
+       on name so the order never depends on database ordering. */
+    .sort((a,b)=>b.s-a.s||a.c.f.localeCompare(b.c.f));
+  /* Does this card exist because of the Coconut? Used both to force payoffs
+     into the deck and to decide which card gets the star. */
+  const synergy=c=>{
+    try{if(co.hook(c))return true}catch(e){}
+    return recIds.some(id=>c.ab&&c.ab.has(id))};
+  const isHook=c=>{try{return !!co.hook(c)}catch(e){return false}};
+
+  const picked=[],used=new Set();
+  const want=COCO_CURVE.slice();
+  /* Payoffs go in FIRST and ignore the curve. A Moana deck without Heihei and
+     Pua is not a Moana deck, however tidy its mana curve is. Capped at 24 so a
+     broad hook (Nick Wilde: "every item") can't eat the whole list. */
+  ranked.filter(x=>isHook(x.c)).slice(0,24).forEach(({c})=>{
+    if(used.has(c.f))return;
+    used.add(c.f);picked.push(c);
+    const b=Math.min(7,c.c);if(want[b]>0)want[b]--});
+  ranked.forEach(({c,s})=>{
+    const b=Math.min(7,c.c);
+    if(want[b]>0&&s>0&&!used.has(c.f)){want[b]--;used.add(c.f);picked.push(c)}});
+  /* Top up to 56 with the best of whatever is left, curve be damned — a legal
+     60 beats a perfect curve at 51. */
+  for(const {c} of ranked){
+    if(picked.length>=56)break;
+    if(!used.has(c.f)){used.add(c.f);picked.push(c)}}
+  const cards={};
+  picked.forEach(c=>cards[c.f]=1);
+  if(self)cards[self.f]=4;
+  /* The dream opener: seven cards you'd keep without thinking. Two cheap
+     inkable bodies to make land drops, the Coconut itself, the best early
+     payoff, and a curve topper to aim at. Deterministic, so the same deck
+     always shows the same hand. */
+  const inDeck=picked.slice();
+  const pick1=f=>{const i=inDeck.findIndex(f);return i<0?null:inDeck.splice(i,1)[0]};
+  const hand=[];
+  if(self)hand.push(self);
+  [c=>c.ik&&c.c<=1, c=>c.ik&&c.c===2, c=>synergy(c)&&c.c<=2,
+   c=>synergy(c)&&c.c===3, c=>c.ik&&c.c===3, c=>c.c>=4&&c.c<=5,
+   c=>c.ik&&c.c<=2, c=>true].forEach(f=>{if(hand.length<7){const c=pick1(f);if(c)hand.push(c)}});
+
+  return {inks,cards,co,self,scoreOf:score,synergy,isHook,hand,
+    total:Object.values(cards).reduce((a,b)=>a+b,0)};
+}
 function inkStaples(ink){
   return CARDS.filter(c=>isStar(c.f)&&c.co.length===1&&c.co[0]===ink&&legal(c))
     .sort((a,b)=>a.c-b.c).slice(0,2);
@@ -3557,6 +3921,60 @@ function miniCard(c,extra){
 }
 /* All six steps are always on the page. Unreached ones render as a dimmed
    preview so you can see what's coming instead of being surprised by it. */
+let GTAB=load("fs3_gtab","pick"),GBUILT=null;
+/* The list for one prebuilt deck, plus the one button that matters. */
+function builtPanel(i){
+  const d=cocoDeck(i);if(!d)return "";
+  const L=Object.entries(d.cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q}))
+    .filter(x=>x.c).sort((a,b)=>a.c.c-b.c.c||a.c.f.localeCompare(b.c.f));
+  const byCost={};L.forEach(x=>{const k=Math.min(7,x.c.c);(byCost[k]=byCost[k]||[]).push(x)});
+  const plan=COCO_PLAN[d.co.n];
+  /* The single highest-scoring card in each cost slot gets a star. It's the
+     answer to "why is this deck like this" at a glance. */
+  /* Star the best card in each slot THAT THE COCONUT ACTUALLY WANTS. Scoring
+     alone starred whatever was strongest in a vacuum — Dumbo's list flagged
+     Cobra Bubbles, a fine card, for a Coconut about exert abilities. The bar
+     is now the Coconut's OWN text — a recommended-filter match is not enough.
+     A slot with nothing the Coconut wants simply gets no star. */
+  const star={};
+  Object.keys(byCost).forEach(k=>{
+    let best=null,bs=-1;
+    byCost[k].forEach(x=>{if(!d.isHook(x.c))return;
+      const sc=d.scoreOf(x.c);if(sc>bs){bs=sc;best=x.c.f}});
+    star[k]=best});
+  return `<div class="bbody">
+    ${plan?`<div class="bplan">
+      <p class="bp">${esc(plan.p)}</p>
+      <div class="bturns">${plan.t.map((t,i)=>
+        `<div><span>Turn ${i+1}</span>${esc(t)}</div>`).join("")}</div>
+      <p class="bgoal"><b>The point:</b> ${esc(plan.g)}</p>
+    </div>`:""}
+    ${d.hand&&d.hand.length?`<div class="bhand">
+      <h4>Dream starting hand</h4>
+      <div class="bhcards">${d.hand.map(c=>
+        `<button class="bhc" data-bo="${esc(c.f)}">
+          <span class="bhcost">${c.c}</span>
+          <span class="bhn">${esc(c.n)}<em>${esc(c.v)}</em></span>
+          ${c.ik?`<span class="bhink" title="Inkable">◆</span>`:""}
+        </button>`).join("")}</div>
+      <p class="bhnote">Seven you'd keep without thinking — land drops, the Coconut,
+        and an early payoff. ◆ marks a card you can ink.</p>
+    </div>`:""}
+    <div class="binks">${d.inks.map(i2=>
+      `<span><i style="background:${HEX[i2]}"></i>${esc(i2)}</span>`).join("")}
+      <b>${d.total} cards</b><span class="bsing">singleton · ${esc(d.co.n)} ×4</span>
+      <span class="bkey">★ best in its slot</span></div>
+    <div class="bcols">${Object.keys(byCost).sort((a,b)=>a-b).map(k=>`
+      <div class="bcol"><h4>${k==7?"7+":k} ink <span>${byCost[k].reduce((a,x)=>a+x.q,0)}</span></h4>
+        ${byCost[k].map(x=>`<button class="bcard${star[k]===x.c.f?" top":""}" data-bo="${esc(x.c.f)}">
+          ${star[k]===x.c.f?`<span class="bstar">★</span>`:""}
+          ${x.q>1?`<b>${x.q}×</b>`:""}${esc(x.c.n)}<em>${esc(x.c.v)}</em></button>`).join("")}
+      </div>`).join("")}</div>
+    <div class="bacts">
+      <button class="btn go" data-btake="${i}">Copy &amp; edit in deck builder</button>
+      <button class="btn" data-bcopy="${i}">Copy list</button>
+    </div></div>`;
+}
 function renderGuide(){
   const g=$("guide");
   const co=G.coco!=null?COCO[G.coco]:null;
@@ -3571,10 +3989,35 @@ function renderGuide(){
   const step=(i,title,body)=>`<div class="gstep ${state(i)}">
     <h3><span class="num">${i+1}</span>${title}</h3><div class="gbody">${body}</div></div>`;
 
-  /* 1 — coconut */
-  let s1=`<p class="s">Its ink locks in automatically. All 18 beta cards, real ability text.</p>
-    <input class="mini" id="gq" placeholder="search coconuts…" style="max-width:320px">
-    <div class="cocogrid" id="cg" style="margin-top:9px"></div>`;
+  /* 1 — coconut, or a finished deck to take away and edit */
+  let s1=`<div class="gtabs">
+      <button data-gt="pick" class="${GTAB==="pick"?"on":""}">Choose your Coconut</button>
+      <span class="or">or</span>
+      <button data-gt="built" class="${GTAB==="built"?"on":""}">See fully built decks</button>
+    </div>`;
+  if(GTAB!=="built"){
+    s1+=`<p class="s">Its ink locks in automatically. All 18 beta cards, real ability text.</p>
+      <input class="mini" id="gq" placeholder="search coconuts…" style="max-width:320px">
+      <div class="cocogrid" id="cg" style="margin-top:9px"></div>`;
+  }else{
+    const openIdx=GBUILT;
+    s1+=`<p class="s">A complete, legal 60 for every Coconut — three inks, singleton,
+      four copies of the Coconut itself. Built from the card database rather than typed
+      out by hand, so they stay current as sets land. Take one and change everything.</p>
+      <div class="blist">`;
+    COCO.forEach((c,i)=>{
+      const on=openIdx===i;
+      s1+=`<div class="brow${on?" on":""}">
+        <button class="bhead" data-built="${i}">
+          <span class="dot" style="background:${HEX[c.i]}"></span>
+          <span class="bn">${esc(c.n)} <em>${esc(c.v)}</em></span>
+          <span class="bt">${esc(c.t)}</span>
+          <span class="bx">${on?"▾":"▸"}</span>
+        </button>
+        ${on?builtPanel(i):""}
+      </div>`});
+    s1+=`</div>`;
+  }
 
   /* 2 — inks */
   let s2;
@@ -3674,7 +4117,9 @@ function renderGuide(){
   renderGuideDeck();
 
   /* step 1 wiring */
-  const draw=()=>{const q=($("gq")&&$("gq").value||"").toLowerCase();
+  /* The Coconut grid only exists in the "pick" tab. */
+  const draw=()=>{if(!$("cg"))return;
+    const q=($("gq")&&$("gq").value||"").toLowerCase();
     $("cg").innerHTML=COCO.map((c,i)=>({c,i})).filter(({c})=>!q||(c.n+" "+c.v+" "+c.i+" "+c.t).toLowerCase().includes(q))
       .map(({c,i})=>`<button class="cococ${G.coco===i?" on":""}" data-c="${i}">
         <b><span class="dot" style="background:${HEX[c.i]}"></span>${esc(c.n)}</b><i>"${esc(c.v)}" · ${c.i}</i>
@@ -3702,6 +4147,33 @@ function renderGuide(){
   if($("gy"))$("gy").onclick=()=>{let n=0;const d=deck();
     inks.forEach(i=>inkStaples(i).forEach(c=>{if(c.f!==BANNED){d.cards[c.f]=(d.cards[c.f]||0)+1;n++}}));
     saveDecks();G.staples=true;toast("Added "+n+" staples");renderGuide();render()};
+  g.querySelectorAll("[data-gt]").forEach(b=>b.onclick=()=>{
+    GTAB=b.dataset.gt;save("fs3_gtab",GTAB);renderGuide()});
+  g.querySelectorAll("[data-built]").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.built;GBUILT=(GBUILT===i?null:i);renderGuide()});
+  g.querySelectorAll("[data-bo]").forEach(b=>{
+    b.onclick=()=>openM(b.dataset.bo);
+    /* Same 2-second hover preview the card grid uses, so you can read a card
+       without leaving the list. */
+    const c=CARDS.find(x=>x.f===b.dataset.bo);
+    if(c)cardPreview(b,c);});
+  g.querySelectorAll("[data-bcopy]").forEach(b=>b.onclick=()=>{
+    const d=cocoDeck(+b.dataset.bcopy);if(!d)return;
+    const txt=Object.entries(d.cards).map(([f,q])=>q+" "+f).join("\n");
+    navigator.clipboard.writeText(txt).then(()=>toast("Deck list copied"),()=>toast("Copy failed"))});
+  g.querySelectorAll("[data-btake]").forEach(b=>b.onclick=async()=>{
+    const i=+b.dataset.btake,d=cocoDeck(i);if(!d)return;
+    /* Its own deck, not a merge into whatever you had open — otherwise the
+       first thing you'd do is untangle it from your current build. */
+    let name=d.co.n+" – "+d.co.v;
+    let n=2;while(DECKS.list[name])name=d.co.n+" – "+d.co.v+" "+(n++);
+    DECKS.list[name]={fmt:"coconut",coco:i,cards:{...d.cards}};
+    DECKS.cur=name;saveDecks();markDirty(false);
+    G.coco=i;G.pair=d.inks.slice(1);G.copies=4;G.mode=null;
+    S.ink=new Set(d.inks);S.limit=150;
+    SUB="manual";save("fs3_sub",SUB);showTab("tDeck");
+    render();paintDeckBar();
+    toast(`Loaded “${name}” — edit away`)});
   if($("gn"))$("gn").onclick=()=>{G.staples=false;renderGuide()};
   if($("gskip"))$("gskip").onclick=()=>{G.staples="skip";renderGuide()};
   if($("gr"))$("gr").onclick=()=>{G.mode="rec";renderGuide();render();toast("Filters highlighted green in Search")};
@@ -3712,7 +4184,14 @@ function renderGuide(){
   if($("gdone"))$("gdone").onclick=()=>{award("coconut");showSearch()};
 }
 /* compact deck panel so you can see the build while working through the steps */
+/* The guided view gets the REAL deck panel — same stats, sort, format picker,
+   rename, save, resize and card controls. It was a stripped-down copy that
+   drifted further behind every time the real one gained something. */
 function renderGuideDeck(){
+  if($("gdeck"))return renderDeck("gdeck");
+  return renderGuideDeckOld();
+}
+function renderGuideDeckOld(){
   const el=$("gdeck");if(!el)return;
   const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
   el.innerHTML=`<h3>Deck — ${tot}/${F.min}</h3>
@@ -6239,11 +6718,11 @@ function renderDecksPage(){
     const cur=n===DECKS.cur;
     return `<button class="dkcard${cur?" on":""}" data-dk="${esc(n)}"${
         cur?' aria-current="true"':""}>
-      <h3>${esc(n)}${titleChip()}${cur?`<span class="dkcur">Editing</span>`:""}</h3>
+      <h3><span class="dkname" data-ren="${esc(n)}" role="button" tabindex="0"
+        title="Click to rename">${esc(n)}</span>${titleChip()}${
+        cur?`<span class="dkcur">Editing</span>`:""}</h3>
       <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
       <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
-      <span class="dkren" data-ren="${esc(n)}" role="button" tabindex="0"
-        title="Rename this deck">✏️ Rename</span>
     </button>`}).join("");
   $("deckspage").innerHTML=`<div class="page">
     <h1><span class="gi">🗂️</span>Decks</h1>
@@ -7040,6 +7519,8 @@ if(location.hash.startsWith("#d="))fromHash();
 (()=>{const sd=$("side");if(!sd)return;
   sd.open=load("fs3_sideopen",false);
   sd.addEventListener("toggle",()=>save("fs3_sideopen",sd.open));})();
+(()=>{const w=load("fs3_deckw","");const wr=document.querySelector(".wrap");
+  if(w&&wr)wr.style.setProperty("--deckw",w)})();
 render();
 const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
