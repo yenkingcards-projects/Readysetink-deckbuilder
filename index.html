@@ -620,6 +620,112 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
    platinum take the deeper step (8.69). --link is for links on white. */
 .disclaimer a{color:var(--deep)}
 /* ===== aquarium ========================================================= */
+/* ---- Feed Flounder ----------------------------------------------------
+   Ben's standalone game, moved into the site. It was written to own the whole
+   viewport; here it lives in a box, so every measurement reads the element's
+   own rect. Full screen therefore just makes the box bigger. */
+.ffgame{position:relative;height:min(66vh,560px);border-radius:6px;overflow:hidden;
+  border:1px solid var(--chrome);box-shadow:var(--bevel);cursor:crosshair;isolation:isolate;
+  touch-action:none;user-select:none;color:#fff;
+  background:radial-gradient(circle at 20% 20%,rgba(92,215,235,.22),transparent 35%),
+    radial-gradient(circle at 75% 70%,rgba(45,157,202,.22),transparent 32%),
+    linear-gradient(#0d5672 0%,#0b4867 45%,#072e4b 72%,#041d31 100%)}
+.ffgame:fullscreen{height:100%;border-radius:0}
+.ffgame::before{content:"";position:absolute;inset:-10%;pointer-events:none;opacity:.35;
+  background:repeating-radial-gradient(ellipse at 20% -10%,rgba(255,255,255,.08) 0 2px,transparent 3px 42px);
+  transform:rotate(-8deg);animation:ffwater 12s linear infinite alternate}
+@keyframes ffwater{from{transform:translate3d(-2%,0,0) rotate(-8deg)}
+  to{transform:translate3d(2%,2%,0) rotate(-5deg)}}
+.ffhud{position:absolute;z-index:20;top:14px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:10px;padding:8px 15px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(4,24,39,.42);
+  backdrop-filter:blur(12px);font-weight:900;font-size:16px;white-space:nowrap}
+.ffhud b{font-variant-numeric:tabular-nums}
+.ffdusti{width:22px;height:22px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff6a8,#ffd54a 32%,#df9423 68%,#805018);
+  box-shadow:0 0 18px rgba(255,211,75,.65)}
+.fftitle{position:absolute;z-index:20;top:64px;left:50%;transform:translateX(-50%);
+  text-align:center;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.fftitle h2{font-size:clamp(24px,5vw,46px);line-height:.95;margin:0;font-weight:900;
+  letter-spacing:-.04em;color:#fff}
+.fftitle p{margin:6px 0 0;opacity:.78;font-weight:700;font-size:13px}
+.ffcard{position:absolute;z-index:10;width:104px;height:145px;left:50%;top:55%;
+  transform:translate(-50%,-50%);border-radius:10px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.38),transparent 18%),
+    linear-gradient(#53c9ec 0 54%,#eed248 55% 100%);
+  border:5px solid #ead85b;
+  box-shadow:0 14px 35px rgba(0,0,0,.38),0 0 0 2px rgba(33,92,116,.9) inset;
+  will-change:transform,left,top}
+.ffcard::before{content:"FLOUNDER";position:absolute;left:8px;right:8px;bottom:28px;
+  background:rgba(19,48,71,.84);border-radius:5px;padding:5px 4px;font-size:10.5px;
+  font-weight:900;text-align:center;letter-spacing:.08em;color:#fff5aa}
+.ffcard::after{content:"🐠";position:absolute;inset:11px 8px 53px;display:grid;
+  place-items:center;font-size:54px;border-radius:6px;border:2px solid rgba(255,255,255,.45);
+  background:radial-gradient(circle,#97efff 0,#29a6df 65%,#1472a4)}
+.ffood{position:absolute;z-index:7;will-change:transform}
+.ffood.pellet{width:16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#ffe69a,#c98132 42%,#744422 77%);
+  box-shadow:0 2px 5px rgba(0,0,0,.3)}
+.ffood.pellet.rare{width:20px;height:20px;
+  background:radial-gradient(circle at 32% 28%,#fff,#fff38d 28%,#ffd23f 58%,#f19d22 80%);
+  box-shadow:0 0 20px rgba(255,226,65,.85)}
+.ffood.potato,.ffood.coconut{display:grid;place-items:center;line-height:1;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.28))}
+.ffood.potato{width:38px;height:38px;font-size:34px}
+.ffood.coconut{width:46px;height:46px;font-size:42px}
+.ffbub{position:absolute;z-index:3;border-radius:50%;pointer-events:none;
+  border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+.ffpop{position:absolute;z-index:30;font-weight:900;color:#ffe76a;pointer-events:none;
+  text-shadow:0 2px 10px #000;white-space:nowrap;animation:ffpop .7s ease-out forwards}
+.ffpop.special{font-size:19px;color:#fff3ae}
+@keyframes ffpop{0%{opacity:0;transform:translate(-50%,-20%) scale(.7)}
+  20%{opacity:1}100%{opacity:0;transform:translate(-50%,-120%) scale(1.25)}}
+.ffhint{position:absolute;z-index:20;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:12.5px;font-weight:800;opacity:.72;padding:8px 13px;border-radius:999px;
+  background:rgba(0,0,0,.18);white-space:nowrap;transition:opacity .5s}
+.ffhint.hide{opacity:0}
+.ffweed{position:absolute;bottom:-8px;z-index:2;width:24px;height:150px;opacity:.45;
+  border-radius:80% 10% 0 0;background:linear-gradient(#2f9478,#14594f);transform-origin:bottom}
+.ffweed.s1{left:6%;transform:rotate(-7deg)}
+.ffweed.s2{left:12%;height:110px;transform:rotate(12deg)}
+.ffweed.s3{right:7%;height:185px;transform:rotate(9deg)}
+.ffweed.s4{right:14%;height:105px;transform:rotate(-11deg)}
+@media(max-width:600px){.ffcard{width:88px;height:124px}.ffcard::after{font-size:44px}}
+@media(prefers-reduced-motion:reduce){.ffgame::before{animation:none}}
+
+/* ---- effect layers worn on the card ---- */
+.ff2-layer{position:absolute;inset:-6px;border-radius:14px;pointer-events:none;display:none}
+.ffcard.ff-bubbles .ff2-bubbles{display:block;box-shadow:0 0 22px rgba(164,236,255,.28),inset 0 0 16px rgba(196,246,255,.15);animation:ff2Pulse 1.8s ease-in-out infinite alternate}
+.ffcard.ff-shimmer .ff2-shimmer{display:block;background:linear-gradient(115deg,transparent 22%,rgba(255,255,255,.08) 34%,rgba(255,255,255,.95) 48%,rgba(255,244,166,.48) 54%,transparent 69%);background-size:240% 100%;mix-blend-mode:screen;animation:ff2Sweep 2.1s linear infinite}
+.ffcard.ff-sapphire .ff2-sapphire{display:block;box-shadow:0 0 28px rgba(67,207,255,.9),0 0 56px rgba(46,122,255,.45),inset 0 0 18px rgba(156,242,255,.24);animation:ff2Sapphire 1.6s ease-in-out infinite alternate}
+.ffcard.ff-sparkles .ff2-sparkles{display:block;box-shadow:0 0 18px rgba(255,233,126,.34),0 0 32px rgba(255,248,191,.18);animation:ff2Pulse 1s ease-in-out infinite alternate}
+.ffcard.ff-water .ff2-water{display:block;background:repeating-radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.27) 0 2px,rgba(47,190,235,.10) 4px 15px,transparent 17px 28px);mix-blend-mode:soft-light;animation:ff2Water 2.1s linear infinite}
+.ffcard.ff-legendary .ff2-legendary{display:block;background:linear-gradient(125deg,rgba(255,0,102,.30),rgba(255,225,74,.34),rgba(67,255,219,.34),rgba(81,128,255,.35),rgba(218,85,255,.32),rgba(255,0,102,.30));background-size:360% 360%;mix-blend-mode:screen;box-shadow:0 0 24px rgba(255,229,92,.35),0 0 42px rgba(255,104,229,.34),0 0 64px rgba(87,229,255,.35);animation:ff2Foil 2.5s ease infinite}
+.ffcard.ff-abyss .ff2-abyss{display:block;border:1px solid rgba(216,145,255,.48);background:radial-gradient(circle,transparent 38%,rgba(89,20,145,.14) 70%,rgba(174,72,255,.28));box-shadow:0 0 34px rgba(180,76,255,.95),inset 0 0 24px rgba(99,22,160,.24);animation:ff2Abyss 1.8s ease-in-out infinite alternate}
+.ff2p{position:absolute;z-index:45;pointer-events:none;transform:translate(-50%,-50%);will-change:transform,opacity}
+.ff2star{color:#fff7ad;line-height:1;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,224,73,.95)}
+.ff2dot{width:5px;height:5px;border-radius:50%;background:#d2f6ff;box-shadow:0 0 10px rgba(117,228,255,.9)}
+.ff2bubble{border-radius:50%;border:1px solid rgba(225,252,255,.95);background:rgba(177,238,255,.22);box-shadow:0 0 10px rgba(124,224,255,.55)}
+.ff2rainbow{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,#fff,rgba(255,255,255,.4) 20%,rgba(255,122,220,.85) 55%,rgba(80,211,255,.9));box-shadow:0 0 14px rgba(255,194,95,.8),0 0 22px rgba(143,255,252,.65)}
+.ff2void{width:7px;height:7px;border-radius:50%;background:#d495ff;box-shadow:0 0 14px rgba(194,113,255,.98),0 0 28px rgba(63,6,112,.98)}
+@keyframes ff2Pulse{from{opacity:.45;transform:scale(.99)}to{opacity:1;transform:scale(1.02)}}
+@keyframes ff2Sweep{0%{background-position:170% 0}100%{background-position:-80% 0}}
+@keyframes ff2Sapphire{from{opacity:.62;transform:scale(.99)}to{opacity:1;transform:scale(1.025)}}
+@keyframes ff2Water{0%{background-position:0 0}100%{background-position:28px 18px}}
+@keyframes ff2Foil{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+@keyframes ff2Abyss{from{opacity:.5;transform:scale(.98)}to{opacity:1;transform:scale(1.03)}}
+@media(prefers-reduced-motion:reduce){.ff2-layer{animation:none!important}}
+/* ---- the shop ---- */
+.ffshop{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px}
+.ffx{background:var(--surface);border:1px solid var(--hairline);border-radius:4px;
+  padding:11px 12px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--bevel)}
+.ffx.own{border-color:var(--chrome)}
+.ffx.on{border-color:var(--carbon);box-shadow:var(--bevel),0 0 0 2px var(--amberc) inset}
+.ffxn{font-size:13.5px;font-weight:800;color:var(--tx);display:flex;align-items:center;gap:7px}
+.ffxlive{background:var(--amberc);color:var(--carbon);font-size:9.5px;font-weight:800;
+  letter-spacing:.08em;padding:1px 6px;border-radius:2px}
+.ffxd{font-size:12px;line-height:1.45;color:var(--deep);flex:1}
+.ffx .btn{width:100%}
 .tank{position:relative;height:min(60vh,520px);border-radius:6px;overflow:hidden;cursor:crosshair;
   /* water: a shaft of light from the top left, deeper and colder toward the floor */
   background:
@@ -3319,7 +3425,10 @@ function mickIdx(){
   return _mickIdx;
 }
 const MICKDESC=f=>mickIdx().get(f)||"";
-const hasSym=c=>mickIdx().has(c.f)||!!(c.mk&&c.mk.length);
+/* A card has a Mousey if it is in the hand-written list, OR carries marker
+   circles from the tagger, OR is tagged "mousey" there. The last two are how a
+   new find gets in without editing this file. */
+const hasSym=c=>mickIdx().has(c.f)||!!(c.mk&&c.mk.length)||(c.tg||[]).includes("mousey");
 function symLayer(c){
   if(!(c.mk&&c.mk.length))return "";
   return `<div class="syml">${c.mk.map(s=>
@@ -4352,199 +4461,307 @@ function renderCredits(){
    food when it appears. Dust accrues per second of watching, which is the whole
    deal — you're paid to leave him alone. */
 let AQ=null;
-function stopAqua(){if(AQ&&AQ.raf){cancelAnimationFrame(AQ.raf);clearInterval(AQ.tick);
-  clearInterval(AQ.drop);clearInterval(AQ.bub);AQ.raf=null}AQ=null}
-const AQKEY="fs3_aqua";
+function stopAqua(){if(AQ){
+  if(AQ.raf)cancelAnimationFrame(AQ.raf);
+  clearInterval(AQ.tick);clearInterval(AQ.drop);clearInterval(AQ.bub);
+  /* The effect loops fire every 70–500ms. Left running they keep appending
+     particles to a node that is no longer on the page — invisible, but it
+     never stops. */
+  (AQ.fx||[]).forEach(clearInterval);
+  AQ.raf=null}AQ=null}
+const AQKEY="fs3_aqua",FFXKEY="fs3_ffx";
+/* Card effects for Feed Flounder — bought with dust, worn on the Flounder card
+   while you play. Cosmetic only, like titles, which is why they can live in
+   localStorage. Several can run at once; that's the fun of it.
+
+   Priced so the cheap two are an hour's play and Abyss is something you work
+   towards. Ordered by cost so the shop reads as a ladder. */
+const FFX=[
+ {id:"bubbles",  l:"Bubble Stream", c:50,   d:"A steady rise of bubbles off the card."},
+ {id:"water",    l:"Water Ripple",  c:120,  d:"Light dances across it as you swim."},
+ {id:"shimmer",  l:"Shimmer",       c:300,  d:"A foil sweep and a scatter of glints."},
+ {id:"sapphire", l:"Sapphire Glow", c:600,  d:"Deep blue light pulsing at the edges."},
+ {id:"sparkles", l:"Comet Trail",   c:1200, d:"Stars stream off you as you move. Turn hard for a burst."},
+ {id:"legendary",l:"Legendary Foil",c:2500, d:"Full rainbow foil. Everyone can see it."},
+ {id:"abyss",    l:"Abyss",         c:5000, d:"Something purple and wrong follows you around."}];
+const ffxLoad=()=>{const v=load(FFXKEY,{owned:[],active:[]});
+  return {owned:v.owned||[],active:v.active||[]}};
 function renderAqua(){
   stopAqua();
-  const fish=CARDS.find(c=>c.f==="Flounder - Voice of Reason")||CARDS.find(c=>c.n==="Flounder");
   const st=load(AQKEY,{secs:0,fed:0,coco:0});
   $("aquapage").innerHTML=`<div class="page">
     <button class="btn" id="aqExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">🐠</span>Blue Striped Fish Aquarium</h1>
-    <p class="lede">He swims. You get dust for every ten seconds he's on screen. Move your mouse in
-      the tank and he'll drift over; food falls now and then and he'll go and get it in his own
-      time. Nothing here is in a hurry.</p>
-    <div class="tank" id="tank">
-      <div class="bubbles" id="tbub"></div>
-      ${[[7,54],[13,38],[19,62],[80,46],[86,30],[92,58]].map(([l,h],i)=>
-        `<div class="weed" style="left:${l}%;animation-delay:${(i*0.9).toFixed(1)}s">
-           <i style="height:${h}px"></i></div>`).join("")}
-      <div class="castle"></div>
-      <div class="floor"></div>
-      <img class="fish" id="fish" src="${esc(fish&&fish.img||"")}" alt="Flounder">
-      <div class="tankhud">
-        <span><b id="aqSecs">${N(st.secs)}</b> sec watched</span>
-        <span><b id="aqFed">${N(st.fed)}</b> fed</span>
-        <span><b id="aqCoco">${N(st.coco||0)}</b> coconuts</span>
-        <span><b id="aqDust">0</b> dust this visit</span>
-      </div>
-      <button class="btn go feedbtn" id="aqFeed">Sprinkle flakes</button>
+    <h1><span class="gi">🐠</span>Feed Flounder</h1>
+    <p class="lede">Move your mouse or finger and he swims after it. Eat fish food, earn dust —
+      that's it. Potatoes are worth ten and make him chonky; coconuts are worth twenty-five
+      and bonk him.</p>
+    <div class="ffgame" id="ffgame">
+      <div class="ffhud"><span class="ffdusti"></span>Dust <b id="ffdust">0</b></div>
+      <div class="fftitle"><h2>FEED FLOUNDER</h2><p>eat fish food. earn dust. that's it.</p></div>
+      <div class="ffcard" id="ffcard"></div>
+      <div class="ffhint" id="ffhint">Move your finger or mouse to swim</div>
+      <div class="ffweed s1"></div><div class="ffweed s2"></div>
+      <div class="ffweed s3"></div><div class="ffweed s4"></div>
       <button class="btn fsbtn" id="aqFull" title="Full screen">⛶ Full screen</button>
     </div>
-    <div class="hint" style="margin-top:9px">Click anywhere in the tank to sprinkle food. Every so
-      often a coconut goes in instead — those are worth ten, and he will get to it eventually.</div>
+    <h3 class="sec2" style="margin-top:16px">Card effects</h3>
+    <p class="hint" style="margin:-2px 0 10px">Bought with your dust and worn on the card while
+      you play. Stack as many as you like.</p>
+    <div class="ffshop" id="ffshop"></div>
+    <div class="tankhud" style="position:static;margin-top:14px">
+      <span><b id="aqFed">${N(st.fed)}</b> fed</span>
+      <span><b id="aqCoco">${N(st.coco||0)}</b> coconuts</span>
+      <span><b id="aqDust">0</b> dust this visit</span>
+    </div>
     ${leaderboard("aqua")}
   </div>`;
-  const ex=$("aqExit");if(ex)ex.onclick=()=>{stopAqua();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
-  /* Full screen. The physics all read the tank's live bounding box every frame,
-     so it simply becomes a bigger tank — no re-layout needed. */
+  const ex=$("aqExit");
+  if(ex)ex.onclick=()=>{stopAqua();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+
+  const game=$("ffgame"),card=$("ffcard"),dustEl=$("ffdust"),hint=$("ffhint");
+  if(!game||!card)return;
+
   const fs=$("aqFull");
   if(fs)fs.onclick=()=>{
-    const t=$("tank");if(!t)return;
     const on=document.fullscreenElement||document.webkitFullscreenElement;
     if(on){(document.exitFullscreen||document.webkitExitFullscreen).call(document)}
-    else{const go=t.requestFullscreen||t.webkitRequestFullscreen;
-      if(go)go.call(t); else toast("Your browser won't allow full screen here")}
-  };
-  document.onfullscreenchange=()=>{
-    const f=$("aqFull");if(!f)return;
-    f.textContent=document.fullscreenElement?"⛶ Exit full screen":"⛶ Full screen";
-  };
-  const tank=$("tank"),el=$("fish");
-  if(!tank||!el)return;
-  AQ={x:120,y:100,vx:1.1,vy:.35,face:1,food:[],earn:0,st,way:null,wayT:0,rest:0};
-  const R=()=>tank.getBoundingClientRect();
-  tank.onmousemove=e=>{const r=R();AQ.mouse={x:e.clientX-r.left,y:e.clientY-r.top};AQ.mouseT=Date.now()};
-  tank.onmouseleave=()=>{AQ.mouse=null};
-  /* One sprinkle is a small scatter of flakes, because one lone pellet looks
-     like a bug. Roughly one drop in nine is a coconut instead — worth ten. */
-  const COCO_ODDS=0.11;
-  const addFood=(fx,fy,coco)=>{
-    const d=document.createElement("div");
-    d.className="food "+(coco?"coco":"flake");
-    if(coco)d.textContent="🥥";
-    d.style.left=fx+"px";d.style.top=fy+"px";tank.appendChild(d);
-    // CENTRE, not top-left: he steers by his centre and eats by his centre, and
-    // mixing the two left him hovering half a body-width away, forever.
-    const w=d.offsetWidth||7,h=d.offsetHeight||5;
-    AQ.food.push({el:d,x:fx+w/2,y:fy+h/2,coco:!!coco,vy:.10+Math.random()*.14});
-  };
-  const dropFood=(x,y)=>{
-    const r=R();
-    const coco=Math.random()<COCO_ODDS;
-    const cx=x??(40+Math.random()*(r.width-80)),cy=y??(14+Math.random()*30);
-    if(coco){addFood(cx,cy,true);return}
-    const n=3+Math.floor(Math.random()*3);
-    for(let i=0;i<n;i++)
-      addFood(cx+(Math.random()-.5)*34,cy+(Math.random()-.5)*18,false);
-  };
-  $("aqFeed").onclick=()=>dropFood();
-  tank.onclick=e=>{
-    if(!AQ)return;
-    /* At the cap, evict the oldest flake rather than silently ignoring the
-       click — a control that sometimes does nothing feels broken. Coconuts are
-       never evicted; they're worth ten and he will get to them. */
-    while(AQ.food.length>=26){
-      const i=AQ.food.findIndex(f=>!f.coco);
-      if(i<0)break;
-      AQ.food[i].el.remove();AQ.food.splice(i,1);
-    }
-    const r=R();dropFood(e.clientX-r.left,e.clientY-r.top);
-  };
-  AQ.drop=setInterval(()=>{if(AQ.food.length<3)dropFood()},26000);
-  setTimeout(()=>dropFood(),1500);
-  /* a steady stream of bubbles off the left-hand plants */
-  AQ.bub=setInterval(()=>{
-    if(!AQ)return;const r=R();
-    const b=document.createElement("div");b.className="bub2";
-    b.style.left=(6+Math.random()*16)+"%";
-    b.style.setProperty("--h",(r.height-30)+"px");
-    b.style.setProperty("--dx",((Math.random()-.5)*40).toFixed(0)+"px");
-    b.style.animationDuration=(9+Math.random()*6).toFixed(1)+"s";
-    tank.appendChild(b);setTimeout(()=>b.remove(),8000);
-  },2200);
-  AQ.tick=setInterval(()=>{
-    if(!AQ)return;
-    AQ.st.secs++;save(AQKEY,AQ.st);
-    const se=$("aqSecs");if(se)se.textContent=N(AQ.st.secs);
-    if(AQ.st.secs%10===0){if(dustGain(1))AQ.earn++;
-      const de=$("aqDust");if(de)de.textContent=N(AQ.earn);}
-  },1000);
-  const step=()=>{
-    if(!AQ)return;
-    const r=R(),W=r.width,H=r.height,fw=el.offsetWidth||70,fh=el.offsetHeight||98;
-    /* Food sinks, the way flakes actually do, and settles just above the gravel.
-       Before this it hung wherever it spawned — up near the top — so he lived up
-       there waiting for the next one and never used the tank. */
-    const FLOOR=H-34;
-    AQ.food.forEach(f=>{
-      if(f.y<FLOOR-8){f.y+=f.vy;f.el.style.top=(f.y-3)+"px"}
-      else f.rest=(f.rest||0)+1;
-    });
-    /* If something is somehow still uneaten after a long rest on the gravel it
-       dissolves rather than becoming a thing he circles forever. */
-    AQ.food=AQ.food.filter(f=>{
-      if((f.rest||0)<2400)return true;
-      f.el.style.transition="opacity 1.2s";f.el.style.opacity="0";
-      setTimeout(()=>f.el.remove(),1300);return false;
-    });
+    else{const go=game.requestFullscreen||game.webkitRequestFullscreen;
+      if(go)go.call(game); else toast("Your browser won't allow full screen here")}};
+  document.onfullscreenchange=()=>{const f=$("aqFull");
+    if(f)f.textContent=document.fullscreenElement?"⛶ Exit full screen":"⛶ Full screen"};
 
-    // target: food, else the mouse if it moved recently, else a wander waypoint
-    // targets are centres; steer so HIS centre lands on them
-    let tx=null,ty=null,urgent=false;
-    if(AQ.food.length){const f=AQ.food[0];tx=f.x-fw/2;ty=f.y-fh/2;urgent=true}
-    else if(AQ.mouse&&Date.now()-AQ.mouseT<2500){tx=AQ.mouse.x-fw/2;ty=AQ.mouse.y-fh/2;urgent=true}
-    else{
-      /* Idle is a real behaviour, not a random walk. He picks somewhere to be,
-         swims there unhurriedly, hangs about a moment, then picks somewhere
-         else — and the waypoints span the whole tank, so he actually uses it. */
-      const now=Date.now();
-      if(!AQ.way||now>AQ.wayT||
-         (Math.abs(AQ.way.x-AQ.x)<26&&Math.abs(AQ.way.y-AQ.y)<26)){
-        if(!AQ.rest||now>AQ.rest){
-          AQ.way={x:20+Math.random()*(W-fw-40),
-                  y:18+Math.random()*Math.max(20,FLOOR-fh-24)};
-          AQ.wayT=now+16000+Math.random()*14000;
-          AQ.rest=now+4000+Math.random()*7000;   // hang about a good while
-        }
-      }
-      if(AQ.way){tx=AQ.way.x;ty=AQ.way.y}
-    }
-    if(tx!=null){
-      const g=urgent?0.030:0.012;   // unhurried; he is not late for anything              // he hurries for food, not for scenery
-      AQ.vx+=Math.sign(tx-AQ.x)*g;AQ.vy+=Math.sign(ty-AQ.y)*(g*0.8);
-    }else{
-      AQ.vx+=(Math.random()-0.5)*0.06;AQ.vy+=(Math.random()-0.5)*0.05;
-    }
-    // water: gentle drag, capped speed, a slow bob
-    AQ.vx*=0.992;AQ.vy*=0.986;   // more water, more glide
-    // cruising is slower than feeding — a fish mooching looks nothing like a fish eating
-    const cap=urgent?1.5:0.62;      // a drifting cruise, not a dart
-    AQ.vx=Math.max(-cap,Math.min(cap,AQ.vx));AQ.vy=Math.max(-cap*.7,Math.min(cap*.7,AQ.vy));
-    AQ.x+=AQ.vx;AQ.y+=AQ.vy+Math.sin(Date.now()/1600)*0.14;   // a slow, long breath
-    if(AQ.x<0){AQ.x=0;AQ.vx=Math.abs(AQ.vx)}
-    if(AQ.x>W-fw){AQ.x=W-fw;AQ.vx=-Math.abs(AQ.vx)}
-    if(AQ.y<0){AQ.y=0;AQ.vy=Math.abs(AQ.vy)}
-    if(AQ.y>FLOOR-fh+8){AQ.y=FLOOR-fh+8;AQ.vy=-Math.abs(AQ.vy)}   // he can't swim through gravel
-    if(Math.abs(AQ.vx)>0.25)AQ.face=AQ.vx>0?1:-1;
-    el.style.transform=`translate(${AQ.x}px,${AQ.y}px) scaleX(${AQ.face}) rotate(${AQ.vy*4}deg)`;
-    // eat
-    AQ.food=AQ.food.filter(f=>{
-      /* The eat radius follows his BODY, not a magic 34px. It used to be a flat
-         34 in both axes, but he can only get his centre to within 41px of the
-         gravel — so a coconut that had sunk to the floor sat exactly 1px out of
-         reach and he butted against the ground trying to get it, forever.
-         Anything overlapping a fish this size should be eaten. */
-      const dx=Math.abs(f.x-(AQ.x+fw/2)), dy=Math.abs(f.y-(AQ.y+fh/2));
-      if(dx<fw*0.62&&dy<fh*0.56){
-        f.el.remove();
-        const pay=f.coco?20:2;
-        AQ.st.fed++;if(f.coco)AQ.st.coco=(AQ.st.coco||0)+1;
-        AQ.earn+=dustGain(pay);save(AQKEY,AQ.st);
-        const fe=$("aqFed");if(fe)fe.textContent=N(AQ.st.fed);
-        const ce=$("aqCoco");if(ce)ce.textContent=N(AQ.st.coco||0);
-        const de=$("aqDust");if(de)de.textContent=N(AQ.earn);
-        if(f.coco)toast("🥥 +20 dust");
-        if(AQ.st.fed>=25)unlockHidden("h_aqua");
-        lbPost("aqua",AQ.st.fed);
-        return false;
-      }
-      return true;
-    });
-    AQ.raf=requestAnimationFrame(step);
-  };
-  AQ.raf=requestAnimationFrame(step);
+  /* Everything below is Ben's Feed Flounder, moved off the viewport and onto
+     the tank element: the original read innerWidth/innerHeight because it was
+     its own page. R() is the live box, so full screen just makes it bigger.
+
+     The one real change is dust. The standalone game kept its own counter in
+     localStorage under feedFlounderDust; here it goes through dustGain(), the
+     single seam every other game already uses, so it lands in the same balance
+     as everything else and respects the Dust switch in Settings. */
+  const R=()=>game.getBoundingClientRect();
+  const r0=R();
+  const pos={x:r0.width/2,y:r0.height*.55},target={...pos},vel={x:0,y:0},foods=[];
+  let started=false,chonkyUntil=0,bonkUntil=0,visit=0;
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+  AQ={raf:null,st,earn:0};
+
+  function setTarget(cx,cy){
+    const r=R();
+    target.x=clamp(cx-r.left,50,r.width-50);
+    target.y=clamp(cy-r.top,40,r.height-46);
+    if(!started){started=true;hint.classList.add("hide")}}
+  game.onpointermove=e=>setTarget(e.clientX,e.clientY);
+  game.onpointerdown=e=>setTarget(e.clientX,e.clientY);
+  game.ontouchmove=e=>{const t=e.touches[0];if(t)setTarget(t.clientX,t.clientY)};
+
+  const chooseType=()=>{const q=Math.random();
+    return q<.01?"coconut":q<.04?"potato":q<.12?"rare":"pellet"};
+  function spawnFood(){
+    if(!AQ||foods.length>=14)return;
+    const r=R(),type=chooseType(),el=document.createElement("div");
+    el.className="ffood "+(type==="rare"?"pellet rare":type==="pellet"?"pellet":type);
+    if(type==="potato")el.textContent="🥔";
+    if(type==="coconut")el.textContent="🥥";
+    const f={el,type,x:26+Math.random()*Math.max(40,r.width-52),
+      y:60+Math.random()*Math.max(40,r.height-120),
+      phase:Math.random()*Math.PI*2,drift:.18+Math.random()*.28,spin:(Math.random()-.5)*1.6};
+    el.style.left=f.x+"px";el.style.top=f.y+"px";game.appendChild(el);foods.push(f);}
+
+  function eat(i){
+    const f=foods[i];
+    const value=f.type==="coconut"?25:f.type==="potato"?10:f.type==="rare"?10:1;
+    const got=dustGain(value);                    // the shared balance
+    visit+=got;AQ.earn=visit;
+    dustEl.textContent=N(DUST.bal);
+    const d=$("aqDust");if(d)d.textContent=N(visit);
+    st.fed=(st.fed||0)+1;
+    if(f.type==="coconut")st.coco=(st.coco||0)+1;
+    save(AQKEY,st);
+    const fe=$("aqFed"),ce=$("aqCoco");
+    if(fe)fe.textContent=N(st.fed);
+    if(ce)ce.textContent=N(st.coco||0);
+    if(st.fed>=25)unlockHidden("h_aqua");
+    if(AQ.paintFX)AQ.paintFX();
+    const pop=document.createElement("div");
+    pop.className="ffpop"+((f.type==="potato"||f.type==="coconut")?" special":"");
+    pop.textContent=f.type==="coconut"?"BONK! +25 Dust"
+      :f.type==="potato"?"POTATO! +10 Dust":"+"+value+" Dust";
+    pop.style.left=f.x+"px";pop.style.top=f.y+"px";
+    game.appendChild(pop);setTimeout(()=>pop.remove(),720);
+    if(f.type==="potato")chonkyUntil=performance.now()+4000;
+    if(f.type==="coconut")bonkUntil=performance.now()+450;
+    f.el.remove();foods.splice(i,1);
+    if(navigator.vibrate)navigator.vibrate(f.type==="coconut"?[35,30,35]
+      :f.type==="potato"?[25,20,25]:f.type==="rare"?[20,25,20]:18);
+    setTimeout(spawnFood,250+Math.random()*700);}
+
+  function bubble(){
+    if(!AQ)return;
+    const r=R(),b=document.createElement("div");
+    b.className="ffbub";const sz=4+Math.random()*13;
+    b.style.width=b.style.height=sz+"px";
+    b.style.left=Math.random()*r.width+"px";b.style.top=(r.height+20)+"px";
+    game.appendChild(b);
+    const dur=5000+Math.random()*5500,start=performance.now();
+    (function up(t){
+      if(!AQ){b.remove();return}
+      const q=(t-start)/dur;if(q>=1){b.remove();return}
+      b.style.transform=`translate(${Math.sin(q*10)*18}px,${-q*(r.height+100)}px)`;
+      b.style.opacity=String(1-q);requestAnimationFrame(up)})(start);}
+
+  dustEl.textContent=N(DUST.bal);
+  AQ.bub=setInterval(bubble,650);
+  for(let i=0;i<10;i++)spawnFood();
+  AQ.drop=setInterval(spawnFood,1300);
+
+  let last=performance.now();
+  function frame(now){
+    if(!AQ)return;
+    const dt=Math.min(32,now-last)/16.67;last=now;
+    const dx=target.x-pos.x,dy=target.y-pos.y;
+    vel.x+=dx*.018*dt;vel.y+=dy*.018*dt;
+    vel.x*=Math.pow(.82,dt);vel.y*=Math.pow(.82,dt);
+    pos.x+=vel.x*dt;pos.y+=vel.y*dt;
+    const tilt=clamp(vel.x*1.4,-12,12),bob=Math.sin(now/320)*2,
+      chonky=now<chonkyUntil?1.22:1,bonk=now<bonkUntil?Math.sin(now/22)*8:0;
+    card.style.left=(pos.x+bonk)+"px";card.style.top=(pos.y+bob)+"px";
+    card.style.transform=`translate(-50%,-50%) scale(${chonky}) rotate(${tilt}deg)`;
+    for(let i=foods.length-1;i>=0;i--){
+      const f=foods[i];f.phase+=.018*dt;
+      f.y+=Math.sin(f.phase)*.08+f.drift*.08;f.x+=Math.cos(f.phase*.75)*.07;
+      const special=f.type==="potato"||f.type==="coconut";
+      const rot=special?` rotate(${f.phase*40*f.spin}deg)`:"";
+      f.el.style.transform=`translate(${Math.sin(f.phase)*4}px,${Math.cos(f.phase*.8)*4}px)${rot}`;
+      const ax=f.x-pos.x,ay=f.y-pos.y;
+      if(ax*ax+ay*ay<58*58)eat(i);}
+    AQ.raf=requestAnimationFrame(frame);}
+  AQ.raf=requestAnimationFrame(frame);
+
+  /* ---- card effects ------------------------------------------------------
+     Ben's effects-v2, wired to dust. The original read a shop state that never
+     existed in this build, so it was inert; ownership now lives in FFXKEY and
+     the particles are parented to the game box rather than the page. Every
+     interval is parked on AQ so stopAqua() kills them when you leave — without
+     that they'd keep firing into a detached node for the rest of the session. */
+  FFX.forEach(x=>{const l=document.createElement("div");
+    l.className="ff2-layer ff2-"+x.id;card.appendChild(l)});
+  const on=id=>ffxLoad().active.includes(id);
+  const rnd=(a,b)=>a+Math.random()*(b-a);
+  const hidden=()=>document.hidden;
+  function particle(cls,x,y,text,size){
+    const el=document.createElement("span");el.className="ff2p "+cls;
+    if(text)el.textContent=text;
+    if(size)el.style.fontSize=size+"px";
+    const r=R();el.style.left=(x-r.left)+"px";el.style.top=(y-r.top)+"px";
+    game.appendChild(el);return el}
+  const anim=(el,frames,dur)=>{
+    const a=el.animate(frames,{duration:dur,easing:"cubic-bezier(.15,.7,.22,1)"});
+    a.onfinish=()=>el.remove()};
+  const m={x:0,y:0,vx:0,vy:0,s:0,a:0,t:0,ready:false};
+  AQ.fx=[];
+  const every=(ms,fn)=>AQ.fx.push(setInterval(fn,ms));
+  every(70,()=>{
+    const r=card.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+    if(!m.ready){m.x=x;m.y=y;m.ready=true;return}
+    const dx=x-m.x,dy=y-m.y,na=Math.atan2(dy,dx||.001);
+    let d=na-m.a;while(d>Math.PI)d-=Math.PI*2;while(d<-Math.PI)d+=Math.PI*2;
+    m.t=Math.abs(d);m.a=na;m.vx=dx;m.vy=dy;m.s=Math.hypot(dx,dy);m.x=x;m.y=y});
+
+  every(180,()=>{if(hidden()||!on("bubbles"))return;
+    const r=card.getBoundingClientRect(),n=m.s>3?2:1;
+    for(let i=0;i<n;i++){const sz=rnd(9,19);
+      const p=particle("ff2bubble",r.left+r.width*rnd(.2,.8),r.top+r.height*rnd(.55,.92));
+      p.style.width=p.style.height=sz+"px";
+      anim(p,[{transform:"translate(-50%,-50%) scale(.4)",opacity:0},
+        {transform:"translate(-50%,-50%) scale(1)",opacity:.95,offset:.2},
+        {transform:`translate(calc(-50% + ${rnd(-18,18)+m.vx*1.5}px),calc(-50% - ${rnd(60,105)+m.s*5}px)) scale(1.4)`,opacity:0}],rnd(1200,1700))}});
+
+  every(500,()=>{if(hidden()||!on("shimmer"))return;
+    const r=card.getBoundingClientRect();
+    const p=particle("ff2star",r.left+rnd(10,r.width-10),r.top+rnd(10,r.height-14),
+      Math.random()>.5?"✦":"✧",rnd(13,19));
+    anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.2)",opacity:1,offset:.3},
+      {transform:`translate(calc(-50% + ${rnd(-8,8)}px),calc(-50% - ${rnd(10,22)}px)) scale(.25)`,opacity:0}],rnd(700,1000))});
+
+  every(250,()=>{if(hidden()||!on("sapphire"))return;
+    const r=card.getBoundingClientRect(),e=Math.floor(Math.random()*4);
+    const x=e<2?r.left+r.width*(e?.94:.06):r.left+r.width*rnd(.15,.85);
+    const y=e>1?r.top+r.height*(e===2?.08:.92):r.top+r.height*rnd(.15,.85);
+    const p=particle("ff2dot",x,y);
+    anim(p,[{transform:"translate(-50%,-50%) scale(.3)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.35)",opacity:1,offset:.3},
+      {transform:`translate(calc(-50% + ${rnd(-20,20)}px),calc(-50% + ${rnd(-20,20)}px)) scale(.3)`,opacity:0}],rnd(850,1200))});
+
+  const burst=(x,y,n)=>{for(let i=0;i<n;i++){
+    const a=rnd(0,Math.PI*2),d=rnd(20,48);
+    const p=particle("ff2star",x,y,Math.random()>.35?"✦":"✧",rnd(14,21));
+    anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.18)",opacity:1,offset:.16},
+      {transform:`translate(calc(-50% + ${Math.cos(a)*d}px),calc(-50% + ${Math.sin(a)*d}px)) scale(.16)`,opacity:0}],rnd(1100,1650))}};
+
+  every(90,()=>{if(hidden()||!on("sparkles")||!m.ready||m.s<1.1)return;
+    const mag=Math.max(m.s,.001),ux=m.vx/mag,uy=m.vy/mag,n=m.s>8?8:m.s>4?6:4;
+    for(let i=0;i<n;i++){
+      const tail=rnd(32,72)+Math.min(m.s*2.2,20),spread=18+tail*.28,lat=rnd(-spread,spread);
+      const x=m.x-ux*tail-uy*lat,y=m.y-uy*tail+ux*lat,dot=Math.random()<.12;
+      const p=particle(dot?"ff2dot":"ff2star",x,y,dot?"":(Math.random()>.38?"✦":"✧"),dot?0:rnd(14,22));
+      const db=rnd(20,52),sd=rnd(-10,10);
+      anim(p,[{transform:"translate(-50%,-50%) scale(.18)",opacity:0},
+        {transform:"translate(-50%,-50%) scale(1.12)",opacity:1,offset:.14},
+        {transform:`translate(calc(-50% + ${-ux*db-uy*sd}px),calc(-50% + ${-uy*db+ux*sd}px)) scale(.12)`,opacity:0}],rnd(1500,2200))}
+    if(m.t>.68&&m.s>3.5&&Math.random()>.32)burst(m.x,m.y,m.s>7?10:7)});
+
+  every(220,()=>{if(hidden()||!on("water"))return;
+    const r=card.getBoundingClientRect(),sz=rnd(7,13);
+    const p=particle("ff2bubble",r.left+r.width*rnd(.12,.88),r.top+r.height*rnd(.2,.9));
+    p.style.width=p.style.height=sz+"px";
+    anim(p,[{transform:"translate(-50%,-50%) scale(.35)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1)",opacity:.78,offset:.2},
+      {transform:`translate(calc(-50% + ${rnd(-10,10)}px),calc(-50% - ${rnd(25,45)}px)) scale(.2)`,opacity:0}],rnd(850,1200))});
+
+  every(170,()=>{if(hidden()||!on("legendary"))return;
+    const r=card.getBoundingClientRect(),a=rnd(0,Math.PI*2),rad=rnd(r.width*.25,r.width*.78),st2=Math.random()>.45;
+    const p=particle(st2?"ff2star":"ff2rainbow",
+      r.left+r.width/2+Math.cos(a)*rad*.8,r.top+r.height/2+Math.sin(a)*rad,
+      st2?(Math.random()>.5?"✦":"✧"):"",st2?rnd(13,19):0);
+    anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.2)",opacity:1,offset:.18},
+      {transform:`translate(calc(-50% + ${Math.cos(a)*rnd(20,45)}px),calc(-50% + ${Math.sin(a)*rnd(20,45)}px)) scale(.2)`,opacity:0}],rnd(900,1350))});
+
+  every(190,()=>{if(hidden()||!on("abyss"))return;
+    const r=card.getBoundingClientRect(),a=rnd(0,Math.PI*2),rad=rnd(r.width*.38,r.width*.9);
+    const p=particle("ff2void",r.left+r.width/2+Math.cos(a)*rad,r.top+r.height/2+Math.sin(a)*rad*1.2);
+    anim(p,[{transform:"translate(-50%,-50%) scale(.25)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.35)",opacity:1,offset:.25},
+      {transform:`translate(calc(-50% - ${Math.cos(a)*rnd(10,24)}px),calc(-50% - ${Math.sin(a)*rnd(10,30)}px)) scale(.1)`,opacity:0}],rnd(1100,1650))});
+
+  function paintFX(){
+    const v=ffxLoad();
+    card.className="ffcard "+v.active.map(i=>"ff-"+i).join(" ");
+    const sh=$("ffshop");if(!sh)return;
+    sh.innerHTML=FFX.map(x=>{
+      const owned=v.owned.includes(x.id),live=v.active.includes(x.id);
+      const afford=DUST.bal>=x.c;
+      return `<div class="ffx${live?" on":""}${owned?" own":""}">
+        <div class="ffxn">${esc(x.l)}${live?`<span class="ffxlive">ON</span>`:""}</div>
+        <div class="ffxd">${esc(x.d)}</div>
+        ${owned?`<button class="btn${live?" go":""}" data-ffxt="${x.id}">${live?"Take it off":"Wear it"}</button>`
+          :`<button class="btn${afford?" go":""}" data-ffxb="${x.id}"${afford?"":" disabled"}>${N(x.c)} dust</button>`}
+      </div>`}).join("");
+    sh.querySelectorAll("[data-ffxb]").forEach(b=>b.onclick=()=>{
+      const x=FFX.find(y=>y.id===b.dataset.ffxb);if(!x)return;
+      if(!dustSpend(x.c)){toast("Not enough dust yet");return}
+      const s2=ffxLoad();s2.owned.push(x.id);s2.active.push(x.id);
+      save(FFXKEY,s2);dustEl.textContent=N(DUST.bal);
+      toast(`${x.l} unlocked`);paintFX()});
+    sh.querySelectorAll("[data-ffxt]").forEach(b=>b.onclick=()=>{
+      const id=b.dataset.ffxt,s2=ffxLoad();
+      const i=s2.active.indexOf(id);i<0?s2.active.push(id):s2.active.splice(i,1);
+      save(FFXKEY,s2);paintFX()});
+  }
+  AQ.paintFX=paintFX;
+  paintFX();
 }
 
 /* ===================== give Flounder a click ===================== */
@@ -5072,6 +5289,19 @@ function renderMickeys(){
       looking. Click any card to open it, then hit <b>Show me where</b>.</p>
     ${bad.length?`<div class="up bad"><div class="uw">⚠ ${bad.length} entr${bad.length===1?"y":"ies"}
       name a card that isn't in the database: ${esc(bad.map(x=>x.c).join(", "))}</div></div>`:""}
+    ${(()=>{
+      /* Anything found since the list was written — tagged or circled in the
+         tagger — shows up here automatically as its own section. */
+      const extra=CARDS.filter(c=>!mickIdx().has(c.f)
+        &&(((c.mk||[]).length)||(c.tg||[]).includes("mousey")));
+      if(!extra.length)return "";
+      return `<h3 class="sec2">Found since</h3>
+        <div class="micks">${extra.map(c=>`
+          <button class="mick" data-mk="${esc(c.f)}">
+            ${c.img?`<img src="${esc(String(c.img))}" alt="${esc(c.f)}" loading="lazy">`:""}
+            <div class="mt">${esc(c.n)}<i>${esc(c.v)}</i></div>
+            <div class="mw">${(c.mk||[]).length?"Marked — open it and hit Show me where.":"Tagged as having one."}</div>
+          </button>`).join("")}</div>`})()}
     ${MICKEYS.map(g=>`
       <h3 class="sec2">${esc(g.set)}</h3>
       <div class="micks">${g.cards.map(x=>{
