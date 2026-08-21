@@ -1,7 +1,8 @@
 /* v30 — errata, foiling, reading progress, and the archive redesign. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
-const F="file://"+__dirname+"/flounder-search.html";
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};

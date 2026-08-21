@@ -1,5 +1,6 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -67,7 +68,7 @@ const offT=await p.evaluate(()=>getComputedStyle(document.querySelector("#tgTag 
 ok(offT==="none"||/matrix\(1, 0, 0, 1, 0/.test(offT),`…and slides back when off (${offT})`);
 await p.evaluate(()=>{document.getElementById("tgTag").click();document.getElementById("tgSto").click()});
 await p.waitForTimeout(600);
-await p.screenshot({path:"/sessions/kind-modest-ride/mnt/outputs/_shot_toggles.png",clip:{x:0,y:0,width:1100,height:230}});
+await p.screenshot({path:_W.data("_shot_toggles.png"),clip:{x:0,y:0,width:1100,height:230}});
 
 console.log("\n=== ALIAS COVERAGE ===");
 const cov=await p.evaluate(()=>{
@@ -81,7 +82,7 @@ const cov=await p.evaluate(()=>{
    that coverage never goes BACKWARDS, which is what a bad merge of art-tags.json
    would look like. Raise the floor when a big batch lands. */
 ok(cov.tagged>=866,`${cov.tagged} cards searchable by tag (floor 866)`);
-const TAGSRC=JSON.parse(require("fs").readFileSync(__dirname+"/art-tags.json","utf8"));
+const TAGSRC=JSON.parse(require("fs").readFileSync(_W.data("art-tags.json"),"utf8"));
 ok(Object.keys(TAGSRC.cards).length>=33,
    `${Object.keys(TAGSRC.cards).length} cards hand-tagged in art-tags.json`);
 ok(Object.keys(TAGSRC.aliases).length>=108,

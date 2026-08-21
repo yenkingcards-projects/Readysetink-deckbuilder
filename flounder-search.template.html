@@ -298,16 +298,16 @@ body.nocoll .collonly{display:none!important}
 
 
 /* ---- deck bar ---- */
-.deckbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:10px;
+/* Deck name / unsaved / Save, at the top of the deck panel. */
+.dhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px;
   background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
-  border-radius:2px;padding:7px 10px}
-.deckbar .sp{flex:1}
-.deckbar .dbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
-.deckbar b{color:var(--tx)}
+  border-radius:2px;padding:8px 10px}
+.dhname{flex:1;min-width:0;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.dhead b{color:var(--tx);font-size:14px;overflow:hidden;text-overflow:ellipsis}
 .dbdirty{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
   background:var(--amberc);color:var(--carbon);border:1px solid var(--amber-press);
   border-radius:2px;padding:2px 6px}
-body.browse .deckbar{display:none}
+.dbdirty[hidden]{display:none}
 /* ---- the save burst ---- */
 .spark{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:940}
 @media(prefers-reduced-motion:reduce){.spark{display:none}}
@@ -995,7 +995,10 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .tit.worn{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
 .tit .tt{font-size:15.2px;font-weight:800;color:var(--gold);margin-bottom:3px}
 .tit .td{font-size:12px;color:var(--deep);line-height:1.5;margin-bottom:10px;min-height:2.2em}
-.tit.blur .tt,.tit.blur .td{filter:blur(5px);user-select:none}
+/* The blur is gone. titleFace() withholds the name before it is ever
+   rendered, so there is nothing left to blur — and blurring the literal
+   string "???" only looked like a rendering fault. The "?" badge below
+   stays: that is what says "mystery" rather than "broken". */
 .tit.hid:not(.own) .tt{color:var(--deep);letter-spacing:.18em}
 .tit.hid:not(.own) .td{font-style:italic}
 .lockd{font-size:12px;color:var(--deep);border:1px dashed var(--line2);border-radius:2px;padding:3px 11px;display:inline-block}
@@ -1309,6 +1312,23 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .grp[open]>summary::before{transform:rotate(90deg)}
 .grp>summary .gn{margin-left:auto;color:var(--deep);font-weight:700;text-transform:none;letter-spacing:0}
 .grp>summary:hover{color:var(--tx)}
+/* ---- the Coconut block, last in Special searches ---- */
+.cocogrp{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.cocohint{font-size:12px;color:var(--deep);margin:0 0 9px 2px;max-width:70ch}
+.cocorow{display:flex;align-items:flex-start;gap:9px;flex-wrap:wrap;
+  padding:7px 0;border-bottom:1px solid var(--line)}
+.cocorow:last-child{border-bottom:none}
+.cocon{display:flex;align-items:center;gap:6px;flex:0 0 210px;text-align:left;
+  font-size:13px;font-weight:700;color:var(--link);padding:2px 0}
+.cocon:hover{color:var(--deep);text-decoration:underline}
+.cocon em{font-style:normal;font-weight:400;color:var(--deep);font-size:12px}
+.cocon .ci{width:10px;height:10px;border-radius:50%;flex:none;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.35)}
+.ci.amber{background:var(--amber)}.ci.amethyst{background:var(--amethyst)}
+.ci.emerald{background:var(--emerald)}.ci.ruby{background:var(--ruby)}
+.ci.sapphire{background:var(--sapphire)}.ci.steel{background:var(--steel)}
+.cocorow .chips{flex:1;min-width:200px}
+@media(max-width:600px){.cocon{flex-basis:100%}}
 /* small card grid used inside guided steps */
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;max-height:400px;overflow-y:auto;margin-top:9px}
 .mcard{position:relative;border-radius:2px;overflow:hidden;background:var(--panel2);border:1px solid var(--line)}
@@ -1342,43 +1362,32 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .chip.dead{opacity:.4}
 
 /* layout */
-.wrap{display:grid;grid-template-columns:230px minmax(0,1fr) 330px;gap:14px;margin-top:14px;align-items:start}
-/* Collapsed, the filter column gives its width back to the card grid rather
-   than leaving a 230px gutter of nothing. :has() does this with no JS; where
-   it isn't supported the column simply stays put, which is untidy but works. */
-.wrap:has(> #side:not([open])){grid-template-columns:auto minmax(0,1fr) 330px}
-@media(max-width:1240px){.wrap{grid-template-columns:220px minmax(0,1fr)}
-  .wrap:has(> #side:not([open])){grid-template-columns:auto minmax(0,1fr)}}
-@media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}
-  .wrap:has(> #side:not([open])){grid-template-columns:1fr}}
-.side,.deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
-.side,.deck{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto;padding:11px}
-@media(max-width:900px){.side,.deck{position:static;max-height:none}}
+/* Filters left the grid, so the wrap is cards + deck. */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;margin-top:14px;align-items:start}
+@media(max-width:1240px){.wrap{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}}
+.deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
+.deck{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto;padding:11px}
+@media(max-width:900px){.deck{position:static;max-height:none}}
 
-/* ---- the Filters spine ---- */
-.side{padding:0}
-.side>#sidebody{padding:11px}
-.sidesum{list-style:none;cursor:pointer;display:flex;align-items:center;gap:7px;
-  padding:10px 11px;background:var(--carbon);color:var(--on-dark);
-  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
-  background-size:4px 4px;
-  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;
-  border-radius:6px 6px 0 0;position:sticky;top:0;z-index:2}
-.sidesum::-webkit-details-marker{display:none}
-.sidesum::before{content:"▸";font-size:11px;transition:transform .15s}
-.side[open] .sidesum::before{transform:rotate(90deg)}
-.side:not([open]) .sidesum{border-radius:6px}
-.sidesum .fcnt{background:var(--amberc);color:var(--carbon);border-radius:2px;
-  padding:1px 6px;font-size:10.5px;letter-spacing:.04em}
-.sidesum .fcnt:empty{display:none}
-/* Closed on a wide screen the whole panel becomes a vertical spine, so the
-   word "Filters" is still readable while costing ~40px instead of 230px. */
-@media(min-width:901px){
-  .side:not([open]) .sidesum{writing-mode:vertical-rl;padding:12px 10px;gap:9px}
-  .side:not([open]) .sidesum::before{transform:rotate(90deg)}
-  .side:not([open]) .sidesum .fcnt{writing-mode:horizontal-tb}
-}
-@media print{.side{display:none!important}}
+/* ---- Filters, wearing the Special-searches suit ----
+   The twelve filter sections were built for a 230px column, so open they lay
+   out as a multi-column grid rather than one very long list across the full
+   page width. */
+/* Every custom <summary> on the site draws its own ▸ and hides the browser's.
+   `list-style:none` and the -webkit- pseudo were doing that job, but current
+   Chrome still paints ::marker on a flex summary — a 2px dot pushed to the far
+   right by the count span's margin-left:auto. Invisible in a 230px sidebar,
+   obvious once the filters went full width. */
+.special>summary::marker,.grp>summary::marker,details.sec>summary::marker,
+.otherset>summary::marker,.hidwrap>summary::marker{content:"";font-size:0}
+.filters .sec{break-inside:avoid}
+#sidebody{columns:230px;column-gap:16px}
+@media(max-width:600px){#sidebody{columns:1}}
+.filters>summary .cnt{background:var(--amberc);color:var(--carbon);border-radius:2px;
+  padding:1px 7px;font-weight:700;font-size:11px}
+.filters>summary .cnt:empty{display:none;}
+@media print{.filters{display:none!important}}
 
 details.sec{border-bottom:1px solid var(--line)}
 details.sec:last-child{border-bottom:none}
@@ -1387,7 +1396,12 @@ details.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:cent
 details.sec>summary::-webkit-details-marker{display:none}
 details.sec>summary::before{content:"▸";color:var(--deep);transition:transform .15s}
 details.sec[open]>summary::before{transform:rotate(90deg)}
-details.sec>summary .c{margin-left:auto;font-size:12px;color:var(--deep);text-transform:none;letter-spacing:0;font-weight:500}
+/* Was ".c", which is ALSO the card-tile class — so this empty count span
+   quietly inherited the tile's white fill and 1px chrome border and painted
+   itself as a 2px dot at the right of every filter heading. Renamed rather
+   than patched, because the collision would come back the next time a tile
+   style changed. */
+details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text-transform:none;letter-spacing:0;font-weight:500}
 .sb{padding:2px 0 10px}
 .inks{display:flex;flex-wrap:wrap;gap:5px}
 .ic{border:1px solid var(--chrome);border-radius:2px;padding:4px 9px;font-size:12px;
@@ -1819,16 +1833,10 @@ body.noremind .c.illegal img{filter:none}
 
 <main>
 <section class="view on" id="vSearch">
-  <!-- Deck bar: only shown on the Deck builder tab (body.browse hides it), which
-       is why the format selector moved here from the masthead — format belongs
-       to a deck, so it belongs beside the deck. -->
-  <div class="deckbar" id="deckbar">
-    <span class="dbl">Deck</span>
-    <b id="dbName">New deck</b>
-    <span id="dbDirty" class="dbdirty" hidden>unsaved</span>
-    <span class="sp"></span>
-    <button class="btn go" id="dbSave">Save deck</button>
-  </div>
+  <!-- The deck bar used to run full-width across the top of the page: deck
+       name, "unsaved", and Save, a long way from the deck panel they describe.
+       All three moved inside the panel. Everything about a deck now lives in
+       one box. -->
   <div class="sfield" id="sf"><input id="q" type="text" placeholder="Try one of our special searches"></div>
   <div class="srow toggles">
     <button class="swx" id="tgTag" aria-pressed="false">
@@ -1859,16 +1867,17 @@ body.noremind .c.illegal img{filter:none}
       <div class="groups" id="groups"></div>
     </div>
   </details>
+  <!-- Filters is a full-width bar, sitting directly under Special searches and
+       built the same way, because they are the same kind of thing: a drawer of
+       controls you open when you want them. The first attempt collapsed the
+       sidebar into a vertical spine down the left edge — it saved space but it
+       looked like a scrollbar with words on it, and it didn't match anything
+       else on the page. -->
+  <details class="special filters" id="side">
+    <summary><span>🎛️ Filters</span><span class="cnt" id="fcnt"></span></summary>
+    <div class="specialbody"><div id="sidebody"></div></div>
+  </details>
   <div class="wrap">
-    <!-- Filters collapse to a narrow spine. Closed by default: the sidebar is
-         twelve stacked sections and it was the first thing a newcomer saw, on
-         a site whose actual promise is "type what you half-remember". The open
-         state is remembered per browser, so anyone who lives in the filters
-         opens it once and never thinks about it again. -->
-    <details class="side" id="side">
-      <summary class="sidesum"><span class="sst">Filters</span><span class="fcnt" id="fcnt"></span></summary>
-      <div id="sidebody"></div>
-    </details>
     <section class="cards">
       <div class="rbar"><div class="ct" id="ct">—</div>
         <select id="sort">
@@ -2211,8 +2220,15 @@ const ITEM_HATE=new RegExp([
 const PING=/deals? 1 damage|put 1 damage counter|puts? a damage counter|move 1 damage counter/i;
 
 const GROUPS=[
- {g:"Staples & tribes",chips:[
-   {id:"staple",l:"★ Staples",fn:c=>isStar(c.f)},
+ /* Staples stands alone. It is the only chip in the table that filters by YOUR
+    list rather than by what a card does, so it never belonged in a group with
+    mechanical filters — and it's the one most people want first. */
+ {g:"Staples",chips:[
+   {id:"staple",l:"★ Staples",fn:c=>isStar(c.f)}]},
+ /* Tribes: cards that care about a named group. Both chips answer the same
+    question — "what goes in a deck built around one family?" — which is a
+    different question from "what does this card do", and so a different group. */
+ {g:"Tribes & families",chips:[
    {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0},
    /* Lilo & Stitch is one of the few franchises with a matching mechanical
       classification, and the two don't fully overlap: Alien picks up the
@@ -2555,6 +2571,43 @@ function sortInner(a){const x=a.slice();
   return x;
 }
 
+/* ===================== the Coconut block =====================
+   Every Coconut, each with the filters that Coconut actually wants, sitting at
+   the very bottom of Special searches.
+
+   This is the one section that is ALWAYS closed on arrival, and stays closed
+   unless you open it — GOPEN, which remembers every other group's state, is
+   deliberately not consulted. Nineteen Coconuts each with a stack of chips
+   under them is a wall, and it is the last thing on the panel; anyone who
+   wants it will click it, and everyone else should never see it unfolded.
+
+   The synergies are the same `rec` lists the Guided Coconut Build already
+   uses, so a Coconut recommends the same things in both places rather than
+   drifting into two opinions. */
+let COCOOPEN=false;
+function cocoBlock(cur,base){
+  const rows=COCO.map((co,i)=>{
+    const chips=(co.rec||[]).map(id=>{
+      const a=AB.find(x=>x.id===id);if(!a)return"";
+      const on=S.ab.has(id);
+      const n=(on?base:cur).reduce((s,c)=>s+(c.ab.has(id)?1:0),0);
+      return `<button class="chip${on?" on":""}${!on&&!n?" dead":""}" data-a="${id}">
+        <span>${a.l}</span><span class="n">${n}</span></button>`}).join("");
+    if(!chips)return"";
+    return `<div class="cocorow">
+      <button class="cocon" data-cocosee="${i}" title="Open ${esc(co.n)} - ${esc(co.v)}">
+        <i class="ci ${esc(co.i.toLowerCase())}"></i>${esc(co.n)} <em>${esc(co.v)}</em></button>
+      <div class="chips">${chips}</div></div>`}).join("");
+  /* Held in a plain variable, never in localStorage. renderChips() rebuilds
+     this whole panel on every keystroke, so without it a chip clicked inside
+     the block would slam the block shut under your finger. A reload starts it
+     closed again, which is the behaviour Ben asked for. */
+  return `<details class="grp cocogrp" id="cocogrp"${COCOOPEN?" open":""}>
+    <summary>🥥 Coconuts and what they want<span class="gn">${COCO.length}</span></summary>
+    <p class="cocohint">Each Coconut with the filters that suit it. Click a name to read
+      the card; click a filter to turn it on.</p>
+    ${rows}</details>`}
+
 /* ===================== chips ===================== */
 const GOPEN=load("fs3_gopen",null);
 function renderChips(){
@@ -2570,11 +2623,19 @@ function renderChips(){
         const on=S.ab.has(a.id);
         const n=(on?base:cur).reduce((s,c)=>s+(c.ab.has(a.id)?1:0),0);
         return `<button class="chip${on?" on":""}${rec.has(a.id)?" rec":""}${!on&&!n?" dead":""}" data-a="${a.id}">
-          <span>${a.l}</span><span class="n">${n}</span></button>`}).join("")+`</div></details>`}).join("");
+          <span>${a.l}</span><span class="n">${n}</span></button>`}).join("")+`</div></details>`}).join("")
+    +cocoBlock(cur,base);
   $("groups").querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{
     const id=b.dataset.a;S.ab.has(id)?S.ab.delete(id):S.ab.add(id);S.limit=150;render()});
-  $("groups").querySelectorAll("details.grp").forEach(d=>d.ontoggle=()=>{
-    save("fs3_gopen",[...$("groups").querySelectorAll("details.grp[open]")].map(x=>x.dataset.g))});
+  /* Clicking a Coconut's name opens the card, so you can read what it does
+     before deciding whether its filters are what you want. */
+  $("groups").querySelectorAll("[data-cocosee]").forEach(b=>b.onclick=()=>{
+    const co=COCO[+b.dataset.cocosee];if(co)openM(co.n+" - "+co.v)});
+  const cg=$("cocogrp");if(cg)cg.ontoggle=()=>{COCOOPEN=cg.open};
+  /* [data-g] only — the Coconut block has no data-g, so it is neither saved
+     into GOPEN nor reopened from it, which is what keeps it always-closed. */
+  $("groups").querySelectorAll("details.grp[data-g]").forEach(d=>d.ontoggle=()=>{
+    save("fs3_gopen",[...$("groups").querySelectorAll("details.grp[data-g][open]")].map(x=>x.dataset.g))});
   const nOn=S.ab.size;
   $("specialCnt").textContent=nOn?nOn+" active":GROUPS.length+" groups · "+AB.length+" filters";
   if(nOn&&!$("special").open)$("special").open=true;
@@ -2636,7 +2697,7 @@ function tryToken(raw){
 
 /* ===================== sidebar ===================== */
 function sec(id,title,body,cnt,open){
-  return `<details class="sec" id="s-${id}"${open?" open":""}><summary>${title}<span class="c">${cnt||""}</span></summary><div class="sb">${body}</div></details>`}
+  return `<details class="sec" id="s-${id}"${open?" open":""}><summary>${title}<span class="secn">${cnt||""}</span></summary><div class="sb">${body}</div></details>`}
 function checklist(items,sel,attr){
   return `<div class="list">`+items.map(([v,n])=>
     `<label class="${n?"":"z"}"><input type="checkbox" data-${attr}="${esc(v)}"${sel.has(v)?" checked":""}>
@@ -3280,6 +3341,14 @@ function renderDeck(){
   let h=`<h3 class="hd">Deck<span class="vtog">
       <button id="vList" class="${DVIEW==="img"?"":"on"}">Names</button>
       <button id="vImg" class="${DVIEW==="img"?"on":""}">Images</button></span></h3>
+    <!-- Name, unsaved flag and Save: these were a separate full-width bar at
+         the top of the page. They belong to the deck, so they live in the deck
+         panel now. -->
+    <div class="dhead">
+      <div class="dhname"><b id="dbName">${esc(DECKS.cur)}</b>
+        <span id="dbDirty" class="dbdirty"${DECKDIRTY?"":" hidden"}>unsaved</span></div>
+      <button class="btn go" id="dbSave">${DECKS.cur===DRAFT?"Save deck":"Save changes"}</button>
+    </div>
     <div class="row"><select id="dsel">${
     names.map(n=>`<option${n===DECKS.cur?" selected":""}>${esc(n)}</option>`).join("")}</select>
     <button class="btn" id="dnew" title="New deck">+</button>
@@ -3369,6 +3438,9 @@ function renderDeck(){
   $("dnew").onclick=()=>{const n=prompt("Deck name:","Deck "+(names.length+1));
     if(n&&!DECKS.list[n]){DECKS.list[n]={fmt:d.fmt,coco:null,cards:{}};DECKS.cur=n;saveDecks();
       award("named");if(Object.keys(DECKS.list).length>=3)award("deck2");render()}};
+  /* Save is rebuilt with the panel on every render, so it is rebound here
+     rather than once at boot the way the old top bar was. */
+  const dbs=$("dbSave");if(dbs)dbs.onclick=e=>saveDeckPrompt(e);
   $("dren").onclick=()=>renameDeck(DECKS.cur);
   $("ddel").onclick=()=>{if(names.length<2){toast("Keep at least one deck");return}
     if(confirm('Delete deck "'+DECKS.cur+'"?')){delete DECKS.list[DECKS.cur];DECKS.cur=Object.keys(DECKS.list)[0];saveDecks();render()}};
@@ -5052,10 +5124,15 @@ const ACHIEVEMENTS=[
  {id:"quiz",      d:10, t:"Quizmaster",        w:"Win a round of any guessing game"},
 ];
 /* Titles. Cosmetic only — nothing behind them, which is exactly why they can
-   live in localStorage. Flounderborn is deliberately unreachable: a million dust
-   at the rates above is somewhere past ten thousand hours, so it exists to be
-   seen and not had. It is the ONLY blurred one; blurring the rest would just
-   look like the page failed to load. */
+   live in localStorage. The last one is deliberately unreachable: a million
+   dust at the rates above is somewhere past ten thousand hours, so it exists
+   to be seen and not had.
+
+   Its NAME and description are withheld until it is bought — `secret:true`.
+   The row used to be CSS-blurred, which hides it from a reader but leaves the
+   real text sitting in the HTML for anyone who opens devtools, copies the
+   page, or listens to it with a screen reader. Withheld now means withheld:
+   secretTitle() swaps the strings before they are ever rendered. */
 /* Titles are Ready Set Ink's own, not the game's. Nothing here borrows a term
    that belongs to Ravensburger — no Illumineers, no Illuminary. Archivist,
    Lorekeeper and Flounderborn stay because Ben likes them and they're ours. */
@@ -5070,8 +5147,22 @@ const TITLES=[
  {id:"t_arch",   c:600,     t:"Archivist",       d:"Every printing, every variant, catalogued."},
  {id:"t_legend", c:1000,    t:"Ladder Legend",   d:"People ask you what to build."},
  {id:"t_fish",   c:1000000, t:"Flounderborn",    d:"The best cards are the friends you make along the way.",
-  blur:true},
+  blur:true, secret:true},
 ];
+/* What a title is allowed to say about itself right now. A secret title keeps
+   its name and description to itself until it has been bought; everything else
+   reads straight through. One function, used by every place that prints a
+   title, so a new surface can't quietly leak the name. */
+const titleOwned=id=>(DUST.titles||[]).includes(id);
+function titleFace(x){
+  if(x.secret&&!titleOwned(x.id))
+    return {t:"???",d:"Something is down here. It costs more than you have."};
+  return {t:x.t,d:x.d};
+}
+/* Prestige is invisible until the secret title is owned. Before that there is
+   no ✦ counter, no "Prestige 2 · 25,000" button, and no gate text naming what
+   you'd have to do first — the whole mechanic simply isn't mentioned. */
+const prestigeShown=()=>titleOwned("t_fish");
 /* Hidden titles. Not for sale — you get these by DOING the thing, which is why
    they're more fun than another row of blurred boxes. Until earned they show as
    ??? with a cryptic hint, so you know one exists without knowing what it is. */
@@ -5092,7 +5183,7 @@ const HIDDEN=[
   d:"Ability, flavour and facts. You've beaten every quiz on the site."},
  {id:"h_ench",  t:"Enchanted",         h:"Look at a card's fancier printing.",
   d:"You went looking for the good art."},
- {id:"h_binder",t:"Binder Walker",     h:"Turn a deck into something you can carry.",
+ {id:"h_binder",t:"Meme Team",         h:"Turn a deck into something you can carry.",
   d:"You made a pull list. Go and find the cards."},
  /* Truly invisible: filtered out of the list entirely until earned, unlike the
     ??? rows above. Nobody should be able to see that this one exists. */
@@ -5259,7 +5350,7 @@ function doPrestige(id){
   if(gate){toast(gate);return false}
   if(!dustSpend(prCost(id,next))){toast("Not enough dust yet");return false}
   DUST.pr[id]=next;DUST.wear=id;save(DUSTKEY,DUST);
-  toast(`✦ ${(TITLES.find(t=>t.id===id)||{}).t} — prestige ${next}`);
+  toast(`✦ ${titleFace(TITLES.find(t=>t.id===id)||{t:""}).t} — prestige ${next}`);
   drawTitle();return true;
 }
 /* The flair class carries the level so one CSS block can escalate. */
@@ -5271,7 +5362,10 @@ function titleChip(){
   const t=TITLES.find(x=>x.id===DUST.wear)||HIDDEN.find(x=>x.id===DUST.wear);
   if(!t)return "";
   const lv=prLevel(t.id);
-  return `<span class="dtitle${prClass(t.id)}"><span class="tt">${esc(t.t)}</span>${
+  /* Through titleFace even here. You can only wear a title you own, so this
+     always reads through — but routing every printer through one function is
+     what stops the next surface from being the one that leaks. */
+  return `<span class="dtitle${prClass(t.id)}"><span class="tt">${esc(titleFace(t).t)}</span>${
     lv?`<span class="prb">\u2726${lv}</span>`:""}</span>`;
 }
 function drawTitle(){
@@ -5281,7 +5375,7 @@ function drawTitle(){
   if(typeof DUSTON!=="undefined"&&!DUSTON){
     e.textContent=STICK.t;e.style.display="";e.className="wtit";return}
   const t=TITLES.find(x=>x.id===DUST.wear)||HIDDEN.find(x=>x.id===DUST.wear);
-  e.textContent=t?t.t:"";e.style.display=t?"":"none";
+  e.textContent=t?titleFace(t).t:"";e.style.display=t?"":"none";
   e.className="wtit"+(t?prClass(t.id):"");
 }
 function renderDust(){
@@ -5307,17 +5401,21 @@ function renderDust(){
     <p class="hint" style="margin:-4px 0 10px">Cosmetic, and permanent once bought. Equip one and it
       shows next to the site name and on every deck you build.</p>
     <div class="tits">${TITLES.map(x=>{
-      const own=(DUST.titles||[]).includes(x.id),worn=DUST.wear===x.id;
-      const lv=own?prLevel(x.id):0, next=lv+1, maxed=lv>=prMax(x.id);
-      const gate=own&&!maxed?prGate(x.id,next):null;
-      const cost=own&&!maxed?prCost(x.id,next):0;
+      const own=titleOwned(x.id),worn=DUST.wear===x.id;
+      const face=titleFace(x);
+      /* Prestige is off the page entirely until the secret title is owned. */
+      const showPr=own&&prestigeShown();
+      const lv=showPr?prLevel(x.id):0, next=lv+1, maxed=lv>=prMax(x.id);
+      const gate=showPr&&!maxed?prGate(x.id,next):null;
+      const cost=showPr&&!maxed?prCost(x.id,next):0;
       return `<div class="tit${own?" own":""}${x.blur&&!own?" blur":""}${worn?" worn":""}${
         own?prClass(x.id):""}">
-        <div class="tt">${esc(x.t)}${lv?`<span class="prb">✦${lv}</span>`:""}</div>
-        <div class="td">${esc(x.d)}</div>
+        <div class="tt">${esc(face.t)}${lv?`<span class="prb">✦${lv}</span>`:""}</div>
+        <div class="td">${esc(face.d)}</div>
         ${own?`<div class="titb">
             <button class="btn${worn?" go":""}" data-wear="${x.id}">${worn?"Unequip":"Equip"}</button>
-            ${maxed?`<span class="lockd">Prestige ${lv} · max</span>`
+            ${!showPr?""
+             :maxed?`<span class="lockd">Prestige ${lv} · max</span>`
              :gate?`<span class="lockd" title="${esc(gate)}">${esc(gate)}</span>`
              :`<button class="btn${DUST.bal>=cost?" go":""}" data-pr="${x.id}"
                  ${DUST.bal<cost?" disabled":""}>Prestige ${next} · ${N(cost)}</button>`}
@@ -6946,8 +7044,8 @@ render();
 const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
 try{document.body.insertAdjacentHTML("afterbegin",RAINDEF)}catch(e){}
-const dbs=$("dbSave");
-if(dbs)dbs.onclick=e=>saveDeckPrompt(e);
+/* Save is bound inside renderDeck() now — the button is rebuilt with the panel,
+   so a binding made once at boot would be thrown away by the first re-render. */
 paintDeckBar();
 applyPrefs();
 showTab(load("fs3_tab","tDeck"));

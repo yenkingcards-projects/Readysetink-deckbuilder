@@ -1,5 +1,6 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;
@@ -21,7 +22,7 @@ for(const vp of [{width:1440,height:950},{width:1100,height:800},{width:1040,hei
   });
   const clipped=Math.max(r.clipTop,r.clipBot,r.clipL,r.clipR);
   ok(clipped<=1.5,`${vp.width}×${vp.height}: frame ${r.fw}×${r.fh}, card ${r.iw}×${r.ih}, worst overflow ${clipped.toFixed(1)}px`);
-  if(vp.width===1440)await p.screenshot({path:"/sessions/kind-modest-ride/mnt/outputs/_shot_loc_modal.png"});
+  if(vp.width===1440)await p.screenshot({path:_W.data("_shot_loc_modal.png")});
   await p.close();
 }
 
@@ -43,7 +44,7 @@ const h=await p.evaluate(()=>{
 ok(h.inside,`ⓘ is inside the ${h.prevW}×${h.prevH} preview`);
 ok(h.dx>0&&h.dx<70&&h.dy>0&&h.dy<70,`…tucked into its top-left corner (+${h.dx}, +${h.dy}px)`);
 ok(parseFloat(h.outline)>=2,`…and the preview is outlined (${h.outline})`);
-await p.screenshot({path:"/sessions/kind-modest-ride/mnt/outputs/_shot_loc_hover.png"});
+await p.screenshot({path:_W.data("_shot_loc_hover.png")});
 
 console.log("\n=== ⓘ GLOWS AFTER 7s ===");
 await p.fill("#q","Ariel - Spectacular Singer");await p.waitForTimeout(600);
@@ -73,7 +74,7 @@ ok(/Don't even think about adding this card/i.test(qz.tag||""),`top tag: "${qz.t
 ok(/rgba?\(220,\s*30,\s*30/.test(qz.tagBg||""),`…in the same red (${qz.tagBg})`);
 ok(/Illumineer/i.test(qz.why||""),`red strip under art: "${qz.why}"`);
 ok(qz.canAdd,"…and they can still be clicked/added");
-await p.screenshot({path:"/sessions/kind-modest-ride/mnt/outputs/_shot_quest.png"});
+await p.screenshot({path:_W.data("_shot_quest.png")});
 
 console.log("\n=== TIP + IMPORT + BACKSPACE ===");
 await p.goto(F);await p.waitForTimeout(1400);

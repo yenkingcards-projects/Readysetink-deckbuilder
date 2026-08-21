@@ -1,7 +1,8 @@
 /* Flounder Search v3 — end-to-end test in jsdom against the real baked-in data. */
+const _W=require(__dirname+"/_where.js");
 const fs=require("fs");
 const {JSDOM}=require("/tmp/node_modules/jsdom");
-const FILE="/sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const FILE=_W.FILE;
 const HTML=fs.readFileSync(FILE,"utf8");
 
 let fail=0,pass=0;
@@ -22,6 +23,10 @@ const W=dom.window,D=W.document;
 const $=i=>D.getElementById(i);
 const click=e=>e.dispatchEvent(new W.MouseEvent("click",{bubbles:true}));
 const chg=e=>e.dispatchEvent(new W.Event("change",{bubbles:true}));
+/* Format is a segmented control inside the deck panel now, not a <select> in
+   the masthead. Clicking the button is what a person does. */
+const setFmt=k=>{const b=D.querySelector('[data-fmt="'+k+'"]');
+  if(!b)throw new Error("no format button: "+k);click(b)};
 const cards=()=>[...D.querySelectorAll("#grid .c")];
 const N=()=>parseInt(($("ct").textContent.match(/[\d,]+/)||["0"])[0].replace(/,/g,""),10);
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
@@ -36,7 +41,7 @@ const total=N();
 ok(/Ready Set Ink/.test(D.title),`title is "${D.title}"`);
 ok(total>2400&&total<2700,`${total} unique cards render with zero network calls`);
 ok(/the best cards are the friends you make along the way/.test(D.querySelector(".logo").textContent),"tagline present");
-ok($("fmt").value==="infinity","defaults to Infinity");
+ok(D.querySelector(".fmtb.on").textContent==="Infinity","defaults to Infinity");
 ok(/data 20/.test($("stat").textContent),"shows data build date: "+$("stat").textContent);
 ok(D.querySelectorAll("#bub i").length===14,"bubble background restored (14 bubbles)");
 
@@ -76,11 +81,15 @@ ok(N()===total,"…and removing it restores every card");
 await q("");
 
 console.log("\n=== CHIP GROUPS ===");
-const groups=[...D.querySelectorAll("#groups .grp summary")].map(h=>h.textContent.replace(/\d+ on$/,"").trim());
-ok(groups.length===12,`${groups.length} labelled groups (was one flat arbitrary list)`);
-ok(groups[0]==="Staples & tribes","Staples group is first");
+/* [data-g] scopes this to the real filter groups. The Coconut block is also
+   a details.grp but is deliberately always-closed, so counting it here would
+   make "all groups start expanded" false by design. */
+const groups=[...D.querySelectorAll("#groups .grp[data-g] summary")].map(h=>h.textContent.replace(/\d+ on$/,"").trim());
+ok(groups.length===14,`${groups.length} labelled groups (was one flat arbitrary list)`);
+ok(groups[0]==="Staples","Staples is its own group, and first");
+ok(groups[1]==="Tribes & families","…with the tribe filters in their own group after it");
 ok(groups.includes("Card advantage")&&groups.includes("Timing")&&groups.includes("Ability type"),"new groups present");
-ok(D.querySelectorAll("#groups .chip").length===42,`${D.querySelectorAll("#groups .chip").length} chips total`); // v19: +bonus strength; v21: +bonus willpower, −2 hidden note kinds
+ok(D.querySelectorAll("#groups .grp[data-g] .chip").length===47,`${D.querySelectorAll("#groups .grp[data-g] .chip").length} chips total`); // v19: +bonus strength; v21: +bonus willpower, −2 hidden note kinds; v37: +Locations group (2), +pings, +item removal, +Lilo&Aliens
 ok(/grid-template-columns:repeat\(3,1fr\)/.test(HTML),"3-column chip grid");
 ok(!chip("Sing Together").textContent.match(/[\u{1F300}-\u{1FAFF}]/u),"Sing Together chip has no emoji");
 ok(chip("No rules / vanilla")!=null,"'No rules / vanilla' relabelled");
@@ -185,10 +194,10 @@ ok(cards()[0].querySelector(".star")===null,"★ button gone from card tiles (de
 await q("");
 
 console.log("\n=== FORMAT / LEGALITY ===");
-$("fmt").value="core";chg($("fmt"));
+setFmt("core");
 const coreN=N();
 ok(coreN<total&&coreN>900,`Core (official allowedInFormats) → ${coreN} of ${total} unique cards`);
-$("fmt").value="infinity";chg($("fmt"));
+setFmt("infinity");
 ok(N()===total,"Infinity restores everything");
 
 console.log("\n=== GUIDED COCONUT BUILD ===");
@@ -201,7 +210,7 @@ await wait(40);
 ok(D.querySelectorAll("#cg [data-c]").length===1,"coconut search narrows to Dumbo");
 click(D.querySelector("#cg [data-c]"));
 await wait(60);
-ok($("fmt").value==="coconut","picking a Coconut switches the format to Coconut");
+ok(D.querySelector(".fmtb.on").textContent==="Coconut","picking a Coconut switches the format to Coconut");
 const rec=D.querySelector(".pair[class*='rec-']");
 ok(!!rec,"a recommended ink pair is highlighted ("+[...rec.classList].find(c=>c.startsWith("rec-"))+")");
 ok(/Sapphire/.test(rec.textContent)&&/Steel/.test(rec.textContent),

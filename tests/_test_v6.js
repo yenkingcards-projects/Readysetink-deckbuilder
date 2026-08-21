@@ -1,7 +1,8 @@
 /* v6 — locations, shift-target ink greying, guided tweaks, removable search terms. */
+const _W=require(__dirname+"/_where.js");
 const fs=require("fs");
 const {JSDOM}=require("/tmp/node_modules/jsdom");
-const FILE="/sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const FILE=_W.FILE;
 const HTML=fs.readFileSync(FILE,"utf8");
 let fail=0,pass=0;
 const ok=(c,m)=>{c?(pass++,console.log("  ✓ "+m)):(fail++,console.log("  ✗ "+m))};

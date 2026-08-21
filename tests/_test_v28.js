@@ -1,7 +1,8 @@
 /* v28 — marking hidden mouse-shaped symbols, and showing them. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const APP="file://"+__dirname+"/flounder-search.html";
-const TAG="file://"+__dirname+"/flounder-tagger.html";
+const APP=_W.URL;
+const TAG=("file://"+_W.tagger());
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -149,7 +150,7 @@ ok(await p.evaluate(()=>!document.querySelector("#grid .syml")),
 
 }else{
   console.log("\n=== THE TEN-SECOND HOVER ===");
-  ok(/10000/.test(require("fs").readFileSync(__dirname+"/flounder-search.html","utf8")),
+  ok(/10000/.test(require("fs").readFileSync(_W.FILE,"utf8")),
      "the ten-second timer is wired and waiting on marks");
 }
 console.log(`\n${bad?"❌":"✅"} ${good} passed, ${bad} failed`);

@@ -1,5 +1,6 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -35,10 +36,16 @@ for(const word of ["bonus strength","plus power","extra strength","more power","
 await p.evaluate(()=>document.getElementById("clr").click());await p.waitForTimeout(300);
 
 console.log("\n=== SPECIAL SEARCH GROUPING ===");
-const grp=await p.evaluate(()=>[...document.querySelectorAll("#groups details.grp")].map(d=>({
+/* [data-g] excludes the always-closed Coconut block, which is not a filter
+   group. Staples is now deliberately a group of one — it filters by YOUR list
+   rather than by what a card does, so it stands apart from the mechanical
+   groups on purpose. Everything else still has to earn its heading. */
+const grp=await p.evaluate(()=>[...document.querySelectorAll("#groups details.grp[data-g]")].map(d=>({
   n:d.querySelector("summary").textContent.replace(/\d+ on$/,"").trim(),
   c:d.querySelectorAll(".chip").length})));
-ok(grp.every(g=>g.c>=2),`no one-chip groups left (smallest is ${Math.min(...grp.map(g=>g.c))})`);
+const solo=grp.filter(g=>g.c<2).map(g=>g.n);
+ok(solo.length===1&&solo[0]==="Staples",
+   `Staples stands alone by design; no other one-chip groups (${solo.join(", ")||"none"})`);
 ok(grp.some(g=>/Buffs/.test(g.n)),`bonus strength moved out of "Lore" into "${(grp.find(g=>/Buffs/.test(g.n))||{}).n}"`);
 ok(grp.some(g=>g.n==="Boost"),"Boost is its own group now");
 ok(!grp.some(g=>g.n==="Misc"),"…and Misc is gone — vanilla folded into Ability type");
@@ -51,11 +58,18 @@ const T=await p.evaluate(()=>[...document.querySelectorAll(".tit:not(.hid)")].ma
   cost:(t.querySelector("[data-title]")||{}).textContent||"",
   blur:t.classList.contains("blur")})));
 ok(T.length===10,`${T.length} titles`);
-ok(T[T.length-1].name==="Flounderborn",`the last is ${T[T.length-1].name}`);
-ok(/1,000,000/.test(T[T.length-1].cost),`…costing ${T[T.length-1].cost.trim()}`);
-ok(T.filter(t=>t.blur).length===1&&T[T.length-1].blur,"…and it is the ONLY blurred one (hidden titles use ??? instead)");
+/* The million-dust title keeps its name until it is bought. It used to be
+   CSS-blurred, which left the real text in the DOM for anyone who looked; the
+   name is withheld at render time now, so the row genuinely reads "???". */
+ok(T[T.length-1].name==="???",`the last is withheld — it reads "${T[T.length-1].name}"`);
+ok(/1,000,000/.test(T[T.length-1].cost),`…while still showing its price, ${T[T.length-1].cost.trim()}`);
+ok(T.filter(t=>t.blur).length===1&&T[T.length-1].blur,
+   "…and it is the only one carrying the mystery marker");
 ok(await p.evaluate(()=>{const t=[...document.querySelectorAll(".tit.blur")][0];
-  return getComputedStyle(t.querySelector(".tt")).filter.includes("blur")}),"…genuinely blurred in CSS");
+  return getComputedStyle(t.querySelector(".tt")).filter==="none"}),
+   "…shown plainly as ??? rather than smeared, which read as a broken page");
+ok(await p.evaluate(()=>!/Flounderborn/.test(document.getElementById("dustpage").innerHTML)),
+   "…and the real name is nowhere on the page");
 // buy one
 await p.evaluate(()=>{const d=JSON.parse(localStorage.getItem("fs3_dust")||"null")
     ||{bal:0,got:{},open:[],titles:[],wear:""};

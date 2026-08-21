@@ -7,8 +7,9 @@
 
    These tests stub the Supabase client entirely — no network, no account, no
    Google. What is under test is the decision logic, which is where the bug was. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file://"+__dirname+"/flounder-search.html";
+const F=_W.URL;
 
 /* Replace ACCT's client with a fake returning `rows`, and count reloads. */
 const STUB=rows=>`(()=>{
@@ -36,15 +37,24 @@ ok(await p.evaluate(()=>!window.supabase),
    "…and the Supabase library was never even downloaded");
 
 console.log("\n=== A FIRST SIGN-IN UPLOADS, IT DOES NOT WIPE ===");
+/* Write the deck, then RELOAD so the page's in-memory DECKS matches what is in
+   storage — arrive() works on the live object, not on localStorage directly. */
+await p.evaluate(()=>{localStorage.setItem("fs3_decks",JSON.stringify({cur:"New deck",
+  list:{"New deck":{cards:{"Elsa - Snow Queen":4},fmt:"core"}}}))});
+await p.reload();await p.waitForTimeout(1600);
 await p.evaluate(STUB([]));            // empty account
-await p.evaluate(()=>{localStorage.setItem("fs3_decks",JSON.stringify({cur:"Main",
-  list:{Main:{cards:{"Elsa - Snow Queen":4},fmt:"core"}}}))});
 await p.evaluate(()=>ACCT.arrive({id:"u1",email:"ben@example.com"}));
 await p.waitForTimeout(300);
 ok(await p.evaluate(()=>window.__pushed===1),"an empty account is filled from this browser");
 ok(await p.evaluate(()=>window.__reloads===0),"…without reloading");
-ok(await p.evaluate(()=>!!JSON.parse(localStorage.getItem("fs3_decks")).list.Main.cards["Elsa - Snow Queen"]),
-   "…and the local deck survives (a literal 'cloud wins' would have destroyed it)");
+/* Signing in starts a fresh draft, so the cards must have been moved aside
+   rather than deleted — losing an unsaved deck to a login is not acceptable. */
+ok(await p.evaluate(()=>{const L=JSON.parse(localStorage.getItem("fs3_decks")).list;
+  return Object.keys(L).some(k=>k!=="New deck"&&L[k].cards&&L[k].cards["Elsa - Snow Queen"]===4)}),
+   "…and an unsaved deck is kept aside, not destroyed by signing in");
+ok(await p.evaluate(()=>{const D=JSON.parse(localStorage.getItem("fs3_decks"));
+  return D.cur==="New deck"&&!Object.keys(D.list["New deck"].cards).length}),
+   "…while the builder itself starts empty");
 
 console.log("\n=== IDENTICAL DATA IS A NO-OP ===");
 await p.reload();await p.waitForTimeout(1500);

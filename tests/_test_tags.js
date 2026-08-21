@@ -1,8 +1,9 @@
 /* Art-tag system: does vague search work, and does the tagger actually tag? */
+const _W=require(__dirname+"/_where.js");
 const fs=require("fs");
 const {JSDOM}=require("/tmp/node_modules/jsdom");
-const APP="/sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
-const TAG="/sessions/kind-modest-ride/mnt/outputs/flounder-tagger.html";
+const APP=_W.FILE;
+const TAG=_W.data("flounder-tagger.html");
 let fail=0,pass=0;
 const ok=(c,m)=>{c?(pass++,console.log("  ✓ "+m)):(fail++,console.log("  ✗ "+m))};
 const store=()=>{const s={};return{getItem:k=>k in s?s[k]:null,setItem:(k,v)=>{s[k]=String(v)},

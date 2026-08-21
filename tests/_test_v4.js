@@ -1,7 +1,8 @@
 /* v4 UX regression suite — the things Ben specifically asked to be fixed. */
+const _W=require(__dirname+"/_where.js");
 const fs=require("fs");
 const {JSDOM}=require("/tmp/node_modules/jsdom");
-const FILE="/sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const FILE=_W.FILE;
 const HTML=fs.readFileSync(FILE,"utf8");
 let fail=0,pass=0;
 const ok=(c,m)=>{c?(pass++,console.log("  ✓ "+m)):(fail++,console.log("  ✗ "+m))};
@@ -111,8 +112,11 @@ ok(sample.every(f=>/inkwell|ink an additional/i.test(byF[f].ef||"")),"every ramp
 click(rampChip);
 
 console.log("\n=== 8. COLLAPSIBLE CHIP GROUPS ===");
-const grps=[...D.querySelectorAll("#groups details.grp")];
-ok(grps.length===12,`${grps.length} chip groups are <details> elements`);
+/* [data-g] scopes this to the real filter groups. The Coconut block is also
+   a details.grp but is deliberately always-closed, so counting it here would
+   make "all groups start expanded" false by design. */
+const grps=[...D.querySelectorAll("#groups details.grp[data-g]")];
+ok(grps.length===14,`${grps.length} chip groups are <details> elements`);
 ok(grps.every(g=>g.querySelector("summary")),"…each with a clickable summary");
 ok(grps.every(g=>g.open),"…and ALL start EXPANDED by default");   // v7: was collapsed
 

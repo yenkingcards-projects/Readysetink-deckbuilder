@@ -4,8 +4,9 @@
    having to type a card name in full, and one wrong letter returning nothing.
    Both are worse here than elsewhere would be, because the promise of this site
    is finding a card you only half remember. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file://"+__dirname+"/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};

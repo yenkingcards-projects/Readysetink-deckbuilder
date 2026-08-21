@@ -3,9 +3,10 @@
    carbon on it is 3.44:1 and white 4.37:1, both short of AA. The design system
    already answers this — reading surfaces are white, platinum and pale sky, and
    the canvas only shows in the seams. This suite holds that line. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
-const F="file://"+__dirname+"/flounder-search.html";
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
+const F=_W.URL;
 const AUDIT=`(()=>{
   const lum=c=>{const [r,g,b]=c.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});
     return .2126*r+.7152*g+.0722*b};
@@ -63,20 +64,32 @@ const pages=[["tDeck",""],["tSearch",""],["tColl",""],["tDecks",""],["tOther",""
   ["tOther","dust"],["tOther","read"],["tOther","hex"],["tOther","aqua"],["tOther","contrib"],
   ["tOther","quiz:ability"],["tOther","quiz:flavour"],["tOther","guess"],["tOther","mick"],
   ["tOther","click"],["tOther","cred"]];
+/* Both themes. Dark mode is a whole second palette, so auditing only the light
+   one would let a dark-only contrast failure ship unseen — which is exactly
+   what happens to most sites that bolt a dark theme on. */
 const all={};
+for(const theme of ["light","dark"])
 for(const [tab,op] of pages){
+  await p.evaluate(t=>{document.body.classList.toggle("dark",t==="dark")},theme);
   await p.evaluate(([t,o])=>{localStorage.setItem("fs3_tab",JSON.stringify(t));
     localStorage.setItem("fs3_opage",JSON.stringify(o));
     localStorage.setItem("fs3_dust",JSON.stringify({bal:9e9,got:{},open:[],
       titles:["t_pupil","t_fish"],hidden:["h_chip"],wear:"t_pupil",quiz:[],bucky:0,pr:{}}))},[tab,op]);
   await p.reload();await p.waitForTimeout(1300);
+  /* The reload above resets the class, so re-apply after it. */
+  await p.evaluate(t=>{document.body.classList.toggle("dark",t==="dark")},theme);
+  /* Several elements transition colour over 0.25s. Auditing sooner measures a
+     value that is literally partway between the two themes and reports a
+     failure that never appears on screen. */
+  await p.waitForTimeout(420);
   const r=await p.evaluate(AUDIT);
-  r.forEach(x=>{const k=x.sel+"|"+x.fg+"|"+x.bg;if(!all[k]||all[k].r>x.r)all[k]={...x,page:op||tab}});
+  r.forEach(x=>{const k=theme+"|"+x.sel+"|"+x.fg+"|"+x.bg;
+    if(!all[k]||all[k].r>x.r)all[k]={...x,page:(op||tab)+" ["+theme+"]"}});
 }
 const fails=Object.values(all).sort((a,b)=>a.r-b.r);
 fails.slice(0,8).forEach(o=>console.log(
   `     ${o.r}:1 (need ${o.need})  ${o.sel}  "${o.txt}"  ${o.fg} on ${o.bg}  [${o.page}]`));
-ok(fails.length===0,`${fails.length} contrast failures across ${pages.length} pages`);
+ok(fails.length===0,`${fails.length} contrast failures across ${pages.length} pages in BOTH themes`);
 
 console.log("\n=== THE PALETTE RULES THAT CAUSED THEM ===");
 const ratio=await p.evaluate(()=>{

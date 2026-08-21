@@ -1,12 +1,13 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
 const HIDDEN_SRC=SRC.slice(SRC.indexOf("const HIDDEN=["),SRC.indexOf("const SECRETS=["));
 const nHidden=(HIDDEN_SRC.match(/\{id:"h_/g)||[]).length;
 const nSecret=(HIDDEN_SRC.match(/secret:true/g)||[]).length;
 const nOpen=nHidden-nSecret;
 const GRP_SRC=SRC.slice(SRC.indexOf("const OTHER_GROUPS=["),SRC.indexOf("function renderOther"));
 const nTiles=(GRP_SRC.match(/","[a-z]+(:[a-z]+)?"\]/g)||[]).length;
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};

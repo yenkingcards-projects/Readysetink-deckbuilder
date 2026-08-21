@@ -1,5 +1,6 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -20,8 +21,10 @@ const m=await p.evaluate(()=>({
   imgs:document.querySelectorAll("#mickpage .mick img").length,
   warn:!!document.querySelector("#mickpage .up.bad"),
   txt:document.querySelector("#mickpage").textContent}));
-/* Deliberately not the trademarked term — see the comment above MICKEYS. */
-ok(/mouse-shaped symbols/i.test(m.h),`"${m.h.trim()}"`);
+/* Deliberately not the trademarked term — see the comment above MICKEYS.
+   "Hidden Mouseys" is Ben's wording and does the same job: it names the thing
+   without borrowing the mark. */
+ok(/hidden mouseys/i.test(m.h),`"${m.h.trim()}"`);
 ok(m.groups.length===3,`3 sections: ${m.groups.join(" · ")}`);
 ok(m.entries===20,`${m.entries} entries (card back + 19 cards)`);
 ok(!m.warn,"no entry names a card missing from the database");

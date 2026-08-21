@@ -1,6 +1,7 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
-const NOT="file:///sessions/kind-modest-ride/mnt/outputs/flounder-notes.html";
+const F=_W.URL;
+const NOT=("file://"+_W.notes());
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -15,7 +16,7 @@ ok(errs.length===0,`no JS errors${errs.length?" — "+errs[0]:""}`);
 ok(await p.evaluate(()=>document.getElementById("tgTag").classList.contains("on")),"art switch starts ON");
 ok(!await p.evaluate(()=>document.getElementById("tgSto").classList.contains("on")),"franchise still starts off");
 const ph=await p.evaluate(()=>document.getElementById("q").placeholder);
-ok(/blue dog/.test(ph)&&/press Enter/.test(ph),`placeholder teaches it: "${ph}"`);
+ok(/special searches/i.test(ph),`placeholder points at the special searches: "${ph}"`);
 await p.fill("#q","blue dog");await p.waitForTimeout(500);
 ok(await N()===17,`"blue dog" works straight away (${await N()} cards)`);
 

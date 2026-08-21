@@ -1,14 +1,18 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
 const HIDDEN_SRC=SRC.slice(SRC.indexOf("const HIDDEN=["),SRC.indexOf("const SECRETS=["));
 const nHidden=(HIDDEN_SRC.match(/\{id:"h_/g)||[]).length;
 const nSecret=(HIDDEN_SRC.match(/secret:true/g)||[]).length;
 const nOpen=nHidden-nSecret;
-const GRP_SRC=SRC.slice(SRC.indexOf("const OTHER_GROUPS=["),SRC.indexOf("function renderOther"));
+/* End the slice at the table's own closing bracket rather than at the next
+   function — anything declared in between was otherwise counted as a tile. */
+const _gs=SRC.indexOf("const OTHER_GROUPS=[");
+const GRP_SRC=SRC.slice(_gs,SRC.indexOf("\n];",_gs));
 const OFF_SRC=(SRC.match(/const OFF=\[([^\]]*)\]/)||[,""])[1];
 const nOff=(OFF_SRC.match(/"/g)||[]).length/2;
 const nTiles=(GRP_SRC.match(/","[a-z]+(:[a-z]+)?"\]/g)||[]).length-nOff;
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -115,7 +119,10 @@ ok(cb.stats.length===3,`three live numbers: ${cb.stats.map((s,i)=>s+" "+cb.label
 const real=await p.evaluate(()=>DATA.cards.filter(c=>(c.tg||[]).length).length.toLocaleString());
 ok(cb.stats[0]===real,`…and the tagged count is real (${real})`);
 ok(cb.tiles.length===3,`three steps: ${cb.tiles.join(" · ")}`);
-ok(/benjamindacy@gmail.com/.test(cb.mail),"…with a mailto that prefills the subject");
+/* The project inbox, not Ben's personal address — contributions come from
+   strangers and shouldn't land in the mail he reads at breakfast. */
+ok(/lorcana707@gmail\.com/.test(cb.mail)&&/subject=/.test(cb.mail),
+   "…with a mailto to the project inbox that prefills the subject");
 ok(cb.soon,"…and it's honest that emailing JSON doesn't scale");
 await p.click("#cbExit");await p.waitForTimeout(400);
 ok(await p.evaluate(()=>!!document.getElementById("otherTiles")),"← Other works");

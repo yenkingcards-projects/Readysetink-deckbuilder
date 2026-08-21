@@ -1,7 +1,8 @@
 /* v5 suite — the UI/UX list from Ben's latest round. */
+const _W=require(__dirname+"/_where.js");
 const fs=require("fs");
 const {JSDOM}=require("/tmp/node_modules/jsdom");
-const FILE="/sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const FILE=_W.FILE;
 const HTML=fs.readFileSync(FILE,"utf8");
 let fail=0,pass=0;
 const ok=(c,m)=>{c?(pass++,console.log("  ✓ "+m)):(fail++,console.log("  ✗ "+m))};
@@ -16,6 +17,11 @@ const dom=new JSDOM(HTML,{runScripts:"dangerously",url:"https://e.com/f.html",be
 const W=dom.window,D=W.document,$=i=>D.getElementById(i);
 const click=e=>e.dispatchEvent(new W.MouseEvent("click",{bubbles:true}));
 const chg=e=>e.dispatchEvent(new W.Event("change",{bubbles:true}));
+/* Format is a segmented control inside the deck panel now, not a <select> in
+   the masthead. Clicking the button is what a person does, and it goes through
+   the same seam the old onchange did. */
+const setFmt=k=>{const b=D.querySelector('[data-fmt="'+k+'"]');
+  if(!b)throw new Error("no format button: "+k);click(b)};
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
 const cards=()=>[...D.querySelectorAll("#grid .c")];
 const tile=f=>cards().find(e=>e.dataset.f===f);
@@ -41,7 +47,10 @@ ok($("special").open,"…open by default");   // v7: was collapsed
 ok($("fb").closest("#special")!==null,"Flounder button lives inside it");
 ok($("fb").compareDocumentPosition($("groups"))&W.Node.DOCUMENT_POSITION_FOLLOWING,"…at the very top");
 ok(!!$("expAll")&&!!$("colAll"),"Expand all / Collapse all buttons");
-const grps=()=>[...D.querySelectorAll("#groups details.grp")];
+/* [data-g] scopes this to the real filter groups. The Coconut block is also
+   a details.grp but is deliberately always-closed, so counting it here would
+   make "all groups start expanded" false by design. */
+const grps=()=>[...D.querySelectorAll("#groups details.grp[data-g]")];
 ok(grps().every(g=>g.open),"every filter group starts expanded");   // v7: was collapsed
 click($("expAll"));await wait(40);
 ok(grps().every(g=>g.open),"Expand all opens all 12");
@@ -74,9 +83,9 @@ const a1=(D.querySelector(".arch")||{}).textContent;
 ok(/AGGRO|MIDRANGE|CONTROL|OTHER/.test(a1||""),"a 32-card pile of 1-drops reads as: "+a1);
 
 console.log("\n=== ILLEGAL CARDS ===");
-$("fmt").value="core";chg($("fmt"));await wait(80);
+setFmt("core");await wait(80);
 await q("");
-$("fmt").value="coconut";chg($("fmt"));await wait(80);
+setFmt("coconut");await wait(80);
 // coconut is singleton, so the 4x stacks above are now illegal
 const ill=cards().filter(e=>e.classList.contains("illegal"));
 ok(ill.length>0,`${ill.length} cards flagged illegal on this page`);
@@ -90,7 +99,7 @@ click($("drm"));await wait(80);
 ok($("mN").textContent!==beforeRm,`remove-illegal culled the deck (${beforeRm} → ${$("mN").textContent})`);
 
 console.log("\n=== COCONUT 4x TAG ===");
-$("fmt").value="coconut";chg($("fmt"));await wait(40);
+setFmt("coconut");await wait(40);
 const dsel=$("csel");
 if(dsel){
   const ariel=[...dsel.options].findIndex(o=>/Ariel/.test(o.textContent));
@@ -105,7 +114,7 @@ const st=tile("Stitch - Rock Star");
 ok(st&&!/CAN HAVE 4/.test(st.textContent),"…and other cards are not");
 
 console.log("\n=== SHIFT TARGETS RESPECT INK ===");
-$("fmt").value="infinity";chg($("fmt"));await wait(40);
+setFmt("infinity");await wait(40);
 click($("clr"));await wait(40);
 const shiftCard=DATA.cards.find(c=>(c.kw||[]).some(k=>/shift/i.test(k[0]||""))&&
   DATA.cards.filter(x=>x.n===c.n&&x.ty==="Character").length>2);

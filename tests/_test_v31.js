@@ -1,7 +1,8 @@
 /* v31 — the ReadySetInk design system, the aquarium rework, and Outpost as an RTS. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
-const F="file://"+__dirname+"/flounder-search.html";
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -49,9 +50,14 @@ const radii=await p.evaluate(()=>[...document.querySelectorAll(".btn,.tile,.chip
 ok(radii.length===0,`corners stay sharp — ${radii.length} elements over 6px`);
 const pill=await p.evaluate(()=>parseFloat(getComputedStyle(document.querySelector(".logo b")).borderTopLeftRadius));
 ok(pill>100,"…except the racetrack logo pill, which is fully round");
-ok(await p.evaluate(()=>{const f=document.querySelector(".foot");
-  return getComputedStyle(f).backgroundColor==="rgb(32, 38, 56)"}),
-   "the footer is part of the carbon command layer");
+/* The running footer is gone; the disclaimer block in Settings inherited its
+   look, so the carbon command layer is checked there now. */
+await p.evaluate(()=>{localStorage.setItem("fs3_tab",JSON.stringify("tOther"));
+  localStorage.setItem("fs3_opage",JSON.stringify("pref"))});
+await p.reload();await p.waitForTimeout(1800);
+ok(await p.evaluate(()=>{const f=document.querySelector(".legal");
+  return !!f&&getComputedStyle(f).backgroundColor==="rgb(32, 38, 56)"}),
+   "the disclaimer block is part of the carbon command layer");
 ok(!/Iowan Old Style|Palatino/.test(SRC),"no trace of the archive serif left");
 ok(!/--gold:#c9a227/.test(SRC),"…nor its gold");
 

@@ -1,5 +1,6 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const F="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -57,8 +58,12 @@ ok(await p.evaluate(()=>document.querySelectorAll("#prs .pcard.on").length)===1,
 
 console.log("\n=== DEFAULT-PRINTING PREFERENCE ===");
 await p.evaluate(()=>document.getElementById("mx").click());await p.waitForTimeout(300);
-await p.evaluate(()=>{const s=[...document.querySelectorAll("#side details.sec")]
-  .find(x=>/Card images/.test(x.querySelector("summary").textContent));s.open=true});
+/* Filters now start collapsed, and Playwright refuses to act on an element it
+   can't see — so the panel has to be opened before reaching inside it, the
+   same as a person would. */
+await p.evaluate(()=>{document.getElementById("side").open=true;
+  const s=[...document.querySelectorAll("#side details.sec")]
+    .find(x=>/Card images/.test(x.querySelector("summary").textContent));s.open=true});
 await p.waitForTimeout(300);
 ok(await p.evaluate(()=>!!document.getElementById("prPref")),"sidebar has the preference control");
 const baseSrc=await p.evaluate(()=>document.querySelector("#grid .c img").src);

@@ -1,6 +1,7 @@
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const APP="file:///sessions/kind-modest-ride/mnt/outputs/flounder-search.html";
-const NOT="file:///sessions/kind-modest-ride/mnt/outputs/flounder-notes.html";
+const APP=_W.URL;
+const NOT=("file://"+_W.notes());
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};

@@ -1,8 +1,9 @@
 /* v27 — minigames, credits page, quiz feedback, and the renaming.
    Covers the parts of the Aug-15 batch that v26 doesn't. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
-const F="file://"+__dirname+"/flounder-search.html";
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -18,7 +19,10 @@ ok(errs.length===0,`loads clean${errs.length?" — "+errs[0]:""}`);
 console.log("\n=== EVERY OTHER-PAGE TILE OPENS SOMETHING ===");
 await p.click("#tOther");await p.waitForTimeout(600);
 const ops=await p.evaluate(()=>[...document.querySelectorAll("[data-op]")].map(b=>b.dataset.op));
-const GRP=SRC.slice(SRC.indexOf("const OTHER_GROUPS=["),SRC.indexOf("function renderOther"));
+/* End the slice at the table's own closing bracket rather than at the next
+   function — anything declared in between was otherwise counted as a tile. */
+const _gs=SRC.indexOf("const OTHER_GROUPS=[");
+const GRP=SRC.slice(_gs,SRC.indexOf("\n];",_gs));
 const OFF_SRC=(SRC.match(/const OFF=\[([^\]]*)\]/)||[,""])[1];
 const nOff=(OFF_SRC.match(/"/g)||[]).length/2;
 const nTiles=(GRP.match(/","[a-z]+(:[a-z]+)?"\]/g)||[]).length-nOff;
@@ -56,13 +60,23 @@ ok(await p.evaluate(()=>[...document.querySelectorAll("#credpage a[href^='http']
 console.log("\n=== ATTRIBUTION SURVIVES THE TILE BEING OFF ===");
 const tilesNow=await p.evaluate(()=>[...document.querySelectorAll("[data-op]")].map(b=>b.dataset.op));
 ok(!tilesNow.includes("cred"),"the Sources tile is off the Other menu");
+/* The every-page footer is gone at Ben's request. The disclaimer is still a
+   Community Code condition, so it did not go with it — it moved to a
+   permanent block at the top of Settings. What is tested here is therefore no
+   longer "does it run everywhere" but "is it still somewhere fixed, complete,
+   and impossible to switch off". */
 await p.click("#tDeck");await p.waitForTimeout(600);
-const foot=await p.evaluate(()=>{const f=document.querySelector(".foot");
+ok(await p.evaluate(()=>!document.querySelector(".foot")),
+   "…and no footer repeats under every screen any more");
+await p.evaluate(()=>{localStorage.setItem("fs3_tab",JSON.stringify("tOther"));
+  localStorage.setItem("fs3_opage",JSON.stringify("pref"))});
+await p.reload();await p.waitForTimeout(1800);
+const foot=await p.evaluate(()=>{const f=document.querySelector(".legal");
   return f?{t:f.textContent.replace(/\s+/g," ").trim(),
             links:[...f.querySelectorAll("a")].map(a=>a.href)}:null});
-ok(foot,"…but a footer runs on every page instead");
-/* Ben moved the source credits off the footer onto the Sources page. The
-   disclaimer stays because that one is a Community Code condition. */
+ok(foot,"the disclaimer lives in Settings instead");
+/* Ben moved the source credits off it onto the Sources page. The disclaimer
+   stays because that one is a Community Code condition. */
 ok(!/LorcanaJSON|Lorcast|Card data/.test(foot.t),
    "…carrying no source credits — those moved to the Sources page");
 ok(/Not published, endorsed or approved/.test(foot.t),"…carrying the disclaimer");
@@ -76,7 +90,9 @@ const codeOnly=SRC.replace(/\/\*[\s\S]*?\*\//g,"").replace(/^\s*\/\/.*$/gm,"");
 ok(!/hidden mickey/i.test(codeOnly),"…and not in any string literal either, only in comments");
 await open_("mick");
 const mk=await p.evaluate(()=>document.getElementById("mickpage").textContent);
-ok(/mouse-shaped/i.test(mk),"the page says “mouse-shaped” instead");
+/* The safe alternative is now Ben's "Hidden Mouseys". What matters for this
+   suite is unchanged: the page names the thing without borrowing the mark. */
+ok(/hidden mouseys/i.test(mk),"the page says “Hidden Mouseys” instead");
 
 console.log("\n=== FLOUNDER'S AQUARIUM ===");
 await p.evaluate(()=>localStorage.setItem("fs3_dust",JSON.stringify(

@@ -1,7 +1,8 @@
 /* v32 — titles & prestige, page hides, mini-game changes, grid changes. */
+const _W=require(__dirname+"/_where.js");
 const {chromium}=require("/tmp/node_modules/playwright-core");
-const SRC=require("fs").readFileSync(__dirname+"/flounder-search.html","utf8");
-const F="file://"+__dirname+"/flounder-search.html";
+const SRC=require("fs").readFileSync(_W.FILE,"utf8");
+const F=_W.URL;
 (async()=>{
 const b=await chromium.launch({args:["--no-sandbox","--disable-dev-shm-usage"]});
 let bad=0,good=0;const ok=(c,m)=>{c?(good++,console.log("  ✓ "+m)):(bad++,console.log("  ✗ "+m))};
@@ -19,8 +20,15 @@ const open_=async op=>{await p.evaluate(o=>{localStorage.setItem("fs3_opage",JSO
 console.log("\n=== TITLES ARE OURS, NOT THE GAME'S ===");
 await setD({...base,bal:9e9});await open_("dust");
 const titles=await p.evaluate(()=>[...document.querySelectorAll(".tits .tit .tt")].map(t=>t.textContent.trim()));
-ok(titles.some(t=>/Archivist/.test(t))&&titles.some(t=>/Lorekeeper/.test(t))
-   &&titles.some(t=>/Flounderborn/.test(t)),"Archivist, Lorekeeper and Flounderborn all kept");
+ok(titles.some(t=>/Archivist/.test(t))&&titles.some(t=>/Lorekeeper/.test(t)),
+   "Archivist and Lorekeeper kept — none of these borrow a Ravensburger term");
+/* Flounderborn is withheld until bought, so it is not in the visible list.
+   Owning it is what reveals the name — and it is still ours, not the game's. */
+await setD({...base,bal:9e9,titles:["t_fish"]});await open_("dust");
+ok(await p.evaluate(()=>[...document.querySelectorAll(".tits .tit .tt")]
+    .some(t=>/Flounderborn/.test(t.textContent))),
+   "…and Flounderborn once it is owned");
+await setD({...base,bal:9e9});await open_("dust");
 /* Scoped to the TITLES table on purpose. "Illumineer's Quest" is a real product
    name and the Worldbuilding page quotes official lore — neither is us taking a
    term for our own. What matters is that no TITLE borrows one. */
@@ -135,8 +143,12 @@ ok(!ops.includes("cred"),"…nor Sources");
 await open_("upg");
 ok(await p.evaluate(()=>document.getElementById("uppage").textContent.trim().length>100),
    "…but Deck upgrades still works if you go straight to it");
-const foot=await p.evaluate(()=>document.querySelector(".foot").textContent.replace(/\s+/g," ").trim());
-ok(!/LorcanaJSON|Lorcast|Card data/.test(foot),"source credits are off the footer");
+/* The footer is gone; the disclaimer moved to Settings. Same two claims, new
+   address. */
+await open_("pref");
+const foot=await p.evaluate(()=>{const l=document.querySelector(".legal");
+  return l?l.textContent.replace(/\s+/g," ").trim():""});
+ok(!/LorcanaJSON|Lorcast|Card data/.test(foot),"source credits are not in the disclaimer block");
 ok(/Not published, endorsed or approved/.test(foot),"…but the Ravensburger disclaimer stays, as it must");
 await open_("cred");
 ok(/LorcanaJSON/.test(await p.evaluate(()=>document.getElementById("credpage").textContent)),
