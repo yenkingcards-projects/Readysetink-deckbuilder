@@ -446,7 +446,10 @@ main{padding:12px 12px 32px;max-width:1800px;margin:0 auto}
 /* Search-for-cards is the same grid without the deck rail, so browsing gets
    the full width. One class rather than a second copy of the whole view. */
 body.browse .deck,body.browse .subsw,body.browse .mtabs{display:none!important}
-body.browse .wrap{grid-template-columns:250px 1fr}
+/* Filters left the grid; the deck panel is hidden here. So Search is one
+   full-width column of cards — this still reserved 250px for a sidebar that
+   is no longer in .wrap, squeezing the grid into a single column. */
+body.browse .wrap{grid-template-columns:minmax(0,1fr)}
 .page{max-width:1000px;margin:0 auto;padding:0 0 32px}
 /* size only — the rule, spacing and drop cap are set once at the top */
 .page h1{font-size:30px}
@@ -617,6 +620,112 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
    platinum take the deeper step (8.69). --link is for links on white. */
 .disclaimer a{color:var(--deep)}
 /* ===== aquarium ========================================================= */
+/* ---- Feed Flounder ----------------------------------------------------
+   Ben's standalone game, moved into the site. It was written to own the whole
+   viewport; here it lives in a box, so every measurement reads the element's
+   own rect. Full screen therefore just makes the box bigger. */
+.ffgame{position:relative;height:min(66vh,560px);border-radius:6px;overflow:hidden;
+  border:1px solid var(--chrome);box-shadow:var(--bevel);cursor:crosshair;isolation:isolate;
+  touch-action:none;user-select:none;color:#fff;
+  background:radial-gradient(circle at 20% 20%,rgba(92,215,235,.22),transparent 35%),
+    radial-gradient(circle at 75% 70%,rgba(45,157,202,.22),transparent 32%),
+    linear-gradient(#0d5672 0%,#0b4867 45%,#072e4b 72%,#041d31 100%)}
+.ffgame:fullscreen{height:100%;border-radius:0}
+.ffgame::before{content:"";position:absolute;inset:-10%;pointer-events:none;opacity:.35;
+  background:repeating-radial-gradient(ellipse at 20% -10%,rgba(255,255,255,.08) 0 2px,transparent 3px 42px);
+  transform:rotate(-8deg);animation:ffwater 12s linear infinite alternate}
+@keyframes ffwater{from{transform:translate3d(-2%,0,0) rotate(-8deg)}
+  to{transform:translate3d(2%,2%,0) rotate(-5deg)}}
+.ffhud{position:absolute;z-index:20;top:14px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:10px;padding:8px 15px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(4,24,39,.42);
+  backdrop-filter:blur(12px);font-weight:900;font-size:16px;white-space:nowrap}
+.ffhud b{font-variant-numeric:tabular-nums}
+.ffdusti{width:22px;height:22px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff6a8,#ffd54a 32%,#df9423 68%,#805018);
+  box-shadow:0 0 18px rgba(255,211,75,.65)}
+.fftitle{position:absolute;z-index:20;top:64px;left:50%;transform:translateX(-50%);
+  text-align:center;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.fftitle h2{font-size:clamp(24px,5vw,46px);line-height:.95;margin:0;font-weight:900;
+  letter-spacing:-.04em;color:#fff}
+.fftitle p{margin:6px 0 0;opacity:.78;font-weight:700;font-size:13px}
+.ffcard{position:absolute;z-index:10;width:104px;height:145px;left:50%;top:55%;
+  transform:translate(-50%,-50%);border-radius:10px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.38),transparent 18%),
+    linear-gradient(#53c9ec 0 54%,#eed248 55% 100%);
+  border:5px solid #ead85b;
+  box-shadow:0 14px 35px rgba(0,0,0,.38),0 0 0 2px rgba(33,92,116,.9) inset;
+  will-change:transform,left,top}
+.ffcard::before{content:"FLOUNDER";position:absolute;left:8px;right:8px;bottom:28px;
+  background:rgba(19,48,71,.84);border-radius:5px;padding:5px 4px;font-size:10.5px;
+  font-weight:900;text-align:center;letter-spacing:.08em;color:#fff5aa}
+.ffcard::after{content:"🐠";position:absolute;inset:11px 8px 53px;display:grid;
+  place-items:center;font-size:54px;border-radius:6px;border:2px solid rgba(255,255,255,.45);
+  background:radial-gradient(circle,#97efff 0,#29a6df 65%,#1472a4)}
+.ffood{position:absolute;z-index:7;will-change:transform}
+.ffood.pellet{width:16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#ffe69a,#c98132 42%,#744422 77%);
+  box-shadow:0 2px 5px rgba(0,0,0,.3)}
+.ffood.pellet.rare{width:20px;height:20px;
+  background:radial-gradient(circle at 32% 28%,#fff,#fff38d 28%,#ffd23f 58%,#f19d22 80%);
+  box-shadow:0 0 20px rgba(255,226,65,.85)}
+.ffood.potato,.ffood.coconut{display:grid;place-items:center;line-height:1;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.28))}
+.ffood.potato{width:38px;height:38px;font-size:34px}
+.ffood.coconut{width:46px;height:46px;font-size:42px}
+.ffbub{position:absolute;z-index:3;border-radius:50%;pointer-events:none;
+  border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+.ffpop{position:absolute;z-index:30;font-weight:900;color:#ffe76a;pointer-events:none;
+  text-shadow:0 2px 10px #000;white-space:nowrap;animation:ffpop .7s ease-out forwards}
+.ffpop.special{font-size:19px;color:#fff3ae}
+@keyframes ffpop{0%{opacity:0;transform:translate(-50%,-20%) scale(.7)}
+  20%{opacity:1}100%{opacity:0;transform:translate(-50%,-120%) scale(1.25)}}
+.ffhint{position:absolute;z-index:20;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:12.5px;font-weight:800;opacity:.72;padding:8px 13px;border-radius:999px;
+  background:rgba(0,0,0,.18);white-space:nowrap;transition:opacity .5s}
+.ffhint.hide{opacity:0}
+.ffweed{position:absolute;bottom:-8px;z-index:2;width:24px;height:150px;opacity:.45;
+  border-radius:80% 10% 0 0;background:linear-gradient(#2f9478,#14594f);transform-origin:bottom}
+.ffweed.s1{left:6%;transform:rotate(-7deg)}
+.ffweed.s2{left:12%;height:110px;transform:rotate(12deg)}
+.ffweed.s3{right:7%;height:185px;transform:rotate(9deg)}
+.ffweed.s4{right:14%;height:105px;transform:rotate(-11deg)}
+@media(max-width:600px){.ffcard{width:88px;height:124px}.ffcard::after{font-size:44px}}
+@media(prefers-reduced-motion:reduce){.ffgame::before{animation:none}}
+
+/* ---- effect layers worn on the card ---- */
+.ff2-layer{position:absolute;inset:-6px;border-radius:14px;pointer-events:none;display:none}
+.ffcard.ff-bubbles .ff2-bubbles{display:block;box-shadow:0 0 22px rgba(164,236,255,.28),inset 0 0 16px rgba(196,246,255,.15);animation:ff2Pulse 1.8s ease-in-out infinite alternate}
+.ffcard.ff-shimmer .ff2-shimmer{display:block;background:linear-gradient(115deg,transparent 22%,rgba(255,255,255,.08) 34%,rgba(255,255,255,.95) 48%,rgba(255,244,166,.48) 54%,transparent 69%);background-size:240% 100%;mix-blend-mode:screen;animation:ff2Sweep 2.1s linear infinite}
+.ffcard.ff-sapphire .ff2-sapphire{display:block;box-shadow:0 0 28px rgba(67,207,255,.9),0 0 56px rgba(46,122,255,.45),inset 0 0 18px rgba(156,242,255,.24);animation:ff2Sapphire 1.6s ease-in-out infinite alternate}
+.ffcard.ff-sparkles .ff2-sparkles{display:block;box-shadow:0 0 18px rgba(255,233,126,.34),0 0 32px rgba(255,248,191,.18);animation:ff2Pulse 1s ease-in-out infinite alternate}
+.ffcard.ff-water .ff2-water{display:block;background:repeating-radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.27) 0 2px,rgba(47,190,235,.10) 4px 15px,transparent 17px 28px);mix-blend-mode:soft-light;animation:ff2Water 2.1s linear infinite}
+.ffcard.ff-legendary .ff2-legendary{display:block;background:linear-gradient(125deg,rgba(255,0,102,.30),rgba(255,225,74,.34),rgba(67,255,219,.34),rgba(81,128,255,.35),rgba(218,85,255,.32),rgba(255,0,102,.30));background-size:360% 360%;mix-blend-mode:screen;box-shadow:0 0 24px rgba(255,229,92,.35),0 0 42px rgba(255,104,229,.34),0 0 64px rgba(87,229,255,.35);animation:ff2Foil 2.5s ease infinite}
+.ffcard.ff-abyss .ff2-abyss{display:block;border:1px solid rgba(216,145,255,.48);background:radial-gradient(circle,transparent 38%,rgba(89,20,145,.14) 70%,rgba(174,72,255,.28));box-shadow:0 0 34px rgba(180,76,255,.95),inset 0 0 24px rgba(99,22,160,.24);animation:ff2Abyss 1.8s ease-in-out infinite alternate}
+.ff2p{position:absolute;z-index:45;pointer-events:none;transform:translate(-50%,-50%);will-change:transform,opacity}
+.ff2star{color:#fff7ad;line-height:1;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,224,73,.95)}
+.ff2dot{width:5px;height:5px;border-radius:50%;background:#d2f6ff;box-shadow:0 0 10px rgba(117,228,255,.9)}
+.ff2bubble{border-radius:50%;border:1px solid rgba(225,252,255,.95);background:rgba(177,238,255,.22);box-shadow:0 0 10px rgba(124,224,255,.55)}
+.ff2rainbow{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,#fff,rgba(255,255,255,.4) 20%,rgba(255,122,220,.85) 55%,rgba(80,211,255,.9));box-shadow:0 0 14px rgba(255,194,95,.8),0 0 22px rgba(143,255,252,.65)}
+.ff2void{width:7px;height:7px;border-radius:50%;background:#d495ff;box-shadow:0 0 14px rgba(194,113,255,.98),0 0 28px rgba(63,6,112,.98)}
+@keyframes ff2Pulse{from{opacity:.45;transform:scale(.99)}to{opacity:1;transform:scale(1.02)}}
+@keyframes ff2Sweep{0%{background-position:170% 0}100%{background-position:-80% 0}}
+@keyframes ff2Sapphire{from{opacity:.62;transform:scale(.99)}to{opacity:1;transform:scale(1.025)}}
+@keyframes ff2Water{0%{background-position:0 0}100%{background-position:28px 18px}}
+@keyframes ff2Foil{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+@keyframes ff2Abyss{from{opacity:.5;transform:scale(.98)}to{opacity:1;transform:scale(1.03)}}
+@media(prefers-reduced-motion:reduce){.ff2-layer{animation:none!important}}
+/* ---- the shop ---- */
+.ffshop{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px}
+.ffx{background:var(--surface);border:1px solid var(--hairline);border-radius:4px;
+  padding:11px 12px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--bevel)}
+.ffx.own{border-color:var(--chrome)}
+.ffx.on{border-color:var(--carbon);box-shadow:var(--bevel),0 0 0 2px var(--amberc) inset}
+.ffxn{font-size:13.5px;font-weight:800;color:var(--tx);display:flex;align-items:center;gap:7px}
+.ffxlive{background:var(--amberc);color:var(--carbon);font-size:9.5px;font-weight:800;
+  letter-spacing:.08em;padding:1px 6px;border-radius:2px}
+.ffxd{font-size:12px;line-height:1.45;color:var(--deep);flex:1}
+.ffx .btn{width:100%}
 .tank{position:relative;height:min(60vh,520px);border-radius:6px;overflow:hidden;cursor:crosshair;
   /* water: a shaft of light from the top left, deeper and colder toward the floor */
   background:
@@ -763,7 +872,22 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
   box-shadow:0 0 14px 2px rgba(255,212,0,.66),0 0 30px 10px rgba(255,212,0,.3)}
 .kbhint{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;
   color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
-  box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px;margin-left:auto}
+  box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px}
+/* ---- card view settings ---- */
+.cvset{position:relative}
+.cvset>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:700;padding:6px 12px;border:1px solid var(--chrome);
+  border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
+.cvset>summary::marker{content:"";font-size:0}
+.cvset>summary::-webkit-details-marker{display:none}
+.cvset>summary::before{content:"\2699";font-size:13px}
+.cvset>summary:hover{background:var(--platinum)}
+.cvset[open]>summary{background:var(--carbon);color:var(--on-dark);border-color:var(--carbon)}
+.cvbody{position:absolute;top:calc(100% + 5px);left:0;z-index:80;min-width:330px;
+  display:flex;flex-direction:column;gap:9px;padding:11px;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:4px;
+  box-shadow:0 14px 34px -12px rgba(0,0,0,.5)}
+@media(max-width:900px){.cvbody{position:static;min-width:0;box-shadow:none;border:none;padding:9px 0}}
 .kbhint kbd{font-family:var(--sans);font-size:12px;font-weight:700;background:var(--surface);
   border:1px solid var(--chrome);border-bottom-width:2px;border-radius:2px;padding:1px 5px;
   color:var(--tx)}
@@ -1102,9 +1226,13 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 /* A real fixed frame, not a minimum. Cards carrying rulings are two or three
    times taller than plain ones, so a min-height still let the Next button walk
    down the page. The card scrolls INSIDE the frame instead. */
-.rstage{position:relative;overflow:hidden;height:clamp(430px,calc(100vh - 310px),780px)}
-.reader{height:100%;overflow-y:auto;overflow-x:hidden;padding-right:8px;
-  scrollbar-width:thin;align-content:start}
+/* The frame USED to be a fixed height with the card scrolling inside it, to
+   stop the Next button walking down the page. That traded away the thing the
+   page is for: a card with three rulings had its rulings below the fold of an
+   inner scroller nobody noticed. The page scrolls now, the card is whole, and
+   the edge arrows stay reachable because they're sticky rather than pinned. */
+.rstage{position:relative;min-height:430px}
+.reader{overflow:visible;padding-right:8px;align-content:start}
 .rnav{max-width:720px;margin:16px auto 0}
 .reader{transition:transform .17s ease,opacity .17s ease}
 .reader.outL{transform:translateX(-9%);opacity:0}
@@ -1114,11 +1242,17 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 @keyframes rslideR{from{transform:translateX(9%);opacity:0}to{transform:none;opacity:1}}
 @keyframes rslideL{from{transform:translateX(-9%);opacity:0}to{transform:none;opacity:1}}
 @media(prefers-reduced-motion:reduce){.reader{transition:none;animation:none!important}}
+/* No gradient. The dark fade down both edges read as a vignette over the card
+   art — it dimmed the thing you came to look at in order to advertise a button
+   you can also reach with the arrow keys, a swipe, or the pair of buttons under
+   the card. Plain transparent hit areas, visible on hover, invisible otherwise. */
 .redge{position:absolute;top:0;bottom:0;width:52px;z-index:6;font-size:2rem;color:var(--deep);
-  background:linear-gradient(90deg,rgba(13,26,24,.8),transparent);border-radius:0;
-  display:grid;place-items:center;transition:color .15s,background .15s}
-.redge.right{right:0;background:linear-gradient(270deg,rgba(13,26,24,.8),transparent)}
+  background:transparent;border-radius:0;opacity:.35;
+  display:grid;place-items:center;transition:color .15s,background .15s,opacity .15s}
+.redge>*{position:sticky;top:45vh}
+.redge.right{right:0}
 .redge.left{left:0}
+.rstage:hover .redge{opacity:1}
 .redge:hover{color:var(--link);background:rgba(79,208,247,.09)}
 .redge[disabled]{opacity:.2;pointer-events:none}
 @media(min-width:1100px){.redge{width:64px}}
@@ -1146,6 +1280,10 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
    nesting one inside another — the browser silently unnests them, which breaks
    the card's own click handler. Keyboard support is wired by hand to make up
    for it. */
+.dkname{cursor:text;border-bottom:1px dashed transparent;padding-bottom:1px}
+.dkcard:hover .dkname{border-bottom-color:var(--link)}
+.dkname:hover{color:var(--link)}
+.dkname:focus{outline:2px solid var(--link);outline-offset:2px}
 .dkren{position:absolute;right:9px;bottom:9px;font-size:11px;font-weight:700;
   color:var(--link);background:var(--surface);border:1px solid var(--line);
   border-radius:2px;padding:2px 7px;opacity:0;transition:opacity .12s;cursor:pointer}
@@ -1331,11 +1469,80 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 @media(max-width:600px){.cocon{flex-basis:100%}}
 /* small card grid used inside guided steps */
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;max-height:400px;overflow-y:auto;margin-top:9px}
-.mcard{position:relative;border-radius:2px;overflow:hidden;background:var(--panel2);border:1px solid var(--line)}
+.mcard{position:relative;border-radius:2px;overflow:hidden;background:var(--surface);border:1px solid var(--chrome)}
 .mcard:hover{border-color:var(--link)}
 .mcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;cursor:pointer}
-.mcard .t{padding:3px 5px;font-size:12px;line-height:1.2}
+/* Was dark blue on a blue plate — unreadable. White plate, carbon text. */
+.mcard .t{padding:5px 6px;font-size:12px;line-height:1.3;background:var(--surface);
+  color:var(--tx);border-top:1px solid var(--line)}
 .mcard .badge{position:absolute;top:3px;right:3px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:0 4px;border-radius:2px}
+/* ---- guided: pick vs prebuilt ---- */
+.gtabs{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:11px}
+.gtabs button{font-size:12.5px;font-weight:700;padding:8px 15px;border:1px solid var(--chrome);
+  border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
+.gtabs button:hover{background:var(--platinum)}
+.gtabs button.on{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.gtabs .or{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--deep)}
+.blist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.brow{border:1px solid var(--hairline);border-radius:4px;background:var(--surface);overflow:hidden}
+.brow.on{border-color:var(--chrome);box-shadow:var(--bevel)}
+.bhead{display:grid;grid-template-columns:14px minmax(150px,1.1fr) 2.4fr 18px;gap:11px;
+  align-items:center;width:100%;text-align:left;padding:10px 12px;background:var(--canvas-soft)}
+.bhead:hover{background:var(--ice)}
+.brow.on .bhead{background:var(--carbon);color:var(--on-dark)}
+.brow.on .bhead .bt{color:var(--on-dark-soft)}
+.bhead .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.bhead .bn{font-size:13.5px;font-weight:700}
+.bhead .bn em{font-style:normal;font-weight:400;color:var(--deep);display:block;font-size:12px}
+.brow.on .bhead .bn em{color:var(--on-dark-soft)}
+.bhead .bt{font-size:12px;line-height:1.45;color:var(--tx)}
+.bhead .bx{text-align:right;font-size:12px}
+@media(max-width:820px){.bhead{grid-template-columns:14px 1fr 18px}.bhead .bt{display:none}}
+.bbody{padding:12px;border-top:1px solid var(--line)}
+.binks{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12.5px;margin-bottom:11px}
+.binks i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.binks .bsing{color:var(--deep)}
+.bcols{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px}
+.bcol h4{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--deep);
+  margin-bottom:5px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.bcol h4 span{float:right;color:var(--tx)}
+.bcard{display:block;width:100%;text-align:left;font-size:12.5px;line-height:1.35;
+  padding:3px 5px;border-radius:2px;color:var(--tx)}
+.bcard:hover{background:var(--amberc);color:var(--carbon)}
+.bcard b{margin-right:4px}
+.bcard em{font-style:normal;color:var(--deep);display:block;font-size:11.5px}
+.bcard:hover em{color:var(--carbon)}
+.bplan{background:var(--canvas-soft);border:1px solid var(--hairline);border-left:4px solid var(--amberc);
+  border-radius:4px;padding:12px 14px;margin-bottom:13px}
+.bplan .bp{font-size:13.5px;line-height:1.6;color:var(--tx);margin:0 0 10px;max-width:82ch}
+.bturns{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-bottom:10px}
+.bturns div{background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:7px 9px;font-size:12.5px;line-height:1.45;color:var(--tx)}
+.bturns span{display:block;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--link);margin-bottom:3px}
+.bgoal{margin:0;font-size:13px;line-height:1.55;color:var(--tx)}
+.bgoal b{color:var(--link)}
+.bkey{font-size:11px;color:var(--deep)}
+.bhand{background:var(--surface);border:1px solid var(--hairline);border-radius:4px;
+  padding:11px 13px;margin-bottom:13px}
+.bhand h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--link);margin-bottom:8px}
+.bhcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}
+.bhc{display:flex;align-items:center;gap:7px;text-align:left;padding:6px 8px;
+  border:1px solid var(--line);border-radius:3px;background:var(--canvas-soft);color:var(--tx)}
+.bhc:hover{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.bhcost{flex:none;width:20px;height:20px;border-radius:50%;background:var(--carbon);color:var(--amberc);
+  font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.bhn{flex:1;min-width:0;font-size:12px;font-weight:700;line-height:1.25}
+.bhn em{display:block;font-style:normal;font-weight:400;font-size:11px;color:var(--deep)}
+.bhc:hover .bhn em{color:var(--carbon)}
+.bhink{color:var(--link);font-size:11px}
+.bhc:hover .bhink{color:var(--carbon)}
+.bhnote{font-size:11.5px;color:var(--deep);margin:8px 0 0}
+.bcard.top{background:#fff8d6;border-left:3px solid var(--amberc);font-weight:700}
+.bcard.top:hover{background:var(--amberc)}
+.bstar{color:var(--amber-press);margin-right:3px}
+.bacts{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
 .mlist{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .mlist button{background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:4px 8px;font-size:12px;color:var(--deep);text-align:left}
 .mlist button:hover{border-color:var(--link);color:var(--tx)}
@@ -1363,7 +1570,20 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 
 /* layout */
 /* Filters left the grid, so the wrap is cards + deck. */
-.wrap{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;margin-top:14px;align-items:start}
+/* The deck column is draggable on desktop. --deckw is written by the grip and
+   restored from localStorage, so a wide deck panel with big card images is a
+   preference, not something you re-drag every visit. */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) var(--deckw,330px);gap:14px;margin-top:14px;align-items:start}
+/* The grip hangs off .wrap, not off .deck — inside the deck panel it was
+   clipped by overflow-y:auto and scrolled away with the card list. */
+.wrap{position:relative}
+.dgrip{position:absolute;top:0;bottom:0;width:14px;cursor:col-resize;z-index:6;
+  right:calc(var(--deckw,330px) + 3px)}
+.dgrip::before{content:"";position:absolute;left:5px;top:50%;transform:translateY(-50%);
+  width:4px;height:46px;border-radius:2px;background:var(--hairline);transition:background .12s}
+.dgrip:hover::before,.dgrip.on::before{background:var(--amberc)}
+body.resizing{cursor:col-resize;user-select:none}
+@media(max-width:900px){.dgrip{display:none}.wrap{--deckw:auto!important}}
 @media(max-width:1240px){.wrap{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}}
 .deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
@@ -1381,9 +1601,20 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
    obvious once the filters went full width. */
 .special>summary::marker,.grp>summary::marker,details.sec>summary::marker,
 .otherset>summary::marker,.hidwrap>summary::marker{content:"";font-size:0}
-.filters .sec{break-inside:avoid}
-#sidebody{columns:230px;column-gap:16px}
-@media(max-width:600px){#sidebody{columns:1}}
+/* Readability, not density. Each section is a card with its own heading and
+   white space; the previous version was bare rules in raw CSS columns, which
+   let a section split across a column break mid-list. */
+#sidebody{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
+  gap:11px;align-items:start}
+.filters details.sec{border:1px solid var(--hairline);border-radius:4px;
+  background:var(--canvas-soft);box-shadow:var(--bevel-in);overflow:hidden}
+.filters details.sec>summary{padding:9px 11px;font-size:11.5px;letter-spacing:.08em;
+  color:var(--tx);background:var(--platinum);border-bottom:1px solid transparent}
+.filters details.sec[open]>summary{border-bottom-color:var(--hairline)}
+.filters details.sec>summary:hover{background:var(--ice)}
+.filters .sb{padding:10px 11px}
+.filters .list{max-height:230px}
+.filters .secn{color:var(--link);font-weight:700}
 .filters>summary .cnt{background:var(--amberc);color:var(--carbon);border-radius:2px;
   padding:1px 7px;font-weight:700;font-size:11px}
 .filters>summary .cnt:empty{display:none;}
@@ -1452,12 +1683,122 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
     0 0 30px 10px rgba(255,212,0,.34),
     0 18px 44px -10px rgba(0,0,0,.85);
   transition-delay:1s,0s,1s}
-.c:hover .nm{font-size:12px}
 @media(hover:none){.c:hover{transform:none;box-shadow:none}}
 .c img,.c .ph{width:100%;aspect-ratio:674/940;display:block;cursor:pointer;object-fit:cover;background:var(--platinum)}
 .c .ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:12px;color:var(--deep)}
-.c .nm{padding:6px 7px;font-size:12px;line-height:1.25}
-.c .nm i{display:block;color:var(--deep);font-style:normal;font-size:12px}
+/* The card name used to be printed here, under a picture of the card with its
+   name printed on it. The strip is now the stepper, which is the one control
+   people actually reach for. */
+/* ===== welcome tour =====================================================
+   The first thirty seconds of the site. It has one job: tell someone what is
+   here that isn't anywhere else, in five cards they can skip at any point.
+
+   The animation budget is deliberately small and all of it is opacity and
+   transform — a first impression that janks is worse than no animation. */
+.tourbg{position:fixed;inset:0;z-index:400;background:rgba(4,14,26,.82);
+  backdrop-filter:blur(3px);display:grid;place-items:center;padding:18px;
+  animation:tfade .35s ease}
+/* display:grid above outranks the UA stylesheet's [hidden]{display:none}, so
+   without this the "hidden" overlay stays on screen and eats every click. */
+.tourbg[hidden]{display:none}
+@keyframes tfade{from{opacity:0}to{opacity:1}}
+.tour{width:min(560px,100%);background:var(--surface);border:1px solid var(--line);
+  border-radius:5px;box-shadow:0 26px 70px -18px rgba(0,0,0,.7);
+  padding:26px 26px 20px;position:relative;overflow:hidden}
+.tour::before{content:"";position:absolute;inset:0 0 auto;height:4px;
+  background:linear-gradient(90deg,var(--amberc),var(--link),var(--amberc));
+  background-size:200% 100%;animation:tsweep 6s linear infinite}
+@keyframes tsweep{to{background-position:200% 0}}
+.tour h2{font-size:26px;line-height:1.15;margin:0 0 4px}
+.tour .tstep{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--deep);margin-bottom:9px}
+/* Each line fades up on its own delay — that's the "two seconds before the next
+   text" beat, done in CSS so no timer can leave a line stuck invisible. */
+/* Fast. The first pass staggered these over three seconds, which reads as the
+   page being slow rather than as a reveal — and the wizard steps repainted
+   from zero on every click, so choosing an answer looked like a blink. Nothing
+   here now takes longer than a third of a second. */
+.tour .tl{opacity:0;transform:translateY(6px);animation:trise .22s ease forwards}
+.tour .tl:nth-child(1){animation-delay:0s}
+.tour .tl:nth-child(2){animation-delay:.06s}
+.tour .tl:nth-child(3){animation-delay:.12s}
+.tour .tl:nth-child(4){animation-delay:.18s}
+.tour .tl:nth-child(5){animation-delay:.24s}
+.tour .tl:nth-child(6){animation-delay:.3s}
+@keyframes trise{to{opacity:1;transform:none}}
+.tour p{font-size:15px;line-height:1.55;margin:0 0 10px}
+.tour .tdis{font-size:12px;line-height:1.5;color:var(--deep);
+  background:var(--canvas-soft);border-radius:3px;padding:10px 12px;margin:12px 0 0}
+.tour .ttry{display:inline-block;font-family:var(--mono,monospace);font-weight:800;
+  background:var(--carbon);color:var(--on-dark);border-radius:3px;padding:3px 9px;margin:2px 0}
+.tour .tnav{display:flex;align-items:center;gap:9px;margin-top:20px}
+/* Skip is not a footnote. Someone who wants out of an introduction should be
+   able to hit the exit without aiming, so it's the same size as Next. */
+.tour .tnav .btn{padding:11px 18px;font-size:15px}
+.tour .tnav .sp{flex:1}
+.tour .tdots{display:flex;gap:5px}
+.tour .tdots i{width:7px;height:7px;border-radius:50%;background:var(--line);display:block}
+.tour .tdots i.on{background:var(--amberc);transform:scale(1.25)}
+/* The Next button glows, because "next" is the thing to press and a first-time
+   visitor should never have to hunt for it. */
+.tour .tnext{position:relative;animation:tglow 1.7s ease-in-out infinite}
+@keyframes tglow{0%,100%{box-shadow:0 0 0 0 rgba(255,212,0,.55)}
+  50%{box-shadow:0 0 0 7px rgba(255,212,0,0)}}
+.tour .topts{display:grid;gap:8px;margin-top:14px}
+.tour .topt{text-align:left;padding:11px 13px;border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);font-size:14px;font-weight:700;cursor:pointer;
+  transition:border-color .12s,background .12s,transform .12s}
+.tour .topt:hover{border-color:var(--acc);background:var(--canvas-soft);transform:translateX(2px)}
+.tour .topt.on{border-color:var(--amberc);background:var(--canvas-soft);box-shadow:inset 3px 0 0 var(--amberc)}
+.tour .topt i{display:block;font-style:normal;font-weight:400;font-size:12.5px;color:var(--deep);margin-top:2px}
+.tour .tlater{font-size:12px;color:var(--deep);margin-top:10px}
+/* Sparkles, the same idea as the dust click: a few things drift up and fade. */
+.tspark{position:absolute;pointer-events:none;font-size:15px;opacity:0;
+  animation:tspark 1.1s ease-out forwards}
+@keyframes tspark{0%{opacity:1;transform:translateY(0) scale(.7)}
+  100%{opacity:0;transform:translateY(-58px) scale(1.15)}}
+@media(prefers-reduced-motion:reduce){
+  .tour .tl,.tour::before,.tour .tnext,.tspark{animation:none!important;opacity:1!important;transform:none!important}}
+.allrow .allbtns{display:flex;gap:8px}
+.seecards{display:flex;justify-content:center;padding:12px 0 4px;
+  border-top:1px solid var(--line2);margin-top:12px}
+.cvcols{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700}
+.cvcols select{padding:3px 6px}
+/* deck list, grouped by card type */
+.dgh{display:flex;align-items:baseline;gap:7px;margin:12px 0 5px;font-size:12px;
+  font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);
+  border-bottom:1px solid var(--line2);padding-bottom:3px}
+.dgh:first-child{margin-top:2px}
+.dgh span{font-weight:700;letter-spacing:0;text-transform:none;opacity:.75}
+/* shopping list bundles */
+.shopb{display:flex;gap:14px;align-items:center;justify-content:space-between;
+  background:var(--surface);border:1px solid var(--line2);border-radius:3px;
+  padding:12px 14px;margin:0 0 10px}
+.shopb p{margin:3px 0 0;font-size:13px;color:var(--deep)}
+.shopb b{font-size:15px}
+.shopb .shopn{display:inline-block;margin-top:5px;font-size:12px;font-weight:800;
+  background:var(--canvas-soft);border-radius:2px;padding:2px 7px}
+.shopb.off{opacity:.62}
+.shopb button{white-space:nowrap}
+.shopmain{min-width:0;flex:1}
+.shoplist{margin-top:9px}
+.shoplist>summary{cursor:pointer;font-size:12.5px;font-weight:800;color:var(--link);
+  list-style:none;display:inline-block;border-bottom:1px dotted var(--line2)}
+.shoplist>summary::-webkit-details-marker{display:none}
+.shoplist ol{margin:8px 0 0;padding:0 0 0 22px;max-height:260px;overflow:auto;
+  font-size:13px;line-height:1.5}
+.shoplist li{display:flex;gap:8px;align-items:baseline;padding:1px 0}
+.shoplist li span{flex:1;min-width:0}
+.shoplist li i{color:var(--deep);font-style:normal}
+.shoplist li em{font-style:normal;font-size:11.5px;color:var(--deep);white-space:nowrap}
+.shoplist li b{font-variant-numeric:tabular-nums}
+.shoptip{background:var(--canvas-soft);border:1px solid var(--acc);border-left:5px solid var(--acc);
+  border-radius:3px;padding:14px 16px;margin:0 0 16px}
+.shoptip b{font-size:15px}
+.shoptip p{margin:6px 0 0;font-size:13.5px;line-height:1.55}
+.shoptip .shoptip2{color:var(--deep);font-size:13px}
+.c .prc{padding:3px 7px;font-size:12px;font-weight:800;color:var(--deep);text-align:right;
+  border-top:1px solid var(--line2);background:var(--canvas-soft)}
 .c .i{position:absolute;top:6px;right:6px;width:30px;height:30px;border-radius:50%;background:rgba(4,14,26,.92);
   border:1px solid var(--line2);font-size:15.2px;font-weight:700;display:grid;place-items:center;color:#cfe6f7;z-index:5}
 .c .i:hover{background:var(--acc);color:var(--surface)}
@@ -1480,17 +1821,33 @@ body.browse .tipadd,
 body.browse .c .qty,
 body.browse .c .shift{display:none!important}
 .c .q{position:absolute;bottom:32px;right:5px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:1px 6px;border-radius:2px}
-/* qty stepper on the tile once a copy is in the deck — plus LEFT, minus RIGHT */
-.c .qty{position:absolute;bottom:32px;left:5px;right:5px;display:flex;gap:4px;align-items:center;justify-content:space-between}
-/* These chips sit on a near-black scrim over the artwork, so their text has to
-   be the on-dark token. --tx is carbon, which was dark-on-dark and effectively
-   invisible against the card. */
-.c .qty button{width:24px;height:24px;border-radius:2px;background:rgba(4,14,26,.92);border:1px solid var(--on-dark-soft);
-  color:var(--on-dark);font-size:14.4px;font-weight:800;line-height:1;display:grid;place-items:center}
+/* The stepper is now a full-width bar in the flow, under the art, where the
+   name used to sit — always on, even at zero, so there is one obvious place to
+   press on every tile instead of a control that only appears after you have
+   already worked out how to add a card. Minus LEFT, plus RIGHT: the plus is the
+   one you want, so it gets the right-hand end and the green. */
+/* The bar has to read as CONTROLS, not as more card. Card art runs to a dark
+   border at the bottom, so a dark bar under it looked like part of the picture.
+   This one is a light plate with a hard rule above it and real gaps between the
+   three buttons — the same chrome the rest of the site uses for things you
+   press, so the eye files it as UI on sight. */
+.c .qty{display:flex;align-items:stretch;gap:2px;padding:3px;
+  background:var(--platinum);border-top:3px solid var(--carbon)}
+.c .qty button{flex:1 1 0;height:32px;border:1px solid var(--line);border-radius:2px;
+  background:var(--surface);color:var(--carbon);
+  font-size:20px;font-weight:800;line-height:1;display:grid;place-items:center;
+  cursor:pointer;transition:background .12s,color .12s,border-color .12s}
+.c .qty button.p{color:#0a6b45;border-color:#8fd3b8}
+.c .qty button.m{color:#a3122a;border-color:#e6a6b0}
 .c .qty button.p:hover{background:var(--good);color:#053221;border-color:var(--good)}
 .c .qty button.m:hover{background:var(--bad);color:#fff;border-color:var(--bad)}
-.c .qty .n{background:rgba(4,14,26,.92);border:1px solid var(--on-dark-soft);border-radius:2px;padding:2px 8px;
-  font-size:13px;font-weight:800;color:var(--amberc)}
+.c .qty button:active{filter:brightness(.94)}
+.c .qty .n{flex:0 0 42px;display:grid;place-items:center;font-size:15px;font-weight:900;
+  border-radius:2px;background:var(--canvas-soft);color:var(--deep);border:1px solid var(--line)}
+/* A card that is in the deck says so loudly — the count block goes solid Action
+   Yellow, which is the only colour on the page that means "this one". */
+.c .qty.has .n{background:var(--amberc);color:#2a1f00;border-color:var(--amber-press)}
+.c .qty.has{border-top-color:var(--amberc)}
 /* shift-target prompt, centred on the art */
 .c .shift{position:absolute;top:50%;left:6px;right:6px;transform:translateY(-50%);
   background:rgba(6,20,38,.93);border:1px solid var(--gold);color:var(--gold);border-radius:2px;
@@ -1607,8 +1964,30 @@ body.noremind .c.illegal img{filter:none}
 .curve div{flex:1;background:var(--acc2);border-radius:2px;min-height:2px;position:relative}
 .curve div b{position:absolute;top:-13px;left:0;right:0;text-align:center;font-size:12px;color:var(--deep);font-weight:500}
 .cx{display:flex;gap:3px;font-size:12px;color:var(--deep)}.cx div{flex:1;text-align:center}
+/* ---- deck stats ---- */
+.dstats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
+.dstat{background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:4px;
+  box-shadow:var(--bevel-in);padding:7px 4px;text-align:center}
+.dstat b{display:block;font-size:17px;font-weight:800;color:var(--tx);line-height:1.15}
+.dstat i{font-style:normal;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep)}
+.dstat.warn{background:#fff2f2;border-color:var(--bad)}
+.dstat.warn b{color:var(--bad)}
+.curveW{display:flex;align-items:flex-end;gap:3px;height:96px;margin:4px 0 5px}
+.cbar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+  height:100%;gap:2px}
+.cbar .cn{font-size:11px;font-weight:700;color:var(--tx);min-height:14px}
+.cbar .cfill{width:100%;background:var(--primary);border-radius:2px 2px 0 0;min-height:2px}
+.cbar .cl{font-size:11px;color:var(--deep)}
+.inkleg,.tyleg{display:flex;flex-wrap:wrap;gap:4px 11px;font-size:11.5px;color:var(--tx);margin-top:5px}
+.inkleg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.tyleg{color:var(--deep);border-top:1px solid var(--line);padding-top:6px;margin-top:7px}
+.inkleg b,.tyleg b{color:var(--tx)}
+.dsortrow{display:flex;align-items:center;gap:7px;margin:12px 0 2px}
+.dsortrow label{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--deep)}
+.dsortrow select{flex:1;font-size:12.5px;padding:4px 6px}
 .ibar{display:flex;height:8px;border-radius:2px;overflow:hidden;margin:6px 0}
-.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:6px;margin-top:9px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px;margin-top:9px}
 .dcard{position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--panel2)}
 .dcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block}
 .dcard .dq{position:absolute;top:2px;left:2px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:0 4px;border-radius:2px}
@@ -1865,6 +2244,9 @@ body.noremind .c.illegal img{filter:none}
         <button class="btn" id="colAll">Collapse all</button>
       </div>
       <div class="groups" id="groups"></div>
+      <!-- Both drawers are tall enough that the results end up well below the
+           fold. This is the way back down. -->
+      <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
     </div>
   </details>
   <!-- Filters is a full-width bar, sitting directly under Special searches and
@@ -1874,8 +2256,10 @@ body.noremind .c.illegal img{filter:none}
        looked like a scrollbar with words on it, and it didn't match anything
        else on the page. -->
   <details class="special filters" id="side">
-    <summary><span>🎛️ Filters</span><span class="cnt" id="fcnt"></span></summary>
-    <div class="specialbody"><div id="sidebody"></div></div>
+    <summary><span>Filters</span><span class="cnt" id="fcnt"></span></summary>
+    <div class="specialbody"><div id="sidebody"></div>
+      <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
+    </div>
   </details>
   <div class="wrap">
     <section class="cards">
@@ -1889,14 +2273,30 @@ body.noremind .c.illegal img{filter:none}
         </select></div>
       <div class="gtools">
         <button class="btn" id="clr2">Clear all filters</button>
-        <button class="btn" id="tgRemind">Reminder tags: on</button>
-        <div class="kbhint"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move
-          · <kbd>Enter</kbd> add · <kbd>4</kbd> playset · <kbd>⌫</kbd> remove
-          · <kbd>/</kbd> search · drag a card to the deck</div>
+        <button class="btn" id="lnk" title="Copy a link that reopens exactly this search">🔗 Copy link to this search</button>
+        <!-- One menu instead of a permanent wall of keyboard hints. The legend
+             is worth reading once and never again, so it lives behind a click. -->
+        <details class="cvset" id="cvset">
+          <summary>Card view settings</summary>
+          <div class="cvbody">
+            <button class="btn" id="tgRemind">Reminder tags: on</button>
+            <button class="btn" id="tgPrice">Prices: off</button>
+            <label class="cvcols">Columns
+              <select id="gcols">
+                <option value="0">Auto</option>
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option><option value="6">6</option>
+              </select></label>
+            <div class="kbhint"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move
+              · <kbd>Enter</kbd> add · <kbd>4</kbd> playset · <kbd>⌫</kbd> remove
+              · <kbd>/</kbd> search · drag a card to the deck</div>
+          </div>
+        </details>
       </div>
       <div class="grid" id="grid"></div>
     </section>
-    <aside class="deck" id="deck"></aside>
+    <aside class="deck" id="deck" style="position:relative"></aside>
   </div>
 </section>
 
@@ -1950,6 +2350,8 @@ body.noremind .c.illegal img{filter:none}
 
 <section class="view" id="vCred"><div id="credpage"></div></section>
 
+<section class="view" id="vShop"><div id="shoppage"></div></section>
+
 <section class="view" id="vOther">
   <div class="page">
     <h1><span class="gi">✨</span>Other</h1>
@@ -1970,6 +2372,10 @@ body.noremind .c.illegal img{filter:none}
      browser printed the four characters on the page, just under the footer. -->
 <div class="mbg" id="mbg"><div class="modal" id="modal"></div></div>
 <div class="toast" id="toast"></div>
+<!-- The welcome tour. Empty until startTour() fills it; hidden the rest of the
+     time. Lives here rather than being created in JS so the CSS above it can
+     be read next to everything else's. -->
+<div class="tourbg" id="tourbg" hidden><div class="tour" id="tour"></div></div>
 
 <script>var DATA=/*__DATA__*/;var KINDS=/*__KINDS__*/;</script>
 <script>
@@ -2039,20 +2445,29 @@ const COCO=[
  {n:"Tinker Bell",v:"Giant Fairy",i:"Steel",t:"Whenever another of your abilities or actions damages an opposing character, deal 1 more damage to it.",hook:c=>/deals?\s+.{0,20}damage/i.test(c.ef),rec:["damage","pierce"]},
  {n:"Sisu",v:"Emboldened Warrior",i:"Ruby",t:"All characters with more strength than each opposing character can quest the turn they're played.",hook:c=>(c.st||0)>=5,rec:["pump","chall","staple"]},
  {n:"Pocahontas",v:"Peacekeeper",i:"Amber",t:"Once during your turn, choose a character. Until the start of your next turn they get +1 lore, can't challenge, and must quest if able.",hook:c=>(c.lo||0)>=2,rec:["lore","nochal"]},
- {n:"Dumbo",v:"Ninth Wonder of the Universe",i:"Amethyst",t:"You may use the exert abilities of your characters the turn they're played.",hook:c=>c.at.includes("activated"),rec:["exert","activated","draw"]}
+ {n:"Dumbo",v:"Ninth Wonder of the Universe",i:"Amethyst",t:"You may use the exert abilities of your characters the turn they're played.",/* EXERT abilities, not every activated one. `at:["activated"]` includes
+   cards whose activated ability has no exert cost at all — Cobra Bubbles
+   was being pulled in and starred, which is the opposite of the point. An
+   exert ability writes the symbol as a cost, before the dash. */
+  hook:c=>/(\{E\}|⟳)[^.]{0,14}[-–—]/.test(c.tx||""),rec:["exert","activated","draw"]}
 ];
 
 
 const INKS=["Amber","Amethyst","Emerald","Ruby","Sapphire","Steel"];
 const HEX={Amber:"#f0a832",Amethyst:"#a86fd8",Emerald:"#35c97a",Ruby:"#f0625f",Sapphire:"#4a9fe0",Steel:"#9fb0c4"};
-const FMT={infinity:{l:"Infinity",cap:2,max:4,min:60},core:{l:"Core",cap:2,max:4,min:60},coconut:{l:"Coconut",cap:3,max:1,min:60}};
+const FMT={infinity:{l:"Infinity",cap:2,max:4,min:60},core:{l:"Core",cap:2,max:4,min:60},coconut:{l:"Coconut",cap:3,max:1,min:60},/* No rules at all: every ink, any number of copies, no minimum. Nothing is
+   ever flagged illegal, so the warnings panel stays quiet. */
+freeform:{l:"Freeform",cap:6,max:99,min:0}};
 /* One line each, shown under the picker. Format is the single setting that
    changes what counts as a legal deck, and "Core" means nothing to someone who
    has just arrived — the rules belong on screen, not in a title attribute. */
+/* Shown in this order — the ones people actually build in first. */
+const FMT_ORDER=["coconut","core","infinity","freeform"];
 const FMT_BLURB={
   infinity:"Every card ever printed. 2 inks, up to 4 copies of a card, 60 minimum.",
   core:"Only cards from the current Core sets. 2 inks, up to 4 copies, 60 minimum.",
-  coconut:"Singleton — one copy of each card, 3 inks, led by a Coconut. 60 minimum."};
+  coconut:"Singleton — one copy of each card, 3 inks, led by a Coconut. 60 minimum.",
+  freeform:"No rules. Any inks, any number of copies, any size. Nothing is flagged."};
 const FL={n:"Flounder",v:"Voice of Reason"};
 const K_DECKS="fs3_decks",K_STAR="fs3_stars",K_DVIEW="fs3_dview";
 const K_COLL="fs3_coll",K_COLLON="fs3_collon";
@@ -2113,7 +2528,7 @@ const rarLabel=r=>`${rarSym(r)}<span>${esc(String(r||""))}</span>`;
    Stored as {key: [normal, foil]} and sparse — only what you own is written,
    so an empty collection costs two bytes rather than 3,242 zeroes. */
 const prints=c=>(c.pr&&c.pr.length)?c.pr
-  :[{s:c.s,num:c.num,r:c.r,i:c.img,l:c.imgL}];
+  :[{s:c.s,num:c.num,r:c.r,i:c.img,l:c.imgL,p:c.p,pf:c.pf}];
 const pkey=(f,pr)=>f+"|"+pr.s+"|"+pr.num;
 let COLL=load(K_COLL,{});
 let COLLON=load(K_COLLON,true);
@@ -2123,6 +2538,83 @@ function setOwned(k,n,f){
   n=Math.max(0,Math.min(99,n|0));f=Math.max(0,Math.min(99,f|0));
   if(!n&&!f)delete COLL[k];else COLL[k]=[n,f];
   save(K_COLL,COLL)}
+/* ===================== card prices =====================
+   ONE seam. Everything on the site that wants to know what a card is worth
+   asks cardPrice(c) and gets a number of dollars or null. Nothing else knows
+   where the number came from.
+
+   Today's source is a SNAPSHOT: build_flounder.py bakes Lorcast's usd /
+   usd_foil into the card data on every build, so the numbers are as fresh as
+   the last build and never call out to anything at runtime. That keeps the
+   site a single offline file. DATA.priced is the date they were taken, and the
+   site says so rather than implying they're live.
+
+   Swapping to a live feed later is assigning one function to PRICE_SRC.
+
+   TCGplayer's own API is deliberately not used: it's a server-to-server flow
+   with a client secret, and a static file has nowhere to keep a secret. See
+   PRICES.md. The one price thing that needs no key at all is the BUYING —
+   their mass entry page takes the card list in the URL. That is tcgUrl(). */
+let PRICE_SRC=c=>c.p;
+let PRICES=load("fs3_prices",false);
+/* Shopping suggestions are OFF until you ask for them. A site that opens by
+   telling you what to buy is a shop; this one isn't. */
+let SUGGON=load("fs3_suggon",false);
+function cardPrice(c){
+  if(!PRICE_SRC||!c)return null;
+  try{const v=PRICE_SRC(c);return typeof v==="number"&&isFinite(v)&&v>0?v:null}
+  catch(e){return null}}
+const money=v=>v==null?"":"$"+(v<10?v.toFixed(2):Math.round(v));
+/* The CHEAPEST way to own a playable copy — across every printing, foil if
+   that's all there is. This is what the money filters run on, and it is the
+   only definition of "an expensive card" that isn't a lie: a card whose
+   enchanted sells for $80 is not an expensive card if its common is 40¢. Over
+   $40 here means every way of owning it costs over $40. */
+function cardPriceMin(c){
+  if(!c)return null;
+  let best=null;
+  const eat=v=>{if(typeof v==="number"&&v>0&&(best==null||v<best))best=v};
+  const rows=(c.pr&&c.pr.length)?c.pr:[{p:c.p,pf:c.pf}];
+  rows.forEach(pr=>eat(pr.p!=null?pr.p:pr.pf));
+  if(best==null)eat(c.p!=null?c.p:c.pf);
+  return best}
+/* The other end: the priciest printing. A different question — not "is this
+   card expensive" but "does this card have a chase version" — so it gets its
+   own chip rather than quietly changing what the tiers mean. */
+function cardPriceMax(c){
+  if(!c)return null;
+  let best=null;
+  const eat=v=>{if(typeof v==="number"&&v>0&&(best==null||v>best))best=v};
+  ((c.pr&&c.pr.length)?c.pr:[]).forEach(pr=>{eat(pr.p);eat(pr.pf)});
+  eat(c.p);eat(c.pf);
+  return best}
+function priceChip(c){
+  if(!PRICES)return "";
+  const v=cardPrice(c);
+  return v==null?"":`<div class="prc">${money(v)}</div>`}
+const priceDate=()=>DATA.priced||"";
+/* TCGplayer mass entry. Their format is "<qty> <name>" per line, lines joined
+   by ||, and Lorcana names there are "Name - Version" exactly like ours. */
+const TCG_LINE=x=>`${x.q||1} ${x.c.n}${x.c.v?" - "+x.c.v:""}`;
+/* ---- affiliate -------------------------------------------------------------
+   Empty until Ben is approved by TCGplayer's Impact programme. Fill in the
+   partner id from the Impact dashboard and every buy link on the site starts
+   carrying it — there is no second place to change. Left empty, the links are
+   ordinary TCGplayer links and nothing is tracked.
+
+   Do not guess this value. An unapproved or wrong id doesn't earn anything, it
+   just puts a stranger's tracking code on your users' purchases. */
+const TCG_AFF="";   // e.g. "readysetink" — from Impact, once approved
+const affix=u=>TCG_AFF
+  ? u+(u.includes("?")?"&":"?")+"utm_campaign=affiliate&utm_medium=partner&utm_source="
+    +encodeURIComponent(TCG_AFF)
+  : u;
+const tcgUrl=rows=>affix("https://www.tcgplayer.com/massentry?productline=Lorcana%20TCG&c="
+  +encodeURIComponent(rows.map(TCG_LINE).join("||")));
+function tcgOpen(rows,what){
+  if(!rows.length){toast("Nothing to buy — "+what);return}
+  window.open(tcgUrl(rows),"_blank","noopener")}
+
 const collCopies=()=>Object.keys(COLL).reduce((a,k)=>a+COLL[k][0]+COLL[k][1],0);
 const collFoils=()=>Object.keys(COLL).reduce((a,k)=>a+COLL[k][1],0);
 
@@ -2217,14 +2709,70 @@ const ITEM_HATE=new RegExp([
    a Be Prepared deck are not the same deck — pings want damage-count payoffs
    (Ratigan's Party, damaged-character triggers), not board wipes. Moving a
    counter counts: the damage still lands on something of theirs. */
-const PING=/deals? 1 damage|put 1 damage counter|puts? a damage counter|move 1 damage counter/i;
+/* Multiplayer punishment: effects that hit EVERY opponent at once. In a
+   two-player game these read as ordinary removal; at a four-player table they
+   are three-for-ones, which is a completely different card. */
+const ALLOPP=/each opponent|all opponents|each other player|each opposing player|each of your opponents|opposing players|each player|all opposing characters|each opposing character/i;
+/* Songs keep their whole effect in `tx`, not `ef` — Sudden Chill's "Each
+   opponent chooses and discards a card" was invisible to anything reading `ef`.
+   These two chips read the printed text with the reminder text in brackets
+   stripped, which is where the multiplayer cards actually live. */
+const PLAINTX=c=>(c.tx||"").replace(/\([^)]*\)/g," ");
+/* Lore drain: making them lose lore, rather than gaining it yourself. */
+const LOREDRAIN=/loses? \d+ lore|lose \d+ lore|loses? lore|no lore this turn|can't gain lore|doesn't gain lore/i;
+/* The two specific table-taxes, narrowed. Both require the all-opponents
+   phrasing and the effect to sit in the SAME sentence — split on full stops
+   first — because a card can easily say "each opponent" in one ability and
+   "discard" in an unrelated one. */
+const inSameSentence=(re1,re2)=>t=>t.split(/(?<=[.!?])\s+/)
+  .some(s=>re1.test(s)&&re2.test(s));
+const ALLOPP_DISCARD=(()=>{const f=inSameSentence(ALLOPP,/discards?/i);
+  return {test:t=>f(t||"")}})();
+const ALLOPP_LORE=(()=>{const f=inSameSentence(ALLOPP,/loses? \d+ lore|loses? lore/i);
+  return {test:t=>f(t||"")}})();
+/* Global = happens to EVERY player, you included. "Each player", "all players",
+   "players can't", and the symmetric "no character can". Deliberately excludes
+   "each opponent", which is the one-sided version above. */
+const GLOBAL=/each player|all players|every player|players can't|no player|each player's|all characters|no character can|characters can't/i;
+/* Bounce, split by whose card goes home. "Return X to their player's hand" and
+   "chosen character to their hand" are the removal half; "return this/your
+   character to your hand" is the re-trigger half. */
+const BOUNCE_SELF=/returns?[^.]{0,70}\bto (?:your|his or her own) hand\b|returns? this (?:character|item|location)/i;
+const BOUNCE_OPP=/returns?[^.]{0,70}\bto (?:their|its) (?:player'?s? )?hand\b|returns? (?:chosen )?oppos\w+[^.]{0,50}\bhand\b|returns? [^.]{0,50}\bopponent'?s?\b[^.]{0,40}\bhand\b/i;
+/* Cards that WANT cards in the discard — pay-offs for discarding, and cards
+   that play or fetch out of the discard pile. */
+const DISCARD_PAYOFF=/(whenever|when) (?:you|a card is|an? card).{0,40}discard|discard(?:s|ed)?[^.]{0,40}(?:you may|draw|gain|deal)|from your discard|in your discard|return .{0,30}from your discard|play .{0,30}from your discard/i;
+/* Sing Together decks want cards that scale with HOW MANY characters sang, or
+   that make singing cheaper/wider. The keyword itself is the other chip. */
+const SINGTOG_PAY=c=>{
+  const t=PLAINTX(c);
+  return /sing together/i.test(t)&&!c.kw.some(k=>k[0]==="Sing Together")
+    || /each character (?:that|who) sang|characters that sang|for each .{0,25}sing/i.test(t)
+    || /(?:can|may) (?:also )?sing|sing (?:songs|this song) .{0,25}(?:as if|for free)|additional character.{0,30}sing/i.test(t)};
+const PING=new RegExp([
+  /* One or two at a time, from any trigger — on play, on quest, on banishing
+     something in a challenge (Tinker Bell - Giant Fairy), whenever an item is
+     banished. Three or more is removal, not a ping, and belongs to a different
+     deck. */
+  "deals? (?:up to )?[12] damage",
+  "deal (?:up to )?[12] damage",
+  "puts? (?:up to )?[12] damage counter",
+  "puts? a damage counter",
+  "move (?:up to )?[12] damage counter"
+].join("|"),"i");
 
 const GROUPS=[
  /* Staples stands alone. It is the only chip in the table that filters by YOUR
     list rather than by what a card does, so it never belonged in a group with
     mechanical filters — and it's the one most people want first. */
  {g:"Staples",chips:[
-   {id:"staple",l:"★ Staples",fn:c=>isStar(c.f)}]},
+   {id:"staple",l:"★ Staples",fn:c=>isStar(c.f)},
+   /* "Best legendaries" can't be a taste judgement in a filter, so it's two
+      objective signals instead: it's on the staple list, or the market has
+      decided it matters (a legendary nobody plays does not hold $10). Either
+      way you get the ones worth building around rather than all 200. */
+   {id:"bestleg",l:"Legendaries worth playing",
+     fn:c=>c.r==="Legendary"&&(isStar(c.f)||(cardPrice(c)||0)>=10)}]},
  /* Tribes: cards that care about a named group. Both chips answer the same
     question — "what goes in a deck built around one family?" — which is a
     different question from "what does this card do", and so a different group. */
@@ -2235,7 +2783,7 @@ const GROUPS=[
       Experiments and the Galactic Council cards that aren't filed under the
       film, while the film picks up Nani and David, who aren't Aliens. A deck
       wants both, so the chip is the union. */
-   {id:"lilo",l:"👽 Lilo & Stitch + Aliens",
+   {id:"lilo",l:"Lilo & Stitch + Aliens",
      fn:c=>c.sto==="Lilo & Stitch"||c.sub.includes("Alien")}]},
  {g:"Card advantage",chips:[
    {id:"draw", l:"Draws a card",        re:/draws?\s+(a|\d+)?\s*cards?/i},
@@ -2245,21 +2793,48 @@ const GROUPS=[
  {g:"Removal & damage",chips:[
    {id:"damage",l:"Deals damage",   re:/deals?\s+.{0,15}damage/i},
    // Rules 8.8.3 — Resist only reduces damage that is DEALT; put/moved damage ignores it
-   {id:"pierce",l:"🗡️ Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
+   {id:"pierce",l:"Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
    {id:"banish",l:"Banishes",       re:/banish/i},
-   {id:"ping",  l:"🎯 Pings (1 damage)",fn:c=>PING.test(c.ef||"")},
-   {id:"itemhate",l:"🔨 Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
-   {id:"discard",l:"Discards",      re:/discard/i}]},
+   {id:"ping",  l:"Pings damage",fn:c=>PING.test(c.ef||"")},
+   {id:"itemhate",l:"Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
+   {id:"discard",l:"Discards",      re:/discard/i},
+   /* Cards that WANT to be in the discard — Lilo - Escape Artist paying you for
+      your own discards, anything that plays from or returns out of the
+      discard pile. The engine half of a discard deck, as opposed to the
+      "make them discard" half above. */
+   {id:"selfmill",l:"Wants to be discarded",fn:c=>DISCARD_PAYOFF.test(c.ef||"")}]},
+ /* Cards that change value with the number of players at the table. */
+ {g:"Multiplayer",chips:[
+   {id:"allopp", l:"Hits every opponent",fn:c=>ALLOPP.test(PLAINTX(c))},
+   {id:"loredrain",l:"Lore drain",       fn:c=>LOREDRAIN.test(PLAINTX(c))},
+   /* The three specific ways a card taxes the whole table. Each one has to see
+      BOTH the all-opponents phrasing and the effect in the same sentence,
+      otherwise "each opponent" plus an unrelated discard elsewhere on the card
+      matches. Songs keep their effect in tx, hence PLAINTX. */
+   {id:"alldisc",l:"All opponents discard",fn:c=>ALLOPP_DISCARD.test(PLAINTX(c))},
+   {id:"alllore",l:"All opponents lose lore",fn:c=>ALLOPP_LORE.test(PLAINTX(c))},
+   /* Everything that happens to EVERYONE, you included. Symmetrical effects
+      play completely differently from one-sided ones — you build around being
+      the player who minds least. */
+   {id:"global", l:"Global — hits every player",fn:c=>GLOBAL.test(PLAINTX(c))}]},
  /* Locations, split into the two decks that "text:location" used to return
     mixed together. */
  {g:"Locations",chips:[
-   {id:"locsyn", l:"🏰 Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
-   {id:"lochate",l:"💥 Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
+   {id:"locsyn", l:"Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
+   {id:"lochate",l:"Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
  {g:"Protection",chips:[
    {id:"heal",  l:"Removes damage",     re:/removes?\s+(up to\s+)?\d*\s*damage/i},
    {id:"nochal",l:"Can't be challenged",re:/can't be challenged/i}]},
+ {g:"Bounce",chips:[
+   /* Bounce splits in two because the two halves do opposite jobs: bouncing
+      YOUR OWN character re-triggers its "when you play this" ability, bouncing
+      THEIRS is tempo removal. One chip called "returns to hand" was hiding
+      both behind each other. The union stays as a third chip for anyone who
+      just wants the whole category. */
+   {id:"bounceyou",l:"Bounce — back to YOUR hand",fn:c=>BOUNCE_SELF.test(c.ef||"")},
+   {id:"bounceopp",l:"Bounce — back to THEIR hand",fn:c=>BOUNCE_OPP.test(c.ef||"")},
+   {id:"bounce",l:"Bounce — any return to hand",   re:/(returns?|puts?)\s+.{0,25}(into|to)\s+(their|your|its)\s+hand/i}]},
  {g:"Tempo",chips:[
-   {id:"bounce",l:"Returns to hand",   re:/(returns?|puts?)\s+.{0,25}(into|to)\s+(their|your|its)\s+hand/i},
    {id:"exert", l:"Requires exerting", fn:c=>c.at.includes("activated")||/\{E\}\s*[-–—]|⟳\s*[-–—]/.test(c.tx)},
    {id:"ready", l:"Readies characters",re:/ready\s+(chosen|your|this)/i}]},
  {g:"Cost & ramp",chips:[
@@ -2295,7 +2870,11 @@ const GROUPS=[
    {id:"chall",l:"Stronger when challenging",fn:c=>c.kw.some(k=>k[0]==="Challenger")}]},
  {g:"Songs",chips:[
    {id:"sing",   l:"Payoff for singing",re:/sings?\s+a\s+song|whenever\s+.{0,40}\bsings\b/i},
-   {id:"singtog",l:"Sing Together",     fn:c=>c.kw.some(k=>k[0]==="Sing Together")}]},
+   {id:"singtog",l:"Sing Together",     fn:c=>c.kw.some(k=>k[0]==="Sing Together")},
+   /* Sing Together needs a pile of singers, so what a Sing Together deck is
+      really shopping for is cards that pay out PER SINGER — the ones that get
+      better the more characters you tap into the song. */
+   {id:"singtogpay",l:"Benefits from Sing Together",fn:c=>SINGTOG_PAY(c)}]},
  {g:"Timing",chips:[
    {id:"etb",   l:"Enters play",     re:/when you play this/i},
    {id:"onq",   l:"On quest",        re:/whenever this character quests/i},
@@ -2316,8 +2895,34 @@ const GROUPS=[
    {id:"anynote",l:"Any extra notes",     fn:c=>(c.ru||[]).length>0||(c.rsi||[]).length>0},
    /* Ben's take and Video are written but not surfaced yet — flip HIDDEN_KINDS
       to [] when he's ready and both chips come back. */
-   ...KINDS.filter(k=>!HIDDEN_KINDS.includes(k.k)).map(k=>({id:"nk_"+k.k,l:k.i+" "+k.l,
-     fn:c=>(c.rsi||[]).some(n=>(n.k||"ruling")===k.k)}))]}
+   /* Label only — the kind's emoji stays on the note itself, where it carries
+      meaning; in a row of filter chips it was just noise. */
+   ...KINDS.filter(k=>!HIDDEN_KINDS.includes(k.k)).map(k=>({id:"nk_"+k.k,l:k.l,
+     fn:c=>(c.rsi||[]).some(n=>(n.k||"ruling")===k.k)}))]},
+ /* Money. Marked `money:true`, which takes it OUT of the ordinary group list
+    and into its own always-closed block next to the Coconuts — the same
+    treatment, for the same reason: it's a whole different question from "what
+    does this card do", and nobody wants it open by default.
+
+    It lives in GROUPS anyway (rather than being built separately) so that its
+    chips get the same precomputed c.ab membership as every other chip, which
+    is what makes the counts free. */
+ {g:"💲 Money",money:true,chips:[
+   /* Cheapest printing, so these mean "expensive however you buy it" rather
+      than "has one pricey enchanted". Lorcana is a cheap game — these lists
+      are short on purpose, and that is the true answer. */
+   {id:"over40",l:"Costs over $40",fn:c=>(cardPriceMin(c)||0)>=40},
+   {id:"over30",l:"Over $30",fn:c=>(cardPriceMin(c)||0)>=30},
+   {id:"over20",l:"Over $20",fn:c=>(cardPriceMin(c)||0)>=20},
+   {id:"over10",l:"Over $10",fn:c=>(cardPriceMin(c)||0)>=10},
+   {id:"chaseprint",l:"Has a chase printing over $40",fn:c=>(cardPriceMax(c)||0)>=40},
+   /* These two use the PLAYABLE copy's price, not the chase printing — the
+      question is "can I afford to play it", and nobody has to buy the
+      enchanted to play the card. */
+   {id:"budgetgood",l:"★ Staples $10 or less",
+     fn:c=>isStar(c.f)&&cardPrice(c)!=null&&cardPrice(c)<=10},
+   {id:"chasegood", l:"★ Staples over $10",
+     fn:c=>isStar(c.f)&&(cardPrice(c)||0)>10}]}
 ];
 const AB=GROUPS.flatMap(g=>g.chips);
 /* Plain-English routes into a chip. People don't search "pump" — they type
@@ -2343,7 +2948,9 @@ const CHIPWORDS={
           "kill locations","banish locations","anti location"],
  itemhate:["item nerfs","item nerf","item hate","item removal","artifact removal",
            "kill items","banish items","anti item"],
- ping:["pings","ping","ping damage","pings damage","chip damage","1 damage"],
+ ping:["pings","ping","ping damage","pings damage","chip damage","1 damage","2 damage"],
+ allopp:["multiplayer","each opponent","all opponents","group hate","table damage","hits everyone"],
+ loredrain:["lore drain","drain lore","lore loss","lose lore","opponent loses lore"],
  lilo:["lilo","stitch","aliens","alien","lilo and stitch","lilo & stitch",
        "experiments"],
  shift:["shift"],
@@ -2366,6 +2973,7 @@ const S={q:"",ab:new Set(),ink:new Set(),dual:false,type:new Set(),rar:new Set()
      FRANCHISE sidebar facets and Enter-to-tokenise pills work either way. */
   tagS:load("fs3_tagS",true),stoS:load("fs3_stoS",false)};
 let DVIEW=load(K_DVIEW,"img");
+let DSORT=load("fs3_dsort","type");
 let DANA=load("fs3_dana",false);
 let DECKS=load(K_DECKS,{cur:"New deck",list:{"New deck":{fmt:"infinity",coco:null,cards:{}}}});
 /* First-run nudge: "click to add" shows until the very first card lands in the
@@ -2504,14 +3112,24 @@ function fOK(c,f,op,v){switch(f){
   default:return true}}
 /* What a bare typed word is allowed to match. Franchise and art tags are opt-in
    via the two switches under the search bar. */
-const HAY=c=>(c.f+" "+c.tx+" "+c.sub.join(" ")+" "+(c.ty||"")+" "+c.co.join(" ")+
+/* The set name is in here so typing "attack of the vine" finds that set's
+   cards as you type, not just the one card with "vine" in its text. */
+/* Apostrophes are DELETED, not spaced: "you've" and "youve" have to collapse
+   to the same string, and turning the apostrophe into a space would split the
+   word into "you ve" and match neither. Everything else becomes a space. */
+const flat=s=>(s||"").toLowerCase().replace(/['’ʼ]/g,"")
+  .replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
+const HAY=c=>(c.f+" "+c.tx+" "+c.sub.join(" ")+" "+(c.ty||"")+" "+c.co.join(" ")+" "+(c.sn||"")+
   (S.stoS?" "+(c.sto||""):"")+
   (S.tagS?" "+(c.tg||[]).join(" "):"")).toLowerCase();
 function qOK(c,ts){
   for(const t of ts){
     if(t.sp==="vanilla"){const v=!c.tx;if(t.neg?v:!v)return false;continue}
     if(t.fz!==undefined){
-      if(!HAY(c).includes(t.fz))return false;continue}
+      /* Punctuation-blind. Nobody types the apostrophe in "Look What You've
+         Done" or the ! in "Attack of the Vine!", and a search that needs them
+         is a search that says "no results" to a correctly-remembered card. */
+      if(!flat(HAY(c)).includes(flat(t.fz)))return false;continue}
     const ok=fOK(c,t.f,t.op,t.v);if(t.neg?ok:!ok)return false;
   }
   return true;
@@ -2546,8 +3164,10 @@ function filt(skip){
     if(S.lo[0]!=null&&!(c.lo>=S.lo[0]))return false;
     if(S.lo[1]!=null&&!(c.lo<=S.lo[1]))return false;
     if(skip!=="ab"&&S.ab.size){for(const id of S.ab)if(!c.ab.has(id))return false}
-    if(S.terms.length){const h=HAY(c);
-      for(const t of S.terms) if(!h.includes(t))return false;}
+    /* Same punctuation-blind compare as the live query, or an Enter-tokenised
+       phrase would be stricter than typing it. */
+    if(S.terms.length){const h=flat(HAY(c));
+      for(const t of S.terms) if(!h.includes(flat(t)))return false;}
     if(ts.length&&!qOK(c,ts))return false;
     return true;
   });
@@ -2608,13 +3228,33 @@ function cocoBlock(cur,base){
       the card; click a filter to turn it on.</p>
     ${rows}</details>`}
 
+/* Same treatment as the Coconut block: its own always-closed drawer, open
+   state in a plain variable so a click inside it doesn't slam it shut, and no
+   data-g so it never gets reopened from saved state. Hidden entirely when the
+   build has no prices — a drawer of filters that can only ever return nothing
+   is worse than no drawer. */
+let MONEYOPEN=false;
+function moneyBlock(cur,base){
+  const g=GROUPS.find(x=>x.money);
+  if(!g||!priceDate())return "";
+  const chips=g.chips.map(a=>{
+    const on=S.ab.has(a.id);
+    const n=(on?base:cur).reduce((s,c)=>s+(c.ab.has(a.id)?1:0),0);
+    return `<button class="chip${on?" on":""}${!on&&!n?" dead":""}" data-a="${a.id}">
+      <span>${a.l}</span><span class="n">${n}</span></button>`}).join("");
+  return `<details class="grp cocogrp" id="moneygrp"${MONEYOPEN?" open":""}>
+    <summary>💲 What it costs to buy<span class="gn">${g.chips.length}</span></summary>
+    <p class="cocohint">Market prices from a snapshot taken ${esc(priceDate())} — a rough
+      guide, not a quote. Turn prices on in Card view settings to see them on the cards.</p>
+    <div class="chips">${chips}</div></details>`}
+
 /* ===================== chips ===================== */
 const GOPEN=load("fs3_gopen",null);
 function renderChips(){
   const cur=filt();            // counts are "how many of what I'm looking at also match"
   const base=filt("ab");
   const rec=new Set(G.coco!=null&&effMode()==="rec"?COCO[G.coco].rec:[]);
-  $("groups").innerHTML=GROUPS.map((g,gi)=>{
+  $("groups").innerHTML=GROUPS.filter(g=>!g.money).map((g,gi)=>{
     const active=g.chips.filter(a=>S.ab.has(a.id)).length;
     const open=GOPEN?GOPEN.includes(g.g):true;   // everything open on a first visit
     return `<details class="grp"${open||active?" open":""} data-g="${esc(g.g)}">
@@ -2624,7 +3264,7 @@ function renderChips(){
         const n=(on?base:cur).reduce((s,c)=>s+(c.ab.has(a.id)?1:0),0);
         return `<button class="chip${on?" on":""}${rec.has(a.id)?" rec":""}${!on&&!n?" dead":""}" data-a="${a.id}">
           <span>${a.l}</span><span class="n">${n}</span></button>`}).join("")+`</div></details>`}).join("")
-    +cocoBlock(cur,base);
+    +cocoBlock(cur,base)+moneyBlock(cur,base);
   $("groups").querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{
     const id=b.dataset.a;S.ab.has(id)?S.ab.delete(id):S.ab.add(id);S.limit=150;render()});
   /* Clicking a Coconut's name opens the card, so you can read what it does
@@ -2632,6 +3272,7 @@ function renderChips(){
   $("groups").querySelectorAll("[data-cocosee]").forEach(b=>b.onclick=()=>{
     const co=COCO[+b.dataset.cocosee];if(co)openM(co.n+" - "+co.v)});
   const cg=$("cocogrp");if(cg)cg.ontoggle=()=>{COCOOPEN=cg.open};
+  const mg=$("moneygrp");if(mg)mg.ontoggle=()=>{MONEYOPEN=mg.open};
   /* [data-g] only — the Coconut block has no data-g, so it is neither saved
      into GOPEN nor reopened from it, which is what keeps it always-closed. */
   $("groups").querySelectorAll("details.grp[data-g]").forEach(d=>d.ontoggle=()=>{
@@ -2674,11 +3315,74 @@ function renderPills(){
     S.limit=150;render()});
 }
 
-/* Enter turns a bare word into a real token — types, classifications, keywords
-   and franchises are guaranteed collision-free, so resolution is unambiguous. */
+/* Everyday words people actually type for an ink. */
+const INKWORDS={blue:"Sapphire",sapphire:"Sapphire",red:"Ruby",ruby:"Ruby",
+  green:"Emerald",emerald:"Emerald",purple:"Amethyst",amethyst:"Amethyst",
+  yellow:"Amber",gold:"Amber",amber:"Amber",grey:"Steel",gray:"Steel",silver:"Steel",steel:"Steel"};
+
+/* Set names, and every distinctive word in them, resolved to a set code.
+   "rise of the floodborn", "floodborn", "attack of the vine" and "vine" all
+   land on the right set. Words shared by two sets are dropped rather than
+   guessed at. */
+let _setWords=null;
+function setWords(){
+  if(_setWords)return _setWords;
+  const m=new Map(),seen=new Map();
+  const norm=x=>x.toLowerCase().replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim();
+  SETS.forEach(([code,o])=>{
+    const full=norm(o.n||"");
+    if(full)m.set(full,code);
+    norm(full).split(" ").forEach(w=>{
+      if(w.length<4||["the","of","and","into"].includes(w))return;
+      seen.set(w,seen.has(w)?"__dupe__":code)});
+  });
+  seen.forEach((code,w)=>{if(code!=="__dupe__"&&!m.has(w))m.set(w,code)});
+  return _setWords=m;
+}
+
+/* Enter used to treat the whole box as ONE token, so "steel action" resolved to
+   nothing and became a literal phrase that appears in no card. It now walks the
+   words and resolves the longest run it recognises at each step: "steel" is an
+   ink, "action" is a type, "rise of the floodborn" is a set. Anything it can't
+   place stays a free-text term, exactly as before. */
 function tryToken(raw){
   const t=raw.trim();if(!t)return false;
+  const words=t.split(/\s+/);
+  if(words.length>1&&!/[:<>=]/.test(t)){
+    let i=0,any=false,leftover=[];
+    while(i<words.length){
+      let hit=false;
+      for(let len=Math.min(6,words.length-i);len>=1&&!hit;len--){
+        const phrase=words.slice(i,i+len).join(" ");
+        if(tryOne(phrase,true)){i+=len;hit=any=true}
+      }
+      if(!hit){leftover.push(words[i]);i++}
+    }
+    /* Whatever was left is one phrase, the way it was typed. */
+    if(leftover.length){
+      const rest=leftover.join(" ").toLowerCase();
+      if(!S.terms.includes(rest)){S.terms.push(rest);any=true}
+    }
+    return any;
+  }
+  return tryOne(t,false);
+}
+/* `strict` means "only accept a real facet" — used while walking a multi-word
+   query, where falling back to free text per word would shred the phrase. */
+function tryOne(raw,strict){
+  const t=raw.trim();if(!t)return false;
   const lc=t.toLowerCase();
+  const sw=setWords().get(lc.replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim());
+  if(sw){S.set=sw;return true}
+  const iw=INKWORDS[lc];
+  if(iw){const cap=FMT[deck().fmt].cap;
+    if(S.ink.has(iw))return true;
+    if(S.ink.size<cap){S.ink.add(iw);return true}
+    if(strict)return true}
+  const RAR=["Common","Uncommon","Rare","Super Rare","Legendary","Enchanted","Epic","Iconic"];
+  const rr=RAR.find(x=>x.toLowerCase()===lc);
+  if(rr){S.rar.add(rr);return true}
+  if(lc==="inkable"||lc==="inkwell"){S.inkwell="true";return true}
   const hit=(arr)=>arr.find(x=>x.toLowerCase()===lc);
   const ty=["Character","Action","Item","Location"].find(x=>x.toLowerCase()===lc);
   if(ty){S.type.add(ty);return true}
@@ -2689,6 +3393,7 @@ function tryToken(raw){
   const cw=chipFor(t); if(cw){S.ab.add(cw);return true}
   const inkm=INKS.find(x=>x.toLowerCase()===lc);
   if(inkm){const cap=FMT[deck().fmt].cap;if(S.ink.size<cap){S.ink.add(inkm);return true}}
+  if(strict)return false;
   // not a known type/classification/keyword/franchise/ink — keep it as a
   // removable free-text term so "animal" behaves like every other filter
   if(!/[:<>=]/.test(t)&&!S.terms.includes(lc)){S.terms.push(lc);return true}
@@ -2738,11 +3443,12 @@ function renderSide(){
     </select><div class="hint" style="margin:6px 0 0">Which art to show when a card has more than one
       printing. Falls back to the base art for cards that don't have that version.
       ${CARDS.filter(c=>(c.pr||[]).length>1).length} cards have alternates.</div>`;
-  const miscB=`<select id="iw" style="margin-bottom:6px">
-      <option value="any"${S.inkwell==="any"?" selected":""}>Inkable: any</option>
-      <option value="yes"${S.inkwell==="yes"?" selected":""}>Can be inked</option>
-      <option value="no"${S.inkwell==="no"?" selected":""}>Cannot be inked</option></select>
-    <select id="setSel"><option value="">All sets</option>${
+  /* Inkable and Set were one section called "Inkable & Set". They answer
+     completely different questions and inkable is one of the first things
+     anyone narrows by, so they're split and inkable moved near the top. */
+  const iwB=`<div class="inks">${[["any","Any"],["yes","Can be inked"],["no","Cannot be inked"]]
+      .map(([v,l])=>`<button class="ic${S.inkwell===v?" on":""}" data-iw="${v}">${l}</button>`).join("")}</div>`;
+  const setB=`<select id="setSel"><option value="">All sets</option>${
       SETS.map(([c,o])=>`<option value="${esc(c)}"${S.set===c?" selected":""}>${esc(o.n)}</option>`).join("")}</select>`;
 
   const tagCounts={};
@@ -2754,18 +3460,25 @@ function renderSide(){
     : `<div class="hint" style="margin:0">No art tags yet. Tag cards in <b>flounder-tagger.html</b>,
         export, paste into art-tags.json and rerun the build.</div>`;
 
+  /* ORDER MATTERS. This is the order people actually narrow a search in:
+     which inks am I playing → can I ink it → what does it cost → what kind of
+     card is it. Everything after that is a refinement, and the two that need
+     you to already know what you're looking for — illustrator and art tags —
+     sit at the bottom, art tags directly under illustrator because they are
+     both "who drew it / what's in the picture" questions. */
   $("sidebody").innerHTML=
     sec("ink","Ink",inkB,S.ink.size?S.ink.size+" on":"",S.ink.size<cap)+
-    sec("tag","Art tags",tagB,S.tag.size?S.tag.size+" on":"",false)+
-    sec("type","Type",tyB,S.type.size?S.type.size+" on":"",true)+
+    sec("iw","Inkable",iwB,S.inkwell==="any"?"":(S.inkwell==="yes"?"inkable":"uninkable"),true)+
     sec("cost","Cost",costB,"",true)+
-    sec("cls","Classification",clsB,S.cls.size?S.cls.size+" on":"",false)+
-    sec("kw","Keyword",kwB,S.kw.size?S.kw.size+" on":"",false)+
-    sec("sto","Franchise",stoB,S.sto.size?S.sto.size+" on":"",false)+
-    sec("art","Illustrator",artB,S.art.size?S.art.size+" on":"",false)+
+    sec("type","Type",tyB,S.type.size?S.type.size+" on":"",true)+
     sec("rar","Rarity",rarB,S.rar.size?S.rar.size+" on":"",false)+
+    sec("kw","Keyword",kwB,S.kw.size?S.kw.size+" on":"",false)+
+    sec("cls","Classification",clsB,S.cls.size?S.cls.size+" on":"",false)+
+    sec("sto","Franchise",stoB,S.sto.size?S.sto.size+" on":"",false)+
+    sec("set","Set",setB,S.set?"1 on":"",false)+
     sec("stat","Strength / Willpower / Lore",statB,"",false)+
-    sec("misc","Inkable & Set",miscB,"",false)+
+    sec("art","Illustrator",artB,S.art.size?S.art.size+" on":"",false)+
+    sec("tag","Art tags",tagB,S.tag.size?S.tag.size+" on":"",false)+
     sec("pref","Card images",prefB,PREF==="base"?"":PREF,false);
 
   /* Collapsed, the panel has to say whether anything is hidden inside it —
@@ -2794,7 +3507,8 @@ function renderSide(){
   const bind=(id,fn)=>{const e=$(id);if(e)e.onchange=()=>{fn(e.value===""?null:+e.value);S.limit=150;render()}};
   bind("c0",v=>S.cost[0]=v);bind("c1",v=>S.cost[1]=v);
   ["st","wi","lo"].forEach(k=>{bind(k+"0",v=>S[k][0]=v);bind(k+"1",v=>S[k][1]=v)});
-  $("iw").onchange=e=>{S.inkwell=e.target.value;S.limit=150;render()};
+  sd.querySelectorAll("[data-iw]").forEach(b=>b.onclick=()=>{
+    S.inkwell=b.dataset.iw;S.limit=150;render()});
   $("setSel").onchange=e=>{S.set=e.target.value;S.limit=150;render()};
   $("prPref").onchange=e=>{PREF=e.target.value;save("fs3_print",PREF);render();
     toast(PREF==="base"?"Showing base art":PREF==="promo"?"Preferring promo art":"Preferring enchanted art")};
@@ -2891,12 +3605,12 @@ function tile(c){
     ${tipsOn()&&!ban?`<div class="tipadd">Click to add</div>`:""}
     <button class="i" data-i="${esc(c.f)}" title="Details">i</button>
     ${im}
-    ${bad&&!ban?`<div class="why">Not legal<span>${esc(bad)}</span></div>`:""}
     ${wantShift?`<button class="shift" data-sh="${esc(c.f)}">Add shift target?</button>`:""}
-    ${q&&TAB!=="tSearch"?`<div class="qty"><button class="m" data-minus="${esc(c.f)}" title="Remove one">−</button>
-        <span class="n">${q}</span>
+    ${TAB!=="tSearch"&&!ban?`<div class="qty${q?" has":""}"><button class="m" data-minus="${esc(c.f)}" title="Remove one">−</button>
+        <span class="n">${q||0}</span>
         <button class="p" data-plus="${esc(c.f)}" title="Add one">+</button></div>`:""}
-    <div class="nm">${esc(c.n)}<i>${esc(c.v)}</i></div></div>`;
+    ${bad&&!ban?`<div class="why">Not legal<span>${esc(bad)}</span></div>`:""}
+    ${priceChip(c)}</div>`;
 }
 function renderGrid(){
   const all=sortC(filt()),g=$("grid");
@@ -3153,7 +3867,10 @@ function mickIdx(){
   return _mickIdx;
 }
 const MICKDESC=f=>mickIdx().get(f)||"";
-const hasSym=c=>mickIdx().has(c.f)||!!(c.mk&&c.mk.length);
+/* A card has a Mousey if it is in the hand-written list, OR carries marker
+   circles from the tagger, OR is tagged "mousey" there. The last two are how a
+   new find gets in without editing this file. */
+const hasSym=c=>mickIdx().has(c.f)||!!(c.mk&&c.mk.length)||(c.tg||[]).includes("mousey");
 function symLayer(c){
   if(!(c.mk&&c.mk.length))return "";
   return `<div class="syml">${c.mk.map(s=>
@@ -3334,7 +4051,10 @@ function delCard(f){const d=deck();if(!d.cards[f])return;d.cards[f]--;
 function dlist(){return Object.entries(deck().cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q,f})).filter(x=>x.c)}
 function dtotal(){return Object.values(deck().cards).reduce((a,b)=>a+b,0)}
 
-function renderDeck(){
+/* `host` lets the guided view reuse this whole panel. Everything below binds
+   through it rather than through a hard-coded "deck". */
+function renderDeck(hostId){
+  const HOST=$(hostId||"deck");if(!HOST)return;
   const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
   $("mN").textContent=tot;
   const names=Object.keys(DECKS.list);
@@ -3345,7 +4065,8 @@ function renderDeck(){
          the top of the page. They belong to the deck, so they live in the deck
          panel now. -->
     <div class="dhead">
-      <div class="dhname"><b id="dbName">${esc(DECKS.cur)}</b>
+      <div class="dhname"><b id="dbName" class="dkname" role="button" tabindex="0"
+        title="Click to rename">${esc(DECKS.cur)}</b>
         <span id="dbDirty" class="dbdirty"${DECKDIRTY?"":" hidden"}>unsaved</span></div>
       <button class="btn go" id="dbSave">${DECKS.cur===DRAFT?"Save deck":"Save changes"}</button>
     </div>
@@ -3361,7 +4082,7 @@ function renderDeck(){
          which is what it is. -->
     <div class="fmtpick" id="fmtpick">
       <div class="fmtlbl">Format</div>
-      <div class="fmtbtns">${Object.entries(FMT).map(([k,f])=>
+      <div class="fmtbtns">${FMT_ORDER.map(k=>[k,FMT[k]]).map(([k,f])=>
         `<button class="fmtb${k===d.fmt?" on":""}" data-fmt="${k}">${esc(f.l)}</button>`).join("")}</div>
       <div class="fmtwhy">${esc(FMT_BLURB[d.fmt]||"")}</div>
     </div>
@@ -3377,14 +4098,35 @@ function renderDeck(){
   }
 
   if(tot){
-    const cv=[0,0,0,0,0,0,0,0];let ink=0;const ic={},ty={};
-    L.forEach(({c,q})=>{cv[Math.min(7,c.c)]+=q;if(c.ik)ink+=q;
+    const cv=[0,0,0,0,0,0,0,0];let ink=0,pips=0;const ic={},ty={};
+    L.forEach(({c,q})=>{cv[Math.min(7,c.c)]+=q;if(c.ik)ink+=q;pips+=c.c*q;
       c.co.forEach(i=>ic[i]=(ic[i]||0)+q);ty[c.ty]=(ty[c.ty]||0)+q});
     const mx=Math.max(...cv,1),icT=Object.values(ic).reduce((a,b)=>a+b,0)||1;
-    h+=`<h3>Stats</h3><div class="curve">${cv.map(v=>`<div style="height:${v/mx*100}%"><b>${v||""}</b></div>`).join("")}</div>
-      <div class="cx">${["0","1","2","3","4","5","6","7+"].map(l=>`<div>${l}</div>`).join("")}</div>
-      <div class="ibar">${Object.entries(ic).map(([i,n])=>`<i style="width:${n/icT*100}%;background:${HEX[i]||"#666"}"></i>`).join("")}</div>
-      <div class="st">Inkable ${Math.round(ink/tot*100)}% (${ink}) · ${Object.entries(ty).map(([t,n])=>t+" "+n).join(" · ")}</div>`;
+    const avg=(pips/tot).toFixed(1),inkPc=Math.round(ink/tot*100);
+    /* Four numbers a deck is actually judged on, then the curve. The curve
+       carries its own counts and a share-of-deck line, because "7 cards" means
+       nothing without "that's 12% of the deck". Inkable is flagged red under
+       40% — that's the number that decides whether the deck functions. */
+    h+=`<h3>Stats</h3>
+      <div class="dstats">
+        <div class="dstat"><b>${tot}</b><i>cards</i></div>
+        <div class="dstat"><b>${avg}</b><i>avg cost</i></div>
+        <div class="dstat${inkPc<40?" warn":""}"><b>${inkPc}%</b><i>inkable</i></div>
+        <div class="dstat"><b>${Object.keys(ic).length}</b><i>ink${Object.keys(ic).length===1?"":"s"}</i></div>
+      </div>
+      <div class="curveW">
+        ${cv.map((v,i)=>`<div class="cbar"${v?"":' class="cbar z"'}>
+          <span class="cn">${v||""}</span>
+          <div class="cfill" style="height:${Math.round(v/mx*100)}%"></div>
+          <span class="cl">${i===7?"7+":i}</span></div>`).join("")}
+      </div>
+      <div class="st">Cost curve · ${cv.slice(0,4).reduce((a,b)=>a+b,0)} cards at 3 ink or less
+        (${Math.round(cv.slice(0,4).reduce((a,b)=>a+b,0)/tot*100)}%)</div>
+      <div class="ibar">${Object.entries(ic).map(([i,n])=>`<i style="width:${n/icT*100}%;background:${HEX[i]||"#666"}" title="${esc(i)} ${n}"></i>`).join("")}</div>
+      <div class="inkleg">${Object.entries(ic).sort((a,b)=>b[1]-a[1]).map(([i,n])=>
+        `<span><i style="background:${HEX[i]||"#666"}"></i>${esc(i)} <b>${n}</b></span>`).join("")}</div>
+      <div class="tyleg">${Object.entries(ty).sort((a,b)=>b[1]-a[1]).map(([t,n])=>
+        `<span>${esc(t)} <b>${n}</b></span>`).join("")}</div>`;
   }
 
   const w=[],inks=new Set();L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
@@ -3416,22 +4158,94 @@ function renderDeck(){
       <div id="hb"></div></div></details>`;
   }
   // − on the LEFT, + on the RIGHT
-  const sorted=L.sort((a,b)=>a.c.c-b.c.c||a.f.localeCompare(b.f));
-  h+=DVIEW==="img"
-    ? `<div class="dgrid">${sorted.map(({c,q,f})=>
-        `<div class="dcard">${c.img?`<img src="${c.img}" data-o="${esc(f)}" title="${esc(c.f)}">`
-          :`<div class="ph" data-o="${esc(f)}">${esc(c.n)}</div>`}
-         <span class="dq">${q}</span>
-         <div class="dbtn"><button class="m" data-m="${esc(f)}">−</button><button class="p" data-p="${esc(f)}">+</button></div>
-        </div>`).join("")||`<div class="empty" style="padding:18px 6px">Click a card to add it.</div>`}</div>`
-    : `<div style="margin-top:9px">${sorted.map(({c,q,f})=>
-        `<div class="dl"><button data-m="${esc(f)}" title="Remove one">−</button>
-         <span class="q">${q}×</span>
-         <span class="n" data-o="${esc(f)}">${esc(c.n)} <span style="color:var(--deep)">${esc(c.v)}</span></span>
-         <button data-p="${esc(f)}" title="Add one">+</button></div>`).join("")
-        ||`<div class="empty" style="padding:18px 6px">Click a card to add it.</div>`}</div>`;
-  $("deck").innerHTML=h;
+  /* ---- deck sorting ------------------------------------------------------
+     One flat list sorted by cost is how a spreadsheet thinks about a deck, not
+     how a player does. You don't look for "the 3-drops", you look for "my
+     removal" or "my songs" — so every sort here GROUPS first and sorts inside
+     the group, with a heading and a count on each group. Characters, Actions,
+     Songs, Items and Locations are five different jobs and never share a
+     section again.
 
+     A song is typed "Action — Song" in the data, so the Song test has to come
+     before the Action one or every song lands in Actions. */
+  const cardGroup=c=>c.sub.includes("Song")?"Song"
+    :(c.ty==="Character"||c.ty==="Action"||c.ty==="Item"||c.ty==="Location")?c.ty:"Other";
+  const TYPE_ORDER=["Character","Action","Song","Item","Location","Other"];
+  const TYPE_PLURAL={Character:"Characters",Action:"Actions",Song:"Songs",
+    Item:"Items",Location:"Locations",Other:"Other"};
+  const byCost=(a,b)=>a.c.c-b.c.c||a.f.localeCompare(b.f);
+  /* Each sort returns [heading, rows] pairs. A single unnamed group renders as
+     a plain list, which is what "flat" wants. */
+  const GROUPERS={
+    type:()=>TYPE_ORDER
+      .map(t=>[TYPE_PLURAL[t],L.filter(x=>cardGroup(x.c)===t).sort(byCost)])
+      .filter(([,r])=>r.length),
+    cost:()=>{
+      const buckets=[...new Set(L.map(x=>x.c.c))].sort((a,b)=>a-b);
+      return buckets.map(n=>[`${n} ink`,L.filter(x=>x.c.c===n).sort((a,b)=>a.f.localeCompare(b.f))])},
+    ink:()=>{
+      const keyOf=x=>x.c.co.length>1?x.c.co.join(" / "):(x.c.co[0]||"—");
+      const keys=[...new Set(L.map(keyOf))].sort((a,b)=>
+        (a.includes("/")?1:0)-(b.includes("/")?1:0)||a.localeCompare(b));
+      return keys.map(k=>[k,L.filter(x=>keyOf(x)===k).sort(byCost)])},
+    curve:()=>[["",L.slice().sort(byCost)]],
+    set:()=>{
+      const keys=[...new Set(L.map(x=>x.c.s))]
+        .sort((a,b)=>String((DATA.sets[b]||{}).d||"").localeCompare(String((DATA.sets[a]||{}).d||"")));
+      return keys.map(s=>[(DATA.sets[s]||{}).name||("Set "+s),
+        L.filter(x=>x.c.s===s).sort((a,b)=>(a.c.num||0)-(b.c.num||0))])},
+    name:()=>[["",L.slice().sort((a,b)=>a.f.localeCompare(b.f))]]};
+  const DSORTS=[["type","Type — characters, actions, songs…"],
+    ["cost","Cost — one section per ink cost"],
+    ["ink","Ink colour"],
+    ["curve","Curve — one flat list, cheapest first"],
+    ["set","Set — newest first"],
+    ["name","Name A–Z"]];
+  const groups=(GROUPERS[DSORT]||GROUPERS.type)();
+  h+=`<div class="dsortrow"><label>Group by</label><select id="dsort">${
+    DSORTS.map(([v,l])=>
+      `<option value="${v}"${DSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select></div>`;
+  const cardHTML=({c,q,f})=>DVIEW==="img"
+    ? `<div class="dcard">${c.img?`<img src="${c.img}" data-o="${esc(f)}" title="${esc(c.f)}">`
+        :`<div class="ph" data-o="${esc(f)}">${esc(c.n)}</div>`}
+       <span class="dq">${q}</span>
+       <div class="dbtn"><button class="m" data-m="${esc(f)}">−</button><button class="p" data-p="${esc(f)}">+</button></div>
+      </div>`
+    : `<div class="dl"><button data-m="${esc(f)}" title="Remove one">−</button>
+       <span class="q">${q}×</span>
+       <span class="n" data-o="${esc(f)}">${esc(c.n)} <span style="color:var(--deep)">${esc(c.v)}</span></span>
+       <button data-p="${esc(f)}" title="Add one">+</button></div>`;
+  h+=L.length
+    ? groups.map(([title,rows])=>{
+        const n=rows.reduce((a,x)=>a+x.q,0);
+        return (title?`<div class="dgh">${esc(title)}<span>${n} card${n===1?"":"s"}</span></div>`:"")
+          +(DVIEW==="img"
+            ? `<div class="dgrid">${rows.map(cardHTML).join("")}</div>`
+            : `<div style="margin-top:6px">${rows.map(cardHTML).join("")}</div>`)}).join("")
+    : `<div class="empty" style="padding:18px 6px">Click a card to add it.</div>`;
+  HOST.innerHTML=h;
+
+  const ds=$("dsort");
+  if(ds)ds.onchange=e=>{DSORT=e.target.value;save("fs3_dsort",DSORT);renderDeck()};
+  /* Drag the left edge of the deck panel to widen it. */
+  (()=>{
+    const dk=HOST;
+    const wrap=dk.closest(".wrap");if(!wrap||wrap.querySelector(":scope > .dgrip"))return;
+    const g=document.createElement("div");g.className="dgrip";g.title="Drag to resize";
+    wrap.appendChild(g);
+    g.addEventListener("pointerdown",ev=>{
+      ev.preventDefault();g.classList.add("on");document.body.classList.add("resizing");
+      const move=e=>{
+        /* Measured from the RIGHT edge of the wrap, so the panel grows as you
+           drag left — which is the direction that feels correct. */
+        const w=Math.round(wrap.getBoundingClientRect().right-e.clientX);
+        const clamped=Math.max(280,Math.min(w,Math.round(window.innerWidth*0.7)));
+        wrap.style.setProperty("--deckw",clamped+"px")};
+      const up=()=>{g.classList.remove("on");document.body.classList.remove("resizing");
+        save("fs3_deckw",wrap.style.getPropertyValue("--deckw"));
+        window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up)};
+      window.addEventListener("pointermove",move);window.addEventListener("pointerup",up)});
+  })();
   $("vList").onclick=()=>{DVIEW="list";save(K_DVIEW,DVIEW);renderDeck()};
   $("vImg").onclick=()=>{DVIEW="img";save(K_DVIEW,DVIEW);renderDeck()};
   $("dsel").onchange=e=>{DECKS.cur=e.target.value;saveDecks();S.limit=150;render()};
@@ -3441,6 +4255,9 @@ function renderDeck(){
   /* Save is rebuilt with the panel on every render, so it is rebound here
      rather than once at boot the way the old top bar was. */
   const dbs=$("dbSave");if(dbs)dbs.onclick=e=>saveDeckPrompt(e);
+  const dbn=$("dbName");
+  if(dbn){dbn.onclick=()=>renameDeck(DECKS.cur);
+    dbn.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();renameDeck(DECKS.cur)}}}
   $("dren").onclick=()=>renameDeck(DECKS.cur);
   $("ddel").onclick=()=>{if(names.length<2){toast("Keep at least one deck");return}
     if(confirm('Delete deck "'+DECKS.cur+'"?')){delete DECKS.list[DECKS.cur];DECKS.cur=Object.keys(DECKS.list)[0];saveDecks();render()}};
@@ -3453,9 +4270,9 @@ function renderDeck(){
   $("dc").onclick=()=>navigator.clipboard.writeText(deckText()).then(()=>toast("Copied"),()=>toast("Copy failed"));
   $("dim").onclick=importText;
   const dh=$("dh");if(dh)dh.onclick=hand;
-  $("deck").querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>addCard(b.dataset.p));
-  $("deck").querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>delCard(b.dataset.m));
-  $("deck").querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>openM(b.dataset.o));
+  HOST.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>addCard(b.dataset.p));
+  HOST.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>delCard(b.dataset.m));
+  HOST.querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>openM(b.dataset.o));
 }
 /* Rough archetype read from the curve and what the deck actually does.
    Deliberately coarse — it's a sanity check, not a verdict. */
@@ -3542,6 +4359,148 @@ function pairFor(idx){
   const gap=others[2]&&others[2][1]?((others[1][1]-others[2][1])/others[2][1]*100):999;
   return{best:[others[0][0],others[1][0]],all:others,conf:gap>=15?"strong":(gap>=6?"ok":"close")};
 }
+/* ===================== prebuilt Coconut decks =====================
+   Generated from the card data, not hand-typed. Eighteen hand-written 60-card
+   lists would be stale the day a set drops; this rebuilds from whatever is in
+   the database, so a prebuilt deck is always legal and always current.
+
+   It is a good deck, not a tournament list. Say so on the page.
+
+   How a card earns its place, in order of weight:
+     hook      — the Coconut's own text cares about it. This is the deck.
+     synergy   — it matches one of the Coconut's recommended filters.
+     staple    — it is on the starred list, i.e. it is just strong.
+     inkable   — a singleton deck that can't ink is a dead deck.
+   Then the picks are laid into a cost curve, so it doesn't end up as sixty
+   six-drops with the best scores. */
+/* One paragraph per Coconut: the plan, the first three turns, and the one
+   thing you are trying to do. Written to be skimmed — you should know whether
+   you want this deck before you read a single card name. */
+const COCO_PLAN={
+"Scar":{p:"A Steel goodstuff pile that gets a discount every single turn. Every Ally is a rate cheat, so the deck is stuffed with them and just plays a bigger board than you should be able to.",t:["Ink, then a 1-cost Ally for free.","Ink, drop a 3-cost Ally for 2 and hold up a trick.","Ink, Scar himself, and start chaining Allies at a discount."],g:"Out-body them by turn five and never spend full price on a creature again."},
+"Ariel":{p:"Princesses sing, songs cost nothing, and every song turns into free lore. It's a combo deck wearing an Amber shirt — the songs aren't for their effects, they're the trigger.",t:["Ink, play a cheap Princess.","Ink, sing a song off her — lore before you've even quested.","Ink, Ariel, then sing twice and watch the counter jump."],g:"Win on lore from singing, not from questing. If they kill your Princess, sing another one out."},
+"Winnie the Pooh":{p:"Every vanilla body — no ability, just stats — becomes a cantrip. The deck deliberately runs the boring cards nobody drafts, because in this shell they all draw a card.",t:["Ink, play a plain 1-drop.","Ink, plain 2-drop.","Ink, Pooh, then every dumb body from here draws."],g:"Never run out of cards. Grind them out with a board that refills itself."},
+"Stitch":{p:"A free play every turn, forever. Fill the deck with 2-and-unders so the free slot is never dead, and load Lilo and Stitch names for the lore kicker.",t:["Ink, play a 2-drop.","Ink, 2-drop, and Stitch's free play if he's down.","Ink, Stitch, then two bodies a turn from here."],g:"Out-tempo them. You get an extra card of value every turn they don't."},
+"Ursula":{p:"Your characters sing far above their cost, so the expensive game-swinging songs come down on turn three. Ursula names count as +2, so the deck runs plenty of them.",t:["Ink, cheap body.","Ink, another body — you're building singers, not attackers.","Ink, sing a 5-cost song off a 3-cost character."],g:"Cast the big songs several turns early and swing the game before they're ready."},
+"Mickey Mouse":{p:"Every Mickey in the deck has Shift 2, from hand, deck or discard. That turns a pile of expensive Mickeys into a chain of 2-cost upgrades.",t:["Ink, cheap Mickey.","Ink, Shift a bigger Mickey onto him for 2.","Ink, Shift again — you're four ink ahead already."],g:"Climb the Mickey ladder for 2 a step and present a body they can't answer."},
+"Mufasa":{p:"Ramp. Pay 5 once a turn to bank two more ink, then dump something enormous well before it's fair.",t:["Ink, cheap body.","Ink, hold.","Ink, then start banking two extra ink a turn."],g:"Get to your top end three turns early. Everything cheap in here just survives until then."},
+"Nick Wilde":{p:"Four Pawpsicles is the whole joke. Flood items, then cash four of them in for four lore in one click, repeatedly.",t:["Ink, Pawpsicle.","Ink, two more items.","Ink, Nick, then start converting items into lore."],g:"Four lore a turn from cards they can't interact with. Items are the fuel, not the plan."},
+"Snow White":{p:"A tribal counting deck. Get seven differently-named Dwarfs across hand, discard and play, flip Snow White once, and every character you own gains +2 lore for the rest of the game.",t:["Ink, a Dwarf.","Ink, another Dwarf — different name, always.","Ink, a third, and start counting toward seven."],g:"Hit the count, flip her, then quest with everything. Before that you're just playing bodies."},
+"Donald Duck":{p:"Boost costs one less, and so does everything with Boost. It's a ramp-and-value deck where the discount applies twice on the same card.",t:["Ink, cheap Boost card.","Ink, play and Boost in the same turn for the price of one.","Ink, Donald, and everything after is a discount."],g:"Play a bigger card than your ink says every turn from three onward."},
+"Mr. Incredible":{p:"Supers get Rush and a free exert on the way in. It's aggro with built-in removal — every body both attacks immediately and taps their blocker.",t:["Ink, cheap Super.","Ink, Super with Rush — challenge straight away.","Ink, Mr. Incredible, then every Super is a two-for-one."],g:"Kill them by turn seven. Every character you play should be trading or attacking the same turn."},
+"Moana":{p:"An extra ink every turn while a Moana, Heihei or Pua is out. It's the smoothest ramp in the format and the deck is built to always have one of those three down.",t:["Ink, Heihei or Pua.","Ink twice — you're already a turn ahead.","Ink twice, then a 4-drop on turn three."],g:"Be permanently one to two ink ahead, and spend the lead on cards they can't match yet."},
+"John Silver":{p:"Locations that don't die. Every character standing at a location makes it tougher, so the deck builds a board that quietly accumulates lore while being very hard to remove.",t:["Ink, cheap body.","Ink, drop a location.","Ink, move characters onto it — now it's Resist 2 or 3."],g:"Win on location lore. They have to deal with a thing that gets harder to kill every turn."},
+"Robin Hood":{p:"A free Robin's Bow on turn one, four Robins allowed, and a deck full of ping damage. Death by a thousand cuts.",t:["Free Robin's Bow, ink, go.","Ink, ping something and drop a body.","Ink, Robin, and now every ping is part of a machine."],g:"Control the board with small repeatable damage, then quest through the wreckage."},
+"Tinker Bell":{p:"Every ability or action that damages an opposing character does one more. It turns a pile of 1-damage pings into 2-damage removal, which changes what dies.",t:["Ink, cheap body.","Ink, a pinger.","Ink, Tinker Bell — now every ping kills a 2-toughness card."],g:"Convert cheap chip damage into a real removal suite. The deck is all damage triggers on purpose."},
+"Sisu":{p:"Anything bigger than their whole board can quest the turn it lands. Play big, pump bigger, quest immediately — no summoning sickness on the cards that matter.",t:["Ink, cheap body.","Ink, a pump effect or a big body.","Ink, Sisu, then quest with a fresh fatty."],g:"Big stats, immediate lore. Every buff in here exists to clear the 'bigger than theirs' bar."},
+"Pocahontas":{p:"Pick a character each turn: it gains lore, can't challenge, and has to quest. A pure lore-race deck that turns any body into a questing machine.",t:["Ink, cheap body.","Ink, another body.","Ink, Pocahontas, then start pointing at whoever should quest."],g:"Race to twenty. The deck avoids combat entirely — you're not trying to fight them."},
+"Dumbo":{p:"Exert abilities work the turn a character lands. Every tap-to-do-something card in the deck becomes an enters-play effect instead.",t:["Ink, cheap body with an exert ability.","Ink, another one — still sitting idle for now.","Ink, Dumbo, then every exert ability fires immediately."],g:"Get instant value out of cards everyone else has to wait a turn on."}};
+const COCO_CURVE=[0,4,10,12,11,8,6,5];   // by cost, 0..7+ — 56 cards
+function cocoDeck(idx){
+  const co=COCO[idx];if(!co)return null;
+  /* pairFor() ranks inks by DENSITY — what share of that ink cares about the
+     Coconut — which is the right answer for the guided build's advice, but the
+     wrong one here. For a prebuilt deck what matters is the raw number of
+     payoff cards you can actually put in it. Moana is the clear case: her
+     payoffs are the cards NAMED Moana, Heihei or Pua, and density was steering
+     her away from the inks that hold the most of them. */
+  const legalPool=CARDS.filter(c=>legal(c));
+  const hooks=legalPool.filter(c=>{try{return !!co.hook(c)}catch(e){return false}});
+  /* Score whole PAIRS, not single inks. Counting per-ink credited a dual-ink
+     card to both of its inks — so Amber looked like it held a Pua, when that
+     Pua is Amber/Amethyst and is unplayable unless Amethyst is in the deck
+     too. Fifteen pairs is nothing to check exactly. */
+  const others=INKS.filter(i=>i!==co.i);
+  let inks=[co.i,others[0],others[1]],bestN=-1,bestNames=-1;
+  for(let a=0;a<others.length;a++)for(let b2=a+1;b2<others.length;b2++){
+    const set=new Set([co.i,others[a],others[b2]]);
+    const hit=hooks.filter(c=>c.co.length&&c.co.every(i=>set.has(i)));
+    const n=hit.length;
+    /* Ties break on how many DIFFERENT names the pair reaches. This is a
+       singleton format, so eight Moanas plus two Puas is a more resilient
+       deck than ten Moanas — and it is what makes Moana's list actually
+       contain a Pua. (Heihei has no card in Lorcana yet, so her text names a
+       creature that cannot be included.) */
+    const names=new Set(hit.map(c=>c.n)).size;
+    if(n>bestN||(n===bestN&&names>bestNames)){
+      bestN=n;bestNames=names;inks=[co.i,others[a],others[b2]]}}
+  const iset=new Set(inks);
+  const self=CARDS.find(x=>x.n===co.n&&x.v===co.v);
+  const recIds=co.rec||[];
+  const pool=CARDS.filter(c=>legal(c)&&c.co.length&&c.co.every(i=>iset.has(i))
+    &&!(self&&c.f===self.f)&&!isQuest(c)&&c.f!==BANNED);
+  const score=c=>{
+    let n=0;
+    try{if(co.hook(c))n+=6}catch(e){}
+    recIds.forEach(id=>{if(c.ab&&c.ab.has(id))n+=3});
+    if(isStar(c.f))n+=3;
+    if(c.ik)n+=1;
+    if(c.tribal&&c.tribal.length)n+=1;
+    /* Refinements after looking at the first pass, which was picking a lot of
+       vanilla bodies that happened to be inkable:
+       - Lore is how you win, so a character that quests for 2+ is worth more
+         than one that quests for 1 at the same cost.
+       - Rate matters: stats-per-ink separates a good 3-drop from a bad one.
+       - A card with no rules text and no lore is filler. Push it down unless
+         the Coconut specifically wants vanillas (Pooh).
+       - Cards that draw, remove or ramp carry games; nudge them up. */
+    if(c.ty==="Character"){
+      if((c.lo||0)>=3)n+=3; else if((c.lo||0)===2)n+=2; else if((c.lo||0)===1)n+=0.5;
+      const rate=((c.st||0)+(c.wi||0))/Math.max(1,c.c);
+      if(rate>=3)n+=1.5; else if(rate>=2.2)n+=0.75;
+    }
+    if(c.ab){
+      ["draw","banish","cheap","ramp","tutor"].forEach(id=>{if(c.ab.has(id))n+=1});
+      if(!c.tx&&!recIds.includes("vanilla"))n-=2;
+    }
+    if((c.ru||[]).length)n+=0.25;
+    return n};
+  const ranked=pool.map(c=>({c,s:score(c)}))
+    /* Deterministic: the same Coconut always yields the same deck. Ties break
+       on name so the order never depends on database ordering. */
+    .sort((a,b)=>b.s-a.s||a.c.f.localeCompare(b.c.f));
+  /* Does this card exist because of the Coconut? Used both to force payoffs
+     into the deck and to decide which card gets the star. */
+  const synergy=c=>{
+    try{if(co.hook(c))return true}catch(e){}
+    return recIds.some(id=>c.ab&&c.ab.has(id))};
+  const isHook=c=>{try{return !!co.hook(c)}catch(e){return false}};
+
+  const picked=[],used=new Set();
+  const want=COCO_CURVE.slice();
+  /* Payoffs go in FIRST and ignore the curve. A Moana deck without Heihei and
+     Pua is not a Moana deck, however tidy its mana curve is. Capped at 24 so a
+     broad hook (Nick Wilde: "every item") can't eat the whole list. */
+  ranked.filter(x=>isHook(x.c)).slice(0,24).forEach(({c})=>{
+    if(used.has(c.f))return;
+    used.add(c.f);picked.push(c);
+    const b=Math.min(7,c.c);if(want[b]>0)want[b]--});
+  ranked.forEach(({c,s})=>{
+    const b=Math.min(7,c.c);
+    if(want[b]>0&&s>0&&!used.has(c.f)){want[b]--;used.add(c.f);picked.push(c)}});
+  /* Top up to 56 with the best of whatever is left, curve be damned — a legal
+     60 beats a perfect curve at 51. */
+  for(const {c} of ranked){
+    if(picked.length>=56)break;
+    if(!used.has(c.f)){used.add(c.f);picked.push(c)}}
+  const cards={};
+  picked.forEach(c=>cards[c.f]=1);
+  if(self)cards[self.f]=4;
+  /* The dream opener: seven cards you'd keep without thinking. Two cheap
+     inkable bodies to make land drops, the Coconut itself, the best early
+     payoff, and a curve topper to aim at. Deterministic, so the same deck
+     always shows the same hand. */
+  const inDeck=picked.slice();
+  const pick1=f=>{const i=inDeck.findIndex(f);return i<0?null:inDeck.splice(i,1)[0]};
+  const hand=[];
+  if(self)hand.push(self);
+  [c=>c.ik&&c.c<=1, c=>c.ik&&c.c===2, c=>synergy(c)&&c.c<=2,
+   c=>synergy(c)&&c.c===3, c=>c.ik&&c.c===3, c=>c.c>=4&&c.c<=5,
+   c=>c.ik&&c.c<=2, c=>true].forEach(f=>{if(hand.length<7){const c=pick1(f);if(c)hand.push(c)}});
+
+  return {inks,cards,co,self,scoreOf:score,synergy,isHook,hand,
+    total:Object.values(cards).reduce((a,b)=>a+b,0)};
+}
 function inkStaples(ink){
   return CARDS.filter(c=>isStar(c.f)&&c.co.length===1&&c.co[0]===ink&&legal(c))
     .sort((a,b)=>a.c-b.c).slice(0,2);
@@ -3557,6 +4516,60 @@ function miniCard(c,extra){
 }
 /* All six steps are always on the page. Unreached ones render as a dimmed
    preview so you can see what's coming instead of being surprised by it. */
+let GTAB=load("fs3_gtab","pick"),GBUILT=null;
+/* The list for one prebuilt deck, plus the one button that matters. */
+function builtPanel(i){
+  const d=cocoDeck(i);if(!d)return "";
+  const L=Object.entries(d.cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q}))
+    .filter(x=>x.c).sort((a,b)=>a.c.c-b.c.c||a.c.f.localeCompare(b.c.f));
+  const byCost={};L.forEach(x=>{const k=Math.min(7,x.c.c);(byCost[k]=byCost[k]||[]).push(x)});
+  const plan=COCO_PLAN[d.co.n];
+  /* The single highest-scoring card in each cost slot gets a star. It's the
+     answer to "why is this deck like this" at a glance. */
+  /* Star the best card in each slot THAT THE COCONUT ACTUALLY WANTS. Scoring
+     alone starred whatever was strongest in a vacuum — Dumbo's list flagged
+     Cobra Bubbles, a fine card, for a Coconut about exert abilities. The bar
+     is now the Coconut's OWN text — a recommended-filter match is not enough.
+     A slot with nothing the Coconut wants simply gets no star. */
+  const star={};
+  Object.keys(byCost).forEach(k=>{
+    let best=null,bs=-1;
+    byCost[k].forEach(x=>{if(!d.isHook(x.c))return;
+      const sc=d.scoreOf(x.c);if(sc>bs){bs=sc;best=x.c.f}});
+    star[k]=best});
+  return `<div class="bbody">
+    ${plan?`<div class="bplan">
+      <p class="bp">${esc(plan.p)}</p>
+      <div class="bturns">${plan.t.map((t,i)=>
+        `<div><span>Turn ${i+1}</span>${esc(t)}</div>`).join("")}</div>
+      <p class="bgoal"><b>The point:</b> ${esc(plan.g)}</p>
+    </div>`:""}
+    ${d.hand&&d.hand.length?`<div class="bhand">
+      <h4>Dream starting hand</h4>
+      <div class="bhcards">${d.hand.map(c=>
+        `<button class="bhc" data-bo="${esc(c.f)}">
+          <span class="bhcost">${c.c}</span>
+          <span class="bhn">${esc(c.n)}<em>${esc(c.v)}</em></span>
+          ${c.ik?`<span class="bhink" title="Inkable">◆</span>`:""}
+        </button>`).join("")}</div>
+      <p class="bhnote">Seven you'd keep without thinking — land drops, the Coconut,
+        and an early payoff. ◆ marks a card you can ink.</p>
+    </div>`:""}
+    <div class="binks">${d.inks.map(i2=>
+      `<span><i style="background:${HEX[i2]}"></i>${esc(i2)}</span>`).join("")}
+      <b>${d.total} cards</b><span class="bsing">singleton · ${esc(d.co.n)} ×4</span>
+      <span class="bkey">★ best in its slot</span></div>
+    <div class="bcols">${Object.keys(byCost).sort((a,b)=>a-b).map(k=>`
+      <div class="bcol"><h4>${k==7?"7+":k} ink <span>${byCost[k].reduce((a,x)=>a+x.q,0)}</span></h4>
+        ${byCost[k].map(x=>`<button class="bcard${star[k]===x.c.f?" top":""}" data-bo="${esc(x.c.f)}">
+          ${star[k]===x.c.f?`<span class="bstar">★</span>`:""}
+          ${x.q>1?`<b>${x.q}×</b>`:""}${esc(x.c.n)}<em>${esc(x.c.v)}</em></button>`).join("")}
+      </div>`).join("")}</div>
+    <div class="bacts">
+      <button class="btn go" data-btake="${i}">Copy &amp; edit in deck builder</button>
+      <button class="btn" data-bcopy="${i}">Copy list</button>
+    </div></div>`;
+}
 function renderGuide(){
   const g=$("guide");
   const co=G.coco!=null?COCO[G.coco]:null;
@@ -3571,10 +4584,35 @@ function renderGuide(){
   const step=(i,title,body)=>`<div class="gstep ${state(i)}">
     <h3><span class="num">${i+1}</span>${title}</h3><div class="gbody">${body}</div></div>`;
 
-  /* 1 — coconut */
-  let s1=`<p class="s">Its ink locks in automatically. All 18 beta cards, real ability text.</p>
-    <input class="mini" id="gq" placeholder="search coconuts…" style="max-width:320px">
-    <div class="cocogrid" id="cg" style="margin-top:9px"></div>`;
+  /* 1 — coconut, or a finished deck to take away and edit */
+  let s1=`<div class="gtabs">
+      <button data-gt="pick" class="${GTAB==="pick"?"on":""}">Choose your Coconut</button>
+      <span class="or">or</span>
+      <button data-gt="built" class="${GTAB==="built"?"on":""}">See fully built decks</button>
+    </div>`;
+  if(GTAB!=="built"){
+    s1+=`<p class="s">Its ink locks in automatically. All 18 beta cards, real ability text.</p>
+      <input class="mini" id="gq" placeholder="search coconuts…" style="max-width:320px">
+      <div class="cocogrid" id="cg" style="margin-top:9px"></div>`;
+  }else{
+    const openIdx=GBUILT;
+    s1+=`<p class="s">A complete, legal 60 for every Coconut — three inks, singleton,
+      four copies of the Coconut itself. Built from the card database rather than typed
+      out by hand, so they stay current as sets land. Take one and change everything.</p>
+      <div class="blist">`;
+    COCO.forEach((c,i)=>{
+      const on=openIdx===i;
+      s1+=`<div class="brow${on?" on":""}">
+        <button class="bhead" data-built="${i}">
+          <span class="dot" style="background:${HEX[c.i]}"></span>
+          <span class="bn">${esc(c.n)} <em>${esc(c.v)}</em></span>
+          <span class="bt">${esc(c.t)}</span>
+          <span class="bx">${on?"▾":"▸"}</span>
+        </button>
+        ${on?builtPanel(i):""}
+      </div>`});
+    s1+=`</div>`;
+  }
 
   /* 2 — inks */
   let s2;
@@ -3674,7 +4712,9 @@ function renderGuide(){
   renderGuideDeck();
 
   /* step 1 wiring */
-  const draw=()=>{const q=($("gq")&&$("gq").value||"").toLowerCase();
+  /* The Coconut grid only exists in the "pick" tab. */
+  const draw=()=>{if(!$("cg"))return;
+    const q=($("gq")&&$("gq").value||"").toLowerCase();
     $("cg").innerHTML=COCO.map((c,i)=>({c,i})).filter(({c})=>!q||(c.n+" "+c.v+" "+c.i+" "+c.t).toLowerCase().includes(q))
       .map(({c,i})=>`<button class="cococ${G.coco===i?" on":""}" data-c="${i}">
         <b><span class="dot" style="background:${HEX[c.i]}"></span>${esc(c.n)}</b><i>"${esc(c.v)}" · ${c.i}</i>
@@ -3702,6 +4742,33 @@ function renderGuide(){
   if($("gy"))$("gy").onclick=()=>{let n=0;const d=deck();
     inks.forEach(i=>inkStaples(i).forEach(c=>{if(c.f!==BANNED){d.cards[c.f]=(d.cards[c.f]||0)+1;n++}}));
     saveDecks();G.staples=true;toast("Added "+n+" staples");renderGuide();render()};
+  g.querySelectorAll("[data-gt]").forEach(b=>b.onclick=()=>{
+    GTAB=b.dataset.gt;save("fs3_gtab",GTAB);renderGuide()});
+  g.querySelectorAll("[data-built]").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.built;GBUILT=(GBUILT===i?null:i);renderGuide()});
+  g.querySelectorAll("[data-bo]").forEach(b=>{
+    b.onclick=()=>openM(b.dataset.bo);
+    /* Same 2-second hover preview the card grid uses, so you can read a card
+       without leaving the list. */
+    const c=CARDS.find(x=>x.f===b.dataset.bo);
+    if(c)cardPreview(b,c);});
+  g.querySelectorAll("[data-bcopy]").forEach(b=>b.onclick=()=>{
+    const d=cocoDeck(+b.dataset.bcopy);if(!d)return;
+    const txt=Object.entries(d.cards).map(([f,q])=>q+" "+f).join("\n");
+    navigator.clipboard.writeText(txt).then(()=>toast("Deck list copied"),()=>toast("Copy failed"))});
+  g.querySelectorAll("[data-btake]").forEach(b=>b.onclick=async()=>{
+    const i=+b.dataset.btake,d=cocoDeck(i);if(!d)return;
+    /* Its own deck, not a merge into whatever you had open — otherwise the
+       first thing you'd do is untangle it from your current build. */
+    let name=d.co.n+" – "+d.co.v;
+    let n=2;while(DECKS.list[name])name=d.co.n+" – "+d.co.v+" "+(n++);
+    DECKS.list[name]={fmt:"coconut",coco:i,cards:{...d.cards}};
+    DECKS.cur=name;saveDecks();markDirty(false);
+    G.coco=i;G.pair=d.inks.slice(1);G.copies=4;G.mode=null;
+    S.ink=new Set(d.inks);S.limit=150;
+    SUB="manual";save("fs3_sub",SUB);showTab("tDeck");
+    render();paintDeckBar();
+    toast(`Loaded “${name}” — edit away`)});
   if($("gn"))$("gn").onclick=()=>{G.staples=false;renderGuide()};
   if($("gskip"))$("gskip").onclick=()=>{G.staples="skip";renderGuide()};
   if($("gr"))$("gr").onclick=()=>{G.mode="rec";renderGuide();render();toast("Filters highlighted green in Search")};
@@ -3712,7 +4779,14 @@ function renderGuide(){
   if($("gdone"))$("gdone").onclick=()=>{award("coconut");showSearch()};
 }
 /* compact deck panel so you can see the build while working through the steps */
+/* The guided view gets the REAL deck panel — same stats, sort, format picker,
+   rename, save, resize and card controls. It was a stripped-down copy that
+   drifted further behind every time the real one gained something. */
 function renderGuideDeck(){
+  if($("gdeck"))return renderDeck("gdeck");
+  return renderGuideDeckOld();
+}
+function renderGuideDeckOld(){
   const el=$("gdeck");if(!el)return;
   const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
   el.innerHTML=`<h3>Deck — ${tot}/${F.min}</h3>
@@ -3873,199 +4947,307 @@ function renderCredits(){
    food when it appears. Dust accrues per second of watching, which is the whole
    deal — you're paid to leave him alone. */
 let AQ=null;
-function stopAqua(){if(AQ&&AQ.raf){cancelAnimationFrame(AQ.raf);clearInterval(AQ.tick);
-  clearInterval(AQ.drop);clearInterval(AQ.bub);AQ.raf=null}AQ=null}
-const AQKEY="fs3_aqua";
+function stopAqua(){if(AQ){
+  if(AQ.raf)cancelAnimationFrame(AQ.raf);
+  clearInterval(AQ.tick);clearInterval(AQ.drop);clearInterval(AQ.bub);
+  /* The effect loops fire every 70–500ms. Left running they keep appending
+     particles to a node that is no longer on the page — invisible, but it
+     never stops. */
+  (AQ.fx||[]).forEach(clearInterval);
+  AQ.raf=null}AQ=null}
+const AQKEY="fs3_aqua",FFXKEY="fs3_ffx";
+/* Card effects for Feed Flounder — bought with dust, worn on the Flounder card
+   while you play. Cosmetic only, like titles, which is why they can live in
+   localStorage. Several can run at once; that's the fun of it.
+
+   Priced so the cheap two are an hour's play and Abyss is something you work
+   towards. Ordered by cost so the shop reads as a ladder. */
+const FFX=[
+ {id:"bubbles",  l:"Bubble Stream", c:50,   d:"A steady rise of bubbles off the card."},
+ {id:"water",    l:"Water Ripple",  c:120,  d:"Light dances across it as you swim."},
+ {id:"shimmer",  l:"Shimmer",       c:300,  d:"A foil sweep and a scatter of glints."},
+ {id:"sapphire", l:"Sapphire Glow", c:600,  d:"Deep blue light pulsing at the edges."},
+ {id:"sparkles", l:"Comet Trail",   c:1200, d:"Stars stream off you as you move. Turn hard for a burst."},
+ {id:"legendary",l:"Legendary Foil",c:2500, d:"Full rainbow foil. Everyone can see it."},
+ {id:"abyss",    l:"Abyss",         c:5000, d:"Something purple and wrong follows you around."}];
+const ffxLoad=()=>{const v=load(FFXKEY,{owned:[],active:[]});
+  return {owned:v.owned||[],active:v.active||[]}};
 function renderAqua(){
   stopAqua();
-  const fish=CARDS.find(c=>c.f==="Flounder - Voice of Reason")||CARDS.find(c=>c.n==="Flounder");
   const st=load(AQKEY,{secs:0,fed:0,coco:0});
   $("aquapage").innerHTML=`<div class="page">
     <button class="btn" id="aqExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">🐠</span>Blue Striped Fish Aquarium</h1>
-    <p class="lede">He swims. You get dust for every ten seconds he's on screen. Move your mouse in
-      the tank and he'll drift over; food falls now and then and he'll go and get it in his own
-      time. Nothing here is in a hurry.</p>
-    <div class="tank" id="tank">
-      <div class="bubbles" id="tbub"></div>
-      ${[[7,54],[13,38],[19,62],[80,46],[86,30],[92,58]].map(([l,h],i)=>
-        `<div class="weed" style="left:${l}%;animation-delay:${(i*0.9).toFixed(1)}s">
-           <i style="height:${h}px"></i></div>`).join("")}
-      <div class="castle"></div>
-      <div class="floor"></div>
-      <img class="fish" id="fish" src="${esc(fish&&fish.img||"")}" alt="Flounder">
-      <div class="tankhud">
-        <span><b id="aqSecs">${N(st.secs)}</b> sec watched</span>
-        <span><b id="aqFed">${N(st.fed)}</b> fed</span>
-        <span><b id="aqCoco">${N(st.coco||0)}</b> coconuts</span>
-        <span><b id="aqDust">0</b> dust this visit</span>
-      </div>
-      <button class="btn go feedbtn" id="aqFeed">Sprinkle flakes</button>
+    <h1><span class="gi">🐠</span>Feed Flounder</h1>
+    <p class="lede">Move your mouse or finger and he swims after it. Eat fish food, earn dust —
+      that's it. Potatoes are worth ten and make him chonky; coconuts are worth twenty-five
+      and bonk him.</p>
+    <div class="ffgame" id="ffgame">
+      <div class="ffhud"><span class="ffdusti"></span>Dust <b id="ffdust">0</b></div>
+      <div class="fftitle"><h2>FEED FLOUNDER</h2><p>eat fish food. earn dust. that's it.</p></div>
+      <div class="ffcard" id="ffcard"></div>
+      <div class="ffhint" id="ffhint">Move your finger or mouse to swim</div>
+      <div class="ffweed s1"></div><div class="ffweed s2"></div>
+      <div class="ffweed s3"></div><div class="ffweed s4"></div>
       <button class="btn fsbtn" id="aqFull" title="Full screen">⛶ Full screen</button>
     </div>
-    <div class="hint" style="margin-top:9px">Click anywhere in the tank to sprinkle food. Every so
-      often a coconut goes in instead — those are worth ten, and he will get to it eventually.</div>
+    <h3 class="sec2" style="margin-top:16px">Card effects</h3>
+    <p class="hint" style="margin:-2px 0 10px">Bought with your dust and worn on the card while
+      you play. Stack as many as you like.</p>
+    <div class="ffshop" id="ffshop"></div>
+    <div class="tankhud" style="position:static;margin-top:14px">
+      <span><b id="aqFed">${N(st.fed)}</b> fed</span>
+      <span><b id="aqCoco">${N(st.coco||0)}</b> coconuts</span>
+      <span><b id="aqDust">0</b> dust this visit</span>
+    </div>
     ${leaderboard("aqua")}
   </div>`;
-  const ex=$("aqExit");if(ex)ex.onclick=()=>{stopAqua();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
-  /* Full screen. The physics all read the tank's live bounding box every frame,
-     so it simply becomes a bigger tank — no re-layout needed. */
+  const ex=$("aqExit");
+  if(ex)ex.onclick=()=>{stopAqua();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+
+  const game=$("ffgame"),card=$("ffcard"),dustEl=$("ffdust"),hint=$("ffhint");
+  if(!game||!card)return;
+
   const fs=$("aqFull");
   if(fs)fs.onclick=()=>{
-    const t=$("tank");if(!t)return;
     const on=document.fullscreenElement||document.webkitFullscreenElement;
     if(on){(document.exitFullscreen||document.webkitExitFullscreen).call(document)}
-    else{const go=t.requestFullscreen||t.webkitRequestFullscreen;
-      if(go)go.call(t); else toast("Your browser won't allow full screen here")}
-  };
-  document.onfullscreenchange=()=>{
-    const f=$("aqFull");if(!f)return;
-    f.textContent=document.fullscreenElement?"⛶ Exit full screen":"⛶ Full screen";
-  };
-  const tank=$("tank"),el=$("fish");
-  if(!tank||!el)return;
-  AQ={x:120,y:100,vx:1.1,vy:.35,face:1,food:[],earn:0,st,way:null,wayT:0,rest:0};
-  const R=()=>tank.getBoundingClientRect();
-  tank.onmousemove=e=>{const r=R();AQ.mouse={x:e.clientX-r.left,y:e.clientY-r.top};AQ.mouseT=Date.now()};
-  tank.onmouseleave=()=>{AQ.mouse=null};
-  /* One sprinkle is a small scatter of flakes, because one lone pellet looks
-     like a bug. Roughly one drop in nine is a coconut instead — worth ten. */
-  const COCO_ODDS=0.11;
-  const addFood=(fx,fy,coco)=>{
-    const d=document.createElement("div");
-    d.className="food "+(coco?"coco":"flake");
-    if(coco)d.textContent="🥥";
-    d.style.left=fx+"px";d.style.top=fy+"px";tank.appendChild(d);
-    // CENTRE, not top-left: he steers by his centre and eats by his centre, and
-    // mixing the two left him hovering half a body-width away, forever.
-    const w=d.offsetWidth||7,h=d.offsetHeight||5;
-    AQ.food.push({el:d,x:fx+w/2,y:fy+h/2,coco:!!coco,vy:.10+Math.random()*.14});
-  };
-  const dropFood=(x,y)=>{
-    const r=R();
-    const coco=Math.random()<COCO_ODDS;
-    const cx=x??(40+Math.random()*(r.width-80)),cy=y??(14+Math.random()*30);
-    if(coco){addFood(cx,cy,true);return}
-    const n=3+Math.floor(Math.random()*3);
-    for(let i=0;i<n;i++)
-      addFood(cx+(Math.random()-.5)*34,cy+(Math.random()-.5)*18,false);
-  };
-  $("aqFeed").onclick=()=>dropFood();
-  tank.onclick=e=>{
-    if(!AQ)return;
-    /* At the cap, evict the oldest flake rather than silently ignoring the
-       click — a control that sometimes does nothing feels broken. Coconuts are
-       never evicted; they're worth ten and he will get to them. */
-    while(AQ.food.length>=26){
-      const i=AQ.food.findIndex(f=>!f.coco);
-      if(i<0)break;
-      AQ.food[i].el.remove();AQ.food.splice(i,1);
-    }
-    const r=R();dropFood(e.clientX-r.left,e.clientY-r.top);
-  };
-  AQ.drop=setInterval(()=>{if(AQ.food.length<3)dropFood()},26000);
-  setTimeout(()=>dropFood(),1500);
-  /* a steady stream of bubbles off the left-hand plants */
-  AQ.bub=setInterval(()=>{
-    if(!AQ)return;const r=R();
-    const b=document.createElement("div");b.className="bub2";
-    b.style.left=(6+Math.random()*16)+"%";
-    b.style.setProperty("--h",(r.height-30)+"px");
-    b.style.setProperty("--dx",((Math.random()-.5)*40).toFixed(0)+"px");
-    b.style.animationDuration=(9+Math.random()*6).toFixed(1)+"s";
-    tank.appendChild(b);setTimeout(()=>b.remove(),8000);
-  },2200);
-  AQ.tick=setInterval(()=>{
-    if(!AQ)return;
-    AQ.st.secs++;save(AQKEY,AQ.st);
-    const se=$("aqSecs");if(se)se.textContent=N(AQ.st.secs);
-    if(AQ.st.secs%10===0){if(dustGain(1))AQ.earn++;
-      const de=$("aqDust");if(de)de.textContent=N(AQ.earn);}
-  },1000);
-  const step=()=>{
-    if(!AQ)return;
-    const r=R(),W=r.width,H=r.height,fw=el.offsetWidth||70,fh=el.offsetHeight||98;
-    /* Food sinks, the way flakes actually do, and settles just above the gravel.
-       Before this it hung wherever it spawned — up near the top — so he lived up
-       there waiting for the next one and never used the tank. */
-    const FLOOR=H-34;
-    AQ.food.forEach(f=>{
-      if(f.y<FLOOR-8){f.y+=f.vy;f.el.style.top=(f.y-3)+"px"}
-      else f.rest=(f.rest||0)+1;
-    });
-    /* If something is somehow still uneaten after a long rest on the gravel it
-       dissolves rather than becoming a thing he circles forever. */
-    AQ.food=AQ.food.filter(f=>{
-      if((f.rest||0)<2400)return true;
-      f.el.style.transition="opacity 1.2s";f.el.style.opacity="0";
-      setTimeout(()=>f.el.remove(),1300);return false;
-    });
+    else{const go=game.requestFullscreen||game.webkitRequestFullscreen;
+      if(go)go.call(game); else toast("Your browser won't allow full screen here")}};
+  document.onfullscreenchange=()=>{const f=$("aqFull");
+    if(f)f.textContent=document.fullscreenElement?"⛶ Exit full screen":"⛶ Full screen"};
 
-    // target: food, else the mouse if it moved recently, else a wander waypoint
-    // targets are centres; steer so HIS centre lands on them
-    let tx=null,ty=null,urgent=false;
-    if(AQ.food.length){const f=AQ.food[0];tx=f.x-fw/2;ty=f.y-fh/2;urgent=true}
-    else if(AQ.mouse&&Date.now()-AQ.mouseT<2500){tx=AQ.mouse.x-fw/2;ty=AQ.mouse.y-fh/2;urgent=true}
-    else{
-      /* Idle is a real behaviour, not a random walk. He picks somewhere to be,
-         swims there unhurriedly, hangs about a moment, then picks somewhere
-         else — and the waypoints span the whole tank, so he actually uses it. */
-      const now=Date.now();
-      if(!AQ.way||now>AQ.wayT||
-         (Math.abs(AQ.way.x-AQ.x)<26&&Math.abs(AQ.way.y-AQ.y)<26)){
-        if(!AQ.rest||now>AQ.rest){
-          AQ.way={x:20+Math.random()*(W-fw-40),
-                  y:18+Math.random()*Math.max(20,FLOOR-fh-24)};
-          AQ.wayT=now+16000+Math.random()*14000;
-          AQ.rest=now+4000+Math.random()*7000;   // hang about a good while
-        }
-      }
-      if(AQ.way){tx=AQ.way.x;ty=AQ.way.y}
-    }
-    if(tx!=null){
-      const g=urgent?0.030:0.012;   // unhurried; he is not late for anything              // he hurries for food, not for scenery
-      AQ.vx+=Math.sign(tx-AQ.x)*g;AQ.vy+=Math.sign(ty-AQ.y)*(g*0.8);
-    }else{
-      AQ.vx+=(Math.random()-0.5)*0.06;AQ.vy+=(Math.random()-0.5)*0.05;
-    }
-    // water: gentle drag, capped speed, a slow bob
-    AQ.vx*=0.992;AQ.vy*=0.986;   // more water, more glide
-    // cruising is slower than feeding — a fish mooching looks nothing like a fish eating
-    const cap=urgent?1.5:0.62;      // a drifting cruise, not a dart
-    AQ.vx=Math.max(-cap,Math.min(cap,AQ.vx));AQ.vy=Math.max(-cap*.7,Math.min(cap*.7,AQ.vy));
-    AQ.x+=AQ.vx;AQ.y+=AQ.vy+Math.sin(Date.now()/1600)*0.14;   // a slow, long breath
-    if(AQ.x<0){AQ.x=0;AQ.vx=Math.abs(AQ.vx)}
-    if(AQ.x>W-fw){AQ.x=W-fw;AQ.vx=-Math.abs(AQ.vx)}
-    if(AQ.y<0){AQ.y=0;AQ.vy=Math.abs(AQ.vy)}
-    if(AQ.y>FLOOR-fh+8){AQ.y=FLOOR-fh+8;AQ.vy=-Math.abs(AQ.vy)}   // he can't swim through gravel
-    if(Math.abs(AQ.vx)>0.25)AQ.face=AQ.vx>0?1:-1;
-    el.style.transform=`translate(${AQ.x}px,${AQ.y}px) scaleX(${AQ.face}) rotate(${AQ.vy*4}deg)`;
-    // eat
-    AQ.food=AQ.food.filter(f=>{
-      /* The eat radius follows his BODY, not a magic 34px. It used to be a flat
-         34 in both axes, but he can only get his centre to within 41px of the
-         gravel — so a coconut that had sunk to the floor sat exactly 1px out of
-         reach and he butted against the ground trying to get it, forever.
-         Anything overlapping a fish this size should be eaten. */
-      const dx=Math.abs(f.x-(AQ.x+fw/2)), dy=Math.abs(f.y-(AQ.y+fh/2));
-      if(dx<fw*0.62&&dy<fh*0.56){
-        f.el.remove();
-        const pay=f.coco?20:2;
-        AQ.st.fed++;if(f.coco)AQ.st.coco=(AQ.st.coco||0)+1;
-        AQ.earn+=dustGain(pay);save(AQKEY,AQ.st);
-        const fe=$("aqFed");if(fe)fe.textContent=N(AQ.st.fed);
-        const ce=$("aqCoco");if(ce)ce.textContent=N(AQ.st.coco||0);
-        const de=$("aqDust");if(de)de.textContent=N(AQ.earn);
-        if(f.coco)toast("🥥 +20 dust");
-        if(AQ.st.fed>=25)unlockHidden("h_aqua");
-        lbPost("aqua",AQ.st.fed);
-        return false;
-      }
-      return true;
-    });
-    AQ.raf=requestAnimationFrame(step);
-  };
-  AQ.raf=requestAnimationFrame(step);
+  /* Everything below is Ben's Feed Flounder, moved off the viewport and onto
+     the tank element: the original read innerWidth/innerHeight because it was
+     its own page. R() is the live box, so full screen just makes it bigger.
+
+     The one real change is dust. The standalone game kept its own counter in
+     localStorage under feedFlounderDust; here it goes through dustGain(), the
+     single seam every other game already uses, so it lands in the same balance
+     as everything else and respects the Dust switch in Settings. */
+  const R=()=>game.getBoundingClientRect();
+  const r0=R();
+  const pos={x:r0.width/2,y:r0.height*.55},target={...pos},vel={x:0,y:0},foods=[];
+  let started=false,chonkyUntil=0,bonkUntil=0,visit=0;
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+  AQ={raf:null,st,earn:0};
+
+  function setTarget(cx,cy){
+    const r=R();
+    target.x=clamp(cx-r.left,50,r.width-50);
+    target.y=clamp(cy-r.top,40,r.height-46);
+    if(!started){started=true;hint.classList.add("hide")}}
+  game.onpointermove=e=>setTarget(e.clientX,e.clientY);
+  game.onpointerdown=e=>setTarget(e.clientX,e.clientY);
+  game.ontouchmove=e=>{const t=e.touches[0];if(t)setTarget(t.clientX,t.clientY)};
+
+  const chooseType=()=>{const q=Math.random();
+    return q<.01?"coconut":q<.04?"potato":q<.12?"rare":"pellet"};
+  function spawnFood(){
+    if(!AQ||foods.length>=14)return;
+    const r=R(),type=chooseType(),el=document.createElement("div");
+    el.className="ffood "+(type==="rare"?"pellet rare":type==="pellet"?"pellet":type);
+    if(type==="potato")el.textContent="🥔";
+    if(type==="coconut")el.textContent="🥥";
+    const f={el,type,x:26+Math.random()*Math.max(40,r.width-52),
+      y:60+Math.random()*Math.max(40,r.height-120),
+      phase:Math.random()*Math.PI*2,drift:.18+Math.random()*.28,spin:(Math.random()-.5)*1.6};
+    el.style.left=f.x+"px";el.style.top=f.y+"px";game.appendChild(el);foods.push(f);}
+
+  function eat(i){
+    const f=foods[i];
+    const value=f.type==="coconut"?25:f.type==="potato"?10:f.type==="rare"?10:1;
+    const got=dustGain(value);                    // the shared balance
+    visit+=got;AQ.earn=visit;
+    dustEl.textContent=N(DUST.bal);
+    const d=$("aqDust");if(d)d.textContent=N(visit);
+    st.fed=(st.fed||0)+1;
+    if(f.type==="coconut")st.coco=(st.coco||0)+1;
+    save(AQKEY,st);
+    const fe=$("aqFed"),ce=$("aqCoco");
+    if(fe)fe.textContent=N(st.fed);
+    if(ce)ce.textContent=N(st.coco||0);
+    if(st.fed>=25)unlockHidden("h_aqua");
+    if(AQ.paintFX)AQ.paintFX();
+    const pop=document.createElement("div");
+    pop.className="ffpop"+((f.type==="potato"||f.type==="coconut")?" special":"");
+    pop.textContent=f.type==="coconut"?"BONK! +25 Dust"
+      :f.type==="potato"?"POTATO! +10 Dust":"+"+value+" Dust";
+    pop.style.left=f.x+"px";pop.style.top=f.y+"px";
+    game.appendChild(pop);setTimeout(()=>pop.remove(),720);
+    if(f.type==="potato")chonkyUntil=performance.now()+4000;
+    if(f.type==="coconut")bonkUntil=performance.now()+450;
+    f.el.remove();foods.splice(i,1);
+    if(navigator.vibrate)navigator.vibrate(f.type==="coconut"?[35,30,35]
+      :f.type==="potato"?[25,20,25]:f.type==="rare"?[20,25,20]:18);
+    setTimeout(spawnFood,250+Math.random()*700);}
+
+  function bubble(){
+    if(!AQ)return;
+    const r=R(),b=document.createElement("div");
+    b.className="ffbub";const sz=4+Math.random()*13;
+    b.style.width=b.style.height=sz+"px";
+    b.style.left=Math.random()*r.width+"px";b.style.top=(r.height+20)+"px";
+    game.appendChild(b);
+    const dur=5000+Math.random()*5500,start=performance.now();
+    (function up(t){
+      if(!AQ){b.remove();return}
+      const q=(t-start)/dur;if(q>=1){b.remove();return}
+      b.style.transform=`translate(${Math.sin(q*10)*18}px,${-q*(r.height+100)}px)`;
+      b.style.opacity=String(1-q);requestAnimationFrame(up)})(start);}
+
+  dustEl.textContent=N(DUST.bal);
+  AQ.bub=setInterval(bubble,650);
+  for(let i=0;i<10;i++)spawnFood();
+  AQ.drop=setInterval(spawnFood,1300);
+
+  let last=performance.now();
+  function frame(now){
+    if(!AQ)return;
+    const dt=Math.min(32,now-last)/16.67;last=now;
+    const dx=target.x-pos.x,dy=target.y-pos.y;
+    vel.x+=dx*.018*dt;vel.y+=dy*.018*dt;
+    vel.x*=Math.pow(.82,dt);vel.y*=Math.pow(.82,dt);
+    pos.x+=vel.x*dt;pos.y+=vel.y*dt;
+    const tilt=clamp(vel.x*1.4,-12,12),bob=Math.sin(now/320)*2,
+      chonky=now<chonkyUntil?1.22:1,bonk=now<bonkUntil?Math.sin(now/22)*8:0;
+    card.style.left=(pos.x+bonk)+"px";card.style.top=(pos.y+bob)+"px";
+    card.style.transform=`translate(-50%,-50%) scale(${chonky}) rotate(${tilt}deg)`;
+    for(let i=foods.length-1;i>=0;i--){
+      const f=foods[i];f.phase+=.018*dt;
+      f.y+=Math.sin(f.phase)*.08+f.drift*.08;f.x+=Math.cos(f.phase*.75)*.07;
+      const special=f.type==="potato"||f.type==="coconut";
+      const rot=special?` rotate(${f.phase*40*f.spin}deg)`:"";
+      f.el.style.transform=`translate(${Math.sin(f.phase)*4}px,${Math.cos(f.phase*.8)*4}px)${rot}`;
+      const ax=f.x-pos.x,ay=f.y-pos.y;
+      if(ax*ax+ay*ay<58*58)eat(i);}
+    AQ.raf=requestAnimationFrame(frame);}
+  AQ.raf=requestAnimationFrame(frame);
+
+  /* ---- card effects ------------------------------------------------------
+     Ben's effects-v2, wired to dust. The original read a shop state that never
+     existed in this build, so it was inert; ownership now lives in FFXKEY and
+     the particles are parented to the game box rather than the page. Every
+     interval is parked on AQ so stopAqua() kills them when you leave — without
+     that they'd keep firing into a detached node for the rest of the session. */
+  FFX.forEach(x=>{const l=document.createElement("div");
+    l.className="ff2-layer ff2-"+x.id;card.appendChild(l)});
+  const on=id=>ffxLoad().active.includes(id);
+  const rnd=(a,b)=>a+Math.random()*(b-a);
+  const hidden=()=>document.hidden;
+  function particle(cls,x,y,text,size){
+    const el=document.createElement("span");el.className="ff2p "+cls;
+    if(text)el.textContent=text;
+    if(size)el.style.fontSize=size+"px";
+    const r=R();el.style.left=(x-r.left)+"px";el.style.top=(y-r.top)+"px";
+    game.appendChild(el);return el}
+  const anim=(el,frames,dur)=>{
+    const a=el.animate(frames,{duration:dur,easing:"cubic-bezier(.15,.7,.22,1)"});
+    a.onfinish=()=>el.remove()};
+  const m={x:0,y:0,vx:0,vy:0,s:0,a:0,t:0,ready:false};
+  AQ.fx=[];
+  const every=(ms,fn)=>AQ.fx.push(setInterval(fn,ms));
+  every(70,()=>{
+    const r=card.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+    if(!m.ready){m.x=x;m.y=y;m.ready=true;return}
+    const dx=x-m.x,dy=y-m.y,na=Math.atan2(dy,dx||.001);
+    let d=na-m.a;while(d>Math.PI)d-=Math.PI*2;while(d<-Math.PI)d+=Math.PI*2;
+    m.t=Math.abs(d);m.a=na;m.vx=dx;m.vy=dy;m.s=Math.hypot(dx,dy);m.x=x;m.y=y});
+
+  every(180,()=>{if(hidden()||!on("bubbles"))return;
+    const r=card.getBoundingClientRect(),n=m.s>3?2:1;
+    for(let i=0;i<n;i++){const sz=rnd(9,19);
+      const p=particle("ff2bubble",r.left+r.width*rnd(.2,.8),r.top+r.height*rnd(.55,.92));
+      p.style.width=p.style.height=sz+"px";
+      anim(p,[{transform:"translate(-50%,-50%) scale(.4)",opacity:0},
+        {transform:"translate(-50%,-50%) scale(1)",opacity:.95,offset:.2},
+        {transform:`translate(calc(-50% + ${rnd(-18,18)+m.vx*1.5}px),calc(-50% - ${rnd(60,105)+m.s*5}px)) scale(1.4)`,opacity:0}],rnd(1200,1700))}});
+
+  every(500,()=>{if(hidden()||!on("shimmer"))return;
+    const r=card.getBoundingClientRect();
+    const p=particle("ff2star",r.left+rnd(10,r.width-10),r.top+rnd(10,r.height-14),
+      Math.random()>.5?"✦":"✧",rnd(13,19));
+    anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.2)",opacity:1,offset:.3},
+      {transform:`translate(calc(-50% + ${rnd(-8,8)}px),calc(-50% - ${rnd(10,22)}px)) scale(.25)`,opacity:0}],rnd(700,1000))});
+
+  every(250,()=>{if(hidden()||!on("sapphire"))return;
+    const r=card.getBoundingClientRect(),e=Math.floor(Math.random()*4);
+    const x=e<2?r.left+r.width*(e?.94:.06):r.left+r.width*rnd(.15,.85);
+    const y=e>1?r.top+r.height*(e===2?.08:.92):r.top+r.height*rnd(.15,.85);
+    const p=particle("ff2dot",x,y);
+    anim(p,[{transform:"translate(-50%,-50%) scale(.3)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.35)",opacity:1,offset:.3},
+      {transform:`translate(calc(-50% + ${rnd(-20,20)}px),calc(-50% + ${rnd(-20,20)}px)) scale(.3)`,opacity:0}],rnd(850,1200))});
+
+  const burst=(x,y,n)=>{for(let i=0;i<n;i++){
+    const a=rnd(0,Math.PI*2),d=rnd(20,48);
+    const p=particle("ff2star",x,y,Math.random()>.35?"✦":"✧",rnd(14,21));
+    anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.18)",opacity:1,offset:.16},
+      {transform:`translate(calc(-50% + ${Math.cos(a)*d}px),calc(-50% + ${Math.sin(a)*d}px)) scale(.16)`,opacity:0}],rnd(1100,1650))}};
+
+  every(90,()=>{if(hidden()||!on("sparkles")||!m.ready||m.s<1.1)return;
+    const mag=Math.max(m.s,.001),ux=m.vx/mag,uy=m.vy/mag,n=m.s>8?8:m.s>4?6:4;
+    for(let i=0;i<n;i++){
+      const tail=rnd(32,72)+Math.min(m.s*2.2,20),spread=18+tail*.28,lat=rnd(-spread,spread);
+      const x=m.x-ux*tail-uy*lat,y=m.y-uy*tail+ux*lat,dot=Math.random()<.12;
+      const p=particle(dot?"ff2dot":"ff2star",x,y,dot?"":(Math.random()>.38?"✦":"✧"),dot?0:rnd(14,22));
+      const db=rnd(20,52),sd=rnd(-10,10);
+      anim(p,[{transform:"translate(-50%,-50%) scale(.18)",opacity:0},
+        {transform:"translate(-50%,-50%) scale(1.12)",opacity:1,offset:.14},
+        {transform:`translate(calc(-50% + ${-ux*db-uy*sd}px),calc(-50% + ${-uy*db+ux*sd}px)) scale(.12)`,opacity:0}],rnd(1500,2200))}
+    if(m.t>.68&&m.s>3.5&&Math.random()>.32)burst(m.x,m.y,m.s>7?10:7)});
+
+  every(220,()=>{if(hidden()||!on("water"))return;
+    const r=card.getBoundingClientRect(),sz=rnd(7,13);
+    const p=particle("ff2bubble",r.left+r.width*rnd(.12,.88),r.top+r.height*rnd(.2,.9));
+    p.style.width=p.style.height=sz+"px";
+    anim(p,[{transform:"translate(-50%,-50%) scale(.35)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1)",opacity:.78,offset:.2},
+      {transform:`translate(calc(-50% + ${rnd(-10,10)}px),calc(-50% - ${rnd(25,45)}px)) scale(.2)`,opacity:0}],rnd(850,1200))});
+
+  every(170,()=>{if(hidden()||!on("legendary"))return;
+    const r=card.getBoundingClientRect(),a=rnd(0,Math.PI*2),rad=rnd(r.width*.25,r.width*.78),st2=Math.random()>.45;
+    const p=particle(st2?"ff2star":"ff2rainbow",
+      r.left+r.width/2+Math.cos(a)*rad*.8,r.top+r.height/2+Math.sin(a)*rad,
+      st2?(Math.random()>.5?"✦":"✧"):"",st2?rnd(13,19):0);
+    anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.2)",opacity:1,offset:.18},
+      {transform:`translate(calc(-50% + ${Math.cos(a)*rnd(20,45)}px),calc(-50% + ${Math.sin(a)*rnd(20,45)}px)) scale(.2)`,opacity:0}],rnd(900,1350))});
+
+  every(190,()=>{if(hidden()||!on("abyss"))return;
+    const r=card.getBoundingClientRect(),a=rnd(0,Math.PI*2),rad=rnd(r.width*.38,r.width*.9);
+    const p=particle("ff2void",r.left+r.width/2+Math.cos(a)*rad,r.top+r.height/2+Math.sin(a)*rad*1.2);
+    anim(p,[{transform:"translate(-50%,-50%) scale(.25)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.35)",opacity:1,offset:.25},
+      {transform:`translate(calc(-50% - ${Math.cos(a)*rnd(10,24)}px),calc(-50% - ${Math.sin(a)*rnd(10,30)}px)) scale(.1)`,opacity:0}],rnd(1100,1650))});
+
+  function paintFX(){
+    const v=ffxLoad();
+    card.className="ffcard "+v.active.map(i=>"ff-"+i).join(" ");
+    const sh=$("ffshop");if(!sh)return;
+    sh.innerHTML=FFX.map(x=>{
+      const owned=v.owned.includes(x.id),live=v.active.includes(x.id);
+      const afford=DUST.bal>=x.c;
+      return `<div class="ffx${live?" on":""}${owned?" own":""}">
+        <div class="ffxn">${esc(x.l)}${live?`<span class="ffxlive">ON</span>`:""}</div>
+        <div class="ffxd">${esc(x.d)}</div>
+        ${owned?`<button class="btn${live?" go":""}" data-ffxt="${x.id}">${live?"Take it off":"Wear it"}</button>`
+          :`<button class="btn${afford?" go":""}" data-ffxb="${x.id}"${afford?"":" disabled"}>${N(x.c)} dust</button>`}
+      </div>`}).join("");
+    sh.querySelectorAll("[data-ffxb]").forEach(b=>b.onclick=()=>{
+      const x=FFX.find(y=>y.id===b.dataset.ffxb);if(!x)return;
+      if(!dustSpend(x.c)){toast("Not enough dust yet");return}
+      const s2=ffxLoad();s2.owned.push(x.id);s2.active.push(x.id);
+      save(FFXKEY,s2);dustEl.textContent=N(DUST.bal);
+      toast(`${x.l} unlocked`);paintFX()});
+    sh.querySelectorAll("[data-ffxt]").forEach(b=>b.onclick=()=>{
+      const id=b.dataset.ffxt,s2=ffxLoad();
+      const i=s2.active.indexOf(id);i<0?s2.active.push(id):s2.active.splice(i,1);
+      save(FFXKEY,s2);paintFX()});
+  }
+  AQ.paintFX=paintFX;
+  paintFX();
 }
 
 /* ===================== give Flounder a click ===================== */
@@ -4593,6 +5775,19 @@ function renderMickeys(){
       looking. Click any card to open it, then hit <b>Show me where</b>.</p>
     ${bad.length?`<div class="up bad"><div class="uw">⚠ ${bad.length} entr${bad.length===1?"y":"ies"}
       name a card that isn't in the database: ${esc(bad.map(x=>x.c).join(", "))}</div></div>`:""}
+    ${(()=>{
+      /* Anything found since the list was written — tagged or circled in the
+         tagger — shows up here automatically as its own section. */
+      const extra=CARDS.filter(c=>!mickIdx().has(c.f)
+        &&(((c.mk||[]).length)||(c.tg||[]).includes("mousey")));
+      if(!extra.length)return "";
+      return `<h3 class="sec2">Found since</h3>
+        <div class="micks">${extra.map(c=>`
+          <button class="mick" data-mk="${esc(c.f)}">
+            ${c.img?`<img src="${esc(String(c.img))}" alt="${esc(c.f)}" loading="lazy">`:""}
+            <div class="mt">${esc(c.n)}<i>${esc(c.v)}</i></div>
+            <div class="mw">${(c.mk||[]).length?"Marked — open it and hit Show me where.":"Tagged as having one."}</div>
+          </button>`).join("")}</div>`})()}
     ${MICKEYS.map(g=>`
       <h3 class="sec2">${esc(g.set)}</h3>
       <div class="micks">${g.cards.map(x=>{
@@ -5690,9 +6885,11 @@ function readMenu(){
   return `<div class="page">
     <button class="btn" id="rExit" style="margin-bottom:12px">← Other</button>
     <h1><span class="gi">📖</span>Read every card</h1>
-    <p class="lede">Every card, in release order, one at a time. Pick a set and an ink —
-      that's one video's worth. Dual-ink cards show up under both of their inks.
-      Anything you've read is remembered, so a finished ink stays finished.</p>
+    <p class="lede">Every card in the game, one at a time, big enough to actually read —
+      the rules text, the flavour text, the classifications, and any set notes or
+      rulings attached to it. Pick a set and an ink and work through it.
+      Dual-ink cards appear under both of their inks, and anything you've read
+      stays marked, so you can stop anywhere and come back.</p>
     ${(()=>{const t=readTotals();return `<div class="rall">
       <b>${N(t.seen)}</b> of <b>${N(t.tot)}</b> cards read across the whole game${
         t.sets?` · <b>${t.sets}</b> set${t.sets===1?"":"s"} complete`:""}
@@ -5720,8 +6917,8 @@ function readView(){
     </div>
     <div class="rprog"><i style="width:${pct}%"></i></div>
     <div class="rstage" id="rstage">
-      <button class="redge left" id="rPrev2" aria-label="Previous card"${RD.i?"":" disabled"}>‹</button>
-      <button class="redge right" id="rNext2" aria-label="Next card">›</button>
+      <button class="redge left" id="rPrev2" aria-label="Previous card"${RD.i?"":" disabled"}><span>‹</span></button>
+      <button class="redge right" id="rNext2" aria-label="Next card"><span>›</span></button>
       <div class="reader" id="rslide">
         <div class="rimg">${cImgL(c)?`<img src="${esc(cImgL(c))}" alt="${esc(c.f)}">`
           :`<div class="ph">${esc(c.f)}</div>`}</div>
@@ -5871,6 +7068,20 @@ function deckToCollection(){
     setOwned(pkey(c.f,base),q,0);
     added++;cards+=q});
   return {added,skipped,cards,total:rows.length}}
+/* The undo. Takes the deck's copies back OUT of the collection, never below
+   zero, and never touches foils — the same asymmetry as putting them in.
+   Removes the printing the deck put there (the base one) so that adding and
+   then removing leaves the collection where it started. */
+function deckOffCollection(){
+  const rows=dlist();
+  let touched=0,cards=0;
+  rows.forEach(({c,q})=>{
+    const base=prints(c)[0],k=pkey(c.f,base),o=owned(k);
+    if(!o[0])return;
+    const take=Math.min(o[0],q);
+    setOwned(k,o[0]-take,o[1]);
+    touched++;cards+=take});
+  return {touched,cards,total:rows.length}}
 
 /* ===================== explicit deck saving =====================
    Ben's ask: a deck isn't yours until you press Save and name it.
@@ -6239,11 +7450,11 @@ function renderDecksPage(){
     const cur=n===DECKS.cur;
     return `<button class="dkcard${cur?" on":""}" data-dk="${esc(n)}"${
         cur?' aria-current="true"':""}>
-      <h3>${esc(n)}${titleChip()}${cur?`<span class="dkcur">Editing</span>`:""}</h3>
+      <h3><span class="dkname" data-ren="${esc(n)}" role="button" tabindex="0"
+        title="Click to rename">${esc(n)}</span>${titleChip()}${
+        cur?`<span class="dkcur">Editing</span>`:""}</h3>
       <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
       <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
-      <span class="dkren" data-ren="${esc(n)}" role="button" tabindex="0"
-        title="Rename this deck">✏️ Rename</span>
     </button>`}).join("");
   $("deckspage").innerHTML=`<div class="page">
     <h1><span class="gi">🗂️</span>Decks</h1>
@@ -6256,8 +7467,14 @@ function renderDecksPage(){
       <select id="pullSort">${PULLSORTS.map(([v,l])=>
         `<option value="${v}"${PULLSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select>
       <button class="btn collonly" id="pullToColl">📦 Add this deck to my collection</button>
+      <button class="btn bad collonly" id="pullOffColl">📦 Remove this deck from my collection</button>
       <button class="btn" id="pullCopy">📋 Copy</button>
       <button class="btn go" id="pullPrint">🖨️ Print</button>
+      <!-- No API key involved: TCGplayer's mass entry page takes the list in
+           the URL, so these two work today and will keep working if a price
+           feed never appears. -->
+      <button class="btn" id="buyDeck">🛒 Buy this deck</button>
+      <button class="btn collonly" id="buyMissing">🛒 Buy the cards I don't have</button>
     </div>
     ${renderPull()}
     <!-- The borrow list sits BELOW the pull sheet. It used to sit above it,
@@ -6287,11 +7504,28 @@ function renderDecksPage(){
     const r=deckToCollection();
     toast(`Added ${r.cards} cards · left ${r.skipped} alone`);
     renderBorrow()};
+  const poc=$("pullOffColl");
+  if(poc)poc.onclick=async()=>{
+    const d=dlist();
+    if(!d.length){toast("This deck is empty");return}
+    const hit=d.filter(({c})=>owned(pkey(c.f,prints(c)[0]))[0]>0).length;
+    if(!hit){toast("None of this deck's cards are marked owned");return}
+    const ok=await confirmBox("Remove this deck from my collection",
+      `This takes this deck's copies back out of your collection for ${hit} card${hit===1?"":"s"} — never below zero, and foils are left alone.`,
+      "Remove them",true);
+    if(!ok)return;
+    const r=deckOffCollection();
+    toast(`Removed ${r.cards} cards from ${r.touched} rows`);
+    renderBorrow();renderDecksPage()};
   renderBorrow();
   $("pullSort").onchange=e=>{PULLSORT=e.target.value;save("fs3_pullsort",PULLSORT);renderDecksPage()};
   $("pullCopy").onclick=()=>navigator.clipboard.writeText(pullText())
     .then(()=>toast("Pull list copied"),()=>toast("Copy failed"));
   $("pullPrint").onclick=()=>window.print();
+  $("buyDeck").onclick=()=>tcgOpen(dlist(),"this deck is empty");
+  const bm=$("buyMissing");
+  if(bm)bm.onclick=()=>tcgOpen(borrowRows().map(x=>({c:x.c,q:x.need})),
+    "you already own every card in this deck");
   if(dtotal())unlockHidden("h_binder");
 }
 
@@ -6316,6 +7550,7 @@ const OTHER_GROUPS=[
    ["Dust & secrets","Earn dust for doing normal things. Spend it on titles and the site's easter eggs.","dust"],
    ["Contribute","Tag art, write rules text, send it in. The vague search only works because people describe cards.","contrib"],
    ["Settings","Switches that change how the site behaves for you.","pref"],
+   ["Shopping list","The staples you haven't got, grouped into what you'd buy at a few different budgets. Straight into a TCGplayer cart.","shop"],
    ["Read every card","Every card in release order, one at a time. Pick a set and an ink — that's one video.","read"],
    ["Getting started","New here? Start with this.","start"],
    ["Error cards","What counts as an error, what gets replaced, and every known errata.","err"],
@@ -6534,6 +7769,41 @@ const FASTBULK=[
   ["clear","Clear this set",0,null],
 ];
 
+/* Export. A real downloaded file, not a copy-to-clipboard: a collection is the
+   one thing on this site that would genuinely hurt to lose, and it should be
+   possible to keep a copy of it somewhere that isn't a browser.
+
+   CSV, because that opens in anything — a spreadsheet, another deck site, a
+   text editor — and because the columns match what the importer here already
+   reads back in. Prices are included when the build has them, so the file also
+   answers "what is all this worth", which is the other reason people export.
+
+   Blob + object URL, revoked straight after: no server, works from file://. */
+function exportCollection(){
+  const rows=allPrintings().filter(x=>ownTotal(x.k));
+  if(!rows.length){toast("Nothing in your collection to export yet");return}
+  const q=s=>`"${String(s==null?"":s).replace(/"/g,'""')}"`;
+  const withPrice=!!priceDate();
+  const head=["Name","Version","Set","Set name","Number","Rarity","Normal","Foil"]
+    .concat(withPrice?["Price each","Foil price each","Value"]:[]);
+  const setName=s=>(setList().find(x=>x.s===s)||{}).name||("Set "+s);
+  let value=0;
+  const body=rows.map(x=>{
+    const o=owned(x.k),p=x.pr.p??null,pf=x.pr.pf??null;
+    const v=(p||0)*o[0]+(pf||0)*o[1];
+    value+=v;
+    return [x.c.n,x.c.v||"",x.pr.s,setName(x.pr.s),x.pr.num,x.pr.r,o[0],o[1]]
+      .concat(withPrice?[p??"",pf??"",v?v.toFixed(2):""]:[]).map(q).join(",")});
+  const csv=[head.map(q).join(",")].concat(body).join("\r\n")+"\r\n";
+  const stamp=new Date().toISOString().slice(0,10);
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;a.download=`ready-set-ink-collection-${stamp}.csv`;
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),2000);
+  toast(`Exported ${rows.length} printings${withPrice&&value?` · about ${money(value)}`:""}`);
+}
 function renderColl(){
   const sets=setList(), total=allPrintings().length;
   if(!COLLSET||!sets.some(x=>x.s===COLLSET))COLLSET=sets.length?sets[0].s:null;
@@ -6579,6 +7849,7 @@ function renderColl(){
     <div class="ctabs">
       <button data-ctab="list" class="${COLLTAB==="list"?"on":""}">📋 My checklist</button>
       <button data-ctab="fast" class="${COLLTAB==="fast"?"on":""}">📥 Transfer Your Collection</button>
+      <button id="collExport">📤 Export my collection</button>
     </div>
     ${COLLTAB==="fast"?`<div class="fastpanel">
       <p class="fastlede">Already have a collection? Bring it over in one go rather than
@@ -6607,6 +7878,7 @@ function renderColl(){
         <span class="cq"><em>Foil</em>
           <button data-cm="f">−</button><b>${o[1]}</b><button data-cp="f">+</button></span>
       </div>`}).join("")}</div>`;
+  {const ex=$("collExport");if(ex)ex.onclick=()=>exportCollection()}
   $("collBody").querySelectorAll("[data-cset]").forEach(b=>b.onclick=()=>{
     COLLSET=b.dataset.cset;save("fs3_collset",COLLSET);renderColl()});
   renderImport();
@@ -6645,8 +7917,7 @@ const PREF_SOON=[
   ["Sync across devices","Choose what follows you between your phone and your computer, rather than all of it.","pfSync"],
   ["Clans","Trade boards, clan tags and shared collections. Designed, parked — see CLANS-design.","pfClan"],
   ["Contribution review","Approve art tags and rules notes sent in by other people before they go live.","pfRev"],
-  ["Patron perks","Recognition and badges. Deliberately not access — the disclaimer forbids charging for that.","pfPat"],
-  ["Card price data","What a printing is worth, on the card page and in the collection totals.","pfPrice"]];
+  ["Patron perks","Recognition and badges. Deliberately not access — the disclaimer forbids charging for that.","pfPat"]];
 
 /* Settings. Only one switch so far, but the page is the right home for the
    next one rather than another tile on the Other menu. */
@@ -6685,12 +7956,34 @@ function renderPrefs(){
         expressly prohibited from charging for it.</p>
       <p>© Disney. Disney Lorcana is operated by Ravensburger, an official
         licensee of Disney.</p>
+      <p>We may earn an affiliate commission from purchases made through links
+        on this website. It costs you nothing and never changes what we
+        recommend.</p>
     </div>
     ${syncRow?`<h3 class="sec2">Your account</h3>${syncRow}`:""}
     <h3 class="sec2">What's switched on</h3>
+    <!-- One pair of buttons for people who know what they want: everything, or
+         nothing. Dark mode is left out of both — it's a look, not a feature,
+         and it's gated separately. -->
+    <div class="prow allrow">
+      <div><b>Everything at once</b><p>Turn every feature below on, or strip the site
+        back to just searching and building decks.</p></div>
+      <div class="allbtns">
+        <button class="btn go" id="pfAllOn">All on</button>
+        <button class="btn" id="pfAllOff">All off</button>
+      </div>
+    </div>
     ${row("Collection tracking",
       "Adds the owned and foil steppers to card pages and turns on the My collection tab. Switch it off if you only came here to search and build decks.",
       "pfColl",COLLON)}
+    ${row("Card prices",
+      "Shows roughly what a card is worth, under its picture."
+        +(priceDate()?` Prices are a snapshot taken on ${priceDate()}, not a live feed — treat them as a rough guide, not what you'll pay today.`
+                     :" No prices in this build yet."),
+      "pfPrice",PRICES)}
+    ${row("Shopping suggestions",
+      "Adds a Shopping list page: the staples you're missing, grouped into what you'd buy for $20, $50 or a whole set, with a button that loads the lot into a TCGplayer cart. Off by default and off unless you switch it on here.",
+      "pfSugg",SUGGON)}
     ${row("Mini games",
       "Guess the card, the aquarium, Outpost and the rest. Off hides them from the Other menu.",
       "pfGames",GAMESON)}
@@ -6707,7 +8000,17 @@ function renderPrefs(){
             <p>The whole site in carbon and slate, at the same contrast as the light
             theme. Supporting Ready Set Ink switches it on.</p></div>
           <button class="btn" disabled>Locked</button>
-        </div>`}`;
+        </div>`}
+    <h3 class="sec2">Start over</h3>
+    <!-- Deliberately NOT a wipe. It resets the switches and replays the tour;
+         your decks, your collection and your dust are untouched, and the button
+         says so before it does anything. -->
+    <div class="prow">
+      <div><b>Reset my setup</b><p>Runs the welcome tour again and takes you back
+        through the setup questions. Your decks, your collection and your dust are
+        left exactly as they are — this only resets the switches on this page.</p></div>
+      <button class="btn bad" id="pfReset">Reset setup</button>
+    </div>`;
     /* The "Not built yet" list is hidden at Ben's request — a settings page
        that is mostly disabled switches reads as an unfinished site rather than
        as a roadmap. The rows are kept in PREF_SOON below rather than deleted,
@@ -6717,14 +8020,323 @@ function renderPrefs(){
     b.onclick=()=>{set(!get());renderPrefs();applyPrefs();toast(msg(get()))}};
   flip("pfColl",()=>COLLON,v=>{COLLON=v;save(K_COLLON,v)},
     v=>v?"Collection features on":"Collection features off");
+  flip("pfPrice",()=>PRICES,v=>setPrices(v),
+    v=>v?"Prices on":"Prices off");
+  flip("pfSugg",()=>SUGGON,v=>{SUGGON=v;save("fs3_suggon",v);renderOther()},
+    v=>v?"Shopping list added to Other":"Shopping list hidden");
   flip("pfGames",()=>GAMESON,v=>{GAMESON=v;save("fs3_gameson",v)},
     v=>v?"Mini games on":"Mini games off");
   flip("pfDust",()=>DUSTON,v=>{DUSTON=v;save("fs3_duston",v)},
     v=>v?"Dust back on":"Dust off — you keep what you had");
   flip("pfDark",()=>DARK,v=>{DARK=v;save("fs3_dark",v)},
     v=>v?"Dark mode on":"Back to the light theme");
+  /* All on / all off. Dark mode is excluded on purpose — it is a look, it is
+     gated, and sweeping it along with the feature switches would surprise
+     people twice over. */
+  const setAll=on=>{
+    COLLON=on;save(K_COLLON,on);
+    GAMESON=on;save("fs3_gameson",on);
+    DUSTON=on;save("fs3_duston",on);
+    SUGGON=on;save("fs3_suggon",on);
+    PRICES=on&&!!priceDate();save("fs3_prices",PRICES);
+    renderOther();renderPrefs();applyPrefs();
+    toast(on?"Everything switched on":"Stripped back to search and decks")};
+  {const a=$("pfAllOn"),b=$("pfAllOff");
+   if(a)a.onclick=()=>setAll(true);
+   if(b)b.onclick=()=>setAll(false)}
+  {const r=$("pfReset");
+   if(r)r.onclick=async()=>{
+     const ok=await confirmBox("Reset my setup",
+       "This replays the welcome tour and the setup questions, and puts the switches on this page back to their defaults. Your decks, your collection and your dust are not touched.",
+       "Reset setup");
+     if(!ok)return;
+     COLLON=true;save(K_COLLON,true);
+     GAMESON=true;save("fs3_gameson",true);
+     DUSTON=true;save("fs3_duston",true);
+     SUGGON=false;save("fs3_suggon",false);
+     setPrices(false);
+     applyPrefs();renderOther();
+     OPAGE="";save("fs3_opage",OPAGE);showTab("tDeck");
+     startTour(true)}}
   applyPrefs();
 }
+/* ===================== shopping list =====================
+   Off unless you switched it on. It answers one question — of the cards this
+   site keeps calling staples, which have you not got — and then offers a few
+   sized shopping trips rather than one 200-card wall.
+
+   The budget bundles use the baked price snapshot, so they're a guide rather
+   than a quote — the page says so. If a build ever ships without prices they
+   disable themselves and the two bundles that need no prices still work. */
+const SHOP_BUDGETS=[20,50,100];
+function shopMissing(){
+  /* Staples not in your collection at all. Quantity 1 each: a shopping list is
+     "get one of these", and anyone who wants a playset can change the number in
+     the cart, which is one click there and a whole settings argument here. */
+  return CARDS.filter(c=>isStar(c.f)&&legal(c)&&ownedByName(c)===0)
+    .sort((a,b)=>(a.sn||"").localeCompare(b.sn||"")||a.n.localeCompare(b.n))
+    .map(c=>({c,q:1}))}
+function renderShop(){
+  const miss=shopMissing();
+  const newest=SETS.length?SETS[0]:null;
+  const inNewest=newest?miss.filter(x=>x.c.s===newest[0]):[];
+  const priced=miss.map(x=>({...x,p:cardPrice(x.c)})).filter(x=>x.p!=null);
+  const haveFeed=priced.length>0;
+  /* Cheapest first, take while the running total fits. Cheap-first is what
+     actually maximises how many staples you come home with. */
+  const budget=n=>{
+    const out=[];let sum=0;
+    priced.slice().sort((a,b)=>a.p-b.p).forEach(x=>{
+      if(sum+x.p<=n){out.push(x);sum+=x.p}});
+    return {rows:out,sum}};
+  /* Every bundle opens its own list. A shopping page that only says "18 cards"
+     is asking you to trust it with your money sight unseen — the point of a
+     shopping list is that you read it before you buy it. */
+  const bundle=(id,title,note,rows,disabled,why)=>{
+    const sum=rows.reduce((a,x)=>a+(x.p||0),0);
+    return `<div class="shopb${disabled?" off":""}">
+      <div class="shopmain">
+        <b>${esc(title)}</b><p>${esc(note)}</p>
+        ${disabled?`<span class="soonlbl">${esc(why)}</span>`
+          :`<span class="shopn">${rows.length} card${rows.length===1?"":"s"}${
+             haveFeed&&sum?" · about "+money(sum):""}</span>`}
+        ${rows.length?`<details class="shoplist"><summary>See the ${rows.length} cards</summary>
+          <ol>${rows.map(x=>`<li><span>${esc(x.c.n)}${x.c.v?` <i>${esc(x.c.v)}</i>`:""}</span>
+            <em>${esc(x.c.sn||"")}</em>${x.p!=null?`<b>${money(x.p)}</b>`:""}</li>`).join("")}</ol>
+        </details>`:""}
+      </div>
+      <button class="btn go" data-buy="${esc(id)}"${disabled||!rows.length?" disabled":""}>🛒 Open in TCGplayer</button>
+    </div>`};
+  const bundles={};
+  const add=(id,t,n,rows,dis,why)=>{bundles[id]=rows;return bundle(id,t,n,rows,dis,why)};
+  const html=[
+    ...SHOP_BUDGETS.map(n=>add("b"+n,`About $${n} of staples`,
+      `The most staples you can get for around $${n}, cheapest first — the quickest way to make a deck legal on a budget.`,
+      haveFeed?budget(n).rows:[],!haveFeed,"No prices in this build")),
+    add("newest","Every staple from "+(newest?newest[1].n:"the newest set"),
+      "The current set only — what you'll see across the table this season.",
+      inNewest,false),
+    add("all","Every staple I'm missing",
+      "The whole list, every set. Big — read it before you buy it.",
+      miss,false)
+  ].join("");
+  const totalValue=priced.reduce((a,x)=>a+x.p,0);
+  $("shoppage").innerHTML=`<div class="page">
+    <button class="btn" id="shopBack">← Back to Other</button>
+    <h1><span class="gi">🛒</span>Shopping list</h1>
+    <p class="lede">${miss.length
+      ? `You're missing <b>${miss.length}</b> of the cards this site calls staples${
+          haveFeed&&totalValue?`, worth roughly <b>${money(totalValue)}</b> all together`:""}.
+         Pick a size below. Each one loads straight into a TCGplayer cart as one of each —
+         change the numbers there if you want playsets.`
+      : `You aren't missing a single staple. Nothing to sell you.`}</p>
+    <!-- The most valuable thing on this page and it isn't ours. Buying thirty
+         singles from thirty sellers means thirty lots of shipping, which
+         regularly costs more than the cards. Said plainly, above the buttons,
+         not buried in a footnote nobody reads. -->
+    <div class="shoptip">
+      <b>Use the cart optimizer when you get there</b>
+      <p>TCGplayer's cart has an <b>Optimize Cart</b> step — always use it. It works out
+        which combination of sellers gets your whole list to you for the least money.
+        Twenty singles from twenty different sellers is twenty lots of shipping, and
+        that is usually more than the cards cost. One click, and it is the difference
+        between a $25 order and a $60 one.</p>
+      <p class="shoptip2">Two more things worth doing on their side: set a
+        <b>minimum seller rating</b> so nothing turns up creased, and open the
+        <b>condition</b> filter — Lightly Played plays exactly the same as Near Mint
+        and is routinely a third cheaper.</p>
+    </div>
+    ${COLLON?"":`<div class="legal"><b>Collection tracking is off</b>
+      <p>This page works out what you're missing from your collection, and there
+        isn't one. Switch collection tracking on in Settings and it'll have
+        something to go on — until then it's assuming you own nothing.</p></div>`}
+    ${html}
+    <div class="legal">
+      ${haveFeed?`<p>Prices are a snapshot taken on ${esc(priceDate())} and are a rough
+        guide only — what you actually pay is whatever TCGplayer says when you get there,
+        and the cart optimizer will usually beat the number shown here.</p>`:""}
+      <p>We may earn an affiliate commission from purchases made through links on this
+        website. It costs you nothing, and it never changes which cards this page
+        suggests — staples are picked by what wins games, and the list would be
+        identical with no commission at all.</p></div>
+  </div>`;
+  $("shopBack").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+  $("shoppage").querySelectorAll("[data-buy]").forEach(b=>b.onclick=()=>
+    tcgOpen(bundles[b.dataset.buy]||[],"that bundle is empty"));
+}
+
+/* ===================== welcome tour =====================
+   Shown once, on a first visit or after Reset setup in Settings. Five cards
+   about what this site has that the other Lorcana tools don't, then an
+   optional setup wizard.
+
+   Every card has Skip. Skip means skip the WHOLE tour, not this card — a
+   person who wants out wants out, and making them press it five times is the
+   opposite of respecting that. Next is the glowing one.
+
+   The flag is local-only and not in SYNCED: "have I seen the tour" is about
+   this browser, not about the account, and syncing it would mean a new phone
+   silently skipped the introduction. */
+const K_TOUR="fs3_tour";
+let TOURI=0,TOURWIZ=false;
+const TOUR=[
+ {t:"Welcome to Ready Set Ink",
+  lines:["A search engine and deck builder for Disney Lorcana.",
+    "Everything here is free, and always will be."],
+  dis:"Unofficial fan content. Not published, endorsed or approved by Disney or Ravensburger. © Disney. Disney Lorcana is operated by Ravensburger, an official licensee of Disney. We may earn an affiliate commission from purchases made through links on this website."},
+ {t:"Special searches",
+  lines:["We have a few things no other Lorcana search tool does right now.",
+    "Searches that used to mean reading every card — cards that ping damage, cards that punish the whole table, cards that want to be discarded — are one click.",
+    "Open <b>✨ Special searches</b> above the grid and start pressing things."]},
+ {t:"Search by what's in the picture",
+  lines:["Not just the rules text. The artwork.",
+    "Try typing this and pressing Enter:",
+    "<span class='ttry'>blue dog</span>",
+    "Plain English works too — <span class='ttry'>steel action</span> or <span class='ttry'>sapphire item floodborn</span> will each find what you'd expect."]},
+ {t:"Pull sheets",
+  lines:["Tell us how you keep your cards and every deck you save gets a pull sheet — the running order to walk your binder in, so you're not hunting the same box four times.",
+    "Anything you haven't got becomes a message you can customise and send to a friend to ask to borrow it."]},
+ {t:"Mini games",
+  lines:["Guess a card from a sliver of its art, from a named ability, or from its stats one fact at a time.",
+    "There's a fish, too. He's worth leaving on."]}
+];
+/* The setup wizard. Each step owns a value and how to write it, so adding one
+   is adding an entry rather than editing a flow. */
+const TOURSET=[
+ {k:"pull",t:"How do you keep your cards?",
+  why:"This sets the order your pull sheets come out in. Anything is fine — you can change it later.",
+  opts:()=>PULLSORTS.map(([v,l])=>[v,l,""]),
+  get:()=>PULLSORT,
+  set:v=>{PULLSORT=v;save("fs3_pullsort",v)}},
+ {k:"coll",t:"Do you want to track your collection?",
+  why:"Adds owned and foil counts to every card, a collection tab, and the 'cards I don't have' list on your decks.",
+  opts:()=>[[1,"Yes, track what I own",""],[0,"No thanks","Hides the collection tab and the owned counters."]],
+  get:()=>COLLON?1:0,
+  set:v=>{COLLON=!!v;save(K_COLLON,COLLON)}},
+ {k:"games",t:"Mini games?",
+  why:"The guessing games, the fish, and the dust you earn from them.",
+  opts:()=>[[1,"Yes, leave them on",""],[0,"No, keep it serious","Takes them out of the Other menu."]],
+  get:()=>GAMESON?1:0,
+  set:v=>{GAMESON=!!v;save("fs3_gameson",GAMESON)}},
+ {k:"price",t:"Show what cards are worth?",
+  why:"A rough market price under each card, from a snapshot. Off by default.",
+  opts:()=>[[0,"No, just the cards",""],[1,"Yes, show prices",""]],
+  get:()=>PRICES?1:0,
+  set:v=>setPrices(!!v&&!!priceDate())},
+ {k:"sugg",t:"Shopping suggestions?",
+  why:"A page that works out which staples you're missing and groups them into what you'd buy at a few budgets. Off by default.",
+  opts:()=>[[0,"No thanks",""],[1,"Yes, add the shopping list",""]],
+  get:()=>SUGGON?1:0,
+  set:v=>{SUGGON=!!v;save("fs3_suggon",SUGGON);renderOther()}}
+];
+function tourSparkle(host){
+  if(!host)return;
+  const r=host.getBoundingClientRect();
+  for(let i=0;i<5;i++){
+    const s=document.createElement("span");
+    s.className="tspark";s.textContent=["✦","✧","·","✦","✧"][i];
+    s.style.left=(r.width*(.2+i*.15))+"px";
+    s.style.top=(r.height-70)+"px";
+    s.style.animationDelay=(i*60)+"ms";
+    host.appendChild(s);
+    setTimeout(()=>s.remove(),1400)}}
+function startTour(force){
+  if(!force&&load(K_TOUR,false))return;
+  TOURI=0;TOURWIZ=false;
+  $("tourbg").hidden=false;
+  paintTour();
+}
+function endTour(){
+  save(K_TOUR,true);
+  $("tourbg").hidden=true;
+  $("tour").innerHTML="";
+  render();paintDeckBar();
+}
+function paintTour(){
+  const host=$("tour");
+  if(!TOURWIZ){
+    /* Past the last card is the one question that decides whether the wizard
+       runs at all. */
+    if(TOURI>=TOUR.length){
+      host.innerHTML=`
+        <div class="tstep tl">Last one</div>
+        <h2 class="tl">Want to set it up your way?</h2>
+        <p class="tl">A few quick questions and only the parts you want are switched on.
+          It takes about thirty seconds.</p>
+        <p class="tlater tl">Every answer can be changed later in Settings, and you can
+          stop half way.</p>
+        <div class="tnav tl">
+          <button class="btn" data-tour="end">No, I'm good</button>
+          <span class="sp"></span>
+          <button class="btn go tnext" data-tour="wiz">Set it up →</button>
+        </div>`;
+    }else{
+      const s=TOUR[TOURI],last=TOURI===TOUR.length-1;
+      host.innerHTML=`
+        <div class="tstep tl">${TOURI+1} of ${TOUR.length}</div>
+        <h2 class="tl">${esc(s.t)}</h2>
+        ${s.lines.map(l=>`<p class="tl">${l}</p>`).join("")}
+        ${s.dis?`<div class="tdis tl">${esc(s.dis)}</div>`:""}
+        <div class="tnav">
+          <button class="btn" data-tour="end">Skip</button>
+          <span class="sp"></span>
+          <span class="tdots">${TOUR.map((_,i)=>`<i class="${i===TOURI?"on":""}"></i>`).join("")}</span>
+          <button class="btn go tnext" data-tour="next">${last?"Almost done →":"Next →"}</button>
+        </div>`;
+    }
+  }else{
+    const st=TOURSET[TOURI];
+    if(!st){
+      host.innerHTML=`
+        <div class="tstep tl">Done</div>
+        <h2 class="tl">You're set up.</h2>
+        <p class="tl">Everything you just chose lives in <b>Other → Settings</b>, along with
+          the switches for anything you skipped.</p>
+        <div class="tnav tl"><span class="sp"></span>
+          <button class="btn go tnext" data-tour="end">Start building →</button></div>`;
+      tourSparkle(host);
+    }else{
+      const cur=st.get();
+      host.innerHTML=`
+        <div class="tstep tl">Setting up · ${TOURI+1} of ${TOURSET.length}</div>
+        <h2 class="tl">${esc(st.t)}</h2>
+        <p class="tl">${esc(st.why)}</p>
+        <div class="topts tl">${st.opts().map(([v,l,sub])=>
+          `<button class="topt${String(v)===String(cur)?" on":""}" data-topt="${esc(String(v))}">
+            ${esc(l)}${sub?`<i>${esc(sub)}</i>`:""}</button>`).join("")}</div>
+        <p class="tlater tl">Don't worry about getting it right — you can change any of this
+          later on the Settings page.</p>
+        <div class="tnav tl">
+          <button class="btn" data-tour="skipone">Skip this</button>
+          <button class="btn" data-tour="end">Skip the rest</button>
+          <span class="sp"></span>
+          <button class="btn go" data-tour="next">Keep this →</button>
+        </div>`;
+    }
+  }
+  /* Answering IS pressing Next. Picking an option used to only tick it and
+     leave you looking for the button — an extra click for no decision. The
+     class flips instantly so you see what you chose, then it moves on. */
+  host.querySelectorAll("[data-topt]").forEach(b=>b.onclick=()=>{
+    const st=TOURSET[TOURI];if(!st)return;
+    const raw=b.dataset.topt;
+    st.set(/^\d+$/.test(raw)?+raw:raw);
+    host.querySelectorAll("[data-topt]").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    tourSparkle(host);
+    setTimeout(()=>{TOURI++;paintTour()},210)});
+  host.querySelectorAll("[data-tour]").forEach(b=>b.onclick=()=>{
+    const a=b.dataset.tour;
+    if(a==="end"){endTour();return}
+    if(a==="wiz"){TOURWIZ=true;TOURI=0;paintTour();return}
+    if(a==="skipone"||a==="next"){
+      TOURI++;
+      if(TOURWIZ&&TOURI>TOURSET.length){endTour();return}
+      paintTour();
+      if(a==="next")tourSparkle(host);
+    }});
+}
+
 /* One place that applies every switch, so a new one can't be half-wired. */
 function applyPrefs(){
   applyCollPref();
@@ -6756,6 +8368,7 @@ const OPAGES={
   hex:   ["vHex",    ()=>renderOutpost()],
   cred:  ["vCred",   ()=>renderCredits()],
   pref:  ["vPref",   ()=>renderPrefs()],
+  shop:  ["vShop",   ()=>renderShop()],
 };
 /* Pages that belong to a switch. Turning the switch off takes the tile out of
    the menu; the page itself still works if you know the URL, exactly like OFF. */
@@ -6767,7 +8380,8 @@ const isGamePage=p=>GAMEPAGES.some(g=>p===g||p.indexOf(g+":")===0);
 function renderOther(){
   const hidden=p=>OFF.includes(p)
     ||(!GAMESON&&isGamePage(p))
-    ||(!DUSTON&&p==="dust");
+    ||(!DUSTON&&p==="dust")
+    ||(!SUGGON&&p==="shop");
   const groups=OTHER_GROUPS
     .map(gr=>({...gr,chips:gr.chips.filter(([,,page])=>!hidden(page))}))
     .filter(gr=>gr.chips.length);
@@ -6787,7 +8401,7 @@ function renderOther(){
    difference is whether the deck rail is on screen — because maintaining two
    copies of the search UI would guarantee they drift apart. */
 const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
-const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref"];
+const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop"];
 /* TAB is read from storage HERE rather than being left at "tDeck" until
    showTab() runs at the bottom of the file. The grid is rendered before that
    line, and tile() and bindGrid() both branch on TAB — so booting straight
@@ -6848,6 +8462,19 @@ $("fb").onclick=()=>{S.fl=!S.fl;$("fb").classList.toggle("on",S.fl);
   S.limit=150;render()};
 $("clr").onclick=clearAll;
 $("clr2").onclick=clearAll;
+$("lnk").onclick=copySearchLink;
+/* A link that arrives with a search in it wins over saved state, and it opens
+   the drawers so you can see WHY you're looking at these cards rather than
+   landing on an unexplained list. */
+if(location.hash.length>1){
+  try{
+    if(applyHash(location.hash)){
+      const sp=$("special"),sd=$("side");
+      if(S.ab.size&&sp)sp.open=true;
+      if(sd&&(S.ink.size||S.type.size||S.rar.size||S.kw.size||S.cls.size||S.sto.size||S.tag.size||S.art.size))sd.open=true;
+    }
+  }catch(e){}
+}
 /* Reminder tags: the "not legal", "don't even think about it" and staple
    flags. Some people want a clean grid of art; this turns the lot off. */
 let REMIND=load("fs3_remind",true);
@@ -6857,6 +8484,33 @@ function drawRemind(){
 }
 $("tgRemind").onclick=()=>{REMIND=!REMIND;save("fs3_remind",REMIND);drawRemind()};
 drawRemind();
+/* Prices. Two switches, one variable — this one and the row on Settings both
+   call setPrices(), so they can never disagree. */
+function setPrices(v){
+  PRICES=v;save("fs3_prices",v);
+  const b=$("tgPrice");if(b)b.textContent="Prices: "+(PRICES?"on":"off");
+  render();
+  if($("vPref").classList.contains("on"))renderPrefs();}
+$("tgPrice").onclick=()=>setPrices(!PRICES);
+{const b=$("tgPrice");if(b)b.textContent="Prices: "+(PRICES?"on":"off")}
+/* Column count. Auto (the default) is the responsive auto-fill grid, which on a
+   narrow phone falls to one enormous card per row — fine for reading one card,
+   useless for scanning results. Anything else is a hard column count. */
+let GCOLS=load("fs3_gcols",0);
+function applyCols(){
+  const g=$("grid");if(!g)return;
+  g.style.gridTemplateColumns=GCOLS>0?`repeat(${GCOLS},minmax(0,1fr))`:"";
+  const s=$("gcols");if(s)s.value=String(GCOLS);}
+$("gcols").onchange=e=>{GCOLS=parseInt(e.target.value,10)||0;save("fs3_gcols",GCOLS);applyCols()};
+applyCols();
+/* Both drawers carry one of these. Closing the drawer first is the point — the
+   cards are what you want to look at, and leaving a full-height panel open
+   above them just means scrolling back past it. */
+document.querySelectorAll("[data-seecards]").forEach(b=>b.onclick=()=>{
+  const sp=$("special"),sd=$("side");
+  if(sp)sp.open=false;if(sd)sd.open=false;
+  const g=$("grid");
+  if(g)g.scrollIntoView({behavior:"smooth",block:"start"});});
 $("expAll").onclick=()=>{$("groups").querySelectorAll("details.grp").forEach(d=>d.open=true);
   save("fs3_gopen",GROUPS.map(g=>g.g))};
 $("colAll").onclick=()=>{$("groups").querySelectorAll("details.grp").forEach(d=>d.open=false);
@@ -7019,7 +8673,105 @@ $("mD").onclick=()=>{document.body.classList.add("mdeck");$("mD").classList.add(
 
 function render(){renderPills();renderChips();renderSide();renderGrid();renderDeck();
   if($("vGuide").classList.contains("on"))renderGuideDeck();
-  if($("vDecks").classList.contains("on"))renderDecksPage()}
+  if($("vDecks").classList.contains("on"))renderDecksPage();
+  syncHash()}
+
+/* ===================== searches you can send someone =====================
+   THE CHANGE BEN DIDN'T ASK FOR.
+
+   Until now a search existed only inside one browser tab. You could build the
+   exact list of cards that proves a point — every card that punishes the whole
+   table, under $10, that a Coconut wants — and then the only way to give it to
+   anybody was to describe it and hope they rebuilt it. Reload the page and even
+   YOU lost it.
+
+   Every facet now lives in the address bar. That means:
+     · a search survives a reload, a crash, and a closed laptop
+     · the back button steps back through your searches, as it should
+     · a search is a LINK. It goes in a video description, a Discord message, a
+       pinned comment, a reply to someone asking "what removal is there in
+       Amber". Every one of those is a person arriving at this site on a page
+       that already answers their question.
+
+   That last point is the reason this is worth more than it looks. It costs one
+   function each way and no bytes on the wire, and it turns every search anyone
+   ever builds here into something that can be handed to someone else.
+
+   Encoding rules: short keys, sets as comma lists, omit anything at its
+   default so a plain search stays a short link. replaceState, not pushState,
+   for keystrokes — otherwise typing eight letters puts eight entries in the
+   back button. */
+const HKEYS=[["q","q"],["ab","a"],["ink","i"],["type","t"],["rar","r"],
+  ["kw","k"],["cls","c"],["sto","f"],["tag","g"],["art","u"]];
+function searchHash(){
+  const p=[];
+  const put=(k,v)=>{if(v!==""&&v!=null)p.push(k+"="+encodeURIComponent(v))};
+  HKEYS.forEach(([f,k])=>{
+    const v=S[f];
+    if(typeof v==="string")put(k,v);
+    else if(v&&v.size)put(k,[...v].join(","))});
+  if(S.terms.length)put("x",S.terms.join(","));
+  if(S.dual)put("d","1");
+  if(S.set)put("s",S.set);
+  if(S.inkwell!=="any")put("w",S.inkwell);
+  if(S.sort!=="set")put("o",S.sort);
+  if(S.fl)put("fl","1");
+  [["cost","cs"],["st","sn"],["wi","wn"],["lo","ln"]].forEach(([f,k])=>{
+    const r=S[f];
+    if(r[0]!=null||r[1]!=null)put(k,(r[0]??"")+"-"+(r[1]??""))});
+  return p.join("&");
+}
+let HASHSELF=false;   // ignore the hashchange our own write causes
+function syncHash(){
+  if(!$("vSearch")||!document.body)return;
+  const h=searchHash();
+  const want=h?"#"+h:location.pathname+location.search;
+  if((location.hash.replace(/^#/,""))===h)return;
+  HASHSELF=true;
+  try{history.replaceState(null,"",want)}catch(e){}
+  setTimeout(()=>{HASHSELF=false},0);
+}
+function applyHash(h){
+  const raw=(h||"").replace(/^#/,"");
+  if(!raw)return false;
+  const q=new URLSearchParams(raw);
+  /* Clear first: a link has to mean exactly what it says, not "what it says on
+     top of whatever you already had switched on". */
+  ["ab","ink","type","rar","kw","cls","sto","tag","art"].forEach(f=>S[f].clear());
+  S.q="";S.terms=[];S.dual=false;S.set="";S.inkwell="any";S.fl=false;
+  S.cost=[null,null];S.st=[null,null];S.wi=[null,null];S.lo=[null,null];
+  HKEYS.forEach(([f,k])=>{
+    const v=q.get(k);if(v==null)return;
+    if(typeof S[f]==="string")S[f]=v;
+    else v.split(",").filter(Boolean).forEach(x=>S[f].add(x))});
+  const x=q.get("x");if(x)S.terms=x.split(",").filter(Boolean);
+  if(q.get("d"))S.dual=true;
+  if(q.get("s"))S.set=q.get("s");
+  if(q.get("w"))S.inkwell=q.get("w");
+  if(q.get("o"))S.sort=q.get("o");
+  if(q.get("fl"))S.fl=true;
+  [["cost","cs"],["st","sn"],["wi","wn"],["lo","ln"]].forEach(([f,k])=>{
+    const v=q.get(k);if(v==null)return;
+    const [a,b]=v.split("-");
+    S[f]=[a===""?null:+a,b===""?null:+b]});
+  S.limit=150;
+  const qi=$("q");if(qi)qi.value=S.q;
+  const so=$("sort");if(so)so.value=S.sort;
+  return true;
+}
+window.addEventListener("hashchange",()=>{
+  if(HASHSELF)return;
+  if(applyHash(location.hash))render();
+});
+function copySearchLink(){
+  const h=searchHash();
+  if(!h){toast("Search for something first, then the link will have something in it");return}
+  const url=location.origin&&location.origin!=="null"
+    ? location.origin+location.pathname+"#"+h
+    : location.href.split("#")[0]+"#"+h;
+  navigator.clipboard.writeText(url)
+    .then(()=>toast("Link to this search copied"),()=>toast("Copy failed"));
+}
 
 (function(){
   const b=$("bub");
@@ -7040,6 +8792,8 @@ if(location.hash.startsWith("#d="))fromHash();
 (()=>{const sd=$("side");if(!sd)return;
   sd.open=load("fs3_sideopen",false);
   sd.addEventListener("toggle",()=>save("fs3_sideopen",sd.open));})();
+(()=>{const w=load("fs3_deckw","");const wr=document.querySelector(".wrap");
+  if(w&&wr)wr.style.setProperty("--deckw",w)})();
 render();
 const cn=$("collN");if(cn)cn.textContent=
   CARDS.reduce((a,c)=>a+Math.max(1,(c.pr||[]).length),0).toLocaleString();
@@ -7265,6 +9019,10 @@ window.COLLAPI={allPrintings,prints,pkey,owned,ownTotal,setOwned,
   raw:()=>COLL,setOf:s=>allPrintings().filter(x=>x.pr.s===s)};
 
 setTimeout(jiggleArt,650);   // let the page settle before the switch waves
+/* First visit gets the tour. Deferred a beat for the same reason as ACCT.boot
+   below — everything it touches is declared further down this file — and long
+   enough that the page is painted behind it rather than flashing in after. */
+setTimeout(()=>{try{startTour(false)}catch(e){}},400);
 /* ACCT is a const declared below this IIFE, so it is in the temporal dead zone
    right now — calling it directly here is a load-time crash. Deferring by a
    tick lets the rest of the file finish evaluating first. Same rule as MICKEYS

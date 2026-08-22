@@ -49,6 +49,11 @@ RULES_F  = os.path.join(HERE, "card-rules.json")
 NOTES_F  = os.path.join(HERE, "rsi-notes.json")
 NOTE_TPL = os.path.join(HERE, "notes.template.html")
 NOTE_OUT = os.path.join(HERE, "flounder-notes.html")
+# Price snapshot. Written on every successful build from the SAME Lorcast pass
+# that fetches the images, so refreshing prices costs one extra dictionary and
+# no extra requests. Committed to the repo so a build with Lorcast down still
+# ships the last known prices instead of blanking them.
+PRICES_F = os.path.join(HERE, "card-prices.json")
 LJ_URL   = "https://lorcanajson.org/files/current/en/allCards.json"
 LC_API   = "https://api.lorcast.com/v0"
 UA       = {"User-Agent": "flounder-search-build/3.0"}
@@ -78,6 +83,10 @@ log("· downloading Lorcast images …")
 RARITY_PENALTY = {"Enchanted": 3, "Special": 2, "Promo": 2}
 imgmap = {}    # normalised name -> best single image (the DEFAULT printing)
 printmap = {}  # (setCode, collector_number) -> image for that EXACT printing
+# Prices ride along on the same objects. Lorcast's card record already carries
+# prices.usd / prices.usd_foil and a tcgplayer_id, so this is free.
+pricemap = {}   # "name|set|number" -> [usd, usd_foil, tcgplayer_id]
+pricename = {}  # normalised name    -> the same, for the DEFAULT printing
 try:
     for s in get(LC_API + "/sets")["results"]:
         code = s["code"]
@@ -99,17 +108,53 @@ try:
                 cn = str(c.get("collector_number") or "")
                 if cn:
                     printmap[(key, str(code), cn)] = dict(pair, r=c.get("rarity") or "")
+                pz = c.get("prices") or {}
+                prow = [pz.get("usd"), pz.get("usd_foil"), c.get("tcgplayer_id")]
+                if any(x is not None for x in prow) and cn:
+                    pricemap["|".join([key, str(code), cn])] = prow
                 # prefer the plain original printing over enchanted/promo alt art
                 score = (RARITY_PENALTY.get(c.get("rarity"), 0),
                          int(code) if code.isdigit() else 999)
                 if key not in imgmap or score < imgmap[key]["score"]:
                     imgmap[key] = dict(pair, score=score)
+                    # the default printing's price is the card's price
+                    if any(x is not None for x in prow):
+                        pricename[key] = prow
         except Exception as e:
             log(f"  ! set {code}: {e}")
         time.sleep(0.11)  # Lorcast asks 50-100ms between requests
 except Exception as e:
     log(f"  ! Lorcast unavailable ({e}) — falling back to Ravensburger images only")
 log(f"  {len(imgmap)} images indexed by name · {len(printmap)} indexed by printing")
+
+# ---- price snapshot ---------------------------------------------------------
+# Fresh prices overwrite the snapshot. No prices this run (Lorcast down, or a
+# network-less build) means read the last one back rather than shipping a site
+# where every price silently vanished.
+PRICE_DATE = ""
+if pricemap:
+    PRICE_DATE = time.strftime("%Y-%m-%d")
+    with open(PRICES_F, "w", encoding="utf-8") as f:
+        json.dump({"generated": PRICE_DATE, "source": "Lorcast",
+                   "by_printing": pricemap, "by_name": pricename},
+                  f, separators=(",", ":"))
+    log(f"  prices: {len(pricemap)} printings · snapshot written {PRICE_DATE}")
+elif os.path.exists(PRICES_F):
+    with open(PRICES_F, encoding="utf-8") as f:
+        snap = json.load(f)
+    pricemap = snap.get("by_printing", {})
+    pricename = snap.get("by_name", {})
+    PRICE_DATE = snap.get("generated", "")
+    log(f"  prices: no live data — reusing the snapshot from {PRICE_DATE}")
+else:
+    log("  prices: none, and no snapshot on disk — the site will show no prices")
+
+def px(v):
+    """Two decimals, or None. Keeps the payload small and the numbers honest."""
+    try:
+        return round(float(v), 2)
+    except (TypeError, ValueError):
+        return None
 
 # ---------------------------------------------------------------- 3. trim + join
 def colors(c):
@@ -175,6 +220,12 @@ def printing_row(c):
     lrg = (hit or {}).get("l") or rb.get("full") or img
     row = {"s": str(c.get("setCode")), "num": coll_no(c),
            "r": c.get("rarity") or "", "i": img}
+    # price of THIS printing — an enchanted is not worth what the common is
+    pr = pricemap.get("|".join([norm(c["fullName"]), str(c.get("setCode")), coll_no(c)]))
+    if pr:
+        if px(pr[0]) is not None: row["p"] = px(pr[0])
+        if px(pr[1]) is not None: row["pf"] = px(pr[1])
+        if pr[2]: row["tid"] = pr[2]
     if lrg and lrg != img:
         row["l"] = lrg
     if c.get("promoGrouping") or c.get("rarity") == "Special":
@@ -293,6 +344,13 @@ for c in sorted(cards, key=printing_rank):
             **({"fm": (c.get("images") or {})["foilMask"]}
                if (c.get("images") or {}).get("foilMask") else {})}
            if special_foils(c) else {}),
+        # card-level price = the default printing's price, which is the one the
+        # tile is showing. Cards with no pr[] array have nowhere else to put it.
+        **({k: v for k, v in
+            (("p", px((pricename.get(key) or [None])[0])),
+             ("pf", px((pricename.get(key) or [None, None])[1] if pricename.get(key) else None)),
+             ("tid", (pricename.get(key) or [None, None, None])[2] if pricename.get(key) else None))
+            if v is not None}),
         "img": img, "imgL": imgL,
     })
 
@@ -421,7 +479,8 @@ bad_kinds = sorted(set(kinds) - {x["k"] for x in NOTE_KINDS})
 if bad_kinds:
     log(f"  ! unknown note kind(s) {bad_kinds} — will fall back to 'ruling' styling")
 
-payload = {"generated": time.strftime("%Y-%m-%d"), "sets": setinfo, "cards": out}
+payload = {"generated": time.strftime("%Y-%m-%d"), "sets": setinfo, "cards": out,
+           "priced": PRICE_DATE}
 
 # ---------------------------------------------------------------- 4. inject
 with open(TEMPLATE, encoding="utf-8") as f:
