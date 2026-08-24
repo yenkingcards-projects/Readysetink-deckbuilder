@@ -65,302 +65,52 @@ def get(url, timeout=90):
 
 def log(*a): print(*a, flush=True)
 
-# ---------------------------------------------------------------- 1. LorcanaJSON
-def norm(s):
-    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+# ============================================================================
+#  OUR OWN CARD DATABASE
+# ============================================================================
+# card-db.json is the card database, and it belongs to this repo.
+#
+# It used to be that every single build hit two other people's servers. That is
+# three separate problems wearing one coat:
+#
+#   · A build was only as reliable as somebody else's afternoon. A flaky
+#     Lorcast run produced a site with missing artwork and no error.
+#   · A build was not reproducible. Rebuilding last week's site was impossible,
+#     because "last week's upstream data" no longer exists anywhere.
+#   · If LorcanaJSON ever stops, so does Ready Set Ink. Everything the site
+#     knows would live only on somebody else's machine.
+#
+# Now the download is a SEPARATE, DELIBERATE act. An ordinary build reads
+# card-db.json off the disk and never opens a socket — fast, offline, and
+# identical every time. Refreshing is opt-in:
+#
+#     python3 build_flounder.py              # build from our database
+#     python3 build_flounder.py --refresh    # go and get new cards first
+#
+# Commit card-db.json. It is the asset. If every upstream service vanished
+# tomorrow, the site would keep building from it exactly as it does today.
+CARDDB  = os.path.join(HERE, "card-db.json")
+REFRESH = "--refresh" in sys.argv or "-r" in sys.argv
 
-log("· downloading LorcanaJSON …")
-lj = get(LJ_URL)
-cards, sets_meta = lj["cards"], lj.get("sets", {})
-log(f"  {len(cards)} printings, {len(sets_meta)} sets")
-
-# ---------------------------------------------------------------- 2. Lorcast images
-log("· downloading Lorcast images …")
-# Key images by NORMALISED CARD NAME, never by (set, number).
-# LorcanaJSON reuses (setCode, number) for promo variants — set 1 #1 alone holds
-# five different cards — so a positional join silently served the wrong art for
-# 145 cards. Name is the identity we actually render, so a hit cannot be wrong.
-RARITY_PENALTY = {"Enchanted": 3, "Special": 2, "Promo": 2}
-imgmap = {}    # normalised name -> best single image (the DEFAULT printing)
-printmap = {}  # (setCode, collector_number) -> image for that EXACT printing
-# Prices ride along on the same objects. Lorcast's card record already carries
-# prices.usd / prices.usd_foil and a tcgplayer_id, so this is free.
-pricemap = {}   # "name|set|number" -> [usd, usd_foil, tcgplayer_id]
-pricename = {}  # normalised name    -> the same, for the DEFAULT printing
-try:
-    for s in get(LC_API + "/sets")["results"]:
-        code = s["code"]
-        if code == "[Coconut]":
-            continue
-        try:
-            for c in get(f"{LC_API}/sets/{urllib.parse.quote(code, safe='')}/cards", 30) or []:
-                iu = (c.get("image_uris") or {}).get("digital") or {}
-                if not iu.get("normal"):
-                    continue
-                pair = {"n": iu["normal"], "l": iu.get("large") or iu["normal"]}
-                # Per-printing key. Lorcast's collector_number carries the variant
-                # letter ("4a"), matching LorcanaJSON's number + variant — but that
-                # pair is NOT unique on its own: 158 (set, number) keys are claimed
-                # by more than one printing (Goofy - Musketeer and Mickey Mouse -
-                # True Friend both sit on set 1 #12, because promos reuse the
-                # numbering). Including the name makes the join one-to-one.
-                key = norm(c["name"] + (" - " + c["version"] if c.get("version") else ""))
-                cn = str(c.get("collector_number") or "")
-                if cn:
-                    printmap[(key, str(code), cn)] = dict(pair, r=c.get("rarity") or "")
-                pz = c.get("prices") or {}
-                prow = [pz.get("usd"), pz.get("usd_foil"), c.get("tcgplayer_id")]
-                if any(x is not None for x in prow) and cn:
-                    pricemap["|".join([key, str(code), cn])] = prow
-                # prefer the plain original printing over enchanted/promo alt art
-                score = (RARITY_PENALTY.get(c.get("rarity"), 0),
-                         int(code) if code.isdigit() else 999)
-                if key not in imgmap or score < imgmap[key]["score"]:
-                    imgmap[key] = dict(pair, score=score)
-                    # the default printing's price is the card's price
-                    if any(x is not None for x in prow):
-                        pricename[key] = prow
-        except Exception as e:
-            log(f"  ! set {code}: {e}")
-        time.sleep(0.11)  # Lorcast asks 50-100ms between requests
-except Exception as e:
-    log(f"  ! Lorcast unavailable ({e}) — falling back to Ravensburger images only")
-log(f"  {len(imgmap)} images indexed by name · {len(printmap)} indexed by printing")
-
-# ---- price snapshot ---------------------------------------------------------
-# Fresh prices overwrite the snapshot. No prices this run (Lorcast down, or a
-# network-less build) means read the last one back rather than shipping a site
-# where every price silently vanished.
-PRICE_DATE = ""
-if pricemap:
-    PRICE_DATE = time.strftime("%Y-%m-%d")
-    with open(PRICES_F, "w", encoding="utf-8") as f:
-        json.dump({"generated": PRICE_DATE, "source": "Lorcast",
-                   "by_printing": pricemap, "by_name": pricename},
-                  f, separators=(",", ":"))
-    log(f"  prices: {len(pricemap)} printings · snapshot written {PRICE_DATE}")
-elif os.path.exists(PRICES_F):
-    with open(PRICES_F, encoding="utf-8") as f:
-        snap = json.load(f)
-    pricemap = snap.get("by_printing", {})
-    pricename = snap.get("by_name", {})
-    PRICE_DATE = snap.get("generated", "")
-    log(f"  prices: no live data — reusing the snapshot from {PRICE_DATE}")
-else:
-    log("  prices: none, and no snapshot on disk — the site will show no prices")
-
-def px(v):
-    """Two decimals, or None. Keeps the payload small and the numbers honest."""
-    try:
-        return round(float(v), 2)
-    except (TypeError, ValueError):
-        return None
-
-# ---------------------------------------------------------------- 3. trim + join
-def colors(c):
-    return c.get("colors") or ([c["color"]] if c.get("color") else [])
-
-def rewrap(t):
-    """Undo the card face's hard line wraps, keep real ability breaks.
-
-    LorcanaJSON preserves the newlines printed on the card, so rules text
-    arrives broken mid-sentence ("...this character quests,\\nyou may ready...").
-    A line is a continuation of the one above it only if that line didn't finish
-    a sentence; anything after a full stop starts a new ability. Fixing this at
-    build time also repairs phrase search — text:"quests, you may" could never
-    match while a newline sat in the middle of it.
-    """
-    out = []
-    for ln in [x.strip() for x in (t or "").split("\n") if x.strip()]:
-        if out and not re.search(r'[.!?:]["»)”]?$', out[-1]):
-            out[-1] += " " + ln
-        else:
-            out.append(ln)
-    return "\n".join(out)
-
-# Legality is the UNION across printings: if ANY printing of a card is Core-legal
-# then the card is playable in Core. Without this, collapsing to the original
-# printing marks set-1 cards illegal even when a Core-legal reprint exists.
-core_by_name = {}
-for c in cards:
-    allowed = bool((c.get("allowedInFormats", {}).get("Core", {}) or {}).get("allowed"))
-    k = norm(c["fullName"])
-    core_by_name[k] = core_by_name.get(k, False) or allowed
-
-seen, out, joined, fellback = set(), [], 0, 0
-# Non-promo printing first so the familiar art and real collector number win;
-# promo/Special reprints reuse low numbers and would otherwise be picked.
-def printing_rank(c):
-    promo = 1 if (c.get("promoGrouping") or c.get("rarity") == "Special") else 0
-    return (promo,
-            int(c["setCode"]) if str(c.get("setCode", "")).isdigit() else 999,
-            c.get("number") or 0)
-
-# ------------------------------------------------------------- printings
-# A CARD is a name. A PRINTING is a specific physical printing of it. Decks care
-# about names (4 copies of Elsa, art irrelevant); collections and pull lists care
-# about printings (you own the enchanted, not the common). Keeping both means we
-# never have to rebuild collections later, so the name-level record below stays
-# exactly as it was and every printing hangs off it in `pr`.
-def coll_no(c):
-    """LorcanaJSON splits what Lorcast joins: number 4 + variant 'a' = '4a'."""
-    return f"{c.get('number')}{c.get('variant') or ''}"
-
-prints_by_name = {}
-for c in cards:
-    prints_by_name.setdefault(norm(c["fullName"]), []).append(c)
-
-def printing_row(c):
-    """Compact per-printing record. Image resolution order: exact printing from
-    Lorcast, then Ravensburger's own URL on that printing. Never the name-level
-    image — that would silently show base art under an enchanted's label."""
-    hit = printmap.get((norm(c["fullName"]), str(c.get("setCode")), coll_no(c)))
-    rb = c.get("images") or {}
-    img = (hit or {}).get("n") or rb.get("thumbnail") or rb.get("full") or ""
-    lrg = (hit or {}).get("l") or rb.get("full") or img
-    row = {"s": str(c.get("setCode")), "num": coll_no(c),
-           "r": c.get("rarity") or "", "i": img}
-    # price of THIS printing — an enchanted is not worth what the common is
-    pr = pricemap.get("|".join([norm(c["fullName"]), str(c.get("setCode")), coll_no(c)]))
-    if pr:
-        if px(pr[0]) is not None: row["p"] = px(pr[0])
-        if px(pr[1]) is not None: row["pf"] = px(pr[1])
-        if pr[2]: row["tid"] = pr[2]
-    if lrg and lrg != img:
-        row["l"] = lrg
-    if c.get("promoGrouping") or c.get("rarity") == "Special":
-        row["pm"] = 1
-    # ---- foiling -------------------------------------------------------
-    # LorcanaJSON describes the physical finish of each printing. "None" means
-    # a plain non-foil copy exists; a named type is a foil pattern. A printing
-    # like ("None", "Silver") is sold both ways, so only the named entries are
-    # worth animating. foilMask is a greyscale image marking exactly which
-    # parts of the art carry foil, which is what makes this look real rather
-    # than a rectangle of shine sliding over the whole card.
-    foils = special_foils(c)
-    if foils:
-        row["ft"] = foils
-    if c.get("varnishType"):
-        row["vt"] = c["varnishType"]
-    if c.get("foilEffectColors"):
-        row["fc"] = c["foilEffectColors"]
-    mask = (c.get("images") or {}).get("foilMask")
-    if mask and foils:
-        row["fm"] = mask
-    return row
-
-# "Silver" is the ordinary foil treatment — 3,310 printings carry it, i.e. very
-# nearly all of them. Animating it would make every card on the page shimmer at
-# once, which is noise, not delight. Only the special patterns (Enchanted's Lava
-# and Magma, the promo Satins and Tempests) are worth rendering, so only those
-# are shipped. This also keeps ~400KB of mask URLs out of the file.
-ORDINARY_FOIL = {"None", "Silver"}
-
-def special_foils(c):
-    return [f for f in (c.get("foilTypes") or []) if f and f not in ORDINARY_FOIL]
-
-def errata_for(full):
-    """Union of every errata note across all printings of this name.
-
-    Errata sits on the printing in LorcanaJSON, but a correction applies to the
-    card however you own it — the enchanted Bucky plays by the errata just like
-    the common one does. Deduped, order preserved."""
-    seen_e, out_e = set(), []
-    for p in prints_by_name.get(norm(full), []):
-        for e in (p.get("errata") or []):
-            # LorcanaJSON marks ability names inside errata prose as \Squeak\.
-            # Left alone that reaches the page as literal backslashes.
-            t = re.sub(r"\\([^\\]+)\\", lambda m: "“" + m.group(1) + "”", e or "").strip()
-            if t and t not in seen_e:
-                seen_e.add(t)
-                out_e.append(t)
-    return out_e
-
-for c in sorted(cards, key=printing_rank):
-    full = c["fullName"]
-    # Dedupe on the NORMALISED name: LorcanaJSON has casing inconsistencies
-    # ("Let It Go" vs "Let it Go") that would otherwise ship as two cards.
-    if norm(full) in seen:
-        continue
-    seen.add(norm(full))
-
-    kw = [[a.get("keyword"), a.get("keywordValueNumber")]
-          for a in (c.get("abilities") or []) if a.get("type") == "keyword" and a.get("keyword")]
-    atypes = sorted({a.get("type") for a in (c.get("abilities") or [])
-                     if a.get("type") and a.get("type") != "keyword"})
-    # Non-keyword ability text only — keyword reminder text would pollute matching.
-    # LorcanaJSON also stores a song's "can ⟳ to sing this song for free" clause as
-    # a *static ability*, i.e. without the parentheses that normally mark reminder
-    # text. Left in, it drags every one of the 173 songs into the cost-reduction
-    # filter. Strip it here so "for free" only ever means a real discount.
-    SING_FREE = re.compile(
-        r"[^.]*?\bcan\b[^.]*?\bsing this song for free\.?", re.I)
-    eff = " ".join(
-        SING_FREE.sub("", a.get("effect") or a.get("fullText") or "").strip()
-        for a in (c.get("abilities") or []) if a.get("type") != "keyword").strip()
-
-    key = norm(full)
-    if key in imgmap:
-        img, imgL = imgmap[key]["n"], imgmap[key]["l"]; joined += 1
+if REFRESH or not os.path.exists(CARDDB):
+    if not os.path.exists(CARDDB):
+        log("· no card-db.json yet — fetching it once")
     else:
-        rb = (c.get("images") or {})
-        img = rb.get("thumbnail") or rb.get("full") or ""
-        imgL = rb.get("full") or img
-        if img: fellback += 1
-
-    out.append({
-        "n": c.get("name"), "v": c.get("version") or "", "c": c.get("cost") or 0,
-        "ik": 1 if c.get("inkwell") else 0, "co": colors(c), "ty": c.get("type"),
-        "sub": c.get("subtypes") or [], "tx": rewrap(c.get("fullText") or ""), "ef": eff,
-        "kw": kw, "at": atypes, "st": c.get("strength"), "wi": c.get("willpower"),
-        "lo": c.get("lore"), "r": c.get("rarity") or "", "s": str(c.get("setCode")),
-        "num": c.get("number"), "sto": c.get("story") or "",
-        # Store the SPLIT artist list, not artistsText: 127 printings are
-        # collaborations, and a reader looking for "Nicholas Kole" should find
-        # the ones he shares a credit on too.
-        "ar": [a.strip() for a in (c.get("artists") or []) if a and a.strip()],
-        # Named abilities come straight from LorcanaJSON rather than being parsed
-        # out of the rules text. An earlier attempt at scraping the ALL-CAPS run
-        # truncated "A WONDERFUL DREAM" to "A WONDERFUL"; this field is authored.
-        "an": [x["name"].strip() for x in (c.get("abilities") or [])
-               if (x.get("name") or "").strip()],
-        "fl": rewrap(c.get("flavorText") or ""),
-        # every physical printing of this card, newest-art last; omitted entirely
-        # for the 1,947 cards that only ever had one printing
-        **({"pr": [printing_row(x) for x in
-                   sorted(prints_by_name.get(norm(full), []), key=printing_rank)]}
-           if len(prints_by_name.get(norm(full), [])) > 1 else {}),
-        "core": 1 if core_by_name.get(norm(full)) else 0,
-        # Official errata, straight from LorcanaJSON. These are Ravensburger's
-        # own corrections to printed cards — a real rules fact that changes how
-        # the card plays, so it is never written from memory. 8 cards carry one.
-        **({"er": errata_for(full)} if errata_for(full) else {}),
-        # Foil finish of the printing we're showing. Card-level as well as
-        # per-printing, because 1,947 cards only ever had one printing and so
-        # never get a pr[] array at all.
-        **({"ft": special_foils(c),
-            **({"vt": c["varnishType"]} if c.get("varnishType") else {}),
-            **({"fc": c["foilEffectColors"]} if c.get("foilEffectColors") else {}),
-            **({"fm": (c.get("images") or {})["foilMask"]}
-               if (c.get("images") or {}).get("foilMask") else {})}
-           if special_foils(c) else {}),
-        # card-level price = the default printing's price, which is the one the
-        # tile is showing. Cards with no pr[] array have nowhere else to put it.
-        **({k: v for k, v in
-            (("p", px((pricename.get(key) or [None])[0])),
-             ("pf", px((pricename.get(key) or [None, None])[1] if pricename.get(key) else None)),
-             ("tid", (pricename.get(key) or [None, None, None])[2] if pricename.get(key) else None))
-            if v is not None}),
-        "img": img, "imgL": imgL,
-    })
-
-log(f"  {len(out)} unique cards · {joined} Lorcast images · {fellback} Ravensburger fallback")
-
-# release order drives the default "newest first" sort
-setinfo = {str(k): {"name": v.get("name", str(k)), "d": v.get("releaseDate") or "1970-01-01"}
-           for k, v in sets_meta.items()}
-for c in out:
-    setinfo.setdefault(c["s"], {"name": "Set " + c["s"], "d": "1970-01-01"})
+        log("· --refresh: fetching new card data")
+    import fetch_cards                    # importing it IS the download
+    out, setinfo = fetch_cards.out, fetch_cards.setinfo
+    PRICE_DATE = fetch_cards.PRICE_DATE
+    with open(CARDDB, "w", encoding="utf-8") as f:
+        json.dump({"fetched": time.strftime("%Y-%m-%d"), "priced": PRICE_DATE,
+                   "sets": setinfo, "cards": out},
+                  f, separators=(",", ":"), ensure_ascii=False)
+    log(f"✓ wrote {CARDDB}  ({os.path.getsize(CARDDB)/1024/1024:.2f} MB) — commit this")
+else:
+    with open(CARDDB, encoding="utf-8") as f:
+        db = json.load(f)
+    out, setinfo, PRICE_DATE = db["cards"], db["sets"], db.get("priced", "")
+    log(f"· card database: {len(out)} cards, fetched {db.get('fetched','?')} "
+        f"(--refresh to go and get new ones)")
 
 # ---------------------------------------------------------------- art tags
 # aliases apply per CHARACTER NAME (one entry covers all 16 Stitch cards);
@@ -538,3 +288,29 @@ if os.path.exists(NOTE_TPL):
     with open(NOTE_OUT, "w", encoding="utf-8") as f:
         f.write(nhtml)
     log(f"✓ wrote {NOTE_OUT}  ({len(nhtml)/1024/1024:.2f} MB)")
+
+# ------------------------------------------------------- crawlable card pages
+# The app is one big file with one <title>; a search engine sees a blank page
+# and none of the 2,543 cards inside it. gen_pages.py writes a small real page
+# per card, plus the sitemap, manifest and robots.txt. It reads the build output
+# rather than rebuilding the joins, so it can never describe a different card
+# than the app shows. Failing here must not fail the build — the site works
+# perfectly well without these; it is just harder to find.
+try:
+    import gen_pages
+    gen_pages.main()
+except Exception as e:
+    log(f"  ! card pages skipped ({e})")
+
+# ------------------------------------------------------------- build report
+# What changed since last time, and whether this build is safe to ship. The
+# build pulls from two upstream services and had no way to notice when one of
+# them quietly returned less than it should — a half-failed image run shipped
+# looking exactly like a good one. This compares against the previous build and
+# says DO NOT SHIP when the numbers fall off a cliff. It also writes the list of
+# what is new, what got errata'd, and what moved in price.
+try:
+    import build_report
+    build_report.main()
+except Exception as e:
+    log(f"  ! build report skipped ({e})")

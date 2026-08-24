@@ -19,11 +19,45 @@ anyway. **Refreshing prices costs nothing extra: it's just a rebuild.**
   shipping a site with every price blanked.
 
 **To refresh: ask me, or run `python3 build_flounder.py`.** That's the whole
-procedure.
+procedure. Ben's cadence is once a week, on request.
 
 Coverage: 2,476 of 2,543 cards. The gaps are cards Lorcast has no market data
 for — mostly unreleased and promo-only printings. They render as no price
 rather than as $0.
+
+## The Flounder Price
+
+Every price SHOWN on the site is rounded onto a short ladder of deliberately
+silly numbers, so a price here is recognisably ours and not the same feed
+everyone else prints.
+
+| Real price | Shows as | | Real price | Shows as |
+|---|---|---|---|---|
+| up to $0.25 | **$0.25** | | up to $16 | **$14.44** |
+| up to $0.80 | **$0.67** | | up to $20 | **$17.77** |
+| up to $1.50 | **$1** | | up to $25 | **$22.22** |
+| up to $2.50 | **$2** | | up to $30 | **$27.77** |
+| up to $3.25 | **$3** | | up to $40 | **$33.33** |
+| up to $5 | **$5** | | up to $50 | **$44.44** |
+| up to $7 | **$7** | | up to $65 | **$55.55** |
+| up to $10 | **$10** | | up to $80 | **$66.67** |
+| up to $13 | **$11.11** | | up to $100 | **$77.77** |
+| | | | up to $150 | **$111.11** |
+| | | | up to $250 | **$222.22** |
+| | | | above that | **$333.33** |
+
+Three rules keep this honest, and they are not optional:
+
+1. It is **labelled** everywhere it appears, and every card's own page shows the
+   real market price directly underneath it.
+2. Anything to do with **spending money** — the shopping bundles, the $20/$50/$100
+   budgets, the collection's export value — uses the RAW price. Rounding
+   somebody's budget into a joke sends them to a checkout with the wrong amount
+   of money.
+3. The ladder is **monotonic**. A dearer card can never display as cheaper than
+   a cheaper one, so sorting and the money filters still mean what they say.
+
+Edit `PRICE_LADDER` in the template to change any band.
 
 ## Where prices show up
 

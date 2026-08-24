@@ -44,6 +44,19 @@ for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:abil
 }
 ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+errs[0]:""}`);
 
+/* Deep links, on a COLD profile. This is the one that shipped broken: it
+   worked on a second visit and failed on a first, which is every visit that
+   arrives from a search engine or a shared link. */
+{
+  const ctx=await b.newContext();
+  const q=await ctx.newPage();
+  await q.goto("file://"+F+"#q=elsa%20snow%20queen");
+  await q.waitForTimeout(2200);
+  const n=await q.evaluate(()=>document.querySelectorAll("#grid .c").length);
+  ok(n>0&&n<200,`a shared search link opens filtered on a first visit (${n} cards)`);
+  await ctx.close();
+}
+
 /* The data is the product. A build that silently loses cards is the one
    content bug worth catching automatically. */
 const n=await p.evaluate(()=>DATA.cards.length);
