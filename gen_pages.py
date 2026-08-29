@@ -303,6 +303,206 @@ def card_page(c, by_name, by_set, sets, priced_on):
     return sl, "".join(out)
 
 
+# ---------------------------------------------------------------- hub pages
+# The app is ONE index.html with tabs inside it. That means "the deck builder"
+# has no URL — you cannot link to it, and Google cannot index it, because from
+# the outside the whole site is a single page called "Ready Set Ink".
+#
+# These are small real pages at real paths that fix both halves. Each one has
+# actual words on it for a search engine to read, and a button that opens the
+# app already on the right tab (via the #tab= link the template now understands).
+#
+# Paths, not subdomains. decks.readysetink.com would be a separate site that
+# splits Google's opinion of us in two; /decks is the same site, and everything
+# it earns pools into one domain.
+HUBS = [
+    {"slug": "deck-builder", "tab": "tDeck",
+     "title": "Lorcana deck builder",
+     "lede": "Build a Disney Lorcana deck with every card in the game, live legality "
+             "checking, and advice on what to change.",
+     "body": [
+        ("What it does", [
+            "Search 2,543 cards and click to add. Formats are enforced as you build — "
+            "ink limits, copy limits, deck size — so an illegal deck tells you the "
+            "moment it becomes one.",
+            "The deck panel groups your list the way a player thinks about it: "
+            "characters, actions, songs, items, locations. Not one flat column "
+            "sorted by cost.",
+            "Undo is Ctrl+Z, and it covers everything — adds, removes, clears, even "
+            "deleting a deck.",
+        ]),
+        ("It tells you what's wrong", [
+            "Every deck gets read for the things that quietly lose games: not enough "
+            "inkable cards, no removal, no card draw, songs with nobody who can sing "
+            "them, Shift cards with nothing to shift onto.",
+            "Goldfish it and the site draws your opening hand a thousand times, then "
+            "reports how often you actually had a play on turn two.",
+            "Click any card and it shows what else could go in that slot — cards that "
+            "do the same job, that you can afford to play, flagged when they also fix "
+            "something the deck is missing.",
+        ]),
+        ("Then get the cards", [
+            "Every deck has a pull sheet in the order you'd walk your own binder.",
+            "Anything you're missing becomes a message you can send a friend, or a "
+            "TCGplayer cart you can buy in one click.",
+        ]),
+     ]},
+    {"slug": "search", "tab": "tSearch",
+     "title": "Lorcana card search",
+     "lede": "Search every Disney Lorcana card by what it does — or by what is in "
+             "the artwork.",
+     "body": [
+        ("Search by what a card does", [
+            "One click for the searches that used to mean reading every card: cards "
+            "that ping damage, cards that punish the whole table, cards that make "
+            "opponents lose lore, cards that want to be discarded, bounce split by "
+            "whose hand it goes back to.",
+            "Plain English works too. Type “steel action” or “sapphire item "
+            "floodborn” and press Enter.",
+        ]),
+        ("Search by what is in the picture", [
+            "Type “blue dog” and get Stitch. The artwork is tagged by hand — "
+            "colours, animals, clothing, settings, objects — so you can find a card "
+            "you remember seeing without remembering its name.",
+        ]),
+        ("Every search is a link", [
+            "Whatever you build, the address bar keeps it. Copy the link and it "
+            "reopens exactly that search for anyone you send it to.",
+        ]),
+     ]},
+    {"slug": "collection", "tab": "tColl",
+     "title": "Lorcana collection tracker",
+     "lede": "Track which Lorcana cards you own, per printing, per foil — and see "
+             "what your collection is worth.",
+     "body": [
+        ("Per printing, not per card", [
+            "An enchanted is not the same thing as the common, so the tracker counts "
+            "printings. Normal and foil are counted separately.",
+            "Bulk tools fill a whole set at once rather than making you tick three "
+            "thousand boxes.",
+        ]),
+        ("It connects to your decks", [
+            "Build a deck and the site knows which cards you already have — the "
+            "borrow list and the shopping list are both built from the gap.",
+            "Export the lot to a spreadsheet whenever you like, with prices and a "
+            "total value.",
+        ]),
+     ]},
+    {"slug": "decks", "tab": "tDecks",
+     "title": "Your saved Lorcana decks",
+     "lede": "Every deck you've built, with pull sheets, borrow lists and shareable "
+             "links.",
+     "body": [
+        ("Pull sheets", [
+            "Tell the site how you keep your cards and every saved deck comes out in "
+            "that order — so you walk your binder once instead of hunting the same "
+            "box four times.",
+        ]),
+        ("Share a deck as a link", [
+            "Copy a link and anyone who opens it gets their own editable copy. "
+            "Nothing they already had is touched.",
+            "Paste a list in from anywhere else and it imports — TCGplayer mass "
+            "entry, exports from other deck sites, or just “4 Elsa - Snow Queen” "
+            "typed out.",
+        ]),
+        ("What it costs", [
+            "Each deck shows roughly what it would cost to buy, and how much of that "
+            "you already own.",
+        ]),
+     ]},
+    {"slug": "coconut", "tab": "tDeck", "sub": "guided",
+     "title": "Guided Coconut deck building",
+     "lede": "Coconut is a Lorcana format built around one legendary character. "
+             "Pick yours and the site builds around it with you.",
+     "body": [
+        ("How Coconut works", [
+            "One legendary card is your Coconut. Three inks, singleton — one copy of "
+            "everything else — and sixty cards.",
+            "Your Coconut can be played from outside the deck, so it is the one card "
+            "you always have.",
+        ]),
+        ("Guided, or prebuilt", [
+            "Guided walks you through it: pick a Coconut, see the filters that suit "
+            "it, build with the rules enforced as you go.",
+            "Or open a prebuilt deck for any Coconut, read why each card is in there "
+            "and what your first three turns look like, then copy it and make it "
+            "yours.",
+        ]),
+     ]},
+    {"slug": "loretracker", "tab": "tOther", "op": "lore",
+     "title": "Lorcana lore tracker with a rules judge",
+     "lede": "A 0–20 lore counter for two to four players, big enough to read from "
+             "the other side of the table — with every card, keyword and official "
+             "ruling one tap away.",
+     "body": [
+        ("Built for a table, not a phone in your pocket", [
+            "Huge numbers, huge buttons, and the far seat rotated 180° so the person "
+            "across from you reads it the right way up.",
+            "Two, three or four players. Rename anybody by tapping their name. Goes "
+            "full screen.",
+        ]),
+        ("The JUDGE button", [
+            "Press \U0001f590 JUDGE and the score locks — nobody nudges a total while "
+            "a rules question is open.",
+            "Search any card by name and read its text with every keyword on it turned "
+            "into a button: tap Ward, Shift or Resist and get the rule.",
+            "Cards show Ravensburger's own published rulings where they exist, "
+            "attributed to the set release notes they came from.",
+            "Or browse the arguments people actually stop the game over — timing, "
+            "end-of-turn effects, challenging, singing, and what to do when something "
+            "went wrong.",
+        ]),
+        ("Best of three", [
+            "Reach 20 and the screen throws one fish for every point of lore on the "
+            "table. Say you're playing best of three and it tracks who won which game, "
+            "then hands you off to Play Hub to report the match.",
+        ]),
+     ]},
+    {"slug": "games", "tab": "tOther", "op": "guess",
+     "title": "Lorcana card games",
+     "lede": "Guess the card from a sliver of its art, from a named ability, or from "
+             "its stats one fact at a time.",
+     "body": [
+        ("The guessing games", [
+            "Guess the card from a zoomed crop of the artwork — zoom out if you must, "
+            "it's worth less.",
+            "Guess the ability: a named ability and five cards, one of them owns it.",
+            "Guess from the facts: cost, then strength, then willpower, then the "
+            "artist. Each fact you need costs you a point.",
+        ]),
+        ("And a fish", [
+            "Feed Flounder is an idle game. He swims after your finger, eats, and "
+            "earns you dust you can spend on effects for his card.",
+        ]),
+     ]},
+]
+
+
+def hub_page(h, cards):
+    url = f"{SITE}/{h['slug']}/"
+    deep = "/#tab=" + h["tab"]
+    if h.get("op"):
+        deep += "&op=" + h["op"]
+    if h.get("sub"):
+        deep += "&sub=" + h["sub"]
+    out = [head(f"{h['title']} · Ready Set Ink", h["lede"], url)]
+    out.append(f"<h1>{esc(h['title'])}</h1>")
+    out.append(f'<p style="font-size:18px;color:#52648f">{esc(h["lede"])}</p>')
+    out.append(f'<a class="cta" href="{deep}">Open it →</a>')
+    for heading, paras in h["body"]:
+        out.append(f"<h2>{esc(heading)}</h2>")
+        for para in paras:
+            out.append(f"<p>{esc(para)}</p>")
+    # Cross-links, so a crawler landing on any hub can reach all the others.
+    out.append("<h2>The rest of Ready Set Ink</h2><div class='rel'>")
+    for other in HUBS:
+        if other["slug"] != h["slug"]:
+            out.append(f'<a href="/{other["slug"]}/">{esc(other["title"])}</a>')
+    out.append(f'<a href="/card/">All {len(cards):,} cards</a></div>')
+    out.append(FOOT)
+    return "".join(out)
+
+
 def index_page(cards, sets):
     url = f"{SITE}/card/"
     desc = (f"Every one of the {len(cards):,} Disney Lorcana cards, with rules text, "
@@ -368,10 +568,18 @@ def main():
     with open(os.path.join(CARDDIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_page(cards, sets))
 
+    hub_urls = []
+    for h in HUBS:
+        d = os.path.join(HERE, h["slug"])
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
+            f.write(hub_page(h, cards))
+        hub_urls.append(f"/{h['slug']}/")
+
     today = date.today().isoformat()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in ["/", "/card/"] + urls:
+    for u in ["/", "/card/"] + hub_urls + urls:
         sm.append(f"<url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>")
     sm.append("</urlset>")
     with open(os.path.join(HERE, "sitemap.xml"), "w", encoding="utf-8") as f:
@@ -385,7 +593,8 @@ def main():
     total = sum(os.path.getsize(os.path.join(CARDDIR, x)) for x in os.listdir(CARDDIR))
     log(f"✓ wrote {len(urls)} card pages + index  ({total/1024/1024:.1f} MB, "
         f"{total/max(1,len(urls))/1024:.0f} KB each)")
-    log(f"✓ wrote sitemap.xml ({len(urls)+2} urls), robots.txt, manifest.webmanifest")
+    log(f"✓ wrote {len(HUBS)} hub pages: {', '.join('/'+h['slug'] for h in HUBS)}")
+    log(f"✓ wrote sitemap.xml ({len(urls)+len(hub_urls)+2} urls), robots.txt, manifest.webmanifest")
 
 
 if __name__ == "__main__":

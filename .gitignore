@@ -1,0 +1,42 @@
+# Local authoring tools — generated, and not meant to be published.
+# The tagger and the notes editor are how Ben writes art-tags.json and
+# rsi-notes.json. They live at their own URLs; publishing them from this repo
+# would put an editing UI on the public site.
+flounder-tagger.html
+flounder-notes.html
+
+# Generated. index.html is committed because it is what the host serves;
+# flounder-search.html is the identical build output the test suites read,
+# so it does not need to be in the repo.
+flounder-search.html
+
+# Test screenshots
+_shot_*.png
+
+# Junk
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+
+# Build fingerprints. Small, but they are a local record of what YOUR machine
+# built and when — they belong to the machine, not the repo. BUILD-REPORT.md is
+# committed on purpose: it is the human-readable "what changed" for each build.
+.build-history/
+
+# scratch from syncing files onto this machine
+_to_delete/il*
+_wtest
+
+# The old Playwright suites (tests/, run-tests.sh, _test_v*.js at the top level)
+# were removed from the repo in the lore-tracker commit. None of them knew about
+# the welcome tour added later, so on a first visit the overlay swallowed their
+# clicks and 38 of 40 hung instead of reporting anything — broken tests that
+# look like coverage. smoke.js is the ship gate, as HOW-WE-WORK says.
+# They are still in git history if they are ever wanted back.
+tests/
+run-tests.sh
+_test_*.js
+
+# replaced by the real logo icons in icons/ and favicon.ico
+icon.svg

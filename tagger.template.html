@@ -111,16 +111,18 @@ textarea{width:100%;height:190px;background:#0a1626;border:1px solid var(--line)
       <span class="stat" id="fCount"></span>
     </div>
 
-    <div class="aliasnote" id="aliasNote"></div>
-
-    <div id="groups"></div>
-
+    <!-- Typing is the slow part, so it goes first. The tag buttons are all
+         one keystroke; the text box is the only thing you actually type. -->
     <div class="grp">
       <h3>Extra words for this card</h3>
       <input class="alias" id="aliasIn" placeholder="anything you'd type to find this card — comma separated">
       <div class="hint">Per-card only. For nicknames that apply to <b>every</b> card of a character
         (Stitch → blue dog), edit <code>aliases</code> in art-tags.json instead — one entry covers all of them.</div>
     </div>
+
+    <div class="aliasnote" id="aliasNote"></div>
+
+    <div id="groups"></div>
   </div>
 </main>
 
@@ -151,8 +153,12 @@ const TAGS=[
    {id:"closeup", l:"Close-up",     k:"1"},
    {id:"midshot", l:"Mid shot",     k:"f"},
    {id:"fullbody",l:"Full body",    k:"2"},
-   {id:"poster",  l:"Poster shot",  k:"g"},
-   {id:"feet",    l:"Feet visible", k:"3"}]},
+   {id:"poster",  l:"Poster shot",  k:"g"}]},
+ /* Its own group so it is impossible to miss, and it works on ANY card — the
+    site shows the 🐭 badge for anything carrying a marker or this tag, not
+    just the cards in the hand-written list. */
+ {g:"Hidden Mouseys",items:[
+   {id:"mousey", l:"Has a Hidden Mousey", k:"3"}]},
  {g:"Facing",items:[
    {id:"left",   l:"Facing left",   k:"q"},
    {id:"right",  l:"Facing right",  k:"w"},
@@ -194,9 +200,7 @@ const TAGS=[
    {id:"storylore",  l:"Story lore",            k:"n"},
    {id:"flavorsrc",  l:"Flavor text from source"},
    {id:"flavorlorc", l:"Flavor text from Lorcana"},
-   {id:"flavorsong", l:"Flavor text from a song"}]},
- {g:"Ben's law",items:[
-   {id:"washhands", l:"Would make them wash hands before shaking hands with them"}]}
+   {id:"flavorsong", l:"Flavor text from a song"}]}
 ];
 const ALL=TAGS.flatMap(g=>g.items);
 const BYKEY={};ALL.forEach(t=>{if(t.k)BYKEY[t.k]=t.id});

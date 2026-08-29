@@ -37,12 +37,38 @@ for(const t of ["tDeck","tSearch","tColl","tDecks","tOther"]){
   await p.click("#"+t);await p.waitForTimeout(450);
   ok(await p.evaluate(t=>document.querySelector("main .view.on")!==null,t),t+" opens");
 }
-for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:ability","hex","cred"]){
+for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:ability","hex","cred","lore"]){
   await p.evaluate(o=>{localStorage.setItem("fs3_tab",JSON.stringify("tOther"));
     localStorage.setItem("fs3_opage",JSON.stringify(o))},op);
   await p.reload();await p.waitForTimeout(700);
 }
 ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+errs[0]:""}`);
+
+/* The lore tracker is the one screen used with somebody waiting, and it is a
+   fixed full-screen takeover — so the two things worth gating are that it comes
+   up at all, and that pressing JUDGE actually locks the score. The lock is also
+   the cheapest possible proof that the judge panel rendered and wired itself. */
+{
+  await p.evaluate(()=>{localStorage.setItem("fs3_tab",JSON.stringify("tOther"));
+    localStorage.setItem("fs3_opage",JSON.stringify("lore"))});
+  await p.reload();await p.waitForTimeout(900);
+  ok(await p.evaluate(()=>!!document.querySelector(".lorewrap")),"lore tracker opens");
+  await p.click('[data-plus="1"]');await p.waitForTimeout(200);
+  const before=await p.textContent("#ln1");
+  await p.click("#loreJudge");await p.waitForTimeout(500);
+  const locked=await p.evaluate(()=>!!document.querySelector(".jpanel")
+    &&document.querySelector('[data-plus="1"]').disabled);
+  ok(locked,"JUDGE opens the panel and locks the score");
+  /* The header sits OUTSIDE main, which is z-index 1 — so a full-screen panel
+     inside main can never out-stack it by number. If this fails, the whole
+     tracker is sitting underneath the site chrome again. */
+  const top=await p.evaluate(()=>{const j=document.getElementById("jclose").getBoundingClientRect();
+    const e=document.elementFromPoint(j.left+5,j.top+5);return e&&e.id});
+  ok(top==="jclose","the judge panel is on top of the site chrome");
+  await p.evaluate(()=>{localStorage.setItem("fs3_opage",JSON.stringify(""))});
+  await p.reload();await p.waitForTimeout(700);
+  ok(before==="1","lore counts up");
+}
 
 /* Deep links, on a COLD profile. This is the one that shipped broken: it
    worked on a second visit and failed on a first, which is every visit that
