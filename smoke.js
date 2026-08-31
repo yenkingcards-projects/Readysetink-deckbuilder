@@ -65,6 +65,14 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
   const top=await p.evaluate(()=>{const j=document.getElementById("jclose").getBoundingClientRect();
     const e=document.elementFromPoint(j.left+5,j.top+5);return e&&e.id});
   ok(top==="jclose","the judge panel is on top of the site chrome");
+  await p.click('[data-jrule="win"]');await p.waitForTimeout(250);
+  ok(await p.textContent("#jbody").then(x=>x.includes("CR 1.8.1.1")),
+    "a resolved situation cites the exact Comprehensive Rules section");
+  await p.click("[data-jresolved]");await p.waitForTimeout(250);
+  ok(await p.evaluate(()=>!document.querySelector(".jpanel")
+    &&!document.querySelector('[data-plus="1"]').disabled),
+    "Resolved returns to the table and unlocks the score");
+  await p.click("#loreJudge");await p.waitForTimeout(250);
   await p.fill("#jq","Ariel");await p.waitForTimeout(350);
   ok(await p.isVisible(".jambig"),"judge explains ambiguous card-name results");
   const rulingQuery=await p.evaluate(()=>{
