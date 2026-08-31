@@ -74,13 +74,21 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
   const top=await p.evaluate(()=>{const j=document.getElementById("jclose").getBoundingClientRect();
     const e=document.elementFromPoint(j.left+5,j.top+5);return e&&e.id});
   ok(top==="jclose","the judge panel is on top of the site chrome");
+  await p.click('.jzone.you [data-jink="add"]');await p.click('.jzone.you [data-jink="add"]');
+  await p.click('.jzone.you [data-jink="exert"]');await p.waitForTimeout(100);
+  ok(await p.textContent('.jzone.you .jinkcount').then(x=>x.includes("1 ready / 2 total")),
+    "the table records ready and exerted ink");
   await p.click('[data-jadd="you"]');await p.fill("#jq","Ariel");await p.waitForTimeout(350);
   await p.click("[data-jpick]");await p.waitForTimeout(200);
+  await p.click("[data-jshift]");await p.fill("#jq","Ariel");await p.waitForTimeout(350);
+  await p.click("[data-jpick]");await p.waitForTimeout(200);
+  ok(await p.isVisible(".jplaycard.shifted"),"a Shift base stays visibly underneath its top card");
   await p.click('[data-jrole="active"]');await p.fill("#jcaseq","Does this ability trigger?");
   ok(!(await p.isDisabled("[data-jcase]")),"marking an activating card enables the ruling step");
   await p.click("[data-jcase]");await p.waitForTimeout(200);
-  ok(await p.textContent("#jbody").then(x=>x.includes("Interaction to review")&&x.includes("Printed card text")),
-    "the table state carries into the ruling view");
+  ok(await p.textContent("#jbody").then(x=>x.includes("Interaction to review")&&x.includes("Printed card text")
+    &&x.includes("1 ready / 2 total")&&x.includes("CR 5.1.1.7")),
+    "ink and Shift-stack state carry into the cited ruling view");
   await p.click("[data-jback]");await p.waitForTimeout(150);
   await p.click("[data-jbrowse]");await p.waitForTimeout(150);
   await p.click('[data-jrule="win"]');await p.waitForTimeout(250);

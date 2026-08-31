@@ -2509,18 +2509,30 @@ body.loreon{overflow:hidden}
 .jzonelabel{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px;
   font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.72)}
 .jfield{display:flex;align-items:center;justify-content:center;gap:9px;min-height:128px;overflow-x:auto;padding:3px}
+.jboardrow{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:10px;align-items:stretch}
+.jinkwell{border-left:1px solid rgba(255,255,255,.18);padding-left:10px;display:flex;flex-direction:column;justify-content:center}
+.jinkwell h4{margin:0 0 7px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.7)}
+.jinkcount{font-size:24px;font-weight:900;line-height:1}.jinkcount span{font-size:11px;font-weight:700;color:rgba(255,255,255,.66)}
+.jinkbar{height:7px;border-radius:99px;background:rgba(0,0,0,.3);overflow:hidden;margin:8px 0}.jinkbar i{display:block;height:100%;background:#79d5ae}
+.jinkbuttons{display:grid;grid-template-columns:1fr 1fr;gap:4px}.jinkbuttons button{border:1px solid rgba(255,255,255,.28);border-radius:4px;
+  background:rgba(255,255,255,.1);color:#fff;padding:6px 4px;font-size:10px;font-weight:900;cursor:pointer}.jinkbuttons button:disabled{opacity:.3;cursor:not-allowed}
 .jempty{color:rgba(255,255,255,.58);font-size:13px;text-align:center}
 .jaddcard{flex:0 0 78px;aspect-ratio:674/940;border:2px dashed rgba(255,255,255,.42);border-radius:7px;
   background:rgba(0,0,0,.15);color:#fff;font-size:12px;font-weight:900;cursor:pointer;padding:8px}
 .jaddcard:hover{background:rgba(255,255,255,.1);border-color:#fff}
 .jplaycard{position:relative;flex:0 0 88px;background:#081d18;border:2px solid rgba(255,255,255,.28);
   border-radius:8px;padding:4px;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.jplaycard.shifted{margin-left:9px;box-shadow:-7px 7px 0 #314e68,-13px 13px 0 #182c3e,0 8px 15px rgba(0,0,0,.4)}
+.jshiftbadge{position:absolute;left:-13px;bottom:37px;background:#6d5cc7;color:#fff;border:1px solid rgba(255,255,255,.5);
+  border-radius:999px;padding:3px 6px;font-size:8px;font-weight:900;z-index:2;pointer-events:none}
 .jplaycard.active{border-color:var(--amberc);box-shadow:0 0 0 2px rgba(255,199,65,.35)}
 .jplaycard.target{border-color:#74b9ff;box-shadow:0 0 0 2px rgba(116,185,255,.3)}
 .jplaycard img{display:block;width:100%;aspect-ratio:674/940;object-fit:cover;border-radius:4px}
 .jplaycard strong{display:block;color:#fff;font-size:10px;line-height:1.2;margin:5px 1px 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .jcardroles{display:grid;grid-template-columns:1fr 1fr;gap:3px}.jcardroles button{border:0;border-radius:3px;
   padding:4px 2px;font-size:9px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.13);color:#fff}
+.jcardtools{display:grid;grid-template-columns:1fr;gap:3px;margin-top:3px}.jcardtools button{border:1px solid rgba(255,255,255,.2);border-radius:3px;
+  padding:4px 2px;font-size:9px;font-weight:800;cursor:pointer;background:transparent;color:rgba(255,255,255,.8)}
 .jcardroles button.on{background:var(--amberc);color:#2a1f00}.jcardroles button[data-jrole="target"].on{background:#74b9ff;color:#071d30}
 .jcardremove{position:absolute;right:-7px;top:-7px;width:23px;height:23px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
   background:#8e2b2b;color:#fff;font-weight:900;cursor:pointer;display:grid;place-items:center}
@@ -2535,7 +2547,7 @@ body.loreon{overflow:hidden}
 .jcasecontext div{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:5px;padding:9px 11px}
 .jcasecontext b{display:block;font-size:11px;text-transform:uppercase;color:var(--deep);margin-bottom:3px}
 .jpickerintro{text-align:center;padding:12px;margin-bottom:10px;background:var(--canvas-soft);border-radius:6px}
-@media(max-width:620px){.jzone{min-height:150px;padding:9px}.jfield{min-height:110px;justify-content:flex-start}.jplaycard{flex-basis:75px}.jaddcard{flex-basis:68px}.jsteps{font-size:9px}}
+@media(max-width:620px){.jzone{min-height:150px;padding:9px}.jboardrow{grid-template-columns:1fr}.jinkwell{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:8px 0 0}.jfield{min-height:110px;justify-content:flex-start}.jplaycard{flex-basis:75px}.jaddcard{flex-basis:68px}.jsteps{font-size:9px}}
 /* ---- victory ---- */
 .vic{position:absolute;inset:0;z-index:220;display:grid;place-items:center;
   background:rgba(4,14,26,.9);backdrop-filter:blur(4px);overflow:hidden}
@@ -9003,6 +9015,12 @@ const RULES=[
      "Only cards with the inkwell symbol around the cost — the shaded hexagon — can be inked.",
      "The normal ink action is limited to once per turn. Card effects can allow additional cards or put cards into the inkwell by a different process."],
   cr:[["4.2.1.1–3","Ink a card process"],["4.2.3","Once-per-turn limit"],["4.2.3.1–2","Additional ink and card effects"]]},
+ {g:"Ink & cost", id:"shiftzone", t:"A Shift stack changes zones",
+  s:"What happens to every card underneath",
+  b:["A shifted character is one character in play, with the shifted card on top and its Shift base underneath.",
+     "If the top card moves to another zone, every card under it moves to that same zone and the stack separates there.",
+     "This means an effect that puts a shifted character into its player's inkwell puts every card in that Shift stack into the inkwell. Normal once-per-turn inking still only takes a card from hand."],
+  see:["Shift"],cr:[["5.1.1.7","Cards under a top card moving zones"],["8.10","Shift"]]},
  {g:"Ink & cost", id:"song", t:"Singing a song",
   s:"Exerting a character instead of paying",
   b:["Instead of paying a song's ink cost, you may exert a ready character whose cost is equal to or greater than the song's cost.",
@@ -9252,11 +9270,13 @@ function endMatch(){
    Navigation is a stack rather than a router, because every route here is
    "the thing I just tapped" and the only way out is back. */
 let JSTACK=[];
-let JCASE={you:[],them:[],active:"",target:"",question:""};
+let JCASE={you:[],them:[],active:"",target:"",question:"",under:{},
+  ink:{you:{total:0,exerted:0},them:{total:0,exerted:0}}};
 
 function openJudge(){
   LORE.locked=true;loreSave();
-  JCASE={you:[],them:[],active:"",target:"",question:""};
+  JCASE={you:[],them:[],active:"",target:"",question:"",under:{},
+    ink:{you:{total:0,exerted:0},them:{total:0,exerted:0}}};
   JSTACK=[{v:"home"}];
   $("judgehost").innerHTML=`<div class="jpanel" id="judge">
     <div class="judgehd">
@@ -9316,7 +9336,7 @@ function judgeDraw(){
   const s=JSTACK[JSTACK.length-1]||{v:"home"};
   const body=$("jbody");if(!body)return;
   if(s.v==="home")      body.innerHTML=jHome();
-  else if(s.v==="pick") body.innerHTML=jPicker(s.side);
+  else if(s.v==="pick") body.innerHTML=jPicker(s.side,s.under);
   else if(s.v==="rules")body.innerHTML=`<button class="jback" data-jback="1">← Back to the table</button>${jHomeList()}${jFoot()}`;
   else if(s.v==="case") body.innerHTML=jCaseRuling();
   else if(s.v==="card") body.innerHTML=jCard(s.f);
@@ -9335,18 +9355,31 @@ function jWire(body){
     const q=$("jq");if(q){q.value="";q.placeholder="Search for a card to add…"}
     jgo({v:"pick",side:b.dataset.jadd});if(q)q.focus()});
   body.querySelectorAll("[data-jpick]").forEach(b=>b.onclick=()=>{
-    const side=b.dataset.jside,f=b.dataset.jpick;
-    if(JCASE[side]&&!JCASE[side].includes(f)&&JCASE[side].length<6)JCASE[side].push(f);
+    const side=b.dataset.jside,f=b.dataset.jpick,under=b.dataset.junder;
+    if(under){JCASE.under[under]=JCASE.under[under]||[];if(JCASE.under[under].length<2)JCASE.under[under].push(f)}
+    else if(JCASE[side]&&!JCASE[side].includes(f)&&JCASE[side].length<6)JCASE[side].push(f);
     const q=$("jq");if(q){q.value="";q.placeholder="Quick search: card, keyword, or rule…"}
     JSTACK=[{v:"home"}];judgeDraw()});
   body.querySelectorAll("[data-jremove]").forEach(b=>b.onclick=()=>{
     const side=b.dataset.jside,f=b.dataset.jremove;
     JCASE[side]=JCASE[side].filter(x=>x!==f);
     const key=side+"|"+f;
+    delete JCASE.under[key];
     if(JCASE.active===key)JCASE.active="";if(JCASE.target===key)JCASE.target="";judgeDraw()});
   body.querySelectorAll("[data-jrole]").forEach(b=>b.onclick=()=>{
     const role=b.dataset.jrole,key=b.dataset.jside+"|"+b.dataset.jf;
     JCASE[role]=JCASE[role]===key?"":key;judgeDraw()});
+  body.querySelectorAll("[data-jshift]").forEach(b=>b.onclick=()=>{
+    const q=$("jq"),key=b.dataset.jside+"|"+b.dataset.jshift;
+    if(q){q.value="";q.placeholder="Search for the Shift base underneath…"}
+    jgo({v:"pick",side:b.dataset.jside,under:key});if(q)q.focus()});
+  body.querySelectorAll("[data-jink]").forEach(b=>b.onclick=()=>{
+    const side=b.dataset.jside,op=b.dataset.jink,ink=JCASE.ink[side];
+    if(op==="add"&&ink.total<20)ink.total++;
+    if(op==="remove"&&ink.total>0){ink.total--;ink.exerted=Math.min(ink.exerted,ink.total)}
+    if(op==="exert"&&ink.exerted<ink.total)ink.exerted++;
+    if(op==="ready"&&ink.exerted>0)ink.exerted--;
+    judgeDraw()});
   body.querySelectorAll("[data-jcase]").forEach(b=>b.onclick=()=>jgo({v:"case"}));
   body.querySelectorAll("[data-jbrowse]").forEach(b=>b.onclick=()=>jgo({v:"rules"}));
   const cq=body.querySelector("#jcaseq");if(cq)cq.oninput=()=>JCASE.question=cq.value.slice(0,240);
@@ -9392,21 +9425,32 @@ function judgeFind(q){
 
 function jCaseCard(side,f){
   const c=CARDS.find(x=>x.f===f);if(!c)return "";
-  const key=side+"|"+f,isActive=JCASE.active===key,isTarget=JCASE.target===key;
-  return `<div class="jplaycard${isActive?" active":""}${isTarget?" target":""}">
+  const key=side+"|"+f,bases=JCASE.under[key]||[],isActive=JCASE.active===key,isTarget=JCASE.target===key;
+  return `<div class="jplaycard${bases.length?" shifted":""}${isActive?" active":""}${isTarget?" target":""}">
+    ${bases.length?`<span class="jshiftbadge">Shift stack · ${bases.length+1} cards</span>`:""}
     <button class="jcardremove" data-jremove="${esc(f)}" data-jside="${side}" aria-label="Remove ${esc(c.f)}">×</button>
     <img src="${esc(cImg(c))}" alt="${esc(c.f)}" loading="lazy"><strong>${esc(c.f)}</strong>
     <div class="jcardroles">
       <button class="${isActive?"on":""}" data-jrole="active" data-jside="${side}" data-jf="${esc(f)}">Activating</button>
       <button class="${isTarget?"on":""}" data-jrole="target" data-jside="${side}" data-jf="${esc(f)}">Target</button>
-    </div></div>`;
+    </div><div class="jcardtools"><button data-jshift="${esc(f)}" data-jside="${side}">${bases.length?"＋ Another base":"＋ Shift base"}</button></div></div>`;
+}
+function jInkZone(side){
+  const ink=JCASE.ink[side],ready=ink.total-ink.exerted,pct=ink.total?Math.round(ready/ink.total*100):0;
+  return `<aside class="jinkwell"><h4>Inkwell</h4><div class="jinkcount">${ready} <span>ready / ${ink.total} total</span></div>
+    <div class="jinkbar" aria-hidden="true"><i style="width:${pct}%"></i></div><div class="jinkbuttons">
+      <button data-jink="add" data-jside="${side}"${ink.total>=20?" disabled":""}>＋ Ink</button>
+      <button data-jink="remove" data-jside="${side}"${!ink.total?" disabled":""}>− Ink</button>
+      <button data-jink="exert" data-jside="${side}"${ready<=0?" disabled":""}>Exert 1</button>
+      <button data-jink="ready" data-jside="${side}"${ink.exerted<=0?" disabled":""}>Ready 1</button>
+    </div></aside>`;
 }
 function jTableZone(side,label){
   const cards=JCASE[side];
   return `<section class="jzone ${side}"><div class="jzonelabel"><span>${esc(label)}</span><span>${cards.length}/6 cards</span></div>
-    <div class="jfield">${cards.map(f=>jCaseCard(side,f)).join("")}
+    <div class="jboardrow"><div class="jfield">${cards.map(f=>jCaseCard(side,f)).join("")}
       ${cards.length<6?`<button class="jaddcard" data-jadd="${side}">＋<br>Add card</button>`:""}
-      ${!cards.length?`<span class="jempty">Select the cards involved in the play</span>`:""}</div></section>`;
+      ${!cards.length?`<span class="jempty">Select the cards involved in the play</span>`:""}</div>${jInkZone(side)}</div></section>`;
 }
 function jTableHome(){
   return `<div class="jsteps"><span><i>1</i>Build the table</span><b></b><span><i>2</i>Mark the action</span><b></b><span><i>3</i>Get the ruling</span></div>
@@ -9421,13 +9465,13 @@ function jTableHome(){
     <div class="jquick"><button data-jbrowse="1">Browse common rules instead</button></div>
     <div class="jnote">Add only the cards involved. Mark the card whose ability or action started the question as <b>Activating</b>, and mark a chosen or challenged card as the <b>Target</b>.</div>`;
 }
-function jPicker(side){
+function jPicker(side,under){
   const q=$("jq")?$("jq").value:"",r=judgeFind(q);
   const cards=r?r.cards:[];
   return `<button class="jback" data-jback="1">← Back to the table</button>
-    <div class="jpickerintro"><b>Add a card to ${side==="them"?"their":"your"} field</b><br>
+    <div class="jpickerintro"><b>${under?"Choose the Shift base underneath":"Add a card to "+(side==="them"?"their":"your")+" field"}</b><br>
       ${q?`${cards.length} matching card${cards.length===1?"":"s"}`:"Use the search box above to find it by name or card text."}</div>
-    ${cards.length?`<div class="jgroup"><h3>Cards</h3>${cards.map(x=>{const c=x.c;return `<button class="jhit" data-jpick="${esc(c.f)}" data-jside="${side}">
+    ${cards.length?`<div class="jgroup"><h3>Cards</h3>${cards.map(x=>{const c=x.c;return `<button class="jhit" data-jpick="${esc(c.f)}" data-jside="${side}"${under?` data-junder="${esc(under)}"`:""}>
       <img src="${esc(cImg(c))}" alt="" loading="lazy"><span><b>${esc(c.f)}</b><span>${esc(c.ty)}${c.co.length?" · "+esc(c.co.join("/")):""}</span></span></button>`}).join("")}</div>`:""}`;
 }
 function jCaseEntry(key){
@@ -9437,11 +9481,14 @@ function jCaseEntry(key){
 function jCaseRuling(){
   const a=jCaseEntry(JCASE.active),t=jCaseEntry(JCASE.target);
   if(!a||!a.card)return `<button class="jback" data-jback="1">← Back to the table</button><div class="jnote">Choose the activating card first.</div>`;
-  const c=a.card,names=kwOnCard(c),related=RULES.filter(r=>(r.see||[]).some(k=>names.includes(k))).slice(0,4);
+  const c=a.card,names=kwOnCard(c),aBases=JCASE.under[JCASE.active]||[],tBases=JCASE.under[JCASE.target]||[];
+  const related=RULES.filter(r=>(r.see||[]).some(k=>names.includes(k))||((aBases.length||tBases.length)&&r.id==="shiftzone")).slice(0,4);
   return `<button class="jback" data-jback="1">← Adjust the table</button>
     <div class="jintro"><span class="ji">⚖️</span><span><b>Interaction to review</b>The activating card is the starting point. Use its printed text, official rulings, and the linked Comprehensive Rules below.</span></div>
-    <div class="jcasecontext"><div><b>Activating</b>${esc(c.f)} · ${a.side==="them"?"their field":"your field"}</div>
-      <div><b>Target</b>${t&&t.card?esc(t.card.f)+" · "+(t.side==="them"?"their field":"your field"):"No target marked"}</div></div>
+    <div class="jcasecontext"><div><b>Activating</b>${esc(c.f)}${aBases.length?` shifted over ${esc(aBases.join(" + "))}`:""} · ${a.side==="them"?"their field":"your field"}</div>
+      <div><b>Target</b>${t&&t.card?esc(t.card.f)+(tBases.length?` shifted over ${esc(tBases.join(" + "))}`:"")+" · "+(t.side==="them"?"their field":"your field"):"No target marked"}</div>
+      <div><b>Your ink</b>${JCASE.ink.you.total-JCASE.ink.you.exerted} ready / ${JCASE.ink.you.total} total</div>
+      <div><b>Their ink</b>${JCASE.ink.them.total-JCASE.ink.them.exerted} ready / ${JCASE.ink.them.total} total</div></div>
     ${JCASE.question?`<div class="jrule"><h4>Table question</h4><p>${esc(JCASE.question)}</p></div>`:""}
     <div class="jrule official"><h4>${esc(c.f)}</h4>${c.tx?`<div class="jtext">${kwMarkup(c.tx,names)}</div>`:`<p>This card has no rules text.</p>`}
       <div class="jsrc">Printed card text — read this literally before applying summaries.</div></div>
