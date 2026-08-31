@@ -2438,6 +2438,7 @@ body.loreon{overflow:hidden}
 .judgeq{width:100%;padding:13px 15px;font-size:16px;border:2px solid var(--acc);
   border-radius:6px;background:var(--surface);color:var(--tx)}
 .judgebody{flex:1;overflow:auto;padding:12px 14px 40px;-webkit-overflow-scrolling:touch}
+.jintro{display:flex;align-items:flex-start;gap:10px;background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;padding:11px 12px;margin-bottom:12px}.jintro .ji{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--carbon);color:#fff;display:grid;place-items:center;font-size:17px}.jintro b{display:block;font-size:14px;margin-bottom:2px}.jintro span{font-size:12.5px;line-height:1.45;color:var(--deep)}.jcount{font-size:12px;color:var(--deep);margin:4px 0 10px}
 .jgroup{margin-top:16px}
 .jgroup h3{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;
   color:var(--deep);margin:0 0 7px;padding-bottom:5px;border-bottom:1px solid var(--line2)}
@@ -2476,6 +2477,7 @@ body.loreon{overflow:hidden}
 .jrule.official{border-left-color:var(--good)}
 .jrule.rsi{border-left-color:var(--gold,#e0a800)}
 .jrule .jsrc{font-size:11.5px;color:var(--deep);margin-top:7px}
+.jrule .jsrc a,.jsources a{color:var(--link);font-weight:800}.jsources{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.jsources a{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:12px;text-decoration:none}.jsources a:hover{border-color:var(--acc);text-decoration:underline}.jambig{border-left:4px solid var(--amberc);background:var(--canvas-soft);padding:10px 12px;border-radius:0 5px 5px 0;margin:8px 0 12px;font-size:12.5px;line-height:1.5}
 .jrule .jq{font-weight:800}
 .jseeaslo{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .jseeaslo button{font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;
@@ -8887,6 +8889,10 @@ const KWRULES={
 /* Every Shift variant is Shift with a restricted target, which is safe to say
    in general terms without pretending to know each one's exact wording. */
 const SHIFTLIKE=/Shift$/;
+const OFFICIAL_RULES_URL="https://www.disneylorcana.com/en-US/resources";
+const SET_NOTES_URLS={"Fabled":"https://www.disneylorcana.com/en-US/news/2025/08/2025-8-release-notes-fabled","Whispers in the Well":"https://www.disneylorcana.com/en-US/news/2025/10/2025-10_release-notes","Winterspell":"https://www.disneylorcana.com/en-US/news/2026/02/winterspell-release-notes","Wilds Unknown":"https://www.disneylorcana.com/en-US/news/2026/04/wilds-unknown-set-release-notes","Attack of the Vine!":"https://www.disneylorcana.com/en-US/news/2026/07/attack-of-the-vine-set-release-notes"};
+function officialSourceUrl(source){const s=String(source||"");const key=Object.keys(SET_NOTES_URLS).find(k=>flat(s).indexOf(flat(k))>=0);return key?SET_NOTES_URLS[key]:OFFICIAL_RULES_URL}
+function officialSource(label,url){return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`}
 
 /* ---- the rules drawer -----------------------------------------------------
    Special searches, but for arguments. Written as short answers to the thing
@@ -9258,35 +9264,38 @@ function judgeFind(q){
   const scored=[];
   for(const c of CARDS){
     const h=flat(c.f);
-    let n=h.indexOf(f);
-    if(n<0){ if((c._h0||"").indexOf(f)>=0)n=900; else continue }
-    scored.push([n===0?0:(n>0&&n<900?1:2),h,c]);
-    if(scored.length>400)break;
+    const ruling=(c.ru||[]).map(x=>[x.q,x.a,x.s].join(" ")).join(" ");
+    const note=(c.rsi||[]).map(x=>[x.t,x.src].join(" ")).join(" ");
+    let rank=99,reason="";
+    if(h===f){rank=0;reason="Exact card name"}else if(h.indexOf(f)===0){rank=1;reason="Card name starts with your search"}else if(h.indexOf(f)>0){rank=2;reason="Card name contains your search"}else if(flat(ruling).indexOf(f)>=0){rank=3;reason="Official ruling matches"}else if(flat(c.tx||"").indexOf(f)>=0){rank=4;reason="Card text matches"}else if(flat(note).indexOf(f)>=0){rank=5;reason="Ready Set Ink note matches"}else if((c._h0||"").indexOf(f)>=0){rank=6;reason="Card details match"}else continue;
+    scored.push([rank,h,c,reason]);
   }
   scored.sort((a,b)=>a[0]-b[0]||a[1].localeCompare(b[1]));
   /* One row per NAME. Sixteen printings of the same Ariel is noise when the
      question is what her text does. */
   const seen=new Set(),cards=[];
-  for(const [,,c] of scored){if(seen.has(c.f))continue;seen.add(c.f);cards.push(c);if(cards.length>=12)break}
-  return {kws,rules,cards};
+  for(const row of scored){const c=row[2];if(seen.has(c.f))continue;seen.add(c.f);cards.push({c,reason:row[3]});if(cards.length>=16)break}
+  return {kws,rules,cards,exact:cards.filter(x=>flat(x.c.f)===f)};
 }
 
 function jHome(){
   const q=$("jq")?$("jq").value:"";
   const r=judgeFind(q);
   if(r&&(r.kws.length||r.rules.length||r.cards.length)){
-    return (r.kws.length?`<div class="jgroup"><h3>Keywords</h3>${
+    const total=r.kws.length+r.rules.length+r.cards.length;
+    const ambiguity=r.exact.length!==1&&r.cards.length>1?`<div class="jambig"><b>${r.exact.length?"More than one exact card matched.":"A few things could match."}</b> Check the subtitle, ink and card text before relying on a ruling.</div>`:"";
+    return `<div class="jcount">${total} result${total===1?"":"s"} · official-ruling matches are included</div>${ambiguity}`+(r.kws.length?`<div class="jgroup"><h3>Keywords</h3>${
         r.kws.map(k=>`<button class="jhit" data-jkw="${esc(k)}">
           <span class="ji">🔑</span><span><b>${esc(k)}</b><span>Keyword</span></span></button>`).join("")}</div>`:"")
       +(r.rules.length?`<div class="jgroup"><h3>Rules</h3>${
         r.rules.map(x=>jRuleRow(x)).join("")}</div>`:"")
       +(r.cards.length?`<div class="jgroup"><h3>Cards</h3>${
-        r.cards.map(c=>`<button class="jhit" data-jcard="${esc(c.f)}">
+        r.cards.map(x=>{const c=x.c;return `<button class="jhit" data-jcard="${esc(c.f)}">
           <img src="${esc(cImg(c))}" alt="" loading="lazy">
           <span><b>${esc(c.n)}${c.v?" – "+esc(c.v):""}</b>
-          <span>${esc(c.ty)}${c.co.length?" · "+esc(c.co.join("/")):""}${
+          <span>${esc(x.reason)} · ${esc(c.ty)}${c.co.length?" · "+esc(c.co.join("/")):""}${
             (c.ru||[]).length?" · "+c.ru.length+" official ruling"+(c.ru.length>1?"s":""):""}</span></span>
-        </button>`).join("")}</div>`:"")
+        </button>`}).join("")}</div>`:"")
       +jFoot();
   }
   if(r)return `<div class="jnote">Nothing matched “${esc(q)}”. Try a keyword (Ward, Shift),
@@ -9299,11 +9308,11 @@ function jRuleRow(x){
     <span><b>${esc(x.t)}</b><span>${esc(x.s)}</span></span></button>`;
 }
 function jHomeList(){
-  return RULE_GROUPS.map(g=>`<div class="jgroup"><h3>${esc(g)}</h3>${
+  return `<div class="jintro"><span class="ji">⚖️</span><span><b>Find the exact card or situation</b>Search card names, printed text, keywords, and the full text of published rulings. Scores stay locked until you return.</span></div>`+RULE_GROUPS.map(g=>`<div class="jgroup"><h3>${esc(g)}</h3>${
     RULES.filter(r=>r.g===g).map(jRuleRow).join("")}</div>`).join("");
 }
 function jFoot(){
-  return `<div class="jnote">These are plain-English summaries written to settle a
+  return `<div class="jsources">${officialSource("Official rules & documents",OFFICIAL_RULES_URL)}</div><div class="jnote">These are plain-English summaries written to settle a
     table argument quickly. The Comprehensive Rules and Ravensburger's own set release
     notes are the authority — if a summary and the official text disagree, the official
     text is right. In a sanctioned event, call a judge.</div>`;
@@ -9361,7 +9370,7 @@ function jCard(f){
       ${(c.ru||[]).length?`<div class="jgroup"><h3>Official rulings — ${c.ru.length}</h3>${
         c.ru.map(r=>`<div class="jrule official">
           <p class="jq">${esc(r.q)}</p><p>${esc(r.a)}</p>
-          <div class="jsrc">Ravensburger${r.s?" — "+esc(r.s):""}</div></div>`).join("")}</div>`:""}
+          <div class="jsrc">Official Ravensburger ruling${r.s?" · "+esc(r.s):""} · ${officialSource("Open source",officialSourceUrl(r.s))}</div></div>`).join("")}</div>`:""}
       ${(c.rsi||[]).length?`<div class="jgroup"><h3>Ready Set Ink notes</h3>${
         c.rsi.map(r=>`<div class="jrule rsi"><p>${esc(r.t||"")}</p>
           <div class="jsrc">Our note, not an official ruling${r.src?" — "+esc(r.src):""}</div>
