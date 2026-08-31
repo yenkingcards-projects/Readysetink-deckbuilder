@@ -2498,6 +2498,44 @@ body.loreon{overflow:hidden}
 .jcites b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);margin-bottom:5px}
 .jcite{display:flex;align-items:baseline;gap:7px;font-size:12px;line-height:1.45;margin:3px 0}
 .jcite code{font-family:inherit;font-weight:900;color:var(--good);background:var(--canvas-soft);padding:2px 5px;border-radius:3px}
+.jsteps{display:flex;align-items:center;justify-content:center;gap:8px;margin:2px 0 12px;
+  color:var(--deep);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.jsteps span{display:flex;align-items:center;gap:5px}.jsteps i{width:22px;height:22px;border-radius:50%;
+  background:var(--carbon);color:#fff;display:grid;place-items:center;font-style:normal}
+.jsteps b{height:1px;flex:0 1 54px;background:var(--line)}
+.jtable{position:relative;border:1px solid #234d3f;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#184b3a,#10382e 56%,#174332);box-shadow:inset 0 0 60px rgba(0,0,0,.28)}
+.jzone{padding:13px;min-height:170px;color:#fff}.jzone.them{border-bottom:1px solid rgba(255,255,255,.12)}
+.jzonelabel{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px;
+  font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.72)}
+.jfield{display:flex;align-items:center;justify-content:center;gap:9px;min-height:128px;overflow-x:auto;padding:3px}
+.jempty{color:rgba(255,255,255,.58);font-size:13px;text-align:center}
+.jaddcard{flex:0 0 78px;aspect-ratio:674/940;border:2px dashed rgba(255,255,255,.42);border-radius:7px;
+  background:rgba(0,0,0,.15);color:#fff;font-size:12px;font-weight:900;cursor:pointer;padding:8px}
+.jaddcard:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.jplaycard{position:relative;flex:0 0 88px;background:#081d18;border:2px solid rgba(255,255,255,.28);
+  border-radius:8px;padding:4px;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.jplaycard.active{border-color:var(--amberc);box-shadow:0 0 0 2px rgba(255,199,65,.35)}
+.jplaycard.target{border-color:#74b9ff;box-shadow:0 0 0 2px rgba(116,185,255,.3)}
+.jplaycard img{display:block;width:100%;aspect-ratio:674/940;object-fit:cover;border-radius:4px}
+.jplaycard strong{display:block;color:#fff;font-size:10px;line-height:1.2;margin:5px 1px 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jcardroles{display:grid;grid-template-columns:1fr 1fr;gap:3px}.jcardroles button{border:0;border-radius:3px;
+  padding:4px 2px;font-size:9px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.13);color:#fff}
+.jcardroles button.on{background:var(--amberc);color:#2a1f00}.jcardroles button[data-jrole="target"].on{background:#74b9ff;color:#071d30}
+.jcardremove{position:absolute;right:-7px;top:-7px;width:23px;height:23px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
+  background:#8e2b2b;color:#fff;font-weight:900;cursor:pointer;display:grid;place-items:center}
+.jaction{padding:13px;background:rgba(3,15,12,.66);border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15)}
+.jaction label{display:block;color:#fff;font-size:12px;font-weight:900;margin-bottom:6px}
+.jaction input{width:100%;padding:11px 12px;border-radius:5px;border:1px solid rgba(255,255,255,.35);background:#fff;color:#14202c;font-size:14px}
+.jcasego{display:block;width:100%;margin-top:9px;padding:12px;border:0;border-radius:5px;background:var(--amberc);
+  color:#2a1f00;font-weight:900;font-size:14px;cursor:pointer}.jcasego:disabled{opacity:.42;cursor:not-allowed}
+.jquick{display:flex;justify-content:center;margin:11px 0}.jquick button{border:1px solid var(--line);background:var(--surface);
+  color:var(--tx);padding:8px 14px;border-radius:999px;font-weight:800;cursor:pointer}
+.jcasecontext{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+.jcasecontext div{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:5px;padding:9px 11px}
+.jcasecontext b{display:block;font-size:11px;text-transform:uppercase;color:var(--deep);margin-bottom:3px}
+.jpickerintro{text-align:center;padding:12px;margin-bottom:10px;background:var(--canvas-soft);border-radius:6px}
+@media(max-width:620px){.jzone{min-height:150px;padding:9px}.jfield{min-height:110px;justify-content:flex-start}.jplaycard{flex-basis:75px}.jaddcard{flex-basis:68px}.jsteps{font-size:9px}}
 /* ---- victory ---- */
 .vic{position:absolute;inset:0;z-index:220;display:grid;place-items:center;
   background:rgba(4,14,26,.9);backdrop-filter:blur(4px);overflow:hidden}
@@ -9214,9 +9252,11 @@ function endMatch(){
    Navigation is a stack rather than a router, because every route here is
    "the thing I just tapped" and the only way out is back. */
 let JSTACK=[];
+let JCASE={you:[],them:[],active:"",target:"",question:""};
 
 function openJudge(){
   LORE.locked=true;loreSave();
+  JCASE={you:[],them:[],active:"",target:"",question:""};
   JSTACK=[{v:"home"}];
   $("judgehost").innerHTML=`<div class="jpanel" id="judge">
     <div class="judgehd">
@@ -9226,7 +9266,7 @@ function openJudge(){
     </div>
     <div style="padding:10px 14px 0;background:var(--carbon)">
       <input class="judgeq" id="jq" type="search" autocomplete="off"
-        placeholder="Card name, keyword, or what went wrong…"
+        placeholder="Quick search: card, keyword, or rule…"
         aria-label="Search cards and rules">
     </div>
     <div class="judgebody" id="jbody"></div>
@@ -9234,7 +9274,10 @@ function openJudge(){
   $("jclose").onclick=closeJudge;
   const q=$("jq");
   let jt;
-  q.oninput=()=>{clearTimeout(jt);jt=setTimeout(()=>{JSTACK=[{v:"home"}];judgeDraw()},110)};
+  q.oninput=()=>{clearTimeout(jt);jt=setTimeout(()=>{
+    const cur=JSTACK[JSTACK.length-1];
+    if(!cur||cur.v!=="pick")JSTACK=[{v:"home"}];
+    judgeDraw()},110)};
   judgeDraw();
   /* Not focused on purpose. A phone that opens a keyboard the instant you tap
      JUDGE covers the thing you came here to read, and on a table between two
@@ -9262,12 +9305,20 @@ function renderLoreSeats(){
 }
 
 function jgo(state){JSTACK.push(state);judgeDraw()}
-function jback(){if(JSTACK.length>1)JSTACK.pop();judgeDraw()}
+function jback(){
+  if(JSTACK.length>1)JSTACK.pop();
+  const q=$("jq"),cur=JSTACK[JSTACK.length-1];
+  if(q&&cur&&cur.v==="home"){q.value="";q.placeholder="Quick search: card, keyword, or rule…"}
+  judgeDraw()
+}
 
 function judgeDraw(){
   const s=JSTACK[JSTACK.length-1]||{v:"home"};
   const body=$("jbody");if(!body)return;
   if(s.v==="home")      body.innerHTML=jHome();
+  else if(s.v==="pick") body.innerHTML=jPicker(s.side);
+  else if(s.v==="rules")body.innerHTML=`<button class="jback" data-jback="1">← Back to the table</button>${jHomeList()}${jFoot()}`;
+  else if(s.v==="case") body.innerHTML=jCaseRuling();
   else if(s.v==="card") body.innerHTML=jCard(s.f);
   else if(s.v==="rule") body.innerHTML=jRule(s.id);
   else if(s.v==="kw")   body.innerHTML=jKw(s.k);
@@ -9280,6 +9331,25 @@ function jWire(body){
   body.querySelectorAll("[data-jkw]").forEach(b=>b.onclick=()=>jgo({v:"kw",k:b.dataset.jkw}));
   body.querySelectorAll("[data-jback]").forEach(b=>b.onclick=jback);
   body.querySelectorAll("[data-jresolved]").forEach(b=>b.onclick=closeJudge);
+  body.querySelectorAll("[data-jadd]").forEach(b=>b.onclick=()=>{
+    const q=$("jq");if(q){q.value="";q.placeholder="Search for a card to add…"}
+    jgo({v:"pick",side:b.dataset.jadd});if(q)q.focus()});
+  body.querySelectorAll("[data-jpick]").forEach(b=>b.onclick=()=>{
+    const side=b.dataset.jside,f=b.dataset.jpick;
+    if(JCASE[side]&&!JCASE[side].includes(f)&&JCASE[side].length<6)JCASE[side].push(f);
+    const q=$("jq");if(q){q.value="";q.placeholder="Quick search: card, keyword, or rule…"}
+    JSTACK=[{v:"home"}];judgeDraw()});
+  body.querySelectorAll("[data-jremove]").forEach(b=>b.onclick=()=>{
+    const side=b.dataset.jside,f=b.dataset.jremove;
+    JCASE[side]=JCASE[side].filter(x=>x!==f);
+    const key=side+"|"+f;
+    if(JCASE.active===key)JCASE.active="";if(JCASE.target===key)JCASE.target="";judgeDraw()});
+  body.querySelectorAll("[data-jrole]").forEach(b=>b.onclick=()=>{
+    const role=b.dataset.jrole,key=b.dataset.jside+"|"+b.dataset.jf;
+    JCASE[role]=JCASE[role]===key?"":key;judgeDraw()});
+  body.querySelectorAll("[data-jcase]").forEach(b=>b.onclick=()=>jgo({v:"case"}));
+  body.querySelectorAll("[data-jbrowse]").forEach(b=>b.onclick=()=>jgo({v:"rules"}));
+  const cq=body.querySelector("#jcaseq");if(cq)cq.oninput=()=>JCASE.question=cq.value.slice(0,240);
 }
 function jCites(r){
   if(!r||!(r.cr||[]).length)return "";
@@ -9320,6 +9390,67 @@ function judgeFind(q){
   return {kws,rules,cards,exact:cards.filter(x=>flat(x.c.f)===f)};
 }
 
+function jCaseCard(side,f){
+  const c=CARDS.find(x=>x.f===f);if(!c)return "";
+  const key=side+"|"+f,isActive=JCASE.active===key,isTarget=JCASE.target===key;
+  return `<div class="jplaycard${isActive?" active":""}${isTarget?" target":""}">
+    <button class="jcardremove" data-jremove="${esc(f)}" data-jside="${side}" aria-label="Remove ${esc(c.f)}">×</button>
+    <img src="${esc(cImg(c))}" alt="${esc(c.f)}" loading="lazy"><strong>${esc(c.f)}</strong>
+    <div class="jcardroles">
+      <button class="${isActive?"on":""}" data-jrole="active" data-jside="${side}" data-jf="${esc(f)}">Activating</button>
+      <button class="${isTarget?"on":""}" data-jrole="target" data-jside="${side}" data-jf="${esc(f)}">Target</button>
+    </div></div>`;
+}
+function jTableZone(side,label){
+  const cards=JCASE[side];
+  return `<section class="jzone ${side}"><div class="jzonelabel"><span>${esc(label)}</span><span>${cards.length}/6 cards</span></div>
+    <div class="jfield">${cards.map(f=>jCaseCard(side,f)).join("")}
+      ${cards.length<6?`<button class="jaddcard" data-jadd="${side}">＋<br>Add card</button>`:""}
+      ${!cards.length?`<span class="jempty">Select the cards involved in the play</span>`:""}</div></section>`;
+}
+function jTableHome(){
+  return `<div class="jsteps"><span><i>1</i>Build the table</span><b></b><span><i>2</i>Mark the action</span><b></b><span><i>3</i>Get the ruling</span></div>
+    <div class="jtable">
+      ${jTableZone("them","Their field")}
+      <div class="jaction"><label for="jcaseq">What is happening?</label>
+        <input id="jcaseq" value="${esc(JCASE.question)}" placeholder="Example: This character challenged mine—does its ability trigger?">
+        <button class="jcasego" data-jcase="1"${JCASE.active?"":" disabled"}>${JCASE.active?"Review interaction and find ruling":"Mark the activating card to continue"}</button>
+      </div>
+      ${jTableZone("you","Your field")}
+    </div>
+    <div class="jquick"><button data-jbrowse="1">Browse common rules instead</button></div>
+    <div class="jnote">Add only the cards involved. Mark the card whose ability or action started the question as <b>Activating</b>, and mark a chosen or challenged card as the <b>Target</b>.</div>`;
+}
+function jPicker(side){
+  const q=$("jq")?$("jq").value:"",r=judgeFind(q);
+  const cards=r?r.cards:[];
+  return `<button class="jback" data-jback="1">← Back to the table</button>
+    <div class="jpickerintro"><b>Add a card to ${side==="them"?"their":"your"} field</b><br>
+      ${q?`${cards.length} matching card${cards.length===1?"":"s"}`:"Use the search box above to find it by name or card text."}</div>
+    ${cards.length?`<div class="jgroup"><h3>Cards</h3>${cards.map(x=>{const c=x.c;return `<button class="jhit" data-jpick="${esc(c.f)}" data-jside="${side}">
+      <img src="${esc(cImg(c))}" alt="" loading="lazy"><span><b>${esc(c.f)}</b><span>${esc(c.ty)}${c.co.length?" · "+esc(c.co.join("/")):""}</span></span></button>`}).join("")}</div>`:""}`;
+}
+function jCaseEntry(key){
+  if(!key)return null;const cut=key.indexOf("|");
+  return {side:key.slice(0,cut),card:CARDS.find(c=>c.f===key.slice(cut+1))};
+}
+function jCaseRuling(){
+  const a=jCaseEntry(JCASE.active),t=jCaseEntry(JCASE.target);
+  if(!a||!a.card)return `<button class="jback" data-jback="1">← Back to the table</button><div class="jnote">Choose the activating card first.</div>`;
+  const c=a.card,names=kwOnCard(c),related=RULES.filter(r=>(r.see||[]).some(k=>names.includes(k))).slice(0,4);
+  return `<button class="jback" data-jback="1">← Adjust the table</button>
+    <div class="jintro"><span class="ji">⚖️</span><span><b>Interaction to review</b>The activating card is the starting point. Use its printed text, official rulings, and the linked Comprehensive Rules below.</span></div>
+    <div class="jcasecontext"><div><b>Activating</b>${esc(c.f)} · ${a.side==="them"?"their field":"your field"}</div>
+      <div><b>Target</b>${t&&t.card?esc(t.card.f)+" · "+(t.side==="them"?"their field":"your field"):"No target marked"}</div></div>
+    ${JCASE.question?`<div class="jrule"><h4>Table question</h4><p>${esc(JCASE.question)}</p></div>`:""}
+    <div class="jrule official"><h4>${esc(c.f)}</h4>${c.tx?`<div class="jtext">${kwMarkup(c.tx,names)}</div>`:`<p>This card has no rules text.</p>`}
+      <div class="jsrc">Printed card text — read this literally before applying summaries.</div></div>
+    ${(c.ru||[]).length?`<div class="jgroup"><h3>Official rulings for this card</h3>${c.ru.map(r=>`<div class="jrule official"><p class="jq">${esc(r.q)}</p><p>${esc(r.a)}</p><div class="jsrc">Official Ravensburger ruling${r.s?" · "+esc(r.s):""} · ${officialSource("Open source",officialSourceUrl(r.s))}</div></div>`).join("")}</div>`:`<div class="jnote">No card-specific official ruling has been published. Use the printed text and linked rules; in a sanctioned event, call a judge.</div>`}
+    ${names.length?`<div class="jgroup"><h3>Keywords on the activating card</h3><div class="jseeaslo">${names.map(k=>`<button data-jkw="${esc(k)}">${esc(k)} →</button>`).join("")}</div></div>`:""}
+    ${related.length?`<div class="jgroup"><h3>Rules to check</h3>${related.map(r=>jRuleRow(r)+jCites(r)).join("")}</div>`:""}
+    ${jResolved()}${jFoot()}`;
+}
+
 function jHome(){
   const q=$("jq")?$("jq").value:"";
   const r=judgeFind(q);
@@ -9342,7 +9473,7 @@ function jHome(){
   }
   if(r)return `<div class="jnote">Nothing matched “${esc(q)}”. Try a keyword (Ward, Shift),
     a card name, or what happened (“drew an extra card”).</div>`+jHomeList()+jFoot();
-  return jHomeList()+jFoot();
+  return jTableHome();
 }
 function jRuleRow(x){
   return `<button class="jhit" data-jrule="${esc(x.id)}">

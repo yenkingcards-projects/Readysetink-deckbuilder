@@ -66,12 +66,23 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
   const locked=await p.evaluate(()=>!!document.querySelector(".jpanel")
     &&document.querySelector('[data-plus="1"]').disabled);
   ok(locked,"JUDGE opens the panel and locks the score");
+  ok(await p.evaluate(()=>document.querySelectorAll(".jzone").length===2),
+    "judge opens on a two-sided card table");
   /* The header sits OUTSIDE main, which is z-index 1 — so a full-screen panel
      inside main can never out-stack it by number. If this fails, the whole
      tracker is sitting underneath the site chrome again. */
   const top=await p.evaluate(()=>{const j=document.getElementById("jclose").getBoundingClientRect();
     const e=document.elementFromPoint(j.left+5,j.top+5);return e&&e.id});
   ok(top==="jclose","the judge panel is on top of the site chrome");
+  await p.click('[data-jadd="you"]');await p.fill("#jq","Ariel");await p.waitForTimeout(350);
+  await p.click("[data-jpick]");await p.waitForTimeout(200);
+  await p.click('[data-jrole="active"]');await p.fill("#jcaseq","Does this ability trigger?");
+  ok(!(await p.isDisabled("[data-jcase]")),"marking an activating card enables the ruling step");
+  await p.click("[data-jcase]");await p.waitForTimeout(200);
+  ok(await p.textContent("#jbody").then(x=>x.includes("Interaction to review")&&x.includes("Printed card text")),
+    "the table state carries into the ruling view");
+  await p.click("[data-jback]");await p.waitForTimeout(150);
+  await p.click("[data-jbrowse]");await p.waitForTimeout(150);
   await p.click('[data-jrule="win"]');await p.waitForTimeout(250);
   ok(await p.textContent("#jbody").then(x=>x.includes("CR 1.8.1.1")),
     "a resolved situation cites the exact Comprehensive Rules section");
