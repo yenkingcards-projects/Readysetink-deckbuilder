@@ -53,6 +53,13 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
     localStorage.setItem("fs3_opage",JSON.stringify("lore"))});
   await p.reload();await p.waitForTimeout(900);
   ok(await p.evaluate(()=>!!document.querySelector(".lorewrap")),"lore tracker opens");
+  await p.evaluate(()=>{LORE.n=2;LORE.players=LORE.players.slice(0,2);loreSave();renderLore()});
+  ok(await p.isDisabled("#loreRemove"),"player removal stops at two players");
+  await p.click("#loreAdd");await p.waitForTimeout(150);
+  ok(await p.textContent("#loreN").then(x=>x.trim()==="3 players"),"a player can be added");
+  await p.click("#loreRemove");await p.waitForTimeout(150);
+  ok(await p.evaluate(()=>LORE.n===2&&LORE.players.length===2),
+    "the last player can be removed without leaving stale player data");
   await p.click('[data-plus="1"]');await p.waitForTimeout(200);
   const before=await p.textContent("#ln1");
   await p.click("#loreJudge");await p.waitForTimeout(500);

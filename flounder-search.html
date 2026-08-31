@@ -2420,6 +2420,10 @@ body.loreon{overflow:hidden}
   background:rgba(255,255,255,.08);color:#fff;font-size:13.5px;font-weight:800;cursor:pointer;
   min-height:44px}
 .lbtn:hover{background:rgba(255,255,255,.2)}
+.lbtn:disabled{opacity:.35;cursor:not-allowed}
+.loreplayers{display:flex;align-items:center;gap:5px}
+.loreplayers .lbtn{min-width:44px;padding-inline:12px}
+.lorecount{min-width:66px;text-align:center;font-size:13px;font-weight:900}
 .lbtn.judge{background:var(--amberc);color:#2a1f00;border-color:var(--amberc);font-size:16px}
 .lbtn.judge.on{background:var(--bad);border-color:var(--bad);color:#fff}
 .lbtn.exit{background:transparent}
@@ -9056,7 +9060,11 @@ function renderLore(){
     </div>
     <div class="lorebar">
       <button class="lbtn exit" id="loreExit" aria-label="Open the rest of the tools">← Tools</button>
-      <button class="lbtn" id="loreN">${LORE.n} players</button>
+      <div class="loreplayers" aria-label="Player count">
+        <button class="lbtn" id="loreRemove" aria-label="Remove the last player"${LORE.n<=2||LORE.locked?" disabled":""}>−</button>
+        <span class="lorecount" id="loreN">${LORE.n} players</span>
+        <button class="lbtn" id="loreAdd" aria-label="Add a player"${LORE.n>=4||LORE.locked?" disabled":""}>+</button>
+      </div>
       <button class="lbtn" id="loreReset">Reset scores</button>
       ${LORE.locked?`<span class="lorelock" role="status">🔒 Score locked while the judge is open</span>`:""}
       <span class="sp"></span>
@@ -9081,10 +9089,15 @@ function wireLore(){
     LORE.players[i].name=String(n).trim().slice(0,14)||("Player "+(i+1));
     loreSave();renderLore()});
   $("loreExit").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
-  $("loreN").onclick=()=>{
-    LORE.n=LORE.n>=4?2:LORE.n+1;
+  $("loreAdd").onclick=()=>{
+    if(LORE.locked||LORE.n>=4)return;
+    LORE.n++;
     while(LORE.players.length<LORE.n)
       LORE.players.push({name:"Player "+(LORE.players.length+1),lore:0,wins:0});
+    loreSave();renderLore()};
+  $("loreRemove").onclick=()=>{
+    if(LORE.locked||LORE.n<=2)return;
+    LORE.players.splice(LORE.n-1,1);LORE.n--;
     loreSave();renderLore()};
   $("loreReset").onclick=async()=>{
     if(!await confirmBox("Reset scores","Puts every player back to zero lore. Match wins are kept.","Reset"))return;
