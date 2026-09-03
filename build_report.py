@@ -138,9 +138,15 @@ def integrity(data):
     """
     full = {full_name(c) for c in data["cards"]}
     names = {c["n"] for c in data["cards"]}
+    # art-tags.json legitimately keys alt-art printings as "<name> (Rarity)"
+    # (see build_flounder.py's ALT_ART_RARITIES) -- those aren't separate
+    # cards in DATA, so strip a trailing rarity tag before checking.
+    ALT_ART_RARITIES = ("Enchanted", "Special", "Epic", "Iconic")
+    alt_suffix = re.compile(r' \((?:' + '|'.join(ALT_ART_RARITIES) + r')\)$')
 
     def ok(s):
-        return (s in full) if " - " in s else (s in names)
+        base = alt_suffix.sub('', s)
+        return (base in full) if " - " in base else (base in names)
 
     def block(start, end):
         try:

@@ -139,7 +139,18 @@ def alias_keys(name):
     keys += [p.strip() for p in re.split(r"\s+(?:&|'n')\s+", name) if p.strip()]
     return list(dict.fromkeys(keys))
 
+# Alt-art printings (Enchanted, Special, Epic, Iconic) are tagged under their
+# own key by tag_art.py / flounder-tagger.html -- "Name - Version (Enchanted)"
+# -- because their art can differ completely from the base printing. The site
+# still shows one page/art per card name, so those tags don't get their own
+# page; they fold into the base card's search words instead. That's the whole
+# point: someone who remembers the Enchanted art ("hades on a throne of fire")
+# should still find the card searching by name, even though what's on screen
+# is the common printing.
+ALT_ART_RARITIES = ("Enchanted", "Special", "Epic", "Iconic")
+
 tagged = 0
+alt_art_contributed = 0
 used = set()
 for c in out:
     full = (c["n"] + " - " + c["v"]) if c["v"] else c["n"]
@@ -151,6 +162,16 @@ for c in out:
     rec = cardtags.get(full) or {}
     if rec.get("t"): words += rec["t"]
     if rec.get("a"): words += rec["a"]
+    variant_hit = False
+    for rarity in ALT_ART_RARITIES:
+        vrec = cardtags.get(f"{full} ({rarity})")
+        if not vrec:
+            continue
+        if vrec.get("t"): words += vrec["t"]
+        if vrec.get("a"): words += vrec["a"]
+        variant_hit = True
+    if variant_hit:
+        alt_art_contributed += 1
     if words:
         c["tg"] = sorted(set(words))
         tagged += 1
@@ -165,7 +186,8 @@ for c in out:
     if marks:
         c["mk"] = [{"x": round(m["x"], 1), "y": round(m["y"], 1), "r": round(m["r"], 1)}
                    for m in marks]
-log(f"  art tags: {len(aliases)} characters aliased · {len(cardtags)} cards tagged · {tagged} cards searchable by tag")
+log(f"  art tags: {len(aliases)} characters aliased · {len(cardtags)} cards tagged · {tagged} cards searchable by tag"
+    + (f" · {alt_art_contributed} boosted by alt-art tags" if alt_art_contributed else ""))
 n_marked = sum(1 for c in out if c.get("mk"))
 if n_marked:
     log(f"  symbol marks: {n_marked} cards carry {sum(len(c['mk']) for c in out if c.get('mk'))} marked spots")
@@ -176,7 +198,9 @@ if dead:
     log(f"  ! {len(dead)} alias key(s) match NO card — check the spelling in art-tags.json:")
     for k in dead:
         log(f"      {k!r}")
-missing = sorted({t for t in cardtags if t not in {(c['n'] + ' - ' + c['v']) if c['v'] else c['n'] for c in out}})
+base_names = {(c['n'] + ' - ' + c['v']) if c['v'] else c['n'] for c in out}
+alt_art_names = {f"{b} ({r})" for b in base_names for r in ALT_ART_RARITIES}
+missing = sorted({t for t in cardtags if t not in base_names and t not in alt_art_names})
 if missing:
     log(f"  ! {len(missing)} tagged card name(s) match no card: {missing}")
 
