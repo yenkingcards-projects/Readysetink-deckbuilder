@@ -1,0 +1,10 @@
+const test=require("node:test"),assert=require("node:assert/strict"),Rules=require("../rules.js"),Model=require("../model.js");
+test("10-player Competitive event is 4 Swiss rounds into Top 4",()=>assert.deepEqual(Rules.eventStructure(10,"Competitive"),{players:10,rounds:4,cut:4,suggestedCut:4,official:true,requiredCut:true}));
+test("attendance table follows the July 14 2026 rules",()=>{for(const [n,rounds,cut] of [[8,3,0],[9,4,4],[16,4,4],[17,5,8],[32,5,8],[33,6,8],[64,6,8],[65,7,8],[128,7,8],[129,8,8],[226,8,8],[227,9,8]]){const s=Rules.eventStructure(n,"Premier");assert.equal(s.rounds,rounds);assert.equal(s.cut,cut)}});
+test("Top Cut is not required for Entry level",()=>{const s=Rules.eventStructure(10,"Entry");assert.equal(s.rounds,4);assert.equal(s.cut,0);assert.equal(s.suggestedCut,4)});
+test("Premier scoring and record are automatic",()=>assert.deepEqual(Model.record([{result:"W"},{result:"D"},{result:"L"},{result:"W"}]),{w:2,l:1,d:1,points:7}));
+test("official events require at least eight players",()=>assert.equal(Rules.eventStructure(7,"Premier").official,false));
+test("Top Cut matches do not change Swiss points",()=>assert.deepEqual(Model.record([{result:"W",stage:"swiss"},{result:"W",stage:"cut"}]),{w:1,l:0,d:0,points:3}));
+test("game score must agree with the match result",()=>{assert.equal(Model.validScore("W","2-1-0"),true);assert.equal(Model.validScore("W","1-2-0"),false);assert.equal(Model.validScore("D","0-0-3"),true)});
+test("personal analytics group opponents and ink pairs",()=>{const a=Model.analytics([{rounds:[{opponent:"Joe",opponentInks:["Ruby","Amethyst"],result:"W",started:"me"},{opponent:"Joe",opponentInks:["Amethyst","Ruby"],result:"L",started:"opponent"}]}]);assert.equal(a.opponents[0].matches,2);assert.equal(a.inks[0].name,"Amethyst / Ruby")});
+test("deck and ink-combo analytics stay distinct",()=>{const events=[{deckName:"Control A",inks:["Ruby","Sapphire"],rounds:[{opponent:"A",result:"W"}]},{deckName:"Control B",inks:["Sapphire","Ruby"],rounds:[{opponent:"B",result:"L"}]}],a=Model.analytics(events);assert.equal(a.decks.length,2);assert.equal(a.combos.length,1);assert.equal(a.combos[0].matches,2)});
