@@ -10299,6 +10299,7 @@ const OTHER_GROUPS=[
    ["Settings","Switches that change how the site behaves for you.","pref"],
    ["Lore tracker","Set your format and best-of, then track two to four players big enough to read from across the table. The 🤚 JUDGE button locks the score, times the ruling, and searches every card, keyword and rule on this site.","lore"],
    ["Judge","The same card, keyword and rules lookup as the lore tracker's JUDGE button — on its own, with no timer and no board to lock.","judge"],
+   ["Tournament companion","Track a live event, see your record and cut status, then keep the result in Match History.","/match-history/"],
    ["Shopping list","The staples you haven't got, grouped into what you'd buy at a few different budgets. Straight into a TCGplayer cart.","shop"],
    ["Read every card","Every card in release order, one at a time. Pick a set and an ink — that's one video.","read"],
    ["Getting started","New here? Start with this.","start"],
@@ -11172,10 +11173,11 @@ function renderOther(){
     .filter(gr=>gr.chips.length);
   $("otherTiles").innerHTML=groups.map(gr=>
     (gr.g?`<h3 class="sec2 ogh">${esc(gr.g)}</h3>`:"")+
-    `<div class="tiles">${gr.chips.map(([t,d,page])=>
-      `<${page?"button":"div"} class="tile${page?" ready":""}"${page?` data-op="${page}"`:""}>
+    `<div class="tiles">${gr.chips.map(([t,d,page])=>{
+      const link=page&&page.charAt(0)==="/",tag=link?"a":page?"button":"div";
+      return `<${tag} class="tile${page?" ready":""}"${link?` href="${page}"`:page?` data-op="${page}"`:""}>
         <h3>${esc(t)}</h3><p>${esc(d)}</p>
-        <span class="st2">${page?"Open →":"Planned"}</span></${page?"button":"div"}>`).join("")}</div>`
+        <span class="st2">${page?"Open →":"Planned"}</span></${tag}>`}).join("")}</div>`
   ).join("");
   $("otherTiles").querySelectorAll("[data-op]").forEach(b=>b.onclick=()=>{
     OPAGE=b.dataset.op;save("fs3_opage",OPAGE);showTab("tOther")});
