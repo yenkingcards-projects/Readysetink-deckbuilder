@@ -49,3 +49,5 @@ icon.svg
 art-cache/
 art-tools/set-outputs/
 art-tools/overnight-run.log
+.vercel
+.env*
