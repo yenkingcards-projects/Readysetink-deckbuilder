@@ -675,6 +675,22 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 .cred a{text-decoration:none}
 .cred b{font-size:14.4px;color:var(--link)}
 .cred p{font-size:12.32px;color:var(--tx);line-height:1.55;margin-top:4px}
+/* ===== sites we like ===== */
+.linkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:22px}
+.linkcard{display:block;background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--acc);
+  border-radius:4px;padding:12px 15px;text-decoration:none;color:inherit;transition:border-color .15s,transform .1s}
+.linkcard:hover{border-left-color:var(--gold);transform:translateY(-1px)}
+.lkhead{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.lkhead img{width:32px;height:32px;border-radius:6px;object-fit:cover;flex:0 0 auto}
+.lkmono{width:32px;height:32px;border-radius:6px;background:var(--canvas-soft);color:var(--deep);
+  display:grid;place-items:center;font-weight:800;font-size:15px;flex:0 0 auto}
+.lkhead b{font-size:14.4px;color:var(--link);display:block}
+.lkcat{display:block;font-size:10.5px;color:var(--deep);text-transform:uppercase;letter-spacing:.06em;margin-top:1px}
+.linkcard p{font-size:12.32px;color:var(--tx);line-height:1.5;margin-top:2px}
+.lknote{font-style:italic;color:var(--deep);opacity:.85}
+.linkcta{margin-top:26px;padding-top:16px;border-top:1px solid var(--line2);text-align:center}
+.linkcta b{font-size:16px;display:block;margin-bottom:6px}
+.linkcta p{font-size:13px;color:var(--deep);max-width:52ch;margin:0 auto 12px;line-height:1.55}
 .disclaimer{background:var(--platinum);border:1px solid var(--line2);border-radius:2px;padding:16px 19px}
 .disclaimer p{font-size:12.96px;line-height:1.7;color:var(--tx);margin-bottom:10px}
 .disclaimer p:last-child{margin-bottom:0}
@@ -731,7 +747,23 @@ body.fffaux{overflow:hidden}
 .ffcard::after{content:"🐠";position:absolute;inset:11px 8px 53px;display:grid;
   place-items:center;font-size:54px;border-radius:6px;border:2px solid rgba(255,255,255,.45);
   background:radial-gradient(circle,#97efff 0,#29a6df 65%,#1472a4)}
+/* ---- Zombie Mode (100k dust) — the card sheds its whole frame down to just
+   the emoji, and a ring of swords orbits it. The swords live in the DOM
+   always (like the ff2-layer effects above) so toggling the class is enough
+   — nothing to build or tear down. */
+.ffcard.ff-zombie{background:none;border:none;box-shadow:none}
+.ffcard.ff-zombie::before{display:none}
+.ffcard.ff-zombie::after{background:none;border:none;box-shadow:none;font-size:64px}
+.ffswords{position:absolute;inset:-30px;display:none;pointer-events:none;
+  animation:ffswordspin 3s linear infinite}
+.ffcard.ff-zombie .ffswords{display:block}
+.ffswords span{position:absolute;left:50%;top:50%;font-size:20px;
+  transform:translate(-50%,-50%) rotate(var(--a)) translateY(-58px) rotate(calc(-1 * var(--a)))}
+@keyframes ffswordspin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.ffswords{animation:none}}
 .ffood{position:absolute;z-index:7;will-change:transform}
+.ffood.zombie{width:32px;height:32px;font-size:27px;display:grid;place-items:center;
+  filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
 .ffood.pellet{width:16px;height:16px;border-radius:50%;
   background:radial-gradient(circle at 32% 28%,#ffe69a,#c98132 42%,#744422 77%);
   box-shadow:0 2px 5px rgba(0,0,0,.3)}
@@ -753,6 +785,14 @@ body.fffaux{overflow:hidden}
   font-size:12.5px;font-weight:800;opacity:.72;padding:8px 13px;border-radius:999px;
   background:rgba(0,0,0,.18);white-space:nowrap;transition:opacity .5s}
 .ffhint.hide{opacity:0}
+/* Shown after 2s with no finger/cursor on the water — see the idle timer in
+   renderAqua(). Lets someone know the tank noticed they stepped away, rather
+   than just quietly changing how touches behave with no explanation. */
+.ffpause{position:absolute;z-index:20;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:12px;font-weight:800;opacity:0;padding:8px 13px;border-radius:999px;
+  background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.18);white-space:nowrap;
+  transition:opacity .4s;pointer-events:none}
+.ffgame.ffidle .ffpause{opacity:.85}
 .ffweed{position:absolute;bottom:-8px;z-index:2;width:24px;height:150px;opacity:.45;
   border-radius:80% 10% 0 0;background:linear-gradient(#2f9478,#14594f);transform-origin:bottom}
 .ffweed.s1{left:6%;transform:rotate(-7deg)}
@@ -788,7 +828,13 @@ body.fffaux{overflow:hidden}
    The tank owns its own controls now. Everything here is positioned inside
    #ffgame, so it comes along into full screen instead of being left behind on
    a page nobody can see. */
-.ffbar{position:absolute;right:12px;top:12px;z-index:22;display:flex;gap:8px}
+/* calc()+env() rather than plain 12px: in real or faux full screen on a
+   notched phone, a flat 12px sits the exit button right under the notch or
+   the status bar overlay — reachable in theory, un-tappable in practice.
+   env() falls back to 0 on anything without a notch, so this costs nothing
+   elsewhere. */
+.ffbar{position:absolute;right:calc(12px + env(safe-area-inset-right));
+  top:calc(12px + env(safe-area-inset-top));z-index:22;display:flex;gap:8px}
 .ffib{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;
   border:1px solid rgba(255,255,255,.22);background:rgba(4,24,39,.5);backdrop-filter:blur(12px);
   color:#eaf6ff;font-family:var(--sans);font-size:13px;font-weight:800;cursor:pointer;
@@ -1416,11 +1462,52 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pull td.q{width:34px;font-weight:800;text-align:right;color:#111}
 .pull td.no{width:78px;color:#666;font-variant-numeric:tabular-nums}
 .pull td.ra{width:92px;color:#666;font-size:12px}
+.pull td.chk{width:auto;white-space:nowrap}
 .pull .tot{margin-top:14px;font-size:12.8px;font-weight:700;color:#111}
-.pull .box{display:inline-block;width:11px;height:11px;border:1px solid #999;border-radius:2px;margin-right:7px}
+/* Real checkboxes, not a decorative span — clickable on screen (state
+   persists per deck via PULLCHECKKEY) and native checkboxes already print
+   their checked state faithfully, so the same markup does both jobs. One per
+   copy needed: a 4-of shows four boxes, a 2-of shows two. */
+.pchk{width:13px;height:13px;margin:0 3px 0 0;vertical-align:middle;accent-color:#111}
+.pull .also{font-size:10.5px;font-style:italic;color:#888;margin-top:1px;font-weight:400}
+/* image view */
+.pullimgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-bottom:6px}
+.pullimg{margin:0;text-align:center}
+.pullimg img{width:100%;border-radius:5px;display:block}
+.pullimg .pullph{width:100%;aspect-ratio:5/7;border-radius:5px;background:#eee;color:#888;
+  display:grid;place-items:center;font-size:10.5px;padding:4px;text-align:center}
+.pullimg figcaption{font-size:10.5px;color:#333;margin-top:3px;line-height:1.3}
+.pullimg figcaption i{display:block;font-style:italic;color:#888;font-size:9.5px}
+.pullimg .chk{margin-top:3px}
+/* QR codes — always rendered (handy on screen too, not just on paper), sized
+   to stay modest so two of them don't push a short deck onto a second page
+   by themselves. */
+.pullqr{display:flex;gap:24px;justify-content:center;margin-top:18px;padding-top:14px;border-top:1px solid #eee}
+.pullqr figure{margin:0;text-align:center}
+.pullqr figcaption{font-size:10px;color:#888;margin-top:4px;max-width:120px}
+.qrbox{width:104px;height:104px;display:grid;place-items:center;background:#f4f4f4;border-radius:4px}
+.qrbox img{width:100%;height:100%}
+/* Fit to 1 page — same markup, tighter numbers. Applied on screen too (not
+   only behind @media print) so what you see before printing is what you
+   get, rather than a surprise once the sheet comes out of the printer. */
+.pull.compact{padding:12px 16px}
+.pull.compact h2{font-size:1rem;margin-bottom:1px}
+.pull.compact .sub{font-size:10.5px;margin-bottom:7px}
+.pull.compact .grp{margin:8px 0 4px;padding-bottom:2px;font-size:10.5px}
+.pull.compact table{font-size:11px}
+.pull.compact td{padding:1.5px 4px}
+.pull.compact .also{font-size:9.5px}
+.pull.compact .pullqr{margin-top:10px;padding-top:8px;gap:16px}
+.pull.compact .qrbox{width:76px;height:76px}
+.pull.compact .pullimgs{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
 @media print{
   body{background:#fff}
-  header,nav.tabs,.mtabs,#bub,.pullbar,.dkgrid,.page h1,.lede,.toast{display:none!important}
+  /* .dkbar is Paste a deck list / Share the deck I'm editing / Duplicate it —
+     page-management actions, not part of the sheet you'd actually carry to a
+     shop. .sitefoot is the Ko-fi widget; it gets its own QR code inside
+     .pull instead (see .pullqr above), so the animated on-page version has
+     no reason to print. */
+  header,nav.tabs,.mtabs,#bub,.pullbar,.dkbar,.dkgrid,.sitefoot,.page h1,.lede,.toast{display:none!important}
   /* A pull sheet is a shopping list you carry to a shop. The Community Code
      disclaimer is a condition of publishing the SITE, not of every sheet of
      paper it prints. The running footer is gone entirely now, but the rule
@@ -1902,12 +1989,12 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
 .oddsrow i{display:block;font-style:normal;font-size:19px;font-weight:800;color:var(--tx);
   font-variant-numeric:tabular-nums}
 .odds p{margin:8px 0 0;font-size:11.5px;color:var(--deep);line-height:1.45}
-/* Flounder Price on a card page */
+/* The rounded, "not a real quote" price on a card page */
 .pblock{margin-top:14px;background:var(--canvas-soft);border:1px solid var(--line2);
   border-left:5px solid var(--amberc);border-radius:3px;padding:12px 14px}
 .pbig{font-size:30px;font-weight:800;line-height:1.05;font-variant-numeric:tabular-nums}
-.pbig span{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--deep);margin-top:3px}
+.pbig .shipnote{display:block;font-size:11px;font-weight:700;color:var(--deep);
+  opacity:.75;margin-top:3px}
 .praw{margin-top:8px;font-size:12.5px;font-weight:700;color:var(--deep)}
 .pblock p{margin:7px 0 0;font-size:11.5px;color:var(--deep);line-height:1.5}
 /* Its own look on purpose, not the generic chrome .btn — this is a real
@@ -1925,6 +2012,16 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
 .buytcgtxt b{font-size:14.5px;font-weight:800}
 .buytcgtxt span{font-size:11px;color:rgba(255,255,255,.75)}
 .buytcgarrow{flex:0 0 auto;font-size:17px;color:#fff;opacity:.85}
+/* A quiet once-a-minute nudge on the cart icon, not a constant animation —
+   pure CSS so it starts and stops with the element itself, no timer to leak.
+   Two small bounces near the top of every 60s loop, still for the rest. */
+.cartico svg{display:block;animation:cartbob 60s ease-in-out infinite}
+@keyframes cartbob{
+  0%,4%,100%{transform:translateY(0)}
+  1%{transform:translateY(-3px)}
+  2%{transform:translateY(0)}
+  3%{transform:translateY(-2px)}
+}
 /* Foil buy button: dark by default, a rainbow ring only lights up and spins
    on hover — a "chase" effect, not a permanent rainbow button, so it reads
    as a nice surprise instead of clashing with everything around it. */
@@ -2004,6 +2101,16 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
 .shopb.off{opacity:.62}
 .shopb button{white-space:nowrap}
 .shopmain{min-width:0;flex:1}
+/* ===== save as an app ===== */
+.a2hsinfo{margin-top:8px;border:1px solid var(--line2);border-radius:6px;
+  background:var(--canvas-soft);overflow:hidden}
+.a2hsinfo>summary{list-style:none;cursor:pointer;padding:12px 14px;font-size:13px;color:var(--tx)}
+.a2hsinfo>summary::-webkit-details-marker{display:none}
+.a2hsinfo>summary b{display:block;font-size:14px;margin-bottom:2px}
+.a2hsbody{padding:2px 14px 14px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.a2hsplat h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep);margin:0 0 6px}
+.a2hsplat ol{margin:0;padding-left:20px;font-size:12.5px;line-height:1.6;color:var(--tx)}
+.a2hsplat li{margin-bottom:2px}
 .shoplist{margin-top:9px}
 .shoplist>summary{cursor:pointer;font-size:12.5px;font-weight:800;color:var(--link);
   list-style:none;display:inline-block;border-bottom:1px dotted var(--line2)}
@@ -2020,14 +2127,14 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
 .shoptip b{font-size:15px}
 .shoptip p{margin:6px 0 0;font-size:13.5px;line-height:1.55}
 .shoptip .shoptip2{color:var(--deep);font-size:13px}
-.c .prcwrap{display:flex;width:100%;border-top:1px solid var(--line2)}
-.c .prcinfo{flex:0 0 auto;width:22px;font-size:11px;color:var(--deep);
-  background:var(--canvas-soft);cursor:pointer;border-right:1px solid var(--line2)}
-.c .prcinfo:hover{background:var(--platinum)}
-.c .prc{flex:1;display:flex;align-items:center;justify-content:flex-end;gap:5px;
-  padding:3px 7px;font-size:12px;font-weight:800;color:var(--deep);text-align:right;
-  background:var(--canvas-soft);cursor:pointer}
+/* No ⓘ on the tile any more — just the one buy button, full width. The
+   fuller explanation lives in the card's own popup instead. */
+.c .prc{display:flex;align-items:center;justify-content:flex-end;gap:5px;width:100%;
+  border-top:1px solid var(--line2);padding:3px 7px;font-size:12px;font-weight:800;
+  color:var(--deep);text-align:right;background:var(--canvas-soft);cursor:pointer}
 .c .prc:hover{background:var(--acc);color:#fff}
+.c .prc .shipnote{font-weight:600;font-size:10px;opacity:.7}
+.c .prc:hover .shipnote{opacity:.85}
 .c .prc .buyicon{font-size:11px;opacity:.75}
 .c .prc:hover .buyicon{opacity:1}
 .c .i{position:absolute;top:6px;right:6px;width:30px;height:30px;border-radius:50%;background:rgba(4,14,26,.92);
@@ -2522,17 +2629,15 @@ body.loreon{overflow:hidden}
 .judgebody{flex:1;overflow:auto;padding:12px 14px 40px;-webkit-overflow-scrolling:touch}
 .jintro{display:flex;align-items:flex-start;gap:10px;background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;padding:11px 12px;margin-bottom:12px}.jintro .ji{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--carbon);color:#fff;display:grid;place-items:center;font-size:17px}.jintro b{display:block;font-size:14px;margin-bottom:2px}.jintro span{font-size:12.5px;line-height:1.45;color:var(--deep)}.jcount{font-size:12px;color:var(--deep);margin:4px 0 10px}
 .jgroup{margin-top:16px}
-.jadvanced{margin-top:18px;border:1px solid var(--line2);border-radius:6px;
-  background:var(--canvas-soft);overflow:hidden}
-.jadvanced>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
-  padding:12px 14px;font-size:13px;color:var(--tx)}
-.jadvanced>summary::-webkit-details-marker{display:none}
-.jadvanced>summary::before{content:"\25B8";transition:transform .15s;color:var(--deep)}
-.jadvanced[open]>summary::before{transform:rotate(90deg)}
-.jadvanced>summary b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;color:var(--deep)}
-.jadvanced .jtable,.jadvanced .jsteps,.jadvanced .jnote{margin-left:14px;margin-right:14px}
-.jadvanced .jsteps{margin-top:2px}
-.jadvanced .jnote{margin-bottom:14px}
+/* The board builder used to live inside a <details> nested in the home list —
+   which meant every re-render (e.g. tapping +Ink) rebuilt that <details> from
+   scratch, and whether it came back open depended on JCASE having cards on
+   it. Adjust ink with an empty board and the very next render closed the
+   whole thing under you. It's its own jgo() screen now, same as "rules" or
+   "case" — a plain page that stays however JSTACK says it should, with
+   nothing to accidentally collapse. */
+.jadvhd{margin:2px 0 14px;font-size:13px;color:var(--tx)}
+.jadvhd b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;color:var(--deep)}
 .jgroup h3{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;
   color:var(--deep);margin:0 0 7px;padding-bottom:5px;border-bottom:1px solid var(--line2)}
 .jhit{display:grid;grid-template-columns:44px 1fr;gap:11px;align-items:center;width:100%;
@@ -2918,6 +3023,10 @@ body.loreon{overflow:hidden}
 
 <section class="view" id="vCred"><div id="credpage"></div></section>
 
+<section class="view" id="vLinks"><div id="linkspage"></div></section>
+
+<section class="view" id="vAccount"><div id="accountpage"></div></section>
+
 <section class="view" id="vShop"><div id="shoppage"></div></section>
 
 <section class="view" id="vLore"><div id="lorepage"></div></section>
@@ -3259,23 +3368,20 @@ function cardPriceMax(c){
   ((c.pr&&c.pr.length)?c.pr:[]).forEach(pr=>{eat(pr.p);eat(pr.pf)});
   eat(c.p);eat(c.pf);
   return funPrice(best)}
-/* "Probably" is doing real work in the label, not just flavour — the number
-   next to it is OUR rounding, not a quote, and the old wording ("Flounder
-   Price") let people read it as a real price. The full explanation lives
-   behind the ⓘ instead of a hover tooltip, so it's reachable on a phone
-   (nothing to hover on touch) and doesn't have to compete with the price
-   for space on a small tile. */
-const PRICE_BLURB="We don't do market pricing here. Every card gets rounded onto a short "
-  +"ladder of prices we personally think are cool: $0.67, $11.11, $22.22, $33.33, $44.44, "
-  +"$55.55, $66.67, $77.77, $111.11, $222.22 — plus the plain nice ones like $5, $7, $10. "
-  +"If a price on this site ends in a repeating digit, that isn't rounding error, that's "
-  +"the whole system. We only like cool numbers. The real market price — the one every buy "
-  +"button and the shopping list actually use — is always shown right underneath, in "
-  +"ordinary boring dollars.";
+/* "≈" is doing real work in the label, not just flavour — the number next to
+   it is OUR rounding, not a quote. The full explanation lives behind the ⓘ
+   instead of a hover tooltip, so it's reachable on a phone (nothing to hover
+   on touch) and doesn't have to compete with the price for space on a small
+   tile. Built as a function, not a const, because it has to read priceDate()
+   at call time — that value isn't populated yet when this script first runs. */
+const priceBlurb=()=>`We round to whichever price we think is cool — not a real `
+  +`quote. This is a snapshot last updated ${priceDate()}, not a live feed, so it `
+  +`won't match what TCGplayer actually charges you once condition, seller and `
+  +`shipping are added.`;
 function infoBox(title,body){
   return new Promise(done=>{
     const w=document.createElement("div");w.className="cfmbg";
-    w.innerHTML=`<div class="cfm" role="dialog" aria-modal="true"><h3>${esc(title)}</h3><p>${esc(body)}</p>
+    w.innerHTML=`<div class="cfm" role="dialog" aria-modal="true"><h3>🤷 ${esc(title)}</h3><p>${esc(body)}</p>
       <div class="cfmb"><button class="btn go" data-ok>Got it</button></div></div>`;
     document.body.appendChild(w);
     const shut=()=>{w.remove();document.removeEventListener("keydown",key);done()};
@@ -3283,16 +3389,28 @@ function infoBox(title,body){
     w.querySelector("[data-ok]").onclick=shut;
     w.onclick=e=>{if(e.target===w)shut()};
     document.addEventListener("keydown",key)})}
+/* Flat estimate, not computed from anything — Ben's own number for "roughly
+   what TCGplayer tacks on," shown in low-key gray so it reads as a heads-up,
+   not a second price competing with the real one. */
+const SHIP_EST="$1.49";
+/* A small custom line-icon instead of the 🛒 emoji, for the one spot (the
+   card modal's buy button) worth the extra polish — single currentColor
+   stroke so it inherits the button's own icon color, no external library.
+   The .cartico CSS gives it a once-a-minute bob (see cartbob keyframes). */
+const CART_SVG=`<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" `
+  +`stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">`
+  +`<path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6.2"/>`
+  +`<circle cx="10" cy="20" r="1.4" fill="currentColor" stroke="none"/>`
+  +`<circle cx="17" cy="20" r="1.4" fill="currentColor" stroke="none"/></svg>`;
 function priceChip(c){
   if(!PRICES)return "";
   const v=cardPrice(c),raw=rawPrice(c);
   if(v==null)return "";
-  return `<span class="prcwrap">
-    <button class="prcinfo" data-priceinfo="1" aria-label="How this price works">ⓘ</button>
-    <button class="prc" data-buyone="${esc(c.f)}"
-      title="The market had it at ${money(raw)} on ${esc(priceDate())}. Tap to buy on TCGplayer — affiliate link, opens in a new tab."
-      aria-label="${esc(c.f)}, probably ${money(v)}. Buy on TCGplayer, opens in a new tab.">probably 🐠 ${money(v)}<span class="buyicon">🛒</span></button>
-  </span>`}
+  return `<button class="prc" data-buyone="${esc(c.f)}"
+    title="Market price ${money(raw)} as of ${esc(priceDate())} — a rounded snapshot, not a live quote. Tap to buy on TCGplayer — affiliate link, opens in a new tab."
+    aria-label="${esc(c.f)}, approximately ${money(v)}, plus about ${SHIP_EST} shipping. Buy on TCGplayer, opens in a new tab.">
+    <span class="prcval">≈ ${money(v)}</span><span class="shipnote">+${SHIP_EST} shipping</span><span class="buyicon">🛒</span>
+  </button>`}
 const priceDate=()=>DATA.priced||"";
 /* TCGplayer mass entry. Their format is "<qty> <name>" per line, lines joined
    by ||, and Lorcana names there are "Name - Version" exactly like ours. */
@@ -3307,9 +3425,37 @@ const TCG_AFF_LINK="https://partner.tcgplayer.com/GbYLzr";
 const affix=u=>TCG_AFF_LINK+"?u="+encodeURIComponent(u);
 const tcgUrl=rows=>affix("https://www.tcgplayer.com/massentry?productline=Lorcana%20TCG&c="
   +encodeURIComponent(rows.map(TCG_LINE).join("||")));
+/* Shown once, the first time a signed-in person actually leaves for
+   TCGplayer — not to everyone, since a browsing guest hasn't proven they'll
+   ever click "buy" and doesn't need an interstitial in front of it. The
+   destination URL is baked into the dialog's own button so window.open()
+   fires from THAT click, not from an awaited continuation of the original
+   one — popup blockers key off a direct user gesture, and an await in
+   between is enough to lose it in some browsers. */
+const TCG_NOTICE_KEY="fs3_tcgnotice_seen";
+function tcgFirstClickNotice(url){
+  return new Promise(done=>{
+    const w=document.createElement("div");w.className="cfmbg";
+    w.innerHTML=`<div class="cfm" role="dialog" aria-modal="true">
+      <h3>Heading to TCGplayer</h3>
+      <p>This is Ready Set Ink's TCGplayer affiliate link — it may earn us a small commission, at no extra cost to you.</p>
+      <p>Once you're there, TCGplayer's own cart optimization tool can combine sellers to save on shipping — worth a look before you check out. Shipping times vary by seller.</p>
+      <div class="cfmb"><button class="btn go" data-go>Continue to TCGplayer →</button></div>
+    </div>`;
+    document.body.appendChild(w);
+    const shut=()=>{w.remove();document.removeEventListener("keydown",key);done()};
+    const key=e=>{if(e.key==="Escape")shut()};
+    w.querySelector("[data-go]").onclick=()=>{
+      window.open(url,"_blank","noopener");
+      save(TCG_NOTICE_KEY,true);
+      shut()};
+    w.onclick=e=>{if(e.target===w)shut()};
+    document.addEventListener("keydown",key)})}
 function tcgOpen(rows,what){
   if(!rows.length){toast("Nothing to buy — "+what);return}
-  window.open(tcgUrl(rows),"_blank","noopener")}
+  const url=tcgUrl(rows);
+  if(ACCT.user&&!load(TCG_NOTICE_KEY,false)){tcgFirstClickNotice(url);return}
+  window.open(url,"_blank","noopener")}
 
 const collCopies=()=>Object.keys(COLL).reduce((a,k)=>a+COLL[k][0]+COLL[k][1],0);
 const collFoils=()=>Object.keys(COLL).reduce((a,k)=>a+COLL[k][1],0);
@@ -3914,9 +4060,10 @@ async function duplicateDeck(from){
   if($("vDecks").classList.contains("on"))renderDecksPage();
   toast(`Copied to “${name}” — edit away`);
 }
-/* Card changes still persist immediately — nobody should lose a list to a
-   closed tab — but they mark the deck unsaved so the bar says so. */
-function touchDeck(){saveDecks();if(typeof markDirty==="function")markDirty(true)}
+/* Card changes stay in memory only until Save is pressed — that's the whole
+   point of the button. Closing the tab or refreshing before saving discards
+   them; the "unsaved" badge is a warning, not decoration. */
+function touchDeck(){if(typeof markDirty==="function")markDirty(true)}
 
 /* ===================== undo =====================
    Until now every deck edit was permanent. Not "permanent until you save" —
@@ -3946,7 +4093,7 @@ function mark(label){
 function applySnap(str){
   const o=JSON.parse(str);
   DECKS.list=o.list;DECKS.cur=o.cur;
-  saveDecks();render();paintDeckBar();
+  markDirty(true);render();paintDeckBar();
   if($("vDecks").classList.contains("on"))renderDecksPage();
 }
 function undo(){
@@ -4263,9 +4410,9 @@ function moneyBlock(cur,base){
       <span>${a.l}</span><span class="n">${n}</span></button>`}).join("");
   return `<details class="grp cocogrp" id="moneygrp"${MONEYOPEN?" open":""}>
     <summary>💲 What it costs to buy<span class="gn">${g.chips.length}</span></summary>
-    <p class="cocohint">Sorted on the Flounder Price — our own rounding of a market
-      snapshot taken ${esc(priceDate())}. Each card\'s own page shows the real number
-      underneath. Turn prices on in Card view settings to see them on the cards.</p>
+    <p class="cocohint">Sorted on our rounded price — a snapshot from ${esc(priceDate())},
+      not a live quote. Each card\'s own page shows the real number underneath. Turn
+      prices on in Card view settings to see them on the cards.</p>
     <div class="chips">${chips}</div></details>`}
 
 /* One definition of "this is a phone", used by everything that has to lay out
@@ -4843,8 +4990,6 @@ function bindGrid(){
     e.stopPropagation();
     const c=CARDS.find(x=>x.f===b.dataset.buyone);
     if(c)tcgOpen([{c,q:1}],"this card")});
-  g.querySelectorAll("[data-priceinfo]").forEach(b=>b.onclick=e=>{
-    e.stopPropagation();infoBox("How Flounder Price works",PRICE_BLURB)});
   /* These four run over the whole grid, so the early `return` above — which
      only skips the per-tile bindings — never reached them. On the Search tab a
      stepper that survived a re-render could still change the deck. Nothing
@@ -5035,7 +5180,7 @@ function openM(f,showPr){
   if(P&&P.r==="Enchanted")unlockHidden("h_ench");
   $("mx").onclick=()=>$("mbg").classList.remove("on");
   $("modal").querySelectorAll("[data-buyone]").forEach(b=>b.onclick=()=>tcgOpen([{c,q:1}],"this card"));
-  $("modal").querySelectorAll("[data-priceinfo]").forEach(b=>b.onclick=()=>infoBox("How Flounder Price works",PRICE_BLURB));
+  $("modal").querySelectorAll("[data-priceinfo]").forEach(b=>b.onclick=()=>infoBox("About this price",priceBlurb()));
   const ma=$("ma");if(ma)ma.onclick=()=>{addCard(c.f);openM(c.f)};
   const mr=$("mr");if(mr)mr.onclick=()=>{delCard(c.f);openM(c.f)};
   wireCollRows(c);
@@ -5383,10 +5528,10 @@ function renderDeck(hostId){
   $("ddel").onclick=()=>{if(names.length<2){toast("Keep at least one deck");return}
     if(confirm('Delete deck "'+DECKS.cur+'"?')){mark('deleting "'+DECKS.cur+'"');delete DECKS.list[DECKS.cur];DECKS.cur=Object.keys(DECKS.list)[0];saveDecks();render()}};
   $("fmtpick").querySelectorAll("[data-fmt]").forEach(b=>b.onclick=()=>setFmt(b.dataset.fmt));
-  const cs=$("csel");if(cs)cs.onchange=e=>{d.coco=e.target.value===""?null:+e.target.value;saveDecks();renderDeck()};
-  $("dx").onclick=()=>{if(confirm("Clear all cards?")){mark("clearing the deck");d.cards={};saveDecks();render()}};
+  const cs=$("csel");if(cs)cs.onchange=e=>{d.coco=e.target.value===""?null:+e.target.value;markDirty(true);renderDeck()};
+  $("dx").onclick=()=>{if(confirm("Clear all cards?")){mark("clearing the deck");d.cards={};markDirty(true);render()}};
   const rm=$("drm");
-  if(rm)rm.onclick=()=>{mark("removing the not-legal cards");L.forEach(({c,f})=>{if(illegalReason(c))delete d.cards[f]});saveDecks();render();toast("Removed not legal cards")};
+  if(rm)rm.onclick=()=>{mark("removing the not-legal cards");L.forEach(({c,f})=>{if(illegalReason(c))delete d.cards[f]});markDirty(true);render();toast("Removed not legal cards")};
   const an=$("dana");if(an)an.ontoggle=()=>{DANA=an.open;save("fs3_dana",DANA)};
   $("dc").onclick=()=>navigator.clipboard.writeText(deckText()).then(()=>toast("Copied"),()=>toast("Copy failed"));
   $("dim").onclick=importDeckPrompt;
@@ -5783,13 +5928,13 @@ function priceBlock(c){
   if(v==null)return "";
   const hi=cardPriceMax(c),lo=cardPriceMin(c);
   return `<div class="pblock">
-    <div class="pbig">probably 🐠 ${money(v)}
+    <div class="pbig">≈ ${money(v)}
       <button class="prcinfo big" data-priceinfo="1" aria-label="How this price works">ⓘ</button>
-      <span>Flounder Price</span></div>
+      <span class="shipnote">+${SHIP_EST} shipping</span></div>
     <div class="praw">Market price ${money(raw)}${
       hi!=null&&hi!==v?` · priciest printing ${money(hi)}`:""} — snapshot taken ${esc(priceDate())}.</div>
     <button class="buytcg" data-buyone="${esc(c.f)}">
-      <span class="buytcgico">🛒</span>
+      <span class="buytcgico cartico">${CART_SVG}</span>
       <span class="buytcgtxt"><b>Buy on TCGplayer</b><span>Opens in a new tab</span></span>
       <span class="buytcgarrow">↗</span>
     </button>
@@ -6244,7 +6389,7 @@ function renderGuide(){
         <span>${esc(c.t)}</span></button>`).join("");
     $("cg").querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{
       const i=+b.dataset.c;G.coco=i;G.pair=null;G.copies=null;G.staples=null;G.mode=null;
-      const d=deck();d.fmt="coconut";d.coco=i;saveDecks();
+      const d=deck();d.fmt="coconut";d.coco=i;markDirty(true);
       S.ink=new Set([COCO[i].i]);renderGuide();render()})};
   draw();
   if($("gq"))$("gq").oninput=draw;
@@ -6253,7 +6398,7 @@ function renderGuide(){
     G.pair=b.dataset.p.split("|");G.copies=null;G.staples=null;G.mode=null;
     S.ink=new Set([COCO[G.coco].i,...G.pair]);renderGuide();render()});
   /* step 3 — copies of the Coconut, and its named item if it has one */
-  const setCopies=(f,n)=>{const d=deck();d.cards[f]=n;saveDecks()};
+  const setCopies=(f,n)=>{const d=deck();d.cards[f]=n;markDirty(true)};
   if($("gc4"))$("gc4").onclick=()=>{const s=CARDS.find(x=>x.n===co.n&&x.v===co.v);
     if(s)setCopies(s.f,4);G.copies=4;toast("Added 4× "+co.n);renderGuide();render()};
   if($("gc1"))$("gc1").onclick=()=>{const s=CARDS.find(x=>x.n===co.n&&x.v===co.v);
@@ -6264,7 +6409,7 @@ function renderGuide(){
     if(G.copies===null)G.copies="skip";renderGuide();render()};
   if($("gy"))$("gy").onclick=()=>{let n=0;const d=deck();
     inks.forEach(i=>inkStaples(i).forEach(c=>{if(c.f!==BANNED){d.cards[c.f]=(d.cards[c.f]||0)+1;n++}}));
-    saveDecks();G.staples=true;toast("Added "+n+" staples");renderGuide();render()};
+    markDirty(true);G.staples=true;toast("Added "+n+" staples");renderGuide();render()};
   g.querySelectorAll("[data-gt]").forEach(b=>b.onclick=()=>{
     GTAB=b.dataset.gt;save("fs3_gtab",GTAB);renderGuide()});
   g.querySelectorAll("[data-built]").forEach(b=>b.onclick=()=>{
@@ -6356,12 +6501,33 @@ const rarRank=r=>{const i=RARORDER.indexOf(r);return i<0?RARORDER.length:i};
 let PULLSORT=load("fs3_pullsort","setnum");
 const numKey=n=>{const m=String(n).match(/^(\d+)(.*)$/);
   return m?[parseInt(m[1],10),m[2]]:[9e9,String(n)]};
+/* A card's own s/sn/num is always its ORIGINAL printing — Stitch - Carefree
+   Surfer is set 1 even though Fabled reprinted him. Fine for the card grid,
+   wrong for a pull sheet: you're standing at your binder, and the copy
+   that's actually easiest to find is usually the newest one. This walks
+   every printing (prints() already flattens pr[] vs. the single-printing
+   fallback), groups by set (an Enchanted of the same set isn't a reprint,
+   it's the same pull), and picks whichever set shipped last. */
 function pullRows(){
   const d=deck();
-  return dlist().map(({c,q})=>({q,c,
-    set:c.sn,setd:c.sd,num:String(c.num),r:c.r,name:c.f,ink:(c.co||[]).join("/"),cost:c.c,
-    franc:c.sto||"Other",ty:c.ty||"Other",
-    cls:(c.sub&&c.sub.length?c.sub[0]:"Unclassified")}));
+  return dlist().map(({c,q})=>{
+    const bySet=new Map();
+    prints(c).forEach(pr=>{if(!bySet.has(pr.s))bySet.set(pr.s,pr)});
+    let bestCode=c.s,bestDate=(DATA.sets[c.s]||{}).d||"";
+    bySet.forEach((pr,code)=>{
+      const dt=(DATA.sets[code]||{}).d||"";
+      if(dt>bestDate){bestDate=dt;bestCode=code}});
+    const bestPr=bySet.get(bestCode)||{num:c.num,r:c.r};
+    const others=[...bySet.keys()].filter(code=>code!==bestCode)
+      .sort((a,b)=>String((DATA.sets[b]||{}).d||"").localeCompare(String((DATA.sets[a]||{}).d||"")))
+      .map(SETNAME);
+    return {q,c,
+      set:SETNAME(bestCode),setcode:bestCode,setd:bestDate,
+      num:String(bestPr.num),r:bestPr.r||c.r,name:c.f,ink:(c.co||[]).join("/"),cost:c.c,
+      franc:c.sto||"Other",ty:c.ty||"Other",
+      cls:(c.sub&&c.sub.length?c.sub[0]:"Unclassified"),
+      alsoIn:others};
+  });
 }
 function pullSorted(rows,mode){
   const byName=(a,b)=>a.name.localeCompare(b.name);
@@ -6392,34 +6558,135 @@ const pullGroupOf=(r,mode)=>({setnum:r.set,setnumo:r.set,setaz:r.set,
   inkcost:r.ink,cost:"Cost "+r.cost,az:"",
   franc:r.franc,francink:r.franc+" · "+r.ink,inkaz:r.ink,
   rarity:r.r,type:r.ty,class:r.cls}[mode]??"");
-function renderPull(){
-  const mode=PULLSORT,rows=pullSorted(pullRows(),mode);
-  const d=deck(),tot=rows.reduce((a,r)=>a+r.q,0);
-  if(!rows.length)return `<div class="empty" style="padding:20px">This deck is empty.</div>`;
+/* The group header for a set-based sort gets its numbered-set suffix here —
+   "Wilds Unknown · Set 12" — straight from the set's own code, since the
+   main-line sets are literally numbered that way already (Quest side-sets
+   use letters, so they just don't get a suffix). */
+const pullSetSuffix=(r,mode)=>
+  (mode==="setnum"||mode==="setnumo"||mode==="setaz")&&/^\d+$/.test(r.setcode)
+    ?` · Set ${r.setcode}`:"";
+
+/* Checkbox state persists per deck, per card, per copy — so "check off cards
+   as you pull them" survives a reload instead of resetting the moment you
+   navigate away. A card key rather than an index because rows reorder with
+   every sort change and an index would silently point at the wrong card. */
+const PULLCHECKKEY="fs3_pullchecks";
+const pullChecksLoad=()=>load(PULLCHECKKEY,{});
+const pullChecksFor=name=>(pullChecksLoad()[name])||{};
+function pullCheckboxes(cardKey,q){
+  const mine=pullChecksFor(DECKS.cur)[cardKey]||[];
+  let out="";
+  for(let i=0;i<q;i++)
+    out+=`<input type="checkbox" class="pchk" data-pk="${esc(cardKey)}" data-pi="${i}"${mine[i]?" checked":""}>`;
+  return out;
+}
+const pullCheckedCount=rows=>{
+  const mine=pullChecksFor(DECKS.cur);
+  return rows.reduce((a,r)=>a+(mine[r.name]||[]).filter(Boolean).length,0)};
+
+function pullListBody(rows,mode){
   let html="",last=null;
   rows.forEach(r=>{
     const g=pullGroupOf(r,mode);
     if(g!==last){if(last!==null)html+="</table>";
-      if(g)html+=`<div class="grp">${esc(g)}</div>`;
+      if(g)html+=`<div class="grp">${esc(g)}${pullSetSuffix(r,mode)}</div>`;
       html+="<table>";last=g}
-    html+=`<tr><td class="q">${r.q}×</td><td><span class="box"></span>${esc(r.name)}</td>
-      <td class="no">#${esc(r.num)}</td><td class="ra">${esc(r.r)}</td></tr>`;
+    html+=`<tr><td class="q">${r.q}×</td>
+      <td><b>${esc(r.name)}</b>${r.alsoIn.length?`<div class="also">Also printed in ${esc(r.alsoIn.join(", "))}</div>`:""}</td>
+      <td class="no">#${esc(r.num)}</td><td class="ra">${esc(r.r)}</td>
+      <td class="chk">${pullCheckboxes(r.name,r.q)}</td></tr>`;
   });
-  html+="</table>";
-  return `<div class="pull" id="pullout">
+  return html+"</table>";
+}
+function pullImageBody(rows,mode){
+  let html="",last=null,open=false;
+  rows.forEach(r=>{
+    const g=pullGroupOf(r,mode);
+    if(g!==last){
+      if(open)html+="</div>";
+      if(g)html+=`<div class="grp">${esc(g)}${pullSetSuffix(r,mode)}</div>`;
+      html+=`<div class="pullimgs">`;open=true;last=g}
+    html+=`<figure class="pullimg">
+      ${r.c.img?`<img src="${esc(r.c.img)}" alt="${esc(r.name)}" loading="lazy">`
+               :`<div class="pullph">${esc(r.name)}</div>`}
+      <figcaption>${r.q}× ${esc(r.name)}${r.alsoIn.length?`<i>Also in ${esc(r.alsoIn.join(", "))}</i>`:""}</figcaption>
+      <div class="chk">${pullCheckboxes(r.name,r.q)}</div>
+    </figure>`;
+  });
+  return open?html+"</div>":html;
+}
+let PULLVIEW=load("fs3_pullview","list");
+let PULLCOMPACT=load("fs3_pullcompact",false);
+function renderPull(){
+  const mode=PULLSORT,rows=pullSorted(pullRows(),mode);
+  const d=deck(),tot=rows.reduce((a,r)=>a+r.q,0);
+  if(!rows.length)return `<div class="empty" style="padding:20px">This deck is empty.</div>`;
+  const body=PULLVIEW==="images"?pullImageBody(rows,mode):pullListBody(rows,mode);
+  return `<div class="pull${PULLCOMPACT?" compact":""}" id="pullout">
     <h2>${esc(DECKS.cur)}</h2>
     <div class="sub">${tot} cards · ${rows.length} unique · ${esc(FMT[d.fmt].l)}
-      · sorted by ${esc((PULLSORTS.find(x=>x[0]===mode)||[])[1]||mode)}</div>
-    ${html}
-    <div class="tot">Total ${tot} cards</div></div>`;
+      · sorted by ${esc((PULLSORTS.find(x=>x[0]===mode)||[])[1]||mode)}
+      · <span id="pullProgress">${pullCheckedCount(rows)} / ${tot} pulled</span></div>
+    ${body}
+    <div class="tot">Total ${tot} cards</div>
+    <div class="pullqr">
+      <figure><div id="pullQrDeck" class="qrbox"></div><figcaption>Scan for this deck list</figcaption></figure>
+      <figure><div id="pullQrKofi" class="qrbox"></div><figcaption>Scan to support Ready Set Ink</figcaption></figure>
+    </div>
+  </div>`;
+}
+function wirePull(){
+  const rows=pullSorted(pullRows(),PULLSORT);
+  document.querySelectorAll(".pchk").forEach(cb=>{
+    cb.onchange=()=>{
+      const all=pullChecksLoad();
+      const forDeck=all[DECKS.cur]=all[DECKS.cur]||{};
+      const arr=forDeck[cb.dataset.pk]=forDeck[cb.dataset.pk]||[];
+      arr[+cb.dataset.pi]=cb.checked;
+      save(PULLCHECKKEY,all);
+      const p=$("pullProgress");
+      if(p)p.textContent=`${pullCheckedCount(rows)} / ${rows.reduce((a,r)=>a+r.q,0)} pulled`;
+    };
+  });
+  const h=deckHash(DECKS.cur);
+  const deckUrl=h?(location.origin&&location.origin!=="null"
+    ?location.origin+location.pathname:location.href.split("#")[0])+"#"+h:"";
+  paintQR("pullQrDeck",deckUrl);
+  paintQR("pullQrKofi","https://ko-fi.com/J2E225ZV4T");
 }
 function pullText(){
   const rows=pullSorted(pullRows(),PULLSORT);let out=[DECKS.cur,""],last=null;
   rows.forEach(r=>{const g=pullGroupOf(r,PULLSORT);
-    if(g!==last){if(g)out.push("",g);last=g}
-    out.push(`${r.q}x  ${r.name}  (#${r.num}, ${r.r})`)});
+    if(g!==last){if(g)out.push("",g+pullSetSuffix(r,PULLSORT));last=g}
+    out.push(`${r.q}x  ${r.name}  (#${r.num}, ${r.r})`
+      +(r.alsoIn.length?`  [also in ${r.alsoIn.join(", ")}]`:""))});
   out.push("",`Total ${rows.reduce((a,r)=>a+r.q,0)} cards`);
   return out.join("\n");
+}
+
+/* ---- QR codes ---- loaded on demand, same lazy-script pattern as the
+   Supabase client below — most visits to the Decks page never print, so
+   there's no reason to ship a QR encoder in the main bundle for everyone. */
+const QRLIB="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js";
+let qrLibPromise=null;
+function loadQR(){
+  if(window.qrcode)return Promise.resolve(window.qrcode);
+  if(qrLibPromise)return qrLibPromise;
+  qrLibPromise=new Promise((ok,no)=>{
+    const s=document.createElement("script");
+    s.src=QRLIB;s.async=true;
+    s.onload=()=>window.qrcode?ok(window.qrcode):no(new Error("no global"));
+    s.onerror=()=>no(new Error("script blocked"));
+    document.head.appendChild(s)});
+  return qrLibPromise;
+}
+function paintQR(elId,text){
+  const el=$(elId);if(!el)return;
+  if(!text){el.innerHTML="";return}
+  loadQR().then(qrcode=>{
+    const qr=qrcode(0,"M");qr.addData(text);qr.make();
+    const cur=$(elId);if(cur)cur.innerHTML=`<img src="${qr.createDataURL(4,2)}" alt="QR code" width="104" height="104">`;
+  }).catch(()=>{});
 }
 
 /* ===================== sites we like + credits =====================
@@ -6464,6 +6731,139 @@ function renderCredits(){
   const e=$("crExit");if(e)e.onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
 }
 
+/* ===================== sites we like =====================
+   A curated links page — the best of the Lorcana web, picked by hand. Not the
+   Sources page above (that's attribution for where OUR data comes from) —
+   this is "if you like this site, you'll like these too."
+
+   An entry needs a name AND a link before it's allowed to render. A bare name
+   with nothing else is a note-to-self ("remember to add so-and-so"), not a
+   finished listing, and a public page doesn't ship notes-to-self — so
+   renderLinks() below filters those out rather than showing a dead card. */
+const LINKS_SECTIONS=[
+ {h:"Favorite sites",items:[
+   {n:"Dreamborn.ink",u:"https://dreamborn.ink",cat:"Deck builder",
+    blurb:"The best way to see and manage decklists."},
+   {n:"r/Lorcana",u:"https://www.reddit.com/r/Lorcana/",cat:"Reddit",
+    blurb:"The best place for community discussion — and probably leaks 🤣"},
+   {n:"Mushu Report",u:"https://mushureport.com",cat:"News, historical record",
+    blurb:"The original and best place for Disney Lorcana news."},
+   {n:"Ready Set Ink! YouTube",u:"https://www.youtube.com/@readysetink",cat:"YouTube",
+    blurb:"The best Disney Lorcana related videos."},
+ ]},
+ {h:"Official Disney Lorcana",items:[
+   {n:"Disney Lorcana",u:"https://www.disneylorcana.com/en-US/",cat:"Official",
+    blurb:"The official hub — best used as a portal to the official rules document."},
+ ]},
+ {h:"Best of the community",items:[
+   {n:"@BobbyMcWho",u:"https://x.com/BobbyMcWho",cat:"X",
+    blurb:"Wholesome and thoughtful community member."},
+   {n:"Duels.ink",u:"https://duels.ink/",cat:"Gameplay simulator",
+    blurb:"The best way to play Lorcana online — unofficially, of course."},
+ ]},
+ {h:"Discords",items:[
+   /* Invite link is time-limited (expires 2026-09-25 as given) — Discord
+      invites like this need refreshing periodically or they 404. The visible
+      note is a soft safety net; whoever maintains this page should actually
+      check it past that date. */
+   {n:"Lorcana Rulebook Discord",u:"https://discord.gg/TNhT5GTKc",cat:"Discord, rules",
+    blurb:"A very well organized resource and community focused on the rules of Disney Lorcana.",
+    note:"If this invite link has gone stale, let us know."},
+ ]},
+ {h:"Data & tools",items:[
+   {n:"LorcanaJSON",u:"https://lorcanajson.org",cat:"Card data",
+    blurb:"The structured Disney Lorcana card database — this site's own card data comes from it too."},
+   {n:"Lorcast",u:"https://lorcast.com",cat:"Card data, prices",
+    blurb:"Card images and live pricing — this site's own price snapshot comes from it too."},
+ ]},
+ {h:"Other cool things",items:[
+   {n:"Lorebot",u:"https://lorebot.ink",cat:"Website, Discord bot",
+    blurb:"A great website with thoughtful articles and information, plus a custom bot for Discord and streaming.",
+    note:"Made by @BobbyMcWho — our favorite account on X."},
+ ]},
+];
+/* Empty until there's a real form to send people to. The submit button below
+   reads this and shows a calm "coming soon" instead of a dead link when it's
+   blank — same pattern as every other not-ready-yet feature on this site. */
+const SUBMIT_FORM_URL="";
+function renderLinks(){
+  const sections=LINKS_SECTIONS.map(sec=>({...sec,items:sec.items.filter(it=>it.n&&it.u)}))
+    .filter(sec=>sec.items.length);
+  $("linkspage").innerHTML=`<div class="page">
+    <button class="btn" id="lkExit" style="margin-bottom:12px">← Other</button>
+    <h1>Sites We Like</h1>
+    <p class="lede">The best of the Lorcana web, picked by hand — deck tools, communities,
+      news, and a few favorite people. Not comprehensive, just genuinely good.</p>
+    ${sections.map(sec=>`
+      <h3 class="sec2">${esc(sec.h)}</h3>
+      <div class="linkgrid">${sec.items.map(it=>`
+        <a class="linkcard" href="${esc(it.u)}" target="_blank" rel="noopener noreferrer">
+          <div class="lkhead">
+            ${it.img?`<img src="${esc(it.img)}" alt="">`:`<span class="lkmono">${esc((it.n||"?")[0])}</span>`}
+            <div><b>${esc(it.n)} ↗</b>${it.cat?`<span class="lkcat">${esc(it.cat)}</span>`:""}</div>
+          </div>
+          ${it.blurb?`<p>${esc(it.blurb)}</p>`:""}
+          ${it.note?`<p class="lknote">${esc(it.note)}</p>`:""}
+        </a>`).join("")}</div>`).join("")}
+    <div class="linkcta">
+      <b>Want to be here?</b>
+      <p>We feature the best of the Lorcana community — deck tools, creators, communities and
+        resources. Think your site belongs on this list?</p>
+      ${SUBMIT_FORM_URL
+        ?`<a class="btn go" href="${esc(SUBMIT_FORM_URL)}" target="_blank" rel="noopener noreferrer">Submit it →</a>`
+        :`<button class="btn" disabled title="Submissions open soon">Submit it → (coming soon)</button>`}
+    </div>
+  </div>`;
+  const e=$("lkExit");if(e)e.onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+}
+
+/* ===================== account =====================
+   Reached by tapping the account button in the header while signed in —
+   that button used to sign you straight out on a single click, with nowhere
+   to go if you actually wanted to see your own account instead. Now it opens
+   this page, and signing out is a deliberate action from inside it. */
+function renderAccount(){
+  if(!ACCT.user){OPAGE="";save("fs3_opage",OPAGE);showTab("tOther");return}
+  const email=ACCT.user.email||"";
+  const deckCount=Math.max(0,Object.keys(DECKS.list).length-1);   // minus the draft
+  $("accountpage").innerHTML=`<div class="page">
+    <button class="btn" id="acctExit" style="margin-bottom:12px">← Other</button>
+    <h1>Your account</h1>
+    <p class="lede">Signed in as <b>${esc(email)}</b>.</p>
+
+    <h3 class="sec2">This browser</h3>
+    <div class="dstats">
+      <div class="dstat"><b>${N(DUST.bal)}</b><i>dust</i></div>
+      <div class="dstat"><b>${(DUST.titles||[]).length}</b><i>titles</i></div>
+      <div class="dstat"><b>${deckCount}</b><i>decks saved</i></div>
+    </div>
+
+    <h3 class="sec2">Settings</h3>
+    <div class="prow"><div><b>Site settings</b>
+      <p>Prices, collection tracking, mini games, and everything else that changes how the site behaves for you.</p></div>
+      <button class="btn" id="acctSettings">Open →</button></div>
+
+    <h3 class="sec2">Sign out</h3>
+    <div class="prow"><div><b>Sign out of this browser</b>
+      <p>Your decks, dust, titles and collection stay safe in your account — this just clears them from here until you sign back in.</p></div>
+      <button class="btn" id="acctSignOut">Sign out</button></div>
+
+    <h3 class="sec2">Delete your data</h3>
+    <div class="prow"><div><b>Delete everything</b>
+      <p>Permanently deletes your saved decks, dust, titles, starred staples, collection and borrow template from Ready Set Ink's database, then signs you out and clears this browser. This can't be undone. It does not remove your Google sign-in itself — you're welcome to come back and start fresh any time.</p></div>
+      <button class="btn bad" id="acctDelete">Delete everything</button></div>
+  </div>`;
+  $("acctExit").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+  $("acctSettings").onclick=()=>{OPAGE="pref";save("fs3_opage",OPAGE);showTab("tOther")};
+  $("acctSignOut").onclick=async()=>{
+    const ok=await confirmBox("Sign out",
+      "Your decks, dust, titles and collection stay safe in your account — this just clears them from this browser until you sign back in.",
+      "Sign out");
+    if(ok)ACCT.signOut();
+  };
+  $("acctDelete").onclick=()=>ACCT.deleteMyData();
+}
+
 /* ===================== Blue Striped Fish Aquarium =====================
    An idle tank. He swims with a wandering heading rather than bouncing off the
    walls like a screensaver, flips to face the way he's going, and drifts toward
@@ -6477,6 +6877,7 @@ function stopAqua(){
   if(AQ){
   if(AQ.raf)cancelAnimationFrame(AQ.raf);
   clearInterval(AQ.tick);clearInterval(AQ.drop);clearInterval(AQ.bub);
+  clearTimeout(AQ.idleTimer);
   /* The effect loops fire every 70–500ms. Left running they keep appending
      particles to a node that is no longer on the page — invisible, but it
      never stops. */
@@ -6496,7 +6897,13 @@ const FFX=[
  {id:"sapphire", l:"Sapphire Glow", c:600,  d:"Deep blue light pulsing at the edges."},
  {id:"sparkles", l:"Comet Trail",   c:1200, d:"Stars stream off you as you move. Turn hard for a burst."},
  {id:"legendary",l:"Legendary Foil",c:2500, d:"Full rainbow foil. Everyone can see it."},
- {id:"abyss",    l:"Abyss",         c:5000, d:"Something purple and wrong follows you around."}];
+ {id:"abyss",    l:"Abyss",         c:5000, d:"Something purple and wrong follows you around."},
+ /* These two are the first FFX pair that touch more than a glow layer —
+    Magnetic Pull genuinely reels food in, and Zombie Mode replaces the card
+    and the food's art outright. Still opt-in and still stacked with
+    everything above; nothing here changes what a bite is worth. */
+ {id:"magnet",   l:"Magnetic Pull",  c:20000, d:"Food drifts toward you from across the tank."},
+ {id:"zombie",   l:"Zombie Mode",    c:100000,d:"The food turns undead. You turn into just the emoji, with swords."}];
 const ffxLoad=()=>{const v=load(FFXKEY,{owned:[],active:[]});
   return {owned:v.owned||[],active:v.active||[]}};
 function renderAqua(){
@@ -6513,6 +6920,7 @@ function renderAqua(){
       <div class="fftitle"><h2>FEED FLOUNDER</h2><p>eat fish food. earn dust. that's it.</p></div>
       <div class="ffcard" id="ffcard"></div>
       <div class="ffhint" id="ffhint">Move your finger or mouse to swim</div>
+      <div class="ffpause" id="ffpause">Paused — tap the water to keep swimming</div>
       <div class="ffweed s1"></div><div class="ffweed s2"></div>
       <div class="ffweed s3"></div><div class="ffweed s4"></div>
 
@@ -6615,23 +7023,76 @@ function renderAqua(){
   const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
   AQ={raf:null,st,earn:0};
 
+  /* FFX setup lives here, ahead of spawnFood() and frame() below, because both
+     read on() — spawnFood() needs to know about Zombie Mode from its very
+     first (synchronous) call, before anything async has had a chance to run. */
+  FFX.forEach(x=>{const l=document.createElement("div");
+    l.className="ff2-layer ff2-"+x.id;card.appendChild(l)});
+  /* The swords ring is real markup, not a CSS-only layer like the others —
+     it needs six children at fixed angles, not one div a class can light up. */
+  {const sw=document.createElement("div");sw.className="ffswords";
+    for(let i=0;i<6;i++){const s=document.createElement("span");
+      s.style.setProperty("--a",(i*60)+"deg");s.textContent="⚔️";sw.appendChild(s)}
+    card.appendChild(sw)}
+  /* Cached rather than re-reading (and JSON.parsing) localStorage from inside
+     the 60fps frame() loop and from every 70–500ms effect tick — on() used to
+     do exactly that, dozens of times a second, which is exactly the kind of
+     thing that reads as "buggy" on a phone rather than a desktop. Refreshed
+     wherever ownership actually changes, in paintFX(). */
+  let activeFX=new Set(ffxLoad().active);
+  const on=id=>activeFX.has(id);
+
+  /* Two-second idle pause. Nothing on a phone was actually blocking the ffbar
+     buttons from receiving their own tap — but the whole tank captures every
+     pointer event that lands on it (see the chrome check below for the other
+     half of that), and on mobile it is very easy for a tap to read as a tiny
+     drag, which kept re-aiming Flounder at exactly the moment somebody was
+     trying to hit Full screen or Effects instead. Stepping out of the way
+     after a couple of quiet seconds — and only resuming once the water
+     itself is touched again — means the UI is never fighting an animation
+     that is still hungry for input. */
+  let idle=false;
+  const wake=()=>{
+    if(idle){idle=false;game.classList.remove("ffidle");game.style.touchAction="none"}
+    clearTimeout(AQ.idleTimer);
+    AQ.idleTimer=setTimeout(()=>{
+      idle=true;game.classList.add("ffidle");
+      /* pan-y rather than auto: a stray touch after 2 seconds of nobody
+         playing scrolls the page like anywhere else instead of being eaten
+         by a game nobody is currently engaged with. The very next touch on
+         the water calls wake() and this snaps straight back to none. */
+      game.style.touchAction="pan-y"},2000)};
   function setTarget(cx,cy){
     const r=R();
     target.x=clamp(cx-r.left,50,r.width-50);
     target.y=clamp(cy-r.top,40,r.height-46);
-    if(!started){started=true;hint.classList.add("hide")}}
-  game.onpointermove=e=>setTarget(e.clientX,e.clientY);
-  game.onpointerdown=e=>setTarget(e.clientX,e.clientY);
-  game.ontouchmove=e=>{const t=e.touches[0];if(t)setTarget(t.clientX,t.clientY)};
+    if(!started){started=true;hint.classList.add("hide")}
+    wake()}
+  /* Chrome — the ffbar and the shop drawer — is a child of #ffgame so it
+     rides along into full screen, but that means a tap on it also lands on
+     the container these listeners are bound to. Without this check, opening
+     Effects or hitting Full screen always ALSO yanked Flounder to that
+     corner of the screen first. */
+  const onChrome=t=>!!(t&&t.closest&&t.closest(".ffbar,.ffdraw"));
+  game.onpointermove=e=>{if(!onChrome(e.target))setTarget(e.clientX,e.clientY)};
+  game.onpointerdown=e=>{if(!onChrome(e.target))setTarget(e.clientX,e.clientY)};
+  game.ontouchmove=e=>{if(onChrome(e.target))return;const t=e.touches[0];if(t)setTarget(t.clientX,t.clientY)};
+  wake();   // start the 2s countdown immediately — nobody's touched it yet either
 
   const chooseType=()=>{const q=Math.random();
     return q<.01?"coconut":q<.04?"potato":q<.12?"rare":"pellet"};
   function spawnFood(){
     if(!AQ||foods.length>=14)return;
     const r=R(),type=chooseType(),el=document.createElement("div");
-    el.className="ffood "+(type==="rare"?"pellet rare":type==="pellet"?"pellet":type);
-    if(type==="potato")el.textContent="🥔";
-    if(type==="coconut")el.textContent="🥥";
+    /* Zombie Mode reskins every type to the same 🧟 rather than a
+       zombie-potato and a zombie-coconut — the type still decides what it's
+       worth, this is only ever what it looks like. */
+    if(on("zombie")){el.className="ffood zombie";el.textContent="🧟"}
+    else{
+      el.className="ffood "+(type==="rare"?"pellet rare":type==="pellet"?"pellet":type);
+      if(type==="potato")el.textContent="🥔";
+      if(type==="coconut")el.textContent="🥥";
+    }
     const f={el,type,x:26+Math.random()*Math.max(40,r.width-52),
       y:60+Math.random()*Math.max(40,r.height-120),
       phase:Math.random()*Math.PI*2,drift:.18+Math.random()*.28,spin:(Math.random()-.5)*1.6};
@@ -6696,9 +7157,17 @@ function renderAqua(){
       chonky=now<chonkyUntil?1.22:1,bonk=now<bonkUntil?Math.sin(now/22)*8:0;
     card.style.left=(pos.x+bonk)+"px";card.style.top=(pos.y+bob)+"px";
     card.style.transform=`translate(-50%,-50%) scale(${chonky}) rotate(${tilt}deg)`;
+    const magnetOn=on("magnet");
     for(let i=foods.length-1;i>=0;i--){
       const f=foods[i];f.phase+=.018*dt;
       f.y+=Math.sin(f.phase)*.08+f.drift*.08;f.x+=Math.cos(f.phase*.75)*.07;
+      /* Reels food in from anywhere it's already drifted within reach — not a
+         teleport, just a steady pull that gets stronger as it gets closer, so
+         it still reads as swimming toward Flounder rather than snapping to him. */
+      if(magnetOn){
+        const mx=pos.x-f.x,my=pos.y-f.y,md=Math.hypot(mx,my)||1;
+        if(md<280){const pull=(1-md/280)*3.4*dt;f.x+=mx/md*pull;f.y+=my/md*pull}
+      }
       const special=f.type==="potato"||f.type==="coconut";
       const rot=special?` rotate(${f.phase*40*f.spin}deg)`:"";
       f.el.style.transform=`translate(${Math.sin(f.phase)*4}px,${Math.cos(f.phase*.8)*4}px)${rot}`;
@@ -6713,9 +7182,6 @@ function renderAqua(){
      the particles are parented to the game box rather than the page. Every
      interval is parked on AQ so stopAqua() kills them when you leave — without
      that they'd keep firing into a detached node for the rest of the session. */
-  FFX.forEach(x=>{const l=document.createElement("div");
-    l.className="ff2-layer ff2-"+x.id;card.appendChild(l)});
-  const on=id=>ffxLoad().active.includes(id);
   const rnd=(a,b)=>a+Math.random()*(b-a);
   const hidden=()=>document.hidden;
   function particle(cls,x,y,text,size){
@@ -6808,6 +7274,7 @@ function renderAqua(){
 
   function paintFX(){
     const v=ffxLoad();
+    activeFX=new Set(v.active);
     card.className="ffcard "+v.active.map(i=>"ff-"+i).join(" ");
     const sh=$("ffshop");if(!sh)return;
     sh.innerHTML=FFX.map(x=>{
@@ -8678,8 +9145,12 @@ function deckOffCollection(){
 
    DRAFT is a name nobody can type: the save dialog rejects it. */
 const DRAFT="New deck";
-let DECKDIRTY=load("fs3_deckdirty",false);
-function markDirty(v){DECKDIRTY=v;save("fs3_deckdirty",v);paintDeckBar()}
+/* In memory only, on purpose — since edits no longer persist until Save
+   (see touchDeck()), a reload always lands back on the last-saved deck,
+   which is itself clean. A dirty flag that survived the reload would say
+   "unsaved" over cards that are, in fact, exactly what's on disk. */
+let DECKDIRTY=false;
+function markDirty(v){DECKDIRTY=v;paintDeckBar()}
 function paintDeckBar(){
   const n=$("dbName"),d=$("dbDirty");if(!n)return;
   n.textContent=DECKS.cur;
@@ -8711,6 +9182,34 @@ function sparkBurst(x,y){
   }catch(e){}
 }
 
+/* True once it's already running as its own app — an install nudge aimed at
+   someone who already installed it is just noise. iOS has no display-mode
+   media query of its own; navigator.standalone is its equivalent. */
+const isStandalone=()=>window.matchMedia("(display-mode: standalone)").matches
+  ||navigator.standalone===true;
+const A2HS_SEEN_KEY="fs3_a2hs_seen";
+/* Shown once, the moment saving actually produces a 5th deck — the point
+   somebody building on this site for real, not just poking at it, has
+   probably been reached. "See how" hands off to the write-up in Settings
+   instead of repeating it here, so there is exactly one place these
+   instructions live and drift out of sync with. */
+function a2hsPrompt(){
+  return new Promise(done=>{
+    const w=document.createElement("div");w.className="cfmbg";
+    w.innerHTML=`<div class="cfm" role="dialog" aria-modal="true">
+      <h3>📲 Five decks in!</h3>
+      <p>Save Ready Set Ink to your home screen and it opens like its own app — full screen, no browser bar, one tap from your phone.</p>
+      <div class="cfmb"><button class="btn" data-no>Maybe later</button>
+      <button class="btn go" data-yes>See how →</button></div></div>`;
+    document.body.appendChild(w);
+    const shut=v=>{w.remove();document.removeEventListener("keydown",key);done(v)};
+    const key=e=>{if(e.key==="Escape")shut(false);
+      if(e.key==="Enter")shut(true)};
+    w.querySelector("[data-no]").onclick=()=>shut(false);
+    w.querySelector("[data-yes]").onclick=()=>shut(true);
+    w.onclick=e=>{if(e.target===w)shut(false)};
+    document.addEventListener("keydown",key)})}
+
 async function saveDeckPrompt(ev){
   const cards=dlist();
   if(!cards.length){toast("Nothing to save yet — add some cards first");return}
@@ -8735,6 +9234,14 @@ async function saveDeckPrompt(ev){
   if(ev&&ev.clientX)sparkBurst(ev.clientX,ev.clientY);
   toast(paid?`Saved "${name}" · +10 dust`:`Saved "${name}"`);
   renderDeck&&renderDeck();
+  /* Exactly the save that brings the total to 5 — not "5 or more", so this
+     never re-fires after a deck gets deleted and the count dips back down
+     and up again. */
+  const deckCount=Object.keys(DECKS.list).length-1;   // minus the draft
+  if(deckCount===5&&!isStandalone()&&!load(A2HS_SEEN_KEY,false)){
+    save(A2HS_SEEN_KEY,true);
+    if(await a2hsPrompt()){A2HSOPEN=true;OPAGE="pref";save("fs3_opage",OPAGE);showTab("tOther")}
+  }
 }
 
 /* A text prompt in the site's chrome, same reasoning as confirmBox. */
@@ -9055,6 +9562,8 @@ function renderDecksPage(){
       <b style="font-size:13px;background:var(--canvas-soft);padding:3px 8px;border-radius:2px">Pull list</b>
       <select id="pullSort">${PULLSORTS.map(([v,l])=>
         `<option value="${v}"${PULLSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select>
+      <button class="btn${PULLVIEW==="images"?" go":""}" id="pullView" title="Switch between a text list and card images">${PULLVIEW==="images"?"☰ List view":"🖼️ Image view"}</button>
+      <button class="btn${PULLCOMPACT?" go":""}" id="pullCompact" title="Tighter spacing so a longer deck still fits one printed page">🗜️ Fit to 1 page</button>
       <button class="btn collonly" id="pullToColl">📦 Add this deck to my collection</button>
       <button class="btn bad collonly" id="pullOffColl">📦 Remove this deck from my collection</button>
       <button class="btn" id="pullCopy">📋 Copy</button>
@@ -9111,7 +9620,10 @@ function renderDecksPage(){
     toast(`Removed ${r.cards} cards from ${r.touched} rows`);
     renderBorrow();renderDecksPage()};
   renderBorrow();
+  wirePull();
   $("pullSort").onchange=e=>{PULLSORT=e.target.value;save("fs3_pullsort",PULLSORT);renderDecksPage()};
+  $("pullView").onclick=()=>{PULLVIEW=PULLVIEW==="images"?"list":"images";save("fs3_pullview",PULLVIEW);renderDecksPage()};
+  $("pullCompact").onclick=()=>{PULLCOMPACT=!PULLCOMPACT;save("fs3_pullcompact",PULLCOMPACT);renderDecksPage()};
   $("pullCopy").onclick=()=>navigator.clipboard.writeText(pullText())
     .then(()=>toast("Pull list copied"),()=>toast("Copy failed"));
   $("pullPrint").onclick=()=>window.print();
@@ -9966,7 +10478,8 @@ function judgeDraw(){
   const body=$("jbody");if(!body)return;
   if(s.v==="home")      body.innerHTML=jHome();
   else if(s.v==="pick") body.innerHTML=jPicker(s.side,s.under);
-  else if(s.v==="rules")body.innerHTML=`<button class="jback" data-jback="1">← Back to the table</button>${jHomeList()}${jFoot()}`;
+  else if(s.v==="rules")body.innerHTML=`<button class="jback" data-jback="1">← Back</button>${jHomeList()}${jFoot()}`;
+  else if(s.v==="advanced")body.innerHTML=jAdvanced();
   else if(s.v==="case") body.innerHTML=jCaseRuling();
   else if(s.v==="card") body.innerHTML=jCard(s.f);
   else if(s.v==="rule") body.innerHTML=jRule(s.id);
@@ -9988,7 +10501,9 @@ function jWire(body){
     if(under){JCASE.under[under]=JCASE.under[under]||[];if(JCASE.under[under].length<2)JCASE.under[under].push(f)}
     else if(JCASE[side]&&!JCASE[side].includes(f)&&JCASE[side].length<6)JCASE[side].push(f);
     const q=$("jq");if(q){q.value="";q.placeholder="Quick search: card, keyword, or rule…"}
-    JSTACK=[{v:"home"}];judgeDraw()});
+    /* Back to the board, not the menu — picking a card happens FROM Advanced,
+       so that's where it should land, same as every other action in there. */
+    JSTACK=[{v:"home"},{v:"advanced"}];judgeDraw()});
   body.querySelectorAll("[data-jremove]").forEach(b=>b.onclick=()=>{
     const side=b.dataset.jside,f=b.dataset.jremove;
     JCASE[side]=JCASE[side].filter(x=>x!==f);
@@ -10011,6 +10526,7 @@ function jWire(body){
     judgeDraw()});
   body.querySelectorAll("[data-jcase]").forEach(b=>b.onclick=()=>jgo({v:"case"}));
   body.querySelectorAll("[data-jbrowse]").forEach(b=>b.onclick=()=>jgo({v:"rules"}));
+  body.querySelectorAll("[data-jadvanced]").forEach(b=>b.onclick=()=>jgo({v:"advanced"}));
   const cq=body.querySelector("#jcaseq");if(cq)cq.oninput=()=>JCASE.question=cq.value.slice(0,240);
 }
 function jCites(r){
@@ -10089,25 +10605,34 @@ function jTableZone(side,label){
    now, and building the actual board state is the thing you opt into, under
    its own clearly-labelled Advanced section, for the interactions that
    genuinely need it (a specific card's ruling in a specific board state). */
-function jTableHome(){
-  /* Stays open on its own once you're actually using it — marked a card, or
-     put anything on the table — rather than needing a separate remembered
-     toggle state that could drift from what's actually on the board. */
-  const inUse=JCASE.active||JCASE.you.length||JCASE.them.length;
-  return jHomeList()
-    +`<details class="jadvanced" id="jadv"${inUse?" open":""}>
-      <summary><b>Advanced</b> — build the exact board state for a specific interaction</summary>
-      <div class="jsteps"><span><i>1</i>Build the table</span><b></b><span><i>2</i>Mark the action</span><b></b><span><i>3</i>Get the ruling</span></div>
-      <div class="jtable">
-        ${jTableZone("them","Their field")}
-        <div class="jaction"><label for="jcaseq">What is happening?</label>
-          <input id="jcaseq" value="${esc(JCASE.question)}" placeholder="Example: This character challenged mine—does its ability trigger?">
-          <button class="jcasego" data-jcase="1"${JCASE.active?"":" disabled"}>${JCASE.active?"Review interaction and find ruling":"Mark the activating card to continue"}</button>
-        </div>
-        ${jTableZone("you","Your field")}
+/* The home screen is a menu, not a wall of content — search up top, then two
+   clear doors: skim every summarized rule, or build the actual board state
+   for a specific interaction. Advanced used to be the last thing on a long
+   scrolling list of rules; now it's one tap away, same as Basic. */
+function jHomeMenu(){
+  return `<div class="jintro"><span class="ji">⚖️</span><span><b>Find the exact card or situation</b>Search card names, printed text, keywords, and the full text of published rulings.${JSTANDALONE?"":" Scores stay locked until you return."}</span></div>
+    <div class="jgroup"><h3>Or browse</h3>
+    <button class="jhit" data-jbrowse="1">
+      <span class="ji">📖</span><span><b>Basic rulings and corrections</b>
+        <span>Keywords, timing, and every summarized rule on this site</span></span></button>
+    <button class="jhit" data-jadvanced="1">
+      <span class="ji">🛠️</span><span><b>Advanced</b>
+        <span>Build the exact board state for a specific interaction</span></span></button>
+  </div>`;
+}
+function jAdvanced(){
+  return `<button class="jback" data-jback="1">← Back</button>
+    <div class="jadvhd"><b>Advanced</b> — build the exact board state for a specific interaction</div>
+    <div class="jsteps"><span><i>1</i>Build the table</span><b></b><span><i>2</i>Mark the action</span><b></b><span><i>3</i>Get the ruling</span></div>
+    <div class="jtable">
+      ${jTableZone("them","Their field")}
+      <div class="jaction"><label for="jcaseq">What is happening?</label>
+        <input id="jcaseq" value="${esc(JCASE.question)}" placeholder="Example: This character challenged mine—does its ability trigger?">
+        <button class="jcasego" data-jcase="1"${JCASE.active?"":" disabled"}>${JCASE.active?"Review interaction and find ruling":"Mark the activating card to continue"}</button>
       </div>
-      <div class="jnote">Add only the cards involved. Mark the card whose ability or action started the question as <b>Activating</b>, and mark a chosen or challenged card as the <b>Target</b>.</div>
-    </details>`;
+      ${jTableZone("you","Your field")}
+    </div>
+    <div class="jnote">Add only the cards involved. Mark the card whose ability or action started the question as <b>Activating</b>, and mark a chosen or challenged card as the <b>Target</b>.</div>`;
 }
 function jPicker(side,under){
   const q=$("jq")?$("jq").value:"",r=judgeFind(q);
@@ -10163,8 +10688,8 @@ function jHome(){
       +jFoot();
   }
   if(r)return `<div class="jnote">Nothing matched “${esc(q)}”. Try a keyword (Ward, Shift),
-    a card name, or what happened (“drew an extra card”).</div>`+jHomeList()+jFoot();
-  return jTableHome();
+    a card name, or what happened (“drew an extra card”).</div>`+jHomeMenu()+jFoot();
+  return jHomeMenu();
 }
 function jRuleRow(x){
   return `<button class="jhit" data-jrule="${esc(x.id)}">
@@ -10311,6 +10836,7 @@ const OTHER_GROUPS=[
    ["Historic leaks","A record of leaks past, published deliberately late. Never live, never spoilers.","leak"],
    ["Worldbuilding","What Lorcana actually is — the Illuminary, glimmers, the inks, and where the story has gone.","world"],
    ["Sources & credits","Where to play online, where to read the news, and everyone whose work this is built on.","cred"],
+   ["Sites We Like","The best of the Lorcana web, picked by hand — deck tools, communities, news, and a few favorite people.","links"],
  ]},
  {g:"Mini games",chips:[
    ["Guess the card","A sliver of art and three names. Zoom out if you must — it's worth less.","guess"],
@@ -10670,6 +11196,11 @@ const PREF_SOON=[
 
 /* Settings. Only one switch so far, but the page is the right home for the
    next one rather than another tile on the Other menu. */
+/* Set to true right before navigating here from the "5th deck" nudge, so the
+   instructions are already open instead of one more tap away. Reset once the
+   page has used it — a permanent open state would just be one more thing an
+   unrelated toggle click on this page has to remember not to close. */
+let A2HSOPEN=false;
 function renderPrefs(){
   const row=(title,body,btnId,state,off)=>`
     <div class="prow${off?" soon":""}">
@@ -10714,6 +11245,31 @@ function renderPrefs(){
         collection are yours and never leave your browser unless you sign in.</p>
     </div>
     ${syncRow?`<h3 class="sec2">Your account</h3>${syncRow}`:""}
+    <h3 class="sec2">Save as an app</h3>
+    <details class="a2hsinfo" id="a2hsDetails"${A2HSOPEN?" open":""}>
+      <summary><b>Save Ready Set Ink to your home screen</b>
+        Opens full-screen, no browser bar, one tap from your phone</summary>
+      <div class="a2hsbody">
+        <div class="a2hsplat">
+          <h4>iPhone or iPad (Safari)</h4>
+          <ol><li>Tap the <b>Share</b> button (the square with an arrow pointing up).</li>
+            <li>Scroll down and tap <b>Add to Home Screen</b>.</li>
+            <li>Tap <b>Add</b> in the top right.</li></ol>
+        </div>
+        <div class="a2hsplat">
+          <h4>Android (Chrome)</h4>
+          <ol><li>Tap the <b>⋮</b> menu in the top right.</li>
+            <li>Tap <b>Install app</b> (or <b>Add to Home screen</b>).</li>
+            <li>Confirm with <b>Install</b>.</li></ol>
+        </div>
+        <div class="a2hsplat">
+          <h4>Desktop (Chrome or Edge)</h4>
+          <ol><li>Look for the install icon in the address bar — a small monitor with an arrow, or a ⊕.</li>
+            <li>Click it, then click <b>Install</b>.</li>
+            <li>No icon there? Open the <b>⋮</b> menu and look for <b>Install Ready Set Ink…</b>.</li></ol>
+        </div>
+      </div>
+    </details>
     <h3 class="sec2">What's switched on</h3>
     <!-- One pair of buttons for people who know what they want: everything, or
          nothing. Dark mode is left out of both — it's a look, not a feature,
@@ -10730,7 +11286,7 @@ function renderPrefs(){
       "Adds the owned and foil steppers to card pages and turns on the My collection tab. Switch it off if you only came here to search and build decks.",
       "pfColl",COLLON)}
     ${row("Card prices",
-      "Puts a Flounder Price under every card — our own rounding, onto a short ladder of silly numbers, so a price here looks like nowhere else."
+      "Puts a rounded price under every card — our own approximation, not a live quote."
         +(priceDate()?` The real market price sits underneath it on each card's own page, from a snapshot taken ${priceDate()}. Anything to do with actually buying — the shopping list, the budgets — always uses the real number.`
                      :" No prices in this build yet."),
       "pfPrice",PRICES)}
@@ -10777,6 +11333,11 @@ function renderPrefs(){
        as a roadmap. The rows are kept in PREF_SOON below rather than deleted,
        so each one comes back by moving it up here when it's real. */
   $("prefBack").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+  {const d=$("a2hsDetails");
+   if(d){
+     d.ontoggle=()=>{A2HSOPEN=d.open};
+     if(A2HSOPEN){d.scrollIntoView({block:"start"});A2HSOPEN=false}
+   }}
   const flip=(id,get,set,msg)=>{const b=$(id);if(!b||b.disabled)return;
     b.onclick=()=>{set(!get());renderPrefs();applyPrefs();toast(msg(get()))}};
   flip("pfColl",()=>COLLON,v=>{COLLON=v;save(K_COLLON,v)},
@@ -10933,7 +11494,7 @@ function renderShop(){
     ${html}
     <div class="legal">
       ${haveFeed?`<p>Every number on this page is the REAL market price from a snapshot
-        taken on ${esc(priceDate())} — not the Flounder Price shown on the cards. Budgets
+        taken on ${esc(priceDate())} — not the rounded price shown on the cards. Budgets
         that round themselves into a joke would send you to a checkout with the wrong
         amount of money. What you actually pay is whatever TCGplayer says when you get
         there, and the cart optimizer will usually beat the number shown here.</p>`:""}
@@ -11150,6 +11711,8 @@ const OPAGES={
   click: ["vClick",  ()=>renderClicker()],
   hex:   ["vHex",    ()=>renderOutpost()],
   cred:  ["vCred",   ()=>renderCredits()],
+  links: ["vLinks",  ()=>renderLinks()],
+  account:["vAccount",()=>renderAccount()],
   pref:  ["vPref",   ()=>renderPrefs()],
   shop:  ["vShop",   ()=>renderShop()],
   lore:  ["vLore",   ()=>renderLore()],
@@ -11186,7 +11749,7 @@ function renderOther(){
    difference is whether the deck rail is on screen — because maintaining two
    copies of the search UI would guarantee they drift apart. */
 const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
-const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop","vLore","vJudge"];
+const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop","vLore","vJudge","vLinks","vAccount"];
 /* TAB is read from storage HERE rather than being left at "tDeck" until
    showTab() runs at the bottom of the file. The grid is rendered before that
    line, and tile() and bindGrid() both branch on TAB — so booting straight
@@ -11458,7 +12021,7 @@ $("sort").onchange=e=>{S.sort=e.target.value;renderGrid()};
 function setFmt(v){
   if(!FMT[v])return;
   const d=deck();if(d.fmt===v)return;
-  d.fmt=v;saveDecks();markDirty(true);
+  d.fmt=v;markDirty(true);
   const cap=FMT[v].cap;
   while(S.ink.size>cap)S.ink.delete([...S.ink].pop());
   S.limit=150;render();paintDeckBar()}
@@ -11714,7 +12277,12 @@ const ACCT={
     const b=$("acct");if(!b)return;
     if(!this.configured())return;              // stays hidden, site unchanged
     b.hidden=false;
-    b.onclick=()=>this.user?this.signOut():this.signIn();
+    /* Signed in, this used to sign you straight back out on one click — no
+       way to actually see your own account. Now it opens the account page;
+       signing out happens from a button inside it, on purpose. */
+    b.onclick=()=>{
+      if(this.user){OPAGE="account";save("fs3_opage",OPAGE);showTab("tOther")}
+      else this.signIn()};
     if(!this.hasSession()&&!/[#&]access_token=/.test(location.hash))return;
     try{
       const sb=await this.client();
@@ -11729,11 +12297,51 @@ const ACCT={
         options:{redirectTo:location.origin+location.pathname}})}
     catch(e){toast("Couldn't reach sign-in — check your connection")}},
 
+  /* Signing out used to leave every synced key sitting right there in
+     localStorage — decks, dust, titles, all of it — which reads as "nothing
+     happened" rather than "signed out". It's still safe: everything here was
+     either just pushed to the account, or (for a key the database is
+     refusing — see syncReport(), e.g. a migration that hasn't been run yet)
+     left alone rather than destroyed with nowhere else it lives. A reload
+     afterward is the simplest way to get every in-memory var (DECKS, DUST,
+     STARS, COLL, BORROW) back to a genuinely fresh state, not just the ones
+     touched here. */
   async signOut(){
-    try{const sb=await this.client();await sb.auth.signOut()}catch(e){}
-    try{sessionStorage.removeItem(PULLED)}catch(e){}   // so signing back in pulls again
-    this.user=null;this.paint();
-    toast("Signed out — your decks stay in this browser")},
+    const b=$("acct");if(b){b.disabled=true;b.textContent="Signing out…"}
+    try{
+      const sb=await this.client();
+      await this.push(SYNCED);
+      await sb.auth.signOut()
+    }catch(e){}
+    try{sessionStorage.removeItem(PULLED)}catch(e){}
+    SYNCED.forEach(k=>{if(this.sync[k]==="ok"){try{localStorage.removeItem(k)}catch(e){}}});
+    this.user=null;this.sync={};
+    this.reload()},
+
+  /* Deletes the account's copy outright, then does everything signOut() does
+     to the browser too — but unconditionally, since the rows this reads back
+     against no longer exist to disagree with. Does NOT remove the Google
+     sign-in itself: Supabase only allows that with the service-role key, which
+     has no business living in browser JS. Coming back after this starts
+     completely fresh, which is the honest thing to offer from here. */
+  async deleteMyData(){
+    if(!this.user)return;
+    const ok=await confirmBox("Delete your data",
+      "This permanently deletes your saved decks, dust, titles, starred staples, collection "
+      +"and borrow template from Ready Set Ink's database, then signs you out and clears this "
+      +"browser. This can't be undone.","Delete everything",true);
+    if(!ok)return;
+    let sb;
+    try{sb=await this.client()}catch(e){toast("Couldn't reach the database — try again");return}
+    try{
+      const r=await sb.from("user_state").delete().eq("user_id",this.user.id);
+      if(r.error)throw r.error;
+    }catch(e){toast("Couldn't delete your data — try again");return}
+    try{await sb.auth.signOut()}catch(e){}
+    try{sessionStorage.removeItem(PULLED)}catch(e){}
+    SYNCED.forEach(k=>{try{localStorage.removeItem(k)}catch(e){}});
+    this.user=null;this.sync={};
+    this.reload()},
 
   /* Signed in. Pull what the account holds; if it holds nothing, this is a
      first sign-in and local goes up instead.
@@ -11777,6 +12385,13 @@ const ACCT={
       }
       if(d)DECKS.list[DRAFT]={fmt:d.fmt,coco:null,cards:{}};
       DECKS.cur=DRAFT;saveDecks();markDirty(false);paintDeckBar();
+      /* Push the reset itself before the pull below reads the cloud — queue()
+         only fires ~1.2s later, and the SELECT a few lines down usually comes
+         back well inside that window. Without this await, the reset writes
+         locally, the SELECT reads the still-stale (pre-reset) cloud copy, sees
+         a difference, and overwrites the fresh draft right back to what it
+         was clearing — a genuinely fresh draft that un-freshens itself. */
+      await this.push([K_DECKS]);
     }catch(e){}
     let rows=[];
     try{
