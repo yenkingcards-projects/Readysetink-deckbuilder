@@ -40,3 +40,12 @@ _test_*.js
 
 # replaced by the real logo icons in icons/ and favicon.ico
 icon.svg
+
+# The art-tagging pipeline's local scratch. art-cache/ is the downloaded card
+# art itself (gigabyte-scale) — the site serves art from Lorcast URLs via
+# card-db.json, never from here. set-outputs/ and the run log are raw/backup
+# tagger output already merged into the committed art-tags.json; regenerate
+# either by re-running the tagger, never by hand-editing what's here.
+art-cache/
+art-tools/set-outputs/
+art-tools/overnight-run.log

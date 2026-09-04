@@ -66,6 +66,27 @@ th{background:#e4e7eb;font-size:12px;text-transform:uppercase;letter-spacing:.05
   padding:11px 20px;border-radius:5px;margin-top:8px}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid #c8d3e4;
   font-size:12px;color:#52648f;line-height:1.6}
+.sitefoot{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:10px}
+.kofiwrap{display:inline-flex;align-items:center}
+.affnote{font-size:11px;color:#52648f;max-width:440px;line-height:1.4}
+.buytcg{display:flex;align-items:center;gap:11px;text-decoration:none;margin-top:10px;
+  padding:10px 14px;border-radius:9px;background:linear-gradient(155deg,#3d8bfd,#1f5fd6);
+  box-shadow:0 3px 0 #163f94,0 6px 14px rgba(31,95,214,.35);transition:transform .1s,box-shadow .1s}
+.buytcg:hover{transform:translateY(-1px);box-shadow:0 4px 0 #163f94,0 9px 18px rgba(31,95,214,.45)}
+.buytcgico{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);
+  display:grid;place-items:center;font-size:16px}
+.buytcgtxt{flex:1;display:flex;flex-direction:column;color:#fff;line-height:1.25}
+.buytcgtxt b{font-size:14.5px;font-weight:800}
+.buytcgtxt span{font-size:11px;color:rgba(255,255,255,.75)}
+.buytcgarrow{flex:0 0 auto;font-size:17px;color:#fff;opacity:.85}
+.buyfoil{position:relative;z-index:0;background:linear-gradient(155deg,#2e2e40,#1c1c29);
+  box-shadow:0 3px 0 #0e0e16,0 6px 14px rgba(0,0,0,.35)}
+.buyfoil::before{content:"";position:absolute;inset:-3px;border-radius:12px;z-index:-1;
+  background:conic-gradient(from 0deg,#ff3b3b,#ffb63b,#fff23b,#3bff6a,#3bcfff,#7a3bff,#ff3bd6,#ff3b3b);
+  opacity:0;transition:opacity .25s}
+.buyfoil:hover::before{opacity:1;animation:rainbowchase 1.8s linear infinite}
+@keyframes rainbowchase{to{transform:rotate(360deg)}}
+.afftiny{font-size:10.5px;color:#52648f;margin-top:4px}
 .az{columns:230px;column-gap:22px}
 .az a{display:block;padding:2px 0;font-size:14px;text-decoration:none;break-inside:avoid}
 @media(max-width:700px){.card{grid-template-columns:1fr}h1{font-size:24px}}
@@ -76,6 +97,8 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid #c8d3e4;
   <nav><a href="/card/">All cards</a> · <a href="/">Deck builder</a></nav>
 </div></header>
 <div class="wrap"><div class="card"><div><img src="https://api.lorcana.ravensburger.com/images/en/quest2/22_b197f2abf1abcd3936986c83d187a46b17efff0d.jpg" alt="Arcane Quake Lorcana card" width="674" height="940" loading="eager"></div><div><h1>Arcane Quake</h1><div class="stats"><div class="stat"><b>4</b><span>Cost</span></div></div><div><span class="pill">Action</span><span class="pill">Special</span><span class="pill">Inkable</span></div><div class="rules">Jafar exerts all opposing characters. They can&#x27;t ready at the start of their next turn.</div><div class="flav">“Your plan&#x27;s beginning to crumble. Try not to lose your grip!”
-—Jafar</div><div class="meta">Illumineer&#x27;s Quest: Palace Heist · #22 · Lorcana · Illustrated by French Carlomagno</div><a class="cta" href="/#q=arcane%20quake">Open in the deck builder →</a></div></div><h2>More from Illumineer&#x27;s Quest: Palace Heist</h2><div class='rel'><a href="/card/metal-scorpion-deadly-statue.html">Metal Scorpion - Deadly Statue</a><a href="/card/palace-guard-crown-hunter.html">Palace Guard - Crown Hunter</a><a href="/card/iago-raucous-lookout.html">Iago - Raucous Lookout</a><a href="/card/razoul-unyielding-guard.html">Razoul - Unyielding Guard</a><a href="/card/treasure-guardian-illusionary-protector.html">Treasure Guardian - Illusionary Protector</a><a href="/card/jafar-spectral-sorcerer.html">Jafar - Spectral Sorcerer</a><a href="/card/genie-towering-phantasm.html">Genie - Towering Phantasm</a><a href="/card/the-sultan-spectral-ruler.html">The Sultan - Spectral Ruler</a><a href="/card/jasmine-ephemeral-princess.html">Jasmine - Ephemeral Princess</a><a href="/card/gazeem-ruthless-ruffian.html">Gazeem - Ruthless Ruffian</a><a href="/card/iago-crown-seeker.html">Iago - Crown Seeker</a><a href="/card/monumental-scarab-skittering-statue.html">Monumental Scarab - Skittering Statue</a></div>
-<footer><p>Ready Set Ink is unofficial fan content, free to use. Not published, endorsed or approved by Disney or Ravensburger. © Disney. Disney Lorcana is operated by Ravensburger, an official licensee of Disney. We may earn an affiliate commission from purchases made through links on this website. This site counts page views so we can tell which parts of it are useful — no cookies and nothing that identifies you.</p></footer>
+—Jafar</div><div class="meta">Illumineer&#x27;s Quest: Palace Heist · #22 · Lorcana · Illustrated by French Carlomagno</div><a class="cta" href="/#q=arcane%20quake">Open in the deck builder →</a><a class="buytcg" href="https://partner.tcgplayer.com/GbYLzr?u=https%3A%2F%2Fwww.tcgplayer.com%2Fmassentry%3Fproductline%3DLorcana%2520TCG%26c%3D1%2520Arcane%2520Quake" target="_blank" rel="sponsored noopener"><span class="buytcgico">🛒</span><span class="buytcgtxt"><b>Buy on TCGplayer</b><span>Opens in a new tab</span></span><span class="buytcgarrow">↗</span></a><a class="buytcg buyfoil" href="https://partner.tcgplayer.com/GbYLzr?u=https%3A%2F%2Fwww.tcgplayer.com%2Fmassentry%3Fproductline%3DLorcana%2520TCG%26c%3D1%2520Arcane%2520Quake" target="_blank" rel="sponsored noopener"><span class="buytcgico">✨</span><span class="buytcgtxt"><b>Buy foil on TCGplayer</b><span>Search results — pick the foil listing</span></span><span class="buytcgarrow">↗</span></a><div class="afftiny">Affiliate links — Ready Set Ink may earn a commission, at no extra cost to you.</div></div></div><h2>More from Illumineer&#x27;s Quest: Palace Heist</h2><div class='rel'><a href="/card/metal-scorpion-deadly-statue.html">Metal Scorpion - Deadly Statue</a><a href="/card/palace-guard-crown-hunter.html">Palace Guard - Crown Hunter</a><a href="/card/iago-raucous-lookout.html">Iago - Raucous Lookout</a><a href="/card/razoul-unyielding-guard.html">Razoul - Unyielding Guard</a><a href="/card/treasure-guardian-illusionary-protector.html">Treasure Guardian - Illusionary Protector</a><a href="/card/jafar-spectral-sorcerer.html">Jafar - Spectral Sorcerer</a><a href="/card/genie-towering-phantasm.html">Genie - Towering Phantasm</a><a href="/card/the-sultan-spectral-ruler.html">The Sultan - Spectral Ruler</a><a href="/card/jasmine-ephemeral-princess.html">Jasmine - Ephemeral Princess</a><a href="/card/gazeem-ruthless-ruffian.html">Gazeem - Ruthless Ruffian</a><a href="/card/iago-crown-seeker.html">Iago - Crown Seeker</a><a href="/card/monumental-scarab-skittering-statue.html">Monumental Scarab - Skittering Statue</a></div>
+<footer><p>Ready Set Ink is unofficial fan content, free to use. Not published, endorsed or approved by Disney or Ravensburger. © Disney. Disney Lorcana is operated by Ravensburger, an official licensee of Disney. We may earn an affiliate commission from purchases made through links on this website. This site counts page views so we can tell which parts of it are useful — no cookies and nothing that identifies you.</p>
+<p class="sitefoot"><span class="kofiwrap"><script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script><script type="text/javascript">kofiwidget2.init('Support Ready Set Ink', '#001aff', 'J2E225ZV4T');kofiwidget2.draw();</script></span><span class="affnote">Buy links go to TCGplayer through Ready Set Ink's affiliate link — it may earn a small commission, at no extra cost to you.</span></p>
+</footer>
 </div></body></html>

@@ -1,0 +1,17 @@
+#!/bin/bash
+cd "/Users/benjamindacy/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
+echo "=================================================="
+echo " Running EVERYTHING: every set, download + tag +"
+echo " hidden mickeys, all in one go."
+echo ""
+echo " This can take hours depending on how many sets"
+echo " still need work. Safe to leave running overnight."
+echo " Safe to close this window any time -- just double"
+echo " click this file again later to pick up where it"
+echo " left off."
+echo "=================================================="
+echo ""
+python3 art-tools/run_everything.py --model "gemma4:12b"
+echo ""
+echo "All done (or stopped). Press Enter to close."
+read
