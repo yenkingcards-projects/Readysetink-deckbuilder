@@ -111,6 +111,27 @@ th{background:#e4e7eb;font-size:12px;text-transform:uppercase;letter-spacing:.05
   padding:11px 20px;border-radius:5px;margin-top:8px}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid #c8d3e4;
   font-size:12px;color:#52648f;line-height:1.6}
+.sitefoot{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:10px}
+.kofiwrap{display:inline-flex;align-items:center}
+.affnote{font-size:11px;color:#52648f;max-width:440px;line-height:1.4}
+.buytcg{display:flex;align-items:center;gap:11px;text-decoration:none;margin-top:10px;
+  padding:10px 14px;border-radius:9px;background:linear-gradient(155deg,#3d8bfd,#1f5fd6);
+  box-shadow:0 3px 0 #163f94,0 6px 14px rgba(31,95,214,.35);transition:transform .1s,box-shadow .1s}
+.buytcg:hover{transform:translateY(-1px);box-shadow:0 4px 0 #163f94,0 9px 18px rgba(31,95,214,.45)}
+.buytcgico{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);
+  display:grid;place-items:center;font-size:16px}
+.buytcgtxt{flex:1;display:flex;flex-direction:column;color:#fff;line-height:1.25}
+.buytcgtxt b{font-size:14.5px;font-weight:800}
+.buytcgtxt span{font-size:11px;color:rgba(255,255,255,.75)}
+.buytcgarrow{flex:0 0 auto;font-size:17px;color:#fff;opacity:.85}
+.buyfoil{position:relative;z-index:0;background:linear-gradient(155deg,#2e2e40,#1c1c29);
+  box-shadow:0 3px 0 #0e0e16,0 6px 14px rgba(0,0,0,.35)}
+.buyfoil::before{content:"";position:absolute;inset:-3px;border-radius:12px;z-index:-1;
+  background:conic-gradient(from 0deg,#ff3b3b,#ffb63b,#fff23b,#3bff6a,#3bcfff,#7a3bff,#ff3bd6,#ff3b3b);
+  opacity:0;transition:opacity .25s}
+.buyfoil:hover::before{opacity:1;animation:rainbowchase 1.8s linear infinite}
+@keyframes rainbowchase{to{transform:rotate(360deg)}}
+.afftiny{font-size:10.5px;color:#52648f;margin-top:4px}
 .az{columns:230px;column-gap:22px}
 .az a{display:block;padding:2px 0;font-size:14px;text-decoration:none;break-inside:avoid}
 @media(max-width:700px){.card{grid-template-columns:1fr}h1{font-size:24px}}
@@ -124,8 +145,31 @@ DISCLAIMER = (
     "so we can tell which parts of it are useful — no cookies and nothing that identifies you."
 )
 
+# Same redirect as flounder-search.template.html's affix()/TCG_AFF_LINK — ONE
+# partner link, wrapping the real TCGplayer destination via Impact's own
+# ?u=<url-encoded target> convention. Keep these two in sync by hand; there's
+# no shared module between the Python build and the JS app to import from.
+TCG_AFF_LINK = "https://partner.tcgplayer.com/GbYLzr"
 
-def head(title, desc, canonical, image=None, extra=""):
+
+def tcg_buy_url(full_name):
+    import urllib.parse
+    dest = ("https://www.tcgplayer.com/massentry?productline=Lorcana%20TCG&c="
+            + urllib.parse.quote("1 " + full_name))
+    return TCG_AFF_LINK + "?u=" + urllib.parse.quote(dest, safe="")
+
+
+KOFI_WIDGET = (
+    '<span class="kofiwrap">'
+    '<script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>'
+    "<script type=\"text/javascript\">kofiwidget2.init('Support Ready Set Ink', '#001aff', 'J2E225ZV4T');"
+    "kofiwidget2.draw();</script>"
+    "</span>"
+)
+
+
+def head(title, desc, canonical, image=None, extra="", manifest="/manifest.webmanifest",
+         icon192="/icons/icon-192.png", touch_icon="/icons/apple-touch-icon.png"):
     og_img = f'<meta property="og:image" content="{esc(image)}">' if image else ""
     tw = "summary_large_image" if image else "summary"
     return f"""<!doctype html>
@@ -145,10 +189,10 @@ def head(title, desc, canonical, image=None, extra=""):
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="theme-color" content="#202638">
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="{manifest}">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
-<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{icon192}">
+<link rel="apple-touch-icon" href="{touch_icon}">
 <script defer src="/_vercel/insights/script.js"></script>
 {extra}
 <style>{CSS}</style>
@@ -160,8 +204,18 @@ def head(title, desc, canonical, image=None, extra=""):
 <div class="wrap">"""
 
 
-FOOT = f"""
-<footer><p>{DISCLAIMER}</p></footer>
+def foot(show_kofi=True):
+    # Kept off the hub pages for deck-builder/search/collection specifically —
+    # those are landing pages FOR the core workflow, and Ko-fi has no business
+    # sitting under someone who's there to build or search, not to browse.
+    # Card pages, the all-cards index, and every other hub keep it.
+    sitefoot = (f'<p class="sitefoot">{KOFI_WIDGET}<span class="affnote">Buy links go to '
+                'TCGplayer through Ready Set Ink\'s affiliate link — it may earn a small '
+                'commission, at no extra cost to you.</span></p>') if show_kofi else ""
+    return f"""
+<footer><p>{DISCLAIMER}</p>
+{sitefoot}
+</footer>
 </div></body></html>"""
 
 
@@ -258,6 +312,15 @@ def card_page(c, by_name, by_set, sets, priced_on):
     out.append('<div class="meta">' + " · ".join(line) + "</div>")
 
     out.append(f'<a class="cta" href="/#q={esc(sl.replace("-", "%20"))}">Open in the deck builder →</a>')
+    out.append(f'<a class="buytcg" href="{esc(tcg_buy_url(full))}" target="_blank" rel="sponsored noopener">'
+               f'<span class="buytcgico">🛒</span>'
+               f'<span class="buytcgtxt"><b>Buy on TCGplayer</b><span>Opens in a new tab</span></span>'
+               f'<span class="buytcgarrow">↗</span></a>')
+    out.append(f'<a class="buytcg buyfoil" href="{esc(tcg_buy_url(full))}" target="_blank" rel="sponsored noopener">'
+               f'<span class="buytcgico">✨</span>'
+               f'<span class="buytcgtxt"><b>Buy foil on TCGplayer</b><span>Search results — pick the foil listing</span></span>'
+               f'<span class="buytcgarrow">↗</span></a>')
+    out.append('<div class="afftiny">Affiliate links — Ready Set Ink may earn a commission, at no extra cost to you.</div>')
     out.append("</div></div>")
 
     if rulings:
@@ -299,7 +362,7 @@ def card_page(c, by_name, by_set, sets, priced_on):
             out.append(f'<a href="/card/{slug(fx)}.html">{esc(fx)}</a>')
         out.append("</div>")
 
-    out.append(FOOT)
+    out.append(foot())
     return sl, "".join(out)
 
 
@@ -430,32 +493,51 @@ HUBS = [
         ]),
      ]},
     {"slug": "loretracker", "tab": "tOther", "op": "lore",
+     "pwa": {"manifest": "/manifest-lore.webmanifest", "icon192": "/icons/lore-icon-192.png",
+             "touch_icon": "/icons/lore-apple-touch-icon.png"},
      "title": "Lorcana lore tracker with a rules judge",
-     "lede": "A 0–20 lore counter for two to four players, big enough to read from "
-             "the other side of the table — with every card, keyword and official "
-             "ruling one tap away.",
+     "lede": "Set your format and best-of once, then track two to four players on "
+             "numbers big enough to read from the other side of the table — with "
+             "every card, keyword and official ruling one tap away.",
      "body": [
-        ("Built for a table, not a phone in your pocket", [
-            "Huge numbers, huge buttons, and the far seat rotated 180° so the person "
-            "across from you reads it the right way up.",
-            "Two, three or four players. Rename anybody by tapping their name. Goes "
-            "full screen.",
+        ("Set up once, exactly how you play", [
+            "Players, format — Core, Infinity, Coconut, or your own custom lore "
+            "total — casual or tournament, and one game, best of three, or a "
+            "custom-length series. Save it as your default and it's already right "
+            "next time.",
+            "Huge numbers, huge buttons, and the far seat rotated 180° so the "
+            "person across from you reads it the right way up. Rename anybody by "
+            "tapping their name. Goes full screen.",
         ]),
         ("The JUDGE button", [
-            "Press \U0001f590 JUDGE and the score locks — nobody nudges a total while "
-            "a rules question is open.",
-            "Search any card by name and read its text with every keyword on it turned "
-            "into a button: tap Ward, Shift or Resist and get the rule.",
+            "Press \U0001f590 JUDGE and the score locks — nobody nudges a total "
+            "while a rules question is open. A timer counts up while you're in "
+            "there, and closing it back out offers a time-extension reminder if "
+            "the ruling ran long. Casual games only — at a tournament, it tells "
+            "you to call an actual judge instead.",
+            "Search any card by name and read its text with every keyword on it "
+            "turned into a button: tap Ward, Shift or Resist and get the rule.",
             "Cards show Ravensburger's own published rulings where they exist, "
             "attributed to the set release notes they came from.",
             "Or browse the arguments people actually stop the game over — timing, "
-            "end-of-turn effects, challenging, singing, and what to do when something "
-            "went wrong.",
+            "end-of-turn effects, challenging, singing, and what to do when "
+            "something went wrong.",
         ]),
-        ("Best of three", [
-            "Reach 20 and the screen throws one fish for every point of lore on the "
-            "table. Say you're playing best of three and it tracks who won which game, "
-            "then hands you off to Play Hub to report the match.",
+        ("Best of however many", [
+            "Win a game and the screen throws fish while it logs exactly which "
+            "game you won — no re-asking best-of-three every single game. Decide "
+            "the match and it hands you off to Play Hub to report the result.",
+            "Playing with Donald Duck – Flustered Sorcerer in the mix? Flag "
+            "who's got it in Settings and their opponent's win total jumps to 25 "
+            "until you press the button for when the duck's gone.",
+        ]),
+        ("Make it yours", [
+            "Give each seat its own colour — pick from the palette, go random, "
+            "blue striped fish, or Chaos, which fades to a new colour on every "
+            "prime-numbered second and throws a burst of fish every time someone "
+            "taps plus or minus.",
+            "Add it to your home screen as its own app, with its own icon, "
+            "separate from the rest of Ready Set Ink.",
         ]),
      ]},
     {"slug": "games", "tab": "tOther", "op": "guess",
@@ -485,7 +567,20 @@ def hub_page(h, cards):
         deep += "&op=" + h["op"]
     if h.get("sub"):
         deep += "&sub=" + h["sub"]
-    out = [head(f"{h['title']} · Ready Set Ink", h["lede"], url)]
+    head_kwargs = {}
+    pwa = h.get("pwa")
+    if pwa:
+        # This hub gets its OWN manifest + icon (set above), so "Add to Home
+        # Screen" installs it as its own app rather than a shortcut to the
+        # main one. The manifest's start_url carries ?app=1; this redirects
+        # a launch from that installed icon (or any standalone window)
+        # straight into the tool instead of showing the SEO copy below —
+        # a plain browser visit to this URL is untouched.
+        head_kwargs = {"manifest": pwa["manifest"], "icon192": pwa["icon192"], "touch_icon": pwa["touch_icon"],
+            "extra": ('<script>(function(){if(location.search.indexOf("app=1")>=0'
+                      '||(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)'
+                      f'||window.navigator.standalone)location.replace("{deep}")}})()</script>')}
+    out = [head(f"{h['title']} · Ready Set Ink", h["lede"], url, **head_kwargs)]
     out.append(f"<h1>{esc(h['title'])}</h1>")
     out.append(f'<p style="font-size:18px;color:#52648f">{esc(h["lede"])}</p>')
     out.append(f'<a class="cta" href="{deep}">Open it →</a>')
@@ -499,7 +594,7 @@ def hub_page(h, cards):
         if other["slug"] != h["slug"]:
             out.append(f'<a href="/{other["slug"]}/">{esc(other["title"])}</a>')
     out.append(f'<a href="/card/">All {len(cards):,} cards</a></div>')
-    out.append(FOOT)
+    out.append(foot(show_kofi=h["slug"] not in ("deck-builder", "search", "collection")))
     return "".join(out)
 
 
@@ -520,7 +615,7 @@ def index_page(cards, sets):
             fx = c["n"] + (" - " + c["v"] if c.get("v") else "")
             out.append(f'<a href="/card/{slug(fx)}.html">{esc(fx)}</a>')
         out.append("</div>")
-    out.append(FOOT)
+    out.append(foot())
     return "".join(out)
 
 
@@ -539,6 +634,22 @@ MANIFEST = {
         # or a squircle; a full-bleed badge loses the ring with the wording on
         # it. "maskable" is the promise that the outer 20% is expendable.
         {"src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+    ],
+}
+
+# A separate installable app, own icon, own name — so "Add to Home Screen" on
+# /loretracker/ doesn't just make a second shortcut to the main site. start_url
+# carries ?app=1, which hub_page()'s redirect script checks for to jump
+# straight into the tracker instead of showing the SEO landing copy.
+LORE_MANIFEST = {
+    "name": "Lore Tracker · Ready Set Ink", "short_name": "Lore Tracker",
+    "description": "A Disney Lorcana lore counter with a rules judge built in.",
+    "start_url": "/loretracker/?app=1", "scope": "/", "display": "standalone",
+    "background_color": "#202638", "theme_color": "#202638",
+    "icons": [
+        {"src": "/icons/lore-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+        {"src": "/icons/lore-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+        {"src": "/icons/lore-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
     ],
 }
 
@@ -589,6 +700,8 @@ def main():
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     with open(os.path.join(HERE, "manifest.webmanifest"), "w", encoding="utf-8") as f:
         json.dump(MANIFEST, f, indent=2)
+    with open(os.path.join(HERE, "manifest-lore.webmanifest"), "w", encoding="utf-8") as f:
+        json.dump(LORE_MANIFEST, f, indent=2)
 
     total = sum(os.path.getsize(os.path.join(CARDDIR, x)) for x in os.listdir(CARDDIR))
     log(f"✓ wrote {len(urls)} card pages + index  ({total/1024/1024:.1f} MB, "
