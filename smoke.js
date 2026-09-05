@@ -33,7 +33,7 @@ await p.click('[data-tour="end"]');await p.waitForTimeout(300);
 ok(await p.evaluate(()=>document.querySelectorAll("#grid .c").length>0),"cards render");
 
 /* Every tab and every Other page, looking only for a crash. */
-for(const t of ["tDeck","tSearch","tColl","tDecks","tOther"]){
+for(const t of ["tDeck","tSearch","tColl","tDecks","tMeta","tOther"]){
   await p.click("#"+t);await p.waitForTimeout(450);
   ok(await p.evaluate(t=>document.querySelector("main .view.on")!==null,t),t+" opens");
 }

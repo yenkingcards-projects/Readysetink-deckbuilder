@@ -47,6 +47,7 @@ TAG_OUT  = os.path.join(HERE, "flounder-tagger.html")
 TAGS_F   = os.path.join(HERE, "art-tags.json")
 RULES_F  = os.path.join(HERE, "card-rules.json")
 NOTES_F  = os.path.join(HERE, "rsi-notes.json")
+META_F   = os.path.join(HERE, "meta-decks.json")
 NOTE_TPL = os.path.join(HERE, "notes.template.html")
 NOTE_OUT = os.path.join(HERE, "flounder-notes.html")
 # Price snapshot. Written on every successful build from the SAME Lorcast pass
@@ -253,6 +254,48 @@ bad_kinds = sorted(set(kinds) - {x["k"] for x in NOTE_KINDS})
 if bad_kinds:
     log(f"  ! unknown note kind(s) {bad_kinds} — will fall back to 'ruling' styling")
 
+# ------------------------------------------------------------- meta decks
+# The Recommended decks tab: hand-authored lists, three meta blocks per set,
+# one deck per ink pair. Written by the add-meta-deck skill, never by the
+# build. Every card name here is checked against the real card list, because
+# a typo would otherwise drop a card out of a 60-card deck in total silence
+# and the tile would still say "60 cards" from its own arithmetic.
+try:
+    with open(META_F, encoding="utf-8") as f:
+        metadata = json.load(f)
+except FileNotFoundError:
+    metadata = {"updated": "", "blocks": [], "decks": []}
+metadecks = metadata.get("decks", []) or []
+known_names = {(c["n"] + " - " + c["v"]) if c["v"] else c["n"] for c in out}
+bycard = {((c["n"] + " - " + c["v"]) if c["v"] else c["n"]): c for c in out}
+block_ids = {b.get("id") for b in metadata.get("blocks", []) or []}
+seen_slots = {}
+for d in metadecks:
+    where = f"{d.get('id') or d.get('name') or '?'}"
+    bad = sorted(n for n in (d.get("cards") or {}) if n not in known_names)
+    if bad:
+        log(f"  ! meta deck {where}: {len(bad)} card name(s) match no card: {bad}")
+    if d.get("block") not in block_ids:
+        log(f"  ! meta deck {where}: unknown block {d.get('block')!r}")
+    if d.get("set") not in setinfo:
+        log(f"  ! meta deck {where}: unknown set {d.get('set')!r}")
+    # Declared ink pair vs the inks the list actually plays. The tile groups by
+    # the declared pair, so a disagreement files the deck under the wrong pair.
+    real = sorted({i for n, q in (d.get("cards") or {}).items()
+                   for i in (bycard.get(n, {}).get("co") or [])})
+    if real and sorted(d.get("inks") or []) != real:
+        log(f"  ! meta deck {where}: declared inks {d.get('inks')} but the list plays {real}")
+    # One deck per ink pair per block per set is the whole shape of the page.
+    slot = (d.get("set"), d.get("block"), tuple(sorted(d.get("inks") or [])))
+    if slot in seen_slots:
+        log(f"  ! meta deck {where}: same set/block/ink pair as {seen_slots[slot]}")
+    seen_slots[slot] = where
+    d["total"] = sum((d.get("cards") or {}).values())
+    if d["total"] != 60:
+        log(f"  ! meta deck {where}: {d['total']} cards, not 60")
+log(f"  meta decks: {len(metadecks)} across "
+    f"{len({d.get('set') for d in metadecks})} set(s)")
+
 payload = {"generated": time.strftime("%Y-%m-%d"), "sets": setinfo, "cards": out,
            "priced": PRICE_DATE}
 
@@ -261,11 +304,16 @@ with open(TEMPLATE, encoding="utf-8") as f:
     html = f.read()
 if "/*__DATA__*/" not in html:
     sys.exit("! template is missing the /*__DATA__*/ placeholder")
+if "/*__METADECKS__*/" not in html:
+    sys.exit("! template is missing the /*__METADECKS__*/ placeholder")
 blob = json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
 # </script> inside a JS string literal would close the tag early
 blob = blob.replace("</", "<\\/")
 kindblob = json.dumps(NOTE_KINDS, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
 html = html.replace("/*__DATA__*/", blob).replace("/*__KINDS__*/", kindblob)
+metablob = json.dumps(metadata, separators=(",", ":"),
+                      ensure_ascii=False).replace("</", "<\\/")
+html = html.replace("/*__METADECKS__*/", metablob)
 
 # Supabase connection details. Both are public by design — the publishable key
 # identifies the project, it does not grant anything. What actually protects the

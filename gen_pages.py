@@ -473,6 +473,34 @@ HUBS = [
             "you already own.",
         ]),
      ]},
+    {"slug": "meta-decks", "tab": "tMeta",
+     "title": "Recommended Lorcana decks by set",
+     "lede": "The decks worth playing in the current Lorcana set — one list per ink "
+             "pair, split into early set, mid set and Set Championship.",
+     "body": [
+        ("One deck per ink pair", [
+            "A format is not one best deck, it is fifteen ink pairs and a pecking "
+            "order. Each block here holds the list worth playing in each pair, so "
+            "you can start from the colours you already own rather than buying into "
+            "whatever won last weekend.",
+        ]),
+        ("Three points in the set", [
+            "Early set is the first few weeks, before anyone has solved it. Mid set "
+            "is where the format lands once people have. Set Champs is what to sleeve "
+            "when the room is prepared and you expect the mirror.",
+        ]),
+        ("Written up, not just listed", [
+            "Every deck says why it is built the way it is, the lines to look for, "
+            "and what it does not want to sit across from.",
+            "There is a mulligan guide and a list of what to prioritise, plus the "
+            "deck's real strengths and weaknesses — the ones that decide games, not "
+            "a sales pitch.",
+        ]),
+        ("Take a copy", [
+            "One click copies any list into your own decks, where you can change "
+            "whatever you like. The published list is left exactly as it is.",
+        ]),
+     ]},
     {"slug": "coconut", "tab": "tDeck", "sub": "guided",
      "title": "Guided Coconut deck building",
      "lede": "Coconut is a Lorcana format built around one legendary character. "

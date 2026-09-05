@@ -386,6 +386,63 @@ body.nocoll .collonly{display:none!important}
 .dgc figcaption{padding:5px 6px;font-size:12px;color:var(--tx);line-height:1.25}
 @media print{.dkgal{display:none!important}}
 
+/* ---- recommended decks -------------------------------------------------
+   Reading surfaces only: every word on this page sits on white, platinum or
+   pale sky, never on bare canvas, so the AAA bar holds the same way it does
+   on the rest of the site. */
+.msetbar{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 6px}
+.msetone{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--deep);margin:12px 0 4px;display:inline-block;background:var(--canvas-soft);
+  border:1px solid var(--hairline);border-radius:2px;padding:4px 9px}
+.mblock{margin-bottom:26px}
+/* The block heading already carries a pale-sky plate; the blurb continues it
+   downward rather than sitting on bare canvas, where carbon is 3.44:1. Same
+   move the page lede makes under its own h1 -- reading surfaces are plates. */
+.mblock>.sec2{margin-bottom:0}
+.mblurb{font-size:13px;line-height:1.6;color:var(--tx);max-width:78ch;margin:0 0 12px;
+  padding:9px 12px 10px;background:var(--canvas-soft);border:1px solid var(--chrome);
+  border-top:none;box-shadow:var(--bevel);border-radius:0 0 4px 4px}
+.mnone,.mcount{font-size:12px;color:var(--deep);margin-top:9px;display:inline-block;
+  background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:2px;
+  padding:4px 9px}
+.mnone{font-style:italic}
+.mtiles{margin-top:4px}
+.mtile{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--line);
+  border-radius:4px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:3px}
+.mtile:hover{border-color:var(--deep)}
+.mtile.on{border-color:var(--chrome);border-left-color:var(--amberc);
+  box-shadow:var(--bevel),0 0 0 2px var(--chrome)}
+.mtile h3{font-size:15.2px;margin:0}
+.march{font-size:12.16px;color:var(--deep);line-height:1.5;margin:0}
+.mmeta{font-size:11.5px;color:var(--deep);margin-top:2px}
+.minks{display:flex;gap:3px;margin-bottom:6px}
+.minks i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.mbtns{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.mbtns.wide{margin-top:14px}
+/* The guide panel is full width under its own block's grid rather than inside
+   a tile: the write-ups are paragraphs, and a paragraph in a 240px tile is a
+   column of two-word lines. */
+.mdet{background:var(--surface);border:1px solid var(--chrome);border-radius:4px;
+  box-shadow:var(--bevel);padding:16px 18px;margin-top:12px}
+.mdh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.mdh h3{font-size:16px;margin:0;flex:1}
+.mdh .minks{margin-bottom:0}
+.msec{font-family:var(--sans);font-size:12px;font-weight:900;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--link);border-bottom:1px solid var(--line2);
+  padding-bottom:4px;margin:18px 0 9px}
+.msub{font-size:12.5px;font-weight:800;color:var(--tx);margin:11px 0 4px}
+.mp{font-size:13.5px;line-height:1.65;color:var(--tx);max-width:78ch}
+.mul{margin:0;padding-left:18px;max-width:78ch}
+.mul li{font-size:13px;line-height:1.6;color:var(--tx);margin-bottom:5px}
+.mul.good li::marker{color:var(--good)}
+.mul.bad li::marker{color:var(--bad)}
+.msw{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 22px}
+.mgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.mgc{position:relative;margin:0;background:var(--surface);border:1px solid var(--chrome);
+  border-radius:4px;overflow:hidden;box-shadow:var(--bevel);cursor:pointer}
+.mgc:hover{border-color:var(--amber-press);box-shadow:0 0 0 3px var(--amberc),var(--bevel)}
+.mgc img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;background:var(--platinum)}
+
 
 /* ---- search suggestions ---- */
 .acbox{position:relative;z-index:70;margin:-4px 0 10px;background:var(--surface);
@@ -2955,6 +3012,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <button id="tSearch">Search for cards</button>
   <button id="tColl" class="collonly">My collection</button>
   <button id="tDecks">Decks</button>
+  <button id="tMeta">Recommended decks</button>
   <span class="otherwrap">
     <button id="tOther">Other</button>
     <button id="tOtherMenu" aria-label="Other menu" aria-haspopup="true" aria-expanded="false">☰</button>
@@ -3087,6 +3145,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 </section>
 
 <section class="view" id="vDecks"><div id="deckspage"></div></section>
+<section class="view" id="vMeta"><div id="metapage"></div></section>
 
 <section class="view" id="vRead"><div id="readpage"></div></section>
 
@@ -3160,7 +3219,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
      be read next to everything else's. -->
 <div class="tourbg" id="tourbg" hidden><div class="tour" id="tour"></div></div>
 
-<script>var DATA=/*__DATA__*/;var KINDS=/*__KINDS__*/;</script>
+<script>var DATA=/*__DATA__*/;var KINDS=/*__KINDS__*/;var METAD=/*__METADECKS__*/;</script>
 <script>
 (function(){
 "use strict";
@@ -9850,6 +9909,167 @@ function wireGallery(){
   g.querySelectorAll("[data-dgo]").forEach(el=>el.onclick=()=>openM(el.dataset.dgo));
 }
 
+/* ===================== recommended decks =====================
+   Hand-authored meta lists out of meta-decks.json: three blocks per set
+   (early / mid / Set Champs), one deck per ink pair inside each block. The
+   file is written by the add-meta-deck skill and validated at build time --
+   card names, ink pair, block id, deck size -- so everything below can trust
+   its shape and just draw it. Nothing here writes to the file: the only way
+   a visitor interacts with a list is by taking a copy of it into their own
+   decks, which leaves the published list untouched. */
+const MBLOCKS=(typeof METAD==="object"&&METAD&&METAD.blocks)||[];
+const MDECKS=(typeof METAD==="object"&&METAD&&METAD.decks)||[];
+let MSET=load("fs3_mset","");
+let MOPEN="";
+/* Sets that actually have a list, newest first -- SETS is already sorted by
+   release date descending, so filtering it keeps that order for free. */
+function metaSets(){
+  const have=new Set(MDECKS.map(d=>d.set));
+  return SETS.filter(([code])=>have.has(code));
+}
+function metaDeckById(id){return MDECKS.find(d=>d.id===id)}
+/* A published list resolved against the real card data. Unknown names are
+   dropped rather than rendered as a blank tile -- the build already shouts
+   about them, and by the time it reaches a visitor the honest thing is to
+   show the cards that do exist. */
+function metaRows(d){
+  return Object.entries(d.cards||{})
+    .map(([f,q])=>({c:CARDS.find(x=>x.f===f),q,f}))
+    .filter(x=>x.c)
+    .sort((a,b)=>String((a.c.co||[])[0]||"").localeCompare(String((b.c.co||[])[0]||""))
+      ||a.c.c-b.c.c||a.c.f.localeCompare(b.c.f));
+}
+const metaTotal=d=>Object.values(d.cards||{}).reduce((a,b)=>a+b,0);
+const metaInks=d=>(d.inks||[]).map(i=>
+  `<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("");
+const mList=(items,cls)=>!items||!items.length?"":
+  `<ul class="${cls}">${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+
+function metaTile(d){
+  const tot=metaTotal(d),open=MOPEN===d.id;
+  return `<article class="mtile${open?" on":""}">
+    <div class="minks">${metaInks(d)}</div>
+    <h3>${esc(d.name||(d.inks||[]).join("/"))}</h3>
+    <p class="march">${esc(d.archetype||"")}</p>
+    <div class="mmeta">${tot} cards${d.credit?` · list by ${esc(d.credit)}`:""}${
+      d.updated?` · updated ${esc(d.updated)}`:""}</div>
+    <div class="mbtns">
+      <button class="btn" data-mopen="${esc(d.id)}">${open?"Hide the guide":"Read the guide"}</button>
+      <button class="btn go" data-mcopy="${esc(d.id)}">✏️ Copy &amp; edit</button>
+    </div>
+  </article>`;
+}
+
+function metaDetail(d){
+  const rows=metaRows(d),tot=rows.reduce((n,r)=>n+r.q,0);
+  return `<div class="mdet" id="mdet">
+    <div class="mdh">
+      <div class="minks">${metaInks(d)}</div>
+      <h3>${esc(d.name||"")}</h3>
+      <button class="btn" data-mclose>✕ Close</button>
+    </div>
+
+    <h4 class="msec">Why it's built this way</h4>
+    ${d.why?`<p class="mp">${esc(d.why)}</p>`:""}
+    ${d.lines&&d.lines.length?`<h5 class="msub">Lines to look for</h5>${mList(d.lines,"mul")}`:""}
+    ${d.against&&d.against.length?`<h5 class="msub">What it struggles against</h5>${mList(d.against,"mul bad")}`:""}
+
+    <h4 class="msec">How to play it</h4>
+    ${d.mulligan?`<h5 class="msub">Mulligan</h5><p class="mp">${esc(d.mulligan)}</p>`:""}
+    ${d.priorities&&d.priorities.length?`<h5 class="msub">What to prioritise</h5>${mList(d.priorities,"mul")}`:""}
+    <div class="msw">
+      <div><h5 class="msub">Strengths</h5>${mList(d.strengths,"mul good")}</div>
+      <div><h5 class="msub">Weaknesses</h5>${mList(d.weaknesses,"mul bad")}</div>
+    </div>
+
+    <h4 class="msec">The list · ${tot} cards</h4>
+    <div class="mgal">${rows.map(({c,q})=>`
+      <figure class="mgc" data-mgo="${esc(c.f)}" title="${esc(c.f)}">
+        ${c.img?`<img src="${esc(String(c.img))}" alt="${esc(c.f)}" loading="lazy">`
+               :`<div class="dgph">${esc(c.f)}</div>`}
+        <span class="dgq">${q}</span>
+      </figure>`).join("")}</div>
+    <div class="mbtns wide">
+      <button class="btn go" data-mcopy="${esc(d.id)}">✏️ Copy &amp; edit this deck</button>
+      <button class="btn" data-mtext="${esc(d.id)}">📋 Copy the deck list</button>
+    </div>
+  </div>`;
+}
+
+function renderMetaPage(){
+  const sets=metaSets();
+  if(!MSET||!sets.some(([c])=>c===MSET))MSET=(sets[0]||[""])[0];
+  const forSet=MDECKS.filter(d=>d.set===MSET);
+  const open=MOPEN?metaDeckById(MOPEN):null;
+  const body=!sets.length
+    ? `<div class="empty" style="padding:18px">No recommended lists published yet.
+        They go up set by set — check back once the new set has been played a while.</div>`
+    : MBLOCKS.map(b=>{
+        const decks=forSet.filter(d=>d.block===b.id)
+          .sort((x,y)=>(x.inks||[]).join("/").localeCompare((y.inks||[]).join("/")));
+        return `<section class="mblock">
+          <h3 class="sec2">${esc(b.label||b.id)}</h3>
+          ${b.blurb?`<p class="mblurb">${esc(b.blurb)}</p>`:""}
+          ${decks.length
+            ? `<div class="tiles mtiles">${decks.map(metaTile).join("")}</div>
+               <p class="mcount">${decks.length} ink pair${decks.length===1?"":"s"} covered so far.</p>
+               ${open&&open.block===b.id&&open.set===MSET?metaDetail(open):""}`
+            : `<p class="mnone">Nothing published for this part of the set yet.</p>`}
+        </section>`}).join("");
+  $("metapage").innerHTML=`<div class="page">
+    <h1><span class="gi">🏆</span>Recommended decks</h1>
+    <p class="lede">The decks worth playing right now, one per ink pair, split by where
+      the set is at — the first weeks, the middle of the format, and what to sleeve for
+      a Set Championship. Every list comes with why it is built the way it is, the lines
+      to look for, and what it does not want to sit across from. Take a copy of any of
+      them into your own decks and change whatever you like.</p>
+    ${sets.length>1?`<div class="msetbar">${sets.map(([code,m])=>
+      `<button class="btn${code===MSET?" go":""}" data-mset="${esc(code)}">${esc(m.n)}</button>`).join("")}</div>`
+      :sets.length?`<p class="msetone">${esc(sets[0][1].n)}</p>`:""}
+    ${body}
+  </div>`;
+  const pg=$("metapage");
+  pg.querySelectorAll("[data-mset]").forEach(b=>b.onclick=()=>{
+    MSET=b.dataset.mset;save("fs3_mset",MSET);MOPEN="";renderMetaPage()});
+  pg.querySelectorAll("[data-mopen]").forEach(b=>b.onclick=()=>{
+    MOPEN=MOPEN===b.dataset.mopen?"":b.dataset.mopen;
+    renderMetaPage();
+    /* Opening a guide from a tile halfway down a long page leaves the panel
+       below the fold, which reads as "the button did nothing". */
+    if(MOPEN){const d=$("mdet");if(d)d.scrollIntoView({behavior:"smooth",block:"start"})}});
+  {const x=pg.querySelector("[data-mclose]");
+   if(x)x.onclick=()=>{MOPEN="";renderMetaPage()}}
+  pg.querySelectorAll("[data-mcopy]").forEach(b=>b.onclick=()=>metaCopyDeck(b.dataset.mcopy));
+  pg.querySelectorAll("[data-mtext]").forEach(b=>b.onclick=()=>{
+    const d=metaDeckById(b.dataset.mtext);if(!d)return;
+    navigator.clipboard.writeText(metaRows(d).map(({c,q})=>`${q} ${c.f}`).join("\n"))
+      .then(()=>toast("Deck list copied"),()=>toast("Copy failed"))});
+  pg.querySelectorAll("[data-mgo]").forEach(el=>el.onclick=()=>openM(el.dataset.mgo));
+}
+
+/* Takes a copy into their decks and hands them the deck builder. The
+   published list is data baked into the page -- there is nothing here that
+   could write back to it -- so "edit" always means editing your own copy. */
+async function metaCopyDeck(id){
+  const d=metaDeckById(id);if(!d)return;
+  const rows=metaRows(d),tot=rows.reduce((n,r)=>n+r.q,0);
+  if(!tot){toast("That list has no cards this site knows about");return}
+  let base=d.name||"Recommended deck",n=base,i=2;
+  while(DECKS.list[n])n=base+" "+(i++);
+  const ok=await confirmBox("Copy this deck",
+    `Adds “${n}” to your decks — all ${tot} cards, yours to change. `
+    +"The published list stays exactly as it is.","Copy it");
+  if(!ok)return;
+  mark("copying a recommended deck");
+  const cards={};rows.forEach(({f,q})=>{cards[f]=q});
+  DECKS.list[n]={fmt:"core",coco:null,cards};
+  DECKS.cur=n;saveDecks();markDirty(false);
+  if(Object.keys(DECKS.list).length>=3)award("deck2");
+  render();paintDeckBar();
+  showTab("tDeck");
+  toast(`Copied to “${n}” — edit away`);
+}
+
 /* ===================== decks page ===================== */
 function renderDecksPage(){
   const names=Object.keys(DECKS.list);
@@ -12182,8 +12402,8 @@ function renderOther(){
    Five tabs. "Deck builder" and "Search for cards" share one view — the only
    difference is whether the deck rail is on screen — because maintaining two
    copies of the search UI would guarantee they drift apart. */
-const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
-const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop","vLore","vJudge","vLinks","vAccount"];
+const TABS=["tDeck","tSearch","tColl","tDecks","tMeta","tOther"];
+const VIEWS=["vSearch","vGuide","vColl","vDecks","vMeta","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop","vLore","vJudge","vLinks","vAccount"];
 /* TAB is read from storage HERE rather than being left at "tDeck" until
    showTab() runs at the bottom of the file. The grid is rendered before that
    line, and tile() and bindGrid() both branch on TAB — so booting straight
@@ -12216,6 +12436,7 @@ function showTab(t){
   else if(t==="tSearch")$("vSearch").classList.add("on");
   else if(t==="tColl"){$("vColl").classList.add("on");renderColl()}
   else if(t==="tDecks"){$("vDecks").classList.add("on");renderDecksPage()}
+  else if(t==="tMeta"){$("vMeta").classList.add("on");renderMetaPage()}
   else if(t==="tOther"){
     /* One table, not a chain of fourteen else-ifs. A chain is how the default
        case (the menu itself) once got swallowed by an unrelated guard clause. */
