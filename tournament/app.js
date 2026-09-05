@@ -24,5 +24,5 @@ function renderAfter(){const e=data.active,d=e.draft,h=document.getElementById("
 function finish(){const e=data.active;e.finishedAt=new Date().toISOString();data.events.unshift(e);data.active=null;persist();toast("Event saved to Match History");renderHome()}
 function exportBackup(){const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`readysetink-match-history-${new Date().toISOString().slice(0,10)}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500);toast("Backup downloaded")}
 function importBackup(e){const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const incoming=M.normalize(JSON.parse(reader.result));if(!Array.isArray(incoming.events))throw Error();if(confirm(`Import ${incoming.events.length} events? This replaces the Match History on this device.`)){data=incoming;persist();renderHome();toast("Backup imported")}}catch(_){toast("That backup file could not be read")}};reader.readAsText(file)}
-if(data.active)renderActive();else renderHome();
+setView("full");
 })();

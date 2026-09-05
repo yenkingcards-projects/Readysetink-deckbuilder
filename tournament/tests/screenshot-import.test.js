@@ -18,3 +18,10 @@ test("extracts reviewable Play Hub screenshot fields", () => {
   assert.deepEqual(result.players, ["Readysetink", "ZeroDEF7", "Inkme"]);
 });
 
+test("extracts current records and optional tiebreakers instead of pairings", () => {
+  const result = parse(`STANDINGS\n1 Readysetink 6 2-0-0 50.0% 66.7% 60.0%\n2 Inkme 3 1-1-0 75.0% 50.0% 65.0%`);
+  assert.deepEqual(result.standings, [
+    { name: "Readysetink", w: 2, l: 0, d: 0, omw: 50, gw: 66.7, ogw: 60 },
+    { name: "Inkme", w: 1, l: 1, d: 0, omw: 75, gw: 50, ogw: 65 },
+  ]);
+});
