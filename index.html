@@ -9635,11 +9635,12 @@ function renderDecksPage(){
 }
 
 /* ===================== other ===================== */
-/* New visitors land at the table. Existing visitors keep the last page they
-   deliberately used, so this changes the product's front door without
-   trampling anybody's saved workflow. */
-const FIRSTVISIT=localStorage.getItem("fs3_tab")==null;
-let OPAGE=load("fs3_opage",FIRSTVISIT?"lore":"");
+/* Every plain visit lands on the deck builder, new or returning — a
+   remembered last-tab landing felt random rather than helpful, since which
+   tab you'd left open wasn't something you'd usually thought about. Deep
+   links (hub-page "Open it" buttons, shared decks) still open on the tab
+   they name; see the BOOTHASH handling near the bottom of the file. */
+let OPAGE=load("fs3_opage","");
 /* Grouped so the Other page reads as three shelves rather than one wall:
    what you'd open now, what's a game, and what's still being written. */
 const OTHER=[
@@ -11759,7 +11760,7 @@ const VIEWS=["vSearch","vGuide","vColl","vDecks","vOther","vRead","vGuess","vDus
    click-to-add handler to every one of them. showTab() then swapped the view
    class without re-rendering, and the handlers survived: one click on any card
    put it in your deck, on the tab that is supposed to be read-only. */
-let TAB=(()=>{const t=load("fs3_tab",FIRSTVISIT?"tOther":"tDeck");return TABS.includes(t)?t:"tOther"})();
+let TAB="tDeck";
 let SUB=load("fs3_sub","manual");
 function showTab(t){
   /* Search and the deck builder share one grid, so crossing between them
@@ -12216,7 +12217,7 @@ try{document.body.insertAdjacentHTML("afterbegin",RAINDEF)}catch(e){}
    so a binding made once at boot would be thrown away by the first re-render. */
 paintDeckBar();
 applyPrefs();
-showTab(load("fs3_tab",FIRSTVISIT?"tOther":"tDeck"));
+showTab("tDeck");
 drawTitle();
 /* =========================================================================
    Accounts — sign in with Google, carry decks / dust / staples between devices

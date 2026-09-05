@@ -38,8 +38,11 @@ for(const t of ["tDeck","tSearch","tColl","tDecks","tOther"]){
   ok(await p.evaluate(t=>document.querySelector("main .view.on")!==null,t),t+" opens");
 }
 for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:ability","hex","cred","lore"]){
-  await p.evaluate(o=>{localStorage.setItem("fs3_tab",JSON.stringify("tOther"));
-    localStorage.setItem("fs3_opage",JSON.stringify(o))},op);
+  /* Setting the hash and reloading, not goto()-ing to a hash-only-different
+     URL — a fragment-only navigation is same-document in Chromium and never
+     re-runs the boot script, so BOOTHASH (read once at top level) would stay
+     stale and the deep link would silently never apply. */
+  await p.evaluate(o=>{location.hash="tab=tOther&op="+o},op);
   await p.reload();await p.waitForTimeout(700);
 }
 ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+errs[0]:""}`);
@@ -49,8 +52,7 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
    up at all, and that pressing JUDGE actually locks the score. The lock is also
    the cheapest possible proof that the judge panel rendered and wired itself. */
 {
-  await p.evaluate(()=>{localStorage.setItem("fs3_tab",JSON.stringify("tOther"));
-    localStorage.setItem("fs3_opage",JSON.stringify("lore"))});
+  await p.evaluate(()=>{location.hash="tab=tOther&op=lore"});
   await p.reload();await p.waitForTimeout(900);
   ok(await p.evaluate(()=>!!document.querySelector(".lorewrap")),"lore tracker opens");
   await p.evaluate(()=>{LORE.n=2;LORE.players=LORE.players.slice(0,2);loreSave();renderLore()});
@@ -112,7 +114,6 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
   ok(await p.evaluate(()=>{
     const i=1;LORE.players[i].lore=19;loreAdd(i,1);loreAdd(i,1);
     return LORE.players[i].lore===20}),"lore is capped at 20");
-  await p.evaluate(()=>{localStorage.setItem("fs3_opage",JSON.stringify(""))});
   await p.reload();await p.waitForTimeout(700);
   ok(before==="1","lore counts up");
 }
