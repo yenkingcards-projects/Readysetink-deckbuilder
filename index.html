@@ -604,7 +604,15 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 .upc .uc{display:block;font-size:12px;color:var(--deep);padding:0 5px}
 /* ===== suggested swaps (Decks tab) ====================================== */
 .swapbox{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--gold);
-  border-radius:0 11px 11px 0;padding:12px 14px;margin-bottom:16px}
+  border-radius:0 11px 11px 0;margin-bottom:16px;overflow:hidden}
+.swapbox>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;
+  padding:12px 14px;font-size:14.08px;font-weight:700}
+.swapbox>summary::-webkit-details-marker{display:none}
+.swapbox>summary::before{content:"▸";color:var(--link);transition:transform .15s;font-size:1rem}
+.swapbox[open]>summary::before{transform:rotate(90deg)}
+.betatag{display:inline-block;background:var(--gold);color:var(--carbon);font-size:10px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:2px}
+.swapbody{padding:0 14px 14px}
 .swaplist{display:flex;flex-direction:column;gap:9px}
 .swapitem{display:flex;align-items:center;gap:9px;background:var(--panel2);
   border:1px solid var(--line);border-radius:2px;padding:8px;flex-wrap:wrap}
@@ -8021,18 +8029,23 @@ function renderSwapBox(){
   const tile=(c,cls)=>c?`<div class="swtile ${cls}">
       ${c.img?`<img src="${esc(c.img)}" loading="lazy" alt="">`:`<div class="ph"></div>`}
     </div>`:`<div class="swtile ${cls}"></div>`;
-  return `<div class="swapbox">
-    <h3 class="sec2">✨ Suggested swaps</h3>
-    <p class="hint" style="margin:-4px 0 10px">Cards worth trying in place of your weakest ones right
-      now — curve gaps and missing staples first. <a href="#" data-gotoupgrade="1">Full upgrade report →</a></p>
-    <div class="swaplist">${sw.map(s=>`
-      <div class="swapitem">
-        ${tile(s.out,"out")}<span class="swarrow">→</span>${tile(s.card,"in")}
-        <div class="swinfo"><span class="swn">${esc(s.card.f)}</span><span class="swwhy">${esc(s.why)}${
-          s.out?` — instead of ${esc(s.out.f)}`:""}</span></div>
-        <button class="btn go" data-swapin="${esc(s.card.f)}" data-swapout="${s.out?esc(s.out.f):""}">Swap</button>
-      </div>`).join("")}</div>
-  </div>`;
+  /* Collapsed by default, remembered once you've opened it -- same pattern as
+     #special and #side. New enough (and machine-guessed enough) a feature
+     that it shouldn't shout over the pull list you actually came here for. */
+  return `<details class="swapbox" id="swapbox"${load("fs3_swapopen",false)?" open":""}>
+    <summary>✨ Suggested swaps <span class="betatag">Beta</span></summary>
+    <div class="swapbody">
+      <p class="hint" style="margin:0 0 10px">Cards worth trying in place of your weakest ones right
+        now — curve gaps and missing staples first. <a href="#" data-gotoupgrade="1">Full upgrade report →</a></p>
+      <div class="swaplist">${sw.map(s=>`
+        <div class="swapitem">
+          ${tile(s.out,"out")}<span class="swarrow">→</span>${tile(s.card,"in")}
+          <div class="swinfo"><span class="swn">${esc(s.card.f)}</span><span class="swwhy">${esc(s.why)}${
+            s.out?` — instead of ${esc(s.out.f)}`:""}</span></div>
+          <button class="btn go" data-swapin="${esc(s.card.f)}" data-swapout="${s.out?esc(s.out.f):""}">Swap</button>
+        </div>`).join("")}</div>
+    </div>
+  </details>`;
 }
 function renderUpgrade(){
   const r=upgradeReport(),d=deck();
@@ -9685,6 +9698,7 @@ function renderDecksPage(){
     <div id="borrowBox" class="collonly"></div>
   </div>`;
   wireGallery();
+  {const sb=$("swapbox");if(sb)sb.ontoggle=()=>save("fs3_swapopen",sb.open)}
   $("deckspage").querySelectorAll("[data-swapin]").forEach(b=>b.onclick=()=>{
     const outF=b.dataset.swapout;
     if(outF)delCard(outF);
