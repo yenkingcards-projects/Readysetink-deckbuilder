@@ -9660,6 +9660,139 @@ function renderBorrow(){
     save("fs3_borrow",BORROW);renderBorrow()});
 }
 
+/* ===================== official registration sheet =====================
+   Ravensburger's own OP Constructed decklist form (Letter, 612x792pt),
+   filled from whatever deck is selected. It has no fillable form fields of
+   its own -- just printed lines to write on -- so every coordinate below
+   was measured directly off the real PDF once (pdfplumber, word/line/rect
+   positions) rather than guessed. loaded lazily via pdf-lib, same pattern
+   as the QR encoder and the Supabase client: most visits to this page never
+   touch it, so it isn't in the main bundle for everyone. */
+const REGSHEET_URL="/forms/deck-registration-sheet.pdf";
+const REGDEF={firstName:"",lastName:"",event:"",location:"",date:""};
+let REG=Object.assign({},REGDEF,load("fs3_regdef",{}),load("fs3_reg",{}));
+const PDFLIB_URL="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js";
+let pdfLibPromise=null;
+function loadPDFLib(){
+  if(window.PDFLib)return Promise.resolve(window.PDFLib);
+  if(pdfLibPromise)return pdfLibPromise;
+  pdfLibPromise=new Promise((ok,no)=>{
+    const s=document.createElement("script");
+    s.src=PDFLIB_URL;s.async=true;
+    s.onload=()=>window.PDFLib?ok(window.PDFLib):no(new Error("no global"));
+    s.onerror=()=>no(new Error("script blocked"));
+    document.head.appendChild(s)});
+  return pdfLibPromise;
+}
+/* The two columns of "# In Deck / Card Name" rows, 26 each -- the Y (in
+   "distance down from the top of the page") of each row's printed line. */
+const REG_ROWTOPS=[184.2,203.6,223.1,242.5,262.0,281.4,300.8,320.3,339.7,359.1,
+  378.6,398.0,417.5,436.9,456.4,475.8,495.2,514.7,534.1,553.5,573.0,592.4,611.9,631.3,650.8,670.2];
+async function buildRegSheet(){
+  const {PDFDocument,StandardFonts,rgb,degrees}=await loadPDFLib();
+  const res=await fetch(REGSHEET_URL);
+  if(!res.ok)throw new Error("Couldn't load the blank sheet");
+  const pdf=await PDFDocument.load(await res.arrayBuffer());
+  const page=pdf.getPages()[0];
+  const H=page.getHeight();
+  const font=await pdf.embedFont(StandardFonts.Helvetica);
+  const bold=await pdf.embedFont(StandardFonts.HelveticaBold);
+  const ink=rgb(0.06,0.09,0.16);
+  /* top = distance down from the top of the page, matching how every
+     coordinate above was measured -- converted to PDF's bottom-up Y once,
+     here, so nothing else has to do that math. */
+  const put=(text,x,top,opts={})=>{
+    if(text==null||text==="")return;
+    page.drawText(String(text),{x,y:H-top,size:opts.size||10,font:opts.font||font,color:ink});
+  };
+  const centerText=(text,cx,top,size,useFont)=>{
+    if(text==null||text==="")return;
+    const s=String(text),w=(useFont||font).widthOfTextAtSize(s,size);
+    put(s,cx-w/2,top,{size,font:useFont});
+  };
+  put(REG.date,250,76.8);
+  put(REG.event,456,76.8);
+  put(REG.location,250,93.8);
+  put(DECKS.cur,456,93.8);
+  if(REG.lastName)centerText(REG.lastName.trim().charAt(0).toUpperCase(),561.45,56,16,bold);
+  /* First/Last Name are vertical strips down the left edge, read top to
+     bottom (confirmed by rendering the real page — this is NOT the
+     direction a naive guess would pick). rotate(-90) makes the baseline run
+     downward in page space to match. */
+  if(REG.firstName)page.drawText(REG.firstName,{x:52,y:H-150,size:13,font,color:ink,rotate:degrees(-90)});
+  if(REG.lastName)page.drawText(REG.lastName,{x:52,y:H-460,size:13,font,color:ink,rotate:degrees(-90)});
+
+  const rows=dlist().slice().sort((a,b)=>a.c.f.localeCompare(b.c.f));
+  const cap=REG_ROWTOPS.length*2;
+  if(rows.length>cap)
+    toast(`This sheet only has ${cap} lines for ${cap} different cards — `
+      +`${rows.length-cap} left off. List the rest on the back.`);
+  rows.slice(0,cap).forEach((r,i)=>{
+    const col=i<REG_ROWTOPS.length?0:1,rowI=i%REG_ROWTOPS.length;
+    const top=REG_ROWTOPS[rowI]-4;
+    centerText(r.q,col===0?90.7:363.6,top,11,font);
+    put(r.c.f,col===0?129:402,top,{size:9.2});
+  });
+  centerText(dtotal(),321.1,701.2,12,bold);
+  const outBytes=await pdf.save();
+  return outBytes;
+}
+async function printRegSheet(){
+  /* The tab has to open SYNCHRONOUSLY, in the same tick as the click --
+     everything that builds the PDF is async (loading pdf-lib, fetching the
+     blank sheet, embedding fonts), and a window.open() that happens after
+     even one await no longer reads as part of the original user gesture to
+     most browsers, so it gets silently blocked instead of opening. Open a
+     blank tab right now and navigate it once the PDF is ready instead. */
+  const w=window.open("","_blank");
+  if(!w){toast("Pop-up blocked — allow pop-ups for this site to open the sheet");return}
+  try{
+    const bytes=await buildRegSheet();
+    const blob=new Blob([bytes],{type:"application/pdf"});
+    const url=URL.createObjectURL(blob);
+    w.location.href=url;
+    setTimeout(()=>URL.revokeObjectURL(url),60000);
+  }catch(e){
+    w.close();
+    toast("Couldn't build the sheet — "+(e.message||"try again"));
+  }
+}
+let REGOPEN=false;
+function renderRegSheet(){
+  const box=$("regBox");if(!box)return;
+  if(!dtotal()){box.innerHTML="";return}
+  box.innerHTML=`<div class="borrow">
+    <div class="bhead">
+      <b>🖨️ Official registration sheet</b>
+      <span class="sp"></span>
+      <button class="btn" id="rgCust">${REGOPEN?"Done":"Customise"}</button>
+      <button class="btn go" id="rgPrint">🖨️ Print filled sheet</button>
+    </div>
+    <p class="bnote">Ravensburger's OP Constructed decklist form, filled straight from this deck.</p>
+    ${REGOPEN?`<div class="bcust">
+      <label>First name<input id="rgFirst" value="${esc(REG.firstName)}"></label>
+      <label>Last name<input id="rgLast" value="${esc(REG.lastName)}"></label>
+      <label>Event<input id="rgEvent" value="${esc(REG.event)}"></label>
+      <label>Location<input id="rgLoc" value="${esc(REG.location)}"></label>
+      <label>Date<input type="date" id="rgDate" value="${esc(REG.date)}"></label>
+      <div class="bsave">
+        <button class="btn go" id="rgDefault">Save this as my default</button>
+        <span>${REG.saved?"Saved — future sheets start from this.":"These settings apply to this browser until you save them."}</span>
+      </div>
+    </div>`:""}
+  </div>`;
+  $("rgCust").onclick=()=>{REGOPEN=!REGOPEN;renderRegSheet()};
+  $("rgPrint").onclick=printRegSheet;
+  const rd=$("rgDefault");
+  if(rd)rd.onclick=()=>{
+    REG.saved=true;
+    save("fs3_regdef",{...REG,saved:true});save("fs3_reg",REG);
+    toast("Saved as your default");renderRegSheet()};
+  const put2=(id,k)=>{const el=$(id);if(el)el.onchange=()=>{REG[k]=el.value;save("fs3_reg",REG)}};
+  put2("rgFirst","firstName");put2("rgLast","lastName");put2("rgEvent","event");
+  put2("rgLoc","location");put2("rgDate","date");
+}
+
 /* The cards in the chosen deck, as pictures. The list views tell you what is in
    a deck; this tells you what it looks like, which is how most people actually
    recognise their own decks. Sorted by ink then cost — the order a deck is
@@ -9750,6 +9883,7 @@ function renderDecksPage(){
       <button class="btn collonly" id="buyMissing">🛒 Buy the cards I don't have</button>
     </div>
     ${renderPull()}
+    <div id="regBox"></div>
     <!-- The borrow list sits BELOW the pull sheet. It used to sit above it,
          which put "cards you haven't got" between you and the list you came
          to this page for. It reads better as a footnote to the pull sheet
@@ -9804,6 +9938,7 @@ function renderDecksPage(){
     toast(`Removed ${r.cards} cards from ${r.touched} rows`);
     renderBorrow();renderDecksPage()};
   renderBorrow();
+  renderRegSheet();
   wirePull();
   $("pullSort").onchange=e=>{PULLSORT=e.target.value;save("fs3_pullsort",PULLSORT);renderDecksPage()};
   $("pullView").onclick=()=>{PULLVIEW=PULLVIEW==="images"?"list":"images";save("fs3_pullview",PULLVIEW);renderDecksPage()};
