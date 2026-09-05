@@ -4521,6 +4521,27 @@ function setWords(){
    words and resolves the longest run it recognises at each step: "steel" is an
    ink, "action" is a type, "rise of the floodborn" is a set. Anything it can't
    place stays a free-text term, exactly as before. */
+/* Non-mutating peek: would this one word, on its own, resolve to some
+   fixed-vocabulary facet (type, class, keyword, franchise, artist, rarity,
+   set)? Used below so a bare color word only spends itself as an ink filter
+   when whatever follows it is ALSO a real facet -- "green action" -- rather
+   than an art description like "green eyes", where "eyes" isn't a facet at
+   all and the two words belong together as one search phrase, not an
+   Emerald-ink filter plus a stray "eyes". */
+function looksLikeFacet(word){
+  const lc=word.replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim();
+  if(!lc)return false;
+  if(setWords().has(lc))return true;
+  const RAR=["common","uncommon","rare","super rare","legendary","enchanted","epic","iconic"];
+  if(RAR.includes(lc))return true;
+  if(lc==="inkable"||lc==="inkwell")return true;
+  if(["character","action","item","location"].includes(lc))return true;
+  if(CLASSES.some(x=>x.toLowerCase()===lc))return true;
+  if(KWS.some(x=>x.toLowerCase()===lc))return true;
+  if(STORIES.some(x=>x.toLowerCase()===lc))return true;
+  if(ARTISTS.some(x=>x.toLowerCase()===lc))return true;
+  return false;
+}
 function tryToken(raw){
   const t=raw.trim();if(!t)return false;
   const words=t.split(/\s+/);
@@ -4530,6 +4551,8 @@ function tryToken(raw){
       let hit=false;
       for(let len=Math.min(6,words.length-i);len>=1&&!hit;len--){
         const phrase=words.slice(i,i+len).join(" ");
+        if(len===1&&i+1<words.length&&INKWORDS[phrase.toLowerCase()]&&
+           !looksLikeFacet(words[i+1]))continue;
         if(tryOne(phrase,true)){i+=len;hit=any=true}
       }
       if(!hit){leftover.push(words[i]);i++}

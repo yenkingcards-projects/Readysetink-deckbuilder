@@ -67,15 +67,23 @@ Only tag the ONE shape actually shown. If you genuinely cannot make out the
 icon, skip the group rather than guessing.
 
 --- "a": free-text search words ---
-40 to 50 SHORT words or phrases (1-3 words each, never a full sentence). Do
-NOT waste entries repeating the character's own name or card title -- that's
-already searchable elsewhere. NEVER include any number, digit, dimension, or
-anything from the card frame (cost, stats, collector number) as a tag -- only
-things visible in the illustration itself.
+60 to 80 SHORT words or phrases (1-3 words each, never a full sentence) --
+be thorough, not brief; a short list here is a worse list, so keep going
+until you've genuinely covered every category below rather than stopping
+once something plausible exists. Do NOT waste entries repeating the
+character's own name or card title -- that's already searchable elsewhere.
+NEVER include any number, digit, dimension, or anything from the card frame
+(cost, stats, collector number) as a tag -- only things visible in the
+illustration itself.
 
-Be ACCURATE to what this specific character actually is: an animal, bird, or
-non-human character has fur, feathers, scales, or a shell -- NOT "hair" or
-"skin" unless it is a human or human-like character.
+Be STRICTLY ACCURATE to what this specific character's BODY actually is made
+of -- this matters more than almost anything else here. A bird (HeiHei, Iago,
+Zazu, ...) has FEATHERS, a crest, and a beak, never "hair" or "skin". An
+animal with fur (a wolf, a deer, Pua) has FUR or a coat, never "hair" or
+"skin". Something scaled or shelled (a fish, Tamatoa, a dragon) has SCALES or
+a shell. Reserve "hair" and "skin" for human or human-like characters only.
+If you catch yourself about to write "hair" or "skin", stop and check what
+kind of creature this is first.
 
 FIRST, count and name every character/creature depicted in the illustration
 itself (the main character AND anyone else visible, background included):
@@ -152,6 +160,28 @@ def resolve_set_name(spec):
     return spec
 
 
+def check_ollama(host, model):
+    """Silent, instant failures are exactly how this pipeline used to look
+    like it "did nothing": if Ollama isn't running, or running without this
+    model pulled, every single call_ollama() below fails in a few
+    milliseconds, the per-card except-and-continue swallows every one of
+    them, and the run finishes in under a second looking successful. Fail
+    loud, up front, before touching a single card, instead."""
+    try:
+        req = urllib.request.Request(host.rstrip('/') + '/api/tags')
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            tags = json.loads(resp.read())
+    except Exception as e:
+        print(f"Can't reach Ollama at {host}: {e}\n"
+              f"Open the Ollama app (or run `ollama serve`) and try again.", file=sys.stderr)
+        sys.exit(1)
+    names = {m.get('name') or m.get('model') for m in tags.get('models', [])}
+    if model not in names:
+        print(f"Model '{model}' isn't pulled in Ollama (have: {', '.join(sorted(names)) or 'nothing'}).\n"
+              f"Run `ollama pull {model}` first.", file=sys.stderr)
+        sys.exit(1)
+
+
 def call_ollama(host, model, image_path, prompt=PROMPT, timeout=300):
     with open(image_path, 'rb') as f:
         b64 = base64.b64encode(f.read()).decode('ascii')
@@ -161,7 +191,7 @@ def call_ollama(host, model, image_path, prompt=PROMPT, timeout=300):
         "images": [b64],
         "stream": False,
         "format": "json",
-        "options": {"temperature": 0.2, "num_predict": 4096, "repeat_penalty": 1.4, "repeat_last_n": 256},
+        "options": {"temperature": 0.2, "num_predict": 6144, "repeat_penalty": 1.4, "repeat_last_n": 256},
     }).encode('utf-8')
     req = urllib.request.Request(host.rstrip('/') + '/api/generate', data=payload,
                                   headers={'Content-Type': 'application/json'})
@@ -222,10 +252,11 @@ def parse_model_json(raw):
         return True
     a_clean = [w for w in a_clean if is_real_tag(w)]
     # Safety net against repetition loops: however many the model produced,
-    # never keep more than 60 -- a card genuinely tagged well doesn't need
-    # more than that, and a loop that got past dedup (near-duplicate phrasing)
-    # stops ballooning the file.
-    a = a_clean[:60]
+    # never keep more than 100 -- comfortably above the 60-80 the prompt asks
+    # for, so a genuinely thorough tagging pass isn't clipped, while a loop
+    # that got past dedup (near-duplicate phrasing) still can't balloon the
+    # file without limit.
+    a = a_clean[:100]
     return {"t": t, "a": a, "_partial": partial}
 
 
@@ -240,6 +271,8 @@ def main():
                      help='Instead of skipping already-tagged cards, re-look at them and ADD any '
                           'new tags found (existing tags are shown to the model and kept, never lost)')
     args = ap.parse_args()
+
+    check_ollama(args.host, args.model)
 
     slug = slugify(resolve_set_name(args.set))
     in_dir = os.path.join(CACHE_ROOT, slug)
@@ -271,6 +304,8 @@ def main():
         todo = [(fn, key) for fn, key in manifest.items() if key not in result['cards']]
         print(f"Tagging {len(todo)}/{len(manifest)} cards with {args.model} via {args.host}")
 
+    fail_count = 0
+    added_total = 0
     for i, (fname, key) in enumerate(todo, 1):
         path = os.path.join(in_dir, fname)
         existing = result['cards'].get(key, {"t": [], "a": []}) if args.improve else None
@@ -283,7 +318,7 @@ def main():
                 new_tags.pop('_partial', None)
                 tags = {
                     "t": list(dict.fromkeys(existing['t'] + new_tags['t']))[:len(ALL_T_IDS)],
-                    "a": list(dict.fromkeys(existing['a'] + new_tags['a']))[:60],
+                    "a": list(dict.fromkeys(existing['a'] + new_tags['a']))[:100],
                 }
                 added = len(tags['a']) - len(existing['a'])
             else:
@@ -293,11 +328,13 @@ def main():
                 added = None
         except Exception as e:
             print(f"  [{i}/{len(todo)}] FAILED {key}: {e}", file=sys.stderr)
+            fail_count += 1
             continue
 
         result['cards'][key] = tags
         preview = ', '.join(tags['a'][:4])
         if args.improve:
+            added_total += added
             note = f"  (+{added} new)"
         elif partial:
             note = "  (partial -- response got cut off, kept what completed)"
@@ -313,7 +350,21 @@ def main():
         json.dump(result, f, indent=1, ensure_ascii=False)
 
     print(f"\nWrote {len(result['cards'])} cards to {out_path}")
+    if args.improve:
+        print(f"+{added_total} new tags across {len(todo)} cards, {fail_count} failed")
+    elif fail_count:
+        print(f"{fail_count}/{len(todo)} cards failed")
     print(f"Next: python3 art-tools/merge_art_tags.py --input {os.path.basename(out_path)}")
+
+    # A card here and there timing out or returning bad JSON is normal model
+    # noise -- tolerated above, on purpose. But if EVERY card in a non-empty
+    # batch failed, that's not noise, that's the run having done nothing, and
+    # it needs to come back as a real failure (exit 1) so run_everything*.py's
+    # subprocess check actually notices, instead of logging "DONE" for a set
+    # that got zero new tags.
+    if todo and fail_count == len(todo):
+        print("Every card in this run failed -- nothing was tagged.", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == '__main__':
