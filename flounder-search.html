@@ -2535,7 +2535,7 @@ body.noremind .c.illegal img{filter:none}
 .mtabs{display:none;position:fixed;bottom:0;left:0;right:0;z-index:120;background:rgba(12,24,40,.97);border-top:1px solid var(--line)}
 .mtabs button{flex:1;padding:18px 6px;font-size:1rem;color:var(--deep);font-weight:700}
 .mtabs button.on{color:var(--amberc);box-shadow:inset 0 3px 0 var(--amberc)}
-@media(max-width:900px){.mtabs{display:flex}
+@media(max-width:900px){body.tdeck .mtabs{display:flex}
   /* #special is a sibling of #side and was not in this list, so the Special
      searches drawer stayed on screen above the deck in deck mode. */
   body.mdeck .side,body.mdeck #special,body.mdeck .cards{display:none}
@@ -11808,6 +11808,12 @@ function showTab(t){
   const guided=(t==="tDeck"&&SUB==="guided");
   VIEWS.forEach(v=>$(v).classList.remove("on"));
   document.body.classList.toggle("browse",t==="tSearch");
+  /* The Cards/Deck mobile switcher only means anything on the Deck builder
+     tab -- Search shares the same view but never shows the deck rail, and
+     Collection/Decks/Other have no cards-vs-deck toggle at all. It used to
+     show on every narrow-screen tab because the CSS only ever excluded
+     Search (body.browse), never actually opted IN to Deck builder. */
+  document.body.classList.toggle("tdeck",t==="tDeck");
   $("subsw").classList.toggle("hide",t!=="tDeck");
   if(t==="tDeck")       $(guided?"vGuide":"vSearch").classList.add("on");
   else if(t==="tSearch")$("vSearch").classList.add("on");
