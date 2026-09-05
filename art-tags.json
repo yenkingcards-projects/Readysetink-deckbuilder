@@ -1241,7 +1241,8 @@
     "sparking dress",
     "red hair with curls",
     "curly red hair",
-    "hair styled into large loops"
+    "hair styled into large loops",
+    "heart design"
    ]
   },
   "Goofy - Musketeer (Special)": {
@@ -1276,7 +1277,11 @@
     "cuffed sleeve",
     "puffy pants",
     "swashbuckling costume",
-    "capelet"
+    "capelet",
+    "dog character",
+    "goofy doge",
+    "bearded man lookalike?",
+    "scalloped edge cape"
    ]
   },
   "Hades - King of Olympus (Enchanted)": {
@@ -1405,7 +1410,16 @@
     "soft pink sky",
     "sunset colors",
     "pastel tones",
-    "orange sunset glow"
+    "orange sunset glow",
+    "red hair tuft on head",
+    "merman character",
+    "merfolk figure",
+    "mythical sea creature",
+    "long flowing fins",
+    "flowing teal tails",
+    "scalloped edge detail",
+    "curved horn like fin",
+    "horn shaped tail tip"
    ]
   },
   "Mickey Mouse - True Friend (Special)": {
@@ -1471,7 +1485,10 @@
     "curved linesart",
     "smiling mouth",
     "cheerful expression",
-    "whimsical atmosphere"
+    "whimsical atmosphere",
+    "ornate stone columns",
+    "arched entryway",
+    "yellowish glow"
    ]
   },
   "Rapunzel - Gifted with Healing (Special)": {
@@ -1480,7 +1497,8 @@
     "forward",
     "solo",
     "standing",
-    "glowing"
+    "glowing",
+    "flavorsrc"
    ],
    "a": [
     "blonde hair",
@@ -1518,7 +1536,15 @@
     "purple lens",
     "purple purple gown",
     "flowinging hair",
-    "gold turn"
+    "gold turn",
+    "princess attire",
+    "ruffled neckline",
+    "fairytale theme",
+    "enchanted forest feel",
+    "ethereal atmosphere",
+    "hair tied back at top",
+    "golden tresses",
+    "long flowing locks"
    ]
   },
   "Stitch - Carefree Surfer (Enchanted)": {
@@ -1582,7 +1608,17 @@
     "orange markings around muzzle",
     "green sea turtle shell pattern",
     "sea turtleshell design",
-    "swirl patterns on surfboard"
+    "swirl patterns on surfboard",
+    "teal surfboard edge",
+    "red hibiscus flower lei",
+    "surfboarding character",
+    "smiling face",
+    "open mouth showing teeth",
+    "white foam waves",
+    "turquoise water background",
+    "pinkish clouds behind head",
+    "tribal print board",
+    "scalloped edges"
    ]
   },
   "Stitch - Rock Star": {
@@ -1625,7 +1661,9 @@
     "teal color",
     "short hair on top head",
     "spiky tuft of hair",
-    "eyepatch accessory"
+    "eyepatch accessory",
+    "turquoise pet",
+    "golden crown piece"
    ]
   },
   "Stitch - Rock Star (Special)": {
@@ -1697,7 +1735,9 @@
     "reaching out to viewer",
     "furry paws",
     "claws at end of fingers",
-    "mismatched eye sizes"
+    "mismatched eye sizes",
+    "blue alien character",
+    "short hair tuft"
    ]
   },
   "Timon - Grub Rustler": {
@@ -1748,7 +1788,9 @@
     "standing tall",
     "presenting offering",
     "offering snack tray",
-    "tray with fruits"
+    "tray with fruits",
+    "meerkat character",
+    "orange muzzle"
    ]
   },
   "Be Our Guest": {
@@ -1886,7 +1928,10 @@
     "cave wall sketch",
     "cave wall illustration",
     "three characters",
-    "simba lion cub"
+    "simba lion cub",
+    "mufasa portrait on cave wall",
+    "mulet",
+    "tusks"
    ]
   },
   "Healing Glow": {
@@ -2005,7 +2050,12 @@
     "truffle beard",
     "muscular man with a sword",
     "large blade edge",
-    "curved tines at ender"
+    "curved tines at ender",
+    "bearded warrior",
+    "warrior face",
+    "determined expression",
+    "brown haired bearded hero",
+    "sword hilt detail"
    ]
   },
   "Part of Your World": {
@@ -2055,7 +2105,19 @@
     "underwater landscape",
     "underwater habitat",
     "underwater realm",
-    "red hair"
+    "red hair",
+    "castle towers",
+    "stone walls",
+    "archway entrance",
+    "scalloped edge dress",
+    "teal blue sea grass",
+    "dark green seaweed",
+    "swirling bubbles",
+    "coral reef structure",
+    "merman friend",
+    "flounder companion",
+    "sebastian lookalike?",
+    "sunken ruins"
    ]
   },
   "You Have Forgotten Me": {
@@ -2084,7 +2146,12 @@
     "spirit of mufasa",
     "spirit mane",
     "fire spirit",
-    "lion spirit"
+    "lion spirit",
+    "cloudy sky",
+    "dreamlike atmosphere",
+    "ethereal scene",
+    "mystical aura",
+    "distant figure"
    ]
   },
   "Dinglehopper": {
@@ -31436,7 +31503,8 @@
     "leaning forward",
     "determined expression",
     "dark blue coat",
-    "light gray pants (implied)"
+    "light gray pants (implied)",
+    "shiny buttons"
    ]
   },
   "Gazelle - Angel with Horns": {
@@ -39934,7 +40002,8 @@
     "brown hair",
     "white collar",
     "golden accents",
-    "reaching out"
+    "reaching out",
+    "open hand"
    ]
   },
   "Beast - Gracious Prince (Special)": {
@@ -48469,7 +48538,8 @@
     "running through snow",
     "icy landscape",
     "frozen lake",
-    "ice floes"
+    "ice floes",
+    "leather strap buckle"
    ]
   },
   "Do You Want to Build A Snowman?": {
