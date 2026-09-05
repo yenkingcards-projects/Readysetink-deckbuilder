@@ -2619,9 +2619,22 @@ body.loreon{overflow:hidden}
   font-size:12px;font-weight:900;letter-spacing:.08em}
 .seatwon span{background:var(--amberc);color:#2a1f00;padding:3px 10px;border-radius:999px;
   margin:0 3px;display:inline-block}
+/* The full-screen toggle, moved off the shared bar and into the "You" seat's
+   own tile -- semi-opaque so it reads as part of the tile, not a control
+   floating on top of it. flip never applies to this seat (loreRenderOrder
+   always keeps data index 0 in an unflipped slot), so it never needs its
+   own counter-rotation. */
+.seatfs{position:absolute;bottom:8px;right:8px;width:34px;height:34px;border-radius:50%;
+  background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.85);
+  font-size:16px;display:grid;place-items:center;opacity:.65;transition:opacity .15s,background .15s;z-index:2}
+.seatfs:hover,.seatfs:active{opacity:1;background:rgba(0,0,0,.4)}
 /* the bar down the side */
 .lorebar{display:flex;align-items:center;gap:8px;padding:8px 10px;
-  background:rgba(0,0,0,.4);border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap}
+  background:rgba(0,0,0,.4);border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap;
+  overflow:hidden;max-height:80px;opacity:1;
+  transition:max-height .3s ease,opacity .22s ease,padding .3s ease}
+body.lorefs .lorebar{max-height:0;opacity:0;padding-top:0;padding-bottom:0;
+  border-top-color:transparent;pointer-events:none}
 .lorebar .sp{flex:1}
 .lbtn{padding:11px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.3);
   background:rgba(255,255,255,.08);color:#fff;font-size:13.5px;font-weight:800;cursor:pointer;
@@ -2635,6 +2648,35 @@ body.loreon{overflow:hidden}
 .lbtn.judge.on{background:var(--bad);border-color:var(--bad);color:#fff}
 .lbtn.exit{background:transparent}
 .lorelock{font-size:12px;font-weight:800;color:var(--amberc);letter-spacing:.06em}
+/* ---- full-screen minimal chrome ----------------------------------------
+   Cross-faded with the bar above rather than swapped instantly -- entering
+   and leaving full screen is one smooth motion, not a hard cut. All three
+   sit right on top of .loreseats (a sibling, positioned relative to
+   .lorewrap) so they read as part of the table, not a bar bolted on. */
+.lorefsback,.lorefsgear,.lorefsjudge{position:absolute;opacity:0;pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease;z-index:40}
+body.lorefs .lorefsback,body.lorefs .lorefsgear,body.lorefs .lorefsjudge{
+  opacity:1;pointer-events:auto}
+.lorefsback,.lorefsgear{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  font-size:18px;transform:scale(.8)}
+body.lorefs .lorefsback,body.lorefs .lorefsgear{transform:scale(1)}
+.lorefsback{top:calc(10px + env(safe-area-inset-top,0px));left:calc(10px + env(safe-area-inset-left,0px));
+  background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85)}
+.lorefsback:hover{background:rgba(0,0,0,.4)}
+.lorefsgear{top:calc(10px + env(safe-area-inset-top,0px));right:calc(10px + env(safe-area-inset-right,0px));
+  background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.24);color:rgba(255,255,255,.7)}
+.lorefsgear:hover{background:rgba(0,0,0,.32)}
+/* The judge control, on the table's side rather than top or bottom, so it
+   belongs to neither seat and both players can reach it. Real frosted
+   glass (backdrop-filter), not a fake gradient, because there's real
+   content behind it to blur. */
+.lorefsjudge{top:50%;right:calc(9px + env(safe-area-inset-right,0px));
+  transform:translateY(-50%) scale(.85);writing-mode:vertical-rl;text-orientation:mixed;
+  padding:18px 9px;border-radius:999px;background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.5);color:#fff;font-size:14.5px;font-weight:800;
+  letter-spacing:.05em;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
+.lorefsjudge.off{opacity:.35!important}
 /* ---- judge panel ----
    Named .jpanel, not .judge: the JUDGE button is .lbtn.judge, and a bare
    .judge rule gave that button position:absolute;inset:0;z-index:210 — an
@@ -2827,6 +2869,14 @@ body.loreon{overflow:hidden}
 .setupdefault{display:flex;align-items:center;gap:8px;justify-content:center;
   font-size:13px;color:rgba(255,255,255,.8);margin:14px 0 4px;cursor:pointer}
 .setupgo{width:100%;margin-top:14px;padding:15px;font-size:16px}
+.namegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.nameinput{padding:10px 11px;border-radius:6px;border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.95);color:#111;font-size:14px;font-weight:700;min-height:44px}
+.nameinput::placeholder{color:#767676;font-weight:500}
+.tourreminder{margin-top:10px;padding:10px 12px;border-radius:7px;
+  background:rgba(255,193,71,.14);border:1px solid rgba(255,193,71,.4)}
+.tourreminder p{font-size:12.8px;color:rgba(255,255,255,.9);line-height:1.5;margin:0}
+.tourreminder p+p{margin-top:7px}
 /* ---- choice sheet (setup steps, duck picker, colour picker) ---- */
 .choicesheet{max-width:420px;width:100%}
 .choicelist{display:flex;flex-direction:column;gap:7px;margin:4px 0 14px;max-height:52vh;overflow:auto}
@@ -2846,6 +2896,16 @@ body.loreon{overflow:hidden}
   box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
 .swatch:hover{transform:scale(1.08)}
 .swatch.on{border-color:var(--tx);box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--tx)}
+/* Ink-combo seat colours: frosted glass (the soft white wash) over a
+   sparkly gem base (the glints) over the real ink gradient -- see inkBg(). */
+.inkswatchgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));
+  gap:10px;margin:6px 0 16px;max-height:56vh;overflow-y:auto;padding-right:2px}
+.inkswatch{position:relative;aspect-ratio:1;border-radius:12px;border:2px solid rgba(0,0,0,.12);
+  cursor:pointer;display:flex;align-items:flex-end;padding:7px;text-align:left;
+  font-size:10.5px;font-weight:800;color:#fff;line-height:1.2;
+  text-shadow:0 1px 3px rgba(0,0,0,.65);letter-spacing:.01em;transition:transform .12s}
+.inkswatch:hover{transform:scale(1.05)}
+.inkswatch.on{border-color:#fff;box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--tx)}
 /* ---- in-game settings panel ---- */
 .setupreadout{font-size:12.5px;color:var(--deep);text-align:center;margin-bottom:14px;
   background:var(--canvas-soft);border-radius:6px;padding:8px}
@@ -10049,7 +10109,7 @@ let SETUP=null;
 function openLoreSetup(){
   const d=load(LORE_DEFAULTS_KEY,null)||{format:"core",mode:"casual",seriesLen:3};
   SETUP={n:2,format:d.format||"core",customWin:d.customWin||20,mode:d.mode||"casual",
-    seriesLen:d.seriesLen||3,saveDefault:false};
+    seriesLen:d.seriesLen||3,saveDefault:false,names:[]};
   renderLoreSetup();
 }
 /* One screen, every choice an inline row of tap-buttons — no more modal-hop
@@ -10072,6 +10132,14 @@ function renderLoreSetup(){
       <div class="segrow"><b>Players</b>
         ${seg("segN",[[1,"1 (solo)"],[2,"2"],[3,"3"],[4,"4"]],SETUP.n)}</div>
 
+      ${SETUP.n>1?`<div class="segrow"><b>Names</b>
+        <p class="setupsub" style="margin:-2px 0 8px">Optional — leave any of these blank and it keeps
+          the plain default (${SETUP.n===2?'"You" and "Opponent"':'"You", "Player 2", and so on'}).</p>
+        <div class="namegrid">${Array.from({length:SETUP.n},(_,i)=>`
+          <input class="nameinput" id="segName${i}" maxlength="14"
+            placeholder="${esc(defaultSeatName(i,SETUP.n))}" value="${esc(SETUP.names[i]||"")}">`).join("")}
+        </div></div>`:""}
+
       <div class="segrow"><b>Format</b>
         ${seg("segFmt",LORE_FORMATS,SETUP.format)}
         ${SETUP.format==="custom"?`<div class="seginput"><label>Lore to win</label>
@@ -10079,7 +10147,13 @@ function renderLoreSetup(){
       </div>
 
       ${SETUP.n>1?`<div class="segrow"><b>Casual or tournament</b>
-        ${seg("segMode",LORE_MODES,SETUP.mode)}</div>`:""}
+        ${seg("segMode",LORE_MODES,SETUP.mode)}
+        ${SETUP.mode==="tournament"?`<div class="tourreminder">
+          <p>📵 <b>Turn on Do Not Disturb</b> before your match starts — nothing looks worse than a
+            screen lighting up across the table, even when it's innocent.</p>
+          <p>🤚 <b>The Judge tool won't be available.</b> This tracker still counts lore, but a
+            tournament ruling has to come from an actual judge — call one over instead.</p>
+        </div>`:""}</div>`:""}
 
       ${SETUP.n>1?`<div class="segrow"><b>Games</b>
         ${seg("segSeries",LORE_SERIES,SETUP.seriesLen===1?"1":SETUP.seriesLen===3?"3":"custom")}
@@ -10099,16 +10173,20 @@ function renderLoreSetup(){
   wire("segSeries",v=>SETUP.seriesLen=v==="custom"?5:+v);
   const cw=$("customWinIn");if(cw)cw.oninput=()=>{const n=parseInt(cw.value,10);if(n>0)SETUP.customWin=n};
   const sl=$("seriesLenIn");if(sl)sl.oninput=()=>{const n=parseInt(sl.value,10);if(n>0)SETUP.seriesLen=n};
+  for(let i=0;i<SETUP.n;i++){const el=$("segName"+i);if(el)el.oninput=()=>{SETUP.names[i]=el.value}}
   $("stGo").onclick=()=>{
     const saveDef=$("stSaveDef").checked;
     if(saveDef)save(LORE_DEFAULTS_KEY,{format:SETUP.format,customWin:SETUP.customWin,mode:SETUP.mode,seriesLen:SETUP.seriesLen});
     LORE={n:SETUP.n,
-      players:Array.from({length:SETUP.n},(_,i)=>({name:SETUP.n===1?"You":i===0?"You":(SETUP.n===2?"Opponent":"Player "+(i+1)),lore:0,colorMode:"primary"})),
+      players:Array.from({length:SETUP.n},(_,i)=>({
+        name:String(SETUP.names[i]||"").trim().slice(0,14)||defaultSeatName(i,SETUP.n),
+        lore:0,colorMode:"primary"})),
       game:1,seriesLen:SETUP.n===1?1:SETUP.seriesLen,format:SETUP.format,customWin:SETUP.customWin,
       mode:SETUP.n===1?"casual":SETUP.mode,
       duck:{},gameLog:[],locked:false,needsSetup:false};
     loreSave();SETUP=null;renderLore()};
 }
+function defaultSeatName(i,n){return i===0?"You":n===2?"Opponent":"Player "+(i+1)}
 
 /* ---- per-seat colour themes ---------------------------------------------
    "primary" is the original four fixed colours. "random" rolls one hex once
@@ -10117,34 +10195,72 @@ function renderLoreSetup(){
    style. "chaos" animates in wireLore() via CHAOS_TIMERS — its inline style
    here is just the starting colour before the first tick. */
 const PRIMARY_SEAT_COLORS=["#2f6fa8","#a83232","#2f8a5a","#7a4fa8"];
-/* Ten picks, not just the four seat defaults — "Primary colours" used to
-   mean "whatever your seat position happens to be", which isn't really a
-   choice. Now picking it opens this swatch grid instead. */
-const COLOR_SWATCHES=["#2f6fa8","#a83232","#2f8a5a","#7a4fa8","#d67e2c",
-  "#2c9aa8","#c23b7a","#5a5a5a","#c9a227","#1f7a5c"];
-const LORE_COLOR_MODES=[["primary","Pick a colour"],["random","Random"],
+const LORE_COLOR_MODES=[["primary","Ink colour"],["random","Random"],
   ["stripes","Blue striped fish"],["chaos","Chaos"]];
 function randHue(){return `hsl(${Math.floor(Math.random()*360)},60%,40%)`}
+/* Darkens a #rrggbb by pct (negative = darker), for the solo-ink swatch's
+   own little gradient -- two-ink swatches already get their gradient from
+   the second colour, a solo ink needs SOME depth of its own. */
+function shade(hex,pct){
+  const n=parseInt(hex.slice(1),16),f=pct/100;
+  const ch=s=>Math.max(0,Math.min(255,Math.round(s+(f<0?s*f:(255-s)*f))));
+  const r=ch(n>>16),g=ch((n>>8)&255),b=ch(n&255);
+  return "#"+[r,g,b].map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+/* Every deck's real ink identity, doubling as the seat colour picker: one or
+   two of the six actual Lorcana inks, named exactly as the game names them
+   (Amber, Amethyst, Emerald, Ruby, Sapphire, Steel) -- never "blue" or
+   "purple". 6 solo + 15 pairs = every legal ink combination a deck can be. */
+const INK_COMBOS=(()=>{
+  const out=INKS.map(i=>[i]);
+  for(let a=0;a<INKS.length;a++)for(let b=a+1;b<INKS.length;b++)out.push([INKS[a],INKS[b]]);
+  return out;
+})();
+/* Fixed glint positions, reused on every swatch and every seat that uses
+   one -- looks hand-scattered without needing a random seed per card, and
+   it's one shared string rather than something recomputed per render. */
+const GEM_SPARKLE=[
+  "radial-gradient(circle at 18% 22%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 3.2%)",
+  "radial-gradient(circle at 72% 14%, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 2.4%)",
+  "radial-gradient(circle at 40% 55%, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 2%)",
+  "radial-gradient(circle at 82% 62%, rgba(255,255,255,.9) 0%, rgba(255,255,255,0) 2.8%)",
+  "radial-gradient(circle at 25% 82%, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 2.2%)",
+  "radial-gradient(circle at 60% 90%, rgba(255,255,255,.65) 0%, rgba(255,255,255,0) 1.8%)"
+].join(",");
+/* Stacking order, top to bottom: a soft white wash (the frosted glass), the
+   glints (the sparkly gem, sitting UNDER the frost), then the real ink
+   colour(s) as the base. */
+function inkBg(inks){
+  const base=inks.length>1
+    ?`linear-gradient(135deg, ${HEX[inks[0]]}, ${HEX[inks[1]]})`
+    :`linear-gradient(135deg, ${shade(HEX[inks[0]],22)}, ${shade(HEX[inks[0]],-20)})`;
+  return `linear-gradient(rgba(255,255,255,.18),rgba(255,255,255,.04)),${GEM_SPARKLE},${base}`;
+}
+const inkLabel=inks=>inks.join(" / ");
 function seatBg(p,i){
   if(p.colorMode==="random")return p.colorHex||(p.colorHex=randHue());
   if(p.colorMode==="chaos")return p.colorHex||PRIMARY_SEAT_COLORS[i%4];
   if(p.colorMode==="stripes")return "";
-  if(p.colorMode==="primary")return p.colorHex||PRIMARY_SEAT_COLORS[i%4];
+  if(p.colorMode==="primary")return p.inks?inkBg(p.inks):(p.colorHex||PRIMARY_SEAT_COLORS[i%4]);
   return PRIMARY_SEAT_COLORS[i%4];
 }
-function colorSwatchPicker(current){
+function inkSwatchPicker(current){
   return new Promise(done=>{
+    const curKey=(current||[]).join("+");
     const w=document.createElement("div");w.className="cfmbg";
-    w.innerHTML=`<div class="cfm choicesheet" role="dialog" aria-modal="true">
-      <h3>Pick a colour</h3>
-      <div class="swatchgrid">${COLOR_SWATCHES.map(hex=>
-        `<button class="swatch${hex===current?" on":""}" data-hex="${hex}" style="background:${hex}" aria-label="${hex}"></button>`).join("")}</div>
+    w.innerHTML=`<div class="cfm choicesheet wide" role="dialog" aria-modal="true">
+      <h3>Pick this seat's ink colour</h3>
+      <p>One or two inks, same as a deck — frosted glass over the real ink colour.</p>
+      <div class="inkswatchgrid">${INK_COMBOS.map(inks=>{
+        const key=inks.join("+");
+        return `<button class="inkswatch${key===curKey?" on":""}" data-inks="${esc(key)}"
+          style="background:${inkBg(inks)}">${esc(inkLabel(inks))}</button>`}).join("")}</div>
       <div class="cfmb"><button class="btn" data-no>Cancel</button></div>
     </div>`;
     document.body.appendChild(w);
     const shut=v=>{w.remove();document.removeEventListener("keydown",key);done(v)};
     const key=e=>{if(e.key==="Escape")shut(null)};
-    w.querySelectorAll("[data-hex]").forEach(b=>b.onclick=()=>shut(b.dataset.hex));
+    w.querySelectorAll("[data-inks]").forEach(b=>b.onclick=()=>shut(b.dataset.inks.split("+")));
     w.querySelector("[data-no]").onclick=()=>shut(null);
     w.onclick=e=>{if(e.target===w)shut(null)};
     document.addEventListener("keydown",key)})}
@@ -10174,20 +10290,32 @@ function scheduleChaos(el){
   CHAOS_TIMERS.push(t);
 }
 
+/* Data index 0 is always "You" (loreFreshMatch/setup always create it
+   first) — this decides which SLOT each data index lands in on screen, so
+   "You" is always in the unflipped seat nearest whoever's holding the
+   phone, never upside down to yourself. Only the DOM position (not the
+   data index used for renaming, +/-, or the win log) comes from this. */
+function loreRenderOrder(n){
+  if(n<=1)return [0];
+  if(n===2)return [1,0];
+  if(n===3)return [1,2,0];
+  return [1,2,0,3];
+}
 function renderLore(){
   LORE=LORE||loreLoad();
   if(LORE.needsSetup){openLoreSetup();return}
   const duckOn=Object.values(LORE.duck||{}).some(Boolean);
   const html=`<div class="lorewrap" id="lorewrap">
     <div class="loreseats p${LORE.n}" id="loreseats">
-      ${LORE.players.slice(0,LORE.n).map((p,i)=>{
+      ${loreRenderOrder(LORE.n).map((i,pos)=>{
+        const p=LORE.players[i];
         /* With two players the top seat is upside down so the person across
            the table reads it the right way up. With three or four, both top
            seats flip. */
-        const flip=(LORE.n===2&&i===0)||(LORE.n>2&&i<2);
+        const flip=(LORE.n===2&&pos===0)||(LORE.n>2&&pos<2);
         const bg=seatBg(p,i);
         const wins=(LORE.gameLog||[]).filter(g=>g.seat===i);
-        return `<div class="seat${flip?" flip":""}${p.colorMode==="stripes"?" stripes":""}${p.colorMode==="chaos"?" chaos":""}"${bg?` style="background:${bg}"`:""}
+        return `<div class="seat${flip?" flip":""}${p.colorMode==="stripes"?" stripes":""}${p.colorMode==="chaos"?" chaos":""}" data-seat="${i}"${bg?` style="background:${bg}"`:""}
              role="group" aria-label="${esc(p.name)}, ${p.lore} lore">
           <button class="seatname" data-rename="${i}" title="Tap to rename">${esc(p.name)}</button>
           <div class="seatnum" id="ln${i}" aria-live="polite" aria-atomic="true">${p.lore}</div>
@@ -10196,6 +10324,7 @@ function renderLore(){
             <button class="lorebtn" data-plus="${i}" aria-label="${esc(p.name)} plus one lore"${LORE.locked?" disabled":""}>+</button>
           </div>
           ${wins.length?`<div class="seatwon">${wins.map(g=>`<span>Won game ${g.game}</span>`).join("")}</div>`:""}
+          ${i===0?`<button class="seatfs" data-fstoggle="1" aria-label="Full screen">⛶</button>`:""}
         </div>`}).join("")}
     </div>
     <div class="lorebar">
@@ -10205,9 +10334,15 @@ function renderLore(){
       ${duckOn?`<button class="lbtn duck" id="loreDuckGone">🦆 Press when the duck's gone</button>`:""}
       <span class="sp"></span>
       <button class="lbtn" id="loreSettings">⚙ Settings</button>
-      <button class="lbtn" id="loreFull">⛶</button>
       <button class="lbtn judge${LORE.mode==="tournament"?" off":""}" id="loreJudge">🤚 JUDGE</button>
     </div>
+    <!-- Full-screen's minimal chrome: same three actions as the bar above
+         (back, settings, judge) but icon-only and translucent, so the table
+         between two players shows lore and nothing else. Always in the DOM,
+         hidden/shown (and cross-faded) by body.lorefs -- see wireLore(). -->
+    <button class="lorefsback" id="loreFsBack" aria-label="Exit full screen">←</button>
+    <button class="lorefsgear" id="loreFsGear" aria-label="Settings">⚙</button>
+    <button class="lorefsjudge${LORE.mode==="tournament"?" off":""}" id="loreFsJudge" aria-label="Judge">🤚 Judge</button>
     <div id="judgehost"></div>
     <div id="settingshost"></div>
     <div id="vichost"></div>
@@ -10229,9 +10364,9 @@ function wireLore(){
     const i=+b.dataset.rename;
     const n=await namePrompt("Who's sitting here?","Just so the screen says the right thing.",LORE.players[i].name);
     if(n==null)return;
-    LORE.players[i].name=String(n).trim().slice(0,14)||("Player "+(i+1));
+    LORE.players[i].name=String(n).trim().slice(0,14)||defaultSeatName(i,LORE.n);
     loreSave();renderLore()});
-  $("loreExit").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
+  $("loreExit").onclick=()=>{loreExitFS();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
   $("loreReset").onclick=async()=>{
     if(!await confirmBox("Reset scores","Puts every player back to zero lore. Game wins are kept.","Reset"))return;
     LORE.players.forEach(p=>p.lore=0);loreSave();renderLore()};
@@ -10242,23 +10377,47 @@ function wireLore(){
     fishworks(20,document.body,{x:r.left+r.width/2,y:r.top+r.height/2});
     LORE.duck={};loreSave();renderLore()};
   $("loreSettings").onclick=()=>openLoreSettings();
-  $("loreJudge").onclick=()=>{
+  const judgeGo=()=>{
     if(LORE.mode==="tournament"){toast("Tournament mode: call an actual judge — this tool is casual-only.");return}
     openJudge()};
-  $("loreFull").onclick=()=>{
-    const el=$("lorewrap");
-    if(document.fullscreenElement){document.exitFullscreen();return}
-    const go=el.requestFullscreen||el.webkitRequestFullscreen;
-    if(go)Promise.resolve(go.call(el)).catch(()=>{});
-  };
+  $("loreJudge").onclick=judgeGo;
+  $("loreFsJudge").onclick=judgeGo;
+  $("loreFsGear").onclick=()=>openLoreSettings();
+  $("loreFsBack").onclick=loreExitFS;
+  w.querySelectorAll("[data-fstoggle]").forEach(b=>b.onclick=loreEnterFS);
   stopChaos();
-  const seats=w.querySelectorAll(".seat");
   LORE.players.slice(0,LORE.n).forEach((p,i)=>{
     if(p.colorMode!=="chaos")return;
-    const el=seats[i];if(!el)return;
+    const el=w.querySelector(`[data-seat="${i}"]`);if(!el)return;
     scheduleChaos(el);
   });
 }
+/* ---- full screen ---------------------------------------------------------
+   .lorewrap is already position:fixed;inset:0 at all times (see its CSS) --
+   it's the app's own fullscreen-covering view the moment you're on this
+   page. What "full screen" actually changes is twofold: it asks the OS to
+   hide the browser's own chrome (address bar etc.) where the real
+   Fullscreen API supports that, AND it switches the on-screen controls from
+   a labelled toolbar to translucent icon-only ones (body.lorefs), which is
+   the part that matters most for a phone lying on a table between two
+   players. iOS Safari does not implement requestFullscreen for anything but
+   a <video> (same limitation the aquarium works around) -- there, only the
+   second half happens, which is still the whole visible win. */
+function loreEnterFS(){
+  document.body.classList.add("lorefs");
+  const el=$("lorewrap");if(!el)return;
+  const go=el.requestFullscreen||el.webkitRequestFullscreen;
+  if(go)Promise.resolve(go.call(el)).catch(()=>{});
+}
+function loreExitFS(){
+  document.body.classList.remove("lorefs");
+  if(document.fullscreenElement||document.webkitFullscreenElement)
+    (document.exitFullscreen||document.webkitExitFullscreen).call(document);
+}
+document.addEventListener("fullscreenchange",()=>{
+  if(!(document.fullscreenElement||document.webkitFullscreenElement))
+    document.body.classList.remove("lorefs");
+});
 
 function loreAdd(i,d,btn){
   if(LORE.locked){toast("Score is locked while the judge is open");return}
@@ -10575,8 +10734,8 @@ function openLoreSettings(){
     if(v==null)return;
     LORE.players[i].colorMode=v;
     if(v==="primary"){
-      const hex=await colorSwatchPicker(LORE.players[i].colorHex||PRIMARY_SEAT_COLORS[i%4]);
-      if(hex)LORE.players[i].colorHex=hex;
+      const inks=await inkSwatchPicker(LORE.players[i].inks||[INKS[i%INKS.length]]);
+      if(inks){LORE.players[i].inks=inks;delete LORE.players[i].colorHex}
     }else if(v==="random")LORE.players[i].colorHex=randHue();
     else delete LORE.players[i].colorHex;
     loreSave();renderLore();});
