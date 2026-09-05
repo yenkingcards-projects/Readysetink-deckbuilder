@@ -9715,12 +9715,25 @@ async function buildRegSheet(){
   put(REG.location,250,93.8);
   put(DECKS.cur,456,93.8);
   if(REG.lastName)centerText(REG.lastName.trim().charAt(0).toUpperCase(),561.45,56,16,bold);
-  /* First/Last Name are vertical strips down the left edge, read top to
-     bottom (confirmed by rendering the real page — this is NOT the
-     direction a naive guess would pick). rotate(-90) makes the baseline run
-     downward in page space to match. */
-  if(REG.firstName)page.drawText(REG.firstName,{x:52,y:H-150,size:13,font,color:ink,rotate:degrees(-90)});
-  if(REG.lastName)page.drawText(REG.lastName,{x:52,y:H-460,size:13,font,color:ink,rotate:degrees(-90)});
+  /* First/Last Name are vertical strips down the left edge. Both printed
+     labels run bottom-to-top up the page (measured off the real PDF: the
+     "First Name:" glyphs climb from top 436.6 to 391.2), so the name has to
+     read the same way or it lands upside down next to its own label —
+     rotate(90), not -90. Anchor is the FIRST character, so it sits just
+     above the label and the name grows upward into the empty strip; x is
+     the rotated baseline, matched to the printed labels' own baseline at
+     53.9 so the two line up. Long names shrink rather than run off the top
+     of the strip. */
+  const vertName=(text,anchorTop,stripTop)=>{
+    const s=String(text||"").trim();
+    if(!s)return;
+    let size=13;
+    const room=anchorTop-stripTop-6;
+    while(size>7&&font.widthOfTextAtSize(s,size)>room)size-=0.5;
+    page.drawText(s,{x:53.9,y:H-anchorTop,size,font,color:ink,rotate:degrees(90)});
+  };
+  vertName(REG.firstName,385,125.25);
+  vertName(REG.lastName,701,440.61);
 
   const rows=dlist().slice().sort((a,b)=>a.c.f.localeCompare(b.c.f));
   const cap=REG_ROWTOPS.length*2;
