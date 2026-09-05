@@ -602,6 +602,22 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
 .upc img,.upc .ph{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;background:var(--platinum)}
 .upc .un{display:block;font-size:12px;padding:6px 5px 0;line-height:1.25;color:var(--tx)}
 .upc .uc{display:block;font-size:12px;color:var(--deep);padding:0 5px}
+/* ===== suggested swaps (Decks tab) ====================================== */
+.swapbox{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--gold);
+  border-radius:0 11px 11px 0;padding:12px 14px;margin-bottom:16px}
+.swaplist{display:flex;flex-direction:column;gap:9px}
+.swapitem{display:flex;align-items:center;gap:9px;background:var(--panel2);
+  border:1px solid var(--line);border-radius:2px;padding:8px;flex-wrap:wrap}
+.swtile{width:52px;flex:0 0 52px;text-align:center}
+.swtile img,.swtile .ph{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;
+  border-radius:2px;background:var(--platinum)}
+.swtile.out{opacity:.55}
+.swarrow{font-size:18px;color:var(--deep);flex:0 0 auto}
+.swinfo{flex:1 1 160px;min-width:0}
+.swinfo .swn{display:block;font-size:12.8px;font-weight:700;color:var(--tx);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.swinfo .swwhy{display:block;font-size:11.52px;color:var(--deep);line-height:1.35}
+.swapitem button{flex:0 0 auto}
 /* ===== error cards ====================================================== */
 .sellbox{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:space-between;
   background:rgba(196,97,79,.1);
@@ -7952,13 +7968,38 @@ function upgradeReport(){
     });
   }
 
-  /* 5 — what to take out, only ever suggested when you're over size */
-  const over=Math.max(0,tot-F.min);
-  const cuts=over?L.slice().sort((a,b)=>
+  /* 5 — what to take out. Ranked regardless of deck size (weakest first) --
+     "cuts" only SHOWS this list when you're over the minimum, but the same
+     ranking is also what swapSuggestions() below pairs a new card against,
+     since a deck sitting exactly at 60 still has a weakest card worth
+     trading up from. */
+  const weakest=L.slice().sort((a,b)=>
       (illegalReason(b.c)?1:0)-(illegalReason(a.c)?1:0)||
       (onInk(a.c)?0:1)-(onInk(b.c)?0:1)||
-      b.c.c-a.c.c||(a.c.tx?1:0)-(b.c.tx?1:0)).slice(0,6):[];
-  return {problems,curve,missing,synergy,cuts,over,tot,inks:[...inks],co,arch:tot?archetype():null};
+      b.c.c-a.c.c||(a.c.tx?1:0)-(b.c.tx?1:0));
+  const over=Math.max(0,tot-F.min);
+  const cuts=over?weakest.slice(0,6):[];
+  return {problems,curve,missing,synergy,cuts,weakest,over,tot,inks:[...inks],co,arch:tot?archetype():null};
+}
+/* Pairs the best available adds (curve gap, missing staple, synergy pick --
+   in that priority order, since a hole in your curve costs you more games
+   than a missing staple does) against your weakest current cards, so
+   "here's what to change" is a single click instead of two separate lists
+   you have to cross-reference yourself. Independent of deck size -- unlike
+   the cut list above, this always has something to say as long as the deck
+   has any cards in it and any legal card left to suggest. */
+function swapSuggestions(r){
+  const picks=[],usedIn=new Set(),usedOut=new Set();
+  const addPick=(card,why)=>{
+    if(!card||usedIn.has(card.f))return;
+    const out=r.weakest.find(({c})=>!usedOut.has(c.f)&&c.f!==card.f);
+    usedIn.add(card.f);if(out)usedOut.add(out.c.f);
+    picks.push({card,why,out:out?out.c:null})};
+  if(r.curve.length&&r.curve[0].picks.length)
+    addPick(r.curve[0].picks[0],`Fills your curve at ${r.curve[0].n} ink`);
+  if(r.missing.length)addPick(r.missing[0],`A staple in ${r.inks.join("/")}`);
+  r.synergy.forEach(sy=>{if(sy.cards.length)addPick(sy.cards[0],sy.why)});
+  return picks.slice(0,4);
 }
 function upCards(list){
   return `<div class="upcards">${list.map(c=>`
@@ -7966,6 +8007,32 @@ function upCards(list){
       ${c.img?`<img src="${esc(c.img)}" loading="lazy" alt="">`:`<div class="ph"></div>`}
       <span class="un">${esc(c.n)}</span><span class="uc">${c.c} ink${isStar(c.f)?" · ★":""}</span>
     </button>`).join("")}</div>`;
+}
+/* Lives on the Decks tab, next to the deck it's actually about, instead of
+   buried in the Other menu's full upgrade report -- see swapSuggestions()
+   for how the pairing works. Empty string (nothing rendered) when there's
+   no deck selected or nothing worth suggesting, so an empty/tiny deck
+   doesn't show a box with nothing useful in it. */
+function renderSwapBox(){
+  const r=upgradeReport();
+  if(!r.tot)return "";
+  const sw=swapSuggestions(r);
+  if(!sw.length)return "";
+  const tile=(c,cls)=>c?`<div class="swtile ${cls}">
+      ${c.img?`<img src="${esc(c.img)}" loading="lazy" alt="">`:`<div class="ph"></div>`}
+    </div>`:`<div class="swtile ${cls}"></div>`;
+  return `<div class="swapbox">
+    <h3 class="sec2">✨ Suggested swaps</h3>
+    <p class="hint" style="margin:-4px 0 10px">Cards worth trying in place of your weakest ones right
+      now — curve gaps and missing staples first. <a href="#" data-gotoupgrade="1">Full upgrade report →</a></p>
+    <div class="swaplist">${sw.map(s=>`
+      <div class="swapitem">
+        ${tile(s.out,"out")}<span class="swarrow">→</span>${tile(s.card,"in")}
+        <div class="swinfo"><span class="swn">${esc(s.card.f)}</span><span class="swwhy">${esc(s.why)}${
+          s.out?` — instead of ${esc(s.out.f)}`:""}</span></div>
+        <button class="btn go" data-swapin="${esc(s.card.f)}" data-swapout="${s.out?esc(s.out.f):""}">Swap</button>
+      </div>`).join("")}</div>
+  </div>`;
 }
 function renderUpgrade(){
   const r=upgradeReport(),d=deck();
@@ -9592,6 +9659,7 @@ function renderDecksPage(){
     </div>
     <div class="dkgrid">${cards}</div>
     ${deckGallery()}
+    ${renderSwapBox()}
     <div class="pullbar">
       <b style="font-size:13px;background:var(--canvas-soft);padding:3px 8px;border-radius:2px">Pull list</b>
       <select id="pullSort">${PULLSORTS.map(([v,l])=>
@@ -9617,6 +9685,14 @@ function renderDecksPage(){
     <div id="borrowBox" class="collonly"></div>
   </div>`;
   wireGallery();
+  $("deckspage").querySelectorAll("[data-swapin]").forEach(b=>b.onclick=()=>{
+    const outF=b.dataset.swapout;
+    if(outF)delCard(outF);
+    addCard(b.dataset.swapin);
+    toast(outF?"Swapped":"Added "+b.dataset.swapin);
+    renderDecksPage()});
+  {const gu=$("deckspage").querySelector("[data-gotoupgrade]");
+   if(gu)gu.onclick=e=>{e.preventDefault();OPAGE="upg";save("fs3_opage",OPAGE);showTab("tOther")}}
   {const a=$("dpImport"),b=$("dpLink"),c=$("dpDup");
    if(a)a.onclick=()=>importDeckPrompt();
    if(b)b.onclick=()=>copyDeckLink(DECKS.cur);
