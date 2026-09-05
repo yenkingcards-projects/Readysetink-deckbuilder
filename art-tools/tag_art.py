@@ -182,7 +182,7 @@ def check_ollama(host, model):
         sys.exit(1)
 
 
-def call_ollama(host, model, image_path, prompt=PROMPT, timeout=300):
+def call_ollama(host, model, image_path, prompt=PROMPT, timeout=600):
     with open(image_path, 'rb') as f:
         b64 = base64.b64encode(f.read()).decode('ascii')
     payload = json.dumps({
@@ -191,6 +191,12 @@ def call_ollama(host, model, image_path, prompt=PROMPT, timeout=300):
         "images": [b64],
         "stream": False,
         "format": "json",
+        # Tried "think": true here (gemma4 supports it) hoping extra
+        # reasoning would improve accuracy -- tested worse, not better: with
+        # format:json forcing a strict schema at the same time, the model
+        # destabilized mid-response into leaked reasoning ("No wait! I am an
+        # AI...") and repetition-loop garbage, recovering far FEWER tags than
+        # without it. Left off on purpose.
         "options": {"temperature": 0.2, "num_predict": 6144, "repeat_penalty": 1.4, "repeat_last_n": 256},
     }).encode('utf-8')
     req = urllib.request.Request(host.rstrip('/') + '/api/generate', data=payload,

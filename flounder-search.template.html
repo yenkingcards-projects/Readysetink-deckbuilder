@@ -1562,6 +1562,11 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .swx.sto.on .kn{background:rgba(247,201,92,.3);border-color:var(--gold)}
 .swx.sto.on .kn i{background:var(--gold)}
 .swx.sto.on .lb{color:var(--link)}
+/* flavor-text switch runs amethyst, the third color in the row */
+.swx.flav.on{background:rgba(143,107,176,.14);border-color:var(--amethyst);box-shadow:0 0 16px -4px rgba(143,107,176,.55)}
+.swx.flav.on .kn{background:rgba(143,107,176,.32);border-color:var(--amethyst)}
+.swx.flav.on .kn i{background:var(--amethyst)}
+.swx.flav.on .lb{color:var(--link)}
 .swx:active .kn i{width:26px}
 .tghint{font-size:12px;color:var(--tx);line-height:1.4;background:var(--canvas-soft);
   border:1px solid var(--hairline);padding:4px 8px;border-radius:2px}
@@ -2895,6 +2900,8 @@ body.loreon{overflow:hidden}
       <span class="kn"><i>🎨</i></span><span class="lb">Search art</span></button>
     <button class="swx sto" id="tgSto" aria-pressed="false">
       <span class="kn"><i>📖</i></span><span class="lb">Search franchise</span></button>
+    <button class="swx flav" id="tgFlav" aria-pressed="false">
+      <span class="kn"><i>💬</i></span><span class="lb">Search flavor text</span></button>
     <span class="tghint" id="tgHint"></span>
   </div>
   <div class="srow">
@@ -2905,6 +2912,7 @@ body.loreon{overflow:hidden}
   <div class="hint" id="syh" style="display:none">
     <code>ink:amber</code> <code>cost&gt;=3</code> <code>type:action</code> <code>rarity:rare</code> <code>set:9</code>
     <code>keyword:rush</code> <code>class:princess</code> <code>story:frozen</code> <code>text:"draw a card"</code>
+    <code>flavor:"business cards"</code>
     <code>-inkwell</code> <code>vanilla</code> <code>artist:kole</code>
     — bare words fuzzy-match, everything ANDs together
   </div>
@@ -3813,7 +3821,7 @@ const S={q:"",ab:new Set(),ink:new Set(),dual:false,type:new Set(),rar:new Set()
      "blue dog" should get Stitch without hunting for a switch. Franchise is
      off: it's a very broad net that quietly pads every result. The ART TAGS /
      FRANCHISE sidebar facets and Enter-to-tokenise pills work either way. */
-  tagS:load("fs3_tagS",true),stoS:load("fs3_stoS",false)};
+  tagS:load("fs3_tagS",true),stoS:load("fs3_stoS",false),flS:load("fs3_flS",false)};
 let DVIEW=load(K_DVIEW,"img");
 let DSORT=load("fs3_dsort","type");
 let DANA=load("fs3_dana",false);
@@ -4197,7 +4205,7 @@ const ALIAS={i:"ink",ink:"ink",c:"cost",cost:"cost",t:"type",type:"type",r:"rari
  s:"set",set:"set",keyword:"keyword",kw:"keyword",class:"class",cl:"class",text:"text",e:"text",
  n:"name",name:"name",v:"version",version:"version",iw:"inkwell",inkwell:"inkwell",
  st:"strength",strength:"strength",wi:"willpower",willpower:"willpower",lo:"lore",lore:"lore",
- story:"story",franchise:"story",tag:"tag",art:"tag",
+ story:"story",franchise:"story",tag:"tag",art:"tag",flavor:"flavor",flav:"flavor",quote:"flavor",
  artist:"artist",by:"artist",illus:"artist",illustrator:"artist"};
 function tok(s){
   const raw=s.match(/\w+(?:>=|<=|!=|:|>|<|=)"(?:[^"\\]|\\.)*"|"(?:[^"\\]|\\.)*"|\S+/g)||[];
@@ -4235,6 +4243,7 @@ function fOK(c,f,op,v){switch(f){
   case "artist":return (c.ar||[]).some(a=>a.toLowerCase().includes(v));
   case "tag":return (c.tg||[]).some(t=>t.toLowerCase()===v);
   case "text":return (c.tx||"").toLowerCase().includes(v);
+  case "flavor":return (c.fl||"").toLowerCase().includes(v);
   case "name":return (c.n||"").toLowerCase().includes(v);
   case "version":return (c.v||"").toLowerCase().includes(v);
   case "inkwell":return c.ik===1;
@@ -4264,18 +4273,20 @@ function buildHay(){
     c._h0=flat(c.f+" "+c.tx+" "+c.sub.join(" ")+" "+(c.ty||"")+" "+c.co.join(" ")+" "+(c.sn||""));
     c._h1=flat(c.sto||"");
     c._h2=flat((c.tg||[]).join(" "));
+    c._h3=flat(c.fl||"");
     c._hraw=(c.f+" "+c.tx+" "+c.sub.join(" ")+" "+(c.ty||"")+" "+c.co.join(" ")+" "+(c.sn||"")+
-      " "+(c.sto||"")+" "+(c.tg||[]).join(" ")).toLowerCase();
+      " "+(c.sto||"")+" "+(c.tg||[]).join(" ")+" "+(c.fl||"")).toLowerCase();
   }
 }
-/* Flattened, punctuation-blind, and respecting the two search toggles. */
+/* Flattened, punctuation-blind, and respecting the three search toggles. */
 const HAYF=c=>c._h0===undefined?flat(HAY(c))
-  :c._h0+(S.stoS&&c._h1?" "+c._h1:"")+(S.tagS&&c._h2?" "+c._h2:"");
+  :c._h0+(S.stoS&&c._h1?" "+c._h1:"")+(S.tagS&&c._h2?" "+c._h2:"")+(S.flS&&c._h3?" "+c._h3:"");
 /* Raw lowercase, for the one place that wants the phrase exactly as printed. */
 const HAY=c=>c._hraw!==undefined?c._hraw
   :(c.f+" "+c.tx+" "+c.sub.join(" ")+" "+(c.ty||"")+" "+c.co.join(" ")+" "+(c.sn||"")+
   (S.stoS?" "+(c.sto||""):"")+
-  (S.tagS?" "+(c.tg||[]).join(" "):"")).toLowerCase();
+  (S.tagS?" "+(c.tg||[]).join(" "):"")+
+  (S.flS?" "+(c.fl||""):"")).toLowerCase();
 function qOK(c,ts){
   for(const t of ts){
     if(t.sp==="vanilla"){const v=!c.tx;if(t.neg?v:!v)return false;continue}
@@ -11909,7 +11920,8 @@ $("sh").onclick=shareLink;
 function drawToggles(){
   $("tgTag").classList.toggle("on",S.tagS);$("tgTag").setAttribute("aria-pressed",S.tagS);
   $("tgSto").classList.toggle("on",S.stoS);$("tgSto").setAttribute("aria-pressed",S.stoS);
-  const on=[S.tagS&&"art tags",S.stoS&&"franchise"].filter(Boolean);
+  $("tgFlav").classList.toggle("on",S.flS);$("tgFlav").setAttribute("aria-pressed",S.flS);
+  const on=[S.tagS&&"art tags",S.stoS&&"franchise",S.flS&&"flavor text"].filter(Boolean);
   $("tgHint").textContent=on.length
     ? "Typed words also match "+on.join(" and ")+"."
     : "Typed words match names, rules text and classifications only.";
@@ -11935,6 +11947,8 @@ $("tgTag").onclick=()=>{S.tagS=!S.tagS;save("fs3_tagS",S.tagS);drawToggles();S.l
 $("tgSto").onclick=()=>{S.stoS=!S.stoS;save("fs3_stoS",S.stoS);drawToggles();S.limit=150;render();
   if(S.stoS&&S.tagS)unlockHidden("h_wide");
   toast(S.stoS?"Franchise names included":"Franchise names excluded")};
+$("tgFlav").onclick=()=>{S.flS=!S.flS;save("fs3_flS",S.flS);drawToggles();S.limit=150;render();
+  toast(S.flS?"Flavor text included":"Flavor text excluded")};
 drawToggles();
 /* ===================== typing help =====================
    Two of the most-cited complaints about deck builders are that card names
