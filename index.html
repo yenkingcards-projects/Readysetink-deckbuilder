@@ -1614,6 +1614,9 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pullkofi{display:flex;align-items:center;gap:10px;justify-content:center;
   margin-top:10px;max-width:420px;margin-left:auto;margin-right:auto}
 .pullkofi p{font-size:10px;line-height:1.45;color:#8a8a8a;margin:0}
+/* The second sentence gets its own line rather than trailing an orphaned
+   "It" off the end of the first one, whatever width the block ends up. */
+.pullkofi p span{display:block}
 .qrbox.wee{width:58px;height:58px;flex:0 0 58px;background:transparent}
 /* Fit to 1 page — same markup, tighter numbers. Applied on screen too (not
    only behind @media print) so what you see before printing is what you
@@ -6915,7 +6918,7 @@ function renderPull(){
     ${deckSaves(DECKS.cur)>KOFI_AFTER?`<div class="pullkofi">
       <div id="pullQrKofi" class="qrbox wee"></div>
       <p>If you like these pull sheets, consider supporting the development of the site.
-        It stays free either way.</p>
+        <span>It stays free either way.</span></p>
     </div>`:""}
   </div>`;
 }
