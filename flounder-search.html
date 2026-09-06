@@ -3805,6 +3805,74 @@ const PING=new RegExp([
   "move (?:up to )?[12] damage counter"
 ].join("|"),"i");
 
+/* ---- the deck-building categories -------------------------------------
+   Everything below answers "what job does this card do in a deck", which is
+   a different question from "what does the card say". Each one is measured
+   against the real card pool before it ships: a filter that returns 400
+   cards has told you nothing, and one that returns none is a dead chip. */
+/* Clears the board rather than answering one thing. Two or more damage to
+   everything counts; one damage to a board is a sweep that kills almost
+   nothing, and `ping` already finds those. "each of your other characters" is
+   excluded outright — a card that damages YOUR OWN board is an engine piece
+   (Pepa Madrigal), and it was the one thing making this chip lie. */
+const BOARDWIPE=new RegExp([
+  "banish (all|each|every)",
+  "banish (?:chosen )?(?:opposing )?characters?[^.]{0,40}(?:each|all) (?:other )?(?:opposing )?character",
+  "deals? [2-9]\\d* damage to (?!each of your)(each|all|every)",
+  "each (?:opposing|other) character (?:gets|is banished)"
+].join("|"),"i");
+/* Making their board worse, as opposed to making yours better. Two chips
+   because they fail differently: a stat drop can still be challenged through,
+   a restriction cannot be played around at all. */
+const STATDOWN=/gets? -\d+\s*(¤|⛉)/i;
+/* The word "opposing" or "opponent" has to be in the same sentence. A bare
+   "they can't quest or challenge" is usually the DRAWBACK on your own card
+   (Celia Mae readies one of yours and then benches it), which is the opposite
+   of what someone opening this chip is shopping for. */
+const RESTRICT=new RegExp([
+  "oppos\\w+[^.]{0,80}can'?t (?:quest|challenge|ready|be played|gain lore)",
+  "opponents?[^.]{0,80}can'?t (?:quest|challenge|ready|play|gain lore)",
+  "can'?t (?:quest|challenge|ready)[^.]{0,40}(?:opposing|opponent)"
+].join("|"),"i");
+/* Cards that come back. The discard pile is the second hand in this game and
+   nothing in the filter list used to find the cards that treat it that way. */
+const RECUR=/from your discard/i;
+/* The item half of the pair we already had for locations. */
+const ITEM_HELP=new RegExp([
+  "\\byour items?\\b","an item (?:card )?(?:from|into|you)",
+  "whenever you play an item","item card (?:from|named)",
+  "for each item you have","if you have an item",
+  "items? (?:gain|get|gets|cost)","item into your inkwell","play an item"
+].join("|"),"i");
+/* Pays you for having a board rather than for having one good character —
+   the thing a swarm deck is actually shopping for. */
+const GOWIDE=new RegExp([
+  "for each (?:of your )?(?:other )?character",
+  "if you have \\d+ or more (?:other )?character",
+  /* A verb has to follow, or "move him and ONE OF your other characters"
+     lands here as though it were a swarm payoff. */
+  "(?:your|his|her|their) other characters (?:gain|get|gets|have|are|can|may)",
+  "each of your (?:other )?characters (?:gain|get|gets)"
+].join("|"),"i");
+/* Two cards in the whole game. That is the true answer, not a broken filter —
+   same reasoning as the money chips, which are short on purpose. */
+const MILLTHEM=/put(?:s)? the top .{0,40}(?:of|from) (?:their|his or her|your opponent'?s?) deck into[^.]{0,30}discard/i;
+/* Inkwell as a resource you interact with, beyond inking one card a turn —
+   ramp is the separate chip for putting more IN. */
+const INKWELL=/(?:from|in) your inkwell|cards? in your inkwell|inkwell into your hand/i;
+/* Two body-quality tests, both rate-based rather than taste-based.
+   QUESTER: lore at or above half the cost, rounded up — 2 by 3 ink, 3 by 5,
+   4 by 7. A four-cost two-lore is average, and average is not a filter.
+   CONTESTER: strength above its cost so it trades up, and willpower at least
+   its cost so it survives being traded into. */
+const isQuester =c=>c.ty==="Character"&&(c.lo||0)>=2&&(c.lo||0)*2>=c.c+1;
+const isContester=c=>c.ty==="Character"&&(c.st||0)>c.c&&(c.wi||0)>=c.c;
+
+/* The order below is the order you build a deck in, not the order the rules
+   manual is written in: who wins the game, what answers them, what pays for
+   it, what it all combines with. Reference filters — timing, ability type,
+   notes, money — sit at the bottom, because they answer questions you have
+   about a card you already found rather than questions about your list. */
 const GROUPS=[
  /* Staples stands alone. It is the only chip in the table that filters by YOUR
     list rather than by what a card does, so it never belonged in a group with
@@ -3817,58 +3885,45 @@ const GROUPS=[
       way you get the ones worth building around rather than all 200. */
    {id:"bestleg",l:"Legendaries worth playing",
      fn:c=>c.r==="Legendary"&&(isStar(c.f)||(cardPrice(c)||0)>=10)}]},
- /* Tribes: cards that care about a named group. Both chips answer the same
-    question — "what goes in a deck built around one family?" — which is a
-    different question from "what does this card do", and so a different group. */
- {g:"Tribes & families",chips:[
-   {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0},
-   /* Lilo & Stitch is one of the few franchises with a matching mechanical
-      classification, and the two don't fully overlap: Alien picks up the
-      Experiments and the Galactic Council cards that aren't filed under the
-      film, while the film picks up Nani and David, who aren't Aliens. A deck
-      wants both, so the chip is the union. */
-   {id:"lilo",l:"Lilo & Stitch + Aliens",
-     fn:c=>c.sto==="Lilo & Stitch"||c.sub.includes("Alien")}]},
+ /* What a character is actually FOR. Every other group here filters on rules
+    text; these two read the numbers, because the two jobs a body does — race
+    on lore, or hold the board — are decided by the stat line and not by any
+    ability. A deck that has drawn only one of these two loses to the other. */
+ {g:"Bodies — what a character is for",chips:[
+   {id:"quester",l:"Efficient quester (lore for the ink)",fn:isQuester},
+   {id:"contest",l:"Trades up in a challenge",fn:isContester},
+   {id:"chall",l:"Stronger when challenging",fn:c=>c.kw.some(k=>k[0]==="Challenger")},
+   {id:"wide",  l:"Go-wide payoff",fn:c=>GOWIDE.test(c.ef||"")}]},
  {g:"Card advantage",chips:[
    {id:"draw", l:"Draws a card",        re:/draws?\s+(a|\d+)?\s*cards?/i},
    {id:"topx", l:"Looks at top X cards",re:/look at the top \d+/i},
    {id:"tutor",l:"Searches your deck",  re:/search(es)?\s+your\s+deck/i},
+   /* The discard pile is the second hand in this game, and nothing in this
+      list used to find the cards that treat it that way. */
+   {id:"recur",l:"Returns from your discard",fn:c=>RECUR.test(c.ef||"")},
    {id:"peek", l:"Sees opponent's hand",re:/reveals?\s+(their|your)\s+hand|looks?\s+at\s+(their|your)\s+hand/i}]},
- {g:"Removal & damage",chips:[
+ {g:"Removal & answers",chips:[
+   {id:"banish",l:"Banishes",       re:/banish/i},
+   /* Answering the whole board is a different card slot from answering one
+      thing, and a deck usually wants one or two of these and no more. */
+   {id:"wipe",  l:"Board wipe",     fn:c=>BOARDWIPE.test(c.ef||"")},
    {id:"damage",l:"Deals damage",   re:/deals?\s+.{0,15}damage/i},
+   {id:"ping",  l:"Pings damage",fn:c=>PING.test(c.ef||"")},
    // Rules 8.8.3 — Resist only reduces damage that is DEALT; put/moved damage ignores it
    {id:"pierce",l:"Bypasses Resist",re:/can't be reduced by Resist|(put|place)s?\s+(up to\s+)?\d+\s+damage counter|\bmove\s+(up to\s+)?\d+\s+damage[\s\S]{0,60}(opposing|opponent)/i},
-   {id:"banish",l:"Banishes",       re:/banish/i},
-   {id:"ping",  l:"Pings damage",fn:c=>PING.test(c.ef||"")},
    {id:"itemhate",l:"Item removal",  fn:c=>ITEM_HATE.test(c.ef||"")},
-   {id:"discard",l:"Discards",      re:/discard/i},
-   /* Cards that WANT to be in the discard — Lilo - Escape Artist paying you for
-      your own discards, anything that plays from or returns out of the
-      discard pile. The engine half of a discard deck, as opposed to the
-      "make them discard" half above. */
-   {id:"selfmill",l:"Wants to be discarded",fn:c=>DISCARD_PAYOFF.test(c.ef||"")}]},
- /* Cards that change value with the number of players at the table. */
- {g:"Multiplayer",chips:[
-   {id:"allopp", l:"Hits every opponent",fn:c=>ALLOPP.test(PLAINTX(c))},
-   {id:"loredrain",l:"Lore drain",       fn:c=>LOREDRAIN.test(PLAINTX(c))},
-   /* The three specific ways a card taxes the whole table. Each one has to see
-      BOTH the all-opponents phrasing and the effect in the same sentence,
-      otherwise "each opponent" plus an unrelated discard elsewhere on the card
-      matches. Songs keep their effect in tx, hence PLAINTX. */
-   {id:"alldisc",l:"All opponents discard",fn:c=>ALLOPP_DISCARD.test(PLAINTX(c))},
-   {id:"alllore",l:"All opponents lose lore",fn:c=>ALLOPP_LORE.test(PLAINTX(c))},
-   /* Everything that happens to EVERYONE, you included. Symmetrical effects
-      play completely differently from one-sided ones — you build around being
-      the player who minds least. */
-   {id:"global", l:"Global — hits every player",fn:c=>GLOBAL.test(PLAINTX(c))}]},
- /* Locations, split into the two decks that "text:location" used to return
-    mixed together. */
- {g:"Locations",chips:[
-   {id:"locsyn", l:"Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
    {id:"lochate",l:"Location removal",fn:c=>LOC_HATE.test(c.ef||"")}]},
- {g:"Protection",chips:[
-   {id:"heal",  l:"Removes damage",     re:/removes?\s+(up to\s+)?\d*\s*damage/i},
-   {id:"nochal",l:"Can't be challenged",re:/can't be challenged/i}]},
+ /* Making their board worse rather than yours better. Two chips because they
+    fail differently: a stat drop can still be challenged through, and a
+    restriction can't be played around at all. */
+ {g:"Slowing them down",chips:[
+   {id:"minus",   l:"Lowers their stats",fn:c=>STATDOWN.test(c.ef||"")},
+   {id:"restrict",l:"Stops them questing or challenging",fn:c=>RESTRICT.test(c.ef||"")},
+   {id:"discard", l:"Discards",      re:/discard/i},
+   {id:"loredrain",l:"Lore drain",   fn:c=>LOREDRAIN.test(PLAINTX(c))},
+   /* Two cards in the whole game. That is the true answer rather than a
+      broken filter — the money chips are short for the same reason. */
+   {id:"mill",    l:"Mills their deck",fn:c=>MILLTHEM.test(c.ef||"")}]},
  {g:"Bounce",chips:[
    /* Bounce splits in two because the two halves do opposite jobs: bouncing
       YOUR OWN character re-triggers its "when you play this" ability, bouncing
@@ -3878,16 +3933,49 @@ const GROUPS=[
    {id:"bounceyou",l:"Bounce — back to YOUR hand",fn:c=>BOUNCE_SELF.test(c.ef||"")},
    {id:"bounceopp",l:"Bounce — back to THEIR hand",fn:c=>BOUNCE_OPP.test(c.ef||"")},
    {id:"bounce",l:"Bounce — any return to hand",   re:/(returns?|puts?)\s+.{0,25}(into|to)\s+(their|your|its)\s+hand/i}]},
- {g:"Tempo",chips:[
-   {id:"exert", l:"Requires exerting", fn:c=>c.at.includes("activated")||/\{E\}\s*[-–—]|⟳\s*[-–—]/.test(c.tx)},
-   {id:"ready", l:"Readies characters",re:/ready\s+(chosen|your|this)/i}]},
- {g:"Cost & ramp",chips:[
+ {g:"Cost, ramp & tempo",chips:[
    {id:"cheap",l:"Cost reduction",re:/\bfor free\b|\bpays?\s+\d+\s*(\{I\}|⬡)?\s*less\b|\bcosts?\s+\d+\s*(\{I\}|⬡)?\s*less\b/i},
    // ramp = extra ink beyond the one free ink-a-card action each turn
    {id:"ramp", l:"Ramp / more ink",re:/into your inkwell|ink an additional card|additional card in your inkwell/i},
+   /* Ramp puts cards IN; this is everything else you can do with an inkwell
+      once they're there. Twelve cards, and they are the whole mechanic. */
+   {id:"inkwell",l:"Inkwell interaction",fn:c=>INKWELL.test(c.ef||"")},
    {id:"shift",l:"Has Shift (any variant)",fn:c=>c.kw.some(k=>/shift/i.test(k[0]||""))},
-   ]},
- {g:"Boost",chips:[
+   {id:"ready", l:"Readies characters",re:/ready\s+(chosen|your|this)/i},
+   {id:"exert", l:"Requires exerting", fn:c=>c.at.includes("activated")||/\{E\}\s*[-–—]|⟳\s*[-–—]/.test(c.tx)}]},
+ {g:"Buffs — strength & lore",chips:[
+   {id:"lore", l:"Gains bonus lore",         re:/gains?\s+\d+\s+lore/i},
+   /* Bonus strength. Reminder text is stripped first: "Challenger +1 (They get
+      +1 ¤ while challenging)" is a conditional combat bonus, not a lasting buff,
+      and leaving it in inflated this from 125 cards to 159. Matters because the
+      Sisu - Emboldened Warrior Coconut only counts strength you actually have. */
+   {id:"pump",l:"Gets bonus strength",
+     fn:c=>/\bgets?\s*\+\d+\s*¤/.test((c.ef||"").replace(/\([^)]*\)/g," "))},
+   {id:"tough",l:"Gets bonus willpower",
+     fn:c=>/\bgets?\s*\+\d+\s*⛉/.test((c.ef||"").replace(/\([^)]*\)/g," "))}]},
+ {g:"Protection",chips:[
+   {id:"heal",  l:"Removes damage",     re:/removes?\s+(up to\s+)?\d*\s*damage/i},
+   {id:"nochal",l:"Can't be challenged",re:/can't be challenged/i}]},
+ /* Cards that care about something else in your deck. This is the group you
+    open once you know what the deck is ABOUT — everything here is a payoff
+    looking for the thing it pays off. */
+ {g:"Synergies & payoffs",chips:[
+   {id:"tribal",l:"Tribal boost",fn:c=>c.tribal.length>0},
+   /* Lilo & Stitch is one of the few franchises with a matching mechanical
+      classification, and the two don't fully overlap: Alien picks up the
+      Experiments and the Galactic Council cards that aren't filed under the
+      film, while the film picks up Nani and David, who aren't Aliens. A deck
+      wants both, so the chip is the union. */
+   {id:"lilo",l:"Lilo & Stitch + Aliens",
+     fn:c=>c.sto==="Lilo & Stitch"||c.sub.includes("Alien")},
+   /* The item half of the pair we already had for locations. */
+   {id:"itemsyn",l:"Item synergy",fn:c=>ITEM_HELP.test(c.ef||"")},
+   {id:"locsyn", l:"Location synergy",fn:c=>LOC_HELP.test(c.ef||"")},
+   /* Cards that WANT to be in the discard — Lilo - Escape Artist paying you for
+      your own discards, anything that plays from or returns out of the
+      discard pile. The engine half of a discard deck, as opposed to the
+      "make them discard" half in Slowing them down. */
+   {id:"selfmill",l:"Wants to be discarded",fn:c=>DISCARD_PAYOFF.test(c.ef||"")},
    /* Boost. The keyword pool is 32 cards, but another 10 cards talk about Boost
       without having it (Donald's own payoff, the Scrooge/DuckTales support), so
       this chip is the union — those cards belong in a Boost deck too. */
@@ -3901,17 +3989,6 @@ const GROUPS=[
    {id:"boostcheap",l:"Cheap Boost (play + boost ≤ 4)",
      fn:c=>{const b=(c.kw.find(k=>k[0]==="Boost")||[])[1];
        return b!=null&&(c.c+b)<=4}}]},
- {g:"Buffs — strength & lore",chips:[
-   {id:"lore", l:"Gains bonus lore",         re:/gains?\s+\d+\s+lore/i},
-   /* Bonus strength. Reminder text is stripped first: "Challenger +1 (They get
-      +1 ¤ while challenging)" is a conditional combat bonus, not a lasting buff,
-      and leaving it in inflated this from 125 cards to 159. Matters because the
-      Sisu - Emboldened Warrior Coconut only counts strength you actually have. */
-   {id:"pump",l:"Gets bonus strength",
-     fn:c=>/\bgets?\s*\+\d+\s*¤/.test((c.ef||"").replace(/\([^)]*\)/g," "))},
-   {id:"tough",l:"Gets bonus willpower",
-     fn:c=>/\bgets?\s*\+\d+\s*⛉/.test((c.ef||"").replace(/\([^)]*\)/g," "))},
-   {id:"chall",l:"Stronger when challenging",fn:c=>c.kw.some(k=>k[0]==="Challenger")}]},
  {g:"Songs",chips:[
    {id:"sing",   l:"Payoff for singing",re:/sings?\s+a\s+song|whenever\s+.{0,40}\bsings\b/i},
    {id:"singtog",l:"Sing Together",     fn:c=>c.kw.some(k=>k[0]==="Sing Together")},
@@ -3919,6 +3996,19 @@ const GROUPS=[
       really shopping for is cards that pay out PER SINGER — the ones that get
       better the more characters you tap into the song. */
    {id:"singtogpay",l:"Benefits from Sing Together",fn:c=>SINGTOG_PAY(c)}]},
+ /* Cards that change value with the number of players at the table. */
+ {g:"Multiplayer",chips:[
+   {id:"allopp", l:"Hits every opponent",fn:c=>ALLOPP.test(PLAINTX(c))},
+   /* The two specific ways a card taxes the whole table. Each one has to see
+      BOTH the all-opponents phrasing and the effect in the same sentence,
+      otherwise "each opponent" plus an unrelated discard elsewhere on the card
+      matches. Songs keep their effect in tx, hence PLAINTX. */
+   {id:"alldisc",l:"All opponents discard",fn:c=>ALLOPP_DISCARD.test(PLAINTX(c))},
+   {id:"alllore",l:"All opponents lose lore",fn:c=>ALLOPP_LORE.test(PLAINTX(c))},
+   /* Everything that happens to EVERYONE, you included. Symmetrical effects
+      play completely differently from one-sided ones — you build around being
+      the player who minds least. */
+   {id:"global", l:"Global — hits every player",fn:c=>GLOBAL.test(PLAINTX(c))}]},
  {g:"Timing",chips:[
    {id:"etb",   l:"Enters play",     re:/when you play this/i},
    {id:"onq",   l:"On quest",        re:/whenever this character quests/i},
@@ -3999,6 +4089,29 @@ const CHIPWORDS={
        "experiments"],
  shift:["shift"],
  sing:["song payoff","sing payoff"],
+ wipe:["board wipe","boardwipe","sweeper","wrath","mass removal","banish everything"],
+ recur:["recursion","recur","from the discard","graveyard","return from discard",
+        "reanimate","raise dead"],
+ itemsyn:["item synergy","items","item deck","item payoff","item support",
+          "loves items","benefits items"],
+ wide:["go wide","go-wide","swarm","token payoff","wide payoff","many characters",
+       "board payoff"],
+ quester:["quester","questers","lore per ink","efficient lore","lore body","racer"],
+ contest:["contester","contesters","trades up","good body","fighter","beater",
+          "wins challenges"],
+ minus:["debuff","stat reduction","lowers stats","minus strength","shrink",
+        "weaken","nerf their characters"],
+ restrict:["lockdown","stax","can't quest","cant quest","stop questing",
+           "prevent challenge","restriction","tax"],
+ mill:["mill","decking","deck out"],
+ inkwell:["inkwell interaction","inkwell","inkwell tricks","from the inkwell"],
+ discard:["hand disruption","discard","make them discard"],
+ selfmill:["discard payoff","self discard","wants discard","discard matters"],
+ ready:["readying","ready","untap","extra quest"],
+ tutor:["tutor","card selection","search deck","find a card"],
+ topx:["card selection","dig","look at the top"],
+ nochal:["protection","can't be challenged","cant be challenged","evasion"],
+ bounce:["bounce","return to hand","tempo"],
 };
 const chipFor=w=>{const t=w.toLowerCase().trim();
   for(const id in CHIPWORDS)if(CHIPWORDS[id].includes(t))return id;return null};
