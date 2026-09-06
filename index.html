@@ -1347,10 +1347,23 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .btn.outline{border-color:var(--gold);color:var(--gold)}
 .btn.outline:hover:not([disabled]){background:rgba(247,201,92,.12)}
 /* ===== dust & secrets =================================================== */
-.worn{font-size:12px;font-weight:800;color:var(--gold);border:1px solid rgba(247,201,92,.45);
+/* The masthead chip. Scoped away from .tit because a title box on this page
+   also carries "worn" as a state class, and this rule was landing on it whole:
+   the equipped title's box got 12px gold bold text, a second border, and
+   white-space:nowrap -- which is why its description ran straight out through
+   the side of its own box while every other box wrapped normally. */
+.worn:not(.tit){font-size:12px;font-weight:800;color:var(--gold);border:1px solid rgba(247,201,92,.45);
   border-radius:2px;padding:3px 11px;white-space:nowrap}
 .tits{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:10px;margin-bottom:6px}
-.tit{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:13px 15px}
+/* The grid already stretches every box in a row to the tallest one. Without
+   this that extra height became slack under the short ones and every button
+   sat at a different level, so a row of titles read as four boxes that had
+   nothing to do with each other. Column flex + margin-top:auto pins the
+   buttons to the foot of the box, and the row lines up. */
+.tit{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:13px 15px;
+  display:flex;flex-direction:column}
+.tit>.titb,.tit>button{margin-top:auto}
+.tit>button{align-self:flex-start}
 .tit.own{border-color:rgba(247,201,92,.45)}
 .tit.worn{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
 .tit .tt{font-size:15.2px;font-weight:800;color:var(--gold);margin-bottom:3px}
@@ -1375,10 +1388,12 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--link);
   font-weight:800;margin:22px 0 9px}
 .secs{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:11px}
-.sec3{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.sec3{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px 16px;
+  display:flex;flex-direction:column}
+.sec3>button{margin-top:auto;align-self:flex-start}
 .sec3.open{border-left:2px solid var(--good)}
 .sec3 .q2{font-size:13.92px;font-weight:700;margin-bottom:9px;line-height:1.4}
-.sec3 .a2{font-size:12.8px;line-height:1.65;color:#c9dcef}
+.sec3 .a2{font-size:12.8px;line-height:1.65;color:var(--tx)}
 .achs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px}
 .ach{display:flex;align-items:center;gap:11px;background:var(--panel);border:1px solid var(--line);
   border-radius:4px;padding:10px 13px;opacity:.62}
@@ -4292,6 +4307,11 @@ function checkPerfect60(){
     if(e[0][1]===60)unlockHidden("h_60");
     if(e[0][1]>=100)unlockHidden("h_100");     // Ben's kill-switch egg
   }
+  /* Five hundred Flounder of either printing, plus exactly one Hidden Trap.
+     Unreachable by accident and unhinted anywhere on the site -- import a list
+     to get there, the tile counter would take all afternoon. */
+  {const fl=e.filter(([f])=>/^Flounder - /.test(f)).reduce((a,x)=>a+x[1],0);
+   if(fl>=500&&(d.cards["Hidden Trap"]||0)===1)unlockHidden("h_500");}
   if(tot===61)unlockHidden("h_61");
   if(tot>=60&&e.length===tot)unlockHidden("h_single");   // every card exactly once
   // ten cards from a single franchise
@@ -8656,6 +8676,12 @@ function titleFace(x){
    no ✦ counter, no "Prestige 2 · 25,000" button, and no gate text naming what
    you'd have to do first — the whole mechanic simply isn't mentioned. */
 const prestigeShown=()=>titleOwned("t_fish");
+/* And prestige on ANY OTHER title stays off the page until Flounderborn is
+   actually at 10. It used to render the gate text -- "Take Flounderborn to
+   prestige 10 first" -- on every title you owned, which announced both that
+   other titles prestige at all and exactly what the milestone is. The whole
+   point of the ladder is that nobody is told it is there. */
+const prShown=id=>id==="t_fish"?prestigeShown():prLevel("t_fish")>=10;
 /* Hidden titles. Not for sale — you get these by DOING the thing, which is why
    they're more fun than another row of blurred boxes. Until earned they show as
    ??? with a cryptic hint, so you know one exists without knowing what it is. */
@@ -8698,6 +8724,10 @@ const HIDDEN=[
   dust:25000},
  {id:"h_100",    t:"One Hundred Friends", secret:true, dust:10000000,
   h:"", d:"One hundred Flounder. The best cards really are the friends you make along the way."},
+ /* Ben's own tap, and the most hidden thing here: no hint string, filtered
+    out of the list until earned, and nothing anywhere else mentions it. */
+ {id:"h_500",   t:"Five Hundred Friends", secret:true, dust:100000000,
+  h:"", d:"Five hundred Flounder and one Hidden Trap. Nobody was ever going to find this."},
  {id:"h_60",    t:"The Perfect 60",   h:"",  secret:true, dust:500000,
   d:"Sixty copies of Flounder - Voice of Reason. Not legal. Not sensible. Perfect."},
  {id:"h_wide",  t:"Wide Net",          h:"Search with everything switched on at once.",
@@ -8896,8 +8926,9 @@ function renderDust(){
     <div class="tits">${TITLES.map(x=>{
       const own=titleOwned(x.id),worn=DUST.wear===x.id;
       const face=titleFace(x);
-      /* Prestige is off the page entirely until the secret title is owned. */
-      const showPr=own&&prestigeShown();
+      /* Off the page entirely until it is genuinely available on THIS title —
+         a locked control that explains how to unlock it is still a hint. */
+      const showPr=own&&prShown(x.id);
       const lv=showPr?prLevel(x.id):0, next=lv+1, maxed=lv>=prMax(x.id);
       const gate=showPr&&!maxed?prGate(x.id,next):null;
       const cost=showPr&&!maxed?prCost(x.id,next):0;
@@ -9477,7 +9508,14 @@ async function saveDeckPrompt(ev){
     DECKS.cur=name;
   }
   saveDecks();markDirty(false);
-  const paid=dustGain(10);
+  /* Ten dust for saving a deck -- once per deck, not once per press. Saving
+     the same list twice used to pay again every time, which made the Save
+     button a dust tap. Keyed by name because a name is the only identity a
+     deck has here; rename it and it can pay once more, which is a great deal
+     less lucrative than pressing the same button. */
+  DUST.paid=DUST.paid||{};
+  let paid=0;
+  if(!DUST.paid[name]){DUST.paid[name]=Date.now();save(DUSTKEY,DUST);paid=dustGain(10)}
   if(ev&&ev.clientX)sparkBurst(ev.clientX,ev.clientY);
   toast(paid?`Saved "${name}" · +10 dust`:`Saved "${name}"`);
   renderDeck&&renderDeck();
