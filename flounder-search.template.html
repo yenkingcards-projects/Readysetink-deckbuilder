@@ -2822,11 +2822,34 @@ body.loreon{overflow:hidden}
 .seatname{position:absolute;top:8px;left:0;right:0;text-align:center;
   font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
   opacity:.75;cursor:pointer;padding:4px}
-.seatnum{font-size:clamp(72px,20vh,190px);font-weight:900;line-height:.85;
+.seatnum{font-size:clamp(72px,19vh,180px);font-weight:900;line-height:.85;
   font-variant-numeric:tabular-nums;text-shadow:0 4px 0 rgba(0,0,0,.28);
   transition:transform .12s}
 .seatnum.seatpop{transform:scale(1.14)}
-.seatbtns{display:flex;gap:10px;margin-top:8px}
+/* Minus and plus at opposite ends of the seat, not a pair in the middle.
+   These are pressed with a thumb, at speed, by someone looking at the table
+   rather than the screen — two 80px circles ten pixels apart is a mis-tap
+   waiting to happen, and a mis-tap here costs somebody the game. */
+.seatbtns{display:flex;justify-content:space-between;align-items:center;
+  width:100%;padding:0 clamp(14px,5vw,54px);margin-top:6px;
+  position:absolute;left:0;right:0;bottom:clamp(10px,3vh,26px);
+  pointer-events:none}
+.seatbtns .lorebtn{pointer-events:auto}
+/* The running total of what you have just tapped in, under the score. It
+   fades on its own once you stop — the point is to catch "did that go in?"
+   at a glance mid-turn, not to be another number on the table. */
+/* Anchored under the centred score rather than left at its static position,
+   where it landed on top of the number. The modifiers are sdup/sddown and
+   not up/down: `.up` is already the deck-upgrade card, and a bare `up` on
+   this element gave it that card's white background and border. */
+.seatdelta{position:absolute;top:50%;margin-top:clamp(46px,10vh,96px);
+  left:0;right:0;text-align:center;pointer-events:none;
+  font-size:clamp(20px,4.6vh,38px);font-weight:900;line-height:1;
+  font-variant-numeric:tabular-nums;opacity:0;transition:opacity .45s ease;
+  text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.seatdelta.sdup{color:#8ef5a8}
+.seatdelta.sddown{color:#ffb0b0}
+.seatdelta.sdshow{opacity:.95;transition:opacity .1s ease}
 /* .lorebtn, not .lb — .lb was already the label inside every switch and every
    filter row, and a bare .lb rule in here turned all of them into 86px
    circles. Same reason .lorefish is not .fish: the aquarium already owns it. */
@@ -3140,6 +3163,46 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 .srtxt{display:flex;flex-direction:column;gap:2px}
 .srtxt b{font-size:14.5px}
 .srtxt span{font-size:12px;color:var(--deep)}
+/* ---- the game log ----------------------------------------------------
+   Every change to every score, newest last, so a disagreement about the
+   score has somewhere to go other than two people's memories. */
+.lorelog{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;
+  max-height:290px;overflow:auto;-webkit-overflow-scrolling:touch}
+.lorelog .llrow{display:flex;align-items:center;gap:9px;padding:7px 11px;
+  border-bottom:1px solid rgba(51,74,136,.16);font-size:13px}
+.lorelog .llrow:last-child{border-bottom:none}
+.lorelog .lldot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.lorelog .llwho{font-weight:800;flex:0 0 auto;max-width:9em;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.lorelog .lld{font-weight:900;font-variant-numeric:tabular-nums}
+.lorelog .lld.llup{color:#1a7f3c}
+.lorelog .lld.lldown{color:var(--bad)}
+.lorelog .llto{color:var(--deep);font-size:12px}
+.lorelog .llt{margin-left:auto;color:var(--deep);font-size:11.5px;
+  font-variant-numeric:tabular-nums}
+.lorelog .llgame{padding:6px 11px;background:var(--platinum);font-size:11px;
+  font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--deep);
+  position:sticky;top:0}
+.llempty{padding:16px 12px;text-align:center;font-size:12.5px;color:var(--deep)}
+/* ---- pick up where you left off ---- */
+/* Its own card, same plate the setup wizard uses, rather than loose text on
+   the canvas — the two screens are the same moment in the flow and should
+   look like it. */
+.loreresume{display:flex;flex-direction:column;align-items:center;gap:14px;
+  max-width:420px;width:100%;background:rgba(0,0,0,.32);border-radius:14px;
+  padding:26px 22px;text-align:center;color:#fff}
+.loreresume h1{font-size:clamp(24px,5vw,38px);margin:0;font-weight:900;letter-spacing:-.02em}
+.loreresume p{font-size:14px;line-height:1.55;max-width:44ch;color:rgba(255,255,255,.82);margin:0}
+.lrscore{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:2px 0 4px}
+.lrscore span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;padding:7px 15px;font-weight:900;font-size:15px}
+.lrbtns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
+.lrbtns .lbtn{flex:1 1 150px;justify-content:center}
+/* The one you almost always want, in the site's own act-here yellow — the
+   same weight the JUDGE button carries, so the hierarchy reads at a glance. */
+.lbtn.prime{background:var(--amberc);color:#2a1f00;border-color:var(--amberc);font-weight:900}
+.lbtn.prime:hover{background:var(--amber-press)}
 /* ---- lore bar extras ---- */
 .lbtn.duck{background:#ffdca8;color:#4a2a00;border-color:#ffdca8;font-weight:900}
 .lbtn.judge.off{background:rgba(255,255,255,.08);color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.2)}
@@ -11270,7 +11333,7 @@ function loreFreshMatch(defaults){
   return {n:2,
     players:[{name:"You",lore:0,colorMode:"primary"},{name:"Opponent",lore:0,colorMode:"primary"}],
     game:1,seriesLen:d.seriesLen||3,format:d.format||"core",customWin:d.customWin||20,
-    mode:d.mode||"casual",duck:{},gameLog:[],locked:false,needsSetup:true};
+    mode:d.mode||"casual",duck:{},gameLog:[],loreLog:[],locked:false,needsSetup:true};
 }
 function loreLoad(){
   const d=load(LOREKEY,null);
@@ -11281,6 +11344,7 @@ function loreLoad(){
     if(!d.mode)d.mode="casual";
     if(!d.duck)d.duck={};
     if(!d.gameLog)d.gameLog=[];
+    if(!d.loreLog)d.loreLog=[];
     d.players.forEach(p=>{if(!p.colorMode)p.colorMode="primary"});
     return d;
   }
@@ -11429,7 +11493,7 @@ function renderLoreSetup(){
         lore:0,colorMode:"primary"})),
       game:1,seriesLen:SETUP.n===1?1:SETUP.seriesLen,format:SETUP.format,customWin:SETUP.customWin,
       mode:SETUP.n===1?"casual":SETUP.mode,
-      duck:{},gameLog:[],locked:false,needsSetup:false};
+      duck:{},gameLog:[],loreLog:[],locked:false,needsSetup:false};
     loreSave();SETUP=null;renderLore()};
 }
 function defaultSeatName(i,n){return i===0?"You":n===2?"Opponent":"Player "+(i+1)}
@@ -11547,8 +11611,39 @@ function loreRenderOrder(n){
   if(n===3)return [1,2,0];
   return [1,2,0,3];
 }
+/* Opening the tracker is a decision point: a match left half-played is
+   usually the one you want back, and a match left finished is usually one
+   you want to clear. Asking beats guessing, and it means setting a game up
+   is always one tap from opening the page rather than buried in Settings.
+   Only on the way IN — every re-render during play skips it. */
+let LORE_FRESH=false;
+const loreHasProgress=()=>!!LORE&&((LORE.gameLog||[]).length>0
+  ||LORE.players.slice(0,LORE.n).some(p=>p.lore>0));
+function renderLoreResume(){
+  const host=$("lorepage");if(!host)return;
+  const won=(LORE.gameLog||[]).length;
+  host.innerHTML=`<div class="lorewrap setupwrap" id="lorewrap">
+    <div class="loreresume">
+      <h1>Still got a match on</h1>
+      <div class="lrscore">${LORE.players.slice(0,LORE.n).map(p=>
+        `<span>${esc(p.name)} ${p.lore}</span>`).join("")}</div>
+      <p>${won?`Game ${LORE.game} of a best of ${LORE.seriesLen}. `:""}Pick it up where you
+        left it, or clear the table and set a new one up.</p>
+      <div class="lrbtns">
+        <button class="lbtn" id="lrNew">Set up a new match</button>
+        <button class="lbtn prime" id="lrResume">Pick it back up</button>
+      </div>
+    </div>
+  </div>`;
+  $("lrResume").onclick=()=>renderLore();
+  $("lrNew").onclick=()=>{LORE.needsSetup=true;loreSave();renderLore()};
+}
 function renderLore(){
   LORE=LORE||loreLoad();
+  if(LORE_FRESH){
+    LORE_FRESH=false;
+    if(!LORE.needsSetup&&loreHasProgress()){renderLoreResume();return}
+  }
   if(LORE.needsSetup){openLoreSetup();return}
   const duckOn=Object.values(LORE.duck||{}).some(Boolean);
   const html=`<div class="lorewrap" id="lorewrap">
@@ -11565,6 +11660,7 @@ function renderLore(){
              role="group" aria-label="${esc(p.name)}, ${p.lore} lore">
           <button class="seatname" data-rename="${i}" title="Tap to rename">${esc(p.name)}</button>
           <div class="seatnum" id="ln${i}" aria-live="polite" aria-atomic="true">${p.lore}</div>
+          <div class="seatdelta" id="ld${i}" aria-hidden="true"></div>
           <div class="seatbtns">
             <button class="lorebtn" data-minus="${i}" aria-label="${esc(p.name)} minus one lore"${LORE.locked?" disabled":""}>−</button>
             <button class="lorebtn" data-plus="${i}" aria-label="${esc(p.name)} plus one lore"${LORE.locked?" disabled":""}>+</button>
@@ -11615,6 +11711,11 @@ function wireLore(){
   $("loreExit").onclick=()=>{loreExitFS();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
   $("loreReset").onclick=async()=>{
     if(!await confirmBox("Reset scores","Puts every player back to zero lore. Game wins are kept.","Reset"))return;
+    /* Logged, so the log explains the cliff rather than just showing one.
+       A record with an unexplained jump in it is worse than no record. */
+    LORE.loreLog=LORE.loreLog||[];
+    LORE.players.slice(0,LORE.n).forEach((p,i)=>{
+      if(p.lore)LORE.loreLog.push({t:Date.now(),g:LORE.game,s:i,d:-p.lore,to:0})});
     LORE.players.forEach(p=>p.lore=0);loreSave();renderLore()};
   const dg=$("loreDuckGone");
   if(dg)dg.onclick=()=>{
@@ -11665,10 +11766,40 @@ document.addEventListener("fullscreenchange",()=>{
     document.body.classList.remove("lorefs");
 });
 
+/* The running "+7" under a seat's score. It accumulates while you keep
+   tapping and clears itself once you stop, so it answers "did that go in?"
+   without becoming a second number anyone has to read. Kept out of LORE
+   entirely — it is about the last few seconds, not about the match, and
+   nothing about it should survive a reload. */
+const LOREDELTA={};
+function loreBumpDelta(i,d){
+  const el=$("ld"+i);if(!el)return;
+  const cur=LOREDELTA[i]||{n:0,t:null};
+  cur.n+=d;
+  clearTimeout(cur.t);
+  if(!cur.n){el.classList.remove("sdshow");LOREDELTA[i]=cur;return}
+  el.textContent=(cur.n>0?"+":"−")+Math.abs(cur.n);
+  el.classList.toggle("sdup",cur.n>0);
+  el.classList.toggle("sddown",cur.n<0);
+  el.classList.add("sdshow");
+  cur.t=setTimeout(()=>{el.classList.remove("sdshow");cur.n=0},2600);
+  LOREDELTA[i]=cur;
+}
 function loreAdd(i,d,btn){
   if(LORE.locked){toast("Score is locked while the judge is open");return}
   const p=LORE.players[i];
+  const before=p.lore;
   p.lore=Math.max(0,p.lore+d);
+  /* Nothing to record when minus is pressed at zero — the score did not
+     move, and a log full of "went down by 0" is a log nobody reads. */
+  if(p.lore!==before){
+    LORE.loreLog=LORE.loreLog||[];
+    LORE.loreLog.push({t:Date.now(),g:LORE.game,s:i,d:p.lore-before,to:p.lore});
+    /* A long match is a few hundred entries at most; the cap is only here so
+       somebody who leaves the tracker open for a week doesn't fill storage. */
+    if(LORE.loreLog.length>800)LORE.loreLog.splice(0,LORE.loreLog.length-800);
+    loreBumpDelta(i,p.lore-before);
+  }
   loreSave();
   const el=$("ln"+i);
   if(el){el.textContent=p.lore;el.classList.add("seatpop");setTimeout(()=>el.classList.remove("seatpop"),140)}
@@ -11911,6 +12042,31 @@ function renderLoreSeats(){
    button in the lore bar. Donald Duck - Flustered Sorcerer, per-seat colour
    themes, and jumping back into the setup wizard for a new match all live
    here so they're reachable mid-game without leaving fullscreen. */
+/* Every change to every score, oldest first, grouped by game. Read from the
+   bottom it is the story of the match: added 1, added 3, went down by 2. The
+   point is that a disagreement about the score has somewhere to go other than
+   two people's memories. */
+function loreLogHtml(){
+  const log=LORE.loreLog||[];
+  if(!log.length)return `<div class="lorelog"><div class="llempty">
+    Nothing yet. Every plus and minus lands here as you play, so you can settle
+    "wait, what was the score?" without anybody having to remember.</div></div>`;
+  const clock=t=>{const d=new Date(t);
+    return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")};
+  let lastGame=null,rows="";
+  log.forEach(e=>{
+    const p=LORE.players[e.s]||{name:"Seat "+(e.s+1)};
+    if(e.g!==lastGame){lastGame=e.g;
+      rows+=`<div class="llgame">Game ${e.g}</div>`}
+    rows+=`<div class="llrow">
+      <span class="lldot" style="background:${seatBg(p,e.s)||"#2f6fa8"}"></span>
+      <span class="llwho">${esc(p.name)}</span>
+      <span class="lld ${e.d>0?"llup":"lldown"}">${e.d>0?"added "+e.d:"went down by "+Math.abs(e.d)}</span>
+      <span class="llto">→ ${e.to}</span>
+      <span class="llt">${clock(e.t)}</span>
+    </div>`});
+  return `<div class="lorelog" id="lorelog">${rows}</div>`;
+}
 let SETTINGS_OPEN=false;
 function openLoreSettings(){
   SETTINGS_OPEN=true;
@@ -11923,7 +12079,18 @@ function openLoreSettings(){
       <h2>⚙ Settings</h2>
     </div>
     <div class="judgebody">
-      <div class="setupreadout">${esc(fmtLabel)} · ${esc(modeLabel)} · ${LORE.seriesLen===1?"1 game":"Best of "+LORE.seriesLen}</div>
+      <div class="setupreadout">${esc(fmtLabel)} · ${esc(modeLabel)} · ${
+        LORE.seriesLen===1?"1 game":"Best of "+LORE.seriesLen} · first to ${loreBaseWin()} lore</div>
+      <div class="jgroup"><h3>This game</h3>
+        <div class="setupreadout" style="margin-bottom:8px">${
+          LORE.players.slice(0,LORE.n).map(p=>esc(p.name)+" "+p.lore).join(" · ")}${
+          (LORE.gameLog||[]).length?" · game "+LORE.game:""}</div>
+        ${loreLogHtml()}
+        ${(LORE.loreLog||[]).length?`<button class="settingsrow" id="lsClearLog" style="margin-top:7px">
+          <span class="srico">🧹</span>
+          <span class="srtxt"><b>Clear the log</b><span>Scores are left exactly as they are.</span></span>
+        </button>`:""}
+      </div>
       <div class="jgroup"><h3>Special rules</h3>
         <button class="settingsrow" id="lsDuck">
           <span class="srico">🦆</span>
@@ -11954,6 +12121,10 @@ function openLoreSettings(){
     </div>
   </div>`;
   $("lsClose").onclick=closeLoreSettings;
+  {const cl=$("lsClearLog");
+   if(cl)cl.onclick=async()=>{
+     if(!await confirmBox("Clear the log","Wipes the list of score changes for this match. Nobody's lore moves.","Clear it",true))return;
+     LORE.loreLog=[];loreSave();openLoreSettings()}}
   $("lsPlayers").onclick=async()=>{
     if(LORE.locked){toast("Score is locked while the judge is open");return}
     const v=await choiceSheet("How many players?","",
@@ -11972,6 +12143,7 @@ function openLoreSettings(){
     if(chosen==null)return;
     const nd={};chosen.forEach(v=>nd[+v]=true);
     LORE.duck=nd;loreSave();renderLore();};
+  {const lg=$("lorelog");if(lg)lg.scrollTop=lg.scrollHeight}
   $("settingshost").querySelectorAll("[data-seatcolor]").forEach(b=>b.onclick=async()=>{
     const i=+b.dataset.seatcolor;
     const v=await choiceSheet("Seat colour for "+LORE.players[i].name,
@@ -13246,7 +13418,7 @@ const OPAGES={
   account:["vAccount",()=>renderAccount()],
   pref:  ["vPref",   ()=>renderPrefs()],
   shop:  ["vShop",   ()=>renderShop()],
-  lore:  ["vLore",   ()=>renderLore()],
+  lore:  ["vLore",   ()=>{LORE_FRESH=true;renderLore()}],
   judge: ["vJudge",  ()=>renderStandaloneJudge()],
 };
 /* Pages that belong to a switch. Turning the switch off takes the tile out of
