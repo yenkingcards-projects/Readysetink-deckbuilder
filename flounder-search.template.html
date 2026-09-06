@@ -900,6 +900,55 @@ body.fffaux #bub,body.fffaux .sitefoot{display:none!important}
 .zpop{position:absolute;z-index:24;font-weight:900;font-size:14px;color:#8ef5a8;
   pointer-events:none;transform:translate(-50%,-50%);text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .zpop.bad{color:#ff8080}
+.zpop.big{font-size:22px;color:#ffd400}
+.zpop.huge{font-size:34px;color:#fff;text-shadow:0 0 20px #ff9c3c,0 3px 10px rgba(0,0,0,.7)}
+/* ---- the epic layer ---------------------------------------------------
+   A wave game lives or dies on what happens in the quarter-second after a
+   kill. Everything below is that quarter-second: the ring the blade leaves,
+   the number that jumps, the screen kicking, the water getting redder the
+   deeper you are. None of it changes a rule; all of it is why you go again. */
+.zring{position:absolute;z-index:10;border-radius:50%;pointer-events:none;
+  border:2px solid rgba(255,255,255,.85);transform:translate(-50%,-50%)}
+.zbit{position:absolute;z-index:14;pointer-events:none;font-size:15px;
+  transform:translate(-50%,-50%)}
+/* The wave call. Big, brief, and gone before it is in the way. */
+.zbanner{position:absolute;z-index:26;left:50%;top:40%;transform:translate(-50%,-50%);
+  font-weight:900;font-size:clamp(34px,8vw,86px);letter-spacing:-.035em;color:#fff;
+  pointer-events:none;white-space:nowrap;text-align:center;line-height:.95;
+  text-shadow:0 0 28px rgba(120,220,255,.8),0 6px 18px rgba(0,0,0,.65)}
+.zbanner small{display:block;font-size:.28em;letter-spacing:.14em;text-transform:uppercase;
+  color:#bcd7ea;margin-top:6px;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.zbanner.boss{color:#ffd400;text-shadow:0 0 34px rgba(255,84,52,.95),0 6px 18px rgba(0,0,0,.75)}
+.zbanner.best{color:#8ef5a8;text-shadow:0 0 30px rgba(80,255,150,.8),0 6px 18px rgba(0,0,0,.7)}
+/* A boss is only a boss if you can watch its health go down. */
+.zbossbar{position:absolute;z-index:23;top:70px;left:50%;transform:translateX(-50%);
+  width:min(430px,72%);pointer-events:none}
+.zbossbar .zbn{font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;
+  color:#ffd7d7;text-align:center;margin-bottom:4px;text-shadow:0 2px 8px rgba(0,0,0,.75)}
+.zbossbar .zbb{height:11px;border-radius:999px;background:rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.3);overflow:hidden}
+.zbossbar .zbf{height:100%;width:100%;background:linear-gradient(90deg,#ff4d4d,#ffd400);
+  transition:width .12s linear}
+/* Drops. They bob so they read as "come and get me" rather than as scenery. */
+.zpick{position:absolute;z-index:13;font-size:28px;pointer-events:none;
+  filter:drop-shadow(0 0 11px rgba(255,255,255,.8));animation:zpickbob 1.05s ease-in-out infinite alternate}
+@keyframes zpickbob{from{transform:translate(-50%,-50%) scale(1)}
+  to{transform:translate(-50%,-50%) scale(1.2)}}
+@keyframes zshake{0%,100%{transform:translate(0,0)}20%{transform:translate(-6px,4px)}
+  40%{transform:translate(6px,-4px)}60%{transform:translate(-4px,-5px)}80%{transform:translate(5px,3px)}}
+.ffgame.zshake{animation:zshake .26s}
+.ffgame.zquake{animation:zshake .5s 2}
+/* Frenzy lights the blades up so you can see the buff rather than read it. */
+.ffgame.zfrenzy .zsword{filter:drop-shadow(0 0 12px #ffd400) brightness(1.45)}
+.ffgame.zgold .zomb{filter:drop-shadow(0 0 9px #ffd400) saturate(1.4)}
+.zsword.in{font-size:18px}
+/* The water gets redder the deeper you get. Pure atmosphere, one variable. */
+.zheat{position:absolute;inset:0;z-index:8;pointer-events:none;opacity:0;
+  transition:opacity 1.4s ease;
+  background:radial-gradient(circle at 50% 62%,rgba(120,0,0,0) 30%,rgba(96,0,26,.62) 100%)}
+@media(prefers-reduced-motion:reduce){
+  .ffgame.zshake,.ffgame.zquake{animation:none}
+  .zpick{animation:none}}
 .zflash{position:absolute;inset:0;z-index:9;pointer-events:none;
   background:rgba(255,40,40,.28);opacity:0;transition:opacity .14s}
 .ffgame.zhit .zflash{opacity:1;transition:none}
@@ -7354,6 +7403,9 @@ function stopAqua(){
   if(AQ.zEnd)try{AQ.zEnd()}catch(e){}
   AQ.raf=null}AQ=null}
 const AQKEY="fs3_aqua",FFXKEY="fs3_ffx";
+/* One AudioContext for the whole session. Browsers cap how many a page may
+   hold, and renderAqua() runs again every time you open the tank. */
+let ZAC=null;
 /* Card effects for Feed Flounder — bought with dust, worn on the Flounder card
    while you play. Cosmetic only, like titles, which is why they can live in
    localStorage. Several can run at once; that's the fun of it.
@@ -7615,21 +7667,25 @@ function renderAqua(){
 
   /* ==================== ZOMBIE MODE ====================
      Wearing Zombie Mode stops being a reskin here and becomes the mode: the
-     food stops, the tank pulls back, and waves come at you while a ring of
-     blades turns around Flounder. Two currencies on purpose — brains are the
-     run's own money and reset when you die, dust is the site's and is kept,
-     so the tower-defense loop can be tuned hard without touching an economy
-     that every other page shares.
+     food stops, the tank pulls back, and waves come at you while rings of
+     blades turn around Flounder.
 
-     Everything lives in Z and is torn down by zEnd(); the blades and the
-     zombies are children of the TANK, so nothing is boxed in by the card. */
+     Two currencies on purpose — brains are the run's own money and reset when
+     you die, dust is the site's and is kept — so this economy can be tuned
+     hard without touching the balance every other page shares.
+
+     Everything lives in Z and is torn down by zEnd(); the blades, the drops
+     and the zombies are children of the TANK, so nothing is boxed in by the
+     card the way the old sword ring was. */
   const ZUPG=[
-   {id:"blades",l:"Another blade",  d:"One more sword in the ring.",      base:8, step:7, max:9},
-   {id:"reach", l:"Longer reach",   d:"The ring turns wider.",            base:9, step:7, max:8},
-   {id:"speed", l:"Faster spin",    d:"The ring turns quicker.",          base:9, step:7, max:8},
-   {id:"edge",  l:"Sharper edge",   d:"Blades cut from further out.",     base:11,step:8, max:6},
-   {id:"scales",l:"Thicker scales", d:"One more heart, and heal one now.",base:16,step:13,max:6},
-   {id:"slick", l:"Chum slick",     d:"They swim at you more slowly.",    base:13,step:11,max:5},
+   {id:"blades",l:"Another blade",  d:"One more sword in the outer ring.",   base:8, step:7, max:9},
+   {id:"inner", l:"Inner ring",     d:"A second ring, turning the other way.",base:22,step:16,max:5},
+   {id:"reach", l:"Longer reach",   d:"The rings turn wider.",               base:9, step:7, max:8},
+   {id:"speed", l:"Faster spin",    d:"The rings turn quicker.",             base:9, step:7, max:8},
+   {id:"edge",  l:"Sharper edge",   d:"Blades cut from further out.",        base:11,step:8, max:6},
+   {id:"scales",l:"Thicker scales", d:"One more heart, and heal one now.",   base:16,step:13,max:6},
+   {id:"slick", l:"Chum slick",     d:"They swim at you more slowly.",       base:13,step:11,max:5},
+   {id:"luck",  l:"Low tide",       d:"More of them drop something useful.", base:18,step:15,max:5},
   ];
   /* Three shapes of threat, drawn per wave. Shamblers are the wave, runners
      punish standing still, brutes have to be worked at. A boss every fifth. */
@@ -7638,58 +7694,159 @@ function renderAqua(){
    {e:"🧟‍♀️",hp:1,sp:1.70,w:22},
    {e:"🧟‍♂️",hp:3,sp:.66,w:12},
   ];
+  const ZBOSS=["The Bloated One","Deep Thing","Old Barnacle","The Drowned King","Leviathan"];
+  /* Drops. Four, each answering a different way a run goes wrong: out of
+     health, out of room, out of time, out of money. */
+  const ZPICK=[
+   {id:"heal", e:"🩸",w:26,t:"+1 heart"},
+   {id:"rage", e:"⚡",w:28,t:"FRENZY!"},
+   {id:"boom", e:"💥",w:20,t:"SHOCKWAVE!"},
+   {id:"gold", e:"⭐",w:26,t:"TRIPLE BRAINS!"},
+  ];
   const zCost=(u,lv)=>u.base+u.step*lv;
   let Z=null;
   const zOn=()=>on("zombie");
+
+  /* ---- sound ----------------------------------------------------------
+     Tiny WebAudio blips rather than files: nothing to download, nothing to
+     host, and the pitch can follow the combo, which is most of why kills
+     feel good. The context is created on the first click of "send the next
+     wave" — a real user gesture, which is what browsers require. */
+  const zMuted=()=>load("fs3_zmute",false);
+  function zAC(){
+    if(ZAC)return ZAC;
+    try{ZAC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){ZAC=null}
+    return ZAC;
+  }
+  function zTone(freq,dur,type,gain,slideTo){
+    if(zMuted())return;
+    const ac=zAC();if(!ac)return;
+    try{
+      if(ac.state==="suspended")ac.resume().catch(()=>{});
+      const t=ac.currentTime,o=ac.createOscillator(),g=ac.createGain();
+      o.type=type||"square";o.frequency.setValueAtTime(freq,t);
+      if(slideTo)o.frequency.exponentialRampToValueAtTime(Math.max(40,slideTo),t+dur);
+      g.gain.setValueAtTime(.0001,t);
+      g.gain.exponentialRampToValueAtTime(gain||.05,t+.008);
+      g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+      o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+dur+.03);
+    }catch(e){}
+  }
+  const zChord=(notes,dur,type,gain)=>notes.forEach((f,i)=>setTimeout(()=>zTone(f,dur,type,gain),i*90));
 
   function zBuild(){
     if(Z)return;
     foods.splice(0).forEach(f=>f.el.remove());
     game.classList.add("zmode");
+    const heat=document.createElement("div");heat.className="zheat";game.appendChild(heat);
     const hud=document.createElement("div");hud.className="zhud";
-    hud.innerHTML=`<div class="zrow"><span>Wave</span><b id="zWave">1</b></div>
+    hud.innerHTML=`<div class="zrow"><span>Wave</span><b id="zWave">1</b>
+        <span id="zCombo" style="color:#ffd400"></span></div>
       <div class="zrow"><span class="zhp" id="zHp"></span></div>
       <div class="zrow"><span>🧠</span><b id="zBrain">0</b>
-        <span id="zLeft" style="opacity:.7;font-weight:700"></span></div>`;
+        <span id="zLeft" style="opacity:.7;font-weight:700"></span></div>
+      <button class="zrow" id="zMute" style="cursor:pointer;pointer-events:auto"></button>`;
     game.appendChild(hud);
     const flash=document.createElement("div");flash.className="zflash";game.appendChild(flash);
-    Z={hud,flash,zombies:[],swords:[],panel:null,
-       wave:0,hp:5,maxHp:5,brains:0,kills:0,dust:0,
-       toSpawn:0,spawnAt:0,between:true,over:false,spin:0,lv:{}};
+    Z={hud,heat,flash,zombies:[],picks:[],swords:[],inner:[],panel:null,boss:null,bossEl:null,
+       wave:0,hp:5,maxHp:5,brains:0,kills:0,dust:0,best:st.zwave||0,
+       toSpawn:0,spawnAt:0,between:true,over:false,spin:0,
+       combo:0,comboAt:0,frenzyUntil:0,goldUntil:0,lv:{}};
     ZUPG.forEach(u=>Z.lv[u.id]=0);
+    const mb=$("zMute");
+    const paintMute=()=>{mb.textContent=zMuted()?"🔇":"🔊"};
+    mb.onclick=e=>{e.stopPropagation();save("fs3_zmute",!zMuted());paintMute()};
+    paintMute();
     zSwords();zPaintHud();
-    zBreather("Zombie Mode","They're coming. Blades out — nothing else to do but swim.");
+    zBreather("Zombie Mode",
+      "They come in waves. Blades turn around you, brains buy upgrades between rounds, "
+      +"and the things they drop are worth swimming for.");
   }
-  /* One blade element per blade; positions are written every frame from the
-     fish's real position, so reach is a number and not a CSS inset. */
+  /* One element per blade, on two rings that turn opposite ways. Positions
+     are written every frame from the fish's real position, so reach is a
+     number that upgrades rather than a CSS inset on the card. */
   function zSwords(){
-    const want=3+Z.lv.blades;
-    while(Z.swords.length>want){Z.swords.pop().remove()}
+    const want=4+Z.lv.blades,want2=Z.lv.inner?1+Z.lv.inner:0;
+    while(Z.swords.length>want)Z.swords.pop().remove();
     while(Z.swords.length<want){
       const el=document.createElement("div");el.className="zsword";el.textContent="⚔️";
       game.appendChild(el);Z.swords.push(el)}
+    while(Z.inner.length>want2)Z.inner.pop().remove();
+    while(Z.inner.length<want2){
+      const el=document.createElement("div");el.className="zsword in";el.textContent="🗡️";
+      game.appendChild(el);Z.inner.push(el)}
   }
-  const zReach =()=>78+Z.lv.reach*17;
-  const zSpeed =()=>1.5+Z.lv.speed*.55;
-  const zEdge  =()=>21+Z.lv.edge*5;
+  const zFrenzy=()=>performance.now()<Z.frenzyUntil;
+  const zGold  =()=>performance.now()<Z.goldUntil;
+  const zReach =()=>88+Z.lv.reach*17;
+  const zSpeed =()=>(1.5+Z.lv.speed*.55)*(zFrenzy()?2.3:1);
+  const zEdge  =()=>24+Z.lv.edge*5+(zFrenzy()?10:0);
+  const zMult  =()=>Math.min(5,1+Math.floor(Z.combo/5))*(zGold()?3:1);
   const zHearts=()=>"❤️".repeat(Z.hp)+"🖤".repeat(Math.max(0,Z.maxHp-Z.hp));
   function zPaintHud(){
-    const w=$("zWave"),h=$("zHp"),b=$("zBrain"),l=$("zLeft");
+    const w=$("zWave"),h=$("zHp"),b=$("zBrain"),l=$("zLeft"),c=$("zCombo");
     if(w)w.textContent=String(Math.max(1,Z.wave));
     if(h)h.textContent=zHearts();
     if(b)b.textContent=N(Z.brains);
     if(l)l.textContent=Z.between?"":" · "+(Z.zombies.length+Z.toSpawn)+" left";
+    if(c){const m=zMult();c.textContent=(Z.combo>=5||m>1)?" ×"+m:""}
+    if(Z.heat)Z.heat.style.opacity=String(Math.min(.6,Z.wave*.035));
+    game.classList.toggle("zfrenzy",zFrenzy());
+    game.classList.toggle("zgold",zGold());
   }
-  function zPop(x,y,text,bad){
-    const el=document.createElement("div");el.className="zpop"+(bad?" bad":"");
+  function zPop(x,y,text,cls){
+    const el=document.createElement("div");el.className="zpop"+(cls?" "+cls:"");
     el.textContent=text;el.style.left=x+"px";el.style.top=y+"px";game.appendChild(el);
-    el.animate([{transform:"translate(-50%,-50%)",opacity:1},
-      {transform:"translate(-50%,-140%)",opacity:0}],{duration:750,easing:"ease-out"})
-      .onfinish=()=>el.remove();
+    el.animate([{transform:"translate(-50%,-50%) scale(.7)",opacity:1},
+      {transform:"translate(-50%,-90%) scale(1.15)",opacity:1,offset:.25},
+      {transform:"translate(-50%,-170%) scale(.9)",opacity:0}],
+      {duration:820,easing:"cubic-bezier(.2,.8,.3,1)"}).onfinish=()=>el.remove();
+  }
+  /* An expanding ring plus a spray of bits. Two cheap elements that do most
+     of the work of making a kill feel like an event. */
+  function zBurst(x,y,size,colour,bits){
+    const r=document.createElement("div");r.className="zring";
+    r.style.left=x+"px";r.style.top=y+"px";r.style.width=r.style.height="10px";
+    if(colour)r.style.borderColor=colour;
+    game.appendChild(r);
+    r.animate([{width:"10px",height:"10px",opacity:.9},
+      {width:size+"px",height:size+"px",opacity:0}],
+      {duration:420,easing:"cubic-bezier(.1,.8,.2,1)"}).onfinish=()=>r.remove();
+    for(let i=0;i<(bits||0);i++){
+      const b=document.createElement("div");b.className="zbit";
+      b.textContent=Math.random()<.5?"🦴":"🩸";
+      b.style.left=x+"px";b.style.top=y+"px";game.appendChild(b);
+      const a=Math.random()*Math.PI*2,d=24+Math.random()*46;
+      b.animate([{transform:"translate(-50%,-50%) scale(1)",opacity:1},
+        {transform:`translate(calc(-50% + ${Math.cos(a)*d}px),calc(-50% + ${Math.sin(a)*d}px)) scale(.4)`,opacity:0}],
+        {duration:520+Math.random()*260,easing:"ease-out"}).onfinish=()=>b.remove();
+    }
+  }
+  const zShake=(hard)=>{
+    const c=hard?"zquake":"zshake";
+    game.classList.remove("zshake","zquake");
+    void game.offsetWidth;                       // restart the animation
+    game.classList.add(c);
+    setTimeout(()=>game.classList.remove(c),hard?1050:280);
+  };
+  function zBanner(text,sub,cls){
+    const el=document.createElement("div");el.className="zbanner"+(cls?" "+cls:"");
+    el.innerHTML=esc(text)+(sub?`<small>${esc(sub)}</small>`:"");
+    game.appendChild(el);
+    el.animate([{transform:"translate(-50%,-50%) scale(.6)",opacity:0},
+      {transform:"translate(-50%,-50%) scale(1.06)",opacity:1,offset:.22},
+      {transform:"translate(-50%,-50%) scale(1)",opacity:1,offset:.72},
+      {transform:"translate(-50%,-50%) scale(1.25)",opacity:0}],
+      {duration:1700,easing:"cubic-bezier(.2,.9,.2,1)"}).onfinish=()=>el.remove();
+  }
+  function zPick(){
+    const tot=ZKIND.reduce((a,k)=>a+k.w,0);let q=Math.random()*tot;
+    for(const k of ZKIND){q-=k.w;if(q<=0)return k}
+    return ZKIND[0];
   }
   function zSpawnOne(){
     const r=R(),boss=Z.wave%5===0&&Z.toSpawn===1;
-    const k=boss?{e:"👹",hp:10+Z.wave*2,sp:.5}:zPick();
+    const k=boss?{e:"👹",hp:14+Z.wave*3,sp:.5}:zPick();
     const edge=Math.floor(Math.random()*4);
     const x=edge===0?-30:edge===1?r.width+30:Math.random()*r.width;
     const y=edge===2?-30:edge===3?r.height+30:Math.random()*r.height;
@@ -7700,18 +7857,29 @@ function renderAqua(){
     /* Tuned so a wave-one shambler crosses the tank in six or seven seconds.
        The first pass was less than half this and the waves never arrived —
        you sat watching a ring turn in an empty tank. */
-    Z.zombies.push({el,x,y,hp:k.hp,boss:!!boss,
-      sp:k.sp*(1+Z.wave*.08)*slow,wob:Math.random()*Math.PI*2});
-  }
-  function zPick(){
-    const tot=ZKIND.reduce((a,k)=>a+k.w,0);let q=Math.random()*tot;
-    for(const k of ZKIND){q-=k.w;if(q<=0)return k}
-    return ZKIND[0];
+    const z={el,x,y,hp:k.hp,max:k.hp,boss:!!boss,
+      sp:k.sp*(.88+Z.wave*.06)*slow,wob:Math.random()*Math.PI*2};
+    Z.zombies.push(z);
+    if(boss){
+      Z.boss=z;
+      const bar=document.createElement("div");bar.className="zbossbar";
+      bar.innerHTML=`<div class="zbn">${esc(ZBOSS[Math.min(ZBOSS.length-1,Math.floor(Z.wave/5)-1)]||"Something Big")}</div>
+        <div class="zbb"><div class="zbf"></div></div>`;
+      game.appendChild(bar);Z.bossEl=bar;
+      zBanner("BOSS","hold the line","boss");
+      zShake(true);zChord([110,98,82],.5,"sawtooth",.09);
+    }
   }
   function zStartWave(){
     Z.wave++;Z.between=false;
-    Z.toSpawn=Math.min(60,5+Z.wave*3);
+    /* The count and the speed both ramp, so they have to ramp gently or the
+       curve is a cliff — the first cut put eleven of them on you in wave two
+       and a good run was over before the first upgrade mattered. */
+    Z.toSpawn=Math.min(60,4+Z.wave*2);
     Z.spawnAt=performance.now();
+    const boss=Z.wave%5===0;
+    zBanner("WAVE "+Z.wave,boss?"something big is coming":"",boss?"boss":"");
+    zChord(boss?[196,247,294]:[262,392],.16,"square",.05);
     zPaintHud();
   }
   /* The between-waves panel and the end-of-run panel are the same element with
@@ -7719,7 +7887,7 @@ function renderAqua(){
      stack on top of each other. */
   function zShut(){if(Z&&Z.panel){Z.panel.remove();Z.panel=null}}
   function zBreather(title,sub){
-    zShut();Z.between=true;
+    zShut();Z.between=true;Z.combo=0;
     const el=document.createElement("div");el.className="zpanel";
     el.innerHTML=`<h3>${esc(title)}</h3><div class="zsub">${esc(sub)}</div>
       <div class="zgrid">${ZUPG.map(u=>{
@@ -7738,44 +7906,92 @@ function renderAqua(){
       const cost=zCost(u,lv);
       if(Z.brains<cost)return;
       Z.brains-=cost;Z.lv[u.id]++;
-      if(u.id==="blades")zSwords();
+      if(u.id==="blades"||u.id==="inner")zSwords();
       if(u.id==="scales"){Z.maxHp++;Z.hp=Math.min(Z.maxHp,Z.hp+1)}
+      zTone(660,.09,"triangle",.06,990);
       zPaintHud();
       zBreather(title,sub);           // redraw prices against the new balance
     });
-    el.querySelector("[data-zgo]").onclick=()=>{zShut();zStartWave()};
+    el.querySelector("[data-zgo]").onclick=()=>{zAC();zShut();zStartWave()};
     zPaintHud();
   }
   function zOver(){
     zShut();Z.over=true;Z.between=true;
     Z.zombies.forEach(z=>z.el.remove());Z.zombies=[];Z.toSpawn=0;
+    Z.picks.forEach(pk=>pk.el.remove());Z.picks=[];
+    if(Z.bossEl){Z.bossEl.remove();Z.bossEl=null}Z.boss=null;
+    zChord([220,175,131,98],.34,"sawtooth",.07);
     /* Best wave is kept per device the same way every other game's best is. */
-    if(Z.wave>(st.zwave||0)){st.zwave=Z.wave;save(AQKEY,st)}
+    const beat=Z.wave>(st.zwave||0);
+    if(beat){st.zwave=Z.wave;save(AQKEY,st)}
+    if(Z.wave>=15)unlockHidden("h_wave");
     const el=document.createElement("div");el.className="zpanel";
-    el.innerHTML=`<h3>They got you on wave ${Z.wave}</h3>
-      <div class="zsub">${N(Z.kills)} banished · ${N(Z.dust)} dust earned ·
-        best wave so far ${N(st.zwave||Z.wave)}. Brains don't carry over; dust already has.</div>
+    el.innerHTML=`<h3>${beat?"New best — wave "+Z.wave:"They got you on wave "+Z.wave}</h3>
+      <div class="zsub">${N(Z.kills)} banished · ${N(Z.dust)} dust earned${
+        beat?"":" · best so far wave "+N(st.zwave||Z.wave)}.
+        Brains don't carry over; the dust already has.</div>
       <button class="zgo" data-zgo>Go again</button>`;
     game.appendChild(el);Z.panel=el;
+    if(beat)zBanner("NEW BEST","wave "+Z.wave,"best");
     el.querySelector("[data-zgo]").onclick=()=>{
       zShut();
       Z.wave=0;Z.hp=Z.maxHp=5;Z.brains=0;Z.kills=0;Z.dust=0;Z.over=false;
+      Z.combo=0;Z.frenzyUntil=Z.goldUntil=0;
       ZUPG.forEach(u=>Z.lv[u.id]=0);zSwords();
       zBreather("Round two","Same water, same blades, nothing learned. Off you go.");
     };
   }
   function zHurt(){
-    Z.hp--;zPaintHud();
+    Z.hp--;Z.combo=0;zPaintHud();
     game.classList.add("zhit");setTimeout(()=>game.classList.remove("zhit"),140);
+    zShake();zTone(90,.22,"sawtooth",.09,55);
     if(navigator.vibrate)navigator.vibrate([40,30,40]);
     if(Z.hp<=0)zOver();
   }
-  function zKill(z,i){
-    Z.kills++;Z.brains+=z.boss?12:1;
-    const got=dustGain(z.boss?25:1);Z.dust+=got;visit+=got;AQ.earn=visit;
+  function zDrop(x,y){
+    const chance=.07+Z.lv.luck*.035;
+    if(Math.random()>chance)return;
+    const tot=ZPICK.reduce((a,k)=>a+k.w,0);let q=Math.random()*tot,kind=ZPICK[0];
+    for(const k of ZPICK){q-=k.w;if(q<=0){kind=k;break}}
+    const el=document.createElement("div");el.className="zpick";el.textContent=kind.e;
+    el.style.left=x+"px";el.style.top=y+"px";game.appendChild(el);
+    Z.picks.push({el,x,y,kind,die:performance.now()+11000});
+  }
+  function zTake(pk,i){
+    pk.el.remove();Z.picks.splice(i,1);
+    const k=pk.kind;
+    if(k.id==="heal"){Z.hp=Math.min(Z.maxHp,Z.hp+1)}
+    if(k.id==="rage"){Z.frenzyUntil=performance.now()+7000}
+    if(k.id==="gold"){Z.goldUntil=performance.now()+10000}
+    if(k.id==="boom"){
+      zShake(true);zBurst(pos.x,pos.y,1400,"#ffd400",0);
+      for(let j=Z.zombies.length-1;j>=0;j--)zKill(Z.zombies[j],j,true);
+    }
+    zPop(pk.x,pk.y,k.t,"big");
+    zChord([523,659,784],.11,"triangle",.06);
+    zPaintHud();
+  }
+  function zKill(z,i,quiet){
+    const now=performance.now();
+    Z.combo=(now-Z.comboAt<2400)?Z.combo+1:1;Z.comboAt=now;
+    const mult=zMult();
+    Z.kills++;
+    const brains=(z.boss?14:1)*mult;
+    Z.brains+=brains;
+    const got=dustGain(z.boss?30:1);Z.dust+=got;visit+=got;AQ.earn=visit;
     dustEl.textContent=N(DUST.bal);
     const d=$("aqDust");if(d)d.textContent=N(visit);
-    zPop(z.x,z.y,z.boss?"BOSS! 🧠 12":"🧠 1");
+    if(z.boss){
+      zBurst(z.x,z.y,340,"#ffd400",14);zShake(true);
+      zChord([392,330,262,196],.26,"sawtooth",.08);
+      zPop(z.x,z.y,"BOSS DOWN · 🧠 "+brains,"huge");
+      if(Z.bossEl){Z.bossEl.remove();Z.bossEl=null}Z.boss=null;
+    }else{
+      zBurst(z.x,z.y,86+mult*14,mult>1?"#ffd400":null,3);
+      if(!quiet)zTone(330+Math.min(Z.combo,18)*26,.055,"square",.045);
+      zPop(z.x,z.y,(mult>1?"×"+mult+" ":"")+"🧠 "+brains,mult>=3?"big":"");
+    }
+    zDrop(z.x,z.y);
     z.el.remove();Z.zombies.splice(i,1);
     zPaintHud();
   }
@@ -7789,6 +8005,28 @@ function renderAqua(){
       el.style.left=el.sx+"px";el.style.top=el.sy+"px";
       el.style.transform=`translate(-50%,-50%) rotate(${a*57.3+90}deg)`;
     });
+    /* The inner ring turns the other way, which is what makes two rings read
+       as two rings rather than as a thicker one. */
+    const rad2=rad*.52,n2=Z.inner.length;
+    Z.inner.forEach((el,i)=>{
+      const a=-Z.spin*1.35+(i/n2)*Math.PI*2;
+      el.sx=pos.x+Math.cos(a)*rad2;el.sy=pos.y+Math.sin(a)*rad2;
+      el.style.left=el.sx+"px";el.style.top=el.sy+"px";
+      el.style.transform=`translate(-50%,-50%) rotate(${a*57.3+90}deg)`;
+    });
+    if(Z.combo&&now-Z.comboAt>2400){Z.combo=0;zPaintHud()}
+    if(Z.frenzyUntil&&now>Z.frenzyUntil){Z.frenzyUntil=0;zPaintHud()}
+    if(Z.goldUntil&&now>Z.goldUntil){Z.goldUntil=0;zPaintHud()}
+    /* Drops drift and expire whether or not a wave is running, so clearing a
+       wave never strands one you were swimming for. */
+    for(let i=Z.picks.length-1;i>=0;i--){
+      const pk=Z.picks[i];
+      if(now>pk.die){pk.el.remove();Z.picks.splice(i,1);continue}
+      const dx=pos.x-pk.x,dy=pos.y-pk.y,d=Math.hypot(dx,dy)||1;
+      if(d<300){pk.x+=dx/d*.9*dt;pk.y+=dy/d*.9*dt;
+        pk.el.style.left=pk.x+"px";pk.el.style.top=pk.y+"px"}
+      if(d<46){zTake(pk,i);continue}
+    }
     if(Z.between)return;
     if(Z.toSpawn>0&&now>=Z.spawnAt){
       zSpawnOne();Z.toSpawn--;
@@ -7808,35 +8046,65 @@ function renderAqua(){
       let cut=false;
       for(const sw of Z.swords){
         const ax=sw.sx-z.x,ay=sw.sy-z.y;
-        if(ax*ax+ay*ay<edge*edge){cut=true;break}
-      }
+        if(ax*ax+ay*ay<edge*edge){cut=true;break}}
+      if(!cut)for(const sw of Z.inner){
+        const ax=sw.sx-z.x,ay=sw.sy-z.y;
+        if(ax*ax+ay*ay<edge*edge){cut=true;break}}
       if(cut){
         z.hp--;
+        if(z.boss&&Z.bossEl){
+          const f=Z.bossEl.querySelector(".zbf");
+          if(f)f.style.width=Math.max(0,z.hp/z.max*100)+"%";
+        }
         if(z.hp<=0){zKill(z,i);continue}
         z.el.classList.add("hurt");setTimeout(()=>z.el&&z.el.classList.remove("hurt"),110);
+        if(z.boss)zTone(140,.05,"square",.035);
         /* Knocked back rather than ground down inside the ring — otherwise a
-           3-health brute loses all three to one pass of one blade. */
-        z.x-=(dx/d)*26;z.y-=(dy/d)*26;
+           three-health brute loses all three to one pass of one blade. */
+        const kb=z.boss?12:34;
+        z.x-=(dx/d)*kb;z.y-=(dy/d)*kb;
         continue;
       }
-      if(d<38){z.el.remove();Z.zombies.splice(i,1);zPop(z.x,z.y,"-1",true);zHurt();continue}
+      if(d<38){
+        /* A boss does NOT die by reaching you — it lands a hit, gets thrown
+           back, and you still have to cut it down. Anything else makes the
+           one fight in the wave that is supposed to be hard into a free kill,
+           and left its health bar on screen with nothing behind it. */
+        if(z.boss){
+          if(now-(z.hitAt||0)>900){z.hitAt=now;
+            zBurst(pos.x,pos.y,110,"#ff6b6b",4);zPop(pos.x,pos.y,"-1","bad");zHurt()}
+          z.x-=(dx/d)*150;z.y-=(dy/d)*150;continue}
+        z.el.remove();Z.zombies.splice(i,1);
+        zBurst(z.x,z.y,70,"#ff6b6b",2);zPop(z.x,z.y,"-1","bad");zHurt();continue}
     }
     if(!Z.between&&Z.toSpawn===0&&!Z.zombies.length){
-      const bonus=Z.wave*3,dustB=dustGain(Z.wave*5);
+      const bonus=Z.wave*3;
+      /* Every fifth wave pays properly. A milestone you can feel is what makes
+         the next five worth starting. */
+      const mile=Z.wave%5===0;
+      const dustB=dustGain(Z.wave*5+(mile?Z.wave*20:0));
       Z.brains+=bonus;Z.dust+=dustB;visit+=dustB;AQ.earn=visit;
       dustEl.textContent=N(DUST.bal);
       const d2=$("aqDust");if(d2)d2.textContent=N(visit);
+      if(mile){zBanner("WAVE "+Z.wave+" CLEARED","milestone · "+N(dustB)+" dust","best");
+        zChord([392,494,587,784],.2,"triangle",.06)}
+      else zChord([523,659],.14,"triangle",.05);
+      if(Z.wave>Z.best&&Z.wave>0){Z.best=Z.wave;st.zwave=Z.wave;save(AQKEY,st)}
       zBreather("Wave "+Z.wave+" cleared",
-        `🧠 ${bonus} and ${N(dustB)} dust for clearing it. Spend the brains — they don't carry past a run.`);
+        `🧠 ${bonus} and ${N(dustB)} dust${mile?" — milestone round":""}. `
+        +"Spend the brains; they don't carry past a run.");
     }
   }
   function zEnd(){
     if(!Z)return;
     zShut();
     Z.zombies.forEach(z=>z.el.remove());
+    Z.picks.forEach(pk=>pk.el.remove());
     Z.swords.forEach(el=>el.remove());
-    Z.hud.remove();Z.flash.remove();
-    game.classList.remove("zmode","zhit");
+    Z.inner.forEach(el=>el.remove());
+    if(Z.bossEl)Z.bossEl.remove();
+    Z.hud.remove();Z.flash.remove();Z.heat.remove();
+    game.classList.remove("zmode","zhit","zshake","zquake","zfrenzy","zgold");
     Z=null;
   }
   /* Toggling the effect on or off in the shop mid-run has to build or tear
@@ -9235,6 +9503,8 @@ const HIDDEN=[
   h:"", d:"Five hundred Flounder and one Hidden Trap. Nobody was ever going to find this."},
  {id:"h_60",    t:"The Perfect 60",   h:"",  secret:true, dust:500000,
   d:"Sixty copies of Flounder - Voice of Reason. Not legal. Not sensible. Perfect."},
+ {id:"h_wave",  t:"Tide Turner",       h:"Hold the tank against fifteen waves of them.",
+  d:"Fifteen waves. The blades held.", dust:50000},
  {id:"h_wide",  t:"Wide Net",          h:"Search with everything switched on at once.",
   d:"Art tags and franchises together. Nothing hides from you."},
 ];
