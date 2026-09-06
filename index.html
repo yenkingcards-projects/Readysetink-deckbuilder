@@ -1557,18 +1557,31 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pull .sub{font-size:12.16px;color:#555;margin-bottom:14px}
 .pull .grp{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
   color:#666;border-bottom:1px solid #ddd;padding-bottom:3px;margin:16px 0 7px}
-.pull table{width:100%;border-collapse:collapse;font-size:13.12px}
+/* Fixed layout, because the sheet is one <table> per group and auto layout
+   sized each of them to its own longest card name -- so the quantity, the
+   number and the rarity landed at a different place in every section. With
+   every column but the name pinned, the whole sheet reads as one list. */
+.pull table{width:100%;border-collapse:collapse;font-size:13.12px;table-layout:fixed}
 .pull td{padding:3px 4px;border-bottom:1px solid #eee;vertical-align:top}
-.pull td.q{width:34px;font-weight:800;text-align:right;color:#111}
+.pull td.q{width:48px;font-weight:800;text-align:right;color:#111}
 .pull td.no{width:78px;color:#666;font-variant-numeric:tabular-nums}
 .pull td.ra{width:92px;color:#666;font-size:12px}
-.pull td.chk{width:auto;white-space:nowrap}
+/* Two boxes to a row, filling left to right: four is 2 over 2, three is 2
+   over 1 on the left, two is a single pair. A fixed two-column grid rather
+   than a wrapping row, so the pairs line up down the whole sheet instead of
+   re-flowing to whatever width the column happens to have. The cell was
+   white-space:nowrap before, which is what held three thousand boxes in one
+   unwrappable line and blew the table open sideways. */
+.pull td.chk{width:38px;padding-right:9px}
+.pullbox{display:grid;grid-template-columns:repeat(2,13px);gap:3px;justify-content:start}
 .pull .tot{margin-top:14px;font-size:12.8px;font-weight:700;color:#111}
 /* Real checkboxes, not a decorative span — clickable on screen (state
    persists per deck via PULLCHECKKEY) and native checkboxes already print
    their checked state faithfully, so the same markup does both jobs. One per
    copy needed: a 4-of shows four boxes, a 2-of shows two. */
-.pchk{width:13px;height:13px;margin:0 3px 0 0;vertical-align:middle;accent-color:#111}
+.pchk{width:13px;height:13px;margin:0;accent-color:#111}
+/* Under a card image the same grid is centred, because the whole figure is. */
+.pullimg .chk .pullbox{justify-content:center}
 .pull .also{font-size:10.5px;font-style:italic;color:#888;margin-top:1px;font-weight:400}
 /* image view */
 .pullimgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-bottom:6px}
@@ -1578,7 +1591,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
   display:grid;place-items:center;font-size:10.5px;padding:4px;text-align:center}
 .pullimg figcaption{font-size:10.5px;color:#333;margin-top:3px;line-height:1.3}
 .pullimg figcaption i{display:block;font-style:italic;color:#888;font-size:9.5px}
-.pullimg .chk{margin-top:3px}
+.pullimg .chk{margin-top:4px}
 /* QR codes — always rendered (handy on screen too, not just on paper), sized
    to stay modest so two of them don't push a short deck onto a second page
    by themselves. */
@@ -6784,12 +6797,30 @@ const pullSetSuffix=(r,mode)=>
 const PULLCHECKKEY="fs3_pullchecks";
 const pullChecksLoad=()=>load(PULLCHECKKEY,{});
 const pullChecksFor=name=>(pullChecksLoad()[name])||{};
+/* Above this many copies of one card, individual boxes stop being a way to
+   pull cards and start being a wall. Four is the legal maximum in every
+   format that has one, so twelve is already three times generous; a joke
+   deck with three thousand Flounder used to lay three thousand checkboxes in
+   a single unwrappable row and take the page with it. */
+const PULL_BOX_MAX=12;
 function pullCheckboxes(cardKey,q){
   const mine=pullChecksFor(DECKS.cur)[cardKey]||[];
+  const k=esc(cardKey);
+  /* One box for the whole pile once there are too many to tick one at a time.
+     It writes the same array the individual boxes do, just all at once, so the
+     "N / M pulled" counter above stays honest either way. */
+  if(q>PULL_BOX_MAX){
+    const all=mine.filter(Boolean).length>=q;
+    /* No "all 3,000" caption next to it: the row already prints 3000x two
+       columns over, and a caption here is the one thing wide enough to knock
+       this column out of line with every other group's table. */
+    return `<div class="pullbox"><input type="checkbox" class="pchk" data-pk="${k}"
+      data-pall="${q}"${all?" checked":""} title="Tick when you have all ${N(q)}"></div>`;
+  }
   let out="";
   for(let i=0;i<q;i++)
-    out+=`<input type="checkbox" class="pchk" data-pk="${esc(cardKey)}" data-pi="${i}"${mine[i]?" checked":""}>`;
-  return out;
+    out+=`<input type="checkbox" class="pchk" data-pk="${k}" data-pi="${i}"${mine[i]?" checked":""}>`;
+  return `<div class="pullbox">${out}</div>`;
 }
 const pullCheckedCount=rows=>{
   const mine=pullChecksFor(DECKS.cur);
@@ -6802,10 +6833,14 @@ function pullListBody(rows,mode){
     if(g!==last){if(last!==null)html+="</table>";
       if(g)html+=`<div class="grp">${esc(g)}${pullSetSuffix(r,mode)}</div>`;
       html+="<table>";last=g}
-    html+=`<tr><td class="q">${r.q}×</td>
+    /* Boxes first, then the count. Ticking is what you actually DO with this
+       sheet -- the boxes belong under your thumb at the left edge, not off
+       past the rarity column where you have to track back across the row to
+       find which card you just ticked. */
+    html+=`<tr><td class="chk">${pullCheckboxes(r.name,r.q)}</td>
+      <td class="q">${r.q}×</td>
       <td><b>${esc(r.name)}</b>${r.alsoIn.length?`<div class="also">Also printed in ${esc(r.alsoIn.join(", "))}</div>`:""}</td>
-      <td class="no">#${esc(r.num)}</td><td class="ra">${esc(r.r)}</td>
-      <td class="chk">${pullCheckboxes(r.name,r.q)}</td></tr>`;
+      <td class="no">#${esc(r.num)}</td><td class="ra">${esc(r.r)}</td></tr>`;
   });
   return html+"</table>";
 }
@@ -6853,7 +6888,11 @@ function wirePull(){
       const all=pullChecksLoad();
       const forDeck=all[DECKS.cur]=all[DECKS.cur]||{};
       const arr=forDeck[cb.dataset.pk]=forDeck[cb.dataset.pk]||[];
-      arr[+cb.dataset.pi]=cb.checked;
+      /* The collapsed box stands for the whole pile, so it sets every slot. */
+      if(cb.dataset.pall){
+        const q=+cb.dataset.pall;
+        forDeck[cb.dataset.pk]=cb.checked?new Array(q).fill(true):[];
+      }else arr[+cb.dataset.pi]=cb.checked;
       save(PULLCHECKKEY,all);
       const p=$("pullProgress");
       if(p)p.textContent=`${pullCheckedCount(rows)} / ${rows.reduce((a,r)=>a+r.q,0)} pulled`;
