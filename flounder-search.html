@@ -801,6 +801,13 @@ button.mick:hover{border-color:var(--link);transform:translateY(-2px)}
    indistinguishable from the sofa. */
 .ffgame.faux{position:fixed;inset:0;height:auto;width:auto;z-index:500;border-radius:0;border:none}
 body.fffaux{overflow:hidden}
+/* Full screen has to mean full screen. The masthead and the tab bar are both
+   sticky, and they kept painting straight over the top of the tank — across
+   the dust HUD, in the one mode somebody actually sits and plays. z-index
+   didn't settle it, so they go away entirely, which is what the lore tracker
+   already does with body.loreon a few hundred lines down. */
+body.fffaux header,body.fffaux nav.tabs,body.fffaux .subsw,
+body.fffaux #bub,body.fffaux .sitefoot{display:none!important}
 .ffgame::before{content:"";position:absolute;inset:-10%;pointer-events:none;opacity:.35;
   background:repeating-radial-gradient(ellipse at 20% -10%,rgba(255,255,255,.08) 0 2px,transparent 3px 42px);
   transform:rotate(-8deg);animation:ffwater 12s linear infinite alternate}
@@ -839,9 +846,67 @@ body.fffaux{overflow:hidden}
 .ffcard.ff-zombie{background:none;border:none;box-shadow:none}
 .ffcard.ff-zombie::before{display:none}
 .ffcard.ff-zombie::after{background:none;border:none;box-shadow:none;font-size:64px}
+/* ---- zombie mode ------------------------------------------------------
+   Not a skin any more. The tank pulls back, the food stops, and waves of
+   zombies swim at you while a ring of blades turns around Flounder — so the
+   blades live in the TANK's coordinates rather than inside the card's own
+   box. Parented to the card they could never be wider than the card, which
+   is exactly what was wrong with them. */
+.ffgame.zmode{height:min(84vh,760px)}
+.ffgame.zmode .ffweed{opacity:.2}
+.ffgame.zmode .fftitle,.ffgame.zmode .ffhint{display:none}
+/* The run stats live top-left, which is where the wave/hearts/brains HUD has
+   to be — the dust pill owns the centre and the buttons own the right. The
+   visit stats are the least urgent of the three, so they go to the floor. */
+.ffgame.zmode .ffstats{top:auto;bottom:12px}
+.zsword{position:absolute;z-index:12;font-size:23px;pointer-events:none;
+  transform:translate(-50%,-50%);filter:drop-shadow(0 2px 4px rgba(0,0,0,.55))}
+.zomb{position:absolute;z-index:11;font-size:27px;pointer-events:none;
+  transform:translate(-50%,-50%);filter:drop-shadow(0 2px 5px rgba(0,0,0,.5))}
+.zomb.big{font-size:42px}
+.zomb.hurt{filter:drop-shadow(0 0 7px #ff5f5f) brightness(1.7)}
+/* The run's own HUD, opposite the dust pill so the two never collide. */
+.zhud{position:absolute;z-index:22;top:14px;left:14px;display:flex;flex-direction:column;
+  gap:5px;align-items:flex-start;pointer-events:none;font-weight:900}
+.zhud .zrow{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(4,24,39,.46);
+  backdrop-filter:blur(12px);font-size:14px;white-space:nowrap}
+.zhud .zhp{letter-spacing:1px;font-size:15px}
+.zhud b{font-variant-numeric:tabular-nums}
+/* Between waves, and at the end. Both sit OVER the water rather than
+   replacing it — the tank keeps moving behind them, which is what makes a
+   breather read as a breather rather than as a page change. */
+.zpanel{position:absolute;z-index:30;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(520px,calc(100% - 32px));max-height:calc(100% - 32px);overflow:auto;
+  background:rgba(4,24,39,.9);border:1px solid rgba(255,255,255,.2);border-radius:10px;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);padding:16px 18px;color:#fff;
+  backdrop-filter:blur(14px)}
+.zpanel h3{font-size:20px;margin:0 0 2px;font-weight:900;letter-spacing:-.02em;color:#fff}
+.zpanel .zsub{font-size:12.5px;color:#bcd7ea;margin-bottom:12px;line-height:1.5}
+.zgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(224px,1fr));gap:8px}
+.zbuy{display:flex;flex-direction:column;gap:2px;text-align:left;padding:9px 11px;
+  border-radius:6px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);
+  color:#fff;font-family:inherit;cursor:pointer}
+.zbuy:hover:not(:disabled){border-color:#ffd400;background:rgba(255,212,0,.12)}
+.zbuy:disabled{opacity:.42;cursor:default}
+.zbuy b{font-size:13.5px;font-weight:800}
+.zbuy i{font-style:normal;font-size:11.5px;color:#bcd7ea;line-height:1.4}
+.zbuy .zc{font-size:12px;font-weight:900;color:#ffd400;margin-top:3px}
+.zbuy .zlv{font-size:11px;color:#9fc0d8;font-weight:700}
+.zpanel .zgo{margin-top:12px;width:100%;padding:11px;border-radius:6px;border:none;
+  background:#ffd400;color:#202638;font-weight:900;font-size:14px;cursor:pointer;
+  font-family:inherit;text-transform:uppercase;letter-spacing:.06em}
+.zpanel .zgo:hover{background:#ffe452}
+.zpop{position:absolute;z-index:24;font-weight:900;font-size:14px;color:#8ef5a8;
+  pointer-events:none;transform:translate(-50%,-50%);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.zpop.bad{color:#ff8080}
+.zflash{position:absolute;inset:0;z-index:9;pointer-events:none;
+  background:rgba(255,40,40,.28);opacity:0;transition:opacity .14s}
+.ffgame.zhit .zflash{opacity:1;transition:none}
+/* Kept for the card ring, which is now only ever empty — the blades moved
+   into the tank. Left in place so nothing that still writes the class breaks. */
 .ffswords{position:absolute;inset:-30px;display:none;pointer-events:none;
   animation:ffswordspin 3s linear infinite}
-.ffcard.ff-zombie .ffswords{display:block}
 .ffswords span{position:absolute;left:50%;top:50%;font-size:20px;
   transform:translate(-50%,-50%) rotate(var(--a)) translateY(-58px) rotate(calc(-1 * var(--a)))}
 @keyframes ffswordspin{to{transform:rotate(360deg)}}
@@ -7286,6 +7351,7 @@ function stopAqua(){
      particles to a node that is no longer on the page — invisible, but it
      never stops. */
   (AQ.fx||[]).forEach(clearInterval);
+  if(AQ.zEnd)try{AQ.zEnd()}catch(e){}
   AQ.raf=null}AQ=null}
 const AQKEY="fs3_aqua",FFXKEY="fs3_ffx";
 /* Card effects for Feed Flounder — bought with dust, worn on the Flounder card
@@ -7303,11 +7369,13 @@ const FFX=[
  {id:"legendary",l:"Legendary Foil",c:2500, d:"Full rainbow foil. Everyone can see it."},
  {id:"abyss",    l:"Abyss",         c:5000, d:"Something purple and wrong follows you around."},
  /* These two are the first FFX pair that touch more than a glow layer —
-    Magnetic Pull genuinely reels food in, and Zombie Mode replaces the card
-    and the food's art outright. Still opt-in and still stacked with
-    everything above; nothing here changes what a bite is worth. */
+    Magnetic Pull genuinely reels food in, and Zombie Mode stops being an
+    effect at all — it swaps the whole game out for waves. Still opt-in, and
+    dust is still earned at the same seam either way. */
  {id:"magnet",   l:"Magnetic Pull",  c:20000, d:"Food drifts toward you from across the tank."},
- {id:"zombie",   l:"Zombie Mode",    c:100000,d:"The food turns undead. You turn into just the emoji, with swords."}];
+ {id:"zombie",   l:"Zombie Mode",    c:100000,
+  d:"Not an effect — a mode. The food stops, the tank pulls back and they come in waves. "
+   +"Blades orbit you, brains buy upgrades between waves, and dust still counts."}];
 const ffxLoad=()=>{const v=load(FFXKEY,{owned:[],active:[]});
   return {owned:v.owned||[],active:v.active||[]}};
 function renderAqua(){
@@ -7487,6 +7555,7 @@ function renderAqua(){
     return q<.01?"coconut":q<.04?"potato":q<.12?"rare":"pellet"};
   function spawnFood(){
     if(!AQ||foods.length>=14)return;
+    if(Z)return;                           // zombie mode: waves instead of food
     const r=R(),type=chooseType(),el=document.createElement("div");
     /* Zombie Mode reskins every type to the same 🧟 rather than a
        zombie-potato and a zombie-coconut — the type still decides what it's
@@ -7544,6 +7613,240 @@ function renderAqua(){
       b.style.transform=`translate(${Math.sin(q*10)*18}px,${-q*(r.height+100)}px)`;
       b.style.opacity=String(1-q);requestAnimationFrame(up)})(start);}
 
+  /* ==================== ZOMBIE MODE ====================
+     Wearing Zombie Mode stops being a reskin here and becomes the mode: the
+     food stops, the tank pulls back, and waves come at you while a ring of
+     blades turns around Flounder. Two currencies on purpose — brains are the
+     run's own money and reset when you die, dust is the site's and is kept,
+     so the tower-defense loop can be tuned hard without touching an economy
+     that every other page shares.
+
+     Everything lives in Z and is torn down by zEnd(); the blades and the
+     zombies are children of the TANK, so nothing is boxed in by the card. */
+  const ZUPG=[
+   {id:"blades",l:"Another blade",  d:"One more sword in the ring.",      base:8, step:7, max:9},
+   {id:"reach", l:"Longer reach",   d:"The ring turns wider.",            base:9, step:7, max:8},
+   {id:"speed", l:"Faster spin",    d:"The ring turns quicker.",          base:9, step:7, max:8},
+   {id:"edge",  l:"Sharper edge",   d:"Blades cut from further out.",     base:11,step:8, max:6},
+   {id:"scales",l:"Thicker scales", d:"One more heart, and heal one now.",base:16,step:13,max:6},
+   {id:"slick", l:"Chum slick",     d:"They swim at you more slowly.",    base:13,step:11,max:5},
+  ];
+  /* Three shapes of threat, drawn per wave. Shamblers are the wave, runners
+     punish standing still, brutes have to be worked at. A boss every fifth. */
+  const ZKIND=[
+   {e:"🧟",   hp:1,sp:1.00,w:66},
+   {e:"🧟‍♀️",hp:1,sp:1.70,w:22},
+   {e:"🧟‍♂️",hp:3,sp:.66,w:12},
+  ];
+  const zCost=(u,lv)=>u.base+u.step*lv;
+  let Z=null;
+  const zOn=()=>on("zombie");
+
+  function zBuild(){
+    if(Z)return;
+    foods.splice(0).forEach(f=>f.el.remove());
+    game.classList.add("zmode");
+    const hud=document.createElement("div");hud.className="zhud";
+    hud.innerHTML=`<div class="zrow"><span>Wave</span><b id="zWave">1</b></div>
+      <div class="zrow"><span class="zhp" id="zHp"></span></div>
+      <div class="zrow"><span>🧠</span><b id="zBrain">0</b>
+        <span id="zLeft" style="opacity:.7;font-weight:700"></span></div>`;
+    game.appendChild(hud);
+    const flash=document.createElement("div");flash.className="zflash";game.appendChild(flash);
+    Z={hud,flash,zombies:[],swords:[],panel:null,
+       wave:0,hp:5,maxHp:5,brains:0,kills:0,dust:0,
+       toSpawn:0,spawnAt:0,between:true,over:false,spin:0,lv:{}};
+    ZUPG.forEach(u=>Z.lv[u.id]=0);
+    zSwords();zPaintHud();
+    zBreather("Zombie Mode","They're coming. Blades out — nothing else to do but swim.");
+  }
+  /* One blade element per blade; positions are written every frame from the
+     fish's real position, so reach is a number and not a CSS inset. */
+  function zSwords(){
+    const want=3+Z.lv.blades;
+    while(Z.swords.length>want){Z.swords.pop().remove()}
+    while(Z.swords.length<want){
+      const el=document.createElement("div");el.className="zsword";el.textContent="⚔️";
+      game.appendChild(el);Z.swords.push(el)}
+  }
+  const zReach =()=>78+Z.lv.reach*17;
+  const zSpeed =()=>1.5+Z.lv.speed*.55;
+  const zEdge  =()=>21+Z.lv.edge*5;
+  const zHearts=()=>"❤️".repeat(Z.hp)+"🖤".repeat(Math.max(0,Z.maxHp-Z.hp));
+  function zPaintHud(){
+    const w=$("zWave"),h=$("zHp"),b=$("zBrain"),l=$("zLeft");
+    if(w)w.textContent=String(Math.max(1,Z.wave));
+    if(h)h.textContent=zHearts();
+    if(b)b.textContent=N(Z.brains);
+    if(l)l.textContent=Z.between?"":" · "+(Z.zombies.length+Z.toSpawn)+" left";
+  }
+  function zPop(x,y,text,bad){
+    const el=document.createElement("div");el.className="zpop"+(bad?" bad":"");
+    el.textContent=text;el.style.left=x+"px";el.style.top=y+"px";game.appendChild(el);
+    el.animate([{transform:"translate(-50%,-50%)",opacity:1},
+      {transform:"translate(-50%,-140%)",opacity:0}],{duration:750,easing:"ease-out"})
+      .onfinish=()=>el.remove();
+  }
+  function zSpawnOne(){
+    const r=R(),boss=Z.wave%5===0&&Z.toSpawn===1;
+    const k=boss?{e:"👹",hp:10+Z.wave*2,sp:.5}:zPick();
+    const edge=Math.floor(Math.random()*4);
+    const x=edge===0?-30:edge===1?r.width+30:Math.random()*r.width;
+    const y=edge===2?-30:edge===3?r.height+30:Math.random()*r.height;
+    const el=document.createElement("div");
+    el.className="zomb"+(boss?" big":"");el.textContent=k.e;
+    el.style.left=x+"px";el.style.top=y+"px";game.appendChild(el);
+    const slow=1-Z.lv.slick*.09;
+    /* Tuned so a wave-one shambler crosses the tank in six or seven seconds.
+       The first pass was less than half this and the waves never arrived —
+       you sat watching a ring turn in an empty tank. */
+    Z.zombies.push({el,x,y,hp:k.hp,boss:!!boss,
+      sp:k.sp*(1+Z.wave*.08)*slow,wob:Math.random()*Math.PI*2});
+  }
+  function zPick(){
+    const tot=ZKIND.reduce((a,k)=>a+k.w,0);let q=Math.random()*tot;
+    for(const k of ZKIND){q-=k.w;if(q<=0)return k}
+    return ZKIND[0];
+  }
+  function zStartWave(){
+    Z.wave++;Z.between=false;
+    Z.toSpawn=Math.min(60,5+Z.wave*3);
+    Z.spawnAt=performance.now();
+    zPaintHud();
+  }
+  /* The between-waves panel and the end-of-run panel are the same element with
+     different content — one place that can be on screen, so they can never
+     stack on top of each other. */
+  function zShut(){if(Z&&Z.panel){Z.panel.remove();Z.panel=null}}
+  function zBreather(title,sub){
+    zShut();Z.between=true;
+    const el=document.createElement("div");el.className="zpanel";
+    el.innerHTML=`<h3>${esc(title)}</h3><div class="zsub">${esc(sub)}</div>
+      <div class="zgrid">${ZUPG.map(u=>{
+        const lv=Z.lv[u.id],maxed=lv>=u.max,cost=zCost(u,lv);
+        const can=!maxed&&Z.brains>=cost;
+        return `<button class="zbuy" data-zu="${u.id}"${can?"":" disabled"}>
+          <b>${esc(u.l)}</b><i>${esc(u.d)}</i>
+          <span class="zlv">${maxed?"Maxed":"Level "+lv+" of "+u.max}</span>
+          ${maxed?"":`<span class="zc">🧠 ${cost}</span>`}
+        </button>`}).join("")}</div>
+      <button class="zgo" data-zgo>Send the next wave</button>`;
+    game.appendChild(el);Z.panel=el;
+    el.querySelectorAll("[data-zu]").forEach(b=>b.onclick=()=>{
+      const u=ZUPG.find(x=>x.id===b.dataset.zu),lv=Z.lv[u.id];
+      if(lv>=u.max)return;
+      const cost=zCost(u,lv);
+      if(Z.brains<cost)return;
+      Z.brains-=cost;Z.lv[u.id]++;
+      if(u.id==="blades")zSwords();
+      if(u.id==="scales"){Z.maxHp++;Z.hp=Math.min(Z.maxHp,Z.hp+1)}
+      zPaintHud();
+      zBreather(title,sub);           // redraw prices against the new balance
+    });
+    el.querySelector("[data-zgo]").onclick=()=>{zShut();zStartWave()};
+    zPaintHud();
+  }
+  function zOver(){
+    zShut();Z.over=true;Z.between=true;
+    Z.zombies.forEach(z=>z.el.remove());Z.zombies=[];Z.toSpawn=0;
+    /* Best wave is kept per device the same way every other game's best is. */
+    if(Z.wave>(st.zwave||0)){st.zwave=Z.wave;save(AQKEY,st)}
+    const el=document.createElement("div");el.className="zpanel";
+    el.innerHTML=`<h3>They got you on wave ${Z.wave}</h3>
+      <div class="zsub">${N(Z.kills)} banished · ${N(Z.dust)} dust earned ·
+        best wave so far ${N(st.zwave||Z.wave)}. Brains don't carry over; dust already has.</div>
+      <button class="zgo" data-zgo>Go again</button>`;
+    game.appendChild(el);Z.panel=el;
+    el.querySelector("[data-zgo]").onclick=()=>{
+      zShut();
+      Z.wave=0;Z.hp=Z.maxHp=5;Z.brains=0;Z.kills=0;Z.dust=0;Z.over=false;
+      ZUPG.forEach(u=>Z.lv[u.id]=0);zSwords();
+      zBreather("Round two","Same water, same blades, nothing learned. Off you go.");
+    };
+  }
+  function zHurt(){
+    Z.hp--;zPaintHud();
+    game.classList.add("zhit");setTimeout(()=>game.classList.remove("zhit"),140);
+    if(navigator.vibrate)navigator.vibrate([40,30,40]);
+    if(Z.hp<=0)zOver();
+  }
+  function zKill(z,i){
+    Z.kills++;Z.brains+=z.boss?12:1;
+    const got=dustGain(z.boss?25:1);Z.dust+=got;visit+=got;AQ.earn=visit;
+    dustEl.textContent=N(DUST.bal);
+    const d=$("aqDust");if(d)d.textContent=N(visit);
+    zPop(z.x,z.y,z.boss?"BOSS! 🧠 12":"🧠 1");
+    z.el.remove();Z.zombies.splice(i,1);
+    zPaintHud();
+  }
+  function zFrame(now,dt){
+    if(Z.over)return;
+    Z.spin+=zSpeed()*dt*.045;
+    const rad=zReach(),n=Z.swords.length;
+    Z.swords.forEach((el,i)=>{
+      const a=Z.spin+(i/n)*Math.PI*2;
+      el.sx=pos.x+Math.cos(a)*rad;el.sy=pos.y+Math.sin(a)*rad;
+      el.style.left=el.sx+"px";el.style.top=el.sy+"px";
+      el.style.transform=`translate(-50%,-50%) rotate(${a*57.3+90}deg)`;
+    });
+    if(Z.between)return;
+    if(Z.toSpawn>0&&now>=Z.spawnAt){
+      zSpawnOne();Z.toSpawn--;
+      Z.spawnAt=now+Math.max(140,620-Z.wave*22);
+      zPaintHud();
+    }
+    const edge=zEdge();
+    for(let i=Z.zombies.length-1;i>=0;i--){
+      const z=Z.zombies[i];
+      const dx=pos.x-z.x,dy=pos.y-z.y,d=Math.hypot(dx,dy)||1;
+      z.wob+=.09*dt;
+      z.x+=(dx/d)*z.sp*dt+Math.cos(z.wob)*.45;
+      z.y+=(dy/d)*z.sp*dt+Math.sin(z.wob*.8)*.45;
+      z.el.style.left=z.x+"px";z.el.style.top=z.y+"px";
+      /* Blades first: a zombie that walks into a sword on the same frame it
+         reaches Flounder should die rather than bite. */
+      let cut=false;
+      for(const sw of Z.swords){
+        const ax=sw.sx-z.x,ay=sw.sy-z.y;
+        if(ax*ax+ay*ay<edge*edge){cut=true;break}
+      }
+      if(cut){
+        z.hp--;
+        if(z.hp<=0){zKill(z,i);continue}
+        z.el.classList.add("hurt");setTimeout(()=>z.el&&z.el.classList.remove("hurt"),110);
+        /* Knocked back rather than ground down inside the ring — otherwise a
+           3-health brute loses all three to one pass of one blade. */
+        z.x-=(dx/d)*26;z.y-=(dy/d)*26;
+        continue;
+      }
+      if(d<38){z.el.remove();Z.zombies.splice(i,1);zPop(z.x,z.y,"-1",true);zHurt();continue}
+    }
+    if(!Z.between&&Z.toSpawn===0&&!Z.zombies.length){
+      const bonus=Z.wave*3,dustB=dustGain(Z.wave*5);
+      Z.brains+=bonus;Z.dust+=dustB;visit+=dustB;AQ.earn=visit;
+      dustEl.textContent=N(DUST.bal);
+      const d2=$("aqDust");if(d2)d2.textContent=N(visit);
+      zBreather("Wave "+Z.wave+" cleared",
+        `🧠 ${bonus} and ${N(dustB)} dust for clearing it. Spend the brains — they don't carry past a run.`);
+    }
+  }
+  function zEnd(){
+    if(!Z)return;
+    zShut();
+    Z.zombies.forEach(z=>z.el.remove());
+    Z.swords.forEach(el=>el.remove());
+    Z.hud.remove();Z.flash.remove();
+    game.classList.remove("zmode","zhit");
+    Z=null;
+  }
+  /* Toggling the effect on or off in the shop mid-run has to build or tear
+     down the whole mode, not just change what the food looks like. */
+  function zSync(){
+    if(zOn()&&!Z)zBuild();
+    else if(!zOn()&&Z){zEnd();for(let i=0;i<10;i++)spawnFood()}
+  }
+  AQ.zEnd=()=>zEnd();
+
   dustEl.textContent=N(DUST.bal);
   AQ.bub=setInterval(bubble,650);
   for(let i=0;i<10;i++)spawnFood();
@@ -7561,6 +7864,14 @@ function renderAqua(){
       chonky=now<chonkyUntil?1.22:1,bonk=now<bonkUntil?Math.sin(now/22)*8:0;
     card.style.left=(pos.x+bonk)+"px";card.style.top=(pos.y+bob)+"px";
     card.style.transform=`translate(-50%,-50%) scale(${chonky}) rotate(${tilt}deg)`;
+    if(Z){
+      /* Pull the view back so a wave has somewhere to come from. The tank is
+         already taller in zmode; this shrinks Flounder inside it, which is
+         what actually reads as zooming out. */
+      card.style.transform=`translate(-50%,-50%) scale(${chonky*.74}) rotate(${tilt}deg)`;
+      zFrame(now,dt);
+      AQ.raf=requestAnimationFrame(frame);return;
+    }
     const magnetOn=on("magnet");
     for(let i=foods.length-1;i>=0;i--){
       const f=foods[i];f.phase+=.018*dt;
@@ -7680,6 +7991,7 @@ function renderAqua(){
     const v=ffxLoad();
     activeFX=new Set(v.active);
     card.className="ffcard "+v.active.map(i=>"ff-"+i).join(" ");
+    zSync();
     const sh=$("ffshop");if(!sh)return;
     sh.innerHTML=FFX.map(x=>{
       const owned=v.owned.includes(x.id),live=v.active.includes(x.id);
