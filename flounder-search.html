@@ -1566,21 +1566,29 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pull td.q{width:48px;font-weight:800;text-align:right;color:#111}
 .pull td.no{width:78px;color:#666;font-variant-numeric:tabular-nums}
 .pull td.ra{width:92px;color:#666;font-size:12px}
-/* Two boxes to a row, filling left to right: four is 2 over 2, three is 2
-   over 1 on the left, two is a single pair. A fixed two-column grid rather
-   than a wrapping row, so the pairs line up down the whole sheet instead of
-   re-flowing to whatever width the column happens to have. The cell was
-   white-space:nowrap before, which is what held three thousand boxes in one
-   unwrappable line and blew the table open sideways. */
-.pull td.chk{width:38px;padding-right:9px}
-.pullbox{display:grid;grid-template-columns:repeat(2,13px);gap:3px;justify-content:start}
+/* Ink as a colour and a word. The dots are decoration on a mono printout, so
+   the name carries it there; on screen the colour is what you actually scan. */
+.pull td.ink{width:112px;color:#444;font-size:12px;white-space:nowrap}
+.pull td.ink i{display:inline-block;width:9px;height:9px;border-radius:50%;
+  margin-right:4px;vertical-align:-1px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.pull td.ink i+span{margin-left:2px}
+.pullimg .pink{display:block;font-size:9.5px;color:#666;margin-top:1px}
+.pullimg .pink i{display:inline-block;width:7px;height:7px;border-radius:50%;
+  margin-right:3px;vertical-align:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+/* One row of boxes, left-justified, in a column sized to hold four across —
+   which is the legal maximum in every format that has one, so a real deck
+   never wraps. Anything past four wraps onto another line instead of running
+   off the side; the cell was white-space:nowrap before, which is what held
+   three thousand boxes in a single unwrappable line and blew the table open. */
+.pull td.chk{width:80px;padding-right:9px}
+.pullbox{display:flex;flex-wrap:wrap;gap:3px;justify-content:flex-start}
 .pull .tot{margin-top:14px;font-size:12.8px;font-weight:700;color:#111}
 /* Real checkboxes, not a decorative span — clickable on screen (state
    persists per deck via PULLCHECKKEY) and native checkboxes already print
    their checked state faithfully, so the same markup does both jobs. One per
    copy needed: a 4-of shows four boxes, a 2-of shows two. */
 .pchk{width:13px;height:13px;margin:0;accent-color:#111}
-/* Under a card image the same grid is centred, because the whole figure is. */
+/* Under a card image the boxes centre, because the whole figure does. */
 .pullimg .chk .pullbox{justify-content:center}
 .pull .also{font-size:10.5px;font-style:italic;color:#888;margin-top:1px;font-weight:400}
 /* image view */
@@ -1600,6 +1608,13 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pullqr figcaption{font-size:10px;color:#888;margin-top:4px;max-width:120px}
 .qrbox{width:104px;height:104px;display:grid;place-items:center;background:#f4f4f4;border-radius:4px}
 .qrbox img{width:100%;height:100%}
+/* The Ko-fi ask only appears once a deck has been saved more than five times,
+   and when it does it is a footnote, not a billboard: small code, one line of
+   plain thanks, no exclamation marks. */
+.pullkofi{display:flex;align-items:center;gap:10px;justify-content:center;
+  margin-top:10px;max-width:420px;margin-left:auto;margin-right:auto}
+.pullkofi p{font-size:10px;line-height:1.45;color:#8a8a8a;margin:0}
+.qrbox.wee{width:58px;height:58px;flex:0 0 58px;background:transparent}
 /* Fit to 1 page — same markup, tighter numbers. Applied on screen too (not
    only behind @media print) so what you see before printing is what you
    get, rather than a surprise once the sheet comes out of the printer. */
@@ -1612,6 +1627,7 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pull.compact .also{font-size:9.5px}
 .pull.compact .pullqr{margin-top:10px;padding-top:8px;gap:16px}
 .pull.compact .qrbox{width:76px;height:76px}
+.pull.compact .qrbox.wee{width:48px;height:48px;flex:0 0 48px}
 .pull.compact .pullimgs{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
 @media print{
   body{background:#fff}
@@ -6795,6 +6811,13 @@ const pullSetSuffix=(r,mode)=>
    navigate away. A card key rather than an index because rows reorder with
    every sort change and an index would silently point at the wrong card. */
 const PULLCHECKKEY="fs3_pullchecks";
+/* How many times each deck has been saved. Only used to decide whether the
+   Ko-fi code belongs on the printed sheet: a deck you've come back to six
+   times is one the sheet is genuinely doing a job for, and that's the only
+   point at which asking is fair. Keyed by name, like everything else here. */
+const DECKSAVEKEY="fs3_decksaves";
+const KOFI_AFTER=5;
+const deckSaves=n=>(load(DECKSAVEKEY,{})[n])||0;
 const pullChecksLoad=()=>load(PULLCHECKKEY,{});
 const pullChecksFor=name=>(pullChecksLoad()[name])||{};
 /* Above this many copies of one card, individual boxes stop being a way to
@@ -6822,6 +6845,15 @@ function pullCheckboxes(cardKey,q){
     out+=`<input type="checkbox" class="pchk" data-pk="${k}" data-pi="${i}"${mine[i]?" checked":""}>`;
   return `<div class="pullbox">${out}</div>`;
 }
+/* A card's ink, as the colour AND the word. The dot alone is no use on a
+   black-and-white print of the sheet, and the word alone is slower to scan
+   than a colour when you are walking a binder that is sorted by ink. */
+function inkTag(c){
+  const inks=(c&&c.co)||[];
+  if(!inks.length)return "";
+  return inks.map(i=>`<i style="background:${HEX[i]||"#666"}"></i>`).join("")
+    +`<span>${esc(inks.join("/"))}</span>`;
+}
 const pullCheckedCount=rows=>{
   const mine=pullChecksFor(DECKS.cur);
   return rows.reduce((a,r)=>a+(mine[r.name]||[]).filter(Boolean).length,0)};
@@ -6840,6 +6872,7 @@ function pullListBody(rows,mode){
     html+=`<tr><td class="chk">${pullCheckboxes(r.name,r.q)}</td>
       <td class="q">${r.q}×</td>
       <td><b>${esc(r.name)}</b>${r.alsoIn.length?`<div class="also">Also printed in ${esc(r.alsoIn.join(", "))}</div>`:""}</td>
+      <td class="ink">${inkTag(r.c)}</td>
       <td class="no">#${esc(r.num)}</td><td class="ra">${esc(r.r)}</td></tr>`;
   });
   return html+"</table>";
@@ -6855,7 +6888,8 @@ function pullImageBody(rows,mode){
     html+=`<figure class="pullimg">
       ${r.c.img?`<img src="${esc(r.c.img)}" alt="${esc(r.name)}" loading="lazy">`
                :`<div class="pullph">${esc(r.name)}</div>`}
-      <figcaption>${r.q}× ${esc(r.name)}${r.alsoIn.length?`<i>Also in ${esc(r.alsoIn.join(", "))}</i>`:""}</figcaption>
+      <figcaption>${r.q}× ${esc(r.name)}<span class="pink">${inkTag(r.c)}</span>${
+        r.alsoIn.length?`<i>Also in ${esc(r.alsoIn.join(", "))}</i>`:""}</figcaption>
       <div class="chk">${pullCheckboxes(r.name,r.q)}</div>
     </figure>`;
   });
@@ -6877,8 +6911,12 @@ function renderPull(){
     <div class="tot">Total ${tot} cards</div>
     <div class="pullqr">
       <figure><div id="pullQrDeck" class="qrbox"></div><figcaption>Scan for this deck list</figcaption></figure>
-      <figure><div id="pullQrKofi" class="qrbox"></div><figcaption>Scan to support Ready Set Ink</figcaption></figure>
     </div>
+    ${deckSaves(DECKS.cur)>KOFI_AFTER?`<div class="pullkofi">
+      <div id="pullQrKofi" class="qrbox wee"></div>
+      <p>If you like these pull sheets, consider supporting the development of the site.
+        It stays free either way.</p>
+    </div>`:""}
   </div>`;
 }
 function wirePull(){
@@ -9552,6 +9590,7 @@ async function saveDeckPrompt(ev){
      button a dust tap. Keyed by name because a name is the only identity a
      deck has here; rename it and it can pay once more, which is a great deal
      less lucrative than pressing the same button. */
+  {const c=load(DECKSAVEKEY,{});c[name]=(c[name]||0)+1;save(DECKSAVEKEY,c)}
   DUST.paid=DUST.paid||{};
   let paid=0;
   if(!DUST.paid[name]){DUST.paid[name]=Date.now();save(DUSTKEY,DUST);paid=dustGain(10)}
