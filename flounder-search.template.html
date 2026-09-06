@@ -3111,6 +3111,18 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 .seginput label{font-size:12.5px;color:rgba(255,255,255,.75)}
 .seginput input{width:74px;padding:8px 9px;border-radius:6px;border:1px solid rgba(255,255,255,.3);
   background:rgba(255,255,255,.95);color:#111;font-size:14px;font-weight:700}
+.seatcolrow{display:flex;flex-wrap:wrap;gap:7px}
+.seatcol{flex:1 1 130px;min-height:56px;border-radius:8px;border:1px solid rgba(255,255,255,.32);
+  color:#fff;cursor:pointer;padding:8px 10px;display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:center;gap:2px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.seatcol:hover{border-color:#fff}
+.scname{font-size:13.5px;font-weight:900}
+.scink{font-size:11px;font-weight:700;opacity:.85}
+/* The way back to a match you left. A row, not a dialog — it is an offer,
+   and the screen it sits on is the one you wanted anyway. */
+.resumebar{width:100%;margin-bottom:16px;font-size:12.5px;font-weight:800;
+  background:rgba(255,212,0,.16);border-color:rgba(255,212,0,.5)}
+.resumebar:hover{background:rgba(255,212,0,.3)}
 .setupdefault{display:flex;align-items:center;gap:8px;justify-content:center;
   font-size:13px;color:rgba(255,255,255,.8);margin:14px 0 4px;cursor:pointer}
 .setupgo{width:100%;margin-top:14px;padding:15px;font-size:16px}
@@ -3118,9 +3130,22 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 .nameinput{padding:10px 11px;border-radius:6px;border:1px solid rgba(255,255,255,.3);
   background:rgba(255,255,255,.95);color:#111;font-size:14px;font-weight:700;min-height:44px}
 .nameinput::placeholder{color:#767676;font-weight:500}
+/* Who won which game, on the victory screen — the thing both players are
+   actually trying to remember when the match ends. */
+.vicseries{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:12px 0 4px}
+.vicseries span{display:flex;flex-direction:column;gap:1px;align-items:center;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+  border-radius:8px;padding:7px 13px;font-size:13.5px;font-weight:800;color:#fff}
+.vicseries span b{font-size:10.5px;font-weight:900;text-transform:uppercase;
+  letter-spacing:.09em;opacity:.66}
+.vicseries span.toplay{opacity:.45;font-weight:600;font-style:italic}
 .tourreminder{margin-top:10px;padding:10px 12px;border-radius:7px;
   background:rgba(255,193,71,.14);border:1px solid rgba(255,193,71,.4)}
-.tourreminder p{font-size:12.8px;color:rgba(255,255,255,.9);line-height:1.5;margin:0}
+/* Centred. It sits inside .segrow, which is left-aligned for the rows of
+   tap-buttons — this is a notice, not a row of controls, and it read as a
+   ragged block hanging off the left of the card. */
+.tourreminder p{font-size:12.8px;color:rgba(255,255,255,.9);line-height:1.5;margin:0;
+  text-align:center}
 .tourreminder p+p{margin-top:7px}
 /* ---- choice sheet (setup steps, duck picker, colour picker) ---- */
 .choicesheet{max-width:420px;width:100%}
@@ -3208,10 +3233,25 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 .lbtn.judge.off{background:rgba(255,255,255,.08);color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.2)}
 /* ---- seat colour themes ---- */
 .seat.stripes{background:repeating-linear-gradient(135deg,#1c5fa8 0 22px,#4a8fd6 22px 44px)}
-/* Short transition, not the old 1s fade — chaos now flashes every
-   0.3-1.7s, so a slow fade would just blur into the next colour instead of
-   reading as a distinct flash. */
+/* Chaos is a disco ball. The base colour still flips on its own odd prime
+   rhythm underneath (see scheduleChaos), but the seat now carries a grid of
+   mirrored facets over it and a highlight that wanders across them, which
+   is what makes a ball read as a ball rather than as a light that keeps
+   changing colour. Both layers are pseudo-elements, so nothing here fights
+   the inline background the JS writes. */
 .seat.chaos{transition:background .22s ease}
+.seat.chaos::after{content:"";position:absolute;inset:-25%;pointer-events:none;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 50%,
+      rgba(255,255,255,.20) 0deg 5deg, rgba(0,0,0,.18) 5deg 10deg),
+    repeating-linear-gradient(0deg,
+      rgba(255,255,255,.13) 0 16px, rgba(0,0,0,.15) 16px 32px);
+  mix-blend-mode:overlay;opacity:.7;animation:discospin 11s linear infinite}
+.seat.chaos::before{content:"";position:absolute;inset:-40%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),rgba(255,255,255,0) 20%);
+  mix-blend-mode:screen;animation:discoglint 4.2s ease-in-out infinite alternate}
+@keyframes discospin{to{transform:rotate(360deg)}}
+@keyframes discoglint{from{transform:translate(-8%,-5%)}to{transform:translate(24%,16%)}}
 .seat.chaos.jolt{animation:seatjolt .35s ease}
 @keyframes seatjolt{0%{transform:scale(1) rotate(0)}30%{transform:scale(1.025) rotate(-1deg)}
   60%{transform:scale(1.015) rotate(1deg)}100%{transform:scale(1) rotate(0)}}
@@ -3220,7 +3260,8 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 .jreminder{background:var(--bad);color:#fff;font-weight:800;font-size:13px;line-height:1.4;
   padding:11px 14px;text-align:center}
 @media(prefers-reduced-motion:reduce){
-  .lorefish,.viccrest,.seatnum,.seat.chaos{animation:none!important;transition:none!important}}
+  .lorefish,.viccrest,.seatnum,.seat.chaos,.seat.chaos::before,.seat.chaos::after{
+    animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -11416,10 +11457,14 @@ function choiceSheet(title,body,options,cfg){
    fullscreen-overlay-inside-.lorewrap pattern as the victory screen and the
    judge panel, so it never leaves the tracker's own fullscreen mode. */
 let SETUP=null;
+/* One seat colour each, chosen before the match rather than dug out of
+   Settings afterwards — picking your ink is part of sitting down. */
+const setupColor=i=>({colorMode:"primary",inks:[INKS[i%INKS.length]]});
 function openLoreSetup(){
   const d=load(LORE_DEFAULTS_KEY,null)||{format:"core",mode:"casual",seriesLen:3};
   SETUP={n:2,format:d.format||"core",customWin:d.customWin||20,mode:d.mode||"casual",
-    seriesLen:d.seriesLen||3,saveDefault:false,names:[]};
+    seriesLen:d.seriesLen||3,saveDefault:false,names:[],
+    colors:Array.from({length:4},(_,i)=>setupColor(i))};
   renderLoreSetup();
 }
 /* One screen, every choice an inline row of tap-buttons — no more modal-hop
@@ -11438,6 +11483,9 @@ function renderLoreSetup(){
     <div class="setupbody">
       <h1>New match</h1>
       <p class="setupsub">Tap to change anything — starts with your saved default.</p>
+      ${LORE_RESUMABLE?`<button class="lbtn resumebar" id="stResume">
+        Pick the last match back up · ${LORE.players.slice(0,LORE.n).map(p=>
+          esc(p.name)+" "+p.lore).join(" · ")}</button>`:""}
 
       <div class="segrow"><b>Players</b>
         ${seg("segN",[[1,"1 (solo)"],[2,"2"],[3,"3"],[4,"4"]],SETUP.n)}</div>
@@ -11450,6 +11498,18 @@ function renderLoreSetup(){
             placeholder="${esc(defaultSeatName(i,SETUP.n))}" value="${esc(SETUP.names[i]||"")}">`).join("")}
         </div></div>`:""}
 
+      <div class="segrow"><b>Seat colours</b>
+        <div class="seatcolrow">${Array.from({length:SETUP.n},(_,i)=>{
+          const c=SETUP.colors[i]||setupColor(i);
+          const label=c.colorMode==="primary"?(c.inks||[]).join(" / ")
+            :(LORE_COLOR_MODES.find(m=>m[0]===c.colorMode)||[,""])[1];
+          return `<button class="seatcol" data-seatcol="${i}"
+            style="background:${seatBg(c,i)||"#1c5fa8"}">
+            <span class="scname">${esc(SETUP.names[i]||defaultSeatName(i,SETUP.n))}</span>
+            <span class="scink">${esc(label)}</span>
+          </button>`}).join("")}</div>
+      </div>
+
       <div class="segrow"><b>Format</b>
         ${seg("segFmt",LORE_FORMATS,SETUP.format)}
         ${SETUP.format==="custom"?`<div class="seginput"><label>Lore to win</label>
@@ -11459,10 +11519,10 @@ function renderLoreSetup(){
       ${SETUP.n>1?`<div class="segrow"><b>Casual or tournament</b>
         ${seg("segMode",LORE_MODES,SETUP.mode)}
         ${SETUP.mode==="tournament"?`<div class="tourreminder">
-          <p>📵 <b>Turn on Do Not Disturb</b> before your match starts — nothing looks worse than a
-            screen lighting up across the table, even when it's innocent.</p>
-          <p>🤚 <b>The Judge tool won't be available.</b> This tracker still counts lore, but a
-            tournament ruling has to come from an actual judge — call one over instead.</p>
+          <p>We recommend you turn on Do Not Disturb so no outside information can be seen.</p>
+          <p>The Judge tab will be unavailable in tournament mode. Always call for an in-person
+            judge, and ask for a time extension if it takes five minutes or more to resolve
+            your question.</p>
         </div>`:""}</div>`:""}
 
       ${SETUP.n>1?`<div class="segrow"><b>Games</b>
@@ -11472,11 +11532,13 @@ function renderLoreSetup(){
       </div>`:`<p class="setupsub">Solo tracking — just your own lore, no opponent, no match.</p>`}
 
       <label class="setupdefault"><input type="checkbox" id="stSaveDef"${SETUP.saveDefault?" checked":""}> Save this as my default</label>
-      <button class="lbtn go setupgo" id="stGo">Start${SETUP.n===1?" tracking":" match"}</button>
+      <button class="lbtn prime setupgo" id="stGo">Start${SETUP.n===1?" tracking":" match"}</button>
     </div>
   </div>`;
   const wire=(id,onPick)=>{const el=$(id);if(!el)return;
     el.querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>{onPick(b.dataset.v);renderLoreSetup()})};
+  {const rb=$("stResume");
+   if(rb)rb.onclick=()=>{LORE_RESUMABLE=false;LORE.needsSetup=false;SETUP=null;loreSave();renderLore()}}
   wire("segN",v=>SETUP.n=+v);
   wire("segFmt",v=>SETUP.format=v);
   wire("segMode",v=>SETUP.mode=v);
@@ -11484,17 +11546,31 @@ function renderLoreSetup(){
   const cw=$("customWinIn");if(cw)cw.oninput=()=>{const n=parseInt(cw.value,10);if(n>0)SETUP.customWin=n};
   const sl=$("seriesLenIn");if(sl)sl.oninput=()=>{const n=parseInt(sl.value,10);if(n>0)SETUP.seriesLen=n};
   for(let i=0;i<SETUP.n;i++){const el=$("segName"+i);if(el)el.oninput=()=>{SETUP.names[i]=el.value}}
+  document.querySelectorAll("[data-seatcol]").forEach(b=>b.onclick=async()=>{
+    const i=+b.dataset.seatcol;
+    const c=SETUP.colors[i]||(SETUP.colors[i]=setupColor(i));
+    const mode=await choiceSheet("Seat colour for "+(SETUP.names[i]||defaultSeatName(i,SETUP.n)),
+      "Chaos is a disco ball, and it throws fish when you tap plus or minus.",
+      LORE_COLOR_MODES.map(([value,label])=>({value,label})),{initial:c.colorMode});
+    if(mode==null)return;
+    c.colorMode=mode;
+    if(mode==="primary"){
+      const inks=await inkSwatchPicker(c.inks||[INKS[i%INKS.length]]);
+      if(inks){c.inks=inks;delete c.colorHex}
+    }else if(mode==="random")c.colorHex=randHue();
+    else delete c.colorHex;
+    renderLoreSetup()});
   $("stGo").onclick=()=>{
     const saveDef=$("stSaveDef").checked;
     if(saveDef)save(LORE_DEFAULTS_KEY,{format:SETUP.format,customWin:SETUP.customWin,mode:SETUP.mode,seriesLen:SETUP.seriesLen});
     LORE={n:SETUP.n,
       players:Array.from({length:SETUP.n},(_,i)=>({
         name:String(SETUP.names[i]||"").trim().slice(0,14)||defaultSeatName(i,SETUP.n),
-        lore:0,colorMode:"primary"})),
+        lore:0,...(SETUP.colors[i]||setupColor(i))})),
       game:1,seriesLen:SETUP.n===1?1:SETUP.seriesLen,format:SETUP.format,customWin:SETUP.customWin,
       mode:SETUP.n===1?"casual":SETUP.mode,
       duck:{},gameLog:[],loreLog:[],locked:false,needsSetup:false};
-    loreSave();SETUP=null;renderLore()};
+    LORE_RESUMABLE=false;loreSave();SETUP=null;renderLore()};
 }
 function defaultSeatName(i,n){return i===0?"You":n===2?"Opponent":"Player "+(i+1)}
 
@@ -11529,22 +11605,28 @@ const INK_COMBOS=(()=>{
 /* Fixed glint positions, reused on every swatch and every seat that uses
    one -- looks hand-scattered without needing a random seed per card, and
    it's one shared string rather than something recomputed per render. */
+/* Dim stones glowing UNDER frosted glass, not hard white pinpricks sitting
+   on top of it. Each one is a wide, low-alpha falloff — a 2%-radius dot at
+   95% white reads as a speck of dust on the screen; a 40% falloff at a
+   quarter of that reads as something lit from underneath. */
 const GEM_SPARKLE=[
-  "radial-gradient(circle at 18% 22%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 3.2%)",
-  "radial-gradient(circle at 72% 14%, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 2.4%)",
-  "radial-gradient(circle at 40% 55%, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 2%)",
-  "radial-gradient(circle at 82% 62%, rgba(255,255,255,.9) 0%, rgba(255,255,255,0) 2.8%)",
-  "radial-gradient(circle at 25% 82%, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 2.2%)",
-  "radial-gradient(circle at 60% 90%, rgba(255,255,255,.65) 0%, rgba(255,255,255,0) 1.8%)"
+  "radial-gradient(circle at 20% 24%, rgba(255,255,255,.30) 0%, rgba(255,255,255,.10) 20%, rgba(255,255,255,0) 44%)",
+  "radial-gradient(circle at 74% 16%, rgba(255,255,255,.24) 0%, rgba(255,255,255,.08) 17%, rgba(255,255,255,0) 38%)",
+  "radial-gradient(circle at 42% 57%, rgba(255,255,255,.20) 0%, rgba(255,255,255,.06) 22%, rgba(255,255,255,0) 46%)",
+  "radial-gradient(circle at 84% 64%, rgba(255,255,255,.26) 0%, rgba(255,255,255,.09) 18%, rgba(255,255,255,0) 40%)",
+  "radial-gradient(circle at 24% 84%, rgba(255,255,255,.22) 0%, rgba(255,255,255,.07) 20%, rgba(255,255,255,0) 42%)",
+  "radial-gradient(circle at 62% 92%, rgba(255,255,255,.18) 0%, rgba(255,255,255,.06) 16%, rgba(255,255,255,0) 36%)"
 ].join(",");
-/* Stacking order, top to bottom: a soft white wash (the frosted glass), the
-   glints (the sparkly gem, sitting UNDER the frost), then the real ink
-   colour(s) as the base. */
+/* Stacking order, top to bottom: the frost (a soft wash with a highlight
+   running down one side, so the sheet reads as a sheet), the glows sitting
+   UNDER it, then the real ink colour as the base. */
 function inkBg(inks){
   const base=inks.length>1
     ?`linear-gradient(135deg, ${HEX[inks[0]]}, ${HEX[inks[1]]})`
     :`linear-gradient(135deg, ${shade(HEX[inks[0]],22)}, ${shade(HEX[inks[0]],-20)})`;
-  return `linear-gradient(rgba(255,255,255,.18),rgba(255,255,255,.04)),${GEM_SPARKLE},${base}`;
+  const frost="linear-gradient(158deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.05) 38%,"
+    +"rgba(255,255,255,.02) 62%,rgba(255,255,255,.14) 100%)";
+  return `${frost},${GEM_SPARKLE},${base}`;
 }
 const inkLabel=inks=>inks.join(" / ");
 function seatBg(p,i){
@@ -11560,7 +11642,7 @@ function inkSwatchPicker(current){
     const w=document.createElement("div");w.className="cfmbg";
     w.innerHTML=`<div class="cfm choicesheet wide" role="dialog" aria-modal="true">
       <h3>Pick this seat's ink colour</h3>
-      <p>One or two inks, same as a deck — frosted glass over the real ink colour.</p>
+      <p>One or two inks, same as a deck — dim stones glowing under frosted glass.</p>
       <div class="inkswatchgrid">${INK_COMBOS.map(inks=>{
         const key=inks.join("+");
         return `<button class="inkswatch${key===curKey?" on":""}" data-inks="${esc(key)}"
@@ -11617,32 +11699,20 @@ function loreRenderOrder(n){
    is always one tap from opening the page rather than buried in Settings.
    Only on the way IN — every re-render during play skips it. */
 let LORE_FRESH=false;
+/* Set on the way in when the board still had a match on it, so the setup
+   screen can offer it back. Cleared the moment a new match starts. */
+let LORE_RESUMABLE=false;
 const loreHasProgress=()=>!!LORE&&((LORE.gameLog||[]).length>0
   ||LORE.players.slice(0,LORE.n).some(p=>p.lore>0));
-function renderLoreResume(){
-  const host=$("lorepage");if(!host)return;
-  const won=(LORE.gameLog||[]).length;
-  host.innerHTML=`<div class="lorewrap setupwrap" id="lorewrap">
-    <div class="loreresume">
-      <h1>Still got a match on</h1>
-      <div class="lrscore">${LORE.players.slice(0,LORE.n).map(p=>
-        `<span>${esc(p.name)} ${p.lore}</span>`).join("")}</div>
-      <p>${won?`Game ${LORE.game} of a best of ${LORE.seriesLen}. `:""}Pick it up where you
-        left it, or clear the table and set a new one up.</p>
-      <div class="lrbtns">
-        <button class="lbtn" id="lrNew">Set up a new match</button>
-        <button class="lbtn prime" id="lrResume">Pick it back up</button>
-      </div>
-    </div>
-  </div>`;
-  $("lrResume").onclick=()=>renderLore();
-  $("lrNew").onclick=()=>{LORE.needsSetup=true;loreSave();renderLore()};
-}
 function renderLore(){
   LORE=LORE||loreLoad();
+  /* Opening the tracker always lands on setting a match up. A match left
+     on the board is offered at the top of that screen rather than getting
+     in front of it — nine times in ten you are opening this because a new
+     game is about to start. */
   if(LORE_FRESH){
     LORE_FRESH=false;
-    if(!LORE.needsSetup&&loreHasProgress()){renderLoreResume();return}
+    if(!LORE.needsSetup){LORE.needsSetup=true;LORE_RESUMABLE=loreHasProgress()}
   }
   if(LORE.needsSetup){openLoreSetup();return}
   const duckOn=Object.values(LORE.duck||{}).some(Boolean);
@@ -11670,13 +11740,13 @@ function renderLore(){
         </div>`}).join("")}
     </div>
     <div class="lorebar">
-      <button class="lbtn exit" id="loreExit" aria-label="Open the rest of the tools">← Tools</button>
+      <button class="lbtn exit" id="loreExit" aria-label="Back to the rest of the tools">← Back</button>
       <button class="lbtn" id="loreReset">Reset scores</button>
       ${LORE.locked?`<span class="lorelock" role="status">🔒 Score locked while the judge is open</span>`:""}
       ${duckOn?`<button class="lbtn duck" id="loreDuckGone">🦆 Press when the duck's gone</button>`:""}
       <span class="sp"></span>
       <button class="lbtn" id="loreSettings">⚙ Settings</button>
-      <button class="lbtn judge${LORE.mode==="tournament"?" off":""}" id="loreJudge">🤚 JUDGE</button>
+      ${LORE.mode==="tournament"?"":`<button class="lbtn judge" id="loreJudge">🤚 JUDGE</button>`}
     </div>
     <!-- Full-screen's minimal chrome: same three actions as the bar above
          (back, settings, judge) but icon-only and translucent, so the table
@@ -11684,7 +11754,7 @@ function renderLore(){
          hidden/shown (and cross-faded) by body.lorefs -- see wireLore(). -->
     <button class="lorefsback" id="loreFsBack" aria-label="Exit full screen">←</button>
     <button class="lorefsgear" id="loreFsGear" aria-label="Settings">⚙</button>
-    <button class="lorefsjudge${LORE.mode==="tournament"?" off":""}" id="loreFsJudge" aria-label="Judge">🤚 Judge</button>
+    ${LORE.mode==="tournament"?"":`<button class="lorefsjudge" id="loreFsJudge" aria-label="Judge">🤚 Judge</button>`}
     <div id="judgehost"></div>
     <div id="settingshost"></div>
     <div id="vichost"></div>
@@ -11727,8 +11797,11 @@ function wireLore(){
   const judgeGo=()=>{
     if(LORE.mode==="tournament"){toast("Tournament mode: call an actual judge — this tool is casual-only.");return}
     openJudge()};
-  $("loreJudge").onclick=judgeGo;
-  $("loreFsJudge").onclick=judgeGo;
+  /* Both are absent in tournament mode rather than shown disabled — a greyed
+     button still tells you there is a tool here, and at a tournament there
+     isn't one. */
+  {const j=$("loreJudge");if(j)j.onclick=judgeGo}
+  {const j=$("loreFsJudge");if(j)j.onclick=judgeGo}
   $("loreFsGear").onclick=()=>openLoreSettings();
   $("loreFsBack").onclick=loreExitFS;
   w.querySelectorAll("[data-fstoggle]").forEach(b=>b.onclick=loreEnterFS);
@@ -11865,6 +11938,12 @@ function loreVictory(i){
           <span class="vsname">${esc(x.name)}</span>
           <span class="vsnum" data-count="${x.lore}">0</span>
         </div>`).join("")}</div>
+      ${LORE.seriesLen>1?`<div class="vicseries">${
+        LORE.gameLog.map(g=>`<span><b>Game ${g.game}</b>${
+          esc((LORE.players[g.seat]||{name:"?"}).name)}</span>`).join("")}${
+        Array.from({length:Math.max(0,LORE.seriesLen-LORE.gameLog.length)},(_,k)=>
+          `<span class="toplay"><b>Game ${LORE.gameLog.length+k+1}</b>still to play</span>`).join("")
+      }</div>`:""}
       <p>${decided&&LORE.seriesLen>1?"That's the match. Report it while you both remember the result.":""}</p>
       <div class="vicbtns" id="vicbtns">
         ${decided
