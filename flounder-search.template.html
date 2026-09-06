@@ -259,6 +259,10 @@ body.nocoll .collonly{display:none!important}
 .bcust .bchk{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:400;
   text-transform:none;letter-spacing:0;color:var(--tx);flex-direction:row}
 .bchk i{font-style:normal;color:var(--deep)}
+/* .bcust input sets a 180px floor so the text fields line up in a row. A
+   checkbox inherited it too, which stretched the box and pushed its own
+   label most of a column away from it. */
+.bcust .bchk input[type=checkbox]{min-width:0;width:auto;padding:0;flex:0 0 auto}
 
 
 .bsave{flex:1 1 100%;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -4941,6 +4945,24 @@ function illegalReason(c){
   if(q>(named?4:F.max))return "over the "+(named?4:F.max)+"-copy limit";
   return null;
 }
+/* Every rules problem with the current deck, worst first, as plain sentences.
+   The deck panel lists these live while you build; the registration sheet
+   prints them in red at the foot of the page so a list you hand to a judge
+   says what is wrong with it. One function rather than two, or the sheet and
+   the panel would eventually disagree about what "legal" means. */
+function deckWarnings(){
+  const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
+  const w=[],inks=new Set();L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
+  if(inks.size>F.cap)w.push(`${inks.size} inks used (${[...inks].join(", ")}) — ${F.l} allows ${F.cap}.`);
+  const co=d.fmt==="coconut"&&d.coco!=null?COCO[d.coco]:null;
+  if(co&&tot&&!inks.has(co.i))w.push(`Your Coconut is ${co.i} — the deck must include ${co.i} cards.`);
+  L.forEach(({c,q})=>{
+    const named=coconut4x(c),cap=named?4:F.max;
+    if(q>cap)w.push(`"${c.f}" ×${q} — max ${cap}${d.fmt==="coconut"&&!named?" (singleton)":""}.`);
+    if(d.fmt==="core"&&!c.core)w.push(`"${c.f}" is not Core legal.`)});
+  if(tot&&tot<F.min)w.push(`${F.min-tot} more card${F.min-tot===1?"":"s"} to reach ${F.min} — a legal deck needs at least ${F.min}.`);
+  return w;
+}
 /* Singleton has exactly two exceptions: the character your Coconut names, and
    any item that Coconut's own text calls out by name (Nick Wilde → Pawpsicle).
    Both cap at 4, so the offer in the guided build and the legality check here
@@ -5542,15 +5564,7 @@ function renderDeck(hostId){
         `<span>${esc(t)} <b>${n}</b></span>`).join("")}</div>`;
   }
 
-  const w=[],inks=new Set();L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
-  if(inks.size>F.cap)w.push(`${inks.size} inks used (${[...inks].join(", ")}) — ${F.l} allows ${F.cap}.`);
-  const co=d.fmt==="coconut"&&d.coco!=null?COCO[d.coco]:null;
-  if(co&&tot&&!inks.has(co.i))w.push(`Your Coconut is ${co.i} — the deck must include ${co.i} cards.`);
-  L.forEach(({c,q})=>{
-    const named=coconut4x(c),cap=named?4:F.max;
-    if(q>cap)w.push(`"${c.f}" ×${q} — max ${cap}${d.fmt==="coconut"&&!named?" (singleton)":""}.`);
-    if(d.fmt==="core"&&!c.core)w.push(`"${c.f}" is not Core legal.`)});
-  if(tot&&tot<F.min)w.push(`${F.min-tot} more card${F.min-tot===1?"":"s"} to reach ${F.min}.`);
+  const w=deckWarnings();
   const illegalN=L.filter(({c})=>illegalReason(c)).length;
   h+=`<div class="warns">${w.length?w.slice(0,8).map(x=>`<div class="wn">⚠ ${esc(x)}</div>`).join("")
       :(tot?`<div class="okm">✓ No rules issues.</div>`:"")}</div>
@@ -9728,7 +9742,7 @@ function renderBorrow(){
    as the QR encoder and the Supabase client: most visits to this page never
    touch it, so it isn't in the main bundle for everyone. */
 const REGSHEET_URL="/forms/deck-registration-sheet.pdf";
-const REGDEF={firstName:"",lastName:"",event:"",location:"",date:""};
+const REGDEF={firstName:"",lastName:"",event:"",location:"",date:"",warn:true};
 let REG=Object.assign({},REGDEF,load("fs3_regdef",{}),load("fs3_reg",{}));
 const PDFLIB_URL="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js";
 let pdfLibPromise=null;
@@ -9757,16 +9771,27 @@ async function buildRegSheet(){
   const font=await pdf.embedFont(StandardFonts.Helvetica);
   const bold=await pdf.embedFont(StandardFonts.HelveticaBold);
   const ink=rgb(0.06,0.09,0.16);
+  const red=rgb(0.72,0.04,0.06);
+  /* The standard fonts are WinAnsi-encoded, and pdf-lib THROWS on a character
+     outside that -- which would take the whole sheet down rather than drop one
+     glyph. Deck names are typed by hand and the warning lines quote card names
+     back, so everything drawn goes through here first. */
+  const safe=t=>String(t==null?"":t)
+    .replace(/[\u2018\u2019]/g,"'").replace(/[\u201C\u201D]/g,'"')
+    .replace(/[\u2012-\u2015]/g,"-").replace(/\u2026/g,"...")
+    .replace(/\u00d7/g,"x").replace(/[\u00a0\u2007\u202f]/g," ")
+    .replace(/[^\x20-\x7e\u00a1-\u00ff]/g,"");
   /* top = distance down from the top of the page, matching how every
      coordinate above was measured -- converted to PDF's bottom-up Y once,
      here, so nothing else has to do that math. */
   const put=(text,x,top,opts={})=>{
     if(text==null||text==="")return;
-    page.drawText(String(text),{x,y:H-top,size:opts.size||10,font:opts.font||font,color:ink});
+    page.drawText(safe(text),{x,y:H-top,size:opts.size||10,font:opts.font||font,
+      color:opts.color||ink});
   };
   const centerText=(text,cx,top,size,useFont)=>{
     if(text==null||text==="")return;
-    const s=String(text),w=(useFont||font).widthOfTextAtSize(s,size);
+    const s=safe(text),w=(useFont||font).widthOfTextAtSize(s,size);
     put(s,cx-w/2,top,{size,font:useFont});
   };
   put(REG.date,250,76.8);
@@ -9784,7 +9809,7 @@ async function buildRegSheet(){
      53.9 so the two line up. Long names shrink rather than run off the top
      of the strip. */
   const vertName=(text,anchorTop,stripTop)=>{
-    const s=String(text||"").trim();
+    const s=safe(text).trim();
     if(!s)return;
     let size=13;
     const room=anchorTop-stripTop-6;
@@ -9806,6 +9831,39 @@ async function buildRegSheet(){
     put(r.c.f,col===0?129:402,top,{size:9.2});
   });
   centerText(dtotal(),321.1,701.2,12,bold);
+  /* Rules reminders, in red, in the empty strip left of the judge's boxes --
+     x 66 to 300 is clear below the total-cards row (that printed label runs
+     from x 167 to x 303, so anything higher collides with it) and the judge's
+     boxes start at x 303, so the column below 708 is ours. Off by default only if you
+     turn it off: printing a half-finished list to fill in by hand is a real
+     thing people do, and it should not come out covered in red. */
+  if(REG.warn!==false){
+    const warns=deckWarnings();
+    if(warns.length){
+      const X=66,W=234,SZ=7.4,LEAD=8.6,LAST=786;
+      /* Greedy wrap against the real measured width -- a card name quoted back
+         into a warning is easily wider than this column on its own. */
+      const wrap=(t,f)=>{
+        const out=[];let line="";
+        safe(t).split(/\s+/).filter(Boolean).forEach(word=>{
+          const t2=line?line+" "+word:word;
+          if(f.widthOfTextAtSize(t2,SZ)<=W)line=t2;
+          else{if(line)out.push(line);line=word}});
+        if(line)out.push(line);
+        return out;
+      };
+      put("This deck is not tournament legal:",X,713,{size:8,font:bold,color:red});
+      let top=723,left=0;
+      warns.forEach(t=>{
+        if(top>LAST){left++;return}
+        wrap("- "+t,font).forEach(line=>{
+          if(top>LAST){left++;return}
+          put(line,X,top,{size:SZ,color:red});top+=LEAD});
+      });
+      if(left&&top<=LAST+LEAD)
+        put(`...and ${left} more — see the deck panel.`,X,Math.min(top,LAST),{size:SZ,color:red});
+    }
+  }
   const outBytes=await pdf.save();
   return outBytes;
 }
@@ -9847,6 +9905,10 @@ function renderRegSheet(){
       <label>Event<input id="rgEvent" value="${esc(REG.event)}"></label>
       <label>Location<input id="rgLoc" value="${esc(REG.location)}"></label>
       <label>Date<input type="date" id="rgDate" value="${esc(REG.date)}"></label>
+      <div class="bpick"><b>Rules reminders</b>
+        <label class="bchk"><input type="checkbox" id="rgWarn"${REG.warn===false?"":" checked"}>
+          Print what's wrong with this deck, in red at the foot of the sheet.
+          <i>Turn it off to print a half-built list and fill the rest in by hand.</i></label></div>
       <div class="bsave">
         <button class="btn go" id="rgDefault">Save this as my default</button>
         <span>${REG.saved?"Saved — future sheets start from this.":"These settings apply to this browser until you save them."}</span>
@@ -9861,6 +9923,8 @@ function renderRegSheet(){
     save("fs3_regdef",{...REG,saved:true});save("fs3_reg",REG);
     toast("Saved as your default");renderRegSheet()};
   const put2=(id,k)=>{const el=$(id);if(el)el.onchange=()=>{REG[k]=el.value;save("fs3_reg",REG)}};
+  {const cb=$("rgWarn");
+   if(cb)cb.onchange=()=>{REG.warn=cb.checked;save("fs3_reg",REG)}}
   put2("rgFirst","firstName");put2("rgLast","lastName");put2("rgEvent","event");
   put2("rgLoc","location");put2("rgDate","date");
 }
