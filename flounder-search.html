@@ -1973,6 +1973,36 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
    3. Franchise ran on --gold, which is only actually gold in dark mode. It
       runs on --amber instead, so the three hues stay distinct in both themes,
       which was the point of colouring them differently in the first place. */
+/* ---- the art switch leads ----
+   One wide primary control and two small ones beside it. Prominence by
+   hierarchy rather than by size: nothing here is bigger than it needs to be,
+   but you can tell at a glance which of the three the site is built around. */
+.artrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:stretch;
+  margin-top:8px}
+.swx.art{padding:9px 14px;gap:12px;border-width:2px}
+.swx.art .kn{width:52px;height:28px}
+.swx.art .kn i{width:24px;height:24px}
+.swx.art .swi svg{width:16px;height:16px}
+.swx.art.on .kn i{transform:translateX(24px)}
+.artlb{display:flex;flex-direction:column;gap:1px;min-width:0;text-align:left}
+.artlb b{font-size:14px;font-weight:800;color:var(--tx);line-height:1.2}
+.artlb span{font-size:11.5px;font-weight:600;color:var(--deep);line-height:1.3}
+/* Off, it says what you're missing rather than nothing at all. */
+.swx.art:not(.on) .artlb b{color:var(--deep)}
+/* Grid rather than a wrapping flex: the label owns the top line and the two
+   extras sit beside each other under it. As flex they stacked one per line,
+   which made a row of small controls as tall as the big one next to it and
+   undid the hierarchy the whole change is for. */
+.alsorow{display:grid;grid-template-columns:auto auto;gap:5px 6px;align-content:center;
+  padding-left:12px;border-left:1px solid var(--hairline)}
+.alsolbl{grid-column:1/-1;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--deep);line-height:1}
+.swx.wee{padding:4px 9px;gap:7px;min-height:32px}
+.swx.wee .kn{width:32px;height:18px}
+.swx.wee .kn i{width:14px;height:14px}
+.swx.wee .swi svg{width:10px;height:10px}
+.swx.wee.on .kn i{transform:translateX(14px)}
+.swx.wee .lb{font-size:11.5px}
 .toggles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch}
 .swx{display:flex;align-items:center;gap:10px;width:100%;min-height:42px;
   padding:6px 12px;border-radius:3px;
@@ -2052,6 +2082,19 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
   .swx .swi svg{width:11px;height:11px}
   .swx.on .kn i{transform:translateX(14px)}
   .swx .lb{font-size:11.5px}
+  /* The art switch keeps the full width of the phone — it is the feature —
+     and the two extras share one slim line under it. */
+  .artrow{grid-template-columns:1fr;gap:7px}
+  .alsorow{padding-left:0;border-left:0;gap:6px;
+    grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);align-items:center}
+  .alsolbl{grid-column:auto}
+  .swx.art{padding:8px 11px;gap:10px}
+  .swx.art .kn{width:44px;height:24px}
+  .swx.art .kn i{width:20px;height:20px}
+  .swx.art.on .kn i{transform:translateX(20px)}
+  .artlb b{font-size:13.5px}
+  .artlb span{font-size:11px}
+  .swx.wee{flex:1;min-height:34px}
 }
 /* a quick shimmy when you land on the search page, so the switch gets noticed */
 @keyframes swjig{0%,100%{transform:rotate(0) translateX(0)}
@@ -3776,18 +3819,24 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
        name, "unsaved", and Save, a long way from the deck panel they describe.
        All three moved inside the panel. Everything about a deck now lives in
        one box. -->
-  <div class="sfield" id="sf"><input id="q" type="text" placeholder="Try one of our special searches"></div>
-  <div class="srow toggles">
-    <!-- Drawn, not typed. An emoji is somebody else's picture at somebody
-         else's size and it renders differently on every platform; these are
-         three small SVGs that share one grid, one stroke weight and one set of
-         colours, and each one moves a little when its switch is on. -->
-    <button class="swx" id="tgTag" aria-pressed="false">
-      <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.6-.7 1.6-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z"/><circle class="sd sd1" cx="7.7" cy="11.5" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd2" cx="11" cy="7.9" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd3" cx="15.4" cy="8.9" r="1.05" fill="currentColor" stroke="none"/></svg></i></span><span class="lb">Art</span></button>
-    <button class="swx sto" id="tgSto" aria-pressed="false">
+  <div class="sfield" id="sf"><input id="q" type="text" placeholder="Describe a card — &ldquo;blue dog&rdquo;, &ldquo;castle at night&rdquo; — or type its name"></div>
+  <!-- ---- the one thing this site does that the others don't ----------------
+       Art search was sitting as one of three equal switches, which said it was
+       one of three equal features. It isn't: every other deck builder can
+       search a card's name and its rules text, and none of them can find
+       Stitch from "blue dog". So it leads — its own row, its own size, its own
+       sentence saying what it's for — and Franchise and Flavour sit under it
+       as the smaller extras they are. -->
+  <div class="artrow">
+    <button class="swx art" id="tgTag" aria-pressed="false">
+      <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.6-.7 1.6-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z"/><circle class="sd sd1" cx="7.7" cy="11.5" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd2" cx="11" cy="7.9" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd3" cx="15.4" cy="8.9" r="1.05" fill="currentColor" stroke="none"/></svg></i></span><span class="artlb"><b>Search the artwork</b><span id="tgTagSub">Type what you remember seeing, not the card name</span></span></button>
+    <div class="alsorow">
+      <span class="alsolbl">Also search</span>
+    <button class="swx sto wee" id="tgSto" aria-pressed="false">
       <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.2c2.6-.9 5-.9 7.4.6v12c-2.4-1.5-4.8-1.5-7.4-.6V5.2Z"/><path class="pg" d="M21 5.2c-2.6-.9-5-.9-7.4.6v12c2.4-1.5 4.8-1.5 7.4-.6V5.2Z"/><path d="M12 5.8v12.6"/></svg></i></span><span class="lb">Franchise</span></button>
-    <button class="swx flav" id="tgFlav" aria-pressed="false">
+    <button class="swx flav wee" id="tgFlav" aria-pressed="false">
       <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12.4c0 3.7-3.6 6.7-8 6.7-.9 0-1.8-.1-2.6-.35L4.6 21l1.1-3.5A6.4 6.4 0 0 1 4 12.4c0-3.7 3.6-6.7 8-6.7s8 3 8 6.7Z"/><path class="qm" d="M9.6 10.9c.9-.6 1.9.1 1.6 1.1-.2.7-1 .9-1.3 1.6"/><circle class="qd" cx="14.4" cy="12.1" r=".95" fill="currentColor" stroke="none"/></svg></i></span><span class="lb">Flavour</span></button>
+    </div>
   </div>
   <div class="srow">
     <button class="btn bad" id="clr">Clear all</button>
@@ -14690,6 +14739,13 @@ function drawToggles(){
   $("tgTag").classList.toggle("on",S.tagS);$("tgTag").setAttribute("aria-pressed",S.tagS);
   $("tgSto").classList.toggle("on",S.stoS);$("tgSto").setAttribute("aria-pressed",S.stoS);
   $("tgFlav").classList.toggle("on",S.flS);$("tgFlav").setAttribute("aria-pressed",S.flS);
+  /* The headline switch says what it is doing rather than just being lit —
+     off, it tells you what you have given up, which is the only honest way to
+     offer someone a way to turn off the reason they came. */
+  {const sub=$("tgTagSub");
+   if(sub)sub.textContent=S.tagS
+     ? "Type what you remember seeing, not the card name"
+     : "Off — searching names and rules text only";}
 }
 /* Replay an animation by yanking the class and forcing a reflow — without the
    reflow the browser coalesces remove+add and nothing plays the second time. */
