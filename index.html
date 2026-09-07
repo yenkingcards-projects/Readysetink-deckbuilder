@@ -3337,19 +3337,50 @@ body.loreon{overflow:hidden}
 .seatname{position:absolute;top:8px;left:0;right:0;text-align:center;
   font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
   opacity:.75;cursor:pointer;padding:4px}
-.seatnum{font-size:clamp(72px,19vh,180px);font-weight:900;line-height:.85;
-  font-variant-numeric:tabular-nums;text-shadow:0 4px 0 rgba(0,0,0,.28);
+/* The score's own face. There are no web fonts on this site by design, so
+   this is a system stack picked for its NUMERALS rather than a download:
+   SF Pro Display on Apple, Segoe UI Variable Display on Windows, Roboto
+   through system-ui on Android, and Arial Black as the floor — the same
+   family the logo already uses, so the fallback is still on brand.
+   The rest of what makes a big number look modern is not the family anyway:
+   lining tabular figures so the digits don't jump as they change, and
+   negative tracking, because display sizes need tighter spacing than the
+   metrics a face ships with. */
+.seatnum{font-family:"SF Pro Display","Segoe UI Variable Display","Helvetica Neue",
+    system-ui,-apple-system,"Arial Black",Arial,sans-serif;
+  font-size:clamp(76px,20vh,190px);font-weight:800;line-height:.82;
+  letter-spacing:-.035em;
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+  text-shadow:0 4px 0 rgba(0,0,0,.28);
   transition:transform .12s}
 .seatnum.seatpop{transform:scale(1.14)}
 /* Minus and plus at opposite ends of the seat, not a pair in the middle.
    These are pressed with a thumb, at speed, by someone looking at the table
    rather than the screen — two 80px circles ten pixels apart is a mis-tap
    waiting to happen, and a mis-tap here costs somebody the game. */
-.seatbtns{display:flex;justify-content:space-between;align-items:center;
-  width:100%;padding:0 clamp(14px,5vw,54px);margin-top:6px;
+/* Ben's call, 2026-09-07: closer together. The old note here argued for the
+   opposite — two big circles at opposite ends of the seat, because a mis-tap
+   costs somebody the game. That reasoning is answered by the half-seat tap
+   zones added above: the enormous targets are now the sides of the screen, so
+   these two can sit as a proper pair in the middle without being the only
+   thing you can hit. */
+.seatbtns{display:flex;justify-content:center;align-items:center;gap:clamp(18px,6vw,44px);
+  width:100%;margin-top:6px;
   position:absolute;left:0;right:0;bottom:clamp(10px,3vh,26px);
-  pointer-events:none}
+  pointer-events:none;z-index:3}
 .seatbtns .lorebtn{pointer-events:auto}
+/* Half a seat each, behind everything else in it. Sized to stop short of the
+   name at the top and the buttons at the bottom, so renaming a seat and
+   pressing full screen still work. */
+.seattap{position:absolute;top:clamp(44px,9vh,86px);bottom:clamp(72px,15vh,132px);
+  width:50%;border:0;background:none;padding:0;cursor:pointer;z-index:1;
+  -webkit-tap-highlight-color:transparent}
+.seattap.tapminus{left:0}
+.seattap.tapplus{right:0}
+.seattap:disabled{pointer-events:none}
+/* A breath of feedback so a tap on empty space still feels like a press. */
+.seattap:active{background:rgba(255,255,255,.07)}
 /* The running total of what you have just tapped in, under the score. It
    fades on its own once you stop — the point is to catch "did that go in?"
    at a glance mid-turn, not to be another number on the table. */
@@ -3368,12 +3399,26 @@ body.loreon{overflow:hidden}
 /* .lorebtn, not .lb — .lb was already the label inside every switch and every
    filter row, and a bare .lb rule in here turned all of them into 86px
    circles. Same reason .lorefish is not .fish: the aquarium already owns it. */
-.lorebtn{width:clamp(58px,12vh,86px);height:clamp(58px,12vh,86px);border-radius:50%;
-  border:2px solid rgba(255,255,255,.4);background:rgba(0,0,0,.28);color:#fff;
-  font-size:clamp(28px,6vh,42px);font-weight:900;line-height:1;cursor:pointer;
-  display:grid;place-items:center;transition:transform .08s,background .12s}
-.lorebtn:active{transform:scale(.9)}
-.lorebtn:hover{background:rgba(0,0,0,.5)}
+/* Glass: a translucent pane over the seat colour rather than a black disc on
+   top of it, with a blurred backdrop, a bright top edge where the light would
+   catch and a soft inner shadow at the foot. The seat's own colour shows
+   through, which is what makes it read as glass and not as a hole. */
+.lorebtn{width:clamp(66px,14vh,104px);height:clamp(66px,14vh,104px);border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);
+  background:linear-gradient(160deg,rgba(255,255,255,.34),rgba(255,255,255,.08) 46%,rgba(0,0,0,.16));
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.65),
+             inset 0 -8px 18px rgba(0,0,0,.22),
+             0 6px 18px rgba(0,0,0,.28);
+  color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45);
+  font-size:clamp(32px,7vh,50px);font-weight:700;line-height:1;cursor:pointer;
+  display:grid;place-items:center;
+  transition:transform .08s,box-shadow .12s,background .12s}
+@supports (backdrop-filter:blur(6px)){
+  .lorebtn{backdrop-filter:blur(7px) saturate(1.25);
+    background:linear-gradient(160deg,rgba(255,255,255,.26),rgba(255,255,255,.05) 46%,rgba(0,0,0,.12))}}
+.lorebtn:active{transform:scale(.92);
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.5),inset 0 6px 16px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25)}
+.lorebtn:hover{background:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.12) 46%,rgba(0,0,0,.14))}
 .lorebtn:disabled{opacity:.3;cursor:not-allowed}
 .seatwon{position:absolute;bottom:8px;left:0;right:0;text-align:center;
   font-size:12px;font-weight:900;letter-spacing:.08em}
@@ -3698,6 +3743,20 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;
   padding:11px 13px;margin-bottom:7px;cursor:pointer;min-height:52px}
 .settingsrow:hover{border-color:var(--acc)}
+/* Drawn icons, one grid and one stroke weight, instead of five emoji from
+   five different type designers at five different optical sizes. */
+.srico.srdraw{background:var(--carbon);display:grid;place-items:center;color:#fff}
+.srico.srdraw svg{width:19px;height:19px;display:block}
+/* The log, folded, at the foot of the panel. */
+.lslog{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;overflow:hidden}
+.lslog>summary{display:flex;align-items:center;gap:12px;padding:11px 13px;cursor:pointer;
+  list-style:none;min-height:52px}
+.lslog>summary::-webkit-details-marker{display:none}
+.lslog>summary::marker{content:"";font-size:0}
+.lslog>summary:hover{background:var(--platinum)}
+.lslog[open]>summary{border-bottom:1px solid var(--line2)}
+.lslogbody{padding:9px 11px 11px}
+.lslogbody .lorelog{margin:0}
 .srico{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--carbon);
   display:grid;place-items:center;font-size:17px;color:#fff}
 .srtxt{display:flex;flex-direction:column;gap:2px}
@@ -12777,6 +12836,14 @@ function renderLore(){
           <button class="seatname" data-rename="${i}" title="Tap to rename">${esc(p.name)}</button>
           <div class="seatnum" id="ln${i}" aria-live="polite" aria-atomic="true">${p.lore}</div>
           <div class="seatdelta" id="ld${i}" aria-hidden="true"></div>
+          <!-- The whole left half of a seat takes one off and the whole right
+               half adds one. A phone on a table between two people is pressed
+               with a thumb, at speed, by someone watching the board rather
+               than the screen — the biggest target you can offer is half the
+               seat. The visible buttons stay for anyone who wants something to
+               aim at, and for a mouse. -->
+          <button class="seattap tapminus" data-minus="${i}" tabindex="-1" aria-hidden="true"${LORE.locked?" disabled":""}></button>
+          <button class="seattap tapplus" data-plus="${i}" tabindex="-1" aria-hidden="true"${LORE.locked?" disabled":""}></button>
           <div class="seatbtns">
             <button class="lorebtn" data-minus="${i}" aria-label="${esc(p.name)} minus one lore"${LORE.locked?" disabled":""}>−</button>
             <button class="lorebtn" data-plus="${i}" aria-label="${esc(p.name)} plus one lore"${LORE.locked?" disabled":""}>+</button>
@@ -12850,7 +12917,12 @@ function wireLore(){
   {const j=$("loreFsJudge");if(j)j.onclick=judgeGo}
   $("loreFsGear").onclick=()=>openLoreSettings();
   $("loreFsBack").onclick=loreExitFS;
-  w.querySelectorAll("[data-fstoggle]").forEach(b=>b.onclick=loreEnterFS);
+  /* It is a toggle. It only ever called loreEnterFS, so pressing it a second
+     time re-entered a mode you were already in and there was no way back out
+     except the arrow that appears in full screen. */
+  w.querySelectorAll("[data-fstoggle]").forEach(b=>b.onclick=()=>{
+    if(document.body.classList.contains("lorefs"))loreExitFS();else loreEnterFS();
+  });
   stopChaos();
   LORE.players.slice(0,LORE.n).forEach((p,i)=>{
     if(p.colorMode!=="chaos")return;
@@ -12890,6 +12962,41 @@ document.addEventListener("fullscreenchange",()=>{
    without becoming a second number anyone has to read. Kept out of LORE
    entirely — it is about the last few seconds, not about the match, and
    nothing about it should survive a reload. */
+/* ---- the log records a QUEST, not a button press -------------------------
+   Questing for three used to write three separate "+1" lines, so a log of a
+   real game read as a wall of ones and you could not see what actually
+   happened. A burst of presses is one event: the entries accumulate here and
+   only become a log line once the seat has been quiet for LORELOG_IDLE, so
+   tapping 1-1-1 logs "+3" and 1x7 logs "+7".
+
+   Flushed early on anything that ends the burst for you — a win, opening the
+   settings where you would read the log, or leaving the page — because a
+   pending entry that never landed is worse than a noisy one. */
+const LORELOG_IDLE=3000;
+const LOREPEND={};
+function loreLogPending(i,d,to){
+  const cur=LOREPEND[i]||(LOREPEND[i]={d:0,to:to,t:null});
+  cur.d+=d;cur.to=to;
+  clearTimeout(cur.t);
+  cur.t=setTimeout(()=>loreLogFlush(i),LORELOG_IDLE);
+}
+function loreLogFlush(i){
+  const cur=LOREPEND[i];if(!cur)return;
+  clearTimeout(cur.t);
+  const d=cur.d,to=cur.to;
+  delete LOREPEND[i];
+  if(!d||!LORE)return;                 // a burst that cancelled itself out
+  LORE.loreLog=LORE.loreLog||[];
+  LORE.loreLog.push({t:Date.now(),g:LORE.game,s:i,d,to});
+  /* A long match is a few hundred entries at most; the cap is only here so
+     somebody who leaves the tracker open for a week doesn't fill storage. */
+  if(LORE.loreLog.length>800)LORE.loreLog.splice(0,LORE.loreLog.length-800);
+  loreSave();
+}
+const loreLogFlushAll=()=>Object.keys(LOREPEND).forEach(k=>loreLogFlush(+k));
+window.addEventListener("pagehide",loreLogFlushAll);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)loreLogFlushAll()});
+
 const LOREDELTA={};
 function loreBumpDelta(i,d){
   const el=$("ld"+i);if(!el)return;
@@ -12912,11 +13019,7 @@ function loreAdd(i,d,btn){
   /* Nothing to record when minus is pressed at zero — the score did not
      move, and a log full of "went down by 0" is a log nobody reads. */
   if(p.lore!==before){
-    LORE.loreLog=LORE.loreLog||[];
-    LORE.loreLog.push({t:Date.now(),g:LORE.game,s:i,d:p.lore-before,to:p.lore});
-    /* A long match is a few hundred entries at most; the cap is only here so
-       somebody who leaves the tracker open for a week doesn't fill storage. */
-    if(LORE.loreLog.length>800)LORE.loreLog.splice(0,LORE.loreLog.length-800);
+    loreLogPending(i,p.lore-before,p.lore);
     loreBumpDelta(i,p.lore-before);
   }
   loreSave();
@@ -12928,7 +13031,7 @@ function loreAdd(i,d,btn){
     const r=btn.getBoundingClientRect();
     fishworks(6,document.body,{x:r.left+r.width/2,y:r.top+r.height/2});
   }
-  if(p.lore>=loreWinTotalFor(i))loreVictory(i);
+  if(p.lore>=loreWinTotalFor(i)){loreLogFlushAll();loreVictory(i)}
 }
 
 /* ---- victory --------------------------------------------------------------
@@ -12961,12 +13064,27 @@ function loreVictory(i){
         <h1>🎉 ${loreWinTotalFor(0)} LORE</h1>
         <div class="vicscores"><div class="vicscore winner">
           <span class="vsnum" data-count="${p.lore}">0</span></div></div>
-        <div class="vicbtns"><button class="lbtn go" data-keep="1">Keep going</button></div>
+        <div class="vicwho">You reached ${loreWinTotalFor(0)} lore</div>
+        <div class="vicbtns">
+          <button class="lbtn go" data-solozero="1">Reset lore to 0</button>
+          <button class="lbtn" data-solonew="1">Start a new match</button>
+          <button class="lbtn" data-keep="1">Keep counting</button>
+        </div>
       </div>
     </div>`;
     fishworks(Math.min(60,p.lore));
     animateVicNums(host);
+    /* Three things anyone actually does after hitting the total: play the
+       same deck again, set up something different, or carry on counting past
+       20 because the game is not over yet. */
     host.querySelector("[data-keep]").onclick=()=>{host.innerHTML=""};
+    host.querySelector("[data-solozero]").onclick=()=>{
+      loreLogFlushAll();
+      LORE.players.forEach(x=>x.lore=0);
+      LORE.game++;loreSave();host.innerHTML="";renderLore();
+      toast("Lore reset — same setup");
+    };
+    host.querySelector("[data-solonew]").onclick=()=>{host.innerHTML="";loreNewMatchPrompt()};
     return;
   }
   LORE.gameLog.push({game:LORE.game,seat:i});
@@ -13195,6 +13313,7 @@ function loreLogHtml(){
 let SETTINGS_OPEN=false;
 function openLoreSettings(){
   SETTINGS_OPEN=true;
+  loreLogFlushAll();          // you are about to read it
   const fmtLabel=(LORE_FORMATS.find(f=>f[0]===LORE.format)||[,"Core"])[1];
   const modeLabel=(LORE_MODES.find(m=>m[0]===LORE.mode)||[,"Casual"])[1];
   $("settingshost").innerHTML=`<div class="jpanel" id="loresettings">
@@ -13210,15 +13329,10 @@ function openLoreSettings(){
         <div class="setupreadout" style="margin-bottom:8px">${
           LORE.players.slice(0,LORE.n).map(p=>esc(p.name)+" "+p.lore).join(" · ")}${
           (LORE.gameLog||[]).length?" · game "+LORE.game:""}</div>
-        ${loreLogHtml()}
-        ${(LORE.loreLog||[]).length?`<button class="settingsrow" id="lsClearLog" style="margin-top:7px">
-          <span class="srico">🧹</span>
-          <span class="srtxt"><b>Clear the log</b><span>Scores are left exactly as they are.</span></span>
-        </button>`:""}
       </div>
       <div class="jgroup"><h3>Special rules</h3>
         <button class="settingsrow" id="lsDuck">
-          <span class="srico">🦆</span>
+          <span class="srico srdraw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.6 5.2a2.6 2.6 0 1 0-2.3 3.9h.6"/><circle cx="16.3" cy="4.9" r=".9" fill="currentColor" stroke="none"/><path d="M18 5.4h2.6l-2 1.9"/><path d="M13.9 9.1c-3.6.3-6.4 2.3-6.4 5 0 1.4.8 2.7 2 3.5"/><path d="M4 16.4c1.4 2.6 4.4 3.9 8 3.9 4.7 0 8.4-2.6 8.4-6.1 0-1.2-.4-2.2-1.1-3.1"/></svg></span>
           <span class="srtxt"><b>Donald Duck – Flustered Sorcerer</b>
             <span>Whoever's opponent has this in play needs 25 lore to win instead of 20.</span></span>
         </button>
@@ -13233,15 +13347,32 @@ function openLoreSettings(){
       </div>
       <div class="jgroup"><h3>Players</h3>
         <button class="settingsrow" id="lsPlayers">
-          <span class="srico">👥</span>
+          <span class="srico srdraw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.4" r="2.9"/><path d="M3.6 19.2c.5-2.9 2.8-4.7 5.4-4.7s4.9 1.8 5.4 4.7"/><path d="M16.4 6.2a2.9 2.9 0 0 1 0 5.5"/><path d="M17.6 14.9c1.7.6 2.9 2.2 3.2 4.3"/></svg></span>
           <span class="srtxt"><b>${LORE.n===1?"Solo":LORE.n+" players"}</b><span>Tap to change how many are sitting at the table.</span></span>
         </button>
       </div>
+      <!-- Ben, 2026-09-07: the log is reference, not a setting. It was the
+           first thing in this panel and it is a scrolling list, so everything
+           you actually came here to change sat below it. Last, and folded. -->
       <div class="jgroup"><h3>Match</h3>
         <button class="settingsrow" id="lsNewMatch">
-          <span class="srico">🔄</span>
+          <span class="srico srdraw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.4 12a8.4 8.4 0 1 1-2.6-6.1"/><path d="M20.6 4.3v4.4h-4.4"/></svg></span>
           <span class="srtxt"><b>New match / change setup</b><span>Resets the board and reruns the setup wizard.</span></span>
         </button>
+      </div>
+      <div class="jgroup">
+        <details class="lslog" id="lsLogWrap">
+          <summary><span class="srico srdraw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.6h11.4a2 2 0 0 1 2 2v12.8H7a2 2 0 0 1-2-2Z"/><path d="M8.4 8.6h6.6"/><path d="M8.4 12h6.6"/><path d="M8.4 15.4h4"/></svg></span>
+            <span class="srtxt"><b>Lore log</b><span>${
+              (LORE.loreLog||[]).length?(LORE.loreLog.length+" entr"+(LORE.loreLog.length===1?"y":"ies")+" this match"):"Nothing recorded yet"}</span></span></summary>
+          <div class="lslogbody">
+            ${loreLogHtml()}
+            ${(LORE.loreLog||[]).length?`<button class="settingsrow" id="lsClearLog" style="margin-top:7px">
+              <span class="srico srdraw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.6 3.6 9.2 9"/><path d="M16.6 5.6 11.2 11"/><path d="m13 7.6 3.4 3.4"/><path d="M14.7 12.2 9.6 20.4H5.2c-.9-2.6-.4-5.2 1.5-7.1l2.4-2.4Z"/><path d="M8.2 14.6 6.5 20.4"/><path d="M11.3 15.1 10.6 20.4"/></svg></span>
+              <span class="srtxt"><b>Clear the log</b><span>Scores are left exactly as they are.</span></span>
+            </button>`:""}
+          </div>
+        </details>
       </div>
     </div>
   </div>`;
@@ -13282,10 +13413,15 @@ function openLoreSettings(){
     }else if(v==="random")LORE.players[i].colorHex=randHue();
     else delete LORE.players[i].colorHex;
     loreSave();renderLore();});
-  $("lsNewMatch").onclick=async()=>{
-    if(!await confirmBox("New match","This resets everyone's lore and game wins and reruns the setup wizard.","Start new match",true))return;
-    closeLoreSettings();
-    LORE.needsSetup=true;loreSave();renderLore();};
+  $("lsNewMatch").onclick=loreNewMatchPrompt;
+}
+/* Shared by the Settings row and the solo victory screen, so the two can't
+   drift into two different ideas of what "new match" resets. */
+async function loreNewMatchPrompt(){
+  if(!await confirmBox("New match","This resets everyone's lore and game wins and reruns the setup wizard.","Start new match",true))return;
+  loreLogFlushAll();
+  closeLoreSettings();
+  LORE.needsSetup=true;loreSave();renderLore();
 }
 function closeLoreSettings(){
   SETTINGS_OPEN=false;
