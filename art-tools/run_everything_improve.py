@@ -25,6 +25,15 @@ Usage:
 import argparse, json, os, subprocess, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "art-tools"))
+# The one slugify that decides folder names, imported rather than copied.
+# This file used to keep its own, and the two disagreed on apostrophes:
+# tag_art turns "Ursula's Return" into "ursula-s-return" (the folder that
+# actually exists), while the copy here produced "ursulas-return". So this
+# script looked for a manifest that was never going to be there and logged
+# "not downloaded yet" for four sets -- 475 cards that no improve run has
+# ever touched. Every set name with an apostrophe or a colon was affected.
+from tag_art import slugify  # noqa: E402
 DB_PATH = os.path.join(ROOT, "card-db.json")
 LOG_PATH = os.path.join(ROOT, "art-tools", "overnight-run.log")
 
@@ -34,20 +43,6 @@ def log(msg):
     print(line, flush=True)
     with open(LOG_PATH, 'a') as f:
         f.write(line + "\n")
-
-
-def slugify(name):
-    s = name.lower().strip()
-    out = []
-    for ch in s:
-        if ch.isalnum():
-            out.append(ch)
-        elif ch in (" ", "-", "_"):
-            out.append("-")
-    slug = "".join(out)
-    while "--" in slug:
-        slug = slug.replace("--", "-")
-    return slug.strip("-")
 
 
 def run(cmd, step_name):
@@ -115,10 +110,13 @@ def main():
             log("  [1/4] improve pass (adding new tags, keeping existing)...")
             ok_tag = run([sys.executable, "art-tools/tag_art.py",
                           "--set", name, "--model", args.model, "--improve"], "improve")
-            if not ok_tag:
-                results.append((name, "FAILED at improve pass"))
-                continue
 
+            # Deliberately NOT `continue` on failure. The tagger writes its
+            # progress every five cards, so a pass that died at card 180 of 204
+            # has 180 cards' worth of work sitting on disk -- half an hour of
+            # it. Skipping the merge threw all of that away and reported the
+            # set as producing nothing. Merge what there is, then say the pass
+            # was incomplete.
             out_path = os.path.join(ROOT, "art-tools", "set-outputs", f"{slug}-art-tags.json")
             log("  [2/4] repairing leaked JSON syntax in the raw output...")
             if os.path.exists(out_path):
@@ -127,14 +125,20 @@ def main():
             log("  [3/4] merging improved tags into art-tags.json...")
             if os.path.exists(out_path):
                 run([sys.executable, "art-tools/merge_art_tags.py",
-                     "--input", f"{slug}-art-tags.json", "--overwrite-ai"], "merge")
+                     "--input", f"{slug}-art-tags.json", "--append"], "merge")
 
             log("  [4/4] cleaning slop out of art-tags.json...")
             run([sys.executable, "art-tools/fix_leaked_json.py", "art-tags.json"], "fix-leaks-master")
             run([sys.executable, "art-tools/clean_slop.py"], "clean")
 
-            log(f"  DONE: {name}")
-            results.append((name, "done"))
+            if ok_tag:
+                log(f"  DONE: {name}")
+                results.append((name, "done"))
+            else:
+                log(f"  PARTIAL: {name} -- the improve pass stopped early, but "
+                    f"everything it had finished has been merged. Re-run to "
+                    f"pick up the rest.")
+                results.append((name, "partial (merged what finished)"))
     except KeyboardInterrupt:
         log("Interrupted by user -- stopping. Re-run this same command later to pick up "
             "where it left off (--improve and clean_slop are both safe to re-run).")

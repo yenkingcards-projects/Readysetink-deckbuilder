@@ -5,12 +5,34 @@ every card, re-applies the same "is this actually a real tag" filter that
 tag_art.py uses on brand-new output, so junk that got merged in before that
 filter existed (or slipped past it) gets cleaned out of old entries too.
 
+Repairs, in every card's "a" list:
+  - a tag the model glued together with underscores ("caribou_antlers")
+    -- the underscores become spaces
+  - a tag holding several tags behind pipes ("falling water|rocks") --
+    split into separate tags
+  - a tag with a stray non-ASCII byte and whatever letters got welded onto
+    it ("monster teeth\u0192s", "red bow\u012b") -- the garbage is cut off
+  - a harmless parenthetical aside ("pale skin tone (humanoid)") -- the
+    aside is dropped, the tag kept
+  - stray leading/trailing punctuation ("dynamic pose,", "-shaped gem")
+
 Removes, from every card's "a" list:
   - anything containing a digit (card-frame slop: cost, stats, collector
     number, dimensions -- or a repetition-loop artifact like "scimitar1",
     "scimitar2", ...)
   - anything that reads like the model's own leaked reasoning
-    ("i need to...", "the user...", "as an ai", etc.)
+    ("i need to...", "the user...", "as an ai", etc.), including leaked
+    fragments of its own prompt ("(fixed vocabulary) and")
+  - anything with a question mark in it -- the model hedging a guess
+    ("bearded man lookalike?") is not a tag anyone would ever search for
+  - anything whose parenthetical takes the tag back ("bearded face look
+    (not applicable)", "scent of adventure (implied)")
+  - anything that is just a "t" id the card ALREADY carries in "t"
+    ("midshot", "solo") -- it is already searchable, and in "a" it only
+    duplicates. A "t" word the card does NOT carry is left alone: "bird" on
+    Owl - Pirate Lookout is a real tag that happens to collide with a
+    vocabulary id, and dropping it would lose the only way to find the card
+  - anything left that is pure filler ("detail", "image", "and")
   - anything longer than 5 words (a real tag is a short word/phrase, never
     a sentence)
   - exact duplicates (case-insensitive)
@@ -36,11 +58,69 @@ except Exception:
     ALL_T_IDS = None  # if this ever fails, we just skip the "t" cleanup
 
 JUNK_MARKERS = ("i need", "i am", "i should", "i will", "the user",
-                "instructions", "card name", "card title", "as an ai")
+                "instructions", "card name", "card title", "as an ai",
+                "vocabulary", "free-text", "free text", "keyword")
+
+# a parenthetical saying one of these is the model retracting the tag it just
+# wrote, so the whole tag goes -- unlike a plain aside, which is just trimmed
+RETRACTIONS = ("no", "not", "n/a", "na", "none", "implied", "maybe", "unclear",
+               "unsure", "unknown", "no count", "not applicable", "possibly")
+
+# what's left after repair is sometimes a word carrying no picture at all
+FILLER_ONLY = {"detail", "details", "piece", "pieces", "element", "elements",
+               "image", "images", "card", "cards", "picture", "art", "artwork",
+               "scene", "style", "look", "thing", "item", "object", "area",
+               "texture", "pattern", "design", "effect", "feature", "features",
+               "character", "figure", "shape", "color", "colour", "colors",
+               "unknown", "none", "other", "others", "misc", "various",
+               "and", "or", "the", "a", "an", "of", "in", "on", "with"}
+
+SMART = {"\u2019": "'", "\u2018": "'", "\u201c": "", "\u201d": "",
+         "\u2013": "-", "\u2014": "-", "\u2026": ""}
 
 
-def is_real_tag(word):
+def repair_tag(word):
+    """Undo the mechanical damage the tagger does to an otherwise fine tag.
+
+    Returns a list, because one damaged string can hold several real tags.
+    Returns [] when the damage means there was never a tag there.
+    """
+    for bad, good in SMART.items():
+        word = word.replace(bad, good)
+    # a stray non-ASCII byte means the model lost the plot mid-tag: keep what
+    # came before it (plus any letters welded on after it) and drop the rest,
+    # rather than splicing the two sides into one Frankenstein tag
+    word = re.split(r"[^\x00-\x7f]+[A-Za-z]*", word)[0]
+    word = word.replace("_", " ").replace("*", " ")
+
+    out = []
+    for part in word.split("|"):
+        # "(not applicable)" retracts the tag; "(humanoid)" is just an aside
+        retracted = False
+        for aside in re.findall(r"\(([^)]*)\)", part):
+            if aside.strip().lower().strip(".!?") in RETRACTIONS:
+                retracted = True
+        if retracted:
+            continue
+        part = re.sub(r"\([^)]*\)", " ", part)
+        part = re.sub(r"[()]", " ", part)
+        part = re.sub(r"\s+", " ", part).strip(" \t,;:.$/\\-")
+        part = re.sub(r"\s+", " ", part).strip()
+        if part:
+            out.append(part)
+    return out
+
+
+def is_real_tag(word, already_tagged=()):
     if not word:
+        return False
+    if "?" in word:
+        return False
+    if not any(ch.isalpha() for ch in word):
+        return False
+    if word in FILLER_ONLY:
+        return False
+    if word in already_tagged:
         return False
     if len(word.split()) > 5:
         return False
@@ -55,9 +135,13 @@ def clean_card(entry):
     changed = False
 
     a = entry.get("a", [])
-    a_norm = [str(w).strip().lower() for w in a if str(w).strip()]
+    a_norm = []
+    for w in a:
+        for part in repair_tag(str(w).strip().lower()):
+            a_norm.append(part)
     a_deduped = list(dict.fromkeys(a_norm))
-    a_filtered = [w for w in a_deduped if is_real_tag(w)]
+    already = {str(x).strip().lower() for x in entry.get("t", [])}
+    a_filtered = [w for w in a_deduped if is_real_tag(w, already)]
     a_capped = a_filtered[:60]
 
     # how many original entries didn't survive (dropped as slop/dupe/overcap)

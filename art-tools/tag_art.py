@@ -304,6 +304,35 @@ def main():
 
     if args.improve:
         todo = list(manifest.items())  # every card, not just untagged ones
+        # What the model gets shown as "already known" has to be art-tags.json,
+        # not this set's output file. The set outputs are snapshots of whichever
+        # pass last wrote them; the master is everything -- every earlier run,
+        # every merge, and Ben's own hand-written tags. Seeding from the set
+        # output meant a card that is richly tagged in master but thin here got
+        # re-tagged from scratch as though nothing were known about it, and the
+        # model never saw the hand tags it was supposed to be building on. Union
+        # of the two, master first, so improving is always additive.
+        master_seed = {}
+        master_path = os.path.join(ROOT, "art-tags.json")
+        if os.path.exists(master_path):
+            with open(master_path, encoding='utf-8') as f:
+                master_seed = json.load(f).get('cards', {})
+        seeded = 0
+        for _fn, _key in todo:
+            m = master_seed.get(_key)
+            if not m:
+                continue
+            cur = result['cards'].get(_key, {"t": [], "a": []})
+            merged = {
+                "t": list(dict.fromkeys(list(m.get('t', [])) + list(cur.get('t', [])))),
+                "a": list(dict.fromkeys(list(m.get('a', [])) + list(cur.get('a', [])))),
+            }
+            if merged != cur:
+                seeded += 1
+            result['cards'][_key] = merged
+        if seeded:
+            print(f"Seeded {seeded} card(s) from art-tags.json, so the model builds on "
+                  f"what's already known rather than starting over.")
         print(f"Improving {len(todo)}/{len(manifest)} cards with {args.model} via {args.host} "
               f"(existing tags are kept, only new ones are added)")
     else:
@@ -316,8 +345,17 @@ def main():
         path = os.path.join(in_dir, fname)
         existing = result['cards'].get(key, {"t": [], "a": []}) if args.improve else None
         try:
-            if args.improve and existing['a']:
-                prompt = PROMPT + IMPROVE_PROMPT_SUFFIX.format(
+            if args.improve:
+                # A card with nothing known about it yet still belongs in
+                # improve mode -- it just gets the plain prompt, because there
+                # is nothing to tell the model not to repeat. It used to fall
+                # through to the "first tagging" branch below instead, which
+                # left `added` as None and blew the whole run up on
+                # `added_total += added` the moment the pass reached a card
+                # that wasn't already in the set output. That one line is why
+                # ten of eleven sets died after running for half an hour each.
+                partial = False
+                prompt = PROMPT if not existing['a'] else PROMPT + IMPROVE_PROMPT_SUFFIX.format(
                     existing_t=json.dumps(existing['t']), existing_a=json.dumps(existing['a']))
                 raw = call_ollama(args.host, args.model, path, prompt=prompt)
                 new_tags = parse_model_json(raw)
@@ -331,26 +369,29 @@ def main():
                 raw = call_ollama(args.host, args.model, path)
                 tags = parse_model_json(raw)
                 partial = tags.pop('_partial', False)
-                added = None
+                added = 0
+
+            # Bookkeeping lives inside the try on purpose. Anything that can
+            # throw between here and the next card -- a shape the model got
+            # wrong, a bad write -- costs one card, never the run.
+            result['cards'][key] = tags
+            preview = ', '.join(tags['a'][:4])
+            if args.improve:
+                added_total += added
+                note = f"  (+{added} new)"
+            elif partial:
+                note = "  (partial -- response got cut off, kept what completed)"
+            else:
+                note = ""
+            print(f"  [{i}/{len(todo)}] {key}: t={tags['t']} a=[{preview}...]{note}")
+
+            if i % 5 == 0:
+                with open(out_path, 'w') as f:
+                    json.dump(result, f, indent=1, ensure_ascii=False)
         except Exception as e:
             print(f"  [{i}/{len(todo)}] FAILED {key}: {e}", file=sys.stderr)
             fail_count += 1
             continue
-
-        result['cards'][key] = tags
-        preview = ', '.join(tags['a'][:4])
-        if args.improve:
-            added_total += added
-            note = f"  (+{added} new)"
-        elif partial:
-            note = "  (partial -- response got cut off, kept what completed)"
-        else:
-            note = ""
-        print(f"  [{i}/{len(todo)}] {key}: t={tags['t']} a=[{preview}...]{note}")
-
-        if i % 5 == 0:
-            with open(out_path, 'w') as f:
-                json.dump(result, f, indent=1, ensure_ascii=False)
 
     with open(out_path, 'w') as f:
         json.dump(result, f, indent=1, ensure_ascii=False)

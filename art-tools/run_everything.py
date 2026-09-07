@@ -26,6 +26,12 @@ at the end.
 import argparse, json, os, subprocess, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "art-tools"))
+# Shared with the tagger rather than copied -- the copy that used to live here
+# disagreed with it on apostrophes ("ursulas-return" vs the real folder,
+# "ursula-s-return"), so every set with an apostrophe or colon in its name
+# built the wrong path and its output was never merged.
+from tag_art import slugify  # noqa: E402
 DB_PATH = os.path.join(ROOT, "card-db.json")
 LOG_PATH = os.path.join(ROOT, "art-tools", "overnight-run.log")
 
@@ -35,20 +41,6 @@ def log(msg):
     print(line, flush=True)
     with open(LOG_PATH, 'a') as f:
         f.write(line + "\n")
-
-
-def slugify(name):
-    s = name.lower().strip()
-    out = []
-    for ch in s:
-        if ch.isalnum():
-            out.append(ch)
-        elif ch in (" ", "-", "_"):
-            out.append("-")
-    slug = "".join(out)
-    while "--" in slug:
-        slug = slug.replace("--", "-")
-    return slug.strip("-")
 
 
 def run(cmd, step_name):

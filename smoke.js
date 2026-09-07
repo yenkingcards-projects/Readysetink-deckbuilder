@@ -33,11 +33,13 @@ await p.click('[data-tour="end"]');await p.waitForTimeout(300);
 ok(await p.evaluate(()=>document.querySelectorAll("#grid .c").length>0),"cards render");
 
 /* Every tab and every Other page, looking only for a crash. */
-for(const t of ["tDeck","tSearch","tColl","tDecks","tMeta","tOther"]){
+/* tMeta was retired — Recommended decks lives in Other now, and is covered by
+   the "meta" entry in the Other-page loop below. */
+for(const t of ["tDeck","tSearch","tColl","tDecks","tOther"]){
   await p.click("#"+t);await p.waitForTimeout(450);
   ok(await p.evaluate(t=>document.querySelector("main .view.on")!==null,t),t+" opens");
 }
-for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:ability","hex","cred","lore"]){
+for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:ability","hex","cred","lore","meta"]){
   /* Setting the hash and reloading, not goto()-ing to a hash-only-different
      URL — a fragment-only navigation is same-document in Chromium and never
      re-runs the boot script, so BOOTHASH (read once at top level) would stay

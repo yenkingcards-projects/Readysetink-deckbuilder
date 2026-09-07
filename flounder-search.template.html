@@ -160,17 +160,11 @@ body.dark .cfm,body.dark .modal{background:var(--surface)}
 /* Matches the light theme's .38. Dark mode needs a touch more alpha to read at
    all against the slate field, but not so much that an empty box looks full. */
 body.dark #q::placeholder,body.dark .sfield input::placeholder{color:var(--deep);opacity:.45}
-/* The art/franchise switches dim their own label to signal "off". That dimming
-   was tuned against a white page; on a dark one it pushed the text under the
-   bar, so the label keeps full strength here and "off" is carried by the knob
-   and the border instead. */
 /* Native form controls don't inherit the theme — a select left alone renders
    its own dark text on the OS chrome and disappears here. */
 body.dark select,body.dark input,body.dark textarea,body.dark option{
   background:var(--surface);color:var(--tx);border-color:var(--line)}
 body.dark input[type=file]{color:var(--tx)}
-body.dark .swx .lb{opacity:1;filter:none}
-body.dark .swx.on .lb{color:var(--carbon)}
 /* Printing is always on white paper, whatever the screen is doing. */
 @media print{body.dark{--surface:#fff;--tx:#111;--platinum:#fff;--deep:#555}}
 
@@ -314,15 +308,34 @@ body.nocoll .collonly{display:none!important}
 
 
 /* ---- collection rows in the card modal ---- */
+/* ---- in my collection ----
+   Each row is one printing with a Normal and a Foil counter. It used to be a
+   wrapping flex row with the two counters as bare −/number/+ runs, so on a
+   narrow modal the Foil group wrapped under the Normal one and you could no
+   longer tell which count belonged to which word. The counters are now fixed
+   little steppers on a grid: the printing takes the space that's left, the two
+   steppers keep their size, and a row that has to wrap wraps as two whole
+   steppers rather than breaking one in half. */
 .mcoll{margin-top:12px;background:var(--canvas-soft);border:1px solid var(--hairline);
-  box-shadow:var(--bevel-in);border-radius:2px;padding:9px 11px}
-.mcoll>b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;
-  color:var(--deep);margin-bottom:6px}
+  box-shadow:var(--bevel-in);border-radius:2px;padding:10px 11px}
+.mcoll>b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;
+  font-weight:800;color:var(--deep);margin-bottom:7px}
 .mcr{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--surface);
-  border:1px solid var(--line);border-radius:2px;padding:5px 8px;margin-bottom:4px}
+  border:1px solid var(--line);border-radius:2px;padding:6px 9px;margin-bottom:5px}
 .mcr:last-child{margin-bottom:0}
-.mcn{flex:1;display:flex;align-items:center;color:var(--tx);min-width:150px}
-.mcn i{font-style:normal;color:var(--deep);margin-left:5px}
+.mcn{flex:1 1 150px;display:flex;align-items:center;color:var(--tx);min-width:0;
+  font-size:12.5px;font-weight:700}
+.mcn i{font-style:normal;font-weight:600;color:var(--deep);margin-left:5px}
+.mcr .cq{display:grid;grid-template-columns:auto 26px 22px 26px;align-items:center;gap:0;
+  flex:none;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--canvas-soft)}
+.mcr .cq em{font-style:normal;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--deep);padding:0 7px}
+.mcr .cq button{height:24px;border:none;border-left:1px solid var(--line);
+  background:var(--surface);color:var(--tx);font-size:13px;font-weight:800;line-height:1;cursor:pointer}
+.mcr .cq button:hover{background:var(--platinum)}
+.mcr .cq b{height:24px;display:grid;place-items:center;font-size:12.5px;font-weight:800;
+  border-left:1px solid var(--line);background:var(--surface);
+  font-variant-numeric:tabular-nums}
 
 
 /* ---- csv import ---- */
@@ -504,7 +517,10 @@ header{display:flex;align-items:center;gap:14px;padding:7px 12px;background:var(
   background-size:4px 4px;
   border-bottom:2px solid var(--chrome);
   position:sticky;top:0;z-index:60;flex-wrap:wrap;min-height:34px}
-.logo{display:flex;align-items:baseline;gap:9px;min-width:0}
+.logo{display:flex;align-items:baseline;gap:9px;min-width:0;
+  background:none;border:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.logo:hover b{text-decoration:underline;text-underline-offset:3px}
+.logo:focus-visible{outline:2px solid var(--amberc);outline-offset:3px}
 .logo .f{font-size:17px;animation:bob 3.6s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-4px) rotate(5deg)}}
 /* the racetrack logo pill — one of the only round things in the system */
@@ -552,10 +568,24 @@ nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
   border:1px solid var(--chrome);border-top:none;box-shadow:var(--bevel);
   border-radius:0 0 6px 6px;color:var(--tx)}
 /* Section header strip — silkscreened legend over each module. */
-.sec2{background:var(--canvas-soft);color:var(--tx)!important;border:1px solid var(--chrome);
+.sec2{background:var(--canvas-soft);color:var(--tx);border:1px solid var(--chrome);
   box-shadow:var(--bevel);padding:5px 10px;margin:16px 0 8px;border-radius:0;
   font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
 .sec2::before{content:"\2261  ";opacity:.6}
+/* ---- the dividers in the Other menu ----
+   These name the sections of the menu — "Mini games" and so on — and they were
+   the same weight and nearly the same colour as the tile headings underneath
+   them, so the menu read as one long undifferentiated list and you couldn't
+   see where one group ended and the next began. A section heading has to be
+   more contrasted than the things it contains, not the same: dark ink on the
+   accent bar, a rule under it, and the whole strip is now clearly a label
+   rather than another card. */
+.ogh.sec2{background:var(--carbon);color:#fff;border-color:var(--carbon);
+  border-left:4px solid var(--amberc);letter-spacing:.13em;font-weight:800;
+  padding:7px 12px;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.ogh.sec2::before{opacity:.55}
+body.dark .ogh.sec2{background:var(--platinum);color:var(--tx);border-color:var(--hairline);
+  border-left-color:var(--amberc)}
 
 main{padding:12px 12px 32px;max-width:1800px;margin:0 auto}
 .view{display:none}.view.on{display:block}
@@ -1143,8 +1173,18 @@ body.fffaux #bub,body.fffaux .sitefoot{display:none!important}
   animation:tbub 9s linear infinite}
 @keyframes tbub{to{background-position:0 -420px,0 -520px}}
 /* ===== clicker ========================================================== */
+.clcombo{margin-top:10px;padding:6px 12px;border-radius:2px;text-align:center;
+  background:var(--amberc);color:var(--carbon);font-weight:900;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;animation:clpulse .5s ease-in-out infinite alternate}
+@keyframes clpulse{from{transform:scale(1)}to{transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.clcombo{animation:none}}
 .clickwrap{display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+/* touch-action here as well as in JS, so the browser knows before the first
+   tap rather than after. user-select and the tap highlight are what stop rapid
+   tapping selecting the image and flashing a grey box over it. */
 .clickcard{position:relative;padding:0;border:none;background:none;line-height:0;
+  touch-action:manipulation;user-select:none;-webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;
   border-radius:2px;overflow:visible;transition:transform .09s}
 .clickcard img{width:min(320px,70vw);border-radius:2px;display:block;
   box-shadow:0 20px 50px -18px #000}
@@ -1421,7 +1461,9 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 /* On a grid tile the layer covers the art only, not the quantity bar under it,
    and it rides the same rotation a hovered location gets. */
 .c .syml{top:0;left:0;right:0;bottom:auto;aspect-ratio:674/940;z-index:6}
-.c.loc:hover .syml{transform:rotate(90deg) scale(1.95);transition-delay:.5s}
+@media (hover:hover) and (pointer:fine){
+  .c.loc:hover .syml{transform:rotate(90deg) scale(1.95);transition-delay:.5s}
+}
 @keyframes sympulse{0%,100%{box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 18px 5px rgba(255,255,255,.6)}
   50%{box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 30px 11px rgba(255,255,255,.95)}}
 @media(prefers-reduced-motion:reduce){.sym{animation:none}}
@@ -1499,8 +1541,13 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .dbal b{color:var(--tx)!important;font-size:2rem;font-weight:800;color:var(--gold);line-height:1}
 .dbal span{font-size:12.8px;color:var(--deep)}
 .dbal i{flex:1 0 100%;font-style:normal;font-size:12px;color:var(--deep);margin-top:4px}
-h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--link);
-  font-weight:800;margin:22px 0 9px}
+/* This rule had font-size and text-transform declared twice, the second of
+   each quietly overriding the first, and its colour never applied at all —
+   .sec2 above sets color with !important, so var(--link) here lost every
+   time. Cleaned up, and the !important removed from the other rule so a
+   heading can actually be styled. */
+h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
+  letter-spacing:.11em;font-weight:800;margin:22px 0 9px}
 .secs{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:11px}
 .sec3{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px 16px;
   display:flex;flex-direction:column}
@@ -1519,7 +1566,14 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .ach .ad{margin-left:auto;font-size:12.16px;font-weight:800;color:var(--gold);white-space:nowrap}
 /* ===== guess the card =================================================== */
 .gwrap{display:grid;grid-template-columns:420px minmax(0,1fr);gap:22px;align-items:start}
-@media(max-width:820px){.gwrap{grid-template-columns:1fr}.gframe{width:100%!important}}
+@media(max-width:820px){.gwrap{grid-template-columns:1fr}.gframe{width:100%!important}
+  /* Phone: the three names are the thing you interact with, so they get real
+     tap targets, and the score row shrinks to a strip rather than four tiles
+     eating half the screen above them. */
+  .gopt{min-height:52px;font-size:15px}
+  .gscore{gap:6px}
+  .gscore>div{padding:6px 4px}
+  .gful img{width:88px}}
 .gframe{position:relative;width:420px;height:300px;overflow:hidden;border-radius:2px;
   background:var(--platinum);border:1px solid var(--line2);box-shadow:0 18px 44px -18px #000}
 .gframe img{position:absolute;display:block;image-rendering:auto;transition:width .35s ease,left .35s ease,top .35s ease}
@@ -1533,6 +1587,18 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .gscore i{display:block;font-style:normal;font-size:12px;text-transform:uppercase;
   letter-spacing:.1em;color:var(--deep);margin-top:3px}
 .gopts{display:flex;flex-direction:column;gap:8px}
+/* The number you press, on the option it answers. */
+.gopt kbd,.gkeys kbd{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 5px;
+  font-family:var(--sans);font-size:11px;font-weight:800;line-height:1;
+  background:var(--canvas-soft);color:var(--deep);
+  border:1px solid var(--chrome);border-bottom-width:2px;border-radius:3px}
+.gopt{display:flex!important;align-items:center;gap:10px}
+.gopt kbd{flex:none}
+.gopt>span{min-width:0}
+.gkeys{margin-top:9px;font-size:11.5px;color:var(--deep);display:flex;align-items:center;
+  gap:5px;flex-wrap:wrap}
+/* A phone has no keyboard and the hint is just clutter there. */
+@media(max-width:820px){.gkeys{display:none}.gopt kbd{display:none}}
 .gopt{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:2px;
   padding:12px 15px;transition:border-color .15s,transform .12s,background .15s}
 .gopt b{display:block;font-size:15.68px}
@@ -1543,23 +1609,48 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .gopt.wrong{border-color:var(--bad);background:rgba(255,107,107,.1)}
 .gopt.wrong b{color:#ff9d9d}
 .gopt.dim{opacity:.45}
-.gres{margin-top:14px;padding:13px 15px;border-radius:4px;font-weight:800;font-size:14.72px}
+/* It arrives rather than appearing: a short fade and a few pixels of rise, so
+   the eye follows it instead of being startled by a block of colour landing
+   under the buttons. min-height keeps the panel the same size win or lose, so
+   the page doesn't resize differently depending on your answer. */
+.gres{margin-top:14px;padding:13px 15px;border-radius:4px;font-weight:800;font-size:14.72px;
+  animation:gresin .22s ease-out both}
+.gresh{margin-bottom:2px}
+@keyframes gresin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.gres{animation:none}}
 .gres.win{background:rgba(63,217,149,.12);border:1px solid rgba(63,217,149,.4);color:var(--good)}
 .gres.lose{background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.35);color:#ff9d9d}
-.gful{display:flex;gap:12px;align-items:center;margin-top:11px}
-.gful img{width:74px;border-radius:2px;display:block}
+.gres .btn.go{width:100%;margin-top:11px;min-height:44px;font-size:15px}
+.gful{display:flex;gap:12px;align-items:center;margin-top:11px;min-height:104px}
+.gful img{width:74px;border-radius:2px;display:block;flex:none}
 .gful b{display:block;color:var(--tx);font-size:14.72px}
 .gful span{display:block;font-size:12px;color:var(--deep);font-weight:500}
 /* ===== card reader ====================================================== */
 .rsets{display:flex;flex-direction:column;gap:10px}
 .rset{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:13px 15px}
-.rsh{display:flex;align-items:baseline;gap:10px;margin-bottom:9px}
-.rsh b{font-size:15.2px}
+/* The set's own art over its name, both centred, with everything about the set
+   stacked under it — a masthead for the set rather than a line of facts. */
+.rsh{display:flex;flex-direction:column;align-items:center;text-align:center;
+  gap:3px;margin-bottom:11px}
+.rsh b{font-size:16px;line-height:1.2}
 .rsh span{font-size:12px;color:var(--deep)}
-.rinks{display:flex;flex-wrap:wrap;gap:7px}
-.rink{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:2px;
-  padding:6px 13px 6px 9px;font-size:12.64px;font-weight:600;color:var(--deep);background:var(--platinum);
+.rlogowrap{display:grid;place-items:center;min-height:34px;margin-bottom:2px}
+.rlogo{max-height:52px;max-width:220px;width:auto;display:block}
+/* Shown until the logo loads, and left in place for good if there is no file
+   for that set — the img removes itself on error and this is what is behind. */
+.rnum{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;
+  background:var(--carbon);color:#fff;font-size:13px;font-weight:900}
+.rlogo+.rnum{display:none}
+/* Six inks, two rows of three, every button the same size. They were an
+   inline-flex row, so each one was as wide as its own word — Amethyst wide,
+   Ruby narrow — and six different-sized buttons read as a ransom note. */
+.rinks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.rink{display:flex;align-items:center;justify-content:flex-start;gap:7px;
+  border:1px solid var(--line);border-radius:2px;
+  padding:7px 11px;font-size:12.64px;font-weight:600;color:var(--deep);background:var(--platinum);
   transition:border-color .15s,color .15s,transform .15s}
+.rink span{margin-left:auto}
+@media(max-width:520px){.rinks{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .rink i{width:12px;height:12px;border-radius:50%;background:var(--ic);
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
 .rink span{font-size:12px;color:var(--deep);font-weight:700}
@@ -1717,16 +1808,26 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 /* QR codes — always rendered (handy on screen too, not just on paper), sized
    to stay modest so two of them don't push a short deck onto a second page
    by themselves. */
-.pullqr{display:flex;gap:24px;justify-content:center;margin-top:18px;padding-top:14px;border-top:1px solid #eee}
-.pullqr figure{margin:0;text-align:center}
-.pullqr figcaption{font-size:10px;color:#888;margin-top:4px;max-width:120px}
+/* ---- the sheet's masthead: title on the left, its QR on the right ---- */
+.pullhead{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
+  padding-bottom:10px;margin-bottom:4px;border-bottom:2px solid #222}
+.pullhtxt{min-width:0}
+/* The figure is exactly as wide as the code it holds, so "text-align:center"
+   centres the caption on the code and not on some other box. The caption used
+   to carry max-width:120px inside a 104px figure: the text was free to be
+   wider than the QR, and centring it inside 120px left it visibly off to one
+   side of a 104px square. That is the whole reason it looked crooked. */
+.pullqr{margin:0;flex:0 0 auto;width:104px;text-align:center}
+.pullqr figcaption{font-size:9.5px;line-height:1.3;color:#666;margin-top:4px;
+  width:100%;max-width:100%;text-align:center;word-break:break-word}
 .qrbox{width:104px;height:104px;display:grid;place-items:center;background:#f4f4f4;border-radius:4px}
 .qrbox img{width:100%;height:100%}
 /* The Ko-fi ask only appears once a deck has been saved more than five times,
    and when it does it is a footnote, not a billboard: small code, one line of
    plain thanks, no exclamation marks. */
 .pullkofi{display:flex;align-items:center;gap:10px;justify-content:center;
-  margin-top:10px;max-width:420px;margin-left:auto;margin-right:auto}
+  margin-top:14px;padding-top:10px;border-top:1px solid #eee;
+  max-width:420px;margin-left:auto;margin-right:auto}
 .pullkofi p{font-size:10px;line-height:1.45;color:#8a8a8a;margin:0}
 /* The second sentence gets its own line rather than trailing an orphaned
    "It" off the end of the first one, whatever width the block ends up. */
@@ -1743,11 +1844,65 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pull.compact td{padding:1.5px 4px}
 .pull.compact .also{font-size:9.5px}
 .pull.compact .pullqr{margin-top:10px;padding-top:8px;gap:16px}
+.pull.compact .pullqr{width:76px}
 .pull.compact .qrbox{width:76px;height:76px}
 .pull.compact .qrbox.wee{width:48px;height:48px;flex:0 0 48px}
 .pull.compact .pullimgs{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
+/* ---- proxy slips ----
+   Real card size in millimetres, so a printed slip sleeves properly instead of
+   floating. mm rather than px because this is the one thing on the site whose
+   physical size is the whole point — px would come out a different size on
+   every printer. */
+.pxsheet{background:#fff;color:#111;border:1px solid var(--line);border-radius:2px;
+  padding:14px;margin-top:16px}
+.pxhead{border-bottom:2px solid #222;padding-bottom:8px;margin-bottom:12px}
+.pxhead b{display:block;font-size:15px}
+.pxhead span{display:block;font-size:11px;color:#666;margin-top:3px}
+.pxnone{margin-top:16px;padding:14px;background:var(--canvas-soft);border:1px solid var(--hairline);
+  border-radius:2px;font-size:13px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+/* Said on screen before you print, and again on the printed page — someone
+   who picks a slip up off a table should be able to read what it is. */
+.pxwarn{margin:0 0 14px;padding:11px 13px;background:#fff8e1;border:1px solid #e0b400;
+  border-left:4px solid #e0b400;border-radius:2px;color:#3a2f00}
+.pxwarn b{font-size:13px}
+.pxwarn p{margin:5px 0 0;font-size:11.5px;line-height:1.5}
+.pxgrid{display:grid;grid-template-columns:repeat(3,63mm);gap:0;justify-content:center}
+.pxs{width:63mm;height:88mm;border:1px dashed #999;padding:3.5mm 3.5mm 3mm;
+  display:flex;flex-direction:column;color:#111;background:#fff;
+  font-family:var(--sans);overflow:hidden}
+/* Across the face, above the text, in the flow — so trimming it off means
+   cutting into the rules text the slip exists for. */
+.pxband{background:#111;color:#fff;font-size:6pt;font-weight:800;letter-spacing:.08em;
+  text-align:center;padding:.9mm 0;margin:-1mm -1mm 1.5mm;border-radius:.5mm}
+.pxtop{display:flex;align-items:center;justify-content:space-between;font-size:9pt}
+.pxcost{font-weight:900;font-size:13pt;line-height:1}
+.pxink{font-size:8pt;font-weight:700;color:#444;text-transform:uppercase;letter-spacing:.05em}
+.pxname{font-weight:900;font-size:11.5pt;line-height:1.1;margin-top:2mm}
+.pxver{font-size:8.5pt;font-style:italic;color:#333;line-height:1.15;margin-top:.5mm}
+.pxty{font-size:7.5pt;color:#555;margin-top:1.5mm;
+  border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:1mm 0}
+.pxtx{flex:1;font-size:8pt;line-height:1.3;margin-top:1.5mm;overflow:hidden;white-space:pre-wrap}
+.pxfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:2mm;margin-top:1mm}
+.pxstats{font-weight:900;font-size:11pt;white-space:nowrap}
+.pxmark{font-size:5pt;color:#666;text-align:right;line-height:1.15;
+  letter-spacing:.02em;max-width:34mm}
 @media print{
   body{background:#fff}
+  /* Printing with the slips open prints the slips and nothing else — you are
+     about to cut these up. */
+  body.proxying .pull,body.proxying #regBox,body.proxying .borrow,
+  body.proxying .dkgal,body.proxying .swapbox{display:none!important}
+  body.proxying #proxyBox{display:block!important}
+  .pxsheet{border:none;padding:0;margin:0}
+  .pxhead{display:none}
+  /* The notice prints. It is the first thing on the sheet, above the slips. */
+  .pxwarn{background:none;border:none;border-bottom:1px solid #999;border-radius:0;
+    padding:0 0 6px;margin:0 0 6px;color:#000}
+  .pxwarn b{font-size:9pt}
+  .pxwarn p{font-size:7.5pt}
+  .pxgrid{gap:0}
+  /* A slip must never be split across two sheets of paper. */
+  .pxs{break-inside:avoid;page-break-inside:avoid}
   /* .dkbar is Paste a deck list / Share the deck I'm editing / Duplicate it —
      page-management actions, not part of the sheet you'd actually carry to a
      shop. .sitefoot is the Ko-fi widget; it gets its own QR code inside
@@ -1762,6 +1917,11 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
   .foot,.legal{display:none!important}
   .view{display:none!important}.view#vDecks{display:block!important}
   .pull{padding:0;border-radius:0}
+  /* A set group should not be split across a page break with its heading
+     stranded at the bottom of the previous one. */
+  .pull .grp{break-after:avoid;page-break-after:avoid}
+  .pull tr,.pullimg{break-inside:avoid;page-break-inside:avoid}
+  @page{margin:10mm}
   .page{max-width:none;padding:0}
 }
 
@@ -1783,39 +1943,77 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 .pill .x{padding:0 4px;border-radius:2px;color:var(--deep)}
 .pill .x:hover{background:var(--bad);color:#fff}
 .srow{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap;align-items:center}
-/* ===== the two search-widening switches ==================================
+/* ===== the three search-widening switches ================================
    A real sliding knob rather than another grey button, so it reads as a mode
-   you flip rather than an action you fire. */
-.toggles{gap:9px}
-.swx{display:inline-flex;align-items:center;gap:9px;padding:4px 14px 4px 4px;border-radius:2px;
-  background:var(--platinum);border:1px solid var(--line);cursor:pointer;position:relative;
-  transition:background .25s,border-color .25s,box-shadow .25s}
+   you flip rather than an action you fire.
+
+   Three things were wrong with these and they all came from the same place —
+   each switch had been styled on its own rather than as one of a set:
+
+   1. The label used to sit on a coloured chip, and the chip colour was set by
+      `.swx.on .lb` while each variant then overrode only the TEXT colour. In
+      light mode --gold resolves to the same #1f4da8 as --link, so franchise-on
+      was literally blue text on a blue chip, and flavor text was nearly as
+      bad. The chip is gone entirely: the hue now lives in the border, the wash
+      and the knob, and the label is just text that goes to full strength. No
+      colour is ever printed on top of the same colour again.
+   2. They were inline-flex, so each one was as wide as its own words and the
+      row read as three unrelated parts. They are a grid of equal columns now —
+      same width, same height, same weight, because they carry the same weight.
+   3. Franchise ran on --gold, which is only actually gold in dark mode. It
+      runs on --amber instead, so the three hues stay distinct in both themes,
+      which was the point of colouring them differently in the first place. */
+.toggles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch}
+.swx{display:flex;align-items:center;gap:10px;width:100%;min-height:42px;
+  padding:6px 12px;border-radius:3px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);cursor:pointer;position:relative;
+  transition:background .22s,border-color .22s,box-shadow .22s}
 .swx .kn{width:44px;height:24px;border-radius:2px;background:#16273f;border:1px solid var(--line2);
   position:relative;flex:none;transition:background .25s,border-color .25s}
 .swx .kn i{position:absolute;top:1px;left:1px;width:20px;height:20px;border-radius:50%;
   background:#3a5680;display:grid;place-items:center;font-size:12px;font-style:normal;
   filter:grayscale(1) opacity(.75);
   transition:transform .3s cubic-bezier(.5,1.7,.5,1),background .25s,filter .25s}
-.swx .lb{font-size:12px;font-weight:700;color:var(--tx);background:var(--platinum);padding:2px 7px;border-radius:2px;transition:color .25s;white-space:nowrap}
-.swx:hover{border-color:var(--deep)}
-.swx:hover .lb{color:var(--deep)}
-.swx.on{background:rgba(79,208,247,.1);border-color:var(--link);box-shadow:0 0 16px -4px rgba(79,208,247,.55)}
-.swx.on .kn{background:rgba(79,208,247,.3);border-color:var(--link)}
-.swx.on .kn i{transform:translateX(20px);background:var(--acc);filter:none}
-.swx.on .lb{color:var(--surface);background:var(--link)}
-/* franchise switch runs gold so the two are never confused at a glance */
-.swx.sto.on{background:rgba(247,201,92,.1);border-color:var(--gold);box-shadow:0 0 16px -4px rgba(247,201,92,.55)}
-.swx.sto.on .kn{background:rgba(247,201,92,.3);border-color:var(--gold)}
-.swx.sto.on .kn i{background:var(--gold)}
-.swx.sto.on .lb{color:var(--link)}
-/* flavor-text switch runs amethyst, the third color in the row */
-.swx.flav.on{background:rgba(143,107,176,.14);border-color:var(--amethyst);box-shadow:0 0 16px -4px rgba(143,107,176,.55)}
+.swx .lb{font-size:12.5px;font-weight:700;color:var(--deep);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;transition:color .22s}
+.swx:hover{background:var(--platinum);border-color:var(--muted)}
+/* One shape for "on", three hues through it.
+
+   The tint is painted as a gradient layer ON TOP of the same --canvas-soft the
+   switch already has when it's off, rather than replacing the background with
+   a translucent colour. A translucent wash composites against the page, and
+   the page here is periwinkle, so amber-at-14%-over-periwinkle came out a
+   muddy grey — an "on" switch looked like it was made of a different material
+   from an "off" one. Same base, hue laid over it: the two states are now
+   obviously the same object in two states.
+
+   The inset ring is what makes it read as lit rather than merely tinted,
+   without the outer glow the old one used, which bled onto its neighbours. */
+.swx.on .kn i{transform:translateX(20px);filter:none}
+.swx.on .lb{color:var(--tx)}
+.swx.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(47,111,237,.16),rgba(47,111,237,.16));
+  border-color:var(--acc2);
+  box-shadow:inset 0 0 0 1px rgba(47,111,237,.4),0 2px 10px -6px rgba(47,111,237,.9)}
+.swx.on .kn{background:rgba(47,111,237,.28);border-color:var(--acc2)}
+.swx.on .kn i{background:var(--acc2)}
+/* franchise runs amber, so the three are never confused at a glance */
+.swx.sto.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(217,154,43,.2),rgba(217,154,43,.2));
+  border-color:var(--amber);
+  box-shadow:inset 0 0 0 1px rgba(217,154,43,.42),0 2px 10px -6px rgba(217,154,43,.9)}
+.swx.sto.on .kn{background:rgba(217,154,43,.3);border-color:var(--amber)}
+.swx.sto.on .kn i{background:var(--amber)}
+/* flavor text runs amethyst, the third colour in the row */
+.swx.flav.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(143,107,176,.2),rgba(143,107,176,.2));
+  border-color:var(--amethyst);
+  box-shadow:inset 0 0 0 1px rgba(143,107,176,.42),0 2px 10px -6px rgba(143,107,176,.9)}
 .swx.flav.on .kn{background:rgba(143,107,176,.32);border-color:var(--amethyst)}
 .swx.flav.on .kn i{background:var(--amethyst)}
-.swx.flav.on .lb{color:var(--link)}
 .swx:active .kn i{width:26px}
-.tghint{font-size:12px;color:var(--tx);line-height:1.4;background:var(--canvas-soft);
-  border:1px solid var(--hairline);padding:4px 8px;border-radius:2px}
+/* On a phone three across leaves no room for "Search flavor text" beside a
+   44px knob, and a truncated label is worse than a stacked one. Full width
+   each: same three switches, still identical to each other, and now a tap
+   target you can hit without looking. */
+@media(max-width:640px){.toggles{grid-template-columns:1fr}}
 /* a quick shimmy when you land on the search page, so the switch gets noticed */
 @keyframes swjig{0%,100%{transform:rotate(0) translateX(0)}
   15%{transform:rotate(-2.5deg) translateX(-3px)}
@@ -2016,12 +2214,15 @@ h3.sec2{font-family:var(--sans);text-transform:uppercase;letter-spacing:.13em;fo
 /* The deck column is draggable on desktop. --deckw is written by the grip and
    restored from localStorage, so a wide deck panel with big card images is a
    preference, not something you re-drag every visit. */
-.wrap{display:grid;grid-template-columns:minmax(0,1fr) var(--deckw,330px);gap:14px;margin-top:14px;align-items:start}
+/* 420, not 330: three columns of card at the new size instead of two and a
+   half. Only the default moves — a width you've dragged yourself is saved and
+   still wins. */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) var(--deckw,420px);gap:14px;margin-top:14px;align-items:start}
 /* The grip hangs off .wrap, not off .deck — inside the deck panel it was
    clipped by overflow-y:auto and scrolled away with the card list. */
 .wrap{position:relative}
 .dgrip{position:absolute;top:0;bottom:0;width:14px;cursor:col-resize;z-index:6;
-  right:calc(var(--deckw,330px) + 3px)}
+  right:calc(var(--deckw,420px) + 3px)}
 .dgrip::before{content:"";position:absolute;left:5px;top:50%;transform:translateY(-50%);
   width:4px;height:46px;border-radius:2px;background:var(--hairline);transition:background .12s}
 .dgrip:hover::before,.dgrip.on::before{background:var(--amberc)}
@@ -2077,17 +2278,51 @@ details.sec[open]>summary::before{transform:rotate(90deg)}
    style changed. */
 details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text-transform:none;letter-spacing:0;font-weight:500}
 .sb{padding:2px 0 10px}
-.inks{display:flex;flex-wrap:wrap;gap:5px}
-.ic{border:1px solid var(--chrome);border-radius:2px;padding:4px 9px;font-size:12px;
-  color:var(--tx);background:var(--surface);box-shadow:var(--bevel)}
+/* ---- filter button groups ----
+   Every group of these used to be a plain wrapping flex row, so the shape a
+   group took was an accident of how long its words happened to be: the six
+   inks broke 4-and-2 or 5-and-1 depending on the panel width, and the last row
+   trailed off wherever it ran out. They all snap to the same three-column
+   rhythm now, and no row is ever left ragged.
+
+   The six inks are two rows of three, because that is what six inks ARE — the
+   game has three pairs of them and you read them as a block, not as a
+   sentence that wraps. Dual Ink then sits alone underneath, in the middle
+   column, because it isn't a seventh ink: it's a question about the other six.
+   Giving it its own centred row says that without a word of explanation. */
+.inks{display:flex;flex-wrap:wrap;gap:6px}
+.inkgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.inkgrid .dual{grid-column:2}
+/* Five card types, and each one carries a count, so three across can't hold
+   "Character 1905" in a 278px column without breaking the word off the number.
+   Two across fits it, and the fifth goes in the middle of its own row — the
+   same move Dual Ink makes, for the same reason: the odd one out gets its own
+   line rather than an awkward gap beside it. */
+.tygrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.tygrid .ic:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 3px)}
+/* "Cannot be inked" is three words and will not fit a third of this column, and
+   a label that breaks across two lines mid-phrase looks like an accident. One
+   per row, full width: three options, three clean lines. */
+.iwstack{flex-direction:column}
+.iwstack .ic{width:100%}
+/* gap, not a space in the markup: making these flex containers means the
+   whitespace between the label and its count is discarded, which is what
+   turned "Character 1905" into "Character1905". */
+.ic{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:5px;
+  min-height:30px;border:1px solid var(--chrome);border-radius:2px;padding:4px 9px;font-size:12px;
+  color:var(--tx);background:var(--surface);box-shadow:var(--bevel);
+  transition:background .15s,border-color .15s,color .15s}
 .ic:hover{border-color:var(--deep);color:var(--tx)}
 .ic.on{color:#06121f;font-weight:700}
-.ic[data-v=Amber].on{background:var(--amber);border-color:var(--amber)}
-.ic[data-v=Amethyst].on{background:var(--amethyst);border-color:var(--amethyst);color:#fff}
-.ic[data-v=Emerald].on{background:var(--emerald);border-color:var(--emerald)}
-.ic[data-v=Ruby].on{background:var(--ruby);border-color:var(--ruby);color:#fff}
-.ic[data-v=Sapphire].on{background:var(--sapphire);border-color:var(--sapphire)}
-.ic[data-v=Steel].on{background:var(--steel);border-color:var(--steel)}
+/* These six were written as [data-v=...] and the buttons have always emitted
+   data-ink, so not one of them has ever matched: every selected ink rendered
+   as the same plain white button and Amber looked exactly like Steel. */
+.ic[data-ink=Amber].on{background:var(--amber);border-color:var(--amber)}
+.ic[data-ink=Amethyst].on{background:var(--amethyst);border-color:var(--amethyst);color:#fff}
+.ic[data-ink=Emerald].on{background:var(--emerald);border-color:var(--emerald)}
+.ic[data-ink=Ruby].on{background:var(--ruby);border-color:var(--ruby);color:#fff}
+.ic[data-ink=Sapphire].on{background:var(--sapphire);border-color:var(--sapphire);color:#fff}
+.ic[data-ink=Steel].on{background:var(--steel);border-color:var(--steel)}
 .ic.dual.on{background:linear-gradient(100deg,var(--amethyst),var(--emerald));border-color:transparent;color:#fff}
 .cap{font-size:12px;color:var(--gold);margin-top:6px}
 .list{max-height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:1px}
@@ -2247,6 +2482,10 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
 .pbig .shipnote{display:block;font-size:11px;font-weight:700;color:var(--deep);
   opacity:.75;margin-top:3px}
 .praw{margin-top:8px;font-size:12.5px;font-weight:700;color:var(--deep)}
+/* Its own line. It used to be tacked onto the end of the market-price sentence
+   with an em dash, so a caveat about WHEN the number was taken ran straight on
+   from the number itself and the two read as one thought. */
+.psnap{margin-top:3px;font-size:11.5px;font-weight:600;color:var(--deep);opacity:.85}
 .pblock p{margin:7px 0 0;font-size:11.5px;color:var(--deep);line-height:1.5}
 /* Its own look on purpose, not the generic chrome .btn — this is a real
    "leave the site and go spend money" action, so it reads as a shop CTA
@@ -2273,17 +2512,49 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
   2%{transform:translateY(0)}
   3%{transform:translateY(-2px)}
 }
-/* Foil buy button: dark by default, a rainbow ring only lights up and spins
-   on hover — a "chase" effect, not a permanent rainbow button, so it reads
-   as a nice surprise instead of clashing with everything around it. */
-.buyfoil{position:relative;z-index:0;background:linear-gradient(155deg,#2e2e40,#1c1c29);
+/* Foil buy button: dark by default, a rainbow sheen sweeps across it on hover.
+
+   This used to be a conic-gradient ring on ::before that rotate()d. The
+   trouble is that ::before was a RECTANGLE — inset:-3px on a wide, short
+   button — so spinning it swept its own corners out past the button edges and
+   you watched a rectangle turn, not a ring. (Making that trick work needs a
+   square bigger than the button's diagonal, which is a lot of machinery for a
+   full saturated rainbow halo that would have been loud anyway.)
+
+   What it does instead is the same sheen the cards use for real foil, from
+   the foiling block further up: a soft band of light with the spectrum inside
+   it, travelling right to left. Same direction, same idea, so the button
+   behaves like the thing it's selling. Screen blending is what keeps it
+   tasteful — the colours only lift the dark background and do nothing to the
+   white text on top, so it reads as light moving over the button rather than
+   paint sliding across it. z-index:0 stays because it holds the blend inside
+   the button instead of letting it mix with the page behind. */
+.buyfoil{position:relative;z-index:0;overflow:hidden;
+  background:linear-gradient(155deg,#2e2e40,#1c1c29);
   box-shadow:0 3px 0 #0e0e16,0 6px 14px rgba(0,0,0,.35)}
-.buyfoil::before{content:"";position:absolute;inset:-3px;border-radius:12px;z-index:-1;
-  background:conic-gradient(from 0deg,#ff3b3b,#ffb63b,#fff23b,#3bff6a,#3bcfff,#7a3bff,#ff3bd6,#ff3b3b);
-  opacity:0;transition:opacity .25s}
-.buyfoil:hover::before{opacity:1;animation:rainbowchase 1.8s linear infinite}
+.buyfoil::after{content:"";position:absolute;inset:0;border-radius:inherit;
+  pointer-events:none;mix-blend-mode:screen;opacity:0;transition:opacity .2s;
+  background-repeat:no-repeat;background-size:170% 100%;background-position:135% 0;
+  /* A bright near-white core with the spectrum fanned either side of it, the
+     way light actually catches foil. Spreading the colours evenly instead
+     just blurred into a grey-mauve stain that crawled across the button. The
+     band is narrow on purpose: it should look like a glint passing, not like
+     the button has been painted. */
+  background-image:linear-gradient(100deg,
+    transparent 41%,
+    rgba(255,120,120,.20) 45.5%,
+    rgba(255,222,140,.32) 48%,
+    rgba(255,255,255,.44) 50%,
+    rgba(150,255,205,.32) 52%,
+    rgba(135,198,255,.28) 54.5%,
+    rgba(198,150,255,.20) 58%,
+    transparent 62%)}
+.buyfoil:hover::after{opacity:1;animation:foilsweep 2.1s linear infinite}
 .buyfoil:hover{box-shadow:0 4px 0 #0e0e16,0 9px 20px rgba(0,0,0,.4)}
-@keyframes rainbowchase{to{transform:rotate(360deg)}}
+@keyframes foilsweep{from{background-position:135% 0}to{background-position:-35% 0}}
+/* Same courtesy the card foil gets: no travelling light, just a still glint. */
+@media(prefers-reduced-motion:reduce){
+  .buyfoil:hover::after{animation:none;background-position:42% 0}}
 .prcinfo.big{flex:0 0 auto;width:22px;height:22px;border-radius:50%;font-size:12px;
   color:var(--deep);background:var(--surface);border:1px solid var(--line2);margin-left:2px;vertical-align:middle}
 .prcinfo.big:hover{background:var(--acc);color:#fff}
@@ -2293,6 +2564,16 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
   font-size:11.5px;color:var(--deep)}
 .about b{font-weight:800}
 .btn.tiny{font-size:11.5px;padding:4px 10px;font-weight:700}
+/* ---- the state word inside a toggle button ----
+   A button that says "on" in one state and "off" in the other changes width
+   every time you press it, so the thing you just clicked jumps out from under
+   the pointer and everything beside it shuffles along. The rule is that a
+   control keeps its box across its own states: the state word goes in a fixed
+   slot wide enough for the longest of them, so only the letters change. */
+.btn .sw{display:inline-block;min-width:3.1em;text-align:center;font-weight:800;
+  padding:0 5px;margin-left:5px;border-radius:2px;font-size:.92em;letter-spacing:.04em;
+  background:var(--platinum);color:var(--deep);border:1px solid var(--line)}
+.btn[aria-pressed=true] .sw{background:var(--amberc);color:var(--carbon);border-color:var(--amber-press)}
 /* the swap picker */
 .swapw{max-height:88vh;display:flex;flex-direction:column}
 .swapw>p{margin:2px 0 10px;font-size:13px;color:var(--deep);line-height:1.5}
@@ -2431,11 +2712,20 @@ body.browse .c .shift{display:none!important}
 .c .qty button.p:hover{background:var(--good);color:#053221;border-color:var(--good)}
 .c .qty button.m:hover{background:var(--bad);color:#fff;border-color:var(--bad)}
 .c .qty button:active{filter:brightness(.94)}
-.c .qty .n{flex:0 0 42px;display:grid;place-items:center;font-size:15px;font-weight:900;
+/* This is an <input> rather than a <span> now — type a number, press Enter,
+   done. It has to look like it always did, so: no browser chrome, centred
+   text, and the same box. width:0 with flex-basis 42px keeps an input from
+   using its default size attribute as a minimum and stretching the row. */
+.c .qty .n{flex:0 0 42px;width:0;text-align:center;font-family:inherit;
+  display:grid;place-items:center;font-size:15px;font-weight:900;
   border-radius:2px;background:var(--canvas-soft);color:var(--deep);border:1px solid var(--line)}
 /* A card that is in the deck says so loudly — the count block goes solid Action
    Yellow, which is the only colour on the page that means "this one". */
 .c .qty.has .n{background:var(--amberc);color:#2a1f00;border-color:var(--amber-press)}
+.c .qty .n:focus{outline:2px solid var(--link);outline-offset:-2px;background:var(--surface);color:var(--tx)}
+/* Chrome and Safari put stepper arrows on a numeric field; there are already
+   two perfectly good buttons either side of this one. */
+.c .qty .n::-webkit-outer-spin-button,.c .qty .n::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .c .qty.has{border-top-color:var(--amberc)}
 /* shift-target prompt, centred on the art */
 .c .shift{position:absolute;top:50%;left:6px;right:6px;transform:translateY(-50%);
@@ -2444,19 +2734,41 @@ body.browse .c .shift{display:none!important}
 .c .shift:hover{background:var(--gold);color:#06263f}
 /* Locations sit normal in the grid; dwell half a second and the whole card
    pops out as a proper landscape card, well clear of its portrait box.
-   overflow:visible is what lets it escape the tile. The ⓘ stays above it. */
+   overflow:visible is what lets it escape the tile. The ⓘ stays above it.
+
+   Gated on a real pointer, and that gate is the whole bug fix for touch. This
+   was plain :hover, and a phone has no hover — the FIRST tap fires the
+   browser's emulated one. So tapping a location rotated it 90° and blew it up
+   to 1.95x under your finger, which covered the −/+ row you were reaching for
+   (that's "adding locations is bugged"), and threw the ⓘ to left:-79.2%, well
+   off the side of the screen, which is why there was no way to read a
+   location's details on a phone at all.
+
+   On touch a location is now simply a card: it sits still, +/− work like any
+   other card's, and the ⓘ stays where the ⓘ always is. The landscape view
+   isn't lost — the detail modal already renders locations in a proper
+   landscape frame, and it's a one-column layout under 820px. */
 .c.loc img{transform:none;transition:transform .28s 0s}
-.c.loc:hover{z-index:90;overflow:visible;transform:none}
-.c.loc:hover img{transform:rotate(90deg) scale(1.95);transition-delay:.5s;border-radius:2px;
-  outline:2px solid var(--acc);outline-offset:4px;
-  box-shadow:0 22px 60px -12px rgba(0,0,0,.92)}
-/* The preview is far bigger than its tile, so the ⓘ would otherwise be stranded
-   in the middle of the artwork. Percentages on left AND margin-top both resolve
-   against the tile's width, which is the only dimension the preview is sized
-   from — so these two numbers park it on the preview's top-left corner.
-   Measured, not guessed: the preview's corner sits at -84.5% / -27% of tile width. */
-.c.loc:hover .i{left:-79.2%;right:auto;top:0;margin-top:-21.7%;transition-delay:.5s;z-index:95}
-.c.loc:hover .tags{opacity:0;transition:opacity .2s .5s}
+@media (hover:hover) and (pointer:fine){
+  .c.loc:hover{z-index:90;overflow:visible;transform:none}
+  .c.loc:hover img{transform:rotate(90deg) scale(1.95);transition-delay:.5s;border-radius:2px;
+    outline:2px solid var(--acc);outline-offset:4px;
+    box-shadow:0 22px 60px -12px rgba(0,0,0,.92)}
+  /* The preview is far bigger than its tile, so the ⓘ would otherwise be
+     stranded in the middle of the artwork. Percentages on right AND margin-top
+     both resolve against the tile's width, which is the only dimension the
+     preview is sized from — so these two numbers park it on the preview's
+     corner. Measured, not guessed: the preview spans -86% to 186% of tile
+     width, and -27.8% to 167.2% of it vertically.
+
+     It parks on the TOP RIGHT. It used to fly to the top LEFT, which meant the
+     one button on a card that never moves — every other card keeps its ⓘ at
+     top:6px right:6px — jumped the full width of a card-and-a-half the moment
+     you hovered, and you had to go and find it. Same corner as always now,
+     just on the bigger card. */
+  .c.loc:hover .i{right:-79.2%;left:auto;top:0;margin-top:-21.7%;transition-delay:.5s;z-index:95}
+  .c.loc:hover .tags{opacity:0;transition:opacity .2s .5s}
+}
 /* In the detail view a location gets a wider modal and a true landscape frame.
    The image is sized to the frame's HEIGHT so rotating it fills the width exactly. */
 .modal.loc{max-width:1040px;grid-template-columns:480px 1fr}
@@ -2489,14 +2801,37 @@ body.browse .c .shift{display:none!important}
    just a small strip above the name, same idea as the shift-target list, so the
    art stays readable and the +/− buttons keep working. */
 .c.illegal{border-color:#ff2d78}
-/* The "not legal" notice used to lie across the artwork, which is the one part
-   of the tile people are actually looking at. It now sits under the card as its
-   own strip, so the art is never obscured. */
-.c.illegal .why{position:static;background:var(--link);
-  color:#fff;font-size:12px;font-weight:700;text-align:center;padding:3px 5px;line-height:1.3;
-  pointer-events:none;text-transform:uppercase;letter-spacing:.4px}
-.c.illegal .why span{display:block;font-weight:400;text-transform:none;letter-spacing:0;opacity:.92;
-  font-size:12px}
+/* The "not legal" notice has been in both places now. It started across the
+   artwork and was moved out to its own strip under the card, because a solid
+   bar over the art hid the one part of the tile anyone is looking at. But a
+   strip under the card makes the tile taller than its neighbours, so a grid of
+   cards jumps around as legality changes — which is worse.
+
+   Back over the art, then, but not solid: a translucent band centred on the
+   picture, dark enough behind the text to read cleanly and light enough to see
+   the art through. The band is parked with margin-top:69.7% — a percentage
+   margin resolves against WIDTH, and the art is 940/674 of the tile width, so
+   half of that is 69.7%, which is the middle of the picture whatever size the
+   tile happens to be. (Same trick as the location ⓘ.) top/bottom percentages
+   would resolve against height and drift as the tile grows. */
+.c.illegal .why{position:absolute;left:6px;right:6px;top:0;margin-top:69.7%;
+  transform:translateY(-50%);z-index:6;border-radius:3px;
+  background:rgba(9,24,48,.72);border:1px solid rgba(255,255,255,.34);
+  box-shadow:0 3px 12px rgba(0,0,0,.45);
+  color:#fff;font-size:12px;font-weight:800;text-align:center;padding:5px 6px;line-height:1.3;
+  cursor:pointer;text-transform:uppercase;letter-spacing:.4px}
+@supports (backdrop-filter:blur(2px)){
+  .c.illegal .why{backdrop-filter:blur(2px) saturate(.9)}}
+.c.illegal .why span{display:block;font-weight:400;text-transform:none;letter-spacing:0;opacity:.95;
+  font-size:12px;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+/* Press the tag and it offers to stop showing you tags. Under the tag, as its
+   own thing, so the offer is obviously about the tag you just pressed. */
+.c.illegal .why .whyoff{display:none}
+.c.illegal .why.open .whyoff{display:block;position:absolute;left:0;right:0;top:100%;margin-top:5px;
+  background:var(--surface);color:var(--tx);border:1px solid var(--chrome);border-radius:2px;
+  box-shadow:0 4px 14px rgba(0,0,0,.4);font-size:11.5px;font-weight:700;padding:5px 4px;
+  text-transform:none;letter-spacing:0;cursor:pointer}
+.c.illegal .why.open .whyoff:hover{background:var(--amberc);color:var(--carbon);border-color:var(--amber-press)}
 /* reminder tags can be switched off wholesale */
 body.noremind .c .why,body.noremind .c .tags,body.noremind .c .quest{display:none}
 body.noremind .c.illegal{border-color:var(--deep)}
@@ -2572,14 +2907,85 @@ body.noremind .c.illegal img{filter:none}
   box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
 .tyleg{color:var(--deep);border-top:1px solid var(--line);padding-top:6px;margin-top:7px}
 .inkleg b,.tyleg b{color:var(--tx)}
+/* ---- the deck panel's two menus ---- */
+.dmenus{margin-left:auto;display:flex;gap:5px}
+.dmbtn{width:32px;height:28px;display:grid;place-items:center;font-size:15px;line-height:1;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:2px;
+  box-shadow:var(--bevel);color:var(--tx);cursor:pointer}
+.dmbtn:hover{background:var(--platinum);border-color:var(--deep)}
+.dmbtn[aria-expanded=true]{background:var(--amberc);color:var(--carbon);border-color:var(--amber-press)}
+.dmwrap{position:relative}
+.dmpanel{position:absolute;right:0;top:2px;z-index:60;min-width:222px;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:3px;
+  box-shadow:0 10px 30px -8px rgba(0,0,0,.5);padding:6px}
+.dmpanel.wide{min-width:250px}
+.dmi{display:flex;align-items:center;gap:9px;width:100%;text-align:left;
+  padding:7px 9px;font-size:13px;font-weight:600;color:var(--tx);
+  background:none;border:none;border-radius:2px;cursor:pointer}
+.dmi i{font-style:normal;width:18px;text-align:center;flex:none;opacity:.9}
+.dmi:hover{background:var(--platinum)}
+.dmi[disabled]{opacity:.4;cursor:default}
+.dmi[disabled]:hover{background:none}
+.dmi.bad{color:var(--bad)}
+.dmi.bad:hover{background:rgba(178,0,14,.1)}
+.dmsep{height:1px;background:var(--line);margin:5px 2px}
+.dmlbl{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--deep);padding:5px 9px 3px}
+.dmpanel .fmtpick{margin:0 4px 4px;background:none;border:none;box-shadow:none;padding:0}
+.dmpanel .fmtlbl{display:none}
+.dmpanel .vtog{margin:0 4px 6px;display:flex;gap:4px}
+.dmpanel .vtog button{flex:1}
+.dmpanel .dsortrow{margin:0 4px 4px;flex-direction:column;align-items:stretch;gap:4px}
+.dmpanel .dsortrow select{width:100%}
+/* find-a-filter, in the Special searches toolbar */
+.chipq{flex:1 1 220px;min-width:0;font-size:12.5px;padding:5px 9px;
+  border:1px solid var(--chrome);border-radius:2px;background:var(--surface);color:var(--tx)}
+.chipq::placeholder{color:var(--deep);opacity:.6}
+.chipq:focus{outline:2px solid var(--link);outline-offset:-2px}
+.chipq.noresult{border-color:var(--bad);background:rgba(178,0,14,.07)}
+/* While filtering, a group heading is a label for its matches rather than a
+   control — nothing is hidden behind it, so it stops looking clickable. */
+.groups.filtering details.grp>summary{cursor:default;opacity:.75}
+/* [hidden] is display:none at the lowest priority, so .chip's own display rule
+   silently beat it and every non-matching chip stayed on screen while the
+   filter quietly did the right thing underneath. Same trap the collection bar
+   hit further up; it has to be said explicitly. */
+#groups .chip[hidden],#groups details.grp[hidden]{display:none!important}
+/* A plain sentence that happens to be a link, rather than a button pretending
+   to be prose — same colour and weight as the text around it. */
+.lnkbtn{background:none;border:none;padding:0;font:inherit;color:var(--link);
+  font-weight:700;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.lnkbtn:hover{color:var(--deep)}
+/* "Work in progress", said once, in the one place it belongs: across the top
+   of the page it applies to. Amber because that is what amber is for here. */
+.wipnote{margin:0 0 16px;padding:9px 12px;text-align:center;
+  background:var(--amberc);color:var(--carbon);border:1px solid var(--amber-press);
+  border-radius:2px;font-size:12.5px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.11em}
 .dsortrow{display:flex;align-items:center;gap:7px;margin:12px 0 2px}
 .dsortrow label{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--deep)}
 .dsortrow select{flex:1;font-size:12.5px;padding:4px 6px}
 .ibar{display:flex;height:8px;border-radius:2px;overflow:hidden;margin:6px 0}
-.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:7px;margin-top:9px}
+/* 84px was a thumbnail — you could tell a card was there, not which card. At
+   116px the art reads and the name plate is legible, which is the difference
+   between a list of your deck and a look at it. auto-fill still means a wider
+   panel just gets more columns. */
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(116px,1fr));gap:8px;margin-top:9px}
 .dcard{position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--panel2)}
 .dcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block}
-.dcard .dq{position:absolute;top:2px;left:2px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:0 4px;border-radius:2px}
+/* How many copies, top right. It used to be a small green chip top left, and
+   it had two problems: on green or bright art it disappeared, and a bare "3"
+   sitting on a card looks like it belongs to the art rather than to you. So:
+   the same near-black the +/− bar at the bottom of this card already uses, a
+   hairline of light around it and a shadow under it so it separates from any
+   art underneath, and an "x" after the number so it reads as a quantity at a
+   glance instead of a number that happens to be there. The x is dimmed and
+   smaller because the digit is the thing you're actually scanning for. */
+.dcard .dq{position:absolute;top:3px;right:3px;min-width:21px;text-align:center;
+  background:rgba(4,14,26,.92);color:#fff;font-size:13px;font-weight:800;line-height:1.35;
+  padding:1px 5px;border-radius:3px;border:1px solid rgba(255,255,255,.38);
+  box-shadow:0 1px 3px rgba(0,0,0,.55)}
+.dcard .dq i{font-style:normal;font-size:.82em;font-weight:700;opacity:.7;margin-left:1px}
 .dcard .dbtn{position:absolute;bottom:2px;left:2px;right:2px;display:flex;justify-content:space-between;gap:3px}
 .dcard .dbtn button{flex:1;background:rgba(4,14,26,.92);border:1px solid var(--line2);border-radius:2px;
   color:var(--tx);font-size:12px;font-weight:800;line-height:1.15}
@@ -2634,11 +3040,22 @@ body.noremind .c.illegal img{filter:none}
 .mc{padding:20px 20px 18px}
 .mc h2{font-size:1.4rem;line-height:1.18;letter-spacing:-.01em}
 .mc .vv{color:var(--gold);font-size:14.4px;margin-top:2px}
-.mline{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:12px;
-  color:var(--deep);margin-top:9px}
-.mline .dot{width:11px;height:11px;border-radius:50%;flex:none;
+/* Kept for screen readers, which don't get the picture. */
+.mname{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+/* The facts you can't read off the art, as label-over-value pairs rather than
+   a run-on line of dot-separated fragments. Two columns so set and franchise
+   sit side by side instead of stacking into a tall list. */
+.mfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:9px 16px;
+  margin:0 0 4px}
+.mfacts>div{min-width:0}
+.mfacts dt{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--deep);margin-bottom:2px}
+.mfacts dd{font-size:13.5px;font-weight:700;color:var(--tx);line-height:1.35;
+  display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.mfacts dd i{font-style:normal;font-weight:600;color:var(--deep)}
+.mfacts .dot{width:11px;height:11px;border-radius:50%;flex:none;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
-.mline .sep{color:var(--deep)}
 .stats{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 11px}
 /* min-width:0 let the tile shrink below its own label, so WILLPOWER and
    STRENGTH spilled out over the neighbouring tile. max-content stops the tile
@@ -3270,7 +3687,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 <div id="bub"></div>
 
 <header>
-  <div class="logo"><span class="f">🐠</span><b>Ready Set Ink</b><span>the best cards are the friends you make along the way</span></div>
+  <button type="button" class="logo" id="logo" title="Back to the deck builder"><span class="f">🐠</span><b>Ready Set Ink</b><span>the best cards are the friends you make along the way</span></button>
   <div class="sp"></div>
   <span class="worn" id="worn"></span>
   <button class="btn" id="acct" hidden>Sign in</button>
@@ -3281,7 +3698,6 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <button id="tSearch">Search for cards</button>
   <button id="tColl" class="collonly">My collection</button>
   <button id="tDecks">Decks</button>
-  <button id="tMeta">Recommended decks</button>
   <span class="otherwrap">
     <button id="tOther">Other</button>
     <button id="tOtherMenu" aria-label="Other menu" aria-haspopup="true" aria-expanded="false">☰</button>
@@ -3313,7 +3729,6 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
       <span class="kn"><i>📖</i></span><span class="lb">Search franchise</span></button>
     <button class="swx flav" id="tgFlav" aria-pressed="false">
       <span class="kn"><i>💬</i></span><span class="lb">Search flavor text</span></button>
-    <span class="tghint" id="tgHint"></span>
   </div>
   <div class="srow">
     <button class="btn bad" id="clr">Clear all</button>
@@ -3332,6 +3747,9 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
     <div class="specialbody">
       <div class="exprow">
         <button class="fbtn" id="fb"><span class="fi">🐠</span><span id="fbl">Flounder</span></button>
+        <input class="chipq" id="chipQ" type="search" autocomplete="off"
+          placeholder="Find a search — type “removal”, “lore”, “songs”…"
+          aria-label="Find a special search by name">
         <button class="btn" id="expAll">Expand all</button>
         <button class="btn" id="colAll">Collapse all</button>
       </div>
@@ -3371,7 +3789,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
         <details class="cvset" id="cvset">
           <summary>Card view settings</summary>
           <div class="cvbody">
-            <button class="btn" id="tgRemind">Reminder tags: on</button>
+            <button class="btn" id="tgRemind">Reminder tags <b class="sw">ON</b></button>
             <button class="btn" id="tgPrice">Prices: off</button>
             <label class="cvcols">Columns
               <select id="gcols">
@@ -3407,8 +3825,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
 <section class="view" id="vPref">
   <div class="page">
     <h1><span class="gi">⚙️</span>Settings</h1>
-    <p class="lede">Switches that change how the site behaves for you. Everything here is
-      remembered in this browser, and follows your account if you're signed in.</p>
+    <p class="lede">Changes how the site behaves for you.</p>
     <div id="prefBody"></div>
   </div>
 </section>
@@ -3829,7 +4246,7 @@ function priceChip(c){
   return `<button class="prc" data-buyone="${esc(c.f)}"
     title="Market price ${money(raw)} as of ${esc(priceDate())} — a rounded snapshot, not a live quote. Tap to buy on TCGplayer — affiliate link, opens in a new tab."
     aria-label="${esc(c.f)}, approximately ${money(v)}, plus about ${SHIP_EST} shipping. Buy on TCGplayer, opens in a new tab.">
-    <span class="prcval">≈ ${money(v)}</span><span class="shipnote">+${SHIP_EST} shipping</span><span class="buyicon">🛒</span>
+    <span class="prcval">≈ ${money(v)}</span><span class="buyicon">🛒</span>
   </button>`}
 const priceDate=()=>DATA.priced||"";
 /* TCGplayer mass entry. Their format is "<qty> <name>" per line, lines joined
@@ -4085,6 +4502,29 @@ const INKWELL=/(?:from|in) your inkwell|cards? in your inkwell|inkwell into your
    its cost so it survives being traded into. */
 const isQuester =c=>c.ty==="Character"&&(c.lo||0)>=2&&(c.lo||0)*2>=c.c+1;
 const isContester=c=>c.ty==="Character"&&(c.st||0)>c.c&&(c.wi||0)>=c.c;
+/* The finisher — the card you're holding when you're on 14 and need to get to
+   20. It sat unbuilt for a while because "finisher" is a word people use for
+   whatever won them their last game, and a chip can't filter on that. What it
+   CAN filter on is the two ways a card actually closes a game out, and both
+   are countable:
+
+     a body they can't answer — quests for 3 or more, and Evasive, Ward or
+       "can't be challenged" means the turn you play it isn't a turn they get
+       to trade with it. Three lore on its own isn't a finisher; three lore
+       they have to sit and watch is.
+     one big lore swing — the text puts up 3 or more lore in a single go, or
+       scales ("gains lore equal to", "1 lore for each"). Two-lore effects are
+       a tempo gain, not a closer, and they'd drag half the game in.
+
+   Reminder text is stripped first for the same reason the strength chip does
+   it. 58 cards, which is the size this should be: "Good lore for the ink" is
+   224 and answers a different question — that one is about rate, this one is
+   about the last four points of lore. */
+const BIGLORE=/gains?\s+(?:[3-9]|\d\d)\s+lore|gains?\s+lore equal|gains?\s+\d+\s+lore for each/i;
+const isFinisher=c=>{
+  const t=(c.ef||"").replace(/\([^)]*\)/g," ");
+  const unstoppable=c.kw.some(k=>k[0]==="Evasive"||k[0]==="Ward")||/can't be challenged/i.test(t);
+  return (c.ty==="Character"&&(c.lo||0)>=3&&unstoppable)||BIGLORE.test(t);};
 
 /* The order below is the order you build a deck in, not the order the rules
    manual is written in: who wins the game, what answers them, what pays for
@@ -4107,6 +4547,11 @@ const GROUPS=[
     text; these two read the numbers, because the two jobs a body does — race
     on lore, or hold the board — are decided by the stat line and not by any
     ability. A deck that has drawn only one of these two loses to the other. */
+ /* One chip, on purpose, and first: the group order below runs "who wins the
+    game, then what answers them", and this is the who. Everything under it is
+    a card you play because of what this one does. */
+ {g:"Closing the game out",chips:[
+   {id:"finisher",l:"Closes out the game",fn:isFinisher}]},
  {g:"What a character is for",chips:[
    {id:"quester",l:"Good lore for the ink",fn:isQuester},
    {id:"contest",l:"Trades up in a challenge",fn:isContester},
@@ -4291,6 +4736,8 @@ const CHIPWORDS={
  heal:["heal","healing","remove damage"],
  banish:["removal","banish"],
  lore:["bonus lore","extra lore","more lore"],
+ finisher:["finisher","closer","game ender","win the game","wins the game",
+           "closes the game","last few lore","gets me to 20"],
  boost:["boost"],
  boostcheap:["cheap boost"],
  tribal:["tribal","tribe boost"],
@@ -4962,7 +5409,28 @@ function moneyBlock(cur,base){
 const PHONE=()=>window.matchMedia("(max-width:900px)").matches;
 
 /* ===================== chips ===================== */
-const GOPEN=load("fs3_gopen",null);
+/* ---- which groups are folded up ----------------------------------------
+   This remembers what is CLOSED. It used to remember what was OPEN, in a
+   `const` read once when the page loaded — and there was the bug behind
+   "the menus collapse at random when I press a search". Opening a group
+   wrote the new list to storage but never updated the variable, so the next
+   chip press re-rendered every group from a snapshot taken before you
+   touched anything, and everything you had opened during that session
+   slammed shut. It looked random because it depended on what your last
+   session happened to leave behind.
+
+   Closed-set rather than open-set for a second reason: with an open-list, a
+   group added to the app later is missing from everyone's saved list and so
+   arrives collapsed for every existing user. Absent now means open, which is
+   the default Ben wants — everything expanded unless you folded it yourself.
+
+   Coconuts and What it costs are not in here at all. They have no data-g,
+   they are the two long ones, and they stay closed until you ask. */
+let GCLOSED=new Set(load("fs3_gclosed",[]));
+const saveGClosed=()=>save("fs3_gclosed",[...GCLOSED]);
+/* Live text filter over every chip in the panel — the way to see all 75
+   filters at once without reading seventeen headings to find one. */
+let CHIPQ="";
 function renderChips(){
   const cur=filt();            // counts are "how many of what I'm looking at also match"
   const base=filt("ab");
@@ -4973,8 +5441,14 @@ function renderChips(){
        default stacked seventeen expanded groups above the results, so the
        first card sat 3,290px down the page: four full screens of controls
        before a single thing you came to look at. */
-    const open=GOPEN?GOPEN.includes(g.g):!PHONE();
-    return `<details class="grp"${open||active?" open":""} data-g="${esc(g.g)}">
+    const open=!GCLOSED.has(g.g);
+    /* Only `open`. It used to be `open||active`, so a group holding a switched-on
+       filter forced itself back open — which is half of what "it collapses at
+       random" felt like from the other side: you fold a group, press a chip in
+       it, and it unfolds itself again. If you folded it, it stays folded; the
+       "N on" count in the heading is how a closed group tells you it's still
+       doing something. */
+    return `<details class="grp"${open?" open":""} data-g="${esc(g.g)}">
       <summary>${g.g}${active?`<span class="gn">${active} on</span>`:""}</summary><div class="chips">`+
       g.chips.map(a=>{
         const on=S.ab.has(a.id);
@@ -4993,10 +5467,61 @@ function renderChips(){
   /* [data-g] only — the Coconut block has no data-g, so it is neither saved
      into GOPEN nor reopened from it, which is what keeps it always-closed. */
   $("groups").querySelectorAll("details.grp[data-g]").forEach(d=>d.ontoggle=()=>{
-    save("fs3_gopen",[...$("groups").querySelectorAll("details.grp[data-g][open]")].map(x=>x.dataset.g))});
+    /* Update the set in memory as well as on disk. Not doing that was the
+       whole bug — see the note on GCLOSED. */
+    if(d.open)GCLOSED.delete(d.dataset.g);else GCLOSED.add(d.dataset.g);
+    saveGClosed()});
+  applyChipFilter();
   const nOn=S.ab.size;
   $("specialCnt").textContent=nOn?nOn+" active":GROUPS.length+" groups · "+AB.length+" filters";
   if(nOn&&!$("special").open)$("special").open=true;
+}
+
+/* Typing in the box hides every chip that doesn't match and every group left
+   with nothing in it, and unfolds whatever is left — so one word finds a
+   filter across seventeen headings instead of you reading all seventeen. It
+   runs over the DOM that is already there rather than re-rendering, because
+   re-rendering on each keystroke would take the focus out of the box you are
+   typing into. Called again at the end of every renderChips() so a filter
+   stays applied when the counts change under it. */
+function applyChipFilter(){
+  const box=$("chipQ");if(!box)return;
+  const q=CHIPQ.trim().toLowerCase();
+  const groups=$("groups").querySelectorAll("details.grp");
+  if(!q){
+    groups.forEach(d=>{
+      d.hidden=false;
+      d.querySelectorAll(".chip").forEach(c=>c.hidden=false);
+      const g=d.dataset.g;
+      if(g)d.open=!GCLOSED.has(g);
+    });
+    $("groups").classList.remove("filtering");
+    return;
+  }
+  $("groups").classList.add("filtering");
+  let hits=0;
+  groups.forEach(d=>{
+    let n=0;
+    const gname=(d.dataset.g||"").toLowerCase();
+    d.querySelectorAll(".chip").forEach(c=>{
+      const lbl=((c.querySelector("span")||{}).textContent||"").toLowerCase();
+      /* CHIPWORDS already exists to let someone type "removal" and land on
+         Banishes — the labels are written in table language and nobody types
+         "Banishes". Searching it here as well as the printed label is the
+         difference between this box finding things and this box being a
+         disappointment. The group heading counts too, so "getting rid of"
+         brings back everything in that section. */
+      const syn=(CHIPWORDS[c.dataset.a]||[]).join(" ").toLowerCase();
+      const m=lbl.includes(q)||syn.includes(q)||gname.includes(q);
+      c.hidden=!m;if(m)n++;
+    });
+    hits+=n;
+    d.hidden=!n;
+    /* Groups are forced open while filtering, and NOT written to GCLOSED —
+       a search is a temporary view, not a change to how you keep the panel. */
+    if(n)d.open=true;
+  });
+  box.classList.toggle("noresult",!hits);
 }
 
 /* ===================== pills ===================== */
@@ -5173,11 +5698,11 @@ function renderSide(){
   const nTy=tally(bTy,c=>[c.ty,...(c.sub||[])]);
   const at=(m,k)=>m.get(k)||0;
 
-  const inkB=`<div class="inks">${INKS.map(i=>`<button class="ic${S.ink.has(i)?" on":""}" data-ink="${i}">${i}</button>`).join("")}
+  const inkB=`<div class="inks inkgrid">${INKS.map(i=>`<button class="ic${S.ink.has(i)?" on":""}" data-ink="${i}">${i}</button>`).join("")}
     <button class="ic dual${S.dual?" on":""}" data-dual="1">Dual Ink</button></div>
     <div class="cap">${S.ink.size}/${cap} inks — ${FMT[deck().fmt].l}</div>`;
   const TY=["Character","Action","Item","Location","Song"];
-  const tyB=`<div class="inks">${TY.map(t=>`<button class="ic${S.type.has(t)?" on":""}" data-type="${t}">${t} <span style="opacity:.6">${
+  const tyB=`<div class="inks tygrid">${TY.map(t=>`<button class="ic${S.type.has(t)?" on":""}" data-type="${t}">${t} <span style="opacity:.6">${
     at(nTy,t)}</span></button>`).join("")}</div>`;
   const RAR=["Common","Uncommon","Rare","Super Rare","Legendary","Enchanted","Epic","Iconic","Special","Promo"];
   const rarB=checklist(RAR.map(r=>[r,at(nRar,r)]).filter(x=>x[1]||S.rar.has(x[0])),S.rar,"rar");
@@ -5207,7 +5732,7 @@ function renderSide(){
   /* Inkable and Set were one section called "Inkable & Set". They answer
      completely different questions and inkable is one of the first things
      anyone narrows by, so they're split and inkable moved near the top. */
-  const iwB=`<div class="inks">${[["any","Any"],["yes","Can be inked"],["no","Cannot be inked"]]
+  const iwB=`<div class="inks iwstack">${[["any","Any"],["yes","Can be inked"],["no","Cannot be inked"]]
       .map(([v,l])=>`<button class="ic${S.inkwell===v?" on":""}" data-iw="${v}">${l}</button>`).join("")}</div>`;
   const setB=`<select id="setSel"><option value="">All sets</option>${
       SETS.map(([c,o])=>`<option value="${esc(c)}"${S.set===c?" selected":""}>${esc(o.n)}</option>`).join("")}</select>`;
@@ -5313,6 +5838,29 @@ const LOC_NOTE=`<div class="locnote"><b>How locations work</b><ul>
 /* Illumineer's Quest cards (sets Q1 / Q2) are campaign-only — they are not legal
    in ANY constructed format, so this check ignores the chosen format entirely. */
 const isQuest=c=>/^Q/i.test(String(c.s||""));
+/* How many copies the format allows of this card — the Coconut and the item it
+   names are the exception that get four in a singleton deck. illegalReason
+   flags going over it after the fact; the stepper and the typed quantity box
+   use it to not go over it in the first place. */
+function maxCopies(c){
+  const F=FMT[deck().fmt];
+  return coconut4x(c)?4:F.max;
+}
+/* Set a card to an exact number of copies, which is what someone means when
+   they type 4 in the box rather than pressing + four times. Clamped, and it
+   marks the undo stack once for the whole change rather than once per copy. */
+function setCardCount(f,n){
+  const c=CARDS.find(x=>x.f===f);if(!c)return false;
+  if(f===BANNED)return false;
+  const d=deck(),cur=d.cards[f]||0;
+  n=Math.max(0,Math.min(Math.floor(n)||0,maxCopies(c)));
+  if(n===cur)return false;
+  mark((n>cur?"adding ":"removing ")+c.n);
+  if(n)d.cards[f]=n;else delete d.cards[f];
+  touchDeck();renderDeck();refreshTiles();
+  if(n>cur)award("firstcard");
+  return true;
+}
 function illegalReason(c){
   const d=deck(),F=FMT[d.fmt];
   if(c.f===BANNED)return "banned";
@@ -5388,9 +5936,12 @@ function tile(c){
     ${im}
     ${wantShift?`<button class="shift" data-sh="${esc(c.f)}">Add shift target?</button>`:""}
     ${TAB!=="tSearch"&&!ban?`<div class="qty${q?" has":""}"><button class="m" data-minus="${esc(c.f)}" title="Remove one">−</button>
-        <span class="n">${q||0}</span>
+        <input class="n" type="text" inputmode="numeric" autocomplete="off" spellcheck="false"
+          value="${q||0}" data-qty="${esc(c.f)}" aria-label="Copies of ${esc(c.f)} in the deck"
+          title="Type a number and press Enter">
         <button class="p" data-plus="${esc(c.f)}" title="Add one">+</button></div>`:""}
-    ${bad&&!ban?`<div class="why">Not legal<span>${esc(bad)}</span></div>`:""}
+    ${bad&&!ban?`<div class="why" data-why="1" title="Why this is flagged">Not legal<span>${esc(bad)}</span>
+      <button class="whyoff" data-whyoff="1">Turn reminder tags off</button></div>`:""}
     ${priceChip(c)}</div>`;
 }
 function renderGrid(){
@@ -5507,6 +6058,42 @@ document.addEventListener("keydown",e=>{
   }
 });
 
+/* ---- press-and-hold on + -------------------------------------------------
+   This state deliberately lives outside the tile, and the listener that stops
+   it is on the window. Both are the fix for a runaway.
+
+   It used to keep the timer in a closure per tile and listen for pointerup and
+   pointerleave ON THE + BUTTON. But adding a card calls refreshTiles(), which
+   does el.innerHTML = fresh.innerHTML — so every single tick destroyed the
+   very button being held. Releasing your finger then delivered pointerup to a
+   node that was no longer in the document, nothing ever called stop, and the
+   timer kept going and going, accelerating to one card every 90ms with no way
+   on earth to halt it. Letting go made it worse, not better, because letting
+   go was exactly the event that had stopped working.
+
+   So: one timer, tracked here; stopped from the window, which no re-render can
+   take away; and it stops itself at the copy limit instead of stacking
+   twenty-nine illegal copies of a card. */
+let HOLD=null;
+function stopHold(){if(HOLD){clearTimeout(HOLD.t);HOLD=null}}
+function startHold(f,el){
+  stopHold();
+  const c=CARDS.find(x=>x.f===f);
+  const lim=c?maxCopies(c):4;
+  let rate=340;
+  const step=()=>{
+    if(!HOLD)return;
+    if((deck().cards[f]||0)>=lim||!addCard(f)){stopHold();return}
+    pop(el);flyToDeck(el,1);
+    rate=Math.max(90,rate*0.7);
+    HOLD.t=setTimeout(step,rate);
+  };
+  HOLD={t:setTimeout(step,rate),f};
+}
+["pointerup","pointercancel"].forEach(t=>window.addEventListener(t,stopHold,true));
+window.addEventListener("blur",stopHold);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)stopHold()});
+
 function bindGrid(){
   const g=$("grid");
   g.querySelectorAll(".c").forEach(el=>{
@@ -5523,23 +6110,10 @@ function bindGrid(){
       if(added){pop(el);flyToDeck(el,added)}
     };
     /* Hold + to stack. Starts slow so a single press is still one card, then
-       accelerates, so getting to four is a gesture rather than four clicks. */
+       accelerates, so getting to four is a gesture rather than four clicks.
+       startHold lives outside this function — see the note on it. */
     const plus=el.querySelector("[data-plus]");
-    if(plus){
-      let hold=null,rate=340,n=0;
-      const start=ev=>{
-        ev.preventDefault();
-        const step=()=>{
-          if(addCard(f)){n++;pop(el);flyToDeck(el,1)}
-          rate=Math.max(90,rate*0.7);
-          hold=setTimeout(step,rate);
-        };
-        hold=setTimeout(step,rate);
-      };
-      const stop=()=>{clearTimeout(hold);hold=null;rate=340;n=0};
-      plus.addEventListener("pointerdown",start);
-      ["pointerup","pointerleave","pointercancel"].forEach(t=>plus.addEventListener(t,stop));
-    }
+    if(plus)plus.addEventListener("pointerdown",ev=>{ev.preventDefault();startHold(f,el)});
     /* Drag a card onto the deck rail. */
     el.setAttribute("draggable","true");
     el.addEventListener("dragstart",ev=>{
@@ -5579,8 +6153,47 @@ function bindGrid(){
   if(TAB!=="tSearch"){
     g.querySelectorAll("[data-plus]").forEach(b=>b.onclick=e=>{e.stopPropagation();addCard(b.dataset.plus)});
     g.querySelectorAll("[data-minus]").forEach(b=>b.onclick=e=>{e.stopPropagation();delCard(b.dataset.minus)});
+    /* Type a number in the box instead of pressing + four times. Enter commits;
+       Escape puts back what was there; clicking away commits too, because
+       typing 4 and then clicking the next card obviously meant four. Clicking
+       into the box must not also fire the tile's "click to add", hence the
+       stopPropagation on mousedown as well as click. */
+    g.querySelectorAll("[data-qty]").forEach(inp=>{
+      const f=inp.dataset.qty;
+      const cur=()=>String(deck().cards[f]||0);
+      const commit=()=>{
+        const v=inp.value.trim();
+        /* An empty box is someone who cleared it to type, not someone asking
+           for zero copies — putting the card back to nothing there would be a
+           nasty surprise. */
+        if(v===""){inp.value=cur();return}
+        if(!setCardCount(f,parseInt(v,10)))inp.value=cur();
+      };
+      inp.onmousedown=e=>e.stopPropagation();
+      inp.onclick=e=>{e.stopPropagation();inp.select()};
+      inp.onfocus=()=>inp.select();
+      inp.onkeydown=e=>{
+        e.stopPropagation();                       // the grid has its own 1-4 and i shortcuts
+        if(e.key==="Enter"){e.preventDefault();commit();inp.blur()}
+        else if(e.key==="Escape"){e.preventDefault();inp.value=cur();inp.blur()}
+      };
+      inp.onblur=commit;
+    });
     g.querySelectorAll("[data-sh]").forEach(b=>b.onclick=e=>{e.stopPropagation();openShift(b.dataset.sh)});
   }
+  /* The tag is clickable on every tab — it explains itself, and it offers the
+     way out. stopPropagation because the tile underneath adds a card. */
+  g.querySelectorAll("[data-why]").forEach(w=>{
+    w.onclick=e=>{
+      e.stopPropagation();
+      if(e.target.closest("[data-whyoff]")){
+        REMIND=false;save("fs3_remind",REMIND);drawRemind();return;
+      }
+      const wasOpen=w.classList.contains("open");
+      g.querySelectorAll("[data-why].open").forEach(o=>o.classList.remove("open"));
+      w.classList.toggle("open",!wasOpen);
+    };
+  });
   const mo=$("mo");if(mo)mo.onclick=()=>{S.limit+=150;renderGrid()};
   bindDrop();
   if(KBI>=0)kbFocus(KBI);
@@ -5674,25 +6287,36 @@ function openM(f,showPr){
       ?(isLoc(c)?`<div class="locframe"><img src="${MAIN}" alt="${esc(c.f)}">${foilLayer(P||c)}${symLayer(c)}</div>`
                 :`<div class="mimg"><img src="${MAIN}" alt="${esc(c.f)}">${foilLayer(P||c)}${symLayer(c)}</div>`)
       :`<div class="ph">${esc(c.f)}</div>`}
-    <div class="mc"><h2>${esc(c.n)}</h2>
-    ${c.v?`<div class="vv">${esc(c.v)}</div>`:""}
-    <div class="mline">
-      ${c.co.map(i=>`<span class="dot" style="background:${HEX[i]||"#666"}" title="${esc(i)}"></span>`).join("")}
-      <span>${esc(c.co.join(" / "))}</span><span class="sep">·</span>
-      <span>${P?esc(SETNAME(P.s)):esc(c.sn)} #${P?esc(P.num):esc(String(c.num))}</span><span class="sep">·</span>
-      <span>${rarLabel(P?P.r:c.r)}</span>${(P||c).ft&&(P||c).ft.length
-        ?`<span class="foilbadge" title="Foil pattern, from LorcanaJSON">${esc(foilName(P||c))} foil</span>`:""}${c.sto?`<span class="sep">·</span><span>📖 ${esc(c.sto)}</span>`:""}
-    </div>
+    <div class="mc">
+    <!-- The name and version used to be an h2 and a subtitle at the top of
+         this column, in type big enough to be the loudest thing in the modal —
+         next to a picture of the card with its name printed across it. It told
+         you the one thing you could already see. It stays for screen readers,
+         which have no picture, and comes off the screen.
+
+         What replaces it is the opposite: the facts you CAN'T read off the
+         art. Which set it is and what number, what film it's from, who drew
+         it, whether it's inkable, whether it's Core legal. Ink and rarity ride
+         along because they're one word each and they're what people sort by. -->
+    <h2 class="mname">${esc(c.f)}</h2>
+    <dl class="mfacts">
+      <div><dt>Ink</dt><dd>${c.co.map(i=>`<span class="dot" style="background:${HEX[i]||"#666"}" title="${esc(i)}"></span>`).join("")}${esc(c.co.join(" / "))||"—"}</dd></div>
+      <div><dt>Set</dt><dd>${P?esc(SETNAME(P.s)):esc(c.sn)} <i>#${P?esc(P.num):esc(String(c.num))}</i></dd></div>
+      <div><dt>Rarity</dt><dd>${rarLabel(P?P.r:c.r)}${(P||c).ft&&(P||c).ft.length
+        ?`<span class="foilbadge" title="Foil pattern, from LorcanaJSON">${esc(foilName(P||c))} foil</span>`:""}</dd></div>
+      ${c.sto?`<div><dt>Franchise</dt><dd>📖 ${esc(c.sto)}</dd></div>`:""}
+      ${c.ar&&c.ar.length?`<div><dt>Illustrator</dt><dd>${esc(c.ar.join(" · "))}</dd></div>`:""}
+    </dl>
     <div class="stats">
       <div class="stt cost"><b>${c.c}</b><i>Cost</i></div>
       ${c.st!=null?`<div class="stt"><b>${c.st}</b><i>Strength</i></div>`:""}
       ${c.wi!=null?`<div class="stt"><b>${c.wi}</b><i>Willpower</i></div>`:""}
       ${c.lo!=null?`<div class="stt lore"><b>${c.lo}</b><i>Lore</i></div>`:""}
-      ${c.ar&&c.ar.length?`<div class="stt art"><b>${esc(c.ar.join(" · "))}</b><i>Illustrator</i></div>`:""}
     </div>
     <div class="flags">
       <span class="flag ${c.ik?"yes":"no"}">${c.ik?"Inkable":"Not inkable"}</span>
       <span class="flag ${c.core?"yes":"no"}">${c.core?"Core legal":"Not Core legal"}</span>
+      ${isQuest(c)?`<span class="flag no">Never tournament legal</span>`:""}
       ${isStar(c.f)?`<span class="flag star">★ Staple</span>`:""}
     </div>
     ${c.sub.length||c.kw.length?`<div class="bdgs">${
@@ -5851,27 +6475,59 @@ function renderDeck(hostId){
   const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
   $("mN").textContent=tot;
   const names=Object.keys(DECKS.list);
-  let h=`<h3 class="hd">Deck<span class="vtog">
-      <button id="vList" class="${DVIEW==="img"?"":"on"}">Names</button>
-      <button id="vImg" class="${DVIEW==="img"?"on":""}">Images</button></span></h3>
-    <!-- Name, unsaved flag and Save: these were a separate full-width bar at
-         the top of the page. They belong to the deck, so they live in the deck
-         panel now. -->
-    <div class="dhead">
-      <div class="dhname"><b id="dbName" class="dkname" role="button" tabindex="0"
-        title="Click to rename">${esc(DECKS.cur)}</b>
-        <span id="dbDirty" class="dbdirty"${DECKDIRTY?"":" hidden"}>unsaved</span></div>
-      <button class="btn" id="dundo" title="Undo (Ctrl+Z)"${UNDO.length?"":" hidden"}>↶ Undo</button>
-      <button class="btn go" id="dbSave">${DECKS.cur===DRAFT?"Save deck":"Save changes"}</button>
-    </div>
-    <div class="row"><select id="dsel">${
-    names.map(n=>`<option${n===DECKS.cur?" selected":""}>${esc(n)}</option>`).join("")}</select>
-    <button class="btn" id="dnew" title="New deck">+</button>
-    <button class="btn" id="ddup" title="Duplicate this deck — try a variant without losing this one">⧉</button>
-    <button class="btn" id="dren" title="Rename this deck">✏️</button>
-    <button class="btn bad" id="ddel" title="Delete this deck">🗑</button></div>
-    <div class="row"><button class="btn" id="dlink" title="Copy a link that gives anyone a copy of this deck">🔗 Share this deck</button>
-    <button class="btn" id="dimp" title="Paste a deck list from anywhere">📥 Paste a list</button></div>
+  /* ---- the two menus -----------------------------------------------------
+     The header used to carry nine controls in a row: a view toggle, undo,
+     save, a deck picker, and four icon buttons whose meaning you had to hover
+     to learn. Ben's call: put them behind a ⋯ and let the panel be about the
+     deck.
+
+     Two menus, not one, because they answer different questions. ⋯ is "what do
+     I want to DO to this deck" — and Paste a list is first in it, because
+     importing is how most decks start. 👁 is "how do I want to LOOK at it" —
+     the grouping and the names/images switch, which change nothing and undo
+     nothing. Mixing a delete into the same list as a display preference is how
+     people delete decks.
+
+     Every id here is the one it always was, so all the wiring below still
+     finds these buttons wherever they now sit. */
+  /* Declared here rather than further down, because the Group by row is built
+     into the 👁 menu at the top of the panel now and a const can't be read
+     before its own declaration runs. */
+  const DSORTS=[["type","Type — characters, actions, songs…"],
+    ["cost","Cost — one section per ink cost"],
+    ["ink","Ink colour"],
+    ["curve","Curve — one flat list, cheapest first"],
+    ["set","Set — newest first"],
+    ["name","Name A–Z"]];
+  const sortRow=`<div class="dsortrow"><label for="dsort">Group by</label><select id="dsort">${
+    DSORTS.map(([v,l])=>`<option value="${v}"${DSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select></div>`;
+  let h=`<h3 class="hd">Deck
+    <span class="dmenus">
+      <button class="dmbtn" id="dEye" aria-haspopup="true" aria-expanded="false"
+        title="How this deck is shown">👁</button>
+      <button class="dmbtn" id="dMore" aria-haspopup="true" aria-expanded="false"
+        title="Deck options">⋯</button>
+    </span></h3>
+    <div class="dmwrap">
+      <div class="dmpanel" id="dEyePanel" role="menu" hidden>
+        <div class="dmlbl">Show the deck as</div>
+        <div class="vtog">
+          <button id="vList" class="${DVIEW==="img"?"":"on"}">Names</button>
+          <button id="vImg" class="${DVIEW==="img"?"on":""}">Images</button></span>
+        </div>
+        ${sortRow}
+      </div>
+      <div class="dmpanel wide" id="dMorePanel" role="menu" hidden>
+        <button class="dmi" id="dimp" role="menuitem"><i>📥</i>Paste a deck list</button>
+        <button class="dmi" id="dundo" role="menuitem"${UNDO.length?"":" disabled"}><i>↶</i>Undo</button>
+        <button class="dmi" id="dbSave" role="menuitem"><i>💾</i>${DECKS.cur===DRAFT?"Save deck":"Save changes"}</button>
+        <div class="dmsep"></div>
+        <button class="dmi" id="dnew" role="menuitem"><i>➕</i>New deck</button>
+        <button class="dmi" id="ddup" role="menuitem"><i>⧉</i>Duplicate this deck</button>
+        <button class="dmi" id="dren" role="menuitem"><i>✏️</i>Rename this deck</button>
+        <button class="dmi" id="dlink" role="menuitem"><i>🔗</i>Share this deck</button>
+        <div class="dmsep"></div>
+        <div class="dmlbl">Format</div>
     <!-- Format lives here, not in the bar above. It decides how many inks you
          may use, how many copies of a card, and which cards are legal at all —
          every warning below is downstream of it. As a bare dropdown in the
@@ -5883,14 +6539,46 @@ function renderDeck(hostId){
         `<button class="fmtb${k===d.fmt?" on":""}" data-fmt="${k}">${esc(f.l)}</button>`).join("")}</div>
       <div class="fmtwhy">${esc(FMT_BLURB[d.fmt]||"")}</div>
     </div>
+        <div class="dmsep"></div>
+        <button class="dmi bad" id="ddel" role="menuitem"><i>🗑</i>Delete this deck</button>
+      </div>
+    </div>
+    <div class="dhead">
+      <div class="dhname"><b id="dbName" class="dkname" role="button" tabindex="0"
+        title="Click to rename">${esc(DECKS.cur)}</b>
+        <span id="dbDirty" class="dbdirty"${DECKDIRTY?"":" hidden"}>unsaved</span></div>
+    </div>
+    <div class="row"><select id="dsel" aria-label="Switch deck">${
+    names.map(n=>`<option${n===DECKS.cur?" selected":""}>${esc(n)}</option>`).join("")}</select></div>
     <div class="prog"><i style="width:${Math.min(100,tot/F.min*100)}%"></i></div>
     <div class="st">${tot} / ${F.min} cards · ${F.l}</div>`;
 
+  /* The panel is built in three pieces, and the order they end up in is the
+     whole point of this function.
+
+     It used to be one string, and the deck's own cards were the very last
+     thing appended to it — behind the name, the format picker, the stats, the
+     price, the curve, the ink and type legends, the warnings, the analysis and
+     the advice. On a 60-card deck that put the first card you own about 1,250
+     pixels down a panel you had to scroll to reach. You were looking at a deck
+     builder that would not show you your deck.
+
+     So: `h` is the small amount that has to sit above the cards — which deck
+     this is, whether it's saved, how full it is, and anything actually wrong
+     with it. `hCards` is the deck. `hBelow` is everything you consult rather
+     than watch: format, sharing, stats, curve, analysis, what I'd change. All
+     of it still here, none of it in front of the cards.
+
+     The format still reads at a glance in the count line above ("24 / 60
+     cards · Infinity"), which is why the picker itself is comfortable moving
+     down with the rest of the reference material. */
+  let hBelow=``;
+
   if(d.fmt==="coconut"){
-    h+=`<h3>Coconut</h3><select id="csel"><option value="">— none —</option>${
+    hBelow+=`<h3>Coconut</h3><select id="csel"><option value="">— none —</option>${
       COCO.map((c,i)=>`<option value="${i}"${String(d.coco)===String(i)?" selected":""}>${esc(c.n)} – ${esc(c.v)} (${c.i})</option>`).join("")}</select>`;
     if(d.coco!=null&&COCO[d.coco]){const co=COCO[d.coco];
-      h+=`<div class="st" style="background:var(--platinum);border:1px solid var(--line);border-radius:8px;padding:8px;margin-top:6px">
+      hBelow+=`<div class="st" style="background:var(--platinum);border:1px solid var(--line);border-radius:8px;padding:8px;margin-top:6px">
         <b style="color:var(--gold)">${esc(co.n)} – ${esc(co.v)}</b><br>${esc(co.t)}</div>`}
   }
 
@@ -5904,7 +6592,7 @@ function renderDeck(hostId){
        carries its own counts and a share-of-deck line, because "7 cards" means
        nothing without "that's 12% of the deck". Inkable is flagged red under
        40% — that's the number that decides whether the deck functions. */
-    h+=`<h3>Stats</h3>
+    hBelow+=`<h3>Stats</h3>
       <div class="dstats">
         <div class="dstat"><b>${tot}</b><i>cards</i></div>
         <div class="dstat"><b>${avg}</b><i>avg cost</i></div>
@@ -5950,15 +6638,18 @@ function renderDeck(hostId){
   const w=deckWarnings();
   const illegalN=L.filter(({c})=>illegalReason(c)).length;
   h+=`<div class="warns">${w.length?w.slice(0,8).map(x=>`<div class="wn">⚠ ${esc(x)}</div>`).join("")
-      :(tot?`<div class="okm">✓ No rules issues.</div>`:"")}</div>
-    <div class="acts">
+      :(tot?`<div class="okm">✓ No rules issues.</div>`:"")}</div>`;
+  /* Warnings are the exception that stays on top. Everything else down there
+     is something you go and look at; a rules problem is something that has to
+     come and find you, so it sits with the card count where you can't miss it. */
+  hBelow+=`<div class="acts">
       <button class="btn" id="dc">📋 Copy</button>
       <button class="btn" id="dim">📥 Import deck</button>
       ${illegalN?`<button class="btn bad" id="drm">Remove not legal cards (${illegalN})</button>`:""}
       <button class="btn bad" id="dx">Clear</button></div>`;
   if(tot){
     const a=archetype(),cv=curveCheck();
-    h+=`<details class="sec" style="margin-top:12px"${DANA?" open":""} id="dana">
+    hBelow+=`<details class="sec" style="margin-top:12px"${DANA?" open":""} id="dana">
       <summary>Deck analysis</summary><div class="sb">
       <div class="st">Plays like</div><span class="arch ${a.k}">${a.k.toUpperCase()}</span>
       <div class="st">${esc(a.why)}</div>
@@ -5967,19 +6658,23 @@ function renderDeck(hostId){
       <div class="acts"><button class="btn" id="dh">🎴 Sample hand</button>
         <button class="btn" id="dgf">🎣 Goldfish 1,000 hands</button></div>
       <div id="hb"></div><div id="gf"></div></div></details>`;
-    /* The doctor sits OUTSIDE the analysis drawer, under the rules warnings,
-       because someone who never opens a drawer labelled "analysis" is exactly
-       the person it is written for. */
-    const adv=deckAdvice();
+    /* ---- "What I'd change" is shelved -------------------------------------
+       Ben's call, 2026-09-06: the advice isn't good enough to be giving people
+       yet, so nothing about it should be on screen. Turned off here rather
+       than deleted — deckAdvice() and its whole rule set are untouched below,
+       and flipping this back to true is the only thing needed to bring it
+       back once the rules are worth reading. */
+    const DOCTOR_ON=false;
+    const adv=DOCTOR_ON?deckAdvice():[];
     if(adv.length){
-      h+=`<div class="doc">
+      hBelow+=`<div class="doc">
         <div class="dochd">What I'd change</div>
         ${adv.map(a=>`<div class="docl s${a.sev}">${esc(a.s)}</div>`).join("")}
         <p class="docnote">Rules of thumb, not rules. If you're breaking one on purpose,
           you're probably right and this is wrong.</p>
       </div>`;
-    }else if(tot>=15){
-      h+=`<div class="doc"><div class="dochd">What I'd change</div>
+    }else if(DOCTOR_ON&&tot>=15){
+      hBelow+=`<div class="doc"><div class="dochd">What I'd change</div>
         <div class="docl s0">Nothing obvious. The ink, the curve, the removal and the draw
           all sit about where they usually want to be.</div></div>`;
     }
@@ -6022,20 +6717,12 @@ function renderDeck(hostId){
       return keys.map(s=>[(DATA.sets[s]||{}).name||("Set "+s),
         L.filter(x=>x.c.s===s).sort((a,b)=>(a.c.num||0)-(b.c.num||0))])},
     name:()=>[["",L.slice().sort((a,b)=>a.f.localeCompare(b.f))]]};
-  const DSORTS=[["type","Type — characters, actions, songs…"],
-    ["cost","Cost — one section per ink cost"],
-    ["ink","Ink colour"],
-    ["curve","Curve — one flat list, cheapest first"],
-    ["set","Set — newest first"],
-    ["name","Name A–Z"]];
   const groups=(GROUPERS[DSORT]||GROUPERS.type)();
-  h+=`<div class="dsortrow"><label>Group by</label><select id="dsort">${
-    DSORTS.map(([v,l])=>
-      `<option value="${v}"${DSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select></div>`;
+  let hCards="";
   const cardHTML=({c,q,f})=>DVIEW==="img"
     ? `<div class="dcard">${c.img?`<img src="${cImg(c)}" data-o="${esc(f)}" title="${esc(c.f)}">`
         :`<div class="ph" data-o="${esc(f)}">${esc(c.n)}</div>`}
-       <span class="dq">${q}</span>
+       <span class="dq">${q}<i>x</i></span>
        <div class="dbtn"><button class="m" data-m="${esc(f)}">−</button>
          <button class="s" data-swap="${esc(f)}" title="What else could go here?">⇄</button>
          <button class="p" data-p="${esc(f)}">+</button></div>
@@ -6045,7 +6732,7 @@ function renderDeck(hostId){
        <span class="n" data-o="${esc(f)}">${esc(c.n)} <span style="color:var(--deep)">${esc(c.v)}</span></span>
        <button data-swap="${esc(f)}" title="What else could go here?">⇄</button>
        <button data-p="${esc(f)}" title="Add one">+</button></div>`;
-  h+=L.length
+  hCards+=L.length
     ? groups.map(([title,rows])=>{
         const n=rows.reduce((a,x)=>a+x.q,0);
         return (title?`<div class="dgh">${esc(title)}<span>${n} card${n===1?"":"s"}</span></div>`:"")
@@ -6053,7 +6740,7 @@ function renderDeck(hostId){
             ? `<div class="dgrid">${rows.map(cardHTML).join("")}</div>`
             : `<div style="margin-top:6px">${rows.map(cardHTML).join("")}</div>`)}).join("")
     : `<div class="empty" style="padding:18px 6px">Click a card to add it.</div>`;
-  HOST.innerHTML=h;
+  HOST.innerHTML=h+hCards+hBelow;
 
   const ds=$("dsort");
   if(ds)ds.onchange=e=>{DSORT=e.target.value;save("fs3_dsort",DSORT);renderDeck()};
@@ -6075,6 +6762,29 @@ function renderDeck(hostId){
         save("fs3_deckw",wrap.style.getPropertyValue("--deckw"));
         window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up)};
       window.addEventListener("pointermove",move);window.addEventListener("pointerup",up)});
+  })();
+  /* One open at a time, closed by a click anywhere else or by Escape. The
+     panels sit inside the deck panel, so a re-render throws them away — which
+     is exactly right: any menu item that does something also redraws, and a
+     menu that stayed open over the change it just made would be lying. */
+  (()=>{
+    const pairs=[["dMore","dMorePanel"],["dEye","dEyePanel"]];
+    const shut=()=>pairs.forEach(([b,pn])=>{const B=$(b),P=$(pn);
+      if(P)P.hidden=true;if(B)B.setAttribute("aria-expanded","false")});
+    pairs.forEach(([b,pn])=>{
+      const B=$(b),P=$(pn);if(!B||!P)return;
+      B.onclick=e=>{
+        e.stopPropagation();
+        const open=P.hidden;
+        shut();
+        if(open){P.hidden=false;B.setAttribute("aria-expanded","true")}
+      };
+      P.onclick=e=>e.stopPropagation();
+    });
+    HOST.addEventListener("click",shut);
+    document.addEventListener("click",shut,{once:true});
+    document.addEventListener("keydown",function esc(ev){
+      if(ev.key==="Escape"){shut();document.removeEventListener("keydown",esc)}});
   })();
   $("vList").onclick=()=>{DVIEW="list";save(K_DVIEW,DVIEW);renderDeck()};
   $("vImg").onclick=()=>{DVIEW="img";save(K_DVIEW,DVIEW);renderDeck()};
@@ -6506,7 +7216,8 @@ function priceBlock(c){
       <button class="prcinfo big" data-priceinfo="1" aria-label="How this price works">ⓘ</button>
       <span class="shipnote">+${SHIP_EST} shipping</span></div>
     <div class="praw">Market price ${money(raw)}${
-      hi!=null&&hi!==v?` · priciest printing ${money(hi)}`:""} — snapshot taken ${esc(priceDate())}.</div>
+      hi!=null&&hi!==v?` · priciest printing ${money(hi)}`:""}</div>
+    <div class="psnap">Snapshot taken ${esc(priceDate())}.</div>
     <button class="buytcg" data-buyone="${esc(c.f)}">
       <span class="buytcgico cartico">${CART_SVG}</span>
       <span class="buytcgtxt"><b>Buy on TCGplayer</b><span>Opens in a new tab</span></span>
@@ -7229,6 +7940,92 @@ function pullImageBody(rows,mode){
   });
   return open?html+"</div>":html;
 }
+/* ===================== proxy slips =====================
+   Card-sized paper stand-ins for the cards a deck needs and you haven't bought
+   yet, so a list is testable the evening you build it instead of the week the
+   order arrives. Print, cut, drop one in a sleeve in front of any card you own
+   and the deck plays.
+
+   TEXT ONLY, deliberately, and not for two reasons but three. It is a playtest
+   aid rather than a copy of a card, and it should never be mistakable for one —
+   every slip says so on it. It costs almost no ink, which is the difference
+   between printing forty of them and printing none. And the thing you actually
+   need at the table is the rules text at a size you can read, which a shrunk
+   picture of a card is worse at than plain type.
+
+   63×88mm is the real card size, so a slip sleeves properly rather than
+   floating around inside one. Nine to a page on both A4 and Letter. */
+let PROXYALL=load("fs3_proxyall",false);
+function proxyRows(){
+  return dlist().map(({c,q})=>{
+    const have=(COLLON&&!PROXYALL)?Math.min(q,ownedByName(c)):0;
+    return {c,need:q-have};
+  }).filter(x=>x.need>0);
+}
+/* ---- what makes this a playtest slip and not a counterfeit ----------------
+   The Disney Lorcana Community Code prohibits "the creation, use, sale, trade,
+   or distribution of counterfeit or unauthorized Ravensburger names or
+   products", and its Future-Proofing clause leaves whether something violates
+   it "in letter or spirit" to Ravensburger's sole discretion. So the design
+   goal is not "probably fine" — it is that nobody could mistake one of these
+   for a card, or for a product, at any distance.
+
+   Every one of these is deliberate and none should be removed:
+     · No card art. Not the illustration, not a crop of it, not a thumbnail.
+     · No card back, no Lorcana logo, no set symbol, no ink symbol art, no
+       rarity mark, no colour — none of the trade dress that makes a card
+       recognisable as a card.
+     · Plain type on white, with a dashed cut line, so it reads as a printed
+       note and not as printed stock.
+     · A PROXY band across the face, in the flow of the slip and above the
+       rules text rather than tucked in a corner, so it cannot be trimmed off
+       without cutting into the text you printed it for.
+     · The word "unofficial" and the Ravensburger attribution on every slip.
+   Card names and rules text are shown for the same reason the rest of the
+   site shows them — this is a card database — but on paper they are carried
+   by something that announces itself as not a card. */
+function proxySlip(c){
+  const stats=[c.st!=null?`${c.st}⚔`:"",c.wi!=null?`${c.wi}⛉`:"",c.lo?`${c.lo}◇`:""]
+    .filter(Boolean).join("  ");
+  return `<div class="pxs">
+    <div class="pxband">PROXY — PLAYTEST SLIP · NOT A REAL CARD</div>
+    <div class="pxtop"><span class="pxcost">${c.c}</span>
+      <span class="pxink">${esc((c.co||[]).join(" / "))}</span></div>
+    <div class="pxname">${esc(c.n)}</div>
+    ${c.v?`<div class="pxver">${esc(c.v)}</div>`:""}
+    <div class="pxty">${esc(c.ty)}${c.sub&&c.sub.length?" · "+esc(c.sub.join(" · ")):""}</div>
+    <div class="pxtx">${esc(c.tx||"")}</div>
+    <div class="pxfoot">
+      <span class="pxstats">${stats}</span>
+      <span class="pxmark">Unofficial · not for sanctioned play<br>© Disney · Lorcana by Ravensburger</span>
+    </div>
+  </div>`;
+}
+function renderProxies(){
+  const rows=proxyRows();
+  if(!rows.length)return `<div class="pxnone">Nothing to proxy — you already own every card in this deck.
+    <button class="btn tiny" id="pxAll">Print slips for the whole deck anyway</button></div>`;
+  const slips=[];
+  rows.forEach(({c,need})=>{for(let i=0;i<need;i++)slips.push(proxySlip(c))});
+  return `<div class="pxsheet" id="pxsheet">
+    <div class="pxhead">
+      <b>Proxy slips — ${esc(DECKS.cur)}</b>
+      <span>${slips.length} slip${slips.length===1?"":"s"} · ${rows.length} card${rows.length===1?"":"s"}
+        · ${PROXYALL?"every copy in the deck":"only what you don't own"}
+        · cut on the lines, sleeve in front of any card</span>
+    </div>
+    <div class="pxwarn">
+      <b>These are for testing a deck at home. They are not cards.</b>
+      <p>No artwork, no card back, nothing that makes a card a card — just the name
+        and the text, on paper, so you can try a list before you buy it. They are
+        <b>not legal in sanctioned play</b>: official tournaments require authentic
+        cards, and the only proxy allowed at one is issued by a head judge on the day.
+        Don't sell them, don't trade them, don't pass them off as cards. Ready Set Ink
+        is unofficial fan content — © Disney, Lorcana operated by Ravensburger.</p>
+    </div>
+    <div class="pxgrid">${slips.join("")}</div>
+  </div>`;
+}
 let PULLVIEW=load("fs3_pullview","list");
 let PULLCOMPACT=load("fs3_pullcompact",false);
 function renderPull(){
@@ -7236,22 +8033,39 @@ function renderPull(){
   const d=deck(),tot=rows.reduce((a,r)=>a+r.q,0);
   if(!rows.length)return `<div class="empty" style="padding:20px">This deck is empty.</div>`;
   const body=PULLVIEW==="images"?pullImageBody(rows,mode):pullListBody(rows,mode);
+  /* The deck's QR code used to hang off the bottom of the sheet, below the
+     total, in a bordered strip of its own — so on any list longer than a page
+     it printed alone on the last sheet, under nothing, and it read as an
+     afterthought stapled on rather than part of the document. It belongs in
+     the masthead, beside the title: it IS the sheet's identity, the way back
+     to the list you are holding, and it is on page one where someone picking
+     the sheet up will see it. */
   return `<div class="pull${PULLCOMPACT?" compact":""}" id="pullout">
-    <h2>${esc(DECKS.cur)}</h2>
-    <div class="sub">${tot} cards · ${rows.length} unique · ${esc(FMT[d.fmt].l)}
-      · sorted by ${esc((PULLSORTS.find(x=>x[0]===mode)||[])[1]||mode)}
-      · <span id="pullProgress">${pullCheckedCount(rows)} / ${tot} pulled</span></div>
+    <div class="pullhead">
+      <div class="pullhtxt">
+        <h2>${esc(DECKS.cur)}</h2>
+        <div class="sub">${tot} cards · ${rows.length} unique · ${esc(FMT[d.fmt].l)}
+          · sorted by ${esc((PULLSORTS.find(x=>x[0]===mode)||[])[1]||mode)}
+          · <span id="pullProgress">${pullCheckedCount(rows)} / ${tot} pulled</span></div>
+      </div>
+      <figure class="pullqr">
+        <div id="pullQrDeck" class="qrbox"></div>
+        <figcaption>Scan for this deck list</figcaption>
+      </figure>
+    </div>
     ${body}
     <div class="tot">Total ${tot} cards</div>
-    <div class="pullqr">
-      <figure><div id="pullQrDeck" class="qrbox"></div><figcaption>Scan for this deck list</figcaption></figure>
-    </div>
     ${deckSaves(DECKS.cur)>KOFI_AFTER?`<div class="pullkofi">
       <div id="pullQrKofi" class="qrbox wee"></div>
       <p>If you like these pull sheets, consider supporting the development of the site.
         <span>It stays free either way.</span></p>
     </div>`:""}
   </div>`;
+}
+function wireProxy(){
+  const a=$("pxAll");
+  if(a)a.onclick=()=>{PROXYALL=true;save("fs3_proxyall",PROXYALL);
+    $("proxyBox").innerHTML=renderProxies();wireProxy()};
 }
 function wirePull(){
   const rows=pullSorted(pullRows(),PULLSORT);
@@ -8224,10 +9038,19 @@ function renderAqua(){
   for(let i=0;i<10;i++)spawnFood();
   AQ.drop=setInterval(spawnFood,1300);
 
+  /* Read once per frame, here, and used by every card effect below. Declared
+     up here rather than beside the effects so the frame loop can fill them
+     without reaching forward into a variable that hasn't been initialised. */
+  let CARDR=card.getBoundingClientRect(),GAMER=R();
   let last=performance.now();
+  let rectAge=0;
   function frame(now){
     if(!AQ)return;
     const dt=Math.min(32,now-last)/16.67;last=now;
+    /* The card moves every frame so its rect is refreshed every frame; the
+       tank only moves when the window does, so twice a second is plenty. */
+    CARDR=card.getBoundingClientRect();
+    if((rectAge+=dt)>30){rectAge=0;GAMER=R()}
     const dx=target.x-pos.x,dy=target.y-pos.y;
     vel.x+=dx*.018*dt;vel.y+=dy*.018*dt;
     vel.x*=Math.pow(.82,dt);vel.y*=Math.pow(.82,dt);
@@ -8271,36 +9094,63 @@ function renderAqua(){
      that they'd keep firing into a detached node for the rest of the session. */
   const rnd=(a,b)=>a+Math.random()*(b-a);
   const hidden=()=>document.hidden;
+  /* ---- why this got slow with everything equipped -------------------------
+     Every effect ran on its own setInterval and every one of them called
+     card.getBoundingClientRect() on each tick. Meanwhile the animation loop is
+     writing card.style.left/top/transform on every frame. Reading a rect after
+     a style write forces the browser to stop and recompute layout, so eight
+     timers reading forty-odd times a second against a loop writing sixty times
+     a second meant the page spent most of its time in forced reflow. That is
+     the lag, and it got worse with each card equipped because each card added
+     another reader.
+
+     Two caches fix it. CARDR and GAMER are read ONCE per animation frame, in
+     the frame itself, and every effect uses those instead of measuring. No
+     effect touches the layout again.
+
+     Then a ceiling. At full kit the effects were spawning about thirty-five
+     animated nodes a second and each lived up to 1.7s, so steady state was
+     sixty to seventy absolutely-positioned elements animating at once, plus
+     the garbage from building and destroying them. PMAX caps the population:
+     past it, spawns are skipped rather than queued. The look is unchanged at
+     one or two effects and merely stops thickening at six. */
+  let PLIVE=0;
+  const PMAX=64;
   function particle(cls,x,y,text,size){
+    if(PLIVE>=PMAX)return null;
     const el=document.createElement("span");el.className="ff2p "+cls;
     if(text)el.textContent=text;
     if(size)el.style.fontSize=size+"px";
-    const r=R();el.style.left=(x-r.left)+"px";el.style.top=(y-r.top)+"px";
-    game.appendChild(el);return el}
+    el.style.left=(x-GAMER.left)+"px";el.style.top=(y-GAMER.top)+"px";
+    game.appendChild(el);PLIVE++;return el}
   const anim=(el,frames,dur)=>{
+    if(!el)return;
     const a=el.animate(frames,{duration:dur,easing:"cubic-bezier(.15,.7,.22,1)"});
-    a.onfinish=()=>el.remove()};
+    a.onfinish=()=>{el.remove();PLIVE--};
+    /* A cancelled animation never fires onfinish, so without this the counter
+       would drift up and eventually wedge the ceiling shut. */
+    a.oncancel=()=>{el.remove();PLIVE--}};
   const m={x:0,y:0,vx:0,vy:0,s:0,a:0,t:0,ready:false};
   AQ.fx=[];
   const every=(ms,fn)=>AQ.fx.push(setInterval(fn,ms));
   every(70,()=>{
-    const r=card.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+    const r=CARDR,x=r.left+r.width/2,y=r.top+r.height/2;
     if(!m.ready){m.x=x;m.y=y;m.ready=true;return}
     const dx=x-m.x,dy=y-m.y,na=Math.atan2(dy,dx||.001);
     let d=na-m.a;while(d>Math.PI)d-=Math.PI*2;while(d<-Math.PI)d+=Math.PI*2;
     m.t=Math.abs(d);m.a=na;m.vx=dx;m.vy=dy;m.s=Math.hypot(dx,dy);m.x=x;m.y=y});
 
   every(180,()=>{if(hidden()||!on("bubbles"))return;
-    const r=card.getBoundingClientRect(),n=m.s>3?2:1;
+    const r=CARDR,n=m.s>3?2:1;
     for(let i=0;i<n;i++){const sz=rnd(9,19);
       const p=particle("ff2bubble",r.left+r.width*rnd(.2,.8),r.top+r.height*rnd(.55,.92));
-      p.style.width=p.style.height=sz+"px";
+      if(p)p.style.width=p.style.height=sz+"px";
       anim(p,[{transform:"translate(-50%,-50%) scale(.4)",opacity:0},
         {transform:"translate(-50%,-50%) scale(1)",opacity:.95,offset:.2},
         {transform:`translate(calc(-50% + ${rnd(-18,18)+m.vx*1.5}px),calc(-50% - ${rnd(60,105)+m.s*5}px)) scale(1.4)`,opacity:0}],rnd(1200,1700))}});
 
   every(500,()=>{if(hidden()||!on("shimmer"))return;
-    const r=card.getBoundingClientRect();
+    const r=CARDR;
     const p=particle("ff2star",r.left+rnd(10,r.width-10),r.top+rnd(10,r.height-14),
       Math.random()>.5?"✦":"✧",rnd(13,19));
     anim(p,[{transform:"translate(-50%,-50%) scale(.2)",opacity:0},
@@ -8308,7 +9158,7 @@ function renderAqua(){
       {transform:`translate(calc(-50% + ${rnd(-8,8)}px),calc(-50% - ${rnd(10,22)}px)) scale(.25)`,opacity:0}],rnd(700,1000))});
 
   every(250,()=>{if(hidden()||!on("sapphire"))return;
-    const r=card.getBoundingClientRect(),e=Math.floor(Math.random()*4);
+    const r=CARDR,e=Math.floor(Math.random()*4);
     const x=e<2?r.left+r.width*(e?.94:.06):r.left+r.width*rnd(.15,.85);
     const y=e>1?r.top+r.height*(e===2?.08:.92):r.top+r.height*rnd(.15,.85);
     const p=particle("ff2dot",x,y);
@@ -8336,15 +9186,15 @@ function renderAqua(){
     if(m.t>.68&&m.s>3.5&&Math.random()>.32)burst(m.x,m.y,m.s>7?10:7)});
 
   every(220,()=>{if(hidden()||!on("water"))return;
-    const r=card.getBoundingClientRect(),sz=rnd(7,13);
+    const r=CARDR,sz=rnd(7,13);
     const p=particle("ff2bubble",r.left+r.width*rnd(.12,.88),r.top+r.height*rnd(.2,.9));
-    p.style.width=p.style.height=sz+"px";
+    if(p)p.style.width=p.style.height=sz+"px";
     anim(p,[{transform:"translate(-50%,-50%) scale(.35)",opacity:0},
       {transform:"translate(-50%,-50%) scale(1)",opacity:.78,offset:.2},
       {transform:`translate(calc(-50% + ${rnd(-10,10)}px),calc(-50% - ${rnd(25,45)}px)) scale(.2)`,opacity:0}],rnd(850,1200))});
 
   every(170,()=>{if(hidden()||!on("legendary"))return;
-    const r=card.getBoundingClientRect(),a=rnd(0,Math.PI*2),rad=rnd(r.width*.25,r.width*.78),st2=Math.random()>.45;
+    const r=CARDR,a=rnd(0,Math.PI*2),rad=rnd(r.width*.25,r.width*.78),st2=Math.random()>.45;
     const p=particle(st2?"ff2star":"ff2rainbow",
       r.left+r.width/2+Math.cos(a)*rad*.8,r.top+r.height/2+Math.sin(a)*rad,
       st2?(Math.random()>.5?"✦":"✧"):"",st2?rnd(13,19):0);
@@ -8353,7 +9203,7 @@ function renderAqua(){
       {transform:`translate(calc(-50% + ${Math.cos(a)*rnd(20,45)}px),calc(-50% + ${Math.sin(a)*rnd(20,45)}px)) scale(.2)`,opacity:0}],rnd(900,1350))});
 
   every(190,()=>{if(hidden()||!on("abyss"))return;
-    const r=card.getBoundingClientRect(),a=rnd(0,Math.PI*2),rad=rnd(r.width*.38,r.width*.9);
+    const r=CARDR,a=rnd(0,Math.PI*2),rad=rnd(r.width*.38,r.width*.9);
     const p=particle("ff2void",r.left+r.width/2+Math.cos(a)*rad,r.top+r.height/2+Math.sin(a)*rad*1.2);
     anim(p,[{transform:"translate(-50%,-50%) scale(.25)",opacity:0},
       {transform:"translate(-50%,-50%) scale(1.35)",opacity:1,offset:.25},
@@ -8662,7 +9512,7 @@ function renderClicker(){
   const st=load(CLICKKEY,{clicks:0});
   $("clickpage").innerHTML=`<div class="page">
     <button class="btn" id="clExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">💙</span>Give Flounder a click</h1>
+    <h1><span class="gi">💙</span>Click on fish</h1>
     <p class="lede">That's it. That's the game. He likes it.</p>
     <div class="clickwrap">
       <button class="clickcard" id="clCard">
@@ -8671,14 +9521,54 @@ function renderClicker(){
       <div class="clickhud">
         <div><b id="clN">${N(st.clicks)}</b><i>clicks, all time</i></div>
         <div><b id="clD">0</b><i>dust this visit</i></div>
+        <div><b id="clR">0.0</b><i>per second</i></div>
       </div>
+      <div class="clcombo" id="clCombo" hidden></div>
     </div>
     ${leaderboard("click")}
   </div>`;
-  const ex=$("clExit");if(ex)ex.onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
   const card=$("clCard");let earned=0;
   if(!card)return;
-  card.onclick=e=>{
+  /* pointerdown, not click, and touch-action on the element itself.
+
+     On a phone this was unusable: tapping fast is exactly the gesture a
+     browser reads as double-tap-to-zoom, so the page lurched in and out and
+     the taps that did land arrived 300ms late. touch-action:manipulation tells
+     the browser this element has no double-tap gesture, which removes both the
+     zoom and the delay; firing on pointerdown rather than click means the
+     heart appears under your finger the instant it lands, which is the entire
+     point of a clicker. preventDefault stops the tap turning into a text
+     selection when you rattle through twenty of them. */
+  card.style.touchAction="manipulation";
+  /* The rate readout is the whole "minimal but satisfying" ask: nothing to
+     manage, nothing to buy, just the game noticing how fast you are going and
+     saying so. Timestamps in a rolling two-second window, decayed by a timer
+     so it falls back to zero when you stop rather than freezing on your best
+     number. Parked on AQ-style cleanup via the exit handler below. */
+  const taps=[];
+  let rateTimer=null;
+  const paintRate=()=>{
+    const now=performance.now();
+    while(taps.length&&now-taps[0]>2000)taps.shift();
+    const r=taps.length/2;
+    const el=$("clR");if(el)el.textContent=r.toFixed(1);
+    const cb=$("clCombo");
+    if(cb){
+      const hot=r>=6;
+      cb.hidden=!hot;
+      if(hot)cb.textContent=r>=12?"UNSTOPPABLE":r>=9?"ON FIRE":"NICE";
+    }
+    if(!taps.length&&rateTimer){clearInterval(rateTimer);rateTimer=null}
+  };
+  card.onpointerdown=e=>{
+    e.preventDefault();
+    taps.push(performance.now());
+    if(!rateTimer)rateTimer=setInterval(paintRate,120);
+    paintRate();
+    /* This is the clicker, not the aquarium — it has its own card and reads its
+       own rect. (A careless global find-and-replace while fixing the tank's
+       layout thrashing pointed this line at the tank's cached rect, which does
+       not exist on this page; every tap threw and the counter never moved.) */
     const r=card.getBoundingClientRect();
     const h=document.createElement("span");h.className="heart";
     h.textContent=["💙","💚","💛","🩵","💖"][Math.floor(Math.random()*5)];
@@ -8691,6 +9581,10 @@ function renderClicker(){
     card.classList.remove("pop");void card.offsetWidth;card.classList.add("pop");
     if(st.clicks>=500)unlockHidden("h_click");
   };
+  /* Bound after the timer exists so leaving the page takes it with us. */
+  const ex=$("clExit");
+  if(ex)ex.onclick=()=>{if(rateTimer)clearInterval(rateTimer);
+    OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
 }
 
 /* ===================== worldbuilding =====================
@@ -8907,11 +9801,10 @@ function renderMickeys(){
   $("mickpage").innerHTML=`<div class="page">
     <button class="btn" id="mkExit" style="margin-bottom:12px">← Other</button>
     <h1><span class="gi">🐭</span>Hidden Mouseys</h1>
-    <p class="lede">It started at EPCOT in 1982. Imagineers were banned from putting Disney characters
-      in the park, so they hid a certain silhouette everywhere instead — in railings, in carpet, in
-      the cracks of a rock wall — and dared you to find it. Lorcana's artists never stopped.
-      <b>${total} confirmed so far</b>, and once you've seen a few you will not be able to stop
-      looking. Click any card to open it, then hit <b>Show me where</b>.</p>
+    <p class="lede">There are hidden mouse icons in some Lorcana cards and we're trying to find
+      them all. <b>${total} confirmed so far.</b> You can help on our
+      <button class="lnkbtn" id="mkContrib">contribute page</button>.</p>
+    <div class="wipnote">Work in progress</div>
     ${bad.length?`<div class="up bad"><div class="uw">⚠ ${bad.length} entr${bad.length===1?"y":"ies"}
       name a card that isn't in the database: ${esc(bad.map(x=>x.c).join(", "))}</div></div>`:""}
     ${(()=>{
@@ -8949,6 +9842,8 @@ function renderMickeys(){
   </div>`;
   const e=$("mkExit");if(e)e.onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
   $("mickpage").querySelectorAll("[data-mk]").forEach(b=>b.onclick=()=>openM(b.dataset.mk));
+  {const mc=$("mkContrib");
+   if(mc)mc.onclick=()=>{OPAGE="contrib";save("fs3_opage",OPAGE);showTab("tOther")};}
 }
 
 /* ===================== deck upgrades =====================
@@ -9932,6 +10827,24 @@ function guessFrame(){
        won?Math.round(H/2-imgH/2):top}px"></div>`+
     (lost?`<div class="gx">✖</div>`:"");
 }
+let GJUSTANSWERED=false;
+/* A guessing game is a rhythm — look, decide, next, look, decide — and reaching
+   for the mouse between every round breaks it. 1/2/3 answers, Z zooms out,
+   Enter or Space moves on. Bound once, at the document, and it does nothing
+   unless the game is the visible page and you aren't typing in a field. */
+document.addEventListener("keydown",e=>{
+  if(!$("vGuess")||!$("vGuess").classList.contains("on")||!GQ)return;
+  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  const k=e.key;
+  if(!GQ.done&&/^[123]$/.test(k)){
+    const btn=$("guesspage").querySelectorAll("[data-g]")[+k-1];
+    if(btn){e.preventDefault();btn.click()}
+    return;
+  }
+  if(!GQ.done&&(k==="z"||k==="Z")){const z=$("gZoom");if(z&&!z.disabled){e.preventDefault();z.click()}return}
+  if(GQ.done&&(k==="Enter"||k===" ")){const n=$("gNext");if(n){e.preventDefault();n.click()}}
+});
 function renderGuess(){
   if(!GQ)newRound();
   const worth=G_ZOOM.length-GQ.z;
@@ -9941,12 +10854,12 @@ function renderGuess(){
     <h1><span class="gi">🔍</span>Guess the card</h1>
     <p class="lede">A sliver of the art and three names. Answer straight away for the most
       points — every zoom out is worth one less. The card's own name is never in shot.</p>
-    ${GQ.done===GQ.answer.f?`<div class="qreveal">
-      ${cImgL(GQ.answer)?`<img src="${esc(cImgL(GQ.answer))}" alt="${esc(GQ.answer.f)}">`:""}
-      <div class="qrn"><b>${esc(GQ.answer.n)}</b>${GQ.answer.v?`<span>${esc(GQ.answer.v)}</span>`:""}
-        <span>${esc(GQ.answer.sn)} #${esc(String(GQ.answer.num))}</span></div>
-      <button class="btn go" id="gNext2">Next card →</button>
-    </div>`:""}
+    <!-- Answering used to render the reveal TWICE: a full-width block bolted
+         on above the whole page, and the result panel down in the side column,
+         each with its own "Next card" button. On a phone, where the two
+         columns stack, that meant every answer shoved the game down the screen
+         and left two identical buttons a scroll apart. One reveal now, in the
+         place you were already looking. -->
     <div class="gwrap">
       <div>
         <div class="gstage">${guessFrame()}</div>
@@ -9966,13 +10879,20 @@ function renderGuess(){
         <div class="gopts">${GQ.options.map((c,i)=>{
           const cls=!GQ.done?"":c.f===GQ.answer.f?" right":(GQ.done===c.f?" wrong":" dim");
           return `<button class="gopt${cls}" data-g="${esc(c.f)}"${GQ.done?" disabled":""}>
-            <b>${esc(c.n)}</b>${c.v?`<i>${esc(c.v)}</i>`:""}</button>`}).join("")}</div>
-        ${GQ.done?`<div class="gres ${GQ.done===GQ.answer.f?"win":"lose"}">
-          ${GQ.done===GQ.answer.f?`✓ Correct — +${GQ.won} point${GQ.won===1?"":"s"}`:"✗ Not that one"}
-          <div class="gful">${GQ.done!==GQ.answer.f&&GQ.answer.img?`<img src="${esc(GQ.answer.img)}" alt="">`:""}
+            <kbd>${i+1}</kbd><span><b>${esc(c.n)}</b>${c.v?`<i>${esc(c.v)}</i>`:""}</span>
+          </button>`}).join("")}</div>
+        <div class="gkeys">Keys: <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> to answer ·
+          <kbd>Z</kbd> zoom out · <kbd>Enter</kbd> next</div>
+        ${GQ.done?`<div class="gres ${GQ.done===GQ.answer.f?"win":"lose"}" id="gres">
+          <div class="gresh">${GQ.done===GQ.answer.f
+            ?`✓ Correct — +${GQ.won} point${GQ.won===1?"":"s"}`:"✗ Not that one"}</div>
+          <!-- The card is shown either way. Getting it right and being shown a
+               thumbnail of what you already named is a reward; getting it wrong
+               and being shown it is the answer. Same block, same size. -->
+          <div class="gful">${GQ.answer.img?`<img src="${esc(GQ.answer.img)}" alt="${esc(GQ.answer.f)}">`:""}
             <div><b>${esc(GQ.answer.n)}</b>${GQ.answer.v?`<span>${esc(GQ.answer.v)}</span>`:""}
             <span>${esc(GQ.answer.sn)} #${esc(String(GQ.answer.num))} · ${esc(GQ.answer.r)}</span></div></div>
-          <button class="btn go" id="gNext" style="width:100%;margin-top:10px">Next card →</button>
+          <button class="btn go" id="gNext">Next card →</button>
         </div>`:``}
       </div>
     </div>
@@ -9981,7 +10901,16 @@ function renderGuess(){
   $$("gExit",()=>{OPAGE="";save("fs3_opage",OPAGE);GQ=null;showTab("tOther")});
   $$("gZoom",()=>{if(GQ.z<G_ZOOM.length-1){GQ.z++;renderGuess()}});
   $$("gNext",()=>{GQ=null;renderGuess()});
-  $$("gNext2",()=>{GQ=null;renderGuess()});
+  /* On a phone the options are near the bottom of a tall page, so the reveal
+     that appears under them can be off screen. Bring it to the user rather
+     than making them go and find it — and only when it has just appeared. */
+  if(GQ.done&&GJUSTANSWERED){
+    GJUSTANSWERED=false;
+    const r=$("gres");
+    if(r)requestAnimationFrame(()=>r.scrollIntoView({
+      behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",
+      block:"nearest"}));
+  }
   $("guesspage").querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{
     if(GQ.done)return;
     const pickedRight=b.dataset.g===GQ.answer.f;
@@ -9995,6 +10924,7 @@ function renderGuess(){
       lbPost("guess",GS.best);
       dustGain(GQ.won)}                       // the points themselves are dust
     else{QSTREAK.guess=0;GS.streak=0}
+    GJUSTANSWERED=true;
     save("fs3_guess",GS);renderGuess();
     if(pickedRight)toast(`+${GQ.won} · streak ${GS.streak}`);
   });
@@ -10057,12 +10987,18 @@ function readTotals(){
   });
   return {seen,tot,sets};
 }
-/* Set logos aren't in either data source yet. When they are, drop them in
-   /sets/<code>.png and this starts using them with no other change. */
-const SETLOGOS=false;
-const setLogo=(code,meta)=>SETLOGOS
-  ? `<img class="rlogo" src="sets/${esc(code)}.png" alt="" loading="lazy">`
-  : `<span class="rnum">${esc(String(code))}</span>`;
+/* Set logos are not in either data source, and they are Ravensburger's art —
+   they have to be dropped in by hand. Put a file at /sets/<code>.png and it
+   appears here on its own; there is no flag to remember to flip, because the
+   img falls back to the number badge the moment the file 404s. That way a set
+   that has art and a set that doesn't can sit side by side and neither looks
+   broken. */
+const setLogo=(code,meta)=>
+  `<span class="rlogowrap">
+    <img class="rlogo" src="sets/${esc(code)}.png" alt="" loading="lazy"
+      onerror="this.remove()">
+    <span class="rnum">${esc(String(code))}</span>
+  </span>`;
 
 function readMenu(){
   const rows=readSets().map(code=>{
@@ -10093,11 +11029,8 @@ function readMenu(){
   return `<div class="page">
     <button class="btn" id="rExit" style="margin-bottom:12px">← Other</button>
     <h1><span class="gi">📖</span>Read every card</h1>
-    <p class="lede">Every card in the game, one at a time, big enough to actually read —
-      the rules text, the flavour text, the classifications, and any set notes or
-      rulings attached to it. Pick a set and an ink and work through it.
-      Dual-ink cards appear under both of their inks, and anything you've read
-      stays marked, so you can stop anywhere and come back.</p>
+    <p class="lede">Every card in the game, one at a time, big enough to actually read.
+      Pick a set and an ink.</p>
     ${(()=>{const t=readTotals();return `<div class="rall">
       <b>${N(t.seen)}</b> of <b>${N(t.tot)}</b> cards read across the whole game${
         t.sets?` · <b>${t.sets}</b> set${t.sets===1?"":"s"} complete`:""}
@@ -10105,7 +11038,18 @@ function readMenu(){
     </div>`})()}
     ${RD?`<div class="resume"><b>Pick up where you left off</b>
       <button class="btn go" id="rResume">${esc(SETNAME(RD.set))} · ${esc(RD.ink)} — card ${RD.i+1}</button></div>`:""}
-    <div class="rsets">${rows}</div></div>`;
+    <div class="rsets">${rows}</div>
+    <!-- The licence line belongs on any page that leans on Ravensburger's
+         material — here that is every card in the game, plus their set art
+         once the logos are dropped in. Same wording as Settings. -->
+    <div class="legal">
+      <b>Disney Lorcana TCG</b>
+      <p>Ready Set Ink is unofficial fan content. Not published, endorsed or
+        approved by Disney or Ravensburger.</p>
+      <p>© Disney. Disney Lorcana is operated by Ravensburger, an official
+        licensee of Disney.</p>
+    </div>
+  </div>`;
 }
 function readView(){
   const list=readSection(RD.set,RD.ink);
@@ -11090,6 +12034,7 @@ function renderDecksPage(){
       <button class="btn collonly" id="pullToColl">📦 Add this deck to my collection</button>
       <button class="btn bad collonly" id="pullOffColl">📦 Remove this deck from my collection</button>
       <button class="btn" id="pullCopy">📋 Copy</button>
+      <button class="btn" id="pullProxy" title="Card-sized paper stand-ins for the cards you haven't bought yet">✂️ Proxy slips</button>
       <button class="btn go" id="pullPrint">🖨️ Print</button>
       <!-- No API key involved: TCGplayer's mass entry page takes the list in
            the URL, so these two work today and will keep working if a price
@@ -11098,6 +12043,7 @@ function renderDecksPage(){
       <button class="btn collonly" id="buyMissing">🛒 Buy the cards I don't have</button>
     </div>
     ${renderPull()}
+    <div id="proxyBox"></div>
     <div id="regBox"></div>
     <!-- The borrow list sits BELOW the pull sheet. It used to sit above it,
          which put "cards you haven't got" between you and the list you came
@@ -11160,6 +12106,19 @@ function renderDecksPage(){
   $("pullCompact").onclick=()=>{PULLCOMPACT=!PULLCOMPACT;save("fs3_pullcompact",PULLCOMPACT);renderDecksPage()};
   $("pullCopy").onclick=()=>navigator.clipboard.writeText(pullText())
     .then(()=>toast("Pull list copied"),()=>toast("Copy failed"));
+  /* The slips are their own printable, not part of the pull sheet — printing
+     with the panel open prints slips ONLY, because you are cutting these up
+     and you do not want the shopping list stapled to them. */
+  {const px=$("pullProxy");
+   if(px)px.onclick=()=>{
+     const box=$("proxyBox");
+     if(box.firstChild){box.innerHTML="";document.body.classList.remove("proxying");px.classList.remove("go");return}
+     box.innerHTML=renderProxies();document.body.classList.add("proxying");px.classList.add("go");
+     const all=$("pxAll");
+     if(all)all.onclick=()=>{PROXYALL=true;save("fs3_proxyall",PROXYALL);box.innerHTML=renderProxies();wireProxy()};
+     wireProxy();
+     box.scrollIntoView({behavior:"smooth",block:"start"});
+   };}
   $("pullPrint").onclick=()=>window.print();
   $("buyDeck").onclick=()=>tcgOpen(dlist(),"this deck is empty");
   const bm=$("buyMissing");
@@ -12607,6 +13566,7 @@ const OTHER_GROUPS=[
    ["Judge","The quickest way to check a card interaction — search by name, or go advanced and build out the board state.","judge"],
    ["Tournament companion","A Swiss calculator and everything else you'd want on match day — still being refined every week.","/match-history/"],
    ["Shopping list","The staples you haven't got, grouped into what you'd buy at a few different budgets. Straight into a TCGplayer cart.","shop"],
+   ["Recommended decks","Lists that have actually won something, with the card-by-card reasoning. Copy one straight into the deck builder.","meta"],
    ["Read every card","A carousel through every card at your own pace. Pick a set and an ink, and it tracks what you've already seen.","read"],
    ["Getting started","New here? Start with this.","start"],
    ["Error cards","What counts as an error, what gets replaced, and every known errata.","err"],
@@ -12626,7 +13586,7 @@ const OTHER_GROUPS=[
    ["Guess the flavour text","Do you actually read the cards?","quiz:flavour"],
    ["Guess from the facts","Cost, then strength, then willpower, then artist… only the real gamer Illumineers make it through this one.","quiz:reveal"],
    ["Blue Striped Fish Aquarium","Inspired by our favorite fish. Leave him swimming, sprinkle food, earn dust, go full screen and forget about it.","aqua"],
-   ["Give Flounder a click","The dopamine of clicking “like,” except this one deserves it.","click"],
+   ["Click on fish","The dopamine of clicking “like,” except this one deserves it.","click"],
    ["Outpost","Sixty-one hexes. Terrain produces, you claim and build and upgrade. It keeps going while the tab is shut.","hex"],
  ]},
  {g:"Coming soon",chips:[
@@ -12984,11 +13944,21 @@ const PREF_SOON=[
    unrelated toggle click on this page has to remember not to close. */
 let A2HSOPEN=false;
 function renderPrefs(){
-  const row=(title,body,btnId,state,off)=>`
+  /* Ben's call: the name of the switch and the switch, nothing else. Every one
+     of these used to carry two or three sentences explaining itself, which
+     turned a settings page into an essay you had to read to find the toggle
+     you came for. "Card prices" does not need telling you what a price is.
+     The one exception below is Sync, which reports a state rather than
+     offering a choice, and Reset, where the button is destructive enough that
+     the sentence saying what it does NOT touch has to stay.
+
+     The state word sits in a fixed-width slot for the same reason the reminder
+     toggle does — On and Off are different widths and a button should not
+     change size when you press it. */
+  const row=(title,btnId,state,off)=>`
     <div class="prow${off?" soon":""}">
-      <div><b>${esc(title)}</b><p>${esc(body)}</p>
-        ${off?`<span class="soonlbl">Coming soon</span>`:""}</div>
-      <button class="btn" id="${btnId}"${off?" disabled":""}>${off?"—":(state?"On":"Off")}</button>
+      <div><b>${esc(title)}</b>${off?`<span class="soonlbl">Coming soon</span>`:""}</div>
+      <button class="btn" id="${btnId}"${off?" disabled":""} aria-pressed="${!off&&!!state}"><b class="sw">${off?"—":(state?"ON":"OFF")}</b></button>
     </div>`;
   /* Sign-in status, in the one place someone goes looking when a thing didn't
      save. Signed out this says nothing at all — the site is a local tool and
@@ -13057,39 +14027,21 @@ function renderPrefs(){
          nothing. Dark mode is left out of both — it's a look, not a feature,
          and it's gated separately. -->
     <div class="prow allrow">
-      <div><b>Everything at once</b><p>Turn every feature below on, or strip the site
-        back to just searching and building decks.</p></div>
+      <div><b>Everything at once</b></div>
       <div class="allbtns">
         <button class="btn go" id="pfAllOn">All on</button>
         <button class="btn" id="pfAllOff">All off</button>
       </div>
     </div>
-    ${row("Collection tracking",
-      "Adds the owned and foil steppers to card pages and turns on the My collection tab. Switch it off if you only came here to search and build decks.",
-      "pfColl",COLLON)}
-    ${row("Card prices",
-      "Puts a rounded price under every card — our own approximation, not a live quote."
-        +(priceDate()?` The real market price sits underneath it on each card's own page, from a snapshot taken ${priceDate()}. Anything to do with actually buying — the shopping list, the budgets — always uses the real number.`
-                     :" No prices in this build yet."),
-      "pfPrice",PRICES)}
-    ${row("Shopping suggestions",
-      "Adds a Shopping list page: the staples you're missing, grouped into what you'd buy for $20, $50 or a whole set, with a button that loads the lot into a TCGplayer cart. Off by default and off unless you switch it on here.",
-      "pfSugg",SUGGON)}
-    ${row("Mini games",
-      "Guess the card, the aquarium, Outpost and the rest. Off hides them from the Other menu.",
-      "pfGames",GAMESON)}
-    ${row("Dust",
-      "Dust, titles and the things they unlock. Off stops you earning any more — your balance is kept exactly as it is, the Dust tile leaves the Other menu, and your title becomes Stick in the Mud. Turn it back on and everything returns.",
-      "pfDust",DUSTON)}
+    ${row("Collection tracking","pfColl",COLLON)}
+    ${row("Card prices","pfPrice",PRICES)}
+    ${row("Shopping suggestions","pfSugg",SUGGON)}
+    ${row("Mini games","pfGames",GAMESON)}
+    ${row("Dust","pfDust",DUSTON)}
     ${darkOK()
-      ? row("Dark mode",
-          "The whole site in carbon and slate, held at the same AAA contrast as the light theme. Printing stays on white paper regardless."
-            +(isPatron()?"":" Free for everyone until 25 December 2026, then it goes back to being a patron perk."),
-          "pfDark",DARK)
+      ? row("Dark mode","pfDark",DARK)
       : `<div class="prow locked">
-          <div><b>Dark mode <span class="soonlbl">Patron perk</span></b>
-            <p>The whole site in carbon and slate, at the same contrast as the light
-            theme. Supporting Ready Set Ink switches it on.</p></div>
+          <div><b>Dark mode <span class="soonlbl">Patron perk</span></b></div>
           <button class="btn" disabled>Locked</button>
         </div>`}
     <h3 class="sec2">Start over</h3>
@@ -13499,6 +14451,7 @@ const OPAGES={
   shop:  ["vShop",   ()=>renderShop()],
   lore:  ["vLore",   ()=>{LORE_FRESH=true;renderLore()}],
   judge: ["vJudge",  ()=>renderStandaloneJudge()],
+  meta:  ["vMeta",   ()=>renderMetaPage()],
 };
 /* Pages that belong to a switch. Turning the switch off takes the tile out of
    the menu; the page itself still works if you know the URL, exactly like OFF. */
@@ -13531,7 +14484,11 @@ function renderOther(){
    Five tabs. "Deck builder" and "Search for cards" share one view — the only
    difference is whether the deck rail is on screen — because maintaining two
    copies of the search UI would guarantee they drift apart. */
-const TABS=["tDeck","tSearch","tColl","tDecks","tMeta","tOther"];
+/* Recommended decks used to be a sixth top-level tab. It is a thing you read
+   occasionally, not a place you work, so it sits in Other with the rest of the
+   reading — the tab bar is for the four things you come here to DO. Its view
+   and its renderer are unchanged; only the way in moved. */
+const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
 const VIEWS=["vSearch","vGuide","vColl","vDecks","vMeta","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop","vLore","vJudge","vLinks","vAccount"];
 /* TAB is read from storage HERE rather than being left at "tDeck" until
    showTab() runs at the bottom of the file. The grid is rendered before that
@@ -13560,12 +14517,17 @@ function showTab(t){
      show on every narrow-screen tab because the CSS only ever excluded
      Search (body.browse), never actually opted IN to Deck builder. */
   document.body.classList.toggle("tdeck",t==="tDeck");
+  /* Search for cards is a reference tab with no deck attached to it, so the
+     one control here that acts on a deck doesn't belong on it. */
+  {const sh=$("sh");if(sh)sh.hidden=(t==="tSearch");}
+  /* Ben's call: no Ko-fi ask while someone is in the middle of building. The
+     affiliate line beside it stays on every tab — that one isn't optional. */
+  {const kw=$("kofiwrap");if(kw)kw.hidden=(t==="tDeck");}
   $("subsw").classList.toggle("hide",t!=="tDeck");
   if(t==="tDeck")       $(guided?"vGuide":"vSearch").classList.add("on");
   else if(t==="tSearch")$("vSearch").classList.add("on");
   else if(t==="tColl"){$("vColl").classList.add("on");renderColl()}
   else if(t==="tDecks"){$("vDecks").classList.add("on");renderDecksPage()}
-  else if(t==="tMeta"){$("vMeta").classList.add("on");renderMetaPage()}
   else if(t==="tOther"){
     /* One table, not a chain of fourteen else-ifs. A chain is how the default
        case (the menu itself) once got swallowed by an unrelated guard clause. */
@@ -13627,7 +14589,8 @@ $("lnk").onclick=copySearchLink;
 let REMIND=load("fs3_remind",true);
 function drawRemind(){
   document.body.classList.toggle("noremind",!REMIND);
-  const b=$("tgRemind");if(b)b.textContent="Reminder tags: "+(REMIND?"on":"off");
+  const b=$("tgRemind");if(b){b.innerHTML=`Reminder tags <b class="sw">${REMIND?"ON":"OFF"}</b>`;
+    b.setAttribute("aria-pressed",REMIND)}
 }
 $("tgRemind").onclick=()=>{REMIND=!REMIND;save("fs3_remind",REMIND);drawRemind()};
 drawRemind();
@@ -13658,10 +14621,19 @@ document.querySelectorAll("[data-seecards]").forEach(b=>b.onclick=()=>{
   if(sp)sp.open=false;if(sd)sd.open=false;
   const g=$("grid");
   if(g)g.scrollIntoView({behavior:"smooth",block:"start"});});
-$("expAll").onclick=()=>{$("groups").querySelectorAll("details.grp").forEach(d=>d.open=true);
-  save("fs3_gopen",GROUPS.map(g=>g.g))};
-$("colAll").onclick=()=>{$("groups").querySelectorAll("details.grp").forEach(d=>d.open=false);
-  save("fs3_gopen",[])};
+/* [data-g] only, on both. Expand all used to unfold the Coconut list and What
+   it costs too — nineteen Coconuts with a stack of chips under each, plus the
+   price block, which is not what anyone means by "show me the searches". Those
+   two open only when you open them. */
+$("expAll").onclick=()=>{$("groups").querySelectorAll("details.grp[data-g]").forEach(d=>d.open=true);
+  GCLOSED=new Set();saveGClosed()};
+$("colAll").onclick=()=>{$("groups").querySelectorAll("details.grp[data-g]").forEach(d=>d.open=false);
+  GCLOSED=new Set(GROUPS.filter(g=>!g.money).map(g=>g.g));saveGClosed()};
+{const q=$("chipQ");
+ q.oninput=()=>{CHIPQ=q.value;applyChipFilter()};
+ /* Escape clears the filter rather than closing the whole panel. */
+ q.onkeydown=e=>{e.stopPropagation();
+   if(e.key==="Escape"){e.preventDefault();q.value="";CHIPQ="";applyChipFilter()}};}
 $("special").ontoggle=()=>save("fs3_spec",$("special").open);
 /* Open on arrival on a desktop, remembered if you close it. CLOSED on arrival
    on a phone, because there it is not a panel beside the results — it is a
@@ -13669,15 +14641,22 @@ $("special").ontoggle=()=>save("fs3_spec",$("special").open);
 if(load("fs3_spec",!PHONE()))$("special").open=true;
 $("sy").onclick=()=>{const h=$("syh");h.style.display=h.style.display==="none"?"block":"none"};
 $("sh").onclick=shareLink;
+/* The masthead is a way home. One press in nine hundred and ninety-nine it is
+   a way somewhere else instead — opened in a new tab, so a 1-in-999 joke can
+   never cost anyone the deck they were halfway through building. */
+$("logo").onclick=()=>{
+  if(Math.floor(Math.random()*999)===0){
+    window.open("https://youtube.com/playlist?list=PLWSrAWLINJw4gROuNr3F7iCJdkZhR1eEi&si=wspH6sAp3-hKRVCq",
+      "_blank","noopener");
+    return;
+  }
+  showTab("tDeck");
+};
 /* ---- search-widening switches ---- */
 function drawToggles(){
   $("tgTag").classList.toggle("on",S.tagS);$("tgTag").setAttribute("aria-pressed",S.tagS);
   $("tgSto").classList.toggle("on",S.stoS);$("tgSto").setAttribute("aria-pressed",S.stoS);
   $("tgFlav").classList.toggle("on",S.flS);$("tgFlav").setAttribute("aria-pressed",S.flS);
-  const on=[S.tagS&&"art tags",S.stoS&&"franchise",S.flS&&"flavor text"].filter(Boolean);
-  $("tgHint").textContent=on.length
-    ? "Typed words also match "+on.join(" and ")+"."
-    : "Typed words match names, rules text and classifications only.";
 }
 /* Replay an animation by yanking the class and forcing a reflow — without the
    reflow the browser coalesces remove+add and nothing plays the second time. */
@@ -13695,13 +14674,10 @@ function maybePulse(){
   LASTPULSE=now;replay($("tgTag"),"pulse",3400);
 }
 $("tgTag").onclick=()=>{S.tagS=!S.tagS;save("fs3_tagS",S.tagS);drawToggles();S.limit=150;render();
-  if(S.stoS&&S.tagS)unlockHidden("h_wide");
-  toast(S.tagS?"Art tags included — try “blue dog”":"Art tags excluded")};
+  if(S.stoS&&S.tagS)unlockHidden("h_wide")};
 $("tgSto").onclick=()=>{S.stoS=!S.stoS;save("fs3_stoS",S.stoS);drawToggles();S.limit=150;render();
-  if(S.stoS&&S.tagS)unlockHidden("h_wide");
-  toast(S.stoS?"Franchise names included":"Franchise names excluded")};
-$("tgFlav").onclick=()=>{S.flS=!S.flS;save("fs3_flS",S.flS);drawToggles();S.limit=150;render();
-  toast(S.flS?"Flavor text included":"Flavor text excluded")};
+  if(S.stoS&&S.tagS)unlockHidden("h_wide")};
+$("tgFlav").onclick=()=>{S.flS=!S.flS;save("fs3_flS",S.flS);drawToggles();S.limit=150;render()};
 drawToggles();
 /* ===================== typing help =====================
    Two of the most-cited complaints about deck builders are that card names

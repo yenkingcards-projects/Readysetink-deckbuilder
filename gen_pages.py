@@ -473,7 +473,11 @@ HUBS = [
             "you already own.",
         ]),
      ]},
-    {"slug": "meta-decks", "tab": "tMeta",
+    # Recommended decks moved off the tab bar and into Other, so this landing
+    # page has to deep-link the same way the lore tracker and games ones do —
+    # tab=tOther plus op=meta. Left as tab=tMeta it silently fell back to the
+    # deck builder, because showTab only honours a tab that still exists.
+    {"slug": "meta-decks", "tab": "tOther", "op": "meta",
      "title": "Recommended Lorcana decks by set",
      "lede": "The decks worth playing in the current Lorcana set — one list per ink "
              "pair, split into early set, mid set and Set Championship.",

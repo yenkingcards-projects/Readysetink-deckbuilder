@@ -11,6 +11,11 @@ Usage:
     python3 art-tools/merge_art_tags.py --input first-chapter-art-tags.json --overwrite-ai
         (re-run tagging on a set and want to replace last time's AI output --
          only touches entries this tool itself wrote, never hand-tagged ones)
+    python3 art-tools/merge_art_tags.py --input first-chapter-art-tags.json --append
+        (an improve pass: keep every tag the card already has and add the new
+         ones on top. Safe on hand-tagged cards, because nothing is ever
+         removed -- which is the point: --overwrite-ai skips them entirely, so
+         a hand-tagged card could never receive a single improvement.)
 """
 import argparse, json, os, sys
 
@@ -42,6 +47,9 @@ def main():
     ap.add_argument('--input', required=True)
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--overwrite-ai', action='store_true')
+    ap.add_argument('--append', action='store_true',
+                     help="Union the incoming tags onto whatever the card already has, for "
+                          "every card including hand-tagged ones. Never removes a tag.")
     args = ap.parse_args()
 
     if os.path.isabs(args.input):
@@ -66,13 +74,27 @@ def main():
             ai_keys = set(json.load(f))
 
     added, skipped_existing, skipped_unknown, overwritten = [], [], [], []
+    appended = []
 
     for key, tags in incoming.get('cards', {}).items():
         if key not in valid:
             skipped_unknown.append(key)
             continue
         if key in master['cards']:
-            if args.overwrite_ai and key in ai_keys:
+            if args.append:
+                # Union, existing first, so the card keeps the order and the
+                # wording it already had and simply gains what's new. This is
+                # the only path that can improve a hand-tagged card, and it can
+                # do it safely precisely because it never takes anything away.
+                cur = master['cards'][key]
+                merged = {f: list(dict.fromkeys(list(cur.get(f, [])) + list(tags.get(f, []))))
+                          for f in ("t", "a")}
+                if merged != cur:
+                    master['cards'][key] = merged
+                    appended.append(key)
+                else:
+                    skipped_existing.append(key)
+            elif args.overwrite_ai and key in ai_keys:
                 master['cards'][key] = tags
                 overwritten.append(key)
             else:
@@ -83,8 +105,12 @@ def main():
         ai_keys.add(key)
 
     print(f"Added:              {len(added)}")
+    if args.append:
+        print(f"Improved (append):  {len(appended)}  (existing tags all kept)")
     print(f"Overwritten (AI):   {len(overwritten)}")
-    print(f"Skipped (existing): {len(skipped_existing)}  (hand-tagged or already merged -- never touched)")
+    print(f"Skipped (existing): {len(skipped_existing)}  " + (
+        "(nothing new to add)" if args.append
+        else "(hand-tagged or already merged -- never touched)"))
     print(f"Skipped (unknown):  {len(skipped_unknown)}")
     if skipped_unknown:
         print("  Unknown names (check spelling against card-db.json):")
