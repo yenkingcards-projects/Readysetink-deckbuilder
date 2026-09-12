@@ -540,9 +540,6 @@ header{display:flex;align-items:center;gap:14px;padding:7px 12px;background:var(
 .logo span{font-size:12px;color:var(--on-dark-soft);font-family:var(--sans);letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:900px){.logo span{display:none}}
 header .sp{flex:1}
-header .ink-list-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;box-sizing:border-box;background:var(--amberc);color:var(--deep);border:1px solid var(--chrome);font:700 12px var(--sans);text-decoration:none;white-space:nowrap}
-header .ink-list-link:hover{filter:brightness(1.08)}
-header .ink-list-link:focus-visible{outline:2px solid var(--surface);outline-offset:3px}
 header select{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:6px 9px;font-size:12.8px}
 
 /* Tabs as index entries — smallcaps, letterspaced, marked with a gold rule
@@ -551,10 +548,12 @@ header select{background:var(--panel);border:1px solid var(--line);border-radius
    hierarchy — do not flatten these into one. */
 nav.tabs{display:flex;gap:0;padding:0 8px;background:var(--canvas-soft);
   border-bottom:1px solid var(--chrome);box-shadow:var(--bevel);flex-wrap:wrap}
-nav.tabs button{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
+nav.tabs button,nav.tabs .ink-list-link{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
   font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:0;
   border-right:1px solid rgba(51,74,136,.3)}
-nav.tabs button:hover{background:rgba(255,255,255,.4)}
+nav.tabs button:hover,nav.tabs .ink-list-link:hover{background:rgba(255,255,255,.4)}
+nav.tabs .ink-list-link{display:inline-flex;align-items:center;text-decoration:none;white-space:nowrap}
+nav.tabs .ink-list-link:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
 nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
 /* The Other tab jumps straight to the Lore tracker (its default landing
    page) — everything else in the Other menu used to need a detour through
@@ -3850,7 +3849,6 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <button type="button" class="logo" id="logo" title="Back to the deck builder"><span class="f">🐠</span><b>Ready Set Ink</b><span>the best cards are the friends you make along the way</span></button>
   <div class="sp"></div>
   <span class="worn" id="worn"></span>
-  <a class="ink-list-link" href="https://inklist.readysetink.com/">The Ink List ↗</a>
   <button class="btn" id="acct" hidden>Sign in</button>
 </header>
 
@@ -3859,6 +3857,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <button id="tSearch">Search for cards</button>
   <button id="tColl" class="collonly">My collection</button>
   <button id="tDecks">Decks</button>
+  <a class="ink-list-link" href="https://inklist.readysetink.com/">The Ink List ↗</a>
   <span class="otherwrap">
     <button id="tOther">Other</button>
     <button id="tOtherMenu" aria-label="Other menu" aria-haspopup="true" aria-expanded="false">☰</button>
