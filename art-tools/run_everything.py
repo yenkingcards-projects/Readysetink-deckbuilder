@@ -19,6 +19,9 @@ Usage:
     python3 art-tools/run_everything.py --model gemma4:12b --skip-quests
     python3 art-tools/run_everything.py --model gemma4:12b --set "First Chapter"
         (just one set, still runs all 4 steps -- useful for testing)
+    python3 art-tools/run_everything.py --model gemma4:12b --from-set 5 --to-set 13
+        (only the official numbered sets 5 through 13, inclusive -- Quest
+        side-sets are skipped automatically, since they aren't numbered)
 
 Writes progress to art-tools/overnight-run.log as it goes, plus a summary
 at the end.
@@ -60,6 +63,8 @@ def main():
     ap.add_argument('--skip-quests', action='store_true',
                      help="Skip Illumineer's Quest sets (different card pool/format)")
     ap.add_argument('--set', help="Only run this one set (all 4 steps), instead of every set")
+    ap.add_argument('--from-set', help="Official set number to start at, e.g. 5")
+    ap.add_argument('--to-set', help="Official set number to stop after, e.g. 13")
     ap.add_argument('--skip-mickeys', action='store_true',
                      help="Skip the hidden-mickey pass entirely, just download+tag")
     args = ap.parse_args()
@@ -76,6 +81,25 @@ def main():
 
     if args.skip_quests:
         sets = [s for s in sets if 'Quest' not in s[1]]
+
+    if args.from_set or args.to_set:
+        # Quest side-sets ("Q1", "Q2") have no numeric code, so a numeric
+        # range excludes them automatically -- no need to also pass
+        # --skip-quests alongside a range.
+        lo = int(args.from_set) if args.from_set else None
+        hi = int(args.to_set) if args.to_set else None
+
+        def in_range(code):
+            try:
+                n = int(code)
+            except ValueError:
+                return False
+            return (lo is None or n >= lo) and (hi is None or n <= hi)
+
+        sets = [s for s in sets if in_range(s[0])]
+        if not sets:
+            print(f"No numbered sets found in range {args.from_set or ''}-{args.to_set or ''}.")
+            sys.exit(1)
 
     if args.set:
         low = args.set.lower().strip()

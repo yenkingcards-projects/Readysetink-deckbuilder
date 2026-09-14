@@ -1,0 +1,23 @@
+#!/bin/bash
+cd "/Users/benjamindacy/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
+echo "=================================================="
+echo " Running sets 5 through 13: Shimmering Skies,"
+echo " Azurite Sea, Archazia's Island, The Reign of Jafar,"
+echo " Fabled, Whispers in the Well, Winterspell, Wilds"
+echo " Unknown, Attack of the Vine! -- download + tag +"
+echo " hidden mickeys, one after another."
+echo ""
+echo " Sets 5-12 are already almost fully tagged, so this"
+echo " should fly through those and spend most of its time"
+echo " on Attack of the Vine! (set 13), which is the real"
+echo " gap right now."
+echo ""
+echo " Safe to leave running overnight. Safe to close this"
+echo " window any time -- just double-click this file again"
+echo " later to pick up where it left off."
+echo "=================================================="
+echo ""
+python3 art-tools/run_everything.py --model "gemma4:12b" --from-set 5 --to-set 13
+echo ""
+echo "All done (or stopped). Press Enter to close."
+read

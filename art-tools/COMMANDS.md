@@ -68,6 +68,18 @@ including alt-art. Before you walk away: go to **System Settings → Lock
 Screen** (or **Battery**) and turn off sleep, or the run pauses when your
 Mac's display sleeps.
 
+## Run a RANGE of sets, unattended (e.g. just 5 through 13)
+
+```bash
+python3 art-tools/run_everything.py --model "gemma4:12b" --from-set 5 --to-set 13
+```
+
+Same download + tag + hidden-mickey pipeline as "RUN EVERYTHING", just
+limited to official set numbers 5-13 inclusive. Quest side-sets (Q1, Q2)
+are skipped automatically since they have no number. There's also a
+one-click `.command` file for this exact range in the "Start Tagging"
+folder: **`Start - Sets 5 to 13 (overnight).command`**.
+
 Safe to stop and re-run the exact same command later — nothing already
 tagged gets redone.
 
