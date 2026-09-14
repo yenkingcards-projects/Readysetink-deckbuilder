@@ -1555,7 +1555,6 @@
     "magic glow",
     "sparking hair tips",
     "purple lens",
-    "purple purple gown",
     "flowinging hair",
     "gold turn",
     "princess attire",
@@ -2865,8 +2864,7 @@
     "icy atmosphere",
     "icy wonderland",
     "frozen scenery",
-    "sparking ice",
-    "snow query"
+    "sparking ice"
    ]
   },
   "Elsa - Snow Queen (Special)": {
@@ -5715,7 +5713,6 @@
     "beard",
     "beard with green skin",
     "beard with skin",
-    "beard with green skin skin",
     "teal background",
     "dark teal backdrop",
     "blueish tint to scene",
@@ -6625,21 +6622,7 @@
     "gold keyhole",
     "gold latch",
     "gold bands",
-    "gold bands on chest",
-    "gold bands on lid",
-    "gold bands on side",
-    "gold bands on front",
-    "gold bands on bottom",
-    "gold bands on back",
-    "gold bands on top",
     "gold marks",
-    "gold marks on chest",
-    "gold marks on lid",
-    "gold marks on side",
-    "gold marks on front",
-    "gold marks on bottom",
-    "gold marks on back",
-    "gold marks on top",
     "pink sleeve",
     "falling coins",
     "golden treasure",
@@ -7209,10 +7192,6 @@
     "glowing lantern",
     "red glow",
     "red light glow",
-    "red light on horse",
-    "red light on wall",
-    "red light on background",
-    "red light on wood",
     "wooden wall",
     "wooden structure",
     "wooden beam",
@@ -10716,7 +10695,6 @@
     "magic turn",
     "g glowing aura",
     "magic circle/symbol",
-    "magic wand wand",
     "pointed blue cap",
     "purple robe garment",
     "blue cloak piece",
@@ -14179,7 +14157,6 @@
     "pouring liquid into cup",
     "pouring liquid into mug",
     "pouring liquid into glass",
-    "pouring liquid liquid into mug",
     "one character",
     "brown hair",
     "short brown hair",
@@ -15011,7 +14988,7 @@
     "doge",
     "brown dog",
     "golden retriever mix",
-    "puppy puppy look",
+    "puppy look",
     "white fur patches",
     "blue collar",
     "teal blue neckband",
@@ -15060,7 +15037,7 @@
     "sweeping broom",
     "yellow bristles",
     "wooden handle",
-    "scarf scarf",
+    "scarf",
     "blue striped scarf",
     "red shirt",
     "striped red top",
@@ -16093,7 +16070,7 @@
    ],
    "a": [
     "one character",
-    "wizard wizard robe costume",
+    "wizard robe costume",
     "white beard",
     "long white hair",
     "blue robes",
@@ -17572,7 +17549,7 @@
    ],
    "a": [
     "one character",
-    "bear bear portrait",
+    "bear portrait",
     "blue fur",
     "honeycomb of",
     "yellow",
@@ -19307,7 +19284,7 @@
    ],
    "a": [
     "one character",
-    "tin can can"
+    "tin can"
    ]
   },
   "Beast - Forbidding Recluse": {
@@ -23074,8 +23051,8 @@
    "a": [
     "one character",
     "vulture bird",
-    "scavenger scavenger",
-    "beak beak",
+    "scavenger",
+    "beak",
     "feathered feathers",
     "purple cape",
     "dark purple cloak",
@@ -23553,7 +23530,7 @@
     "flowing fabric capelet",
     "shimmered mermaid scale pattern",
     "mythical creature portrait",
-    "fantasy fantasy setting",
+    "fantasy setting",
     "majestic pose holding trident",
     "dynamic action shot",
     "merman's triton spear",
@@ -24641,7 +24618,7 @@
     "one character",
     "brown fur",
     "pink coat",
-    "scarf scarf around neck",
+    "scarf around neck",
     "large pink bow on headpiece",
     "smiling face",
     "long snout",
@@ -28673,7 +28650,7 @@
     "candy king costume",
     "bald head bald man",
     "red hair on sidehead",
-    "mustache mustache face",
+    "mustache face",
     "white beard white facialhair",
     "blue and gold crown jewelery",
     "crown atopeshedo"
@@ -29016,7 +28993,6 @@
    ],
    "a": [
     "one character",
-    "dogeese",
     "blue hat",
     "yellow goggles",
     "white lab coat",
@@ -29924,7 +29900,7 @@
     "boots on feet",
     "leather belt buckle",
     "short sleeve shirt",
-    "vest vest garment",
+    "vest garment",
     "beard and mustache face details",
     "large white gloves"
    ]
@@ -30162,7 +30138,7 @@
    ],
    "a": [
     "one character",
-    "mermaid mermaid silhouette in background",
+    "mermaid silhouette in background",
     "teal water underwater scene",
     "coral reef sea life",
     "seaweed swaying under surface"
@@ -30723,7 +30699,7 @@
    ],
    "a": [
     "rabbit",
-    "bunny bunny",
+    "bunny",
     "long ears",
     "yellow fur",
     "white belly",
@@ -36577,7 +36553,7 @@
     "blue robe",
     "purple pants",
     "brown hair",
-    "beard beard style",
+    "beard style",
     "bearded man"
    ]
   },
@@ -36645,7 +36621,7 @@
     "large man",
     "muscular build",
     "brown hair",
-    "beard beard face",
+    "beard face",
     "red shirt",
     "yellow vest",
     "holding items",
@@ -38884,7 +38860,7 @@
     "yellow feathers",
     "golden wings",
     "large eyes",
-    "beak beak shape",
+    "beak shape",
     "flying pose",
     "spread outer wing span",
     "feathered texture",
@@ -41276,7 +41252,7 @@
     "animal"
    ],
    "a": [
-    "feather feather",
+    "feather",
     "magic feeling",
     "purple glow",
     "pink swirl",
@@ -42420,7 +42396,7 @@
    ],
    "a": [
     "one character",
-    "bear bear portrait",
+    "bear portrait",
     "large brown furr coat"
    ]
   },
@@ -46964,7 +46940,7 @@
     "smirk face",
     "looking forward",
     "standing pose",
-    "scent trail trail"
+    "scent trail"
    ]
   },
   "Francine - Eyeing the Evidence": {
@@ -47942,7 +47918,7 @@
     "smile wide",
     "laughing face",
     "open mouth showing teeth",
-    "scarf scarf around neck"
+    "scarf around neck"
    ]
   },
   "Stitch - Carefree Snowboarder (Epic)": {
@@ -48935,7 +48911,7 @@
     "blue waves",
     "hummingbird bird",
     "green hummingbird",
-    "beak beak shape",
+    "beak shape",
     "long thin bill",
     "pinkish red throat feathers",
     "white belly plumage",
@@ -50258,7 +50234,7 @@
    "a": [
     "brown dog",
     "hound pup",
-    "puppy puppy",
+    "puppy",
     "tongue out",
     "panting tongue",
     "running pose",
@@ -51892,7 +51868,7 @@
     "brown bear",
     "small furred animal",
     "holding flowers",
-    "bouquet bouquet flower bundle"
+    "bouquet flower bundle"
    ]
   },
   "Kanga - Peaceful Gatherer": {
@@ -52375,7 +52351,7 @@
     "red hat",
     "green coat",
     "white fur trim",
-    "scarf scarf",
+    "scarf",
     "scrooge mcduck character design"
    ]
   },
@@ -52476,7 +52452,7 @@
     "golden sparkles",
     "turquoise sea",
     "coral reef background",
-    "orange shell shell coat"
+    "orange shell coat"
    ]
   },
   "Morty Fieldmouse - Tiny Tim": {
@@ -52977,7 +52953,7 @@
     "yellow lanterns",
     "hanging lantern",
     "lit lamp",
-    "scarf scarf wrap"
+    "scarf wrap"
    ]
   },
   "Darkwing Duck - Crime Fighter": {
@@ -53297,7 +53273,7 @@
     "white horse",
     "red cape",
     "brown hair",
-    "scarf scarf",
+    "scarf",
     "sculpted armor"
    ]
   },
@@ -54204,7 +54180,7 @@
    "a": [
     "one character",
     "red bird",
-    "rooster rooster",
+    "rooster",
     "blue feathers",
     "yellow beak",
     "green plumage",
@@ -55784,7 +55760,7 @@
    ],
    "a": [
     "one character",
-    "bear bear holding food",
+    "bear holding food",
     "brown fur coat",
     "flower crown decoration above head"
    ]
@@ -56195,7 +56171,7 @@
     "jovial face",
     "bearded beard",
     "spectacles glasses",
-    "mustache mustache",
+    "mustache",
     "orange coat",
     "reddish orange jacket",
     "holding tray",
@@ -57007,7 +56983,7 @@
    ],
    "a": [
     "one character",
-    "explorer explorer"
+    "explorer"
    ]
   },
   "Zeus - Defiant God": {
@@ -57553,7 +57529,7 @@
     "toy pterodactyl",
     "dinosaur toy",
     "doll on string",
-    "puppet puppet strings"
+    "puppet strings"
    ]
   },
   "Inner Strength": {
@@ -60817,7 +60793,7 @@
     "dark robes",
     "scarlet cloak",
     "serpent staff",
-    "snake snake staff",
+    "snake staff",
     "scimitar sword",
     "curved blade"
    ]
@@ -61767,7 +61743,7 @@
    "a": [
     "lion portrait",
     "mufasa lion",
-    "mane mane hair",
+    "mane hair",
     "starry night background"
    ]
   },
@@ -62527,7 +62503,7 @@
     "gray kitten",
     "mischievous look",
     "blue eyes",
-    "scarf scarf around neck",
+    "scarf around neck",
     "red ribbon tie",
     "stack of books",
     "colorful pile of books",
@@ -64694,7 +64670,7 @@
     "bearded man",
     "brown beard",
     "shaved head",
-    "scarf scarf",
+    "scarf",
     "golden coil",
     "yellow gold belt buckle",
     "light blue glow",
@@ -64847,7 +64823,7 @@
    ],
    "a": [
     "blue bird",
-    "rooster rooster",
+    "rooster",
     "coconut shell headpiece",
     "wearing coconut",
     "orange beak",
@@ -66128,7 +66104,7 @@
    "t": [],
    "a": [
     "one character",
-    "purple scroll scroll",
+    "purple scroll",
     "pink ribboned paper",
     "magical parchment",
     "enchanted document",
@@ -66368,7 +66344,7 @@
    ],
    "a": [
     "one character",
-    "scarab beetle scarab scarab illustration"
+    "scarab beetle scarab illustration"
    ]
   },
   "Gargantuan Cobra - Slithering Statue": {
@@ -67836,7 +67812,7 @@
     "man in green tunic",
     "green robe",
     "brown belt",
-    "beard beard",
+    "beard",
     "bearded man"
    ]
   },
@@ -69342,7 +69318,7 @@
    ],
    "a": [
     "one character",
-    "mermaid mermaid tail",
+    "mermaid tail",
     "teal water surface",
     "swirling blue waves",
     "green sea grasses underwater"
@@ -69947,7 +69923,7 @@
    ],
    "a": [
     "one character",
-    "blue dragon dragon creature",
+    "blue dragon creature",
     "teal blue color",
     "light teal body",
     "shimmering scales",
@@ -70143,7 +70119,7 @@
    ],
    "a": [
     "one character",
-    "red scroll scroll",
+    "red scroll",
     "hand holding paper"
    ]
   },
@@ -70536,7 +70512,7 @@
    ],
    "a": [
     "one character",
-    "snowman snowman"
+    "snowman"
    ]
   },
   "Olaf - Trusting Companion": {

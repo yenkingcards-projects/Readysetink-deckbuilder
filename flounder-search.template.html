@@ -14287,7 +14287,8 @@ function renderPrefs(){
       <span><b>${CARDS.length.toLocaleString()}</b> cards · card data ${esc(DATA.generated||"unknown")}${
         priceDate()?` · prices ${esc(priceDate())}`:""}</span>
       <button class="btn tiny" id="pfRefresh" title="Fetch the newest build of this page from the server">Check for new cards</button>
-    </div>`;
+    </div>
+    <div class="about"><span></span><a class="btn tiny" href="/roadmap/" target="_blank" rel="noopener">What's next →</a></div>`;
     /* The "Not built yet" list is hidden at Ben's request — a settings page
        that is mostly disabled switches reads as an unfinished site rather than
        as a roadmap. The rows are kept in PREF_SOON below rather than deleted,
