@@ -16,6 +16,11 @@ He is the QA. That is faster and more accurate than anything I do alone.
 6. **Reply in 1–3 lines.** What changed. Anything he must know. Nothing else.
    No recaps, no "why this was interesting", no lists of what I considered.
 7. **Never re-read a file I just wrote.** Never re-run a passing command.
+8. **Sync before you start.** Kenny pushes independently — `git fetch && git
+   status` before touching anything, every session. If behind, `git pull`
+   (stash local untracked scratch first if it complains, don't delete it).
+   Then check `BUILD-REPORT.md`'s numbers before trusting any doc's claim
+   about what's built — docs go stale, the repo doesn't.
 
 ## Caring, cheaply
 
