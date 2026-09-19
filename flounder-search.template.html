@@ -372,17 +372,32 @@ body.nocoll .collonly{display:none!important}
 #prefBack{margin-bottom:14px}
 
 
-/* ---- deck bar ---- */
-/* Deck name / unsaved / Save, at the top of the deck panel. */
-.dhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px;
+/* ---- deck bar ----
+   Three rows, three different jobs. The panel title ("Deck", plus the 👁/⋯
+   menus) is small housekeeping, so it stays out of the way top-left; the
+   deck's ink pair is the other small fact worth knowing at a glance, so it
+   balances the title on the right rather than competing with the name for
+   the middle of the panel. The deck's actual NAME is the one thing in this
+   header you came to read, so it's the only thing centered and full-size.
+   Count/format/last-edited used to sit as a left-aligned line under the
+   progress bar; now it reads as a footer — centered, small, below the bar,
+   the way a caption reads rather than a label. */
+.dtop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+.dtitle{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--deep);display:flex;align-items:center;gap:6px}
+.dinks{display:flex;align-items:center;gap:4px;justify-content:flex-end}
+.dpip{width:11px;height:11px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.35)}
+/* Deck name / unsaved, at the top of the deck panel. */
+.dhead{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:9px;
   background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
-  border-radius:2px;padding:8px 10px}
-.dhname{flex:1;min-width:0;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  border-radius:2px;padding:8px 10px;text-align:center}
+.dhname{min-width:0;display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
 .dhead b{color:var(--tx);font-size:14px;overflow:hidden;text-overflow:ellipsis}
 .dbdirty{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
   background:var(--amberc);color:var(--carbon);border:1px solid var(--amber-press);
   border-radius:2px;padding:2px 6px}
 .dbdirty[hidden]{display:none}
+.dfoot{font-size:12px;color:var(--deep);margin-top:7px;text-align:center}
 /* ---- the save burst ---- */
 .spark{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:940}
 @media(prefers-reduced-motion:reduce){.spark{display:none}}
@@ -1729,6 +1744,21 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .rtags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
 .rtext .rulings{max-height:none}
 /* ===== decks page + pull list =========================================== */
+/* One collapsible per set-era. Same <details> chrome as Special searches and
+   Filters (border/summary/▸), so a third kind of "drawer of things" on this
+   site still reads as the same kind of control. */
+.erafolds{margin-bottom:8px}
+.erafold{margin-bottom:10px;border:1px solid var(--line);border-radius:4px;
+  background:var(--panel);overflow:hidden}
+.erafold>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:10px;
+  padding:11px 14px;font-size:14px;font-weight:700}
+.erafold>summary::-webkit-details-marker,.erafold>summary::marker{content:"";font-size:0}
+.erafold>summary::before{content:"▸";color:var(--link);transition:transform .15s;font-size:1rem}
+.erafold[open]>summary::before{transform:rotate(90deg)}
+.erafn{color:var(--tx)}
+.erafd{font-size:12px;font-weight:500;color:var(--deep);font-variant-numeric:tabular-nums}
+.erafc{margin-left:auto;font-size:12px;font-weight:500;color:var(--deep)}
+.erafold>.dkgrid{padding:0 14px 14px;margin-bottom:0}
 .dkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:11px;margin-bottom:22px}
 /* Unselected decks sit back on platinum; the one you're editing comes forward
    onto white. --panel and --surface resolve to the same white in the light
@@ -1981,11 +2011,16 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
    but you can tell at a glance which of the three the site is built around. */
 .artrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:stretch;
   margin-top:8px}
-.swx.art{padding:9px 14px;gap:12px;border-width:2px}
-.swx.art .kn{width:52px;height:28px}
-.swx.art .kn i{width:24px;height:24px}
-.swx.art .swi svg{width:16px;height:16px}
-.swx.art.on .kn i{transform:translateX(24px)}
+/* Was a 2px border plus the same glowing box-shadow every other switch gets —
+   at full row width that read as a giant plate before you'd even touched the
+   search box. One thin hairline border, no separate shadow layer of its own
+   (it still gets the shared .swx.on wash when active), and tighter padding so
+   it sits flush with the search field above it instead of looming over it. */
+.swx.art{padding:7px 13px;gap:11px;border-width:1px}
+.swx.art .kn{width:46px;height:25px}
+.swx.art .kn i{width:21px;height:21px}
+.swx.art .swi svg{width:15px;height:15px}
+.swx.art.on .kn i{transform:translateX(21px)}
 .artlb{display:flex;flex-direction:column;gap:1px;min-width:0;text-align:left}
 .artlb b{font-size:14px;font-weight:800;color:var(--tx);line-height:1.2}
 .artlb span{font-size:11.5px;font-weight:600;color:var(--deep);line-height:1.3}
@@ -2056,6 +2091,9 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .swx.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(47,111,237,.16),rgba(47,111,237,.16));
   border-color:var(--acc2);
   box-shadow:inset 0 0 0 1px rgba(47,111,237,.4),0 2px 10px -6px rgba(47,111,237,.9)}
+/* The full-width art tile doesn't need the outer glow the small switches use —
+   at that size it read as a spotlight rather than a control. Inset ring only. */
+.swx.art.on{box-shadow:inset 0 0 0 1px rgba(47,111,237,.4)}
 .swx.on .kn{background:rgba(47,111,237,.28);border-color:var(--acc2)}
 .swx.on .kn i{background:var(--acc2)}
 /* franchise runs amber, so the three are never confused at a glance */
@@ -2098,14 +2136,39 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
   .artlb span{font-size:11px}
   .swx.wee{flex:1;min-height:34px}
 }
-/* a quick shimmy when you land on the search page, so the switch gets noticed */
+/* Same narrow-layout rules as the phone breakpoint just above, applied
+   unconditionally inside .searchcol — the column is ~270px wide on every
+   screen size now, not just on phones, and without this the art tile's own
+   two-line label wrapped word-by-word down the column (grid-template-columns:
+   minmax(0,1fr) auto has nowhere near enough room at that width). */
+.searchcol .swx{padding:5px 7px;gap:7px;min-height:38px}
+.searchcol .swx .kn{width:34px;height:20px}
+.searchcol .swx .kn i{width:16px;height:16px}
+.searchcol .swx .swi svg{width:11px;height:11px}
+.searchcol .swx.on .kn i{transform:translateX(14px)}
+.searchcol .swx .lb{font-size:11.5px}
+.searchcol .artrow{grid-template-columns:1fr;gap:7px}
+.searchcol .alsorow{padding-left:0;border-left:0;gap:6px;
+  grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);align-items:center}
+.searchcol .alsolbl{grid-column:auto}
+.searchcol .swx.art{padding:8px 11px;gap:10px}
+.searchcol .swx.art .kn{width:44px;height:24px}
+.searchcol .swx.art .kn i{width:20px;height:20px}
+.searchcol .swx.art.on .kn i{transform:translateX(20px)}
+.searchcol .artlb b{font-size:13.5px}
+.searchcol .artlb span{font-size:11px}
+.searchcol .swx.wee{flex:1;min-height:34px}
+.searchcol .srow{flex-wrap:wrap}
+/* a quick shimmy when you land on the search page, so the switch gets noticed
+   — a nudge, not a shake. Amplitude cut by more than half from the original
+   (was ±2.5deg/3px, felt like a warning buzz) and eased over a touch longer
+   so it reads as a friendly wiggle instead of something rattling. */
 @keyframes swjig{0%,100%{transform:rotate(0) translateX(0)}
-  15%{transform:rotate(-2.5deg) translateX(-3px)}
-  30%{transform:rotate(2.5deg) translateX(3px)}
-  45%{transform:rotate(-1.8deg) translateX(-2px)}
-  60%{transform:rotate(1.8deg) translateX(2px)}
-  78%{transform:rotate(-.7deg) translateX(-1px)}}
-.swx.jig{animation:swjig .62s ease-in-out}
+  20%{transform:rotate(-1deg) translateX(-1.5px)}
+  40%{transform:rotate(1deg) translateX(1.5px)}
+  60%{transform:rotate(-.6deg) translateX(-1px)}
+  80%{transform:rotate(.6deg) translateX(1px)}}
+.swx.jig{animation:swjig .68s ease-in-out}
 /* and a very slow breath now and then while it's doing its job */
 @keyframes swpulse{0%,100%{filter:brightness(1)}
   50%{filter:brightness(1.65) drop-shadow(0 0 9px rgba(79,208,247,.6))}}
@@ -2272,9 +2335,11 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .mlist button{background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:4px 8px;font-size:12px;color:var(--deep);text-align:left}
 .mlist button:hover{border-color:var(--link);color:var(--tx)}
 .toggle{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--deep);cursor:pointer}
-.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-@media(max-width:1000px){.chips{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.chips{grid-template-columns:1fr}}
+/* Special searches now lives in the same narrow left column as Filters (see
+   .searchcol), same reasoning as the Filters masonry removal above — three
+   chips squeezed side by side in a ~300px column was the cluttered, cramped
+   read Ben flagged. One column, same as everywhere else in that column. */
+.chips{display:grid;grid-template-columns:1fr;gap:6px}
 .chip{display:flex;align-items:center;justify-content:space-between;gap:6px;background:var(--platinum);
   border:1px solid var(--line);border-radius:4px;padding:7px 10px;font-size:12.48px;color:var(--deep);text-align:left;box-shadow:var(--bevel-in);color:var(--tx);font-size:12px}
 .chip:hover{border-color:var(--deep);color:var(--tx)}
@@ -2301,7 +2366,21 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 /* 420, not 330: three columns of card at the new size instead of two and a
    half. Only the default moves — a width you've dragged yourself is saved and
    still wins. */
-.wrap{display:grid;grid-template-columns:minmax(0,1fr) var(--deckw,420px);gap:14px;margin-top:14px;align-items:start}
+.wrap{display:grid;
+  grid-template-columns:var(--searchw,270px) minmax(0,1fr) var(--deckw,420px);
+  gap:14px;margin-top:14px;align-items:start}
+/* Search + Filters, sticky on the left — the same chrome and the same
+   position:sticky/max-height recipe .deck already uses on the right, so the
+   two read as a matching pair rather than one designed control and one
+   bolted-on afterthought. Independently scrollable: a long Filters list
+   scrolls itself instead of carrying the whole page down with it. */
+.searchcol{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;
+  box-shadow:var(--bevel);position:sticky;top:64px;max-height:calc(100vh - 80px);
+  overflow-y:auto;padding:11px;display:flex;flex-direction:column;gap:10px}
+.searchcol .special,.searchcol .special.filters{margin-top:0}
+.grpsel{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--deep);font-weight:700}
+.grpsel select{font:inherit;font-size:12px;color:var(--tx);background:var(--canvas-soft);
+  border:1px solid var(--hairline);border-radius:3px;padding:4px 6px}
 /* The grip hangs off .wrap, not off .deck — inside the deck panel it was
    clipped by overflow-y:auto and scrolled away with the card list. */
 .wrap{position:relative}
@@ -2312,16 +2391,23 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .dgrip:hover::before,.dgrip.on::before{background:var(--amberc)}
 body.resizing{cursor:col-resize;user-select:none}
 @media(max-width:900px){.dgrip{display:none}.wrap{--deckw:auto!important}}
+/* Same three widths the deck column already used — just doubled, one per
+   sticky column, so both fold away at the point neither has room to be a
+   column anymore rather than sitting there squeezed. */
+@media(max-width:1520px){.wrap{grid-template-columns:var(--searchw,270px) minmax(0,1fr)}}
 @media(max-width:1240px){.wrap{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}}
 .deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
 .deck{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto;padding:11px}
-@media(max-width:900px){.deck{position:static;max-height:none}}
+@media(max-width:1240px){.searchcol{position:static;max-height:none}}
+@media(max-width:900px){.deck,.searchcol{position:static;max-height:none}}
 
 /* ---- Filters, wearing the Special-searches suit ----
-   The twelve filter sections were built for a 230px column, so open they lay
-   out as a multi-column grid rather than one very long list across the full
-   page width. */
+   Filters is back in a narrow left column (see .searchcol) after a spell as a
+   full-width bar, so the multi-column masonry packing that bar needed is gone
+   too — that's what was making sections visibly jump and reflow past each
+   other whenever one changed height. A single column has nothing to reflow
+   into; each section just keeps its place. */
 /* Every custom <summary> on the site draws its own ▸ and hides the browser's.
    `list-style:none` and the -webkit- pseudo were doing that job, but current
    Chrome still paints ::marker on a flex summary — a 2px dot pushed to the far
@@ -2342,9 +2428,8 @@ body.resizing{cursor:col-resize;user-select:none}
    reason this was a grid in the first place — a section splitting across a
    column break mid-list — is what break-inside:avoid is for, and it is
    supported everywhere now. Same cards, same styling, no voids. */
-#sidebody{display:block;columns:255px 4;column-gap:12px}
-#sidebody>details{break-inside:avoid;page-break-inside:avoid;
-  -webkit-column-break-inside:avoid;margin:0 0 12px;width:100%}
+#sidebody{display:flex;flex-direction:column;gap:10px}
+#sidebody>details{margin:0;width:100%}
 .filters details.sec{border:1px solid var(--hairline);border-radius:4px;
   background:var(--canvas-soft);box-shadow:var(--bevel-in);overflow:hidden}
 .filters details.sec>summary{padding:9px 11px;font-size:11.5px;letter-spacing:.08em;
@@ -3298,11 +3383,16 @@ body.noremind .c.illegal img{filter:none}
 .mtabs{display:none;position:fixed;bottom:0;left:0;right:0;z-index:120;background:rgba(12,24,40,.97);border-top:1px solid var(--line)}
 .mtabs button{flex:1;padding:18px 6px;font-size:1rem;color:var(--deep);font-weight:700}
 .mtabs button.on{color:var(--amberc);box-shadow:inset 0 3px 0 var(--amberc)}
+/* Three screens now instead of two — Search (the art tile, Special searches,
+   Filters — everything that used to just pile up above the card grid on a
+   phone), Cards, and Deck. Same three-state pattern as before: one body class
+   per non-default tab, and "neither class" is Cards, same as "not .mdeck"
+   used to mean Cards back when Search and Cards were the same screen. */
 @media(max-width:900px){body.tdeck .mtabs{display:flex}
-  /* #special is a sibling of #side and was not in this list, so the Special
-     searches drawer stayed on screen above the deck in deck mode. */
-  body.mdeck .side,body.mdeck #special,body.mdeck .cards{display:none}
-  body:not(.mdeck) .deck{display:none}}
+  body.tdeck .searchcol,body.tdeck .cards,body.tdeck .deck{display:none}
+  body.tdeck.msearch .searchcol{display:flex}
+  body.tdeck.mdeck .deck{display:block}
+  body.tdeck:not(.msearch):not(.mdeck) .cards{display:block}}
 .toast{position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--acc);
   padding:10px 17px;border-radius:2px;font-size:13.12px;z-index:300;opacity:0;pointer-events:none;transition:opacity .25s;max-width:88vw;text-align:center}
 .toast.on{opacity:1}
@@ -3889,56 +3979,67 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
        Stitch from "blue dog". So it leads — its own row, its own size, its own
        sentence saying what it's for — and Franchise and Flavour sit under it
        as the smaller extras they are. -->
-  <div class="artrow">
-    <button class="swx art" id="tgTag" aria-pressed="false">
-      <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.6-.7 1.6-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z"/><circle class="sd sd1" cx="7.7" cy="11.5" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd2" cx="11" cy="7.9" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd3" cx="15.4" cy="8.9" r="1.05" fill="currentColor" stroke="none"/></svg></i></span><span class="artlb"><b>Search the artwork</b><span id="tgTagSub">Type what you remember seeing, not the card name</span></span></button>
-    <div class="alsorow">
-      <span class="alsolbl">Also search</span>
-    <button class="swx sto wee" id="tgSto" aria-pressed="false">
-      <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.2c2.6-.9 5-.9 7.4.6v12c-2.4-1.5-4.8-1.5-7.4-.6V5.2Z"/><path class="pg" d="M21 5.2c-2.6-.9-5-.9-7.4.6v12c2.4-1.5 4.8-1.5 7.4-.6V5.2Z"/><path d="M12 5.8v12.6"/></svg></i></span><span class="lb">Franchise</span></button>
-    <button class="swx flav wee" id="tgFlav" aria-pressed="false">
-      <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12.4c0 3.7-3.6 6.7-8 6.7-.9 0-1.8-.1-2.6-.35L4.6 21l1.1-3.5A6.4 6.4 0 0 1 4 12.4c0-3.7 3.6-6.7 8-6.7s8 3 8 6.7Z"/><path class="qm" d="M9.6 10.9c.9-.6 1.9.1 1.6 1.1-.2.7-1 .9-1.3 1.6"/><circle class="qd" cx="14.4" cy="12.1" r=".95" fill="currentColor" stroke="none"/></svg></i></span><span class="lb">Flavour</span></button>
-    </div>
-  </div>
-  <div class="srow">
-    <button class="btn bad" id="clr">Clear all</button>
-    <button class="btn" id="sy">Syntax</button>
-    <button class="btn" id="sh">Share deck</button>
-  </div>
-  <div class="hint" id="syh" style="display:none">
-    <code>ink:amber</code> <code>cost&gt;=3</code> <code>type:action</code> <code>rarity:rare</code> <code>set:9</code>
-    <code>keyword:rush</code> <code>class:princess</code> <code>story:frozen</code> <code>text:"draw a card"</code>
-    <code>flavor:"business cards"</code>
-    <code>-inkwell</code> <code>vanilla</code> <code>artist:kole</code>
-    — bare words fuzzy-match, everything ANDs together
-  </div>
-  <details class="special" id="special">
-    <summary>✨ Special searches<span class="cnt" id="specialCnt"></span></summary>
-    <div class="specialbody">
-      <div class="exprow">
-        <button class="fbtn" id="fb"><span class="fi">🐠</span><span id="fbl">Flounder</span></button>
-        <button class="btn" id="expAll">Expand all</button>
-        <button class="btn" id="colAll">Collapse all</button>
-      </div>
-      <div class="groups" id="groups"></div>
-      <!-- Both drawers are tall enough that the results end up well below the
-           fold. This is the way back down. -->
-      <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
-    </div>
-  </details>
-  <!-- Filters is a full-width bar, sitting directly under Special searches and
-       built the same way, because they are the same kind of thing: a drawer of
-       controls you open when you want them. The first attempt collapsed the
-       sidebar into a vertical spine down the left edge — it saved space but it
-       looked like a scrollbar with words on it, and it didn't match anything
-       else on the page. -->
-  <details class="special filters" id="side">
-    <summary><span>Filters</span><span class="cnt" id="fcnt"></span></summary>
-    <div class="specialbody"><div id="sidebody"></div>
-      <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
-    </div>
-  </details>
   <div class="wrap">
+    <!-- Search + Special searches + Filters, together, as one sticky column —
+         a left-hand mirror of .deck's right-hand sticky column. This lived as
+         three full-width bars stacked above .wrap until now: the art tile
+         spanned the whole page, Special searches and Filters were both long
+         full-width drawers, and every one of them pushed the actual cards
+         further down the page. Filters in particular already tried a left
+         column once (see the removed note here) and was pulled back out for
+         looking like "a scrollbar with words on it" — this version borrows
+         .deck's own chrome (surface/border/bevel, same sticky top/max-height)
+         instead of a bare vertical strip, so it reads as a matching panel
+         rather than a sidebar bolted on the side. -->
+    <aside class="searchcol" id="searchcol">
+      <div class="artrow">
+        <button class="swx art" id="tgTag" aria-pressed="false">
+          <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.6-.7 1.6-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z"/><circle class="sd sd1" cx="7.7" cy="11.5" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd2" cx="11" cy="7.9" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd3" cx="15.4" cy="8.9" r="1.05" fill="currentColor" stroke="none"/></svg></i></span><span class="artlb"><b>Search the artwork</b><span id="tgTagSub">Type what you remember seeing, not the card name</span></span></button>
+        <div class="alsorow">
+          <span class="alsolbl">Also search</span>
+        <button class="swx sto wee" id="tgSto" aria-pressed="false">
+          <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.2c2.6-.9 5-.9 7.4.6v12c-2.4-1.5-4.8-1.5-7.4-.6V5.2Z"/><path class="pg" d="M21 5.2c-2.6-.9-5-.9-7.4.6v12c2.4-1.5 4.8-1.5 7.4-.6V5.2Z"/><path d="M12 5.8v12.6"/></svg></i></span><span class="lb">Franchise</span></button>
+        <button class="swx flav wee" id="tgFlav" aria-pressed="false">
+          <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12.4c0 3.7-3.6 6.7-8 6.7-.9 0-1.8-.1-2.6-.35L4.6 21l1.1-3.5A6.4 6.4 0 0 1 4 12.4c0-3.7 3.6-6.7 8-6.7s8 3 8 6.7Z"/><path class="qm" d="M9.6 10.9c.9-.6 1.9.1 1.6 1.1-.2.7-1 .9-1.3 1.6"/><circle class="qd" cx="14.4" cy="12.1" r=".95" fill="currentColor" stroke="none"/></svg></i></span><span class="lb">Flavour</span></button>
+        </div>
+      </div>
+      <div class="srow">
+        <button class="btn bad" id="clr">Clear all</button>
+        <button class="btn" id="sy">Syntax</button>
+        <button class="btn" id="sh">Share deck</button>
+      </div>
+      <div class="hint" id="syh" style="display:none">
+        <code>ink:amber</code> <code>cost&gt;=3</code> <code>type:action</code> <code>rarity:rare</code> <code>set:9</code>
+        <code>keyword:rush</code> <code>class:princess</code> <code>story:frozen</code> <code>text:"draw a card"</code>
+        <code>flavor:"business cards"</code>
+        <code>-inkwell</code> <code>vanilla</code> <code>artist:kole</code>
+        <code>$40</code> <code>$10-40</code> <code>price&gt;=20</code> <code>legendary</code> · combine freely,
+        e.g. <code>amber legendary $40</code> — bare words fuzzy-match, everything ANDs together
+      </div>
+      <details class="special" id="special">
+        <summary>✨ Special searches<span class="cnt" id="specialCnt"></span></summary>
+        <div class="specialbody">
+          <div class="exprow">
+            <button class="fbtn" id="fb"><span class="fi">🐠</span><span id="fbl">Flounder</span></button>
+            <label class="grpsel"><span>Jump to</span>
+              <select id="grpJump"><option value="">— a category —</option></select>
+            </label>
+            <button class="btn" id="expAll">Expand all</button>
+            <button class="btn" id="colAll">Collapse all</button>
+          </div>
+          <div class="groups" id="groups"></div>
+          <!-- Both drawers are tall enough that the results end up well below the
+               fold. This is the way back down. -->
+          <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
+        </div>
+      </details>
+      <details class="special filters" id="side">
+        <summary><span>Filters</span><span class="cnt" id="fcnt"></span></summary>
+        <div class="specialbody"><div id="sidebody"></div>
+          <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
+        </div>
+      </details>
+    </aside>
     <section class="cards">
       <div class="rbar"><div class="ct" id="ct">—</div>
         <select id="sort">
@@ -4061,7 +4162,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <span class="affnote">Buy links go to TCGplayer through Ready Set Ink's affiliate link — it may earn a small commission, at no extra cost to you.</span>
 </footer>
 
-<div class="mtabs"><button id="mC" class="on">🔍 Cards</button><button id="mD">🗂️ Deck <span id="mN">0</span></button></div>
+<div class="mtabs"><button id="mS">✨ Search</button><button id="mC" class="on">🔍 Cards</button><button id="mD">🗂️ Deck <span id="mN">0</span></button></div>
 <!-- There used to be a literal ${""} here. It was a template-literal fragment
      stranded in plain HTML — nothing evaluates this file as a template, so the
      browser printed the four characters on the page, just under the footer. -->
@@ -4994,6 +5095,12 @@ function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast(
   try{if(typeof ACCT!=="undefined")ACCT.queue(k)}catch(e){}
   return 1}
 function saveDecks(){save(K_DECKS,DECKS);checkPerfect60()}
+/* "Last edited" — stamped only where a deck's own content is actually
+   written (new/duplicated/imported/saved), never on saveDecks() itself: that
+   function also runs just from switching which deck is current (picking one
+   from the grid, the dropdown), which touches nothing about the deck and
+   should never look like an edit. */
+const stampEdited=name=>{const dk=DECKS.list[name];if(dk)dk.ts=Date.now()};
 
 /* ===================== decks as links, and lists you can paste =====================
 
@@ -5088,7 +5195,7 @@ async function offerDeckFromHash(raw){
   while(DECKS.list[n])n=d.name+" "+(i++);
   mark("adding a shared deck");
   DECKS.list[n]={fmt:d.fmt,coco:d.coco,cards:d.cards};
-  DECKS.cur=n;saveDecks();markDirty(false);
+  DECKS.cur=n;stampEdited(n);saveDecks();markDirty(false);
   award("named");
   render();paintDeckBar();
   toast(`Added “${n}” — it's yours to edit`);
@@ -5163,7 +5270,7 @@ async function importDeckPrompt(){
   while(DECKS.list[n])n=base+" "+(i++);
   mark("importing a deck list");
   DECKS.list[n]={fmt:deck().fmt,coco:null,cards:r.cards};
-  DECKS.cur=n;saveDecks();markDirty(false);
+  DECKS.cur=n;stampEdited(n);saveDecks();markDirty(false);
   render();paintDeckBar();
   if($("vDecks").classList.contains("on"))renderDecksPage();
   toast(`Imported ${r.total} cards into “${n}”`+(r.bad.length?` · ${r.bad.length} line(s) skipped`:""));
@@ -5206,7 +5313,7 @@ async function duplicateDeck(from){
   if(DECKS.list[name]){toast(`You already have a deck called “${name}”`);return}
   mark("duplicating a deck");
   DECKS.list[name]={fmt:src.fmt,coco:src.coco,cards:{...src.cards}};
-  DECKS.cur=name;saveDecks();markDirty(false);
+  DECKS.cur=name;stampEdited(name);saveDecks();markDirty(false);
   if(Object.keys(DECKS.list).length>=3)award("deck2");
   render();paintDeckBar();
   if($("vDecks").classList.contains("on"))renderDecksPage();
@@ -5355,12 +5462,24 @@ const ALIAS={i:"ink",ink:"ink",c:"cost",cost:"cost",t:"type",type:"type",r:"rari
  n:"name",name:"name",v:"version",version:"version",iw:"inkwell",inkwell:"inkwell",
  st:"strength",strength:"strength",wi:"willpower",willpower:"willpower",lo:"lore",lore:"lore",
  story:"story",franchise:"story",tag:"tag",art:"tag",flavor:"flavor",flav:"flavor",quote:"flavor",
- artist:"artist",by:"artist",illus:"artist",illustrator:"artist"};
+ artist:"artist",by:"artist",illus:"artist",illustrator:"artist",price:"price",p:"price"};
+/* Rarity as a bare word — "legendary" used to just silently match nothing,
+   since rarity was never part of the free-text haystack. Single words only;
+   "super rare" needs the quoted/rarity: form same as any other two-word value. */
+const RARITY_WORDS=new Set(["common","uncommon","rare","legendary","enchanted"]);
 function tok(s){
   const raw=s.match(/\w+(?:>=|<=|!=|:|>|<|=)"(?:[^"\\]|\\.)*"|"(?:[^"\\]|\\.)*"|\S+/g)||[];
   const out=[];
   for(let t of raw){
     let neg=false;if(t[0]==="-"){neg=true;t=t.slice(1)}
+    /* $40 = up to $40. $10-40 = between the two. Checked before the generic
+       kv parse below since $ isn't a word character and wouldn't match it
+       anyway — this just keeps the price grammar next to the field it feeds. */
+    const range=t.match(/^\$(\d+(?:\.\d+)?)-(\d+(?:\.\d+)?)$/);
+    if(range){out.push({f:"price",op:">=",v:range[1],neg});
+      out.push({f:"price",op:"<=",v:range[2],neg});continue}
+    const bare=t.match(/^\$(\d+(?:\.\d+)?)$/);
+    if(bare){out.push({f:"price",op:":",v:bare[1],neg});continue}
     const kv=t.match(/^(\w+)(:|>=|<=|>|<|!=|=)([\s\S]*)$/);
     if(kv&&ALIAS[kv[1].toLowerCase()]){let v=kv[3];
       if(v.startsWith('"')&&v.endsWith('"')&&v.length>1)v=v.slice(1,-1);
@@ -5368,6 +5487,7 @@ function tok(s){
     const lw=t.toLowerCase();
     if(lw==="inkwell"||lw==="iw"){out.push({f:"inkwell",op:":",v:"true",neg});continue}
     if(lw==="vanilla"){out.push({sp:"vanilla",neg});continue}
+    if(RARITY_WORDS.has(lw)){out.push({f:"rarity",op:":",v:lw,neg});continue}
     if(lw==="or")continue;
     let p=neg?"-"+t:t;if(p.startsWith('"')&&p.endsWith('"')&&p.length>1)p=p.slice(1,-1);
     out.push({fz:p.toLowerCase()});
@@ -5396,6 +5516,12 @@ function fOK(c,f,op,v){switch(f){
   case "name":return (c.n||"").toLowerCase().includes(v);
   case "version":return (c.v||"").toLowerCase().includes(v);
   case "inkwell":return c.ik===1;
+  /* Cheapest-copy price, the same number the ★ Staples $10-or-less / Money
+     chips already run on. ":" and "=" read as "at or under" rather than an
+     exact match — nobody typing "$40" means the one card priced literally
+     $40.00, they mean "around what I'd pay". >, >=, <, <= behave normally. */
+  case "price":{const p=cardPriceMin(c);if(p==null)return false;
+    const t=parseFloat(v);return(op===":"||op==="=")?p<=t:nOp(p,op,t)}
   default:return true}}
 /* What a bare typed word is allowed to match. Franchise and art tags are opt-in
    via the two switches under the search bar. */
@@ -5640,6 +5766,21 @@ function renderChips(){
        whole bug — see the note on GCLOSED. */
     if(d.open)GCLOSED.delete(d.dataset.g);else GCLOSED.add(d.dataset.g);
     saveGClosed()});
+  /* "Jump to" — filled once, not on every render, or picking a category
+     mid-keystroke would reset itself. #groups is rebuilt every render, so the
+     handler queries it fresh each time it fires rather than caching a node. */
+  const gj=$("grpJump");
+  if(gj&&!gj.dataset.filled){
+    gj.insertAdjacentHTML("beforeend",
+      GROUPS.filter(g=>!g.money).map(g=>`<option value="${esc(g.g)}">${esc(g.g)}</option>`).join(""));
+    gj.dataset.filled="1";
+    gj.onchange=e=>{
+      const gname=e.target.value;e.target.value="";if(!gname)return;
+      const d=$("groups").querySelector(`details.grp[data-g="${CSS.escape(gname)}"]`);
+      if(!d)return;
+      d.open=true;GCLOSED.delete(gname);saveGClosed();
+      d.scrollIntoView({block:"start",behavior:"smooth"})};
+  }
   const nOn=S.ab.size;
   $("specialCnt").textContent=nOn?nOn+" active":GROUPS.length+" groups · "+AB.length+" filters";
   if(nOn&&!$("special").open)$("special").open=true;
@@ -6617,13 +6758,26 @@ function renderDeck(hostId){
     ["name","Name A–Z"]];
   const sortRow=`<div class="dsortrow"><label for="dsort">Group by</label><select id="dsort">${
     DSORTS.map(([v,l])=>`<option value="${v}"${DSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select></div>`;
-  let h=`<h3 class="hd">Deck
-    <span class="dmenus">
-      <button class="dmbtn" id="dEye" aria-haspopup="true" aria-expanded="false"
-        title="How this deck is shown">👁</button>
-      <button class="dmbtn" id="dMore" aria-haspopup="true" aria-expanded="false"
-        title="Deck options">⋯</button>
-    </span></h3>
+  /* Ink pips for the top-right corner — computed here, ahead of the Stats
+     section further down, which builds the same ic-per-ink tally but for a
+     different job (share-of-deck bars). A deck with no cards yet shows no
+     pips rather than a row of empty circles. */
+  const inkSet=new Set();L.forEach(({c})=>c.co.forEach(i=>inkSet.add(i)));
+  const inkPips=[...inkSet].sort().map(i=>
+    `<span class="dpip" style="background:${HEX[i]||"#666"}" title="${esc(i)}"></span>`).join("");
+  const editedStr=d.ts?new Date(d.ts).toLocaleDateString(undefined,
+    {month:"short",day:"numeric",year:"numeric"}):"not saved yet";
+  let h=`<div class="dtop">
+      <div class="dtitle">Deck
+        <span class="dmenus">
+          <button class="dmbtn" id="dEye" aria-haspopup="true" aria-expanded="false"
+            title="How this deck is shown">👁</button>
+          <button class="dmbtn" id="dMore" aria-haspopup="true" aria-expanded="false"
+            title="Deck options">⋯</button>
+        </span>
+      </div>
+      <div class="dinks">${inkPips}</div>
+    </div>
     <div class="dmwrap">
       <div class="dmpanel" id="dEyePanel" role="menu" hidden>
         <div class="dmlbl">Show the deck as</div>
@@ -6667,7 +6821,7 @@ function renderDeck(hostId){
     <div class="row"><select id="dsel" aria-label="Switch deck">${
     names.map(n=>`<option${n===DECKS.cur?" selected":""}>${esc(n)}</option>`).join("")}</select></div>
     <div class="prog"><i style="width:${Math.min(100,tot/F.min*100)}%"></i></div>
-    <div class="st">${tot} / ${F.min} cards · ${F.l}</div>`;
+    <div class="dfoot">${tot} / ${F.min} cards · ${F.l} · edited ${editedStr}</div>`;
 
   /* The panel is built in three pieces, and the order they end up in is the
      whole point of this function.
@@ -6906,7 +7060,7 @@ function renderDeck(hostId){
   $("vImg").onclick=()=>{DVIEW="img";save(K_DVIEW,DVIEW);renderDeck()};
   $("dsel").onchange=e=>{DECKS.cur=e.target.value;saveDecks();S.limit=150;render()};
   $("dnew").onclick=()=>{const n=prompt("Deck name:","Deck "+(names.length+1));
-    if(n&&!DECKS.list[n]){DECKS.list[n]={fmt:d.fmt,coco:null,cards:{}};DECKS.cur=n;saveDecks();
+    if(n&&!DECKS.list[n]){DECKS.list[n]={fmt:d.fmt,coco:null,cards:{}};DECKS.cur=n;stampEdited(n);saveDecks();
       award("named");if(Object.keys(DECKS.list).length>=3)award("deck2");render()}};
   /* Save is rebuilt with the panel on every render, so it is rebound here
      rather than once at boot the way the old top bar was. */
@@ -7396,7 +7550,7 @@ function fromHash(){
       if(c.f===BANNED){banned++;return}          // the ban has no back door
       cards[c.f]=(cards[c.f]||0)+(+q||1)});
     let n=(o.n||"Shared")+" (shared)",i=2;while(DECKS.list[n])n=(o.n||"Shared")+" (shared "+(i++)+")";
-    DECKS.list[n]={fmt:o.f||"infinity",coco:o.k??null,cards};DECKS.cur=n;saveDecks();
+    DECKS.list[n]={fmt:o.f||"infinity",coco:o.k??null,cards};DECKS.cur=n;stampEdited(n);saveDecks();
     history.replaceState(null,"",location.pathname);
     toast('Imported "'+n+'"'+(miss?" · "+miss+" not found":"")+(banned?" · Chip the Teacup removed":""));
   }catch(e){toast("Could not read that deck link")}
@@ -7832,7 +7986,7 @@ function renderGuide(){
     let name=d.co.n+" – "+d.co.v;
     let n=2;while(DECKS.list[name])name=d.co.n+" – "+d.co.v+" "+(n++);
     DECKS.list[name]={fmt:"coconut",coco:i,cards:{...d.cards}};
-    DECKS.cur=name;saveDecks();markDirty(false);
+    DECKS.cur=name;stampEdited(name);saveDecks();markDirty(false);
     G.coco=i;G.pair=d.inks.slice(1);G.copies=4;G.mode=null;
     S.ink=new Set(d.inks);S.limit=150;
     SUB="manual";save("fs3_sub",SUB);showTab("tDeck");
@@ -11446,7 +11600,7 @@ async function saveDeckPrompt(ev){
     DECKS.list[DRAFT]={fmt:DECKS.list[DRAFT].fmt,coco:DECKS.list[DRAFT].coco,cards:{}};
     DECKS.cur=name;
   }
-  saveDecks();markDirty(false);
+  stampEdited(name);saveDecks();markDirty(false);
   /* Ten dust for saving a deck -- once per deck, not once per press. Saving
      the same list twice used to pay again every time, which made the Save
      button a dust tap. Keyed by name because a name is the only identity a
@@ -11557,8 +11711,10 @@ function borrowText(){
     +rows.map(r=>`${r.q}x ${r.name} (${r.cost} cost, ${r.ink||"no ink"}, ${r.set})`).join("\n")
     +(BORROW.close?`\n\n${BORROW.close}`:"")}
 
-/* A 16:9 picture of the cards being asked for, with a quantity on each, so the
-   ask can be sent as an image where a wall of text would be ignored.
+/* A square picture of the cards being asked for, with a quantity on each, so
+   the ask can be sent as an image where a wall of text would be ignored. 1:1
+   rather than 16:9 on purpose — a widescreen image shrinks to a letterboxed
+   strip in an iMessage bubble; a square one fills it.
 
    Card art is served from another origin. A canvas that has drawn a
    cross-origin image cannot be exported unless that server allows it, so the
@@ -11568,7 +11724,7 @@ function borrowText(){
 function borrowImage(){
   const rows=borrowRows().filter(x=>BORROW.skip.indexOf(x.c.f)<0);
   if(!rows.length){toast("Nothing to picture — you have all of these");return}
-  const W=1920,H=1080,PAD=28,HEAD=96,GAP=16,AR=940/674;
+  const W=1080,H=1080,PAD=24,HEAD=96,GAP=14,AR=940/674;
   /* Cards are portrait 674x940. Sizing the width from the canvas and the
      height from whatever was left over stretched them into letterboxes, which
      would visibly distort real art. Instead try every column count and keep
@@ -11657,8 +11813,7 @@ function renderBorrow(){
       <b>Looks like you don't have ${missing.reduce((a,x)=>a+x.need,0)} of these cards</b>
       <span class="sp"></span>
       <button class="btn" id="bCust">${BORROWOPEN?"Done":"Customise"}</button>
-      <button class="btn" id="bImg" disabled title="The card art is served from another site that doesn't allow it to be re-saved">🖼️ Save image</button>
-      <span class="soonlbl">Coming soon</span>
+      <button class="btn" id="bImg" title="A square image with each card's picture and how many you need — built for sharing in iMessage">🖼️ Save image</button>
       <button class="btn go" id="bCopy">📋 Copy the message</button>
     </div>
     <p class="bnote">Copy this and send it to someone who might lend them to you.</p>
@@ -11682,6 +11837,7 @@ function renderBorrow(){
     <textarea class="btext" id="bText" readonly rows="${Math.min(18,7+kept.length)}">${esc(borrowText())}</textarea>
   </div>`;
   $("bCust").onclick=()=>{BORROWOPEN=!BORROWOPEN;renderBorrow()};
+  $("bImg").onclick=borrowImage;
   $("bCopy").onclick=()=>{const t=$("bText");t.select();
     try{document.execCommand("copy")}catch(e){}
     toast("Message copied")};
@@ -12137,7 +12293,7 @@ async function metaCopyDeck(id){
   mark("copying a recommended deck");
   const cards={};rows.forEach(({f,q})=>{cards[f]=q});
   DECKS.list[n]={fmt:"core",coco:null,cards};
-  DECKS.cur=n;saveDecks();markDirty(false);
+  DECKS.cur=n;stampEdited(n);saveDecks();markDirty(false);
   if(Object.keys(DECKS.list).length>=3)award("deck2");
   render();paintDeckBar();
   showTab("tDeck");
@@ -12145,51 +12301,134 @@ async function metaCopyDeck(id){
 }
 
 /* ===================== decks page ===================== */
+/* ---- deck folders: which set-era a deck was made in ----
+   A deck's folder is fixed by DECKS.list[n].created and never moves, even if
+   the deck is edited years later — "made during Attack of the Vine" is a
+   historical fact about the deck, not something that should drift every time
+   you tweak it (that's what .ts / "last edited" is for).
+
+   Two set entries carry a placeholder 1970-01-01 date (announced sets with
+   no release date yet) — excluded here, or every deck on the site would sort
+   as older than The First Chapter. */
+function setEras(){
+  return SETS.filter(([,m])=>m.d&&m.d>"2000-01-01").sort((a,b)=>a[1].d.localeCompare(b[1].d));
+}
+function dayBefore(iso){
+  const dt=new Date(iso+"T00:00:00Z");dt.setUTCDate(dt.getUTCDate()-1);
+  return dt.toISOString().slice(0,10);
+}
+/* Windows run from a set's release to the day before the NEXT set's release
+   — "the next set hobby store release," per Ben, which here means the next
+   dated entry in the sequence (Quest side-sets share their date with the
+   numbered set they launched alongside, so they never open a window of their
+   own; they just land in whichever window that date already belongs to). */
+function eraFor(ts){
+  if(!ts)return null;
+  const eras=setEras();if(!eras.length)return null;
+  const day=new Date(ts).toISOString().slice(0,10);
+  for(let i=eras.length-1;i>=0;i--)
+    if(day>=eras[i][1].d)return{code:eras[i][0],name:eras[i][1].n,start:eras[i][1].d,
+      end:eras[i+1]?dayBefore(eras[i+1][1].d):null};
+  // older than the earliest known set (shouldn't happen) — bucket into it anyway
+  return{code:eras[0][0],name:eras[0][1].n,start:eras[0][1].d,
+    end:eras[1]?dayBefore(eras[1][1].d):null};
+}
+const eraLabel=e=>`${e.start.replace(/-/g,"/")}–${e.end?e.end.replace(/-/g,"/"):"present"}`;
+function groupDecksByEra(){
+  const groups=new Map();
+  Object.keys(DECKS.list).forEach(n=>{
+    const dk=DECKS.list[n],e=eraFor(dk.created||dk.ts);
+    const key=e?e.code:"undated";
+    if(!groups.has(key))groups.set(key,{name:e?e.name:"Before folders existed",
+      label:e?eraLabel(e):"decks saved before this page tracked dates",
+      decks:[],sortKey:e?e.start:"9999"});
+    groups.get(key).decks.push(n);
+  });
+  // "Undated" (sortKey "9999") sorts to the very top, ahead of even the
+  // current set — pre-existing decks are presumably still in active use,
+  // where an unreleased-set placeholder never could be.
+  return[...groups.values()].sort((a,b)=>b.sortKey.localeCompare(a.sortKey));
+}
+function deckCardHTML(n){
+  const dk=DECKS.list[n],L=Object.entries(dk.cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q}))
+    .filter(x=>x.c);
+  const tot=L.reduce((a,x)=>a+x.q,0),inks=new Set();
+  L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
+  const cur=n===DECKS.cur;
+  return `<button class="dkcard${cur?" on":""}" data-dk="${esc(n)}"${
+      cur?' aria-current="true"':""}>
+    <h3><span class="dkname" data-ren="${esc(n)}" role="button" tabindex="0"
+      title="Click to rename">${esc(n)}</span>${titleChip()}${
+      cur?`<span class="dkcur">Editing</span>`:""}</h3>
+    <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
+    <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
+  </button>`;
+}
 function renderDecksPage(){
-  const names=Object.keys(DECKS.list);
-  const cards=names.map(n=>{
-    const dk=DECKS.list[n],L=Object.entries(dk.cards).map(([f,q])=>({c:CARDS.find(x=>x.f===f),q}))
-      .filter(x=>x.c);
-    const tot=L.reduce((a,x)=>a+x.q,0),inks=new Set();
-    L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
-    const cur=n===DECKS.cur;
-    return `<button class="dkcard${cur?" on":""}" data-dk="${esc(n)}"${
-        cur?' aria-current="true"':""}>
-      <h3><span class="dkname" data-ren="${esc(n)}" role="button" tabindex="0"
-        title="Click to rename">${esc(n)}</span>${titleChip()}${
-        cur?`<span class="dkcur">Editing</span>`:""}</h3>
-      <div class="dm">${tot} cards · ${esc(FMT[dk.fmt].l)}${tot<FMT[dk.fmt].min?` · ${FMT[dk.fmt].min-tot} short`:" · legal size"}</div>
-      <div class="inks">${[...inks].map(i=>`<i style="background:${HEX[i]||"#666"}" title="${esc(i)}"></i>`).join("")}</div>
-    </button>`}).join("");
+  const eraGroups=groupDecksByEra();
+  /* Only the first (newest) folder's cards are actually built right now.
+     Older folders are real work — CARDS.find() and an ink tally per deck —
+     that nobody asked for yet if the folder is still collapsed, so each one
+     gets a single "eraLazy" placeholder div and only fills itself in the
+     first time it's opened (wired below). "Deep storage" isn't just visual:
+     until you click it open, its decks are never even looked up. */
+  const folders=eraGroups.map((g,i)=>{
+    const open=i===0;
+    return `<details class="erafold"${open?" open":""} data-era="${esc(g.name)}">
+      <summary><span class="erafn">${esc(g.name)}</span>
+        <span class="erafd">${esc(g.label)}</span>
+        <span class="erafc">${g.decks.length} deck${g.decks.length===1?"":"s"}</span></summary>
+      <div class="dkgrid eraLazy" data-decks="${esc(g.decks.join(""))}">${
+        open?g.decks.map(deckCardHTML).join(""):""}</div>
+    </details>`}).join("");
   $("deckspage").innerHTML=`<div class="page">
     <h1><span class="gi">🗂️</span>Decks</h1>
     <p class="lede">Every deck you've saved. Pick one to make a pull list — the running order
-      you'd actually walk your binder in.</p>
+      you'd actually walk your binder in. Grouped by the set that was current when you made
+      each one.</p>
     <div class="dkbar">
       <button class="btn go" id="dpImport">📥 Paste a deck list</button>
       <button class="btn" id="dpDup">⧉ Duplicate it</button>
     </div>
-    <div class="dkgrid">${cards}</div>
+    <div class="erafolds">${folders}</div>
     ${deckGallery()}
     <!-- Suggested swaps is shelved (Ben, 2026-09-07), same as "What I'd
          change": the feature stays in the file and nothing about it is on
          screen. Call renderSwapBox() here again to bring it back. -->
+    <!-- Was ten controls in a single wrapping row -- sort, two view toggles,
+         two collection buttons, copy, proxy, print, two buy buttons -- which
+         read as a wall before you'd even looked at the list itself. Print is
+         the one thing you reach for on sight (it's the reason this sheet
+         exists), so it stays a button; everything else is a choice about HOW
+         the list looks or what to do with it once, so it lives behind one
+         menu, same ⋯ pattern as the deck panel's own options. -->
     <div class="pullbar">
       <b style="font-size:13px;background:var(--canvas-soft);padding:3px 8px;border-radius:2px">Pull list</b>
-      <select id="pullSort">${PULLSORTS.map(([v,l])=>
-        `<option value="${v}"${PULLSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select>
-      <button class="btn${PULLVIEW==="images"?" go":""}" id="pullView" title="Switch between a text list and card images">${PULLVIEW==="images"?"☰ List view":"🖼️ Image view"}</button>
-      <button class="btn${PULLCOMPACT?" go":""}" id="pullCompact" title="Tighter spacing so a longer deck still fits one printed page">🗜️ Fit to 1 page</button>
-      <button class="btn collonly" id="pullToColl">📦 Add this deck to my collection</button>
-      <button class="btn bad collonly" id="pullOffColl">📦 Remove this deck from my collection</button>
-      <button class="btn" id="pullCopy">📋 Copy</button>
-      <button class="btn" id="pullProxy" title="Card-sized paper stand-ins for the cards you haven't bought yet">✂️ Proxy slips</button>
       <button class="btn go" id="pullPrint">🖨️ Print</button>
-      <!-- No API key involved: TCGplayer's mass entry page takes the list in
-           the URL, so these two work today and will keep working if a price
-           feed never appears. -->
-      <button class="btn" id="buyDeck">🛒 Buy this deck</button>
-      <button class="btn collonly" id="buyMissing">🛒 Buy the cards I don't have</button>
+      <div class="dmwrap">
+        <button class="dmbtn" id="pullMore" aria-haspopup="true" aria-expanded="false"
+          title="Pull list options" style="width:auto;padding:0 10px">⋯ Options</button>
+        <div class="dmpanel wide" id="pullMorePanel" role="menu" hidden>
+          <div class="dmlbl">Sort by</div>
+          <div class="dsortrow" style="margin:0 4px 6px">
+            <select id="pullSort">${PULLSORTS.map(([v,l])=>
+              `<option value="${v}"${PULLSORT===v?" selected":""}>${esc(l)}</option>`).join("")}</select>
+          </div>
+          <button class="dmi" id="pullView" role="menuitem"><i>${PULLVIEW==="images"?"☰":"🖼️"}</i>${PULLVIEW==="images"?"Switch to list view":"Switch to image view"}</button>
+          <button class="dmi" id="pullCompact" role="menuitem"><i>🗜️</i>${PULLCOMPACT?"Un-fit from 1 page":"Fit to 1 page"}</button>
+          <button class="dmi" id="pullCopy" role="menuitem"><i>📋</i>Copy as text</button>
+          <button class="dmi" id="pullProxy" role="menuitem" title="Card-sized paper stand-ins for the cards you haven't bought yet"><i>✂️</i>Proxy slips</button>
+          <div class="dmsep"></div>
+          <button class="dmi collonly" id="pullToColl" role="menuitem"><i>📦</i>Add this deck to my collection</button>
+          <button class="dmi bad collonly" id="pullOffColl" role="menuitem"><i>📦</i>Remove this deck from my collection</button>
+          <div class="dmsep"></div>
+          <!-- No API key involved: TCGplayer's mass entry page takes the list in
+               the URL, so these two work today and will keep working if a price
+               feed never appears. -->
+          <button class="dmi" id="buyDeck" role="menuitem"><i>🛒</i>Buy this deck</button>
+          <button class="dmi collonly" id="buyMissing" role="menuitem"><i>🛒</i>Buy the cards I don't have</button>
+        </div>
+      </div>
     </div>
     ${renderPull()}
     <div id="proxyBox"></div>
@@ -12202,6 +12441,28 @@ function renderDecksPage(){
     <div id="borrowBox" class="collonly"></div>
   </div>`;
   wireGallery();
+  /* Fills a folder's grid the first time it's opened, from the names stashed
+     on data-decks rather than re-deriving the group — then wires just those
+     new cards' two handlers (pick / rename), the same two the eager fill
+     below wires for everything else. Filled once; re-opening after that is
+     free, same as any other <details>. */
+  const wireDeckCards=root=>{
+    root.querySelectorAll("[data-dk]").forEach(b=>b.onclick=()=>{
+      DECKS.cur=b.dataset.dk;saveDecks();markDirty(false);render();paintDeckBar()});
+    root.querySelectorAll("[data-ren]").forEach(el=>{
+      const go=e=>{e.stopPropagation();e.preventDefault();renameDeck(el.dataset.ren)};
+      el.onclick=go;
+      el.onkeydown=e=>{if(e.key==="Enter"||e.key===" ")go(e)}});
+  };
+  $("deckspage").querySelectorAll(".erafold").forEach(fold=>{
+    fold.addEventListener("toggle",()=>{
+      if(!fold.open)return;
+      const grid=fold.querySelector(".eraLazy");
+      if(!grid||!grid.dataset.decks||grid.childElementCount)return;
+      grid.innerHTML=grid.dataset.decks.split("").map(deckCardHTML).join("");
+      wireDeckCards(grid);
+    });
+  });
   {const sb=$("swapbox");if(sb)sb.ontoggle=()=>save("fs3_swapopen",sb.open)}
   $("deckspage").querySelectorAll("[data-swapin]").forEach(b=>b.onclick=()=>{
     const outF=b.dataset.swapout;
@@ -12261,8 +12522,8 @@ function renderDecksPage(){
   {const px=$("pullProxy");
    if(px)px.onclick=()=>{
      const box=$("proxyBox");
-     if(box.firstChild){box.innerHTML="";document.body.classList.remove("proxying");px.classList.remove("go");return}
-     box.innerHTML=renderProxies();document.body.classList.add("proxying");px.classList.add("go");
+     if(box.firstChild){box.innerHTML="";document.body.classList.remove("proxying");return}
+     box.innerHTML=renderProxies();document.body.classList.add("proxying");
      const all=$("pxAll");
      if(all)all.onclick=()=>{PROXYALL=true;save("fs3_proxyall",PROXYALL);box.innerHTML=renderProxies();wireProxy()};
      wireProxy();
@@ -12274,6 +12535,18 @@ function renderDecksPage(){
   if(bm)bm.onclick=()=>tcgOpen(borrowRows().map(x=>({c:x.c,q:x.need})),
     "you already own every card in this deck");
   if(dtotal())unlockHidden("h_binder");
+  /* Same one-open-at-a-time / click-away / Escape pattern as the deck
+     panel's own ⋯ and 👁 menus. */
+  (()=>{
+    const B=$("pullMore"),P=$("pullMorePanel");if(!B||!P)return;
+    const shut=()=>{P.hidden=true;B.setAttribute("aria-expanded","false")};
+    B.onclick=e=>{e.stopPropagation();const open=P.hidden;shut();
+      if(open){P.hidden=false;B.setAttribute("aria-expanded","true")}};
+    P.onclick=e=>e.stopPropagation();
+    document.addEventListener("click",shut,{once:true});
+    document.addEventListener("keydown",function esc(ev){
+      if(ev.key==="Escape"){shut();document.removeEventListener("keydown",esc)}});
+  })();
 }
 
 /* ===================== other ===================== */
@@ -15078,8 +15351,15 @@ document.addEventListener("click",e=>{
   if(!$("otherMenu").hidden&&!e.target.closest(".otherwrap")&&!e.target.closest("#otherMenu"))closeOtherMenu()});
 $("mManual").onclick=()=>{SUB="manual";save("fs3_sub",SUB);showTab("tDeck")};
 $("mGuided").onclick=()=>{SUB="guided";save("fs3_sub",SUB);showTab("tDeck")};
-$("mC").onclick=()=>{document.body.classList.remove("mdeck");$("mC").classList.add("on");$("mD").classList.remove("on")};
-$("mD").onclick=()=>{document.body.classList.add("mdeck");$("mD").classList.add("on");$("mC").classList.remove("on")};
+/* Three mobile tabs, one active body class at a time (Cards is "neither"
+   class, same as it always was — see the .msearch/.mdeck rule in CSS). */
+const mtabPick=on=>{document.body.classList.toggle("msearch",on==="msearch");
+  document.body.classList.toggle("mdeck",on==="mdeck");
+  [["mS","msearch"],["mC","mcards"],["mD","mdeck"]].forEach(([id,tag])=>
+    $(id).classList.toggle("on",tag===on))};
+$("mS").onclick=()=>mtabPick("msearch");
+$("mC").onclick=()=>mtabPick("mcards");
+$("mD").onclick=()=>mtabPick("mdeck");
 
 function render(){renderPills();renderChips();renderSide();renderGrid();renderDeck();
   if($("vGuide").classList.contains("on"))renderGuideDeck();
@@ -15378,7 +15658,7 @@ const ACCT={
            binned. Nothing is destroyed by logging in. */
         let nm="Unsaved deck",i=2;
         while(DECKS.list[nm])nm="Unsaved deck "+(i++);
-        DECKS.list[nm]={...d};
+        DECKS.list[nm]={...d};stampEdited(nm);
         toast(`Your unsaved deck was kept as "${nm}"`);
       }
       if(d)DECKS.list[DRAFT]={fmt:d.fmt,coco:null,cards:{}};
