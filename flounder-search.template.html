@@ -563,12 +563,10 @@ header select{background:var(--panel);border:1px solid var(--line);border-radius
    hierarchy — do not flatten these into one. */
 nav.tabs{display:flex;gap:0;padding:0 8px;background:var(--canvas-soft);
   border-bottom:1px solid var(--chrome);box-shadow:var(--bevel);flex-wrap:wrap}
-nav.tabs button,nav.tabs .ink-list-link{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
+nav.tabs button{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
   font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:0;
   border-right:1px solid rgba(51,74,136,.3)}
-nav.tabs button:hover,nav.tabs .ink-list-link:hover{background:rgba(255,255,255,.4)}
-nav.tabs .ink-list-link{display:inline-flex;align-items:center;text-decoration:none;white-space:nowrap}
-nav.tabs .ink-list-link:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
+nav.tabs button:hover{background:rgba(255,255,255,.4)}
 nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
 /* The Other tab jumps straight to the Lore tracker (its default landing
    page) — everything else in the Other menu used to need a detour through
@@ -583,9 +581,9 @@ nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
 .othermenu h4{margin:10px 8px 4px;font-size:10.5px;font-weight:900;text-transform:uppercase;
   letter-spacing:.07em;color:var(--deep)}
 .othermenu h4:first-child{margin-top:6px}
-.othermenu button{display:block;width:100%;text-align:left;padding:9px 8px;border-radius:4px;
-  font-size:13.5px;color:var(--tx);font-weight:600}
-.othermenu button:hover{background:var(--canvas-soft)}
+.othermenu button,.othermenu a{display:block;width:100%;text-align:left;padding:9px 8px;border-radius:4px;
+  font-size:13.5px;color:var(--tx);font-weight:600;text-decoration:none;box-sizing:border-box}
+.othermenu button:hover,.othermenu a:hover{background:var(--canvas-soft)}
 
 /* Page titles sit under a gold hairline with a smallcaps eyebrow above. */
 /* Hero plate: the page-tinted field the box-art wordmark sits on. */
@@ -641,7 +639,11 @@ body.browse .wrap{grid-template-columns:minmax(0,1fr)}
 .soon li{margin:0 0 4px 18px}
 .ogh{margin-top:26px}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-.tile{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:15px;text-align:left}
+/* color/text-decoration reset: a tile can render as an <a> (internal path or
+   external URL) as easily as a <button>, and without this it picks up the
+   browser's default link blue + underline instead of matching its siblings. */
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:15px;text-align:left;
+  display:block;color:inherit;text-decoration:none}
 .tile:hover{border-color:var(--deep)}
 .tile.ready{border-left:2px solid var(--good)}
 .tile h3{font-size:15.36px;margin-bottom:4px}
@@ -2220,7 +2222,12 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 @keyframes sp{to{transform:rotate(360deg)}}
 
 /* chip groups */
-.special{margin-top:14px;border:1px solid var(--line);border-radius:2px;background:var(--panel);overflow:hidden}
+/* flex-shrink:0 matters here: .special lives inside .searchcol, a flex column
+   with its own overflow-y:auto. A flex item with overflow other than visible
+   gets an automatic minimum size of 0, so without this it quietly shrinks to
+   fit the column instead of the column scrolling — its own overflow:hidden
+   then clips most of the chip groups with no way to reach them. */
+.special{margin-top:14px;border:1px solid var(--line);border-radius:2px;background:var(--panel);overflow:hidden;flex-shrink:0}
 .special>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:12px 14px;
   font-size:14.72px;font-weight:700}
 .special>summary::-webkit-details-marker{display:none}
@@ -3947,7 +3954,6 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <button id="tSearch">Search for cards</button>
   <button id="tColl" class="collonly">My collection</button>
   <button id="tDecks">Decks</button>
-  <a class="ink-list-link" href="https://inklist.readysetink.com/">The Ink List ↗</a>
   <span class="otherwrap">
     <button id="tOther">Other</button>
     <button id="tOtherMenu" aria-label="Other menu" aria-haspopup="true" aria-expanded="false">☰</button>
@@ -4257,8 +4263,34 @@ const COCO=[
    cards whose activated ability has no exert cost at all — Cobra Bubbles
    was being pulled in and starred, which is the opposite of the point. An
    exert ability writes the symbol as a cost, before the dash. */
-  hook:c=>/(\{E\}|⟳)[^.]{0,14}[-–—]/.test(c.tx||""),rec:["exert","activated","draw"]}
+  hook:c=>/(\{E\}|⟳)[^.]{0,14}[-–—]/.test(c.tx||""),rec:["exert","activated","draw"]},
+ /* Beta 2's six "duo" Coconuts: two characters, two inks baked into the one
+    card instead of one. `i2` is the tell — everything downstream that reads
+    a Coconut's ink goes through coInks() below rather than touching `.i`
+    directly, so these need no special-casing anywhere else. */
+ {n:"Woody & Buzz Lightyear",v:"Best Buddies",i:"Amber",i2:"Emerald",
+  t:"Once during your turn, you may pay 1 ink less for the next Toy character you play this turn. If you do and you have a character named Woody and a character named Buzz Lightyear in play, draw a card.",
+  hook:c=>c.sub.includes("Toy"),rec:["cheap","tribal"]},
+ {n:"The Madrigal Family",v:"Every Generation",i:"Amber",i2:"Sapphire",
+  t:"During your turn, whenever you remove 1 or more damage from one of your characters, you may ready them. They can't quest or challenge for the rest of this turn.",
+  hook:c=>/removes?\s+(up to\s+)?\d*\s*damage/i.test(c.ef||""),rec:["heal","ready"]},
+ {n:"Peter Pan & Tinker Bell",v:"Fast Friends",i:"Amethyst",i2:"Ruby",
+  t:"Once during your turn, you may give chosen character Evasive until the start of your next turn. If they already had Evasive, they get +1 lore until the start of your next turn.",
+  hook:c=>c.kw.some(k=>k[0]==="Evasive"),rec:["lore","quester"]},
+ {n:"Aladdin & Genie",v:"Mischievous Pals",i:"Amethyst",i2:"Emerald",
+  t:"Whenever you draw a card during your turn, if it's the third card you drew this turn, gain 2 lore.",
+  hook:c=>/draws?\s+(a|\d+)?\s*cards?/i.test(c.ef||""),rec:["draw","cheap"]},
+ {n:"Belle & Beast",v:"Certain as the Sun",i:"Ruby",i2:"Sapphire",
+  t:"Whenever one of your characters with cost 5 or more readies, draw a card.",
+  hook:c=>(c.c||0)>=5,rec:["ready","heal"]},
+ {n:"Darkwing Duck & Launchpad",v:"St. Canard's Finest",i:"Sapphire",i2:"Steel",
+  t:"During your turn, whenever an opposing character is banished in a challenge, gain 1 lore. If they were a Villain character, gain 3 lore instead.",
+  hook:c=>c.kw.some(k=>k[0]==="Challenger")||(c.st||0)>=5,rec:["chall","pump"]}
 ];
+/* A single-ink Coconut locks one ink; a duo Coconut (`i2` set) locks two.
+   Everything that reads a Coconut's ink goes through this rather than `.i`
+   directly, so the two shapes don't need separate code paths. */
+const coInks=co=>co?(co.i2?[co.i,co.i2]:[co.i]):[];
 
 
 const INKS=["Amber","Amethyst","Emerald","Ruby","Sapphire","Steel"];
@@ -5649,7 +5681,7 @@ function sortInner(a){const x=a.slice();
 
    This is the one section that is ALWAYS closed on arrival, and stays closed
    unless you open it — GOPEN, which remembers every other group's state, is
-   deliberately not consulted. Nineteen Coconuts each with a stack of chips
+   deliberately not consulted. Two dozen Coconuts each with a stack of chips
    under them is a wall, and it is the last thing on the panel; anyone who
    wants it will click it, and everyone else should never see it unfolded.
 
@@ -5668,7 +5700,7 @@ function cocoBlock(cur,base){
     if(!chips)return"";
     return `<div class="cocorow">
       <button class="cocon" data-cocosee="${i}" title="Open ${esc(co.n)} - ${esc(co.v)}">
-        <i class="ci ${esc(co.i.toLowerCase())}"></i>${esc(co.n)} <em>${esc(co.v)}</em></button>
+        ${coInks(co).map(i=>`<i class="ci ${esc(i.toLowerCase())}"></i>`).join("")}${esc(co.n)} <em>${esc(co.v)}</em></button>
       <div class="chips">${chips}</div></div>`}).join("");
   /* Held in a plain variable, never in localStorage. renderChips() rebuilds
      this whole panel on every keystroke, so without it a chip clicked inside
@@ -6130,7 +6162,7 @@ function illegalReason(c){
   if(d.fmt==="core"&&!c.core)return "not Core legal";
   const inks=new Set();dlist().forEach(({c:x})=>x.co.forEach(i=>inks.add(i)));
   const co=d.fmt==="coconut"&&d.coco!=null?COCO[d.coco]:null;
-  if(co)inks.add(co.i);
+  if(co)coInks(co).forEach(i=>inks.add(i));
   if(inks.size>=F.cap&&c.co.length&&!c.co.every(i=>inks.has(i)))
     return "off-ink — deck is "+[...inks].join("/");
   const q=d.cards[c.f]||0;
@@ -6148,7 +6180,9 @@ function deckWarnings(){
   const w=[],inks=new Set();L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
   if(inks.size>F.cap)w.push(`${inks.size} inks used (${[...inks].join(", ")}) — ${F.l} allows ${F.cap}.`);
   const co=d.fmt==="coconut"&&d.coco!=null?COCO[d.coco]:null;
-  if(co&&tot&&!inks.has(co.i))w.push(`Your Coconut is ${co.i} — the deck must include ${co.i} cards.`);
+  const coI=co?coInks(co):[];
+  if(co&&tot&&!coI.some(i=>inks.has(i)))
+    w.push(`Your Coconut is ${coI.join("/")} — the deck must include ${coI.join(" or ")} cards.`);
   L.forEach(({c,q})=>{
     const named=coconut4x(c),cap=named?4:F.max;
     if(q>cap)w.push(`"${c.f}" ×${q} — max ${cap}${d.fmt==="coconut"&&!named?" (singleton)":""}.`);
@@ -6846,7 +6880,7 @@ function renderDeck(hostId){
 
   if(d.fmt==="coconut"){
     hBelow+=`<h3>Coconut</h3><select id="csel"><option value="">— none —</option>${
-      COCO.map((c,i)=>`<option value="${i}"${String(d.coco)===String(i)?" selected":""}>${esc(c.n)} – ${esc(c.v)} (${c.i})</option>`).join("")}</select>`;
+      COCO.map((c,i)=>`<option value="${i}"${String(d.coco)===String(i)?" selected":""}>${esc(c.n)} – ${esc(c.v)} (${coInks(c).join("/")})</option>`).join("")}</select>`;
     if(d.coco!=null&&COCO[d.coco]){const co=COCO[d.coco];
       hBelow+=`<div class="st" style="background:var(--platinum);border:1px solid var(--line);border-radius:8px;padding:8px;margin-top:6px">
         <b style="color:var(--gold)">${esc(co.n)} – ${esc(co.v)}</b><br>${esc(co.t)}</div>`}
@@ -7574,13 +7608,19 @@ function importText(){
 
 /* ===================== guided coconut build ===================== */
 // ink pair by hook DENSITY per ink — normalises away "this ink is just bigger"
+/* `need` is 2 for a single-ink Coconut (pick two more inks) and 1 for a duo
+   Coconut (its two locked inks already cover two of the format's three
+   slots). The gap check compares the last ink actually picked against the
+   best one left out, whichever rank that lands on. */
 function pairFor(idx){
   const co=COCO[idx],pool=CARDS.filter(c=>legal(c));
+  const base=coInks(co),need=3-base.length;
   const d=INKS.map(i=>{const p=pool.filter(c=>c.co.includes(i));
     return[i,p.length?p.filter(co.hook).length/p.length:0,p.filter(co.hook).length]});
-  const others=d.filter(x=>x[0]!==co.i).sort((a,b)=>b[1]-a[1]);
-  const gap=others[2]&&others[2][1]?((others[1][1]-others[2][1])/others[2][1]*100):999;
-  return{best:[others[0][0],others[1][0]],all:others,conf:gap>=15?"strong":(gap>=6?"ok":"close")};
+  const others=d.filter(x=>!base.includes(x[0])).sort((a,b)=>b[1]-a[1]);
+  const best=others.slice(0,need).map(x=>x[0]);
+  const gap=others[need]&&others[need][1]?((others[need-1][1]-others[need][1])/others[need][1]*100):999;
+  return{best,need,all:others,conf:gap>=15?"strong":(gap>=6?"ok":"close")};
 }
 /* ===================== prebuilt Coconut decks =====================
    Generated from the card data, not hand-typed. Eighteen hand-written 60-card
@@ -7617,7 +7657,13 @@ const COCO_PLAN={
 "Tinker Bell":{p:"Every ability or action that damages an opposing character does one more. It turns a pile of 1-damage pings into 2-damage removal, which changes what dies.",t:["Ink, cheap body.","Ink, a pinger.","Ink, Tinker Bell — now every ping kills a 2-toughness card."],g:"Convert cheap chip damage into a real removal suite. The deck is all damage triggers on purpose."},
 "Sisu":{p:"Anything bigger than their whole board can quest the turn it lands. Play big, pump bigger, quest immediately — no summoning sickness on the cards that matter.",t:["Ink, cheap body.","Ink, a pump effect or a big body.","Ink, Sisu, then quest with a fresh fatty."],g:"Big stats, immediate lore. Every buff in here exists to clear the 'bigger than theirs' bar."},
 "Pocahontas":{p:"Pick a character each turn: it gains lore, can't challenge, and has to quest. A pure lore-race deck that turns any body into a questing machine.",t:["Ink, cheap body.","Ink, another body.","Ink, Pocahontas, then start pointing at whoever should quest."],g:"Race to twenty. The deck avoids combat entirely — you're not trying to fight them."},
-"Dumbo":{p:"Exert abilities work the turn a character lands. Every tap-to-do-something card in the deck becomes an enters-play effect instead.",t:["Ink, cheap body with an exert ability.","Ink, another one — still sitting idle for now.","Ink, Dumbo, then every exert ability fires immediately."],g:"Get instant value out of cards everyone else has to wait a turn on."}};
+"Dumbo":{p:"Exert abilities work the turn a character lands. Every tap-to-do-something card in the deck becomes an enters-play effect instead.",t:["Ink, cheap body with an exert ability.","Ink, another one — still sitting idle for now.","Ink, Dumbo, then every exert ability fires immediately."],g:"Get instant value out of cards everyone else has to wait a turn on."},
+"Woody & Buzz Lightyear":{p:"A Toy tribal shell that gets cheaper every turn and rewards you for actually running the pair it's named after. Every Toy comes in a rate cheaper, and having both Woody and Buzz down turns that discount into a card.",t:["Ink, cheap Toy.","Ink, another Toy at a discount.","Ink, Woody & Buzz, then chain Toys and draw off the pair."],g:"Play more Toys than your ink should allow, and pull ahead on cards once both namesakes are on board."},
+"The Madrigal Family":{p:"A stall shell built around healing. Every time you patch a character up you get to ready it — the tradeoff is it's locked out of questing and challenging that turn, so this is a deck about holding the board, not racing it.",t:["Ink, cheap body.","Ink, a healer.","Ink, the Madrigal Family, then start readying whatever you just patched up."],g:"Out-last them. Nothing they throw at your board sticks for long, and you're never open on defense."},
+"Peter Pan & Tinker Bell":{p:"Evasive is the whole deck: give it to a body that can't be answered, then let it snowball into free lore once it's already unstoppable.",t:["Ink, cheap body.","Ink, another one — you're setting up who gets the buff.","Ink, Peter Pan & Tinker Bell, then hand out Evasive and start pushing lore no one can block."],g:"One character nobody can touch, getting stronger every turn you leave it alone."},
+"Aladdin & Genie":{p:"A card-draw shell where hitting your third draw of the turn is the entire payoff. Load up on cheap draw so three-in-a-turn is routine, not a stretch.",t:["Ink, a cheap cantrip.","Ink, another draw effect.","Ink, Aladdin & Genie, then chain a third draw and bank the lore."],g:"Turn a normal draw-heavy turn into a free two lore, over and over."},
+"Belle & Beast":{p:"Big bodies that keep coming back for more. Anything you own that's cost 5 or more turns every ready into a card, so the deck leans on Resist and readying effects to keep the trigger firing.",t:["Ink, cheap body.","Ink, hold for the big stuff.","Ink, Belle & Beast, then ready your fatty and draw off it."],g:"Never run out of gas once your top end sticks — every ready is a card."},
+"Darkwing Duck & Launchpad":{p:"An aggressive challenge deck that gets paid for every banish — triple if the target's a Villain. Built around Challenger and big bodies that win the fight and cash in.",t:["Ink, cheap body.","Ink, a challenger.","Ink, Darkwing Duck & Launchpad, then start banishing their board and collecting lore for it."],g:"Race on combat, not just lore. Every trade you win pays you directly."}};
 const COCO_CURVE=[0,4,10,12,11,8,6,5];   // by cost, 0..7+ — 56 cards
 function cocoDeck(idx){
   const co=COCO[idx];if(!co)return null;
@@ -7633,20 +7679,28 @@ function cocoDeck(idx){
      card to both of its inks — so Amber looked like it held a Pua, when that
      Pua is Amber/Amethyst and is unplayable unless Amethyst is in the deck
      too. Fifteen pairs is nothing to check exactly. */
-  const others=INKS.filter(i=>i!==co.i);
-  let inks=[co.i,others[0],others[1]],bestN=-1,bestNames=-1;
-  for(let a=0;a<others.length;a++)for(let b2=a+1;b2<others.length;b2++){
-    const set=new Set([co.i,others[a],others[b2]]);
+  /* A duo Coconut has already spent two of the format's three ink slots on
+     itself, so there's only one more to search for rather than a pair — same
+     scoring, just a single loop instead of the double one. */
+  const base=coInks(co),others=INKS.filter(i=>!base.includes(i));
+  let inks=[...base,...others.slice(0,3-base.length)],bestN=-1,bestNames=-1;
+  const consider=combo=>{
+    const set=new Set([...base,...combo]);
     const hit=hooks.filter(c=>c.co.length&&c.co.every(i=>set.has(i)));
     const n=hit.length;
-    /* Ties break on how many DIFFERENT names the pair reaches. This is a
+    /* Ties break on how many DIFFERENT names the combo reaches. This is a
        singleton format, so eight Moanas plus two Puas is a more resilient
        deck than ten Moanas — and it is what makes Moana's list actually
        contain a Pua. (Heihei has no card in Lorcana yet, so her text names a
        creature that cannot be included.) */
     const names=new Set(hit.map(c=>c.n)).size;
-    if(n>bestN||(n===bestN&&names>bestNames)){
-      bestN=n;bestNames=names;inks=[co.i,others[a],others[b2]]}}
+    if(n>bestN||(n===bestN&&names>bestNames)){bestN=n;bestNames=names;inks=[...base,...combo]}};
+  if(base.length>=2){
+    for(let a=0;a<others.length;a++)consider([others[a]]);
+  }else{
+    for(let a=0;a<others.length;a++)for(let b2=a+1;b2<others.length;b2++)
+      consider([others[a],others[b2]]);
+  }
   const iset=new Set(inks);
   const self=CARDS.find(x=>x.n===co.n&&x.v===co.v);
   const recIds=co.rec||[];
@@ -7796,7 +7850,7 @@ function builtPanel(i){
 function renderGuide(){
   const g=$("guide");
   const co=G.coco!=null?COCO[G.coco]:null;
-  const inks=co&&G.pair?[co.i,...G.pair]:null;
+  const inks=co&&G.pair?[...coInks(co),...G.pair]:null;
   const iset=inks?new Set(inks):null;
   const cop=G.copies!==null;
   const state=i=>{const reached=[true,!!co,!!(co&&G.pair),!!(co&&G.pair&&cop),
@@ -7814,7 +7868,7 @@ function renderGuide(){
       <button data-gt="built" class="${GTAB==="built"?"on":""}">See fully built decks</button>
     </div>`;
   if(GTAB!=="built"){
-    s1+=`<p class="s">Its ink locks in automatically. All 18 beta cards, real ability text.</p>
+    s1+=`<p class="s">Its ink locks in automatically. All ${COCO.length} beta cards, real ability text.</p>
       <input class="mini" id="gq" placeholder="search coconuts…" style="max-width:320px">
       <div class="cocogrid" id="cg" style="margin-top:9px"></div>`;
   }else{
@@ -7827,7 +7881,7 @@ function renderGuide(){
       const on=openIdx===i;
       s1+=`<div class="brow${on?" on":""}">
         <button class="bhead" data-built="${i}">
-          <span class="dot" style="background:${HEX[c.i]}"></span>
+          ${coInks(c).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>`).join("")}
           <span class="bn">${esc(c.n)} <em>${esc(c.v)}</em></span>
           <span class="bt">${esc(c.t)}</span>
           <span class="bx">${on?"▾":"▸"}</span>
@@ -7837,29 +7891,48 @@ function renderGuide(){
     s1+=`</div>`;
   }
 
-  /* 2 — inks */
-  let s2;
-  if(!co) s2=`<p class="gprev">Pick a Coconut first — then you'll choose two more inks, with the
-     strongest pairing highlighted (rainbow when it's a clear favourite).</p>`;
+  /* 2 — inks. A single-ink Coconut needs two more (the historic case, and
+     still the common one); a duo Coconut (Beta 2) has already locked two of
+     the format's three inks and needs only one. Same ranking underneath
+     (pairFor's `need` says which), just a different button shape. */
+  let s2,needBadge=2;
+  if(!co) s2=`<p class="gprev">Pick a Coconut first — then you'll choose the rest of your inks, with the
+     strongest option${needBadge===1?"":"s"} highlighted (rainbow when it's a clear favourite).</p>`;
   else{
     const pr=pairFor(G.coco);
+    needBadge=pr.need;
+    const base=coInks(co);
     const label={strong:"clear favourite",ok:"solid pick",close:"close call — the alternatives are just as playable"}[pr.conf];
-    s2=`<p class="s"><span class="dot" style="background:${HEX[co.i]}"></span><b>${esc(co.i)}</b> is locked by ${esc(co.n)}.
+    s2=`<p class="s">${base.map(i=>`<span class="dot" style="background:${HEX[i]}"></span>`).join("")}<b>${esc(base.join(" / "))}</b> ${base.length>1?"are":"is"} locked by ${esc(co.n)}.
       Ranked by how densely each ink actually supports this Coconut —
       <b style="color:${pr.conf==="strong"?"var(--good)":pr.conf==="ok"?"var(--good)":"var(--gold)"}">${label}</b>.</p><div class="pairs">`;
-    const opts=[];
-    for(let i=0;i<pr.all.length;i++)for(let j=i+1;j<pr.all.length;j++)opts.push([pr.all[i][0],pr.all[j][0]]);
-    const isRec=p=>(p[0]===pr.best[0]&&p[1]===pr.best[1])||(p[0]===pr.best[1]&&p[1]===pr.best[0]);
-    opts.sort((a,b)=>(isRec(b)?1:0)-(isRec(a)?1:0));
-    opts.forEach(p=>{
-      const sel=G.pair&&G.pair[0]===p[0]&&G.pair[1]===p[1];
-      const st=[...inkStaples(p[0]),...inkStaples(p[1])];
-      s2+=`<button class="pair${isRec(p)?" rec-"+pr.conf:""}${sel?" on":""}" data-p="${p[0]}|${p[1]}">
-        <div class="t"><span class="dot" style="background:${HEX[p[0]]}"></span>${p[0]}
-          <span class="dot" style="background:${HEX[p[1]]};margin-left:6px"></span>${p[1]}
-          ${isRec(p)?`<span class="tag">${pr.conf==="strong"?"BEST":"RECOMMENDED"}</span>`:""}</div>
-        <div class="stap">${st.map(c=>`<div>${esc(c.n)}${c.v?" – "+esc(c.v):""}</div>`).join("")||"<div>no staples tagged</div>"}</div>
-      </button>`});
+    if(pr.need>=2){
+      const opts=[];
+      for(let i=0;i<pr.all.length;i++)for(let j=i+1;j<pr.all.length;j++)opts.push([pr.all[i][0],pr.all[j][0]]);
+      const isRec=p=>(p[0]===pr.best[0]&&p[1]===pr.best[1])||(p[0]===pr.best[1]&&p[1]===pr.best[0]);
+      opts.sort((a,b)=>(isRec(b)?1:0)-(isRec(a)?1:0));
+      opts.forEach(p=>{
+        const sel=G.pair&&G.pair[0]===p[0]&&G.pair[1]===p[1];
+        const st=[...inkStaples(p[0]),...inkStaples(p[1])];
+        s2+=`<button class="pair${isRec(p)?" rec-"+pr.conf:""}${sel?" on":""}" data-p="${p[0]}|${p[1]}">
+          <div class="t"><span class="dot" style="background:${HEX[p[0]]}"></span>${p[0]}
+            <span class="dot" style="background:${HEX[p[1]]};margin-left:6px"></span>${p[1]}
+            ${isRec(p)?`<span class="tag">${pr.conf==="strong"?"BEST":"RECOMMENDED"}</span>`:""}</div>
+          <div class="stap">${st.map(c=>`<div>${esc(c.n)}${c.v?" – "+esc(c.v):""}</div>`).join("")||"<div>no staples tagged</div>"}</div>
+        </button>`});
+    }else{
+      /* Duo Coconut: only one ink left to fill, so each option is a single
+         ink rather than a combination — same ranking, same staples preview. */
+      pr.all.forEach(([ink])=>{
+        const sel=G.pair&&G.pair[0]===ink;
+        const isRec=ink===pr.best[0];
+        const st=inkStaples(ink);
+        s2+=`<button class="pair${isRec?" rec-"+pr.conf:""}${sel?" on":""}" data-p="${ink}">
+          <div class="t"><span class="dot" style="background:${HEX[ink]}"></span>${ink}
+            ${isRec?`<span class="tag">${pr.conf==="strong"?"BEST":"RECOMMENDED"}</span>`:""}</div>
+          <div class="stap">${st.map(c=>`<div>${esc(c.n)}${c.v?" – "+esc(c.v):""}</div>`).join("")||"<div>no staples tagged</div>"}</div>
+        </button>`});
+    }
     s2+=`</div>`;
   }
 
@@ -7928,7 +8001,7 @@ function renderGuide(){
     : `<p class="gprev">Finally, jump into the main Search &amp; Deck tab with everything carried over.</p>`;
 
   g.innerHTML=`<div class="glayout"><div>`+
-    step(0,"Choose your Coconut",s1)+step(1,"Pick two more inks",s2)+
+    step(0,"Choose your Coconut",s1)+step(1,needBadge===1?"Pick one more ink":"Pick two more inks",s2)+
     step(2,"How many Coconuts?",s3c)+step(3,"Staples",s3)+
     step(4,"Recommended synergies",s4)+step(5,"Build it",s6)+
     `</div><aside class="deck gside" id="gdeck"></aside></div>`;
@@ -7938,20 +8011,20 @@ function renderGuide(){
   /* The Coconut grid only exists in the "pick" tab. */
   const draw=()=>{if(!$("cg"))return;
     const q=($("gq")&&$("gq").value||"").toLowerCase();
-    $("cg").innerHTML=COCO.map((c,i)=>({c,i})).filter(({c})=>!q||(c.n+" "+c.v+" "+c.i+" "+c.t).toLowerCase().includes(q))
+    $("cg").innerHTML=COCO.map((c,i)=>({c,i})).filter(({c})=>!q||(c.n+" "+c.v+" "+coInks(c).join(" ")+" "+c.t).toLowerCase().includes(q))
       .map(({c,i})=>`<button class="cococ${G.coco===i?" on":""}" data-c="${i}">
-        <b><span class="dot" style="background:${HEX[c.i]}"></span>${esc(c.n)}</b><i>"${esc(c.v)}" · ${c.i}</i>
+        <b>${coInks(c).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>`).join("")}${esc(c.n)}</b><i>"${esc(c.v)}" · ${coInks(c).join("/")}</i>
         <span>${esc(c.t)}</span></button>`).join("");
     $("cg").querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{
       const i=+b.dataset.c;G.coco=i;G.pair=null;G.copies=null;G.staples=null;G.mode=null;
       const d=deck();d.fmt="coconut";d.coco=i;markDirty(true);
-      S.ink=new Set([COCO[i].i]);renderGuide();render()})};
+      S.ink=new Set(coInks(COCO[i]));renderGuide();render()})};
   draw();
   if($("gq"))$("gq").oninput=draw;
 
   g.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{
     G.pair=b.dataset.p.split("|");G.copies=null;G.staples=null;G.mode=null;
-    S.ink=new Set([COCO[G.coco].i,...G.pair]);renderGuide();render()});
+    S.ink=new Set([...coInks(COCO[G.coco]),...G.pair]);renderGuide();render()});
   /* step 3 — copies of the Coconut, and its named item if it has one */
   const setCopies=(f,n)=>{const d=deck();d.cards[f]=n;markDirty(true)};
   if($("gc4"))$("gc4").onclick=()=>{const s=CARDS.find(x=>x.n===co.n&&x.v===co.v);
@@ -7987,7 +8060,7 @@ function renderGuide(){
     let n=2;while(DECKS.list[name])name=d.co.n+" – "+d.co.v+" "+(n++);
     DECKS.list[name]={fmt:"coconut",coco:i,cards:{...d.cards}};
     DECKS.cur=name;stampEdited(name);saveDecks();markDirty(false);
-    G.coco=i;G.pair=d.inks.slice(1);G.copies=4;G.mode=null;
+    G.coco=i;G.pair=d.inks.slice(coInks(d.co).length);G.copies=4;G.mode=null;
     S.ink=new Set(d.inks);S.limit=150;
     SUB="manual";save("fs3_sub",SUB);showTab("tDeck");
     render();paintDeckBar();
@@ -10131,7 +10204,7 @@ function upgradeReport(){
   const L=dlist(),tot=dtotal(),d=deck(),F=FMT[d.fmt];
   const inks=new Set();L.forEach(({c})=>c.co.forEach(i=>inks.add(i)));
   const co=d.fmt==="coconut"&&d.coco!=null?COCO[d.coco]:null;
-  if(co)inks.add(co.i);
+  if(co)coInks(co).forEach(i=>inks.add(i));
   const have=new Set(L.map(x=>x.f));
   const inDeck=f=>have.has(f);
   const onInk=c=>!c.co.length||c.co.every(i=>inks.has(i));
@@ -14078,6 +14151,8 @@ const OTHER_GROUPS=[
    ["Worldbuilding","What Lorcana actually is — the Illuminary, glimmers, the inks, and where the story has gone.","world"],
    ["Sources & credits","Where to play online, where to read the news, and everyone whose work this is built on.","cred"],
    ["Sites We Like","The best of the Lorcana community, hand-picked by us.","links"],
+   ["Store & event finder","Find local game stores and tournaments near you.","https://map.readysetink.com/"],
+   ["The Ink List","Every card, ranked and rated by the community.","https://inklist.readysetink.com/"],
  ]},
  {g:"Mini games",chips:[
    ["Guess the card","Can you guess the card from a tiny piece of its art?","guess"],
@@ -14759,23 +14834,23 @@ let TOURI=0,TOURWIZ=false;
 const TOUR=[
  {t:"Welcome to Ready Set Ink",
   lines:["Your card-table companion for Disney Lorcana.",
-    "Track lore, call the Judge, and finish a ruling with the exact official rule in view.",
+    "Settle a ruling on the spot, with the exact official rule in view — no more arguing at the table.",
     "Everything here is free, and always will be."],
   dis:"Unofficial fan content. Not published, endorsed or approved by Disney or Ravensburger. © Disney. Disney Lorcana is operated by Ravensburger, an official licensee of Disney. We may earn an affiliate commission from purchases made through links on this website."},
- {t:"Special searches",
-  lines:["We have a few things no other Lorcana search tool does right now.",
-    "Searches that used to mean reading every card — cards that ping damage, cards that punish the whole table, cards that want to be discarded — are one click.",
-    "Open <b>✨ Special searches</b> above the grid and start pressing things."]},
- {t:"Search by what's in the picture",
-  lines:["Not just the rules text. The artwork.",
+ {t:"Answer any card question in one search",
+  lines:["Stop rereading the whole set to check an interaction.",
+    "Cards that ping damage, cards that punish the whole table, cards that want to be discarded — ask for it, and it's on screen.",
+    "Open <b>✨ Special searches</b> above the grid and try one."]},
+ {t:"Find the art tags you want",
+  lines:["Not just the rules text — the artwork itself.",
     "Try typing this and pressing Enter:",
     "<span class='ttry'>blue dog</span>",
     "Plain English works too — <span class='ttry'>steel action</span> or <span class='ttry'>sapphire item floodborn</span> will each find what you'd expect."]},
- {t:"Pull sheets",
-  lines:["Tell us how you keep your cards and every deck you save gets a pull sheet — the running order to walk your binder in, so you're not hunting the same box four times.",
-    "Anything you haven't got becomes a message you can customise and send to a friend to ask to borrow it."]},
- {t:"Mini games",
-  lines:["Guess a card from a sliver of its art, from a named ability, or from its stats one fact at a time.",
+ {t:"Walk your binder once, not four times",
+  lines:["Tell us how you keep your cards and every deck you save comes with a pull sheet in that exact order.",
+    "Missing something? It turns into a message you can send a friend to borrow it."]},
+ {t:"Get sharper at spotting cards",
+  lines:["Guess a card from a sliver of its art, a named ability, or its stats one fact at a time.",
     "There's a fish, too. He's worth leaving on."]}
 ];
 /* The setup wizard. Each step owns a value and how to write it, so adding one
@@ -14960,6 +15035,13 @@ const OPAGES={
    one added would quietly escape the switch. */
 const GAMEPAGES=["guess","quiz","aqua","click","hex"];
 const isGamePage=p=>GAMEPAGES.some(g=>p===g||p.indexOf(g+":")===0);
+/* A tile's "page" is one of three things: an internal view name ("dust"), a
+   same-site path ("/match-history/"), or a full URL off to another
+   subdomain ("https://map.readysetink.com/"). The first opens on this tab,
+   the other two are real <a> links — the third additionally in a new tab, so
+   leaving for the store finder or the Ink List doesn't lose your deck. */
+const isPageLink=p=>!!p&&(p.charAt(0)==="/"||/^https?:\/\//.test(p));
+const isExternalLink=p=>/^https?:\/\//.test(p);
 function renderOther(){
   const hidden=p=>OFF.includes(p)
     ||(!GAMESON&&isGamePage(p))
@@ -14971,10 +15053,10 @@ function renderOther(){
   $("otherTiles").innerHTML=groups.map(gr=>
     (gr.g?`<h3 class="sec2 ogh">${esc(gr.g)}</h3>`:"")+
     `<div class="tiles">${gr.chips.map(([t,d,page])=>{
-      const link=page&&page.charAt(0)==="/",tag=link?"a":page?"button":"div";
-      return `<${tag} class="tile${page?" ready":""}"${link?` href="${page}"`:page?` data-op="${page}"`:""}>
+      const link=isPageLink(page),ext=link&&isExternalLink(page),tag=link?"a":page?"button":"div";
+      return `<${tag} class="tile${page?" ready":""}"${link?` href="${page}"${ext?` target="_blank" rel="noopener"`:""}`:page?` data-op="${page}"`:""}>
         <h3>${esc(t)}</h3><p>${esc(d)}</p>
-        <span class="st2">${page?"Open →":"Planned"}</span></${tag}>`}).join("")}</div>`
+        <span class="st2">${page?ext?"Open ↗":"Open →":"Planned"}</span></${tag}>`}).join("")}</div>`
   ).join("");
   $("otherTiles").querySelectorAll("[data-op]").forEach(b=>b.onclick=()=>{
     OPAGE=b.dataset.op;save("fs3_opage",OPAGE);showTab("tOther")});
@@ -15319,7 +15401,9 @@ function renderOtherMenu(){
     const chips=gr.chips.filter(([,,page])=>page&&!hidden(page));
     if(!chips.length)return"";
     return (gr.g?`<h4>${esc(gr.g)}</h4>`:"")+
-      chips.map(([t,,page])=>`<button data-op="${esc(page)}">${esc(t)}</button>`).join("");
+      chips.map(([t,,page])=>isPageLink(page)
+        ?`<a href="${esc(page)}"${isExternalLink(page)?` target="_blank" rel="noopener"`:""}>${esc(t)}</a>`
+        :`<button data-op="${esc(page)}">${esc(t)}</button>`).join("");
   }).join("");
   $("otherMenu").querySelectorAll("[data-op]").forEach(b=>b.onclick=()=>{
     closeOtherMenu();
