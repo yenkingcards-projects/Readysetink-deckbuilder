@@ -563,11 +563,15 @@ header select{background:var(--panel);border:1px solid var(--line);border-radius
    hierarchy — do not flatten these into one. */
 nav.tabs{display:flex;gap:0;padding:0 8px;background:var(--canvas-soft);
   border-bottom:1px solid var(--chrome);box-shadow:var(--bevel);flex-wrap:wrap}
-nav.tabs button{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
+nav.tabs button,nav.tabs .navlink{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
   font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:0;
   border-right:1px solid rgba(51,74,136,.3)}
-nav.tabs button:hover{background:rgba(255,255,255,.4)}
+nav.tabs button:hover,nav.tabs .navlink:hover{background:rgba(255,255,255,.4)}
 nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
+/* The two off-site links (Map, The Ink List) sit in the same row as the
+   tab buttons and need to look like one of them, not like a stray link. */
+nav.tabs .navlink{display:inline-flex;align-items:center;text-decoration:none;white-space:nowrap}
+nav.tabs .navlink:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
 /* The Other tab jumps straight to the Lore tracker (its default landing
    page) — everything else in the Other menu used to need a detour through
    there first, then "Tools" back out to the grid. This hamburger sits next
@@ -1293,15 +1297,20 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
   color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
   box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px}
 /* ---- card view settings ---- */
+/* Icon-only now — the word "settings" next to a gear was saying the same
+   thing twice, and it's an aria-label/title away from being just as clear. */
 .cvset{position:relative}
-.cvset>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
-  font-size:12px;font-weight:700;padding:6px 12px;border:1px solid var(--chrome);
+.cvset>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;padding:0;border:1px solid var(--chrome);
   border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
 .cvset>summary::marker{content:"";font-size:0}
 .cvset>summary::-webkit-details-marker{display:none}
-.cvset>summary::before{content:"\2699";font-size:13px}
+.cvset .gearic{display:block;line-height:0;transition:transform .4s cubic-bezier(.3,1.4,.4,1)}
+.cvset .gearic svg{width:17px;height:17px;display:block}
+.cvset>summary:hover .gearic{transform:rotate(90deg)}
 .cvset>summary:hover{background:var(--platinum)}
 .cvset[open]>summary{background:var(--carbon);color:var(--on-dark);border-color:var(--carbon)}
+@media(prefers-reduced-motion:reduce){.cvset .gearic{transition:none}}
 .cvbody{position:absolute;top:calc(100% + 5px);left:0;z-index:80;min-width:330px;
   display:flex;flex-direction:column;gap:9px;padding:11px;
   background:var(--surface);border:1px solid var(--chrome);border-radius:4px;
@@ -2018,14 +2027,17 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
    search box. One thin hairline border, no separate shadow layer of its own
    (it still gets the shared .swx.on wash when active), and tighter padding so
    it sits flush with the search field above it instead of looming over it. */
-.swx.art{padding:7px 13px;gap:11px;border-width:1px}
-.swx.art .kn{width:46px;height:25px}
-.swx.art .kn i{width:21px;height:21px}
-.swx.art .swi svg{width:15px;height:15px}
-.swx.art.on .kn i{transform:translateX(21px)}
+.swx.art{padding:5px 9px;gap:8px;border-width:1px;min-height:34px}
+.swx.art .kn{width:32px;height:18px}
+.swx.art .kn i{width:14px;height:14px}
+.swx.art .swi svg{width:11px;height:11px}
+.swx.art.on .kn i{transform:translateX(14px)}
+/* Toned down from a headline treatment (14px/800, its own glow, a
+   self-triggered wiggle) to sit as a plain button that happens to be first
+   in the row — cute, not a spotlight. */
 .artlb{display:flex;flex-direction:column;gap:1px;min-width:0;text-align:left}
-.artlb b{font-size:14px;font-weight:800;color:var(--tx);line-height:1.2}
-.artlb span{font-size:11.5px;font-weight:600;color:var(--deep);line-height:1.3}
+.artlb b{font-size:12.5px;font-weight:700;color:var(--tx);line-height:1.2}
+.artlb span{font-size:10.5px;font-weight:500;color:var(--deep);line-height:1.3}
 /* Off, it says what you're missing rather than nothing at all. */
 .swx.art:not(.on) .artlb b{color:var(--deep)}
 /* Grid rather than a wrapping flex: the label owns the top line and the two
@@ -2134,8 +2146,6 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
   .swx.art .kn{width:44px;height:24px}
   .swx.art .kn i{width:20px;height:20px}
   .swx.art.on .kn i{transform:translateX(20px)}
-  .artlb b{font-size:13.5px}
-  .artlb span{font-size:11px}
   .swx.wee{flex:1;min-height:34px}
 }
 /* Same narrow-layout rules as the phone breakpoint just above, applied
@@ -2153,30 +2163,28 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .searchcol .alsorow{padding-left:0;border-left:0;gap:6px;
   grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);align-items:center}
 .searchcol .alsolbl{grid-column:auto}
-.searchcol .swx.art{padding:8px 11px;gap:10px}
-.searchcol .swx.art .kn{width:44px;height:24px}
-.searchcol .swx.art .kn i{width:20px;height:20px}
-.searchcol .swx.art.on .kn i{transform:translateX(20px)}
-.searchcol .artlb b{font-size:13.5px}
-.searchcol .artlb span{font-size:11px}
+/* No more size bump over its neighbours — same knob, same padding as every
+   other switch in the column, so it reads as first among equals rather than
+   a headline banner over two footnotes. */
 .searchcol .swx.wee{flex:1;min-height:34px}
 .searchcol .srow{flex-wrap:wrap}
-/* a quick shimmy when you land on the search page, so the switch gets noticed
-   — a nudge, not a shake. Amplitude cut by more than half from the original
-   (was ±2.5deg/3px, felt like a warning buzz) and eased over a touch longer
-   so it reads as a friendly wiggle instead of something rattling. */
-@keyframes swjig{0%,100%{transform:rotate(0) translateX(0)}
-  20%{transform:rotate(-1deg) translateX(-1.5px)}
-  40%{transform:rotate(1deg) translateX(1.5px)}
-  60%{transform:rotate(-.6deg) translateX(-1px)}
-  80%{transform:rotate(.6deg) translateX(1px)}}
-.swx.jig{animation:swjig .68s ease-in-out}
-/* and a very slow breath now and then while it's doing its job */
-@keyframes swpulse{0%,100%{filter:brightness(1)}
-  50%{filter:brightness(1.65) drop-shadow(0 0 9px rgba(79,208,247,.6))}}
-.swx.pulse{animation:swpulse 3.2s ease-in-out}
+/* A playful wiggle-and-pop when you land on the search page with art search
+   already on — Ben's call: this is the one search no other Lorcana tool
+   does, so the switch gets to show off a little every time you arrive,
+   rather than just sitting there being correct. Bigger and bouncier than a
+   polite nudge on purpose; a small scale pop sells "hey, remember me" better
+   than rotation alone. */
+@keyframes swjig{
+  0%,100%{transform:rotate(0) translateX(0) scale(1)}
+  15%{transform:rotate(-6deg) translateX(-3px) scale(1.05)}
+  30%{transform:rotate(5deg) translateX(3px) scale(1.06)}
+  45%{transform:rotate(-4deg) translateX(-2px) scale(1.03)}
+  60%{transform:rotate(3deg) translateX(2px) scale(1.02)}
+  75%{transform:rotate(-1.5deg) translateX(-1px) scale(1.01)}
+  90%{transform:rotate(1deg) translateX(0) scale(1)}}
+.swx.jig{animation:swjig .9s ease-in-out}
 @media(prefers-reduced-motion:reduce){.swx,.swx *{transition:none}
-  .swx.jig,.swx.pulse{animation:none}}
+  .swx.jig{animation:none}}
 .btn{font-family:var(--sans);text-transform:uppercase;letter-spacing:.5px;font-size:12px;
   font-weight:700;color:var(--carbon);background:var(--amberc);
   border:1px solid var(--chrome);border-radius:2px;padding:5px 11px;
@@ -3954,6 +3962,9 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   <button id="tSearch">Search for cards</button>
   <button id="tColl" class="collonly">My collection</button>
   <button id="tDecks">Decks</button>
+  <button id="tLore">Lore tracker</button>
+  <a class="navlink" href="https://map.readysetink.com/" target="_blank" rel="noopener">Map</a>
+  <a class="navlink" href="https://inklist.readysetink.com/" target="_blank" rel="noopener">The Ink List ↗</a>
   <span class="otherwrap">
     <button id="tOther">Other</button>
     <button id="tOtherMenu" aria-label="Other menu" aria-haspopup="true" aria-expanded="false">☰</button>
@@ -4057,11 +4068,11 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
         </select></div>
       <div class="gtools">
         <button class="btn" id="clr2">Clear all filters</button>
-        <button class="btn" id="lnk" title="Copy a link that reopens exactly this search">🔗 Copy link to this search</button>
+        <button class="btn" id="lnk" title="Copies a link that reopens exactly this search, and opens your device's share sheet">Share your search</button>
         <!-- One menu instead of a permanent wall of keyboard hints. The legend
              is worth reading once and never again, so it lives behind a click. -->
         <details class="cvset" id="cvset">
-          <summary>Card view settings</summary>
+          <summary aria-label="Card view settings" title="Card view settings"><i class="gearic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></i></summary>
           <div class="cvbody">
             <button class="btn" id="tgRemind">Reminder tags <b class="sw">ON</b></button>
             <button class="btn" id="tgPrice">Prices: off</button>
@@ -14131,10 +14142,9 @@ function jRule(id){
 
 const OTHER_GROUPS=[
  {g:"",chips:[
+   ["Settings","All the options you didn't know you had — show prices or hide them, and tune the rest to how you actually use the site.","pref"],
    ["Dust & secrets","Earn it for doing just about anything on the site, then spend it on titles and secrets you won't find any other way.","dust"],
    ["Contribute","Write notes that get saved right on a card, or just send in a suggestion — the vague search only works because people describe cards.","contrib"],
-   ["Settings","All the options you didn't know you had — show prices or hide them, and tune the rest to how you actually use the site.","pref"],
-   ["Lore tracker","A customizable digital score card — pick your colors, track two to four players, and get reminders built in. The 🤚 JUDGE function works in casual play.","lore"],
    ["Judge","The quickest way to check a card interaction — search by name, or go advanced and build out the board state.","judge"],
    ["Tournament companion","A Swiss calculator and everything else you'd want on match day — still being refined every week.","/match-history/"],
    ["Shopping list","The staples you haven't got, grouped into what you'd buy at a few different budgets. Straight into a TCGplayer cart.","shop"],
@@ -14151,8 +14161,14 @@ const OTHER_GROUPS=[
    ["Worldbuilding","What Lorcana actually is — the Illuminary, glimmers, the inks, and where the story has gone.","world"],
    ["Sources & credits","Where to play online, where to read the news, and everyone whose work this is built on.","cred"],
    ["Sites We Like","The best of the Lorcana community, hand-picked by us.","links"],
-   ["Store & event finder","Find local game stores and tournaments near you.","https://map.readysetink.com/"],
+ ]},
+ /* Also on the top nav — this group is the same three tiles for anyone who
+    lands in Other first instead, plus wherever the hamburger dropdown lists
+    it. One source, so the two places can't drift apart. */
+ {g:"Tools",chips:[
+   ["Map","Find local game stores and tournaments near you.","https://map.readysetink.com/"],
    ["The Ink List","Every card, ranked and rated by the community.","https://inklist.readysetink.com/"],
+   ["Lore tracker","A digital score card for two to four players. Pick your colors, track lore, and get built-in reminders. Includes a Judge function for casual play.","lore"],
  ]},
  {g:"Mini games",chips:[
    ["Guess the card","Can you guess the card from a tiny piece of its art?","guess"],
@@ -15246,17 +15262,10 @@ function drawToggles(){
    reflow the browser coalesces remove+add and nothing plays the second time. */
 function replay(el,cls,ms){if(!el)return;el.classList.remove(cls);void el.offsetWidth;
   el.classList.add(cls);setTimeout(()=>el.classList.remove(cls),ms)}
-const jiggleArt=()=>{if(S.tagS)replay($("tgTag"),"jig",700)};
-/* Every third new search term, remind them the art switch is doing something —
-   slow enough to read as a breath rather than a blink, and never twice inside
-   half a minute however fast they type. */
-let SEARCHN=0,LASTPULSE=0;
-function maybePulse(){
-  if(!S.tagS)return;
-  if(++SEARCHN%3)return;
-  const now=Date.now();if(now-LASTPULSE<30000)return;
-  LASTPULSE=now;replay($("tgTag"),"pulse",3400);
-}
+/* The wiggle that says "this is the thing" every time you land on Deck
+   builder or Search — only while art search is already on, so it reads as
+   the site showing off its own feature, not nagging you to turn one on. */
+const jiggleArt=()=>{if(S.tagS)replay($("tgTag"),"jig",900)};
 $("tgTag").onclick=()=>{S.tagS=!S.tagS;save("fs3_tagS",S.tagS);drawToggles();S.limit=150;render();
   if(S.stoS&&S.tagS)unlockHidden("h_wide")};
 $("tgSto").onclick=()=>{S.stoS=!S.stoS;save("fs3_stoS",S.stoS);drawToggles();S.limit=150;render();
@@ -15343,7 +15352,7 @@ let qT;$("q").oninput=e=>{S.q=e.target.value;S.limit=150;
   if(/\brat\b/i.test(S.q))RATSEARCH=true;
   ACLIST=acFind(e.target.value);ACI=-1;acRender();
   clearTimeout(qT);
-  qT=setTimeout(()=>{render();if(S.q.trim().length>2)maybePulse()},140)};
+  qT=setTimeout(()=>{render()},140)};
 $("q").onkeydown=e=>{
   /* Backspace / Delete on an empty box removes the last pill — the usual
      chip-input behaviour. Guarded on the box being empty so you can still
@@ -15388,6 +15397,9 @@ TABS.forEach(t=>$(t).onclick=()=>{
   if(t==="tOther"){OPAGE="";save("fs3_opage",OPAGE)}
   showTab(t)
 });
+/* Its own nav button rather than a fourth thing routed through "Other" — the
+   same jump the Lore tracker's Other-menu tile and the hamburger both use. */
+$("tLore").onclick=()=>{OPAGE="lore";save("fs3_opage",OPAGE);showTab("tOther")};
 /* The hamburger next to the Other tab: every page that tab's own menu grid
    lists, one click away, from anywhere on the site — not just from inside
    the lore tracker's own "Tools" back-out. Built from the same OTHER_GROUPS
@@ -15543,8 +15555,14 @@ function copySearchLink(){
   const url=location.origin&&location.origin!=="null"
     ? location.origin+location.pathname+"#"+h
     : location.href.split("#")[0]+"#"+h;
-  navigator.clipboard.writeText(url)
-    .then(()=>toast("Link to this search copied"),()=>toast("Copy failed"));
+  /* Copy always happens — it's the part that works everywhere, including
+     desktop browsers with no share sheet at all. The share sheet, where the
+     device has one, opens on top of that rather than instead of it: it needs
+     a user gesture, which a button click already is. */
+  navigator.clipboard.writeText(url).then(()=>{
+    if(navigator.share)navigator.share({title:"Ready Set Ink search",url}).catch(()=>{});
+    else toast("Link to this search copied");
+  },()=>toast("Copy failed"));
 }
 
 (function(){
