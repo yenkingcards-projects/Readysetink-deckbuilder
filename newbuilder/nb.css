@@ -96,50 +96,80 @@ html.nb .wrap{display:grid;grid-template-columns:minmax(0,1fr) clamp(340px,32vw,
 html.nb body.browse .wrap{grid-template-columns:minmax(0,1fr)}
 html.nb body.browse .nbdeck{display:none}
 
-/* ---- the filter bar ---- */
-.nbbar{position:sticky;top:var(--nbhead,52px);z-index:40;background:var(--surface);
-  border-bottom:1px solid var(--line);padding:10px 12px;display:flex;flex-direction:column;gap:9px;border-radius:6px 6px 0 0}
+/* ---- the filter bar: fixed rows, so nothing jumps as you filter ---- */
+/* Not pinned: a three-row bar stuck to the top would eat the screen, and a
+   bar that shrinks as you scroll is exactly the snapping Ben didn't like.
+   It scrolls with the cards; "/" always jumps back to the search box. */
+.nbbar{position:relative;z-index:40;background:var(--surface);
+  border-bottom:1px solid var(--line);padding:12px 14px 10px;display:flex;flex-direction:column;gap:10px;border-radius:6px 6px 0 0}
 .nbline{display:flex;align-items:center;gap:8px}
 .nbsfwrap{position:relative;flex:1;min-width:0}
-html.nb .nbsfwrap .sfield{margin:0;min-height:42px}
-html.nb .nbsfwrap .sfield input{font-size:15px;min-width:120px}
+/* the search box never grows: filter pills scroll sideways inside it */
+html.nb .nbsfwrap .sfield{margin:0;height:46px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+html.nb .nbsfwrap .sfield::-webkit-scrollbar{display:none}
+html.nb .nbsfwrap .sfield .pill{flex:none}
+html.nb .nbsfwrap .sfield input{font-size:15px;min-width:180px}
 html.nb .nbsfwrap .acbox{position:absolute;top:calc(100% + 4px);left:0;right:0;margin:0;z-index:60;
   max-height:60vh;overflow:auto;box-shadow:0 12px 28px rgba(0,0,0,.22)}
-.nbsearchline .nbbtn{min-height:42px}
-.nbquick{flex-wrap:wrap;gap:8px 18px}
-.nbquick .nbgrp{gap:4px}
-.nbclear{margin-left:auto;color:var(--signal-deep)}
-.nbrecent{position:absolute;top:58px;left:12px;right:12px;z-index:55;background:var(--surface);
+.nbsearchline .nbbtn{position:relative;height:46px;min-height:46px}
+/* counts sit on the corner of their button, so a button never changes width */
+.nbsearchline .nbn:not(:empty){position:absolute;top:-7px;right:-7px;box-shadow:0 0 0 2px var(--surface)}
+.nbquick{display:flex;flex-direction:column;align-items:stretch;gap:8px}
+.nbqrow{display:flex;align-items:center;gap:8px 12px;min-height:38px}
+.nbql{flex:none;width:40px;font:800 10.5px var(--sans);text-transform:uppercase;letter-spacing:.7px;color:var(--deep)}
+.nbquick .nbgrp{gap:4px;flex-wrap:nowrap}
+.nbquick .nbink{padding:0 9px}
+.nbcostslot{flex:1;min-width:250px;max-width:620px}
+.nbclear{margin-left:auto;color:var(--signal-deep);white-space:nowrap}
+.nbclear.off{visibility:hidden}
+.nbrecent{position:absolute;top:66px;left:14px;right:14px;z-index:55;background:var(--surface);
   border:1px solid var(--chrome);border-radius:8px;box-shadow:0 12px 28px rgba(0,0,0,.2);padding:10px 12px;
   display:flex;flex-direction:column;gap:6px}
 .nbrl{font:800 11px var(--sans);text-transform:uppercase;letter-spacing:.6px;color:var(--deep)}
 .nbpeek{display:none}
+/* Special searches: the site's signature feature, so it looks like one */
+.nbspecial{background:linear-gradient(135deg,#ffe24d 0%,#ffd400 45%,#f5b700 100%)!important;border-color:#c99400!important;
+  color:#202638!important;overflow:hidden;box-shadow:0 2px 0 #c99400,0 0 0 0 rgba(255,212,0,.5)}
+.nbspecial:hover{box-shadow:0 2px 0 #c99400,0 0 16px 2px rgba(255,212,0,.55)}
+.nbspecial::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-18deg);
+  animation:nbshine 6s ease-in-out 1.5s infinite}
+.nbspark{display:inline-grid;place-items:center;animation:nbtwinkle 3.2s ease-in-out infinite;transform-origin:50% 55%}
+.nbspark .nbi{width:20px;height:20px}
+@keyframes nbtwinkle{0%,62%,100%{transform:none}68%{transform:translateY(-3px) rotate(-14deg) scale(1.2)}
+  74%{transform:translateY(0) rotate(10deg) scale(.95)}80%{transform:translateY(-1px) rotate(-4deg) scale(1.08)}86%{transform:none}}
+@keyframes nbshine{0%,70%{left:-60%}90%,100%{left:130%}}
 
-/* ---- the cost slider: two handles, clear stops, a readout ---- */
-.nbcostw{display:flex;align-items:center;gap:10px;min-width:280px}
-.nbcl{font:800 11px var(--sans);text-transform:uppercase;letter-spacing:.6px;color:var(--deep)}
-.nbcv{min-width:44px;padding:4px 8px;border-radius:12px;background:var(--canvas-soft);color:var(--tx);
-  font:800 12.5px var(--sans);text-align:center}
+/* ---- the cost slider: a real track, end caps, numbered handles ---- */
+.nbcostw{display:flex;align-items:center;gap:12px;min-width:0}
+.nbcv{flex:none;min-width:76px;padding:5px 10px;border-radius:14px;background:var(--canvas-soft);color:var(--tx);
+  font:800 12.5px var(--sans);text-align:center;white-space:nowrap}
 .nbcostw.on .nbcv{background:var(--carbon);color:var(--amberc)}
-.nbrange{position:relative;flex:1;min-width:200px;height:40px}
-.nbtrack{position:absolute;left:11px;right:11px;top:12px;height:5px;border-radius:3px;background:color-mix(in srgb,var(--line) 55%,transparent)}
-.nbfillr{position:absolute;top:0;bottom:0;border-radius:3px;background:var(--link)}
+.nbrange{position:relative;flex:1;min-width:180px;height:38px;--pad:15px}
+.nbtrack{position:absolute;left:var(--pad);right:var(--pad);top:15px;height:8px;border-radius:4px;
+  background:color-mix(in srgb,var(--line) 35%,var(--surface));box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}
+.nbtrack::before,.nbtrack::after{content:"";position:absolute;top:-6px;width:4px;height:20px;border-radius:2px;background:var(--deep)}
+.nbtrack::before{left:-4px}.nbtrack::after{right:-4px}
+.nbnotch{position:absolute;top:1px;width:2px;height:6px;margin-left:-1px;border-radius:1px;background:color-mix(in srgb,var(--deep) 45%,transparent)}
+.nbfillr{position:absolute;top:0;bottom:0;border-radius:4px;background:var(--link)}
 .nbcostw.on .nbfillr{background:var(--carbon)}
 body.dark .nbcostw.on .nbfillr{background:var(--amberc)}
-.nbrange input{position:absolute;left:0;right:0;top:3px;width:100%;height:24px;margin:0;background:none;
-  pointer-events:none;-webkit-appearance:none;appearance:none}
-.nbrange input::-webkit-slider-runnable-track{background:none;height:24px}
-.nbrange input::-moz-range-track{background:none;height:24px}
-.nbrange input::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;width:22px;height:22px;border-radius:50%;
-  background:var(--surface);border:3px solid var(--carbon);box-shadow:0 1px 4px rgba(0,0,0,.3);cursor:grab;margin-top:1px}
-.nbrange input::-moz-range-thumb{pointer-events:auto;width:16px;height:16px;border-radius:50%;background:var(--surface);
-  border:3px solid var(--carbon);box-shadow:0 1px 4px rgba(0,0,0,.3);cursor:grab}
-body.dark .nbrange input::-webkit-slider-thumb{border-color:var(--amberc)}
-body.dark .nbrange input::-moz-range-thumb{border-color:var(--amberc)}
-.nbrange input:focus-visible{outline:none}
-.nbrange input:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px color-mix(in srgb,var(--primary) 45%,transparent)}
-.nbticks{position:absolute;left:11px;right:11px;top:26px;display:flex;justify-content:space-between;pointer-events:none}
-.nbticks span{width:0;display:flex;justify-content:center;font:700 10px var(--sans);color:var(--deep)}
+.nbknob{position:absolute;top:5px;left:calc(var(--pad) + (100% - 2 * var(--pad)) * var(--p,0));transform:translateX(-50%);
+  min-width:30px;height:28px;padding:0 5px;border-radius:8px;display:grid;place-items:center;pointer-events:none;
+  background:var(--surface);border:2px solid var(--carbon);color:var(--tx);font:900 13px var(--sans);
+  box-shadow:0 2px 5px rgba(0,0,0,.25);z-index:2;transition:box-shadow .12s}
+.nbcostw.on .nbknob{background:var(--carbon);color:var(--amberc)}
+body.dark .nbknob{border-color:var(--amberc)}
+.nbknob.focus{box-shadow:0 0 0 4px color-mix(in srgb,var(--primary) 50%,transparent)}
+.nbknob.drag{box-shadow:0 0 0 5px color-mix(in srgb,var(--amberc) 60%,transparent)}
+/* the real inputs: invisible, on top, with thumbs as big as the handles */
+.nbrange input{position:absolute;left:0;right:0;top:3px;width:100%;height:32px;margin:0;background:none;opacity:0;
+  pointer-events:none;-webkit-appearance:none;appearance:none;cursor:grab}
+.nbrange input::-webkit-slider-runnable-track{background:none;height:32px}
+.nbrange input::-moz-range-track{background:none;height:32px}
+.nbrange input::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;width:30px;height:32px;cursor:grab}
+.nbrange input::-moz-range-thumb{pointer-events:auto;width:30px;height:32px;border:none;background:none;cursor:grab}
+.nbrange input:active{cursor:grabbing}
 
 /* ---- "Filters": a dropdown on a laptop, a sheet on phones ---- */
 .nbpanel{position:absolute;top:calc(100% - 2px);right:12px;width:min(620px,calc(100% - 24px));max-height:72vh;
@@ -367,14 +397,15 @@ html.nb .modal h2{display:flex;align-items:center;gap:10px;margin:0 0 6px;font:9
 .nbqr img{width:132px;height:132px;image-rendering:pixelated;background:#fff;padding:6px;border-radius:8px;display:block}
 .nbqrrow p{margin:0;font-size:13px;color:var(--deep);display:flex;flex-direction:column;gap:3px}
 .nbqrrow p b{display:flex;align-items:center;gap:6px;font:800 14px var(--sans);color:var(--tx)}
-.nbshop{grid-column:1/-1;display:flex;flex-direction:column;gap:8px;padding:12px 14px;margin-bottom:12px;border-radius:10px;
-  background:var(--canvas-soft);border:1px solid var(--line)}
-.nbshopr{display:flex;align-items:center;justify-content:space-between;gap:10px;font:600 13px var(--sans)}
-.nbshopr>span:first-child{font:800 11.5px var(--sans);text-transform:uppercase;letter-spacing:.5px;color:var(--deep);flex:none}
-.nbshopr>span:last-child{text-align:right}
-.nbshop .nbcounts{padding:0;gap:6px}
-.nbshop .nbcn{min-width:44px;height:44px;font-size:16px}
-.nbshop>.nbbtn{align-self:flex-start}
+/* card window: "In this deck / In your decks / You own", each label right beside its value */
+.nbshop{display:grid;grid-template-columns:max-content 1fr;align-items:center;gap:8px 14px;margin:6px 0 14px;padding:12px 14px;
+  border-radius:10px;background:var(--canvas-soft);border:1px solid var(--line)}
+.nbshop dt{font:800 11px var(--sans);text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.nbshop dd{margin:0;font:700 13.5px var(--sans);color:var(--tx)}
+.nbshop .nbcounts{display:flex;padding:0;gap:6px}
+.nbshop .nbcn{min-width:40px;height:40px;font-size:16px}
+html.nb .modal .acts .nbcmpb{display:inline-flex;align-items:center;gap:7px}
+html.nb .modal .acts .nbcmpb .nbi{width:16px;height:16px}
 /* Ko-fi, back on the Settings page in its original form */
 .nbkofi{display:flex;flex-direction:column;gap:10px;padding:14px 16px;margin:12px 0 18px;border:1px solid var(--line);
   border-radius:10px;background:var(--surface)}
@@ -399,10 +430,10 @@ html.nb .toast{bottom:calc(var(--nbdock,0px) + 18px)}
   /* the dock: inks, search, and the deck peek, all at thumb height */
   .nbbar{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:90;border-radius:16px 16px 0 0;border-top:1px solid var(--chrome);
     border-bottom:none;padding:8px 10px calc(6px + env(safe-area-inset-bottom));gap:7px;box-shadow:0 -8px 24px rgba(0,0,0,.2)}
-  .nbquick{order:1;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:10px;margin:0 -10px;padding:0 10px}
-  .nbquick::-webkit-scrollbar{display:none}
-  .nbquick .nbgrp{flex-wrap:nowrap}
-  .nbquick .nbcostslot,.nbquick .nbtypes,.nbquick .nbclear{display:none!important}
+  .nbquick{order:1;margin:0 -10px;padding:0 10px}
+  .nbqrow{overflow-x:auto;scrollbar-width:none}
+  .nbqrow::-webkit-scrollbar{display:none}
+  .nbqrow+.nbqrow,.nbquick .nbql,.nbquick .nbcostslot,.nbquick .nbclear{display:none!important}
   .nbsearchline{order:2}
   .nbpeek{order:3}
   .nbrecent{order:0;position:static;box-shadow:none;border-radius:8px;max-height:30vh;overflow:auto}
@@ -413,15 +444,21 @@ html.nb .toast{bottom:calc(var(--nbdock,0px) + 18px)}
   html.nb .nbsfwrap .sfield .pill{flex:none}
   html.nb .nbsfwrap .sfield input{font-size:16px;min-height:44px}  /* 16px stops iOS zooming in */
   html.nb .nbsfwrap .acbox{top:auto;bottom:calc(100% + 6px)}
-  .nbpeek{display:flex;align-items:center;gap:10px;min-height:46px;padding:4px 12px;border:1px solid var(--line);border-radius:10px;
-    background:var(--panel);color:var(--tx);font:600 13px var(--sans);cursor:pointer;position:relative}
-  .nbpeek b{font:900 16px var(--display)}
-  .nbpeek.done b{color:#0f7a3e}
-  body.dark .nbpeek.done b{color:#6fd39a}
-  .nbpeeki{display:flex;align-items:center;gap:4px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-  .nbmini{display:flex;align-items:flex-end;gap:2px;height:22px;margin-left:auto}
-  .nbmini i{width:5px;background:var(--link);border-radius:1px}
-  .nbgrab{position:absolute;top:3px;left:50%;width:34px;height:4px;margin-left:-17px;border-radius:2px;background:var(--line);opacity:.6}
+  /* the deck tab: dark, labelled and obviously a button — not part of the search box */
+  .nbpeek{display:flex;align-items:center;gap:10px;min-height:52px;margin:2px -10px calc(-6px - env(safe-area-inset-bottom));
+    padding:6px 14px calc(6px + env(safe-area-inset-bottom));border:none;border-top:3px solid var(--amberc);border-radius:0;
+    background:var(--carbon);color:var(--on-dark);font:700 13px var(--sans);cursor:pointer}
+  .nbpeekl{display:inline-flex;align-items:center;gap:7px;font:800 12px var(--sans);text-transform:uppercase;letter-spacing:.6px;color:var(--amberc)}
+  .nbpeekl .nbi{width:20px;height:20px}
+  .nbpeek b{font:900 17px var(--display);color:#fff}
+  .nbpeek b.nbtick{animation:nbtick .35s ease-out}
+  @keyframes nbtick{40%{transform:scale(1.18)}}
+  .nbpeek.done b{color:#6fd39a}
+  .nbpeeki{display:flex;align-items:center;gap:3px}
+  .nbmini{display:flex;align-items:flex-end;gap:2px;height:20px;margin-left:auto}
+  .nbmini i{width:4px;background:var(--on-dark-soft);border-radius:1px;opacity:.8}
+  .nbpeekgo{display:inline-flex;align-items:center;gap:4px;padding:6px 10px;border-radius:14px;background:var(--amberc);color:#202638;font:800 12.5px var(--sans)}
+  .nbpeekgo .nbup{width:14px;height:14px;transform:rotate(180deg)}
   html.nb body.browse .nbpeek{display:none}
   /* sheets */
   .nbpanel,.nbact{position:fixed;left:0;right:0;bottom:0;top:auto;transform:none;width:auto;max-height:none;height:min(72vh,660px);
@@ -430,9 +467,10 @@ html.nb .toast{bottom:calc(var(--nbdock,0px) + 18px)}
   .nbpf{padding-bottom:calc(10px + env(safe-area-inset-bottom))}
   .nbsheetonly{display:block}
   .nbsheetonly .nbcostw{min-width:0}
-  .nbrange input::-webkit-slider-thumb{width:30px;height:30px;margin-top:-3px}
-  .nbrange{height:46px}
-  .nbticks{top:30px}
+  .nbsheetonly .nbrange{height:44px}
+  .nbrange input::-webkit-slider-thumb{width:36px;height:40px}
+  .nbsheetonly .nbknob{height:32px;min-width:36px;font-size:15px;top:3px}
+  .nbsheetonly .nbtrack{top:15px}
   .nbseg3 button{min-height:46px}
   .nbdrawer{width:100vw}
   /* the deck, as a sheet you swipe up */
@@ -469,34 +507,18 @@ html.nb .toast{bottom:calc(var(--nbdock,0px) + 18px)}
   .nbnav .nbchev{display:none}
   html.nb #acct{padding:6px 8px;font-size:11px}
   .nbmcols{grid-template-columns:1fr}
-  html.nb .grid{display:block!important;padding:0}
-  html.nb .grid .c{display:grid;grid-template-columns:52px minmax(0,1fr) auto;grid-template-areas:"img info qty";align-items:center;
-    column-gap:10px;padding:6px 10px;border:none;border-bottom:1px solid var(--line);border-radius:0;background:var(--surface);
-    transform:none!important;box-shadow:none!important;user-select:none}
-  html.nb .grid .c.nbin{box-shadow:inset 5px 0 0 var(--ic)!important}
-  html.nb .grid .c>img,html.nb .grid .c>.ph,html.nb .grid .c>.timg{grid-area:img;width:52px;border-radius:4px;aspect-ratio:674/940}
-  html.nb .grid .c>.timg img{width:52px}
-  html.nb .grid .c>.ph{font-size:9px;padding:2px}
-  html.nb .grid .c .nbinfo{grid-area:info;display:flex;flex-direction:column;min-width:0;gap:1px;cursor:pointer}
-  .c .nbinfo b{font:800 14.5px var(--sans);color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .c .nbinfo small{font-size:12.5px;color:var(--deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .c .nbmeta{display:block;font:600 12px/22px var(--sans);color:var(--deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .c .nbmeta .nbdot{vertical-align:-1px;margin:0 3px 0 4px}
-  .c .nbmeta .nbc{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--carbon);color:var(--amberc);
-    font:800 11px var(--sans);font-style:normal}
-  html.nb .grid .c .qty{grid-area:qty;padding:0;gap:4px;background:none;border:none}
-  html.nb .grid .c .qty button{flex:none;width:44px;height:44px;min-height:44px;font-size:20px;border:1px solid var(--line);border-radius:8px}
-  html.nb .grid .c .qty .n{display:none}
-  html.nb .grid .c.nbin .qty .nbcnt{display:inline-grid;place-items:center;width:44px;height:44px;border:none;background:none;
+  /* two across, full card pictures — big enough to read */
+  html.nb .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:10px}
+  html.nb .c .tags,html.nb .c .tipadd,html.nb .c .prc,html.nb .c .why span{display:none}
+  html.nb .c>.i{opacity:1;width:36px;height:36px;top:4px;right:4px}
+  html.nb .c .qty{padding:4px;gap:4px}
+  html.nb .c .qty button{min-height:44px;height:44px;font-size:22px}
+  html.nb .c .qty .n{display:none}
+  html.nb .c.nbin .qty .nbcnt{display:inline-grid;place-items:center;flex:0 0 44px;height:44px;border:none;background:none;
     color:var(--tx);font:900 18px var(--sans);cursor:pointer}
-  html.nb .grid .c:not(.nbin) .qty .p::after{content:none}
-  html.nb .grid .c .tags,html.nb .grid .c .tipadd,html.nb .grid .c>.i,html.nb .grid .c .why,
-  html.nb .grid .c .shift,html.nb .grid .c .prc,html.nb .grid .c .syml{display:none}
-  html.nb .grid .c.illegal .nbinfo b{color:var(--signal-deep)}
-  html.nb .grid .more{padding:14px}
-  html.nb .grid .nbfuzzy{padding:12px}
-  html.nb body.browse .grid .c{grid-template-columns:52px minmax(0,1fr)}
+  html.nb .c.nbin .qty .m,html.nb .c.nbin .qty .p{flex:1}
   html.nb .rbar{padding:8px 10px}
+  .nbcmpbar{position:sticky;top:var(--nbhead,52px);z-index:30}
 }
 @media(prefers-reduced-motion:reduce){
   html.nb .nbdrawer,html.nb .nbpanel,html.nb .nbact,html.nb .nbutoast,html.nb .nbhint,html.nb .nbrow,html.nb .nbprev,html.nb .nbimg img{animation:none}
@@ -504,3 +526,102 @@ html.nb .toast{bottom:calc(var(--nbdock,0px) + 18px)}
 }
 .nbrbr .cvbody{left:auto;right:0}
 .nbsheetonly .nbcl{display:none}
+
+/* ======================= the home screen =======================
+   After Ben's reference (Black Ops' main menu): big words down the left, the
+   chosen one lit in a bar; a framed hero panel with corner brackets; a news
+   ticker along its foot; a "continue" tile. Dressed in the blue-striped-fish
+   palette the site already uses — yellow #ffd400, royal blue #1f4fd6, navy. */
+.nbhome{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;overflow:auto;color:#fff;
+  background:#050b1f;font-family:var(--sans)}
+html.nbhomeon body{overflow:hidden}
+.nbh-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  radial-gradient(ellipse 60% 55% at 68% 42%,rgba(47,111,237,.55),transparent 70%),
+  radial-gradient(ellipse 45% 40% at 12% 95%,rgba(255,212,0,.16),transparent 70%),
+  repeating-linear-gradient(115deg,rgba(31,79,214,.28) 0 40px,transparent 40px 104px),
+  linear-gradient(180deg,#0b1d4d 0%,#050b1f 100%)}
+.nbh-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 110%,rgba(200,220,255,.14),transparent 70%)}
+.nbh-in{position:relative;z-index:1;flex:1;display:grid;grid-template-columns:minmax(300px,460px) minmax(0,1fr);
+  grid-template-rows:1fr auto;gap:22px 40px;width:100%;max-width:1500px;margin:0 auto;padding:44px 56px 12px}
+.nbh-menu{grid-row:1;grid-column:1;align-self:start}
+.nbh-menu h1{margin:0 0 18px;font:900 46px/1 var(--display);text-transform:uppercase;letter-spacing:1px;color:#fff;
+  text-shadow:0 3px 0 #1f4fd6}
+.nbh-menu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+.nbh-i{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:0 14px;width:100%;min-height:52px;padding:6px 16px 6px 8px;
+  border:none;border-radius:3px;background:none;color:#e4ecff;text-align:left;cursor:pointer;
+  font:900 30px/1.05 var(--display);text-transform:uppercase;letter-spacing:.5px;transition:background .1s,color .1s}
+.nbh-badge{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;
+  background:#1f4fd6;color:#ffd400;opacity:0;transition:opacity .12s}
+.nbh-badge .nbi{width:19px;height:19px}
+.nbh-i.on{background:#ffd400;color:#0b1f5c;box-shadow:inset 6px 0 0 #1f4fd6}
+.nbh-i.on .nbh-badge{opacity:1}
+.nbh-i:focus-visible{outline:none}   /* the lit bar IS the focus: it always follows the keyboard */
+.nbh-i:not(.on):focus-visible{outline:3px solid #fff;outline-offset:3px}
+.nbh-ext{font-size:20px;opacity:.65}
+.nbh-sd{display:none}
+.nbh-i.back{font-size:22px;color:#a9bdf0}
+.nbh-panel{grid-row:1/3;grid-column:2;position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  min-height:480px;padding:24px 30px 0;overflow:hidden;border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(180deg,rgba(11,29,77,.25),rgba(5,11,31,.7))}
+.nbh-c{position:absolute;width:28px;height:28px;border:3px solid #ffd400;z-index:2}
+.nbh-c.tl{top:-1px;left:-1px;border-right:0;border-bottom:0}.nbh-c.tr{top:-1px;right:-1px;border-left:0;border-bottom:0}
+.nbh-c.bl{bottom:-1px;left:-1px;border-right:0;border-top:0}.nbh-c.br{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.nbh-art{position:absolute;inset:0 0 44px;display:grid;place-items:center}
+.nbh-logo{width:min(40%,320px);height:auto;border-radius:50%;transform:translate(-42%,-6%);filter:drop-shadow(0 22px 40px rgba(0,0,0,.55))}
+.nbh-fish{position:absolute;right:4%;bottom:18%;width:min(38%,340px);filter:drop-shadow(0 18px 26px rgba(0,0,0,.5));
+  animation:nbswim 5.5s ease-in-out infinite}
+@keyframes nbswim{0%,100%{transform:translate(0,0) rotate(-3deg)}50%{transform:translate(-22px,-14px) rotate(2deg)}}
+.nbh-bub{position:absolute;bottom:30%;border-radius:50%;border:2px solid rgba(255,255,255,.55);background:rgba(255,255,255,.08);
+  animation:nbbub 7s linear infinite;opacity:0}
+.nbh-bub.b1{right:12%;width:14px;height:14px}.nbh-bub.b2{right:17%;width:9px;height:9px;animation-delay:1.8s}
+.nbh-bub.b3{right:9%;width:18px;height:18px;animation-delay:3.4s}.nbh-bub.b4{right:21%;width:11px;height:11px;animation-delay:5s}
+@keyframes nbbub{0%{transform:translateY(0);opacity:0}12%{opacity:1}100%{transform:translateY(-340px) translateX(-14px);opacity:0}}
+.nbh-desc{position:relative;z-index:1;max-width:560px;margin:0;font:700 18px/1.4 var(--sans);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.nbh-brand{position:relative;z-index:1;align-self:flex-end;margin:6px 0 14px;font:900 64px/1 var(--display);text-transform:uppercase;
+  letter-spacing:2px;color:#fff;text-shadow:0 4px 0 #1f4fd6,0 8px 22px rgba(0,0,0,.55)}
+.nbh-tick{position:relative;z-index:1;display:flex;align-items:center;gap:12px;margin:0 -30px;padding:10px 18px;
+  background:rgba(5,11,31,.88);border-top:1px solid rgba(255,255,255,.14);font:700 14px var(--sans);color:#dfe8ff}
+.nbh-tick b{flex:none;color:#ffd400;text-transform:uppercase;letter-spacing:.9px}
+.nbh-tickw{flex:1;overflow:hidden;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+#nbHTick{display:inline-block;padding-left:100%;animation:nbticker 42s linear infinite}
+@keyframes nbticker{to{transform:translateX(-100%)}}
+.nbh-promo{grid-row:2;grid-column:1;align-self:end}
+.nbh-cont{display:flex;flex-direction:column;gap:4px;width:100%;max-width:380px;padding:14px 18px;border:2px solid #ffd400;border-radius:10px;
+  background:rgba(5,11,31,.78);color:#fff;text-align:left;cursor:pointer}
+.nbh-cont:hover,.nbh-cont:focus-visible{background:rgba(31,79,214,.55)}
+.nbh-cont small{font:800 11px var(--sans);text-transform:uppercase;letter-spacing:.9px;color:#ffd400}
+.nbh-cont b{font:900 22px var(--display)}
+.nbh-cont span{display:flex;align-items:center;gap:4px;font:600 13px var(--sans);color:#c7d6ff}
+.nbh-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;max-width:1500px;
+  margin:0 auto;padding:10px 56px 22px;font:600 13px var(--sans);color:#a9bbe6}
+html.nb .nbh-foot kbd{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.3)}
+.nbh-skip{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid rgba(255,255,255,.4);border-radius:24px;
+  background:none;color:#fff;font:800 13px var(--sans);cursor:pointer}
+.nbh-skip:hover{background:rgba(255,255,255,.1)}
+@media(max-width:900px){
+  .nbh-in{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:14px;padding:14px 14px 6px}
+  .nbh-panel{grid-row:1;grid-column:1;min-height:230px;padding:0 14px}
+  .nbh-art{inset:0 0 40px}
+  .nbh-logo{width:140px;transform:translate(-62%,-6%)}
+  .nbh-fish{width:170px;right:2%;bottom:20%}
+  .nbh-desc,.nbh-brand{display:none}
+  .nbh-tick{margin:0 -14px;font-size:13px}
+  .nbh-menu{grid-row:2}
+  .nbh-menu h1{font-size:26px;margin:4px 0 8px}
+  .nbh-i{font-size:21px;min-height:54px;padding:8px 12px 8px 8px}
+  .nbh-badge{opacity:1;width:34px;height:34px;background:rgba(255,255,255,.1)}
+  .nbh-i.on .nbh-badge{background:#1f4fd6}
+  .nbh-i.on .nbh-sd{display:block;width:100%;padding:4px 0 2px 50px;font:700 13px/1.35 var(--sans);text-transform:none;letter-spacing:0}
+  .nbh-promo{grid-row:3}
+  .nbh-cont{max-width:none}
+  .nbh-keys{display:none}
+  .nbh-foot{justify-content:center;padding:8px 14px calc(18px + env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){
+  .nbh-fish,.nbh-bub,#nbHTick,.nbspark,.nbspecial::after,.nbpeek b.nbtick{animation:none!important}
+  .nbh-bub{display:none}
+  #nbHTick{padding-left:0;white-space:normal}
+  .nbh-tickw{white-space:normal}
+}
+html.nb .nbh-i.on:focus-visible{outline:none}

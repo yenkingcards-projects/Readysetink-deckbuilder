@@ -102,7 +102,6 @@ const nbLS={get(k,f){try{const v=localStorage.getItem(k);return v==null?f:JSON.p
   del(k){try{localStorage.removeItem(k)}catch(e){}}};
 const nbCard=f=>CARDS.find(x=>x.f===f);
 const nbDot=i=>`<i class="nbdot" style="--ic:${HEX[i]||"#888"}" aria-hidden="true"></i>`;
-const nbPhoneList=()=>matchMedia("(max-width:639px)").matches;
 const nbCompact=()=>matchMedia("(max-width:1023px)").matches;
 const nbTouch=()=>matchMedia("(hover:none)").matches;
 const nbCountTxt=n=>n.toLocaleString()+" card"+(n===1?"":"s");
@@ -188,13 +187,14 @@ const BAR=nbEl(`<div class="nbbar" id="nbBar">
   <div class="nbline nbsearchline">
     <div class="nbsfwrap" id="nbSfWrap"></div>
     <button type="button" class="nbbtn" id="nbFiltersBtn" aria-expanded="false" aria-controls="nbMoreP">${ic("filter")}<span class="nbbl">Filters</span><span class="nbn" id="nbFiltersN"></span></button>
-    <button type="button" class="nbbtn" id="nbSpecBtn" aria-expanded="false" aria-controls="nbDrawer" aria-label="Special searches">${ic("sparkles")}<span class="nbbl">Special searches</span><span class="nbn" id="nbSpecN"></span></button>
+    <button type="button" class="nbbtn nbspecial" id="nbSpecBtn" aria-expanded="false" aria-controls="nbDrawer" aria-label="Special searches"><span class="nbspark">${ic("sparkles")}</span><span class="nbbl">Special searches</span><span class="nbn" id="nbSpecN"></span></button>
   </div>
   <div class="nbline nbquick" id="nbQuick"></div>
-  <button type="button" class="nbpeek" id="nbPeek" aria-label="Show your deck">
-    <span class="nbgrab" aria-hidden="true"></span>
-    <b id="nbPeekN">0 / 60</b><span class="nbpeeki" id="nbPeekI">Empty deck</span>
+  <button type="button" class="nbpeek" id="nbPeek" aria-label="Open your deck">
+    <span class="nbpeekl">${ic("deck")}<span>Your deck</span></span>
+    <b id="nbPeekN">0 / 60</b><span class="nbpeeki" id="nbPeekI"></span>
     <span class="nbmini" id="nbPeekC" aria-hidden="true"></span>
+    <span class="nbpeekgo">View ${ic("chev","nbup")}</span>
   </button>
 </div>`);
 POOL.prepend(BAR);
@@ -382,22 +382,31 @@ function nbDrFilter(){
 const NB_TYPES=[["Character","Characters"],["Action","Actions"],["Song","Songs"],["Item","Items"],["Location","Locations"]];
 const NB_CMAX=10;   // the right-hand stop means "10 or more"
 const nbTypeBtns=()=>NB_TYPES.map(([t,l])=>`<button type="button" class="nbchip" data-type="${t}" aria-pressed="false">${l}</button>`).join("");
+/* Two handles on a visible track. Each handle carries its own number, the
+   track has hard end caps at 0 and 10+, and every whole cost is a notch — so
+   where the range starts and stops is never a guess. The real <input>s sit
+   invisibly on top for dragging, keyboard and screen readers. */
 function nbCostHTML(){
   return `<div class="nbcostw" role="group" aria-label="Cost">
-    <span class="nbcl">Cost</span>
     <div class="nbrange">
-      <div class="nbtrack"><div class="nbfillr"></div></div>
+      <div class="nbtrack"><div class="nbfillr"></div>${Array.from({length:NB_CMAX+1},(_,i)=>
+        `<i class="nbnotch" style="left:${i/NB_CMAX*100}%"></i>`).join("")}</div>
+      <span class="nbknob nbklo" aria-hidden="true">0</span><span class="nbknob nbkhi" aria-hidden="true">10+</span>
       <input type="range" class="nblo" min="0" max="${NB_CMAX}" step="1" value="0" aria-label="Lowest cost">
       <input type="range" class="nbhi" min="0" max="${NB_CMAX}" step="1" value="${NB_CMAX}" aria-label="Highest cost">
-      <div class="nbticks" aria-hidden="true">${Array.from({length:NB_CMAX+1},(_,i)=>`<span>${i===NB_CMAX?i+"+":i}</span>`).join("")}</div>
     </div>
-    <output class="nbcv">Any</output></div>`;
+    <output class="nbcv">Any cost</output></div>`;
 }
-$("nbQuick").innerHTML=`<div class="nbgrp nbinks" role="group" aria-label="Ink">${INKS.map(i=>
-    `<button type="button" class="nbchip nbink" data-ink="${i}" aria-pressed="false" style="--ic:${HEX[i]}">${nbDot(i)}<span>${i}</span></button>`).join("")}</div>
-  <div class="nbcostslot" data-slot="bar"></div>
-  <div class="nbgrp nbtypes" role="group" aria-label="Card type">${nbTypeBtns()}</div>
-  <button type="button" class="nblink nbclear" id="nbClearQ" hidden>Clear all</button>`;
+/* Two fixed rows with labels — Ink · Cost, then Type · Clear. Nothing in them
+   appears, disappears or changes width as you filter, so nothing below jumps. */
+$("nbQuick").innerHTML=`<div class="nbqrow">
+    <span class="nbql">Ink</span>
+    <div class="nbgrp nbinks" role="group" aria-label="Ink">${INKS.map(i=>
+      `<button type="button" class="nbchip nbink" data-ink="${i}" aria-pressed="false" style="--ic:${HEX[i]}">${nbDot(i)}<span>${i}</span></button>`).join("")}</div>
+    <button type="button" class="nblink nbclear" id="nbClearQ">Clear all filters</button></div>
+  <div class="nbqrow"><span class="nbql">Cost</span><div class="nbcostslot" data-slot="bar"></div></div>
+  <div class="nbqrow"><span class="nbql">Type</span>
+    <div class="nbgrp nbtypes" role="group" aria-label="Card type">${nbTypeBtns()}</div></div>`;
 $("nbTypesSheet").innerHTML=nbTypeBtns();
 NBQA(".nbcostslot").forEach(s=>{s.innerHTML=nbCostHTML();nbWireCost(s.firstElementChild)});
 $("nbClearQ").onclick=()=>clearAll();
@@ -413,6 +422,12 @@ function nbWireCost(w){
     clearTimeout(nbCostT);nbCostT=setTimeout(()=>{S.limit=150;render()},140);
   };
   lo.addEventListener("input",()=>move("lo"));hi.addEventListener("input",()=>move("hi"));
+  /* the visible handle shows focus for the invisible input underneath it */
+  [[lo,".nbklo"],[hi,".nbkhi"]].forEach(([inp,k])=>{
+    inp.addEventListener("focus",()=>w.querySelector(k).classList.add("focus"));
+    inp.addEventListener("blur",()=>w.querySelector(k).classList.remove("focus"));
+    inp.addEventListener("pointerdown",()=>w.querySelector(k).classList.add("drag"));
+    inp.addEventListener("pointerup",()=>w.querySelector(k).classList.remove("drag"));});
 }
 function nbPaintCost(w){
   const [a,b]=S.cost,lo=a==null?0:Math.min(a,NB_CMAX),hi=b==null?NB_CMAX:Math.min(b,NB_CMAX);
@@ -421,9 +436,12 @@ function nbPaintCost(w){
   /* whichever thumb sits at the far right has to be on top, or two thumbs at 10 can't be pulled apart */
   L.style.zIndex=lo>=NB_CMAX-1?5:3;H.style.zIndex=4;
   const f=w.querySelector(".nbfillr");f.style.left=(lo/NB_CMAX*100)+"%";f.style.right=(100-hi/NB_CMAX*100)+"%";
+  const kl=w.querySelector(".nbklo"),kh=w.querySelector(".nbkhi");
+  kl.style.setProperty("--p",lo/NB_CMAX);kh.style.setProperty("--p",hi/NB_CMAX);
+  kl.textContent=String(lo);kh.textContent=hi===NB_CMAX?NB_CMAX+"+":String(hi);
   const any=a==null&&b==null;
   w.classList.toggle("on",!any);
-  w.querySelector(".nbcv").textContent=any?"Any":lo===hi?String(lo)+(hi===NB_CMAX?"+":""):`${lo}–${hi}${hi===NB_CMAX?"+":""}`;
+  w.querySelector(".nbcv").textContent=any?"Any cost":lo===hi?"Cost "+lo+(hi===NB_CMAX?"+":""):`${lo} to ${hi}${hi===NB_CMAX?"+":""}`;
 }
 function nbAnyFilter(){
   return !!(S.q||S.ab.size||S.ink.size||S.dual||S.type.size||S.rar.size||S.kw.size||S.cls.size||S.sto.size||
@@ -435,7 +453,7 @@ function nbPaintQuick(){
   NBQA("#nbQuick [data-type],#nbTypesSheet [data-type]").forEach(b=>{const on=S.type.has(b.dataset.type);b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
   NBQA(".nbcostw").forEach(nbPaintCost);
   NBQA("#nbIW [data-iw]").forEach(b=>{const on=S.inkwell===b.dataset.iw;b.classList.toggle("on",on);b.setAttribute("aria-checked",on)});
-  $("nbClearQ").hidden=!nbAnyFilter();
+  $("nbClearQ").classList.toggle("off",!nbAnyFilter());
 }
 function nbQuickClick(e){
   const b=e.target.closest("button");if(!b)return;
@@ -501,10 +519,6 @@ tile=function(c){
          .replace('title="Add one">',`title="Add one" aria-label="Add one ${name}">`)
          .replace('title="Type a number and press Enter">',`title="Type a number and press Enter"><button type="button" class="nbcnt" data-cnt="${name}" aria-label="${q} in the deck — choose how many">${q}</button>`);
     }
-    const info=`<div class="nbinfo"><b>${esc(c.n)}</b>${c.v?`<small>${esc(c.v)}</small>`:""}
-      <span class="nbmeta"><i class="nbc">${c.c}</i>${(c.co||[]).map(i=>nbDot(i)+esc(i)).join(" ")} · ${esc(c.sub.includes("Song")?"Song":c.ty||"")}${c.ik?"":" · uninkable"}</span></div>`;
-    h=h.replace(/<\/div>\s*$/,info+"</div>");
-    if(nbPhoneList())h=h.replace(/\/digital\/normal\//g,"/digital/small/");
   }catch(e){}
   return h;
 };
@@ -536,7 +550,7 @@ let nbHov=null,nbPress=null,nbSwallow=false,nbCmp=null,nbZoomT=null;
 GRID.addEventListener("mouseover",e=>{
   const t=e.target.closest(".c");nbHov=t?t.dataset.f:null;
   /* the big preview only for the picture itself, and only after a real pause */
-  const img=!nbTouch()&&!nbPhoneList()&&e.target.closest(".c>img,.c>.timg");
+  const img=!nbTouch()&&e.target.closest(".c>img,.c>.timg");
   clearTimeout(nbZoomT);
   if(!img){PREV.hidden=true;return}
   const f=t.dataset.f;
@@ -568,11 +582,6 @@ GRID.addEventListener("click",e=>{
   if(nbCmp){e.preventDefault();e.stopPropagation();
     if(f!==nbCmp){const a=nbCmp;nbCmpEnd();nbCompare(a,f)}return}
   if(e.target.closest("[data-cnt]")){e.preventDefault();e.stopPropagation();nbCountSheet(f);return}
-  if(nbPhoneList()){
-    /* list rows: tap the picture for the full card, tap the row to add one */
-    if(e.target.closest("img,.ph,.timg")){e.preventDefault();e.stopPropagation();openM(f);return}
-    if(e.target.closest(".nbinfo")){if(TAB==="tSearch")openM(f);else addCard(f);return}
-  }
 },true);
 /* long-press on a phone: choose a count, or compare */
 GRID.addEventListener("pointerdown",e=>{
@@ -755,7 +764,7 @@ function nbPaintDeck(){
   if(has&&priceDate()){
     const rows=COLLON?borrowRows().map(x=>({c:x.c,q:x.need})):L.map(({c,q})=>({c,q}));
     const sum=rows.reduce((a,{c,q})=>a+(rawPrice(c)||0)*q,0);
-    if(rows.length)buy=`${ic("store")}${COLLON?"Buy missing":"Buy deck"}${sum?` · ${money(Math.round(sum))}`:""}`;
+    if(rows.length)buy=`${ic("store")}${COLLON?"Buy missing":"Buy deck"}${sum>=1?` · ${money(Math.round(sum))}`:sum>0?" · under $1":""}`;
   }
   $("nbBuy").innerHTML=buy;$("nbBuy").hidden=!buy;
   $("nbBuy").title="Opens TCGplayer — an affiliate link, at no extra cost to you";
@@ -987,7 +996,9 @@ function nbPaintStart(){
 function nbPaintPeek(L,tot,min,ic2){
   $("nbPeekN").textContent=min?`${tot} / ${min}`:`${tot}`;
   const inks=Object.keys(ic2).sort();
-  $("nbPeekI").innerHTML=tot?inks.map(i=>nbDot(i)+esc(i)).join(" "):"Your deck is empty";
+  $("nbPeekI").innerHTML=inks.map(i=>nbDot(i)).join("");
+  /* the count gives a small nudge when it changes, so you see where cards went */
+  const pk=$("nbPeekN");if(pk._t!==undefined&&pk._t!==tot){pk.classList.remove("nbtick");void pk.offsetWidth;pk.classList.add("nbtick")}pk._t=tot;
   const cv=[0,0,0,0,0,0,0,0];L.forEach(({c,q})=>{cv[Math.min(7,c.c)]+=q});
   const mx=Math.max(...cv,1);
   $("nbPeekC").innerHTML=cv.slice(1).map(v=>`<i style="height:${Math.max(2,Math.round(v/mx*100))}%"></i>`).join("");
@@ -1066,6 +1077,7 @@ function nbRestoreWork(){
 
 /* ===================== 10 · keyboard ===================== */
 window.addEventListener("keydown",e=>{
+  if(!HOME.hidden)return;   // the home screen has its own keys
   const tg=(e.target.tagName||"").toLowerCase();
   const typing=tg==="input"||tg==="textarea"||tg==="select"||e.target.isContentEditable;
   const inBuilder=vS.classList.contains("on")&&TAB==="tDeck";
@@ -1086,6 +1098,8 @@ window.addEventListener("keydown",e=>{
   if((e.ctrlKey||e.metaKey)&&!e.altKey&&e.key.toLowerCase()==="s"){e.preventDefault();saveDeckPrompt();return}
   if(e.ctrlKey||e.metaKey||e.altKey)return;
   if(e.key==="?"){e.preventDefault();nbShortcuts();return}
+  if(e.key==="/"&&vS.classList.contains("on")){e.preventDefault();e.stopImmediatePropagation();
+    BAR.scrollIntoView({block:"start",behavior:"smooth"});setTimeout(()=>{$("q").focus({preventScroll:true});$("q").select()},250);return}
   if(!inBuilder)return;
   const kbf=(typeof KBI==="number"&&KBI>=0)?(kbTiles()[KBI]||{}).dataset:null;
   const target=nbHov||(kbf&&kbf.f)||null;
@@ -1125,17 +1139,26 @@ openM=function(f){
     const own=COLLON?ownedByName(c):null;
     const deckable=TAB!=="tSearch";
     const cur=deck().cards[f]||0,max=maxCopies(c);
-    const box=nbEl(`<div class="nbshop">
-      ${deckable?`<div class="nbshopr"><span>In this deck</span><span class="nbcounts">${Array.from({length:Math.min(Math.max(max,1),4)+1},(_,n)=>
-        `<button type="button" class="nbcn${n===cur?" on":""}" data-mn="${n}" aria-label="${n} in this deck">${n}</button>`).join("")}</span></div>`:""}
-      <div class="nbshopr"><span>Your decks</span><span>${inDecks.length?inDecks.join(" · "):"Not in any of your decks"}</span></div>
-      ${own!=null?`<div class="nbshopr"><span>You own</span><span>${own} cop${own===1?"y":"ies"}</span></div>`:""}
-      <button type="button" class="nbbtn" data-mcmp="1">${ic("compare")}Compare with another card</button>
-    </div>`);
-    mc.prepend(box);
+    const box=nbEl(`<dl class="nbshop">
+      ${deckable?`<dt>In this deck</dt><dd class="nbcounts">${Array.from({length:Math.min(Math.max(max,1),4)+1},(_,n)=>
+        `<button type="button" class="nbcn${n===cur?" on":""}" data-mn="${n}" aria-label="${n} in this deck">${n}</button>`).join("")}</dd>`:""}
+      <dt>In your decks</dt><dd>${inDecks.length?inDecks.join(" · "):"None yet"}</dd>
+      ${own!=null?`<dt>You own</dt><dd>${own} cop${own===1?"y":"ies"}</dd>`:""}
+    </dl>`);
+    /* under the card's name, above its facts */
+    const nm=mc.querySelector(".mname");(nm||mc.firstElementChild).after(box);
     box.querySelectorAll("[data-mn]").forEach(b=>b.onclick=()=>{setCardCount(f,+b.dataset.mn);
       box.querySelectorAll("[data-mn]").forEach(x=>x.classList.toggle("on",x===b))});
-    box.querySelector("[data-mcmp]").onclick=()=>nbCmpStart(f);
+    /* a vanilla card already says so by having no text — no "(no rules text)" line */
+    if(!c.tx){const t=mc.querySelector(".tx.big");if(t)t.remove()}
+    /* the old − n + row duplicates "In this deck"; Compare joins the action row */
+    const acts=mc.querySelector(".acts");
+    if(acts){
+      if(deckable){["#mr","#ma"].forEach(s=>{const x=acts.querySelector(s);if(x)x.remove()});
+        const sp=acts.querySelector(":scope>span");if(sp)sp.remove()}
+      const cb=nbEl(`<button type="button" class="btn nbcmpb">${ic("compare")}Compare with another card</button>`);
+      cb.onclick=()=>nbCmpStart(f);acts.appendChild(cb);
+    }
   }catch(e){}
   return r;
 };
@@ -1227,6 +1250,131 @@ if("serviceWorker" in navigator&&location.protocol==="https:"){
   });
 }
 
+/* ===================== 15b · the home screen ===================== */
+/* Ben's call: readysetink.com opens on a main menu, the way a console game
+   does (his reference: Black Ops' menu) — big words down the left, the one
+   under your cursor lit up, a framed hero panel with its description, a news
+   ticker, and a "continue" tile. Shown on every plain visit; any link that
+   points somewhere specific (a deck, a search, a page) skips it. The logo
+   brings it back. Enter/arrow keys work like a game menu; Esc skips it. */
+const NB_FISH=`<svg class="nbh-fish" viewBox="0 0 420 280" aria-hidden="true">
+  <defs><clipPath id="nbfb"><path d="M120 140C150 50 300 40 370 120c15 15 15 30 0 45-70 75-220 65-250-25Z"/></clipPath></defs>
+  <path d="M130 140 44 68c16 42 16 102 0 144Z" fill="#2f6fed" stroke="#0b1f5c" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M196 74c28-52 98-50 124 4Z" fill="#2f6fed" stroke="#0b1f5c" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M120 140C150 50 300 40 370 120c15 15 15 30 0 45-70 75-220 65-250-25Z" fill="#ffd400"/>
+  <g clip-path="url(#nbfb)" fill="#1f4fd6"><path d="M172 30c-18 70-18 150 6 230h40c-22-80-22-160-4-230Z"/><path d="M252 30c-18 70-18 150 6 230h36c-22-80-22-160-4-230Z"/></g>
+  <path d="M120 140C150 50 300 40 370 120c15 15 15 30 0 45-70 75-220 65-250-25Z" fill="none" stroke="#0b1f5c" stroke-width="7"/>
+  <path d="M232 150c18 26 50 32 66 20-20-4-42-16-52-32Z" fill="#2f6fed" stroke="#0b1f5c" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="328" cy="116" r="18" fill="#fff" stroke="#0b1f5c" stroke-width="6"/><circle cx="333" cy="119" r="8.5" fill="#0b1f5c"/><circle cx="336" cy="114" r="3" fill="#fff"/>
+  <path d="M350 160c8 5 16 3 20-4" fill="none" stroke="#0b1f5c" stroke-width="6" stroke-linecap="round"/>
+</svg>`;
+const NB_HICON={build:"deck",cards:"search",decks:"cards",games:"swords",map:"map-pin",ink:"star",lore:"inkwell",more:"menu"};
+function nbHomeMenus(){
+  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust")||(!SUGGON&&p==="shop");
+  const fromGroup=g=>((OTHER_GROUPS.find(x=>x.g===g)||{chips:[]}).chips).filter(([,,p])=>p&&!hidden(p))
+    .map(([t,d,p])=>isPageLink(p)?{l:t,d,href:p}:{l:t,d,op:p});
+  const games=fromGroup("Mini games");
+  const main=[
+    {k:"build",l:"Build a deck",d:"Search every card, add with a click, and watch your deck come together.",run:()=>showSearch()},
+    {k:"cards",l:"Search cards",d:`All ${CARDS.length.toLocaleString()} cards — by name, by rules text, or by what's in the art.`,run:()=>showTab("tSearch")},
+    {k:"decks",l:"My decks",d:"Every deck you've saved, with its pull sheet and ways to share it.",run:()=>showTab("tDecks")},
+    games.length?{k:"games",l:"Mini games",d:games.map(g=>g.l).join(" · "),sub:"games"}:null,
+    {k:"map",l:"Tournament map",d:"Game stores and events near you.",href:"https://map.readysetink.com/"},
+    {k:"ink",l:"The Ink List",d:"Every card, ranked and rated by the community.",href:"https://inklist.readysetink.com/"},
+    {k:"lore",l:"Lore tracker",d:"A score pad for two to four players, with a built-in Judge.",run:()=>{const l=$("tLore");if(l)l.click()}},
+    {k:"more",l:"More",d:"Your collection, top decks, the Judge, dust, settings and everything else.",sub:"more"}].filter(Boolean);
+  const more=[
+    {l:"My collection",d:"Mark what you own; the pull sheet tells you what to fetch.",run:()=>showTab("tColl")},
+    {l:"Guided Coconut Build",d:"Pick a Coconut and get walked through a whole deck.",run:()=>{const g=$("mGuided");if(g)g.click()}},
+    ...fromGroup("")];
+  return {main:{t:"Main menu",items:main},games:{t:"Mini games",items:games},more:{t:"More",items:more}};
+}
+let nbHomeMenu="main",nbHomeSel=0;
+const HOME=nbEl(`<div class="nbhome" id="nbHome" role="dialog" aria-modal="true" aria-labelledby="nbHT" hidden>
+  <div class="nbh-bg" aria-hidden="true"></div>
+  <div class="nbh-in">
+    <nav class="nbh-menu" aria-label="Main menu"><h1 id="nbHT">Main menu</h1><ul id="nbHList"></ul></nav>
+    <section class="nbh-panel" aria-live="polite">
+      <i class="nbh-c tl"></i><i class="nbh-c tr"></i><i class="nbh-c bl"></i><i class="nbh-c br"></i>
+      <div class="nbh-art" aria-hidden="true">
+        <img class="nbh-logo" src="icons/rsi-meme-team-360.webp" alt="" width="360" height="360">
+        ${NB_FISH}
+        <span class="nbh-bub b1"></span><span class="nbh-bub b2"></span><span class="nbh-bub b3"></span><span class="nbh-bub b4"></span>
+      </div>
+      <p class="nbh-desc" id="nbHDesc"></p>
+      <div class="nbh-brand">Ready Set Ink</div>
+      <div class="nbh-tick"><b>New</b><div class="nbh-tickw"><span id="nbHTick"></span></div></div>
+    </section>
+    <aside class="nbh-promo" id="nbHPromo"></aside>
+  </div>
+  <div class="nbh-foot"><span class="nbh-keys"><kbd>↑</kbd><kbd>↓</kbd> choose · <kbd>Enter</kbd> select · <kbd>Esc</kbd> skip</span>
+    <button type="button" class="nbh-skip" id="nbHSkip">Skip to the deck builder ${ic("arrow-right")}</button></div>
+</div>`);
+document.body.appendChild(HOME);
+function nbHomeItems(){return nbHomeMenus()[nbHomeMenu]}
+function nbHomePaint(focus){
+  const m=nbHomeItems(),items=m.items.concat(nbHomeMenu==="main"?[]:[{l:"Back",d:"Back to the main menu",back:1}]);
+  $("nbHT").textContent=m.t;
+  nbHomeSel=Math.min(nbHomeSel,items.length-1);
+  $("nbHList").innerHTML=items.map((it,i)=>`<li><button type="button" class="nbh-i${i===nbHomeSel?" on":""}${it.back?" back":""}" data-hi="${i}">
+      <span class="nbh-badge">${ic(it.back?"arrow-right":(NB_HICON[it.k]||"sparkles"))}</span><span class="nbh-l">${esc(it.l)}</span>${it.href&&isExternalLink(it.href)?`<span class="nbh-ext">↗</span>`:""}
+      <span class="nbh-sd">${esc(it.d||"")}</span></button></li>`).join("");
+  $("nbHDesc").textContent=(items[nbHomeSel]||{}).d||"";
+  if(focus){const b=$("nbHList").querySelector(`[data-hi="${nbHomeSel}"]`);if(b)b.focus({preventScroll:true})}
+}
+function nbHomeGo(i){
+  const m=nbHomeItems(),items=m.items.concat(nbHomeMenu==="main"?[]:[{back:1}]),it=items[i];if(!it)return;
+  if(it.back){nbHomeMenu="main";nbHomeSel=0;nbHomePaint(true);return}
+  if(it.sub){nbHomeMenu=it.sub;nbHomeSel=0;nbHomePaint(true);return}
+  if(it.href){if(isExternalLink(it.href))window.open(it.href,"_blank","noopener");else location.href=it.href;return}
+  nbHomeClose();
+  if(it.op){OPAGE=it.op;save("fs3_opage",OPAGE);showTab("tOther")}else if(it.run)it.run();
+}
+function nbHomeOpen(){
+  nbHomeMenu="main";nbHomeSel=0;
+  /* the ticker: facts from the data the site already has, never made up */
+  const newest=(SETS[0]||[])[1],news=[
+    newest?`Newest set: ${newest.n}`:"",
+    `${CARDS.length.toLocaleString()} cards, searchable by what's in the art`,
+    MDECKS.length?`${MDECKS.length} tournament deck${MDECKS.length===1?"":"s"} ready to copy`:"",
+    "Guided Coconut Build — pick a Coconut, get a deck",
+    priceDate()?`Prices updated ${priceDate()}`:"",
+    `${AB.length} special searches — find cards by the job they do`].filter(Boolean);
+  $("nbHTick").textContent=news.join("   ·   ")+"   ·   ";
+  /* the continue tile: the deck you were last working on, if there is one */
+  const saved=Object.entries(DECKS.list).filter(([n,d])=>Object.keys(d.cards||{}).length)
+    .sort((a,b)=>(a[0]===DECKS.cur?-1:0)||(b[1].ts||0)-(a[1].ts||0));
+  const [pn,pd]=saved[0]||[];
+  if(pn){const t=Object.values(pd.cards).reduce((a,b)=>a+b,0),min=(FMT[pd.fmt]||{min:60}).min;
+    const inks=[...new Set(Object.keys(pd.cards).flatMap(f=>{const c=nbCard(f);return c?c.co:[]}))];
+    $("nbHPromo").innerHTML=`<button type="button" class="nbh-cont" data-cont="${esc(pn)}"><small>Continue building</small>
+      <b>${esc(pn===DRAFT?"Your new deck":pn)}</b><span>${inks.map(nbDot).join("")} ${t}${min?" / "+min:""} cards</span></button>`}
+  else $("nbHPromo").innerHTML=`<button type="button" class="nbh-cont" data-cont=""><small>New to deck building?</small>
+      <b>Guided Coconut Build</b><span>Pick a Coconut and we'll walk you through it</span></button>`;
+  HOME.hidden=false;document.documentElement.classList.add("nbhomeon");
+  nbHomePaint(true);
+}
+function nbHomeClose(){HOME.hidden=true;document.documentElement.classList.remove("nbhomeon")}
+$("nbHList").addEventListener("mouseover",e=>{const b=e.target.closest("[data-hi]");if(!b||+b.dataset.hi===nbHomeSel)return;
+  nbHomeSel=+b.dataset.hi;HOME.querySelectorAll(".nbh-i").forEach(x=>x.classList.toggle("on",x===b));
+  $("nbHDesc").textContent=b.querySelector(".nbh-sd").textContent});
+$("nbHList").addEventListener("focusin",e=>{const b=e.target.closest("[data-hi]");if(!b)return;nbHomeSel=+b.dataset.hi;
+  HOME.querySelectorAll(".nbh-i").forEach(x=>x.classList.toggle("on",x===b));$("nbHDesc").textContent=b.querySelector(".nbh-sd").textContent});
+$("nbHList").addEventListener("click",e=>{const b=e.target.closest("[data-hi]");if(b)nbHomeGo(+b.dataset.hi)});
+$("nbHSkip").onclick=()=>{nbHomeClose();showSearch()};
+$("nbHPromo").addEventListener("click",e=>{const b=e.target.closest("[data-cont]");if(!b)return;
+  nbHomeClose();
+  if(b.dataset.cont){DECKS.cur=b.dataset.cont;saveDecks();showSearch();render()}else{const g=$("mGuided");if(g)g.click()}});
+HOME.addEventListener("keydown",e=>{
+  const n=HOME.querySelectorAll(".nbh-i").length;
+  if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();e.stopPropagation();
+    nbHomeSel=(nbHomeSel+(e.key==="ArrowDown"?1:-1)+n)%n;nbHomePaint(true)}
+  else if(e.key==="Escape"){e.preventDefault();e.stopPropagation();
+    if(nbHomeMenu!=="main"){nbHomeMenu="main";nbHomeSel=0;nbHomePaint(true)}else{nbHomeClose();showSearch()}}
+});
+/* the logo is the way home */
+$("logo").onclick=e=>{e.preventDefault();nbHomeOpen()};
+
 /* ===================== 15 · plug-in points for later phases ===================== */
 /* Phase 3–5 features hook in here rather than into the panels above:
      NBX.addDeckTab({id:"hand",label:"Hand",render:pane=>{…}})
@@ -1250,4 +1398,7 @@ window.RSI_NB=NBX;
 applyPrefs();
 render();
 nbOnTab(TAB);
+/* A plain visit opens on the home screen. A link that points somewhere — a
+   deck, a search, a page, a sign-in return — goes straight there instead. */
+if(!(BOOTHASH&&BOOTHASH.length>1)&&TAB==="tDeck")nbHomeOpen();
 })();

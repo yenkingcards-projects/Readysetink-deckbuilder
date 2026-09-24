@@ -59,6 +59,23 @@ Save*), `fs3_nb_recent`, `fs3_nb_dview`, `fs3_nb_theme`, `fs3_nb_hint`.
 - The journey: Build → Save → Pull sheet (goes to this deck's pull sheet on Decks)
   → Share (link, native share, list text, a square deck image, and a QR code).
 
+## Round 3 (Ben's second review)
+
+- **Home screen:** a console-style main menu, after Black Ops' menu. Plain visits to the
+  new builder open on it; deep links skip it; the logo brings it back. Its menus are built
+  from `OTHER_GROUPS`. The art is `icons/rsi-meme-team-360.webp` plus an inline SVG
+  blue-striped fish.
+- **Search bar:** three fixed, labelled rows (Ink · Cost · Type). The search box never grows,
+  because pills scroll inside it. Filter counts sit on the button corners, and Clear keeps
+  its space. Nothing moves as you filter.
+- **Cost slider:** a visible track with end caps and a notch per cost. Each handle shows its
+  own number, and invisible native inputs on top handle dragging, keyboard and screen readers.
+- **Special searches:** a gold button with a twinkling sparkle and a slow shine (off with
+  reduced motion).
+- **Phones:** a two-across grid of real card pictures, and a dark "Your deck … View" tab bar.
+- **Card window:** no "(no rules text)" line; a compact label/value box; Compare in the
+  action row.
+
 ## Phase 0 analytics
 
 Sent to Vercel Web Analytics as custom events, from **both** builders (tagged
