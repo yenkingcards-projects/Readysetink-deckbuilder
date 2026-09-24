@@ -1,14 +1,14 @@
 # The new deck builder (`?newbuilder=1`)
 
 The rebuilt deck builder from `deck-builder-plan.md` (Roadmap Phases 0–2, the
-phone section, and the quality bar). It sits **behind a flag**. The classic
-builder is still what everyone sees until we decide to switch.
+phone section, and the quality bar). **It is the default.** readysetink.com opens
+on its home screen, and readysetink.com/deckbuilder is the builder itself.
+vercel.json serves the same page at both addresses.
 
 ## Trying it
 
-- Add `?newbuilder=1` to the address, e.g. `https://readysetink.com/?newbuilder=1`.
-  The device remembers it after that.
-- `?newbuilder=0` (or **More → Switch back to the classic builder**) turns it off again.
+- It's on for everyone. `?newbuilder=0` (or **More → Classic builder**) switches that
+  device to the classic builder and remembers it; `?newbuilder=1` switches back.
 
 ## Where the code is
 

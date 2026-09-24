@@ -1297,7 +1297,7 @@ const HOME=nbEl(`<div class="nbhome" id="nbHome" role="dialog" aria-modal="true"
     <section class="nbh-panel" aria-live="polite">
       <i class="nbh-c tl"></i><i class="nbh-c tr"></i><i class="nbh-c bl"></i><i class="nbh-c br"></i>
       <div class="nbh-art" aria-hidden="true">
-        <img class="nbh-logo" src="icons/rsi-meme-team-360.webp" alt="" width="360" height="360">
+        <img class="nbh-logo" src="${location.protocol==="file:"?"":"/"}icons/rsi-meme-team-360.webp" alt="" width="360" height="360">
         ${NB_FISH}
         <span class="nbh-bub b1"></span><span class="nbh-bub b2"></span><span class="nbh-bub b3"></span><span class="nbh-bub b4"></span>
       </div>
@@ -1330,8 +1330,9 @@ function nbHomeGo(i){
   nbHomeClose();
   if(it.op){OPAGE=it.op;save("fs3_opage",OPAGE);showTab("tOther")}else if(it.run)it.run();
 }
-function nbHomeOpen(){
+function nbHomeOpen(fromHistory){
   nbHomeMenu="main";nbHomeSel=0;
+  if(!fromHistory)nbSetPath("/");
   /* the ticker: facts from the data the site already has, never made up */
   const newest=(SETS[0]||[])[1],news=[
     newest?`Newest set: ${newest.n}`:"",
@@ -1354,7 +1355,21 @@ function nbHomeOpen(){
   HOME.hidden=false;document.documentElement.classList.add("nbhomeon");
   nbHomePaint(true);
 }
-function nbHomeClose(){HOME.hidden=true;document.documentElement.classList.remove("nbhomeon")}
+function nbHomeClose(){HOME.hidden=true;document.documentElement.classList.remove("nbhomeon");nbSetPath("/deckbuilder")}
+/* readysetink.com is the home screen; readysetink.com/deckbuilder is the
+   builder (vercel.json serves the same page at both). Moving between them
+   updates the address bar, and Back/Forward move between them too. */
+const nbWeb=location.protocol==="http:"||location.protocol==="https:";
+const nbAtRoot=()=>!nbWeb?true:/^\/(index\.html)?$/.test(location.pathname);
+function nbSetPath(path){
+  if(!nbWeb||location.pathname===path)return;
+  try{history.pushState({nb:path},"",path+location.search+location.hash)}catch(e){}
+}
+window.addEventListener("popstate",()=>{
+  if(!nbWeb)return;
+  if(nbAtRoot()&&HOME.hidden)nbHomeOpen(true);
+  else if(!nbAtRoot()&&!HOME.hidden){HOME.hidden=true;document.documentElement.classList.remove("nbhomeon")}
+});
 $("nbHList").addEventListener("mouseover",e=>{const b=e.target.closest("[data-hi]");if(!b||+b.dataset.hi===nbHomeSel)return;
   nbHomeSel=+b.dataset.hi;HOME.querySelectorAll(".nbh-i").forEach(x=>x.classList.toggle("on",x===b));
   $("nbHDesc").textContent=b.querySelector(".nbh-sd").textContent});
@@ -1400,5 +1415,5 @@ render();
 nbOnTab(TAB);
 /* A plain visit opens on the home screen. A link that points somewhere — a
    deck, a search, a page, a sign-in return — goes straight there instead. */
-if(!(BOOTHASH&&BOOTHASH.length>1)&&TAB==="tDeck")nbHomeOpen();
+if(nbAtRoot()&&!(BOOTHASH&&BOOTHASH.length>1)&&TAB==="tDeck")nbHomeOpen(true);
 })();
