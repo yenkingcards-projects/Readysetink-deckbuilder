@@ -325,6 +325,23 @@ SB_URL = "https://cwevqwisucaemfsffpsy.supabase.co"
 SB_KEY = "sb_publishable_1uLIyne_6GxEPtWbQoj7jg_4R1UUfmT"
 html = html.replace("/*__SB_URL__*/", SB_URL).replace("/*__SB_KEY__*/", SB_KEY)
 
+# The new deck builder, behind ?newbuilder=1. Kept in its own files under
+# newbuilder/ rather than inside the 16k-line template, so two people (and two
+# AI sessions) editing the site at once rarely touch the same lines. Inlined
+# here so the site stays one self-contained, offline-capable HTML file.
+NB_DIR = os.path.join(HERE, "newbuilder")
+for marker, fname, closer in (("/*__NB_BOOT__*/", "nb-boot.js", "</script"),
+                              ("/*__NB_CSS__*/", "nb.css", "</style"),
+                              ("/*__NB_JS__*/", "nb.js", "</script")):
+    if marker not in html:
+        sys.exit(f"! template is missing the {marker} placeholder")
+    with open(os.path.join(NB_DIR, fname), encoding="utf-8") as f:
+        part = f.read()
+    # A literal closing tag inside the inlined text would end the element early.
+    if closer in part.lower():
+        sys.exit(f"! newbuilder/{fname} contains '{closer}' -- split it, e.g. '<\\/script'")
+    html = html.replace(marker, part)
+
 with open(OUT, "w", encoding="utf-8") as f:
     f.write(html)
 log(f"✓ wrote {OUT}  ({len(html)/1024/1024:.2f} MB)")

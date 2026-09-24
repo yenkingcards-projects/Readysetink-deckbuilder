@@ -51,6 +51,11 @@
      request 404s, the deferred script does nothing, and the page is unaffected
      — which is why it can sit in a file that has to keep working offline. -->
 <script defer src="/_vercel/insights/script.js"></script>
+<!-- The new deck builder, behind ?newbuilder=1. This line only decides whether
+     <html> gets the "nb" class; every rule and script for the new builder lives
+     in newbuilder/ and is inlined by build_flounder.py. Without the flag the
+     page is exactly what it was. -->
+<script>/*__NB_BOOT__*/</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Ready Set Ink","url":"https://readysetink.vercel.app/","description":"Disney Lorcana card search and deck builder.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://readysetink.vercel.app/#q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <style>
 /* ===== ReadySetInk design system ==========================================
@@ -3944,6 +3949,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   .lorefish,.viccrest,.seatnum,.seat.chaos,.seat.chaos::before,.seat.chaos::after{
     animation:none!important;transition:none!important}}
 </style>
+<style id="nbcss">/*__NB_CSS__*/</style>
 </head>
 <body>
 <!-- rainbow gradient for the Enchanted ring, defined once -->
@@ -15926,6 +15932,11 @@ if(BOOTHASH.length>1&&/[#&]dl=/.test(BOOTHASH)){
 }
 
 setTimeout(()=>{try{ACCT.boot()}catch(e){}},0);
+/* The new deck builder (?newbuilder=1) is inlined here by build_flounder.py
+   from newbuilder/nb.js -- inside this closure, and last, so it can reach every
+   function above and everything it touches is already initialised. With the
+   flag off it only records the Phase 0 analytics events and returns. */
+/*__NB_JS__*/
 })();
 
 </script>
