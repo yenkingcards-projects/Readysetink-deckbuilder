@@ -15,6 +15,16 @@ self.addEventListener("activate",e=>e.waitUntil((async()=>{
   await self.clients.claim();
 })()));
 
+/* The page that registered this worker loaded before the worker existed, so
+   it was never cached. It asks for itself to be saved; without this, the
+   very first visit would not work offline. */
+self.addEventListener("message",e=>{
+  const u=e.data&&e.data.cache;
+  if(!u)return;
+  try{if(new URL(u).origin!==self.location.origin)return}catch(err){return}
+  e.waitUntil(caches.open(PAGES).then(c=>fetch(u,{credentials:"same-origin"}).then(res=>{if(res.ok)return c.put(u,res)})).catch(()=>{}));
+});
+
 self.addEventListener("fetch",e=>{
   const r=e.request;
   if(r.method!=="GET")return;

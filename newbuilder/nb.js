@@ -1068,7 +1068,11 @@ function nbOnTab(t){
 
 /* ===================== 15 · offline ===================== */
 if("serviceWorker" in navigator&&location.protocol==="https:"){
-  window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").catch(()=>{})});
+  window.addEventListener("load",()=>{
+    navigator.serviceWorker.register("/sw.js").catch(()=>{});
+    /* save this page for offline use right away, not just from the next visit */
+    navigator.serviceWorker.ready.then(r=>{if(r.active)r.active.postMessage({cache:location.href.split("#")[0]})}).catch(()=>{});
+  });
 }
 
 /* ===================== 16 · plug-in points for later phases ===================== */
