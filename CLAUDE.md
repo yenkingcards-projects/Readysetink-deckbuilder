@@ -58,7 +58,8 @@ unless he asks.
 ## Hard rules (never break these)
 
 - Only edit `flounder-search.template.html` (the app), `build_flounder.py`,
-  `build_rules.py`, or `gen_pages.py`. Never edit `index.html`,
+  `build_rules.py`, `gen_pages.py`, or the new deck builder's sources in
+  `newbuilder/` (plus `sw.js`, its offline worker) — see `newbuilder/README.md`. Never edit `index.html`,
   `flounder-search.html`, or anything under `card/` — all generated, and the
   next build overwrites them completely.
 - Never bulk-overwrite or regenerate `art-tags.json`, `card-rules.json`, or

@@ -51,6 +51,11 @@
      request 404s, the deferred script does nothing, and the page is unaffected
      — which is why it can sit in a file that has to keep working offline. -->
 <script defer src="/_vercel/insights/script.js"></script>
+<!-- The new deck builder, behind ?newbuilder=1. This line only decides whether
+     <html> gets the "nb" class; every rule and script for the new builder lives
+     in newbuilder/ and is inlined by build_flounder.py. Without the flag the
+     page is exactly what it was. -->
+<script>/*__NB_BOOT__*/</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Ready Set Ink","url":"https://readysetink.vercel.app/","description":"Disney Lorcana card search and deck builder.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://readysetink.vercel.app/#q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
 <style>
 /* ===== ReadySetInk design system ==========================================
@@ -3944,6 +3949,7 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   .lorefish,.viccrest,.seatnum,.seat.chaos,.seat.chaos::before,.seat.chaos::after{
     animation:none!important;transition:none!important}}
 </style>
+<style id="nbcss">/*__NB_CSS__*/</style>
 </head>
 <body>
 <!-- rainbow gradient for the Enchanted ring, defined once -->
@@ -4206,6 +4212,12 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
    on a SECOND visit, which is exactly the visit that doesn't matter. Every
    arrival from Google is a cold profile. */
 const BOOTHASH=location.hash||"";
+/* An OAuth return from Google arrives as "#access_token=…&refresh_token=…".
+   It is captured HERE, at the very top, because the boot render() calls
+   syncHash(), which rewrites the hash to match the current search — and an
+   empty search means the hash is wiped entirely. That is why signing in used
+   to appear to do nothing (see SIGNIN-FIX.md). */
+const AUTHHASH=/[#&](access_token|error_description)=/.test(BOOTHASH)?BOOTHASH:"";
 
 /* ===================================================================
    >>> EDIT ME — STAPLES <<<  ("Name - Version", or just "Name")
@@ -15663,14 +15675,33 @@ const ACCT={
     b.onclick=()=>{
       if(this.user){OPAGE="account";save("fs3_opage",OPAGE);showTab("tOther")}
       else this.signIn()};
-    if(!this.hasSession()&&!/[#&]access_token=/.test(location.hash))return;
+    if(!this.hasSession()&&!AUTHHASH)return;
     try{
       const sb=await this.client();
+      if(AUTHHASH){
+        const q=new URLSearchParams(AUTHHASH.replace(/^#/,""));
+        const bad=q.get("error_description");
+        /* A refused sign-in used to be as silent as a successful one. Say so. */
+        if(bad){toast("Google sign-in failed — "+bad);return}
+        const at=q.get("access_token"),rt=q.get("refresh_token");
+        /* setSession explicitly: by the time the library has loaded, the hash
+           its own detectSessionInUrl would read has already been rewritten. */
+        if(at&&rt)await sb.auth.setSession({access_token:at,refresh_token:rt});
+      }
       const {data}=await sb.auth.getSession();
       if(data&&data.session){await this.arrive(data.session.user)}
     }catch(e){/* offline, blocked, or logged out — the site carries on */}},
 
   async signIn(){
+    /* Check the account server answers BEFORE sending anyone to Google. If the
+       Supabase project is paused or gone, signInWithOAuth navigates the whole
+       page to an address that doesn't exist and the visitor lands on a
+       browser error page. A toast is the honest answer instead. */
+    try{
+      const ctl=new AbortController(),t=setTimeout(()=>ctl.abort(),5000);
+      const r=await fetch(SB_URL+"/auth/v1/health",{headers:{apikey:SB_KEY},signal:ctl.signal});
+      clearTimeout(t);if(!r.ok)throw new Error("auth "+r.status);
+    }catch(e){toast("Sign-in is unavailable right now — your decks are still saved on this device");return}
     try{
       const sb=await this.client();
       await sb.auth.signInWithOAuth({provider:"google",
@@ -15911,7 +15942,9 @@ if(BOOTHASH.length>1&&/[#&]dl=/.test(BOOTHASH)){
       history.replaceState(null,"",location.pathname+location.search);
     }catch(e){}},60);
   }catch(e){}
-}else if(BOOTHASH.length>1){
+}else if(BOOTHASH.length>1&&!AUTHHASH){
+  /* !AUTHHASH: "#access_token=…" is not a search, and running it through
+     applyHash() would clear every filter on the way back from signing in. */
   try{
     if(applyHash(BOOTHASH)){
       const sp=$("special"),sd=$("side");
@@ -15926,6 +15959,11 @@ if(BOOTHASH.length>1&&/[#&]dl=/.test(BOOTHASH)){
 }
 
 setTimeout(()=>{try{ACCT.boot()}catch(e){}},0);
+/* The new deck builder (?newbuilder=1) is inlined here by build_flounder.py
+   from newbuilder/nb.js -- inside this closure, and last, so it can reach every
+   function above and everything it touches is already initialised. With the
+   flag off it only records the Phase 0 analytics events and returns. */
+/*__NB_JS__*/
 })();
 
 </script>
