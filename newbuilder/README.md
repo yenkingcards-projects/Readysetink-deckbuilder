@@ -40,6 +40,25 @@ With the flag off, `nb.js` only records the Phase 0 analytics events and stops.
 `fs3_nb` (the flag), `fs3_nb_work` (unsaved working copy: *Save still means
 Save*), `fs3_nb_recent`, `fs3_nb_dview`, `fs3_nb_theme`, `fs3_nb_hint`.
 
+## Design choices (from Ben's first review)
+
+- Calm by default: adding a card never re-draws card pictures (no flash), nothing
+  flies across the screen, and only the deck row that changed is highlighted.
+- Tiles show one "+ Add" until a card is in the deck, then "− n +" with just the number.
+- Cost is a two-handle slider (0 to 10+). Inkwell is a clear three-way choice in
+  Filters (Any / Inkable only / Uninkable only), not a cycling button.
+- The big card preview appears beside the card, only when hovering the picture,
+  after 1.5 seconds. It never appears over the + / − buttons.
+- Compare: the button in any card's detail view, press-and-hold on a phone, or the C key.
+- Icons are Ben's icon library (`bendacymedia/Claude apps/icon-library`), inlined in
+  `nb.js` as `NBI`. There are no emoji on the build path.
+- More lists every page the site has, read from the same `OTHER_GROUPS` list as the
+  classic Other page.
+- Ko-fi: the original "Support Ready Set Ink" button is on the Settings page. It
+  never appears in the builder.
+- The journey: Build → Save → Pull sheet (goes to this deck's pull sheet on Decks)
+  → Share (link, native share, list text, a square deck image, and a QR code).
+
 ## Phase 0 analytics
 
 Sent to Vercel Web Analytics as custom events, from **both** builders (tagged
