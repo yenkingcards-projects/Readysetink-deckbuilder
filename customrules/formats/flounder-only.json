@@ -1,0 +1,14 @@
+{
+ "id": "flounder-only",
+ "order": 3,
+ "name": "Flounder Only",
+ "blurb": "Exactly 60 cards. Every one of them is Flounder.",
+ "minCards": 60,
+ "maxCards": 60,
+ "maxCopies": null,
+ "only": [
+  "Flounder - Voice of Reason",
+  "Flounder - Collector's Companion"
+ ],
+ "text": "Any mix of the two Flounders, as many copies as you like. If anyone reaches 20 lore, both players win — the real win is the friends we made along the way."
+}

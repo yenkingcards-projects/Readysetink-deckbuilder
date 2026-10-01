@@ -1268,7 +1268,7 @@ const NB_FISH=`<svg class="nbh-fish" viewBox="0 0 420 280" aria-hidden="true">
   <circle cx="328" cy="116" r="18" fill="#fff" stroke="#0b1f5c" stroke-width="6"/><circle cx="333" cy="119" r="8.5" fill="#0b1f5c"/><circle cx="336" cy="114" r="3" fill="#fff"/>
   <path d="M350 160c8 5 16 3 20-4" fill="none" stroke="#0b1f5c" stroke-width="6" stroke-linecap="round"/>
 </svg>`;
-const NB_HICON={build:"deck",cards:"search",decks:"cards",games:"swords",map:"map-pin",ink:"star",lore:"inkwell",more:"menu"};
+const NB_HICON={build:"deck",cards:"search",decks:"cards",games:"swords",map:"map-pin",ink:"star",rules:"book",lore:"inkwell",more:"menu"};
 function nbHomeMenus(){
   const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust")||(!SUGGON&&p==="shop");
   const fromGroup=g=>((OTHER_GROUPS.find(x=>x.g===g)||{chips:[]}).chips).filter(([,,p])=>p&&!hidden(p))
@@ -1282,6 +1282,7 @@ function nbHomeMenus(){
     {k:"map",l:"Tournament map",d:"Game stores and events near you.",href:"https://map.readysetink.com/"},
     {k:"ink",l:"The Ink List",d:"Every card, ranked and rated by the community.",href:"https://inklist.readysetink.com/"},
     {k:"lore",l:"Lore tracker",d:"A score pad for two to four players, with a built-in Judge.",run:()=>{const l=$("tLore");if(l)l.click()}},
+    {k:"rules",l:"Custom rules",d:"House formats: paste a decklist and see what isn't legal.",href:"https://customrules.readysetink.com/"},
     {k:"more",l:"More",d:"Your collection, top decks, the Judge, dust, settings and everything else.",sub:"more"}].filter(Boolean);
   const more=[
     {l:"My collection",d:"Mark what you own; the pull sheet tells you what to fetch.",run:()=>showTab("tColl")},
