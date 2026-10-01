@@ -2,26 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "customrules.readysetink.com"
-        }
-      ],
-      "destination": "/customrules/index.html"
-    },
-    {
-      "source": "/(app\\.js|app\\.css|rules\\.js|formats\\.json)",
-      "has": [
-        {
-          "type": "host",
-          "value": "customrules.readysetink.com"
-        }
-      ],
-      "destination": "/customrules/$1"
-    },
-    {
       "source": "/deckbuilder",
       "destination": "/index.html"
     },
@@ -64,6 +44,17 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "customrules.readysetink.com"
+        }
+      ],
+      "destination": "/customrules/",
+      "permanent": false
+    },
     {
       "source": "/deckbuilder/",
       "destination": "/deckbuilder",
