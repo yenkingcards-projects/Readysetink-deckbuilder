@@ -1,0 +1,10 @@
+{
+ "id": "poorcana",
+ "order": 1,
+ "name": "Poorcana",
+ "blurb": "Only Common and Uncommon cards. No rich kids.",
+ "rarities": [
+  "Common",
+  "Uncommon"
+ ]
+}

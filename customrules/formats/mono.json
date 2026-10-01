@@ -1,0 +1,7 @@
+{
+ "id": "mono",
+ "order": 2,
+ "name": "Mono",
+ "blurb": "One ink only. Two-ink cards stay home.",
+ "maxInks": 1
+}
