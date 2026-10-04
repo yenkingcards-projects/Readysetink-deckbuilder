@@ -9,6 +9,7 @@
 #   https://www.readysetink.com/card-rules.json    official rulings, keyed by card name
 #   https://www.readysetink.com/meta-decks.json    current competitive deck lists
 #   https://www.readysetink.com/glossary.json      terms and keyword rules
+#   https://www.readysetink.com/card-prices.json   dated USD price snapshot (from Lorcast)
 
 User-agent: *
 Disallow: /_vercel/

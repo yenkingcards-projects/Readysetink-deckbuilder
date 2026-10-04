@@ -28,6 +28,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -67,6 +68,7 @@ def robots_txt():
 #   {SITE}/card-rules.json    official rulings, keyed by card name
 #   {SITE}/meta-decks.json    current competitive deck lists
 #   {SITE}/glossary.json      terms and keyword rules
+#   {SITE}/card-prices.json   dated USD price snapshot (from Lorcast)
 
 User-agent: *
 {ROBOTS_RULES}# Emerging content-signal convention; parsers that don't know it ignore the line.
@@ -93,6 +95,7 @@ Prefer the raw data files below over scraping HTML. They are static JSON, free t
 - [Card database]({SITE}/card-db.json): every card as JSON. Top-level keys: `fetched`, `priced`, `sets`, `cards`. Each card has `n` name, `v` version, `c` cost, `ik` inkable, `co` ink colors, `ty` type, `sub` subtypes, `tx` rules text, `ef` effect text, `kw` keywords, `st` strength, `wi` willpower, `lo` lore, `r` rarity, `s` set number, `num` collector number, `sto` source story, `ar` artists, `fl` flavor text, `p` / `pf` USD price (regular / foil).
 - [Official rulings]({SITE}/card-rules.json): rulings from Ravensburger's set release notes, keyed by exact card name.
 - [Meta decks]({SITE}/meta-decks.json): competitive deck lists grouped by point in a set's life.
+- [Prices]({SITE}/card-prices.json): USD price snapshot per printing, dated {priced_on or "see file"}, sourced from Lorcast. A rough guide, not a live quote.
 - [Data guide]({SITE}/data/): what each file contains, how it is structured, and where it comes from.
 
 ## Pages
@@ -264,14 +267,30 @@ KOFI_WIDGET = (
 )
 
 
+def share_image(url):
+    """Card art on Lorcast is AVIF, which Facebook and X won't render in link previews. Route just
+    those through the free image proxy wsrv.nl, which converts to JPEG and letterboxes onto the site's
+    navy at the 1200x630 social platforms expect. Nothing is stored; the card page itself still shows
+    the original. Images already served as JPEG (the Ravensburger ones) are left alone."""
+    if url and "cards.lorcast.io" in url and ".avif" in url:
+        enc = urllib.parse.quote(url.replace("https://", ""), safe="")
+        return f"https://wsrv.nl/?url={enc}&w=1200&h=630&fit=contain&cbg=202638&output=jpg&q=82", True
+    return url, False
+
+
 def head(title, desc, canonical, image=None, extra="", manifest="/manifest.webmanifest",
          icon192="/icons/icon-192.png", touch_icon="/icons/apple-touch-icon.png"):
     # Pages without their own picture share the site icon, so a pasted link is never imageless.
-    og_img = f'<meta property="og:image" content="{esc(image or SITE + "/icons/icon-512.png")}">'
+    shared, converted = share_image(image)
+    og_img = f'<meta property="og:image" content="{esc(shared or SITE + "/icons/icon-512.png")}">'
+    if converted:
+        og_img += ('\n<meta property="og:image:type" content="image/jpeg">'
+                   '\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">')
     tw = "summary_large_image" if image else "summary"
     # Say plainly that full snippets and large previews are welcome (search results, Discover, AI answers).
     robots = "" if 'name="robots"' in extra else \
         '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">\n'
+    tw_img = f'<meta name="twitter:image" content="{esc(shared)}">' if shared else ""
     pre = '<link rel="preconnect" href="https://cards.lorcast.io" crossorigin>\n' if image and "cards.lorcast.io" in image else ""
     return f"""<!doctype html>
 <html lang="en"><head>
@@ -287,6 +306,7 @@ def head(title, desc, canonical, image=None, extra="", manifest="/manifest.webma
 <meta property="og:url" content="{esc(canonical)}">
 {og_img}
 <meta name="twitter:card" content="{tw}">
+{tw_img}
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="theme-color" content="#202638">
@@ -1498,6 +1518,7 @@ def data_page(cards, sets, priced_on, generated):
              ("card-rules.json", f"Official rulings from Ravensburger's set release notes, keyed by card name ({n_rul} cards so far)."),
              ("meta-decks.json", "Competitive deck lists grouped by point in a set's life."),
              ("glossary.json", f"{len(G.T)} terms, including all 14 keywords with rule numbers."),
+             ("card-prices.json", f"USD price snapshot per printing, dated {priced_on}, from Lorcast. A rough guide, not a live quote."),
              ("llms.txt", "A short map of the site written for AI assistants."),
              ("sitemap.xml", "Every page, split into core, browse and card sitemaps.")]
     ds = lambda name, d, f: {"@type": "Dataset", "name": name, "description": d, "url": url, "isAccessibleForFree": True,
