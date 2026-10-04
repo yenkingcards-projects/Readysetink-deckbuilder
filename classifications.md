@@ -1,0 +1,42 @@
+# Disney Lorcana classifications
+
+Source: https://www.readysetink.com/classifications/
+
+- [Alien](https://www.readysetink.com/classifications/alien.md): 58 cards
+- [Ally](https://www.readysetink.com/classifications/ally.md): 705 cards
+- [Captain](https://www.readysetink.com/classifications/captain.md): 56 cards
+- [Deity](https://www.readysetink.com/classifications/deity.md): 41 cards
+- [Detective](https://www.readysetink.com/classifications/detective.md): 49 cards
+- [Dragon](https://www.readysetink.com/classifications/dragon.md): 17 cards
+- [Dreamborn](https://www.readysetink.com/classifications/dreamborn.md): 378 cards
+- [Entangled](https://www.readysetink.com/classifications/entangled.md): 13 cards
+- [Fairy](https://www.readysetink.com/classifications/fairy.md): 27 cards
+- [Floodborn](https://www.readysetink.com/classifications/floodborn.md): 183 cards
+- [Gargoyle](https://www.readysetink.com/classifications/gargoyle.md): 15 cards
+- [Hero](https://www.readysetink.com/classifications/hero.md): 693 cards
+- [Hunny](https://www.readysetink.com/classifications/hunny.md): 15 cards
+- [Illusion](https://www.readysetink.com/classifications/illusion.md): 15 cards
+- [Inventor](https://www.readysetink.com/classifications/inventor.md): 64 cards
+- [King](https://www.readysetink.com/classifications/king.md): 59 cards
+- [Knight](https://www.readysetink.com/classifications/knight.md): 20 cards
+- [Madrigal](https://www.readysetink.com/classifications/madrigal.md): 51 cards
+- [Mentor](https://www.readysetink.com/classifications/mentor.md): 80 cards
+- [Monster](https://www.readysetink.com/classifications/monster.md): 15 cards
+- [Musketeer](https://www.readysetink.com/classifications/musketeer.md): 10 cards
+- [Pirate](https://www.readysetink.com/classifications/pirate.md): 66 cards
+- [Prince](https://www.readysetink.com/classifications/prince.md): 93 cards
+- [Princess](https://www.readysetink.com/classifications/princess.md): 154 cards
+- [Puppy](https://www.readysetink.com/classifications/puppy.md): 12 cards
+- [Queen](https://www.readysetink.com/classifications/queen.md): 66 cards
+- [Racer](https://www.readysetink.com/classifications/racer.md): 25 cards
+- [Red Panda](https://www.readysetink.com/classifications/red-panda.md): 10 cards
+- [Robot](https://www.readysetink.com/classifications/robot.md): 14 cards
+- [Seven Dwarfs](https://www.readysetink.com/classifications/seven-dwarfs.md): 21 cards
+- [Song](https://www.readysetink.com/classifications/song.md): 126 cards
+- [Sorcerer](https://www.readysetink.com/classifications/sorcerer.md): 152 cards
+- [Super](https://www.readysetink.com/classifications/super.md): 53 cards
+- [Team](https://www.readysetink.com/classifications/team.md): 16 cards
+- [Toy](https://www.readysetink.com/classifications/toy.md): 26 cards
+- [Villain](https://www.readysetink.com/classifications/villain.md): 313 cards
+- [Vineling](https://www.readysetink.com/classifications/vineling.md): 13 cards
+- [Whisper](https://www.readysetink.com/classifications/whisper.md): 27 cards

@@ -8,7 +8,7 @@
 #   https://www.readysetink.com/card-db.json       every card, structured
 #   https://www.readysetink.com/card-rules.json    official rulings, keyed by card name
 #   https://www.readysetink.com/meta-decks.json    current competitive deck lists
-#   https://www.readysetink.com/card-prices.json   dated USD price snapshot
+#   https://www.readysetink.com/glossary.json      terms and keyword rules
 
 User-agent: *
 Disallow: /_vercel/

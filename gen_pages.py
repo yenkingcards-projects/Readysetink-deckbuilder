@@ -66,7 +66,7 @@ def robots_txt():
 #   {SITE}/card-db.json       every card, structured
 #   {SITE}/card-rules.json    official rulings, keyed by card name
 #   {SITE}/meta-decks.json    current competitive deck lists
-#   {SITE}/card-prices.json   dated USD price snapshot
+#   {SITE}/glossary.json      terms and keyword rules
 
 User-agent: *
 {ROBOTS_RULES}# Emerging content-signal convention; parsers that don't know it ignore the line.
@@ -93,11 +93,13 @@ Prefer the raw data files below over scraping HTML. They are static JSON, free t
 - [Card database]({SITE}/card-db.json): every card as JSON. Top-level keys: `fetched`, `priced`, `sets`, `cards`. Each card has `n` name, `v` version, `c` cost, `ik` inkable, `co` ink colors, `ty` type, `sub` subtypes, `tx` rules text, `ef` effect text, `kw` keywords, `st` strength, `wi` willpower, `lo` lore, `r` rarity, `s` set number, `num` collector number, `sto` source story, `ar` artists, `fl` flavor text, `p` / `pf` USD price (regular / foil).
 - [Official rulings]({SITE}/card-rules.json): rulings from Ravensburger's set release notes, keyed by exact card name.
 - [Meta decks]({SITE}/meta-decks.json): competitive deck lists grouped by point in a set's life.
-- [Prices]({SITE}/card-prices.json): USD snapshot per printing, dated {priced_on or "see file"}. A rough guide, not a live quote.
+- [Data guide]({SITE}/data/): what each file contains, how it is structured, and where it comes from.
 
 ## Pages
 
 - [Home]({SITE}/): card search and the full app.
+- [How to play Disney Lorcana]({SITE}/learn/how-to-play-lorcana/): a plain-English beginner guide to the rules, with links to the keyword and glossary pages.
+- [Inks]({SITE}/inks/) and [classifications]({SITE}/classifications/): cards grouped by ink color (Amber, Ruby...) and by classification (Princess, Villain, Pirate...).
 - [Glossary]({SITE}/glossary/): over 120 Lorcana terms in plain English - rules vocabulary, all 14 keyword abilities with rule numbers, formats, community slang and collecting words. Also as [markdown]({SITE}/glossary.md) and [JSON]({SITE}/glossary.json).
 - [Keywords]({SITE}/keywords/): all 14 keyword abilities, one page each at `{SITE}/keywords/<keyword>/` with the rule in plain English and every card that has it.
 - [Sets]({SITE}/sets/): one page per set at `{SITE}/sets/<set>/` with the cards first printed in it. Reprints appear under their original set.
@@ -117,7 +119,7 @@ Append `.md` to any card, keyword, set, franchise or character URL for a compact
 
 ## Sitemap
 
-- [sitemap.xml]({SITE}/sitemap.xml): every page, {n_cards:,} card pages included.
+- [sitemap.xml]({SITE}/sitemap.xml): index of three sitemaps (core pages, browse pages, and {n_cards:,} card pages).
 """
 
 INK_HEX = {"Amber": "#d8a13a", "Amethyst": "#8a5fb0", "Emerald": "#3f8f5f",
@@ -264,8 +266,13 @@ KOFI_WIDGET = (
 
 def head(title, desc, canonical, image=None, extra="", manifest="/manifest.webmanifest",
          icon192="/icons/icon-192.png", touch_icon="/icons/apple-touch-icon.png"):
-    og_img = f'<meta property="og:image" content="{esc(image)}">' if image else ""
+    # Pages without their own picture share the site icon, so a pasted link is never imageless.
+    og_img = f'<meta property="og:image" content="{esc(image or SITE + "/icons/icon-512.png")}">'
     tw = "summary_large_image" if image else "summary"
+    # Say plainly that full snippets and large previews are welcome (search results, Discover, AI answers).
+    robots = "" if 'name="robots"' in extra else \
+        '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">\n'
+    pre = '<link rel="preconnect" href="https://cards.lorcast.io" crossorigin>\n' if image and "cards.lorcast.io" in image else ""
     return f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
@@ -273,7 +280,7 @@ def head(title, desc, canonical, image=None, extra="", manifest="/manifest.webma
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{esc(canonical)}">
-<meta property="og:type" content="article">
+{robots}{pre}<meta property="og:type" content="article">
 <meta property="og:site_name" content="Ready Set Ink">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
@@ -293,7 +300,7 @@ def head(title, desc, canonical, image=None, extra="", manifest="/manifest.webma
 </head><body>
 <header><div class="wrap">
   <a href="/">Ready Set Ink</a>
-  <nav><a href="/card/">All cards</a> · <a href="/glossary/">Glossary</a> · <a href="/">Deck builder</a></nav>
+  <nav><a href="/card/">Cards</a> · <a href="/sets/">Sets</a> · <a href="/keywords/">Keywords</a> · <a href="/glossary/">Glossary</a> · <a href="/learn/how-to-play-lorcana/">Learn</a> · <a href="/">Deck builder</a></nav>
 </div></header>
 <div class="wrap">"""
 
@@ -482,6 +489,11 @@ def card_page(c, by_name, by_set, sets, priced_on):
         chips.append(f'<a href="/franchises/{BROWSE["fr"][c["sto"]]}/">All {esc(c["sto"])} cards</a>')
     if c.get("ty") == "Character" and c["n"] in BROWSE["ch"]:
         chips.append(f'<a href="/characters/{BROWSE["ch"][c["n"]]}/">Every {esc(c["n"])} card</a>')
+    for ink in (c.get("co") or []):
+        if ink in BROWSE["ink"]:
+            chips.append(f'<a href="/inks/{BROWSE["ink"][ink]}/">All {esc(ink)} cards</a>')
+    for sub in [x for x in (c.get("sub") or []) if x in BROWSE["cls"]][:3]:
+        chips.append(f'<a href="/classifications/{BROWSE["cls"][sub]}/">{esc(sub)} cards</a>')
     for k in (c.get("kw") or []):
         kn = k[0] if isinstance(k, (list, tuple)) else k
         if kn in BROWSE["kw"]:
@@ -970,7 +982,8 @@ def legal_page(slug_, title, sections, intro):
 # "Set 6 card list") with a real list built from card-db.json, and links onward.
 # A markdown twin sits next to each page (append .md) because agents read
 # markdown more cheaply and more reliably than HTML.
-BROWSE = {"set": {}, "fr": {}, "kw": {}, "ch": {}}
+BROWSE = {"set": {}, "fr": {}, "kw": {}, "ch": {}, "ink": {}, "cls": {}}
+MIN_FACET_CARDS, MAX_FACET_CARDS = 10, 800
 MIN_FRANCHISE_CARDS = 3     # below this a page would be thin; the index lists it unlinked
 MIN_CHARACTER_CARDS = 2
 
@@ -1045,6 +1058,13 @@ def build_browse(cards, sets):
     for x in G.T:
         if x["cat"] == "keywords" and x["k"]:
             BROWSE["kw"][x["k"]] = x["id"]
+    inks, cls = count_by(cards, "co"), count_by(cards, "sub")
+    for ink, n in inks.items():
+        if n >= MIN_FACET_CARDS:
+            BROWSE["ink"][ink] = slug(ink)
+    for sub, n in cls.items():
+        if MIN_FACET_CARDS <= n <= MAX_FACET_CARDS:
+            BROWSE["cls"][sub] = slug(sub)
 
 
 def kw_value(c, kwname):
@@ -1076,13 +1096,13 @@ def crumb_ld(items):
                                 for i, (n, u) in enumerate(items)]}
 
 
-def list_ld(name, url, desc, rows, slug_of, crumbs):
+def list_ld(name, url, desc, rows, slug_of, crumbs, limit=None):
     return [{"@context": "https://schema.org", "@type": "CollectionPage", "name": name, "url": url,
              "description": desc, "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "Ready Set Ink", "url": SITE},
              "mainEntity": {"@type": "ItemList", "numberOfItems": len(rows),
                             "itemListElement": [{"@type": "ListItem", "position": i + 1,
                                                  "url": f"{SITE}/card/{slug_of[id(c)]}.html", "name": fullname(c)}
-                                                for i, c in enumerate(rows)]}},
+                                                for i, c in enumerate(rows[:limit])]}},
             crumb_ld(crumbs)]
 
 
@@ -1338,6 +1358,174 @@ def card_md(c, sl, sets, priced_on):
     return "\n".join(out) + "\n"
 
 
+def not_found_page(cards):
+    extra = '<meta name="robots" content="noindex">'
+    out = [head("Page not found · Ready Set Ink", "That page does not exist. Search every Disney Lorcana card or browse by set, franchise or keyword.",
+                SITE + "/404", extra=extra)]
+    out.append("<h1>That page isn't here</h1><p>The link may be old or mistyped. These will get you back on track:</p>")
+    out.append('<div class="rel"><a href="/">Search every card</a><a href="/deck-builder/">Deck builder</a><a href="/card/">All '
+               f'{len(cards):,} cards</a><a href="/sets/">Sets</a><a href="/franchises/">Franchises</a>'
+               '<a href="/keywords/">Keywords</a><a href="/glossary/">Glossary</a><a href="/learn/how-to-play-lorcana/">How to play</a></div>')
+    out.append(foot(show_kofi=False))
+    return "".join(out)
+
+
+# ------------------------------------------------------------- inks + classifications
+def facet_pages(cards, slug_of, dirname, index_title, index_h1, index_desc, key, field, noun, mapkey):
+    urls, pages = [], []
+    for value, sl in sorted(BROWSE[mapkey].items()):
+        rows = sorted((c for c in cards if value in ((c.get(field) or []) if isinstance(c.get(field), list) else [c.get(field)])),
+                      key=lambda c: (c["n"], c.get("v") or ""))
+        url, md_url = f"{SITE}/{dirname}/{sl}/", f"{SITE}/{dirname}/{sl}.md"
+        title = pick_title([f"{value} Lorcana cards: all {len(rows)} {noun(value)}", f"{value} Lorcana cards", f"{value} cards"])
+        desc = clip(f"All {len(rows)} Disney Lorcana {noun(value)}. {breakdown(count_by(rows, 'ty'))}. "
+                    f"Browse every one with cost, ink and rarity.")
+        sets_ = {}
+        for c in rows:
+            sets_[c.get("s")] = sets_.get(c.get("s"), 0) + 1
+        body = [f"<p>{esc(breakdown(count_by(rows, 'ty')))}. By rarity: {esc(breakdown(count_by(rows, 'r'), RARITY_ORDER))}.</p>",
+                f"<h2>All {len(rows):,} cards</h2>", card_rows(rows, slug_of)]
+        crumbs = [("Ready Set Ink", SITE + "/"), (index_h1, f"{SITE}/{dirname}/"), (value, url)]
+        write(os.path.join(HERE, dirname, sl, "index.html"),
+              browse_page(url, title, desc, f"{value}: Disney Lorcana {noun(value)}", f"{len(rows):,} {esc(noun(value))} in Disney Lorcana.",
+                          "".join(body), list_ld(title, url, desc, rows, slug_of, crumbs, limit=100), md_url))
+        write(os.path.join(HERE, dirname, sl + ".md"),
+              md_list(f"{value}: Disney Lorcana {noun(value)}", url, f"{len(rows)} cards.", rows, slug_of))
+        urls.append(f"/{dirname}/{sl}/")
+        pages.append((value, sl, len(rows)))
+    url = f"{SITE}/{dirname}/"
+    body = ["<ul>"] + [f'<li><a href="/{dirname}/{sl}/">{esc(v)}</a> ({n:,} cards)</li>' for v, sl, n in sorted(pages, key=lambda p: -p[2])] + ["</ul>"]
+    write(os.path.join(HERE, dirname, "index.html"),
+          browse_page(url, index_title, index_desc, index_h1, esc(index_desc), "".join(body),
+                      [crumb_ld([("Ready Set Ink", SITE + "/"), (index_h1, url)])], f"{SITE}/{dirname}.md"))
+    write(os.path.join(HERE, dirname + ".md"), "\n".join(
+        [f"# {index_h1}", "", f"Source: {url}", ""] + [f"- [{v}]({SITE}/{dirname}/{sl}.md): {n} cards" for v, sl, n in pages]) + "\n")
+    return [f"/{dirname}/"] + urls
+
+
+# ------------------------------------------------------------------ beginner guide
+# Bump GUIDE_DATE only when the guide's content actually changes (it is the page's dateModified).
+GUIDE_DATE = "2026-10-04"
+GUIDE = [
+    ("The goal",
+     ['Each player races to be the first to reach <b>20 lore</b>. You gain lore mostly by <a href="/glossary/#quest">questing</a> with your characters, '
+      "and you slow your opponent down by <a href=\"/glossary/#banish\">banishing</a> theirs."]),
+    ("What you need",
+     ['A deck of at least 60 cards, with no more than four copies of any card with the same <a href="/glossary/#full-name">full name</a> (name plus version), '
+      'using at most two of the six ink colors: Amber, Amethyst, Emerald, Ruby, Sapphire and Steel. Starter decks come ready to play. '
+      'The <a href="/deck-builder/">Ready Set Ink deck builder</a> checks these rules as you build.']),
+    ("Setting up",
+     ['Shuffle your deck and draw seven cards. Once, you may put any number of those cards on the bottom of your deck and draw back up to seven '
+      '(see <a href="/glossary/#starting-hand">starting hand</a>). One player is chosen at random to go first, and that player skips their first draw.']),
+    ("Ink: how you pay for things",
+     ['Cards cost ink. Your ink comes from your <a href="/glossary/#inkwell">inkwell</a>, a facedown pile of cards you have chosen to turn into ink. '
+      'Once per turn you may put a card from your hand into your inkwell, but only if it has the inkwell symbol around its cost '
+      '(it is <a href="/glossary/#inkable">inkable</a>). Every card in the inkwell is worth one ink, whatever is printed on its front.']),
+    ("The five card types",
+     ['<a href="/glossary/#character">Characters</a> have Strength, Willpower and usually a lore value, and stay in play. '
+      '<a href="/glossary/#action">Actions</a> do one thing and go to the discard pile. '
+      '<a href="/glossary/#song">Songs</a> are actions you can play by exerting a character to sing them instead of paying ink. '
+      '<a href="/glossary/#item">Items</a> stay in play and give lasting effects. '
+      '<a href="/glossary/#location">Locations</a> stay in play, have Willpower, and can give you lore at the start of your turn.']),
+    ("Taking a turn",
+     ['Your turn starts by readying all your exerted cards, then characters that were already in play become able to act and you gain lore from any locations you have, '
+      'then you draw a card. After that you are in the main phase, where you may do any of these in any order, as often as you can pay for: '
+      'ink one card (once per turn), play cards, quest, challenge, move a character to a location, and use abilities. '
+      'When you have done everything you want, you end your turn. See <a href="/glossary/#turn-structure">turn structure</a>.']),
+    ("Questing",
+     ['To quest, exert a character (turn it sideways). You gain lore equal to its lore value. A character cannot quest, challenge or pay exert costs on the turn it comes into play: '
+      'it is <a href="/glossary/#dry">drying</a> until your next turn.']),
+    ("Challenging",
+     ['To challenge, exert one of your characters and pick an opposing character that is already exerted (or an opposing location). '
+      'Each side deals damage equal to its Strength to the other. A card with damage equal to or greater than its Willpower is banished and goes to the discard pile. '
+      'Damage stays on a character until it leaves play. Because you can only challenge exerted characters, a ready character is safe from challenges.']),
+    ("Keywords",
+     ['Many cards have a short bold name that stands for a package of rules. A few to learn first: '
+      '<a href="/keywords/evasive/">Evasive</a> (hard to challenge), <a href="/keywords/rush/">Rush</a> (can challenge right away), '
+      '<a href="/keywords/bodyguard/">Bodyguard</a> (protects your other characters), <a href="/keywords/shift/">Shift</a> (play a character on top of the same name for a different cost), '
+      '<a href="/keywords/singer/">Singer</a> (sing songs cheaply) and <a href="/keywords/ward/">Ward</a> (can\'t be chosen by opponents\' effects). '
+      'There are 14 in total on the <a href="/keywords/">keywords page</a>.']),
+    ("Next steps",
+     ['Look up any unfamiliar word in the <a href="/glossary/">glossary</a>, <a href="/search/">search every card</a>, or start a deck in the '
+      '<a href="/deck-builder/">deck builder</a>. This is a summary for new players. The official Comprehensive Rules always win if anything here differs; '
+      f'this guide was checked against version {G.RULES_VERSION}.']),
+]
+
+
+def learn_page(cards):
+    url = f"{SITE}/learn/how-to-play-lorcana/"
+    title = "How to play Disney Lorcana: the rules in plain English"
+    desc = "A beginner's guide to Disney Lorcana: how to win, build a deck, take a turn, quest, challenge and use keywords, in plain English and checked against the official rules."
+    today = GUIDE_DATE
+    ld = [{"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "url": url, "inLanguage": "en",
+           "author": {"@type": "Organization", "name": "Ready Set Ink", "url": SITE + "/"},
+           "publisher": {"@type": "Organization", "name": "Ready Set Ink", "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/icons/icon-512.png"}},
+           "image": SITE + "/icons/icon-512.png", "datePublished": today, "dateModified": today, "mainEntityOfPage": url},
+          crumb_ld([("Ready Set Ink", SITE + "/"), ("How to play Disney Lorcana", url)])]
+    extra = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>" + md_link_tag(f"{SITE}/learn/how-to-play-lorcana.md")
+    out = [head(title, desc, url, extra=extra), "<h1>How to play Disney Lorcana</h1>", f"<p>{esc(desc)}</p>"]
+    for h2, paras in GUIDE:
+        out.append(f"<h2>{esc(h2)}</h2>")
+        out += [f"<p>{p}</p>" for p in paras]
+    out.append(foot())
+    return "".join(out)
+
+
+def learn_md():
+    strip = lambda t: re.sub(r"<[^>]+>", "", t).replace("&nbsp;", " ")
+    out = ["# How to play Disney Lorcana", "", f"Source: {SITE}/learn/how-to-play-lorcana/", ""]
+    for h2, paras in GUIDE:
+        out += [f"## {h2}", ""] + [strip(p) for p in paras] + [""]
+    return "\n".join(out)
+
+
+# -------------------------------------------------------------------- data guide
+FIELDS = [("n", "Card name"), ("v", "Version (the subtitle after the name)"), ("c", "Ink cost"), ("ik", "1 if inkable"),
+          ("co", "Ink colors (list)"), ("ty", "Card type: Character, Action, Item or Location"), ("sub", "Classifications (list)"),
+          ("tx", "Full rules text"), ("ef", "Effect text without the ability names"), ("kw", "Keywords, each as [name, value or null]"),
+          ("st / wi / lo", "Strength, willpower and lore value"), ("r", "Rarity"), ("s", "Set code (the set the card was first printed in)"),
+          ("num", "Collector number"), ("sto", "Disney story the card comes from"), ("ar", "Artists (list)"), ("fl", "Flavor text"),
+          ("p / pf", "Regular and foil market price in USD, from a dated snapshot"), ("pr", "Other printings, when there are several")]
+
+
+def data_page(cards, sets, priced_on, generated):
+    url = f"{SITE}/data/"
+    n_rul = sum(1 for c in cards if c.get("ru"))
+    title = "Ready Set Ink data: Disney Lorcana card database and rulings"
+    desc = (f"Free, plain files with {len(cards):,} Disney Lorcana cards, official rulings, meta decks and a glossary, with a "
+            "guide to every field. No account or key needed.")
+    files = [("card-db.json", f"{len(cards):,} cards and {len(sets)} sets, refreshed {generated}."),
+             ("card-rules.json", f"Official rulings from Ravensburger's set release notes, keyed by card name ({n_rul} cards so far)."),
+             ("meta-decks.json", "Competitive deck lists grouped by point in a set's life."),
+             ("glossary.json", f"{len(G.T)} terms, including all 14 keywords with rule numbers."),
+             ("llms.txt", "A short map of the site written for AI assistants."),
+             ("sitemap.xml", "Every page, split into core, browse and card sitemaps.")]
+    ds = lambda name, d, f: {"@type": "Dataset", "name": name, "description": d, "url": url, "isAccessibleForFree": True,
+                             "creator": {"@type": "Organization", "name": "Ready Set Ink", "url": SITE + "/"}, "inLanguage": "en",
+                             "dateModified": generated, "keywords": ["Disney Lorcana", "trading card game", "card database"],
+                             "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": f"{SITE}/{f}"}]}
+    ld = [dict({"@context": "https://schema.org"}, **ds("Disney Lorcana card database", f"{len(cards):,} cards with stats, text, keywords and set data.", "card-db.json")),
+          dict({"@context": "https://schema.org"}, **ds("Disney Lorcana glossary", f"{len(G.T)} Lorcana terms and keyword rules in plain English.", "glossary.json")),
+          crumb_ld([("Ready Set Ink", SITE + "/"), ("Data", url)])]
+    extra = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>"
+    out = [head(title, desc, url, extra=extra), "<h1>Ready Set Ink data</h1>", f"<p>{esc(desc)}</p>",
+           "<h2>Files</h2><ul>"]
+    out += [f'<li><a href="/{f}"><b>{f}</b></a>: {esc(d)}</li>' for f, d in files]
+    out.append("</ul><p>Every card, keyword, set, franchise and character page also has a markdown version: add <code>.md</code> to its address, "
+               'for example <a href="/card/elsa-snow-queen.md">/card/elsa-snow-queen.md</a>.</p>')
+    out.append("<h2>Card fields</h2><p>Each entry in <code>cards</code> uses short field names. The ones you can rely on:</p><table><tr><th>Field</th><th>Meaning</th></tr>")
+    out += [f"<tr><td><code>{f}</code></td><td>{esc(d)}</td></tr>" for f, d in FIELDS]
+    out.append("</table><p>Other fields may appear and can change without notice. Cards that were reprinted are stored once, under the earliest set.</p>")
+    out.append("<h2>Where it comes from</h2><p>Card data was gathered from the community projects "
+               '<a href="https://lorcanajson.org" rel="noopener">LorcanaJSON</a> and <a href="https://lorcast.com" rel="noopener">Lorcast</a> '
+               "and checked and extended by Ready Set Ink. Rulings come only from Ravensburger's published set release notes. "
+               "Card pictures are not part of the data: they are loaded from the official and community image hosts when a page is viewed.</p>")
+    out.append("<h2>Using it</h2><p>The files are free to fetch. Please be polite with request rates and credit Ready Set Ink when you use them. "
+               f"Card names, text and artwork belong to Disney and Ravensburger. {esc(DISCLAIMER.split(' We may earn')[0])}</p>")
+    out.append(foot())
+    return "".join(out)
+
+
 def main():
     data = load_data()
     cards = data["cards"]
@@ -1383,8 +1571,21 @@ def main():
     with open(os.path.join(HERE, "glossary.md"), "w", encoding="utf-8") as f:
         f.write(glossary_md(cards))
     hub_urls.append("/glossary/")
+    write(os.path.join(HERE, "404.html"), not_found_page(cards))
+    write(os.path.join(HERE, "learn", "how-to-play-lorcana", "index.html"), learn_page(cards))
+    write(os.path.join(HERE, "learn", "how-to-play-lorcana.md"), learn_md())
+    hub_urls.append("/learn/how-to-play-lorcana/")
+    write(os.path.join(HERE, "data", "index.html"), data_page(cards, sets, priced_on, priced_on or data.get("generated")))
+    hub_urls.append("/data/")
     browse_urls = (keyword_pages(cards, slug_of) + set_pages(cards, sets, slug_of)
-                   + franchise_pages(cards, slug_of) + character_pages(cards, slug_of))
+                   + franchise_pages(cards, slug_of) + character_pages(cards, slug_of)
+                   + facet_pages(cards, slug_of, "inks", "Disney Lorcana cards by ink color", "Disney Lorcana inks",
+                                 "Browse every Disney Lorcana card by ink color: Amber, Amethyst, Emerald, Ruby, Sapphire and Steel.",
+                                 "ink", "co", lambda v: f"{v} ink cards", "ink")
+                   + facet_pages(cards, slug_of, "classifications", "Disney Lorcana cards by classification",
+                                 "Disney Lorcana classifications",
+                                 "Browse Disney Lorcana cards by classification: Princess, Villain, Pirate, Hero, Floodborn and more.",
+                                 "cls", "sub", lambda v: f"{v} cards", "cls"))
     try:
         import legal_drafts as LD          # local-only; absent in the public repo
     except ImportError:
@@ -1399,14 +1600,27 @@ def main():
             with open(os.path.join(HERE, sl_, "index.html"), "w", encoding="utf-8") as f:
                 f.write(legal_page(sl_, ttl, secs, intro))
 
-    today = date.today().isoformat()
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
-          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in ["/", "/card/"] + hub_urls + browse_urls + urls:
-        sm.append(f"<url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>")
-    sm.append("</urlset>")
+    # lastmod is the date the card data was last refreshed, not "today": a sitemap that claims
+    # every URL changed on every build teaches search engines to ignore lastmod altogether.
+    lastmod = data.get("priced") or data.get("generated") or date.today().isoformat()
+
+    def urlset(paths):
+        rows = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+        rows += [f"<url><loc>{SITE}{u}</loc><lastmod>{lastmod}</lastmod></url>" for u in paths]
+        return "\n".join(rows + ["</urlset>"])
+
+    parts = [("sitemap-core.xml", ["/"] + hub_urls),
+             ("sitemap-browse.xml", browse_urls),
+             ("sitemap-cards.xml", ["/card/"] + urls)]
+    for name, paths in parts:
+        with open(os.path.join(HERE, name), "w", encoding="utf-8") as f:
+            f.write(urlset(paths))
+    # One index, three children: Search Console then reports indexing per section, which is the
+    # fastest way to see whether card pages, browse pages or core pages are the ones lagging.
+    idx = ['<?xml version="1.0" encoding="UTF-8"?>', '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    idx += [f"<sitemap><loc>{SITE}/{n}</loc><lastmod>{lastmod}</lastmod></sitemap>" for n, _ in parts]
     with open(os.path.join(HERE, "sitemap.xml"), "w", encoding="utf-8") as f:
-        f.write("\n".join(sm))
+        f.write("\n".join(idx + ["</sitemapindex>"]))
 
     with open(os.path.join(HERE, "robots.txt"), "w", encoding="utf-8") as f:
         f.write(robots_txt())
@@ -1421,7 +1635,7 @@ def main():
     log(f"✓ wrote {len(urls)} card pages + index  ({total/1024/1024:.1f} MB, "
         f"{total/max(1,len(urls))/1024:.0f} KB each)")
     log(f"✓ wrote {len(HUBS)} hub pages: {', '.join('/'+h['slug'] for h in HUBS)}")
-    log(f"✓ wrote sitemap.xml ({len(urls)+len(hub_urls)+2} urls), robots.txt, manifest.webmanifest")
+    log(f"✓ wrote sitemap index + 3 sitemaps ({sum(len(p) for _, p in parts):,} urls), robots.txt, manifest.webmanifest")
 
 
 if __name__ == "__main__":

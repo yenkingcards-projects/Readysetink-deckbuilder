@@ -1,0 +1,461 @@
+# Ruby: Disney Lorcana Ruby ink cards
+
+Source: https://www.readysetink.com/inks/ruby/
+
+455 cards.
+
+- [A Pirate's Life](https://www.readysetink.com/card/a-pirates-life.html): Ruby, cost 6, Action, Uncommon
+- [Abby Park - Intense Fan](https://www.readysetink.com/card/abby-park-intense-fan.html): Ruby, cost 4, Character, Common
+- [Abu - Bold Helmsman](https://www.readysetink.com/card/abu-bold-helmsman.html): Ruby, cost 5, Character, Common
+- [Abu - Mischievous Monkey](https://www.readysetink.com/card/abu-mischievous-monkey.html): Ruby, cost 3, Character, Common
+- [Adorabeezle Winterpop - Ice Rocket Racer](https://www.readysetink.com/card/adorabeezle-winterpop-ice-rocket-racer.html): Ruby, cost 3, Character, Common
+- [Agnarr - King of Arendelle](https://www.readysetink.com/card/agnarr-king-of-arendelle.html): Ruby, cost 3, Character, Common
+- [Agrabah - Marketplace](https://www.readysetink.com/card/agrabah-marketplace.html): Ruby, cost 3, Location, Common
+- [Aladdin - Barreling Through](https://www.readysetink.com/card/aladdin-barreling-through.html): Ruby, cost 3, Character, Rare
+- [Aladdin - Fearless Navigator](https://www.readysetink.com/card/aladdin-fearless-navigator.html): Ruby, cost 2, Character, Common
+- [Aladdin - Heroic Outlaw](https://www.readysetink.com/card/aladdin-heroic-outlaw.html): Ruby, cost 7, Character, Super Rare
+- [Aladdin - Intrepid Commander](https://www.readysetink.com/card/aladdin-intrepid-commander.html): Ruby, cost 4, Character, Uncommon
+- [Aladdin - Street Rat](https://www.readysetink.com/card/aladdin-street-rat.html): Ruby, cost 3, Character, Common
+- [Alice - Clumsy as Can Be](https://www.readysetink.com/card/alice-clumsy-as-can-be.html): Emerald / Ruby, cost 6, Character, Rare
+- [Alice - Courageous Keyholder](https://www.readysetink.com/card/alice-courageous-keyholder.html): Ruby, cost 4, Character, Common
+- [Amazu's Inkcaster](https://www.readysetink.com/card/amazus-inkcaster.html): Ruby, cost 2, Item, Uncommon
+- [Ares - God of War](https://www.readysetink.com/card/ares-god-of-war.html): Ruby, cost 2, Character, Uncommon
+- [Ariel - Adventurous Collector](https://www.readysetink.com/card/ariel-adventurous-collector.html): Ruby, cost 3, Character, Super Rare
+- [Arthur - Novice Sparrow](https://www.readysetink.com/card/arthur-novice-sparrow.html): Ruby, cost 1, Character, Uncommon
+- [Audrey Ramirez - Gutsy Mechanic](https://www.readysetink.com/card/audrey-ramirez-gutsy-mechanic.html): Ruby, cost 1, Character, Common
+- [Babyhead - Leader of Sid's Toys](https://www.readysetink.com/card/babyhead-leader-of-sids-toys.html): Ruby, cost 4, Character, Rare
+- [Baloo - Fun-Loving Bear](https://www.readysetink.com/card/baloo-fun-loving-bear.html): Ruby, cost 3, Character, Common
+- [Baloo - Ol' Iron Paws](https://www.readysetink.com/card/baloo-ol-iron-paws.html): Ruby, cost 6, Character, Legendary
+- [Be King Undisputed](https://www.readysetink.com/card/be-king-undisputed.html): Ruby, cost 4, Action, Rare
+- [Be Prepared](https://www.readysetink.com/card/be-prepared.html): Ruby, cost 7, Action, Rare
+- [Beagle Boys - Small-Time Crooks](https://www.readysetink.com/card/beagle-boys-small-time-crooks.html): Ruby / Sapphire, cost 4, Character, Uncommon
+- [Beast - Aggressive Lord](https://www.readysetink.com/card/beast-aggressive-lord.html): Ruby, cost 2, Character, Uncommon
+- [Beast - Fierce Defender](https://www.readysetink.com/card/beast-fierce-defender.html): Ruby, cost 3, Character, Common
+- [Beast - Frustrated Designer](https://www.readysetink.com/card/beast-frustrated-designer.html): Ruby / Sapphire, cost 6, Character, Rare
+- [Beast - Snowfield Troublemaker](https://www.readysetink.com/card/beast-snowfield-troublemaker.html): Ruby, cost 2, Character, Super Rare
+- [Beast - Wounded](https://www.readysetink.com/card/beast-wounded.html): Ruby, cost 3, Character, Uncommon
+- [Beast's Castle - Overrun by the Vine](https://www.readysetink.com/card/beasts-castle-overrun-by-the-vine.html): Ruby, cost 4, Location, Rare
+- [Beast's Castle - Winter Gardens](https://www.readysetink.com/card/beasts-castle-winter-gardens.html): Ruby, cost 1, Location, Common
+- [Belle - Mechanic Extraordinaire](https://www.readysetink.com/card/belle-mechanic-extraordinaire.html): Ruby / Sapphire, cost 9, Character, Super Rare
+- [Belle & Beast - Certain as the Sun](https://www.readysetink.com/card/belle-beast-certain-as-the-sun.html): Ruby / Sapphire, cost 8, Character, Super Rare
+- [Benja - Bold Uniter](https://www.readysetink.com/card/benja-bold-uniter.html): Ruby, cost 4, Character, Common
+- [Billy Bones - Keeper of the Map](https://www.readysetink.com/card/billy-bones-keeper-of-the-map.html): Ruby, cost 5, Character, Common
+- [Boo - Energetic Child](https://www.readysetink.com/card/boo-energetic-child.html): Ruby, cost 3, Character, Rare
+- [Boun - Precocious Entrepreneur](https://www.readysetink.com/card/boun-precocious-entrepreneur.html): Ruby, cost 2, Character, Common
+- [Bouncing Ducky - Sid's Toy](https://www.readysetink.com/card/bouncing-ducky-sids-toy.html): Ruby, cost 6, Character, Rare
+- [Brawl](https://www.readysetink.com/card/brawl.html): Ruby, cost 3, Action, Common
+- [Break Free](https://www.readysetink.com/card/break-free.html): Ruby, cost 1, Action, Common
+- [Brom Bones - Burly Bully](https://www.readysetink.com/card/brom-bones-burly-bully.html): Ruby, cost 4, Character, Common
+- [Bronx - Ferocious Beast](https://www.readysetink.com/card/bronx-ferocious-beast.html): Ruby, cost 3, Character, Common
+- [Brooklyn - Second in Command](https://www.readysetink.com/card/brooklyn-second-in-command.html): Ruby, cost 2, Character, Common
+- [Brutus - Fearsome Crocodile](https://www.readysetink.com/card/brutus-fearsome-crocodile.html): Ruby, cost 4, Character, Common
+- [Bunch of Balloons](https://www.readysetink.com/card/bunch-of-balloons.html): Ruby, cost 1, Item, Rare
+- [Calhoun - Courageous Rescuer](https://www.readysetink.com/card/calhoun-courageous-rescuer.html): Amber / Ruby, cost 6, Character, Rare
+- [Candy Drift](https://www.readysetink.com/card/candy-drift.html): Amber / Ruby, cost 2, Action, Uncommon
+- [Captain - Colonel's Lieutenant](https://www.readysetink.com/card/captain-colonels-lieutenant.html): Ruby, cost 5, Character, Uncommon
+- [Captain Hook - Conniving Pirate](https://www.readysetink.com/card/captain-hook-conniving-pirate.html): Ruby, cost 2, Character, Uncommon
+- [Captain Hook - Master Swordsman](https://www.readysetink.com/card/captain-hook-master-swordsman.html): Ruby, cost 5, Character, Rare
+- [Captain Hook - Ruthless Pirate](https://www.readysetink.com/card/captain-hook-ruthless-pirate.html): Ruby, cost 7, Character, Rare
+- [Card Soldier's Spear](https://www.readysetink.com/card/card-soldiers-spear.html): Ruby, cost 1, Item, Uncommon
+- [Card Soldiers - Full Deck](https://www.readysetink.com/card/card-soldiers-full-deck.html): Ruby, cost 5, Character, Uncommon
+- [Card Soldiers - Royal Troops](https://www.readysetink.com/card/card-soldiers-royal-troops.html): Ruby, cost 1, Character, Common
+- [Carl Fredricksen - On the Move](https://www.readysetink.com/card/carl-fredricksen-on-the-move.html): Ruby, cost 4, Character, Super Rare
+- [Carl Fredricksen & Russell - Intrepid Explorers](https://www.readysetink.com/card/carl-fredricksen-russell-intrepid-explorers.html): Emerald / Ruby, cost 6, Character, Rare
+- [Carl's House - Flying High](https://www.readysetink.com/card/carls-house-flying-high.html): Ruby, cost 2, Location, Rare
+- [Cogsworth - Climbing Clock](https://www.readysetink.com/card/cogsworth-climbing-clock.html): Ruby, cost 3, Character, Common
+- [Colonel Hathi - On the March](https://www.readysetink.com/card/colonel-hathi-on-the-march.html): Ruby, cost 5, Character, Common
+- [Copper - Big Dog](https://www.readysetink.com/card/copper-big-dog.html): Ruby, cost 6, Character, Uncommon
+- [Copper - On the Scent](https://www.readysetink.com/card/copper-on-the-scent.html): Ruby, cost 6, Character, Uncommon
+- [Cri-Kee - Part of the Team](https://www.readysetink.com/card/cri-kee-part-of-the-team.html): Ruby, cost 4, Character, Common
+- [Cruella De Vil - Dodging Traffic](https://www.readysetink.com/card/cruella-de-vil-dodging-traffic.html): Ruby, cost 6, Character, Common
+- [Cut to the Chase](https://www.readysetink.com/card/cut-to-the-chase.html): Ruby, cost 2, Action, Uncommon
+- [Cy-Bug - Invasive Enemy](https://www.readysetink.com/card/cy-bug-invasive-enemy.html): Ruby, cost 2, Character, Common
+- [Daisy Duck - Spotless Food-Fighter](https://www.readysetink.com/card/daisy-duck-spotless-food-fighter.html): Ruby, cost 2, Character, Common
+- [Daisy Duck - Trendy Traveler](https://www.readysetink.com/card/daisy-duck-trendy-traveler.html): Ruby, cost 3, Character, Uncommon
+- [Dangerous Plan](https://www.readysetink.com/card/dangerous-plan.html): Ruby, cost 1, Action, Common
+- [Dash Parr - Dodgeball Dynamo](https://www.readysetink.com/card/dash-parr-dodgeball-dynamo.html): Ruby, cost 1, Character, Common
+- [Dash Parr - Super Fast](https://www.readysetink.com/card/dash-parr-super-fast.html): Ruby, cost 5, Character, Rare
+- [Dash Parr - Super Speedy](https://www.readysetink.com/card/dash-parr-super-speedy.html): Ruby, cost 5, Character, Uncommon
+- [Dash Parr & Violet Parr - Super Siblings](https://www.readysetink.com/card/dash-parr-violet-parr-super-siblings.html): Ruby / Steel, cost 8, Character, Legendary
+- [David Xanatos - Charismatic Leader](https://www.readysetink.com/card/david-xanatos-charismatic-leader.html): Ruby, cost 6, Character, Super Rare
+- [Della Duck - Unstoppable Mom](https://www.readysetink.com/card/della-duck-unstoppable-mom.html): Ruby, cost 2, Character, Common
+- [Denahi - Avenging Brother](https://www.readysetink.com/card/denahi-avenging-brother.html): Ruby, cost 5, Character, Rare
+- [Denahi - Impatient Hunter](https://www.readysetink.com/card/denahi-impatient-hunter.html): Ruby / Steel, cost 3, Character, Uncommon
+- [Devil's Eye Diamond](https://www.readysetink.com/card/devils-eye-diamond.html): Ruby, cost 2, Item, Rare
+- [Diablo - Watchful Raven](https://www.readysetink.com/card/diablo-watchful-raven.html): Ruby, cost 2, Character, Rare
+- [Dinner Bell](https://www.readysetink.com/card/dinner-bell.html): Ruby, cost 4, Item, Rare
+- [Divebomb](https://www.readysetink.com/card/divebomb.html): Ruby, cost 3, Action, Uncommon
+- [Don't Let the Frostbite Bite](https://www.readysetink.com/card/dont-let-the-frostbite-bite.html): Ruby, cost 7, Action, Rare
+- [Donald Duck - Boisterous Fowl](https://www.readysetink.com/card/donald-duck-boisterous-fowl.html): Ruby, cost 2, Character, Uncommon
+- [Donald Duck - Daisy's Date](https://www.readysetink.com/card/donald-duck-daisys-date.html): Ruby, cost 3, Character, Common
+- [Donald Duck - Nephew Fred](https://www.readysetink.com/card/donald-duck-nephew-fred.html): Ruby, cost 1, Character, Common
+- [Donald Duck - Not Again!](https://www.readysetink.com/card/donald-duck-not-again.html): Ruby, cost 5, Character, Legendary
+- [Donald Duck - Pie Slinger](https://www.readysetink.com/card/donald-duck-pie-slinger.html): Ruby, cost 5, Character, Legendary
+- [Donald Duck - Ruby Champion](https://www.readysetink.com/card/donald-duck-ruby-champion.html): Ruby, cost 4, Character, Rare
+- [Donald Duck - Taxi Driver](https://www.readysetink.com/card/donald-duck-taxi-driver.html): Ruby, cost 3, Character, Common
+- [Donald Duck - Vineling Rider](https://www.readysetink.com/card/donald-duck-vineling-rider.html): Ruby, cost 2, Character, Common
+- [Dormouse - Easily Agitated](https://www.readysetink.com/card/dormouse-easily-agitated.html): Emerald / Ruby, cost 2, Character, Uncommon
+- [Dragon Fire](https://www.readysetink.com/card/dragon-fire.html): Ruby, cost 5, Action, Uncommon
+- [Edgar Balthazar - Ambitious Butler](https://www.readysetink.com/card/edgar-balthazar-ambitious-butler.html): Ruby, cost 5, Character, Common
+- [Elisa Maza - Intrepid Investigator](https://www.readysetink.com/card/elisa-maza-intrepid-investigator.html): Ruby, cost 3, Character, Rare
+- [Elisa Maza - Transformed Gargoyle](https://www.readysetink.com/card/elisa-maza-transformed-gargoyle.html): Ruby, cost 3, Character, Rare
+- [Elsa - Concerned Sister](https://www.readysetink.com/card/elsa-concerned-sister.html): Ruby, cost 3, Character, Uncommon
+- [Elsa - Ice Artisan](https://www.readysetink.com/card/elsa-ice-artisan.html): Ruby, cost 6, Character, Legendary
+- [Elsa - Ice Surfer](https://www.readysetink.com/card/elsa-ice-surfer.html): Ruby, cost 4, Character, Common
+- [Energy Blast](https://www.readysetink.com/card/energy-blast.html): Ruby, cost 7, Action, Rare
+- [Ernesto de la Cruz - Ruthless Musician](https://www.readysetink.com/card/ernesto-de-la-cruz-ruthless-musician.html): Ruby, cost 6, Character, Rare
+- [Evil Comes Prepared](https://www.readysetink.com/card/evil-comes-prepared.html): Ruby, cost 2, Action, Common
+- [Fa Zhou - Honorable Warrior](https://www.readysetink.com/card/fa-zhou-honorable-warrior.html): Ruby, cost 2, Character, Common
+- [Fa Zhou - Mulan's Father](https://www.readysetink.com/card/fa-zhou-mulans-father.html): Ruby, cost 2, Character, Common
+- [Faline - Playful Fawn](https://www.readysetink.com/card/faline-playful-fawn.html): Ruby, cost 4, Character, Rare
+- [Fan the Flames](https://www.readysetink.com/card/fan-the-flames.html): Ruby, cost 1, Action, Uncommon
+- [Felicia - Always Hungry](https://www.readysetink.com/card/felicia-always-hungry.html): Ruby, cost 1, Character, Common
+- [Fidget - Ratigan's Henchman](https://www.readysetink.com/card/fidget-ratigans-henchman.html): Ruby, cost 3, Character, Common
+- [Fidget - Sneaky Bat](https://www.readysetink.com/card/fidget-sneaky-bat.html): Emerald / Ruby, cost 4, Character, Uncommon
+- [Figaro - Tuxedo Cat](https://www.readysetink.com/card/figaro-tuxedo-cat.html): Ruby, cost 3, Character, Uncommon
+- [Firefly Swarm](https://www.readysetink.com/card/firefly-swarm.html): Ruby, cost 3, Action, Uncommon
+- [Fix-It Felix, Jr. - Pint-Sized Hero](https://www.readysetink.com/card/fix-it-felix-jr-pint-sized-hero.html): Amber / Ruby, cost 5, Character, Uncommon
+- [Flotilla - Coconut Armada](https://www.readysetink.com/card/flotilla-coconut-armada.html): Ruby, cost 2, Location, Rare
+- [Flynn Rider - Frenemy](https://www.readysetink.com/card/flynn-rider-frenemy.html): Ruby, cost 2, Character, Super Rare
+- [Force of a Great Typhoon](https://www.readysetink.com/card/force-of-a-great-typhoon.html): Ruby, cost 2, Action, Common
+- [Friend Owl - Cantankerous Neighbor](https://www.readysetink.com/card/friend-owl-cantankerous-neighbor.html): Ruby, cost 2, Character, Common
+- [Gaston - Arrogant Hunter](https://www.readysetink.com/card/gaston-arrogant-hunter.html): Ruby, cost 2, Character, Common
+- [Gaston - Arrogant Showoff](https://www.readysetink.com/card/gaston-arrogant-showoff.html): Ruby, cost 4, Character, Common
+- [Gaston - Created by the Vine](https://www.readysetink.com/card/gaston-created-by-the-vine.html): Ruby, cost 2, Character, Common
+- [Gaston - Pure Paragon](https://www.readysetink.com/card/gaston-pure-paragon.html): Ruby, cost 9, Character, Rare
+- [Get Out!](https://www.readysetink.com/card/get-out.html): Ruby / Sapphire, cost 6, Action, Uncommon
+- [Get to Safety!](https://www.readysetink.com/card/get-to-safety.html): Ruby, cost 1, Action, Rare
+- [Ghostly Tale](https://www.readysetink.com/card/ghostly-tale.html): Ruby, cost 4, Action, Common
+- [Glimmer vs Glimmer](https://www.readysetink.com/card/glimmer-vs-glimmer.html): Ruby, cost 4, Action, Uncommon
+- [Gloyd Orangeboar - Fierce Competitor](https://www.readysetink.com/card/gloyd-orangeboar-fierce-competitor.html): Ruby, cost 3, Character, Common
+- [Go the Distance](https://www.readysetink.com/card/go-the-distance.html): Ruby, cost 2, Action, Common
+- [Gold Coin](https://www.readysetink.com/card/gold-coin.html): Ruby, cost 1, Item, Common
+- [Goliath - Guardian of Castle Wyvern](https://www.readysetink.com/card/goliath-guardian-of-castle-wyvern.html): Ruby, cost 4, Character, Uncommon
+- [Goofy - Dancing Superstar](https://www.readysetink.com/card/goofy-dancing-superstar.html): Ruby, cost 5, Character, Rare
+- [Goofy - Daredevil](https://www.readysetink.com/card/goofy-daredevil.html): Ruby, cost 5, Character, Common
+- [Goofy - Enthusiastic Tourist](https://www.readysetink.com/card/goofy-enthusiastic-tourist.html): Ruby, cost 1, Character, Common
+- [Goofy - Extreme Athlete](https://www.readysetink.com/card/goofy-extreme-athlete.html): Ruby, cost 7, Character, Super Rare
+- [Goofy - Flying Goof](https://www.readysetink.com/card/goofy-flying-goof.html): Ruby, cost 6, Character, Rare
+- [Goofy - Klutzy Skier](https://www.readysetink.com/card/goofy-klutzy-skier.html): Ruby, cost 3, Character, Rare
+- [Goofy - Marley's Clumsy Spirit](https://www.readysetink.com/card/goofy-marleys-clumsy-spirit.html): Ruby, cost 5, Character, Common
+- [Goofy - Super Goof](https://www.readysetink.com/card/goofy-super-goof.html): Ruby, cost 4, Character, Rare
+- [Grab Your Bow](https://www.readysetink.com/card/grab-your-bow.html): Ruby, cost 5, Action, Uncommon
+- [Grandma Wu - Fierce Red Panda](https://www.readysetink.com/card/grandma-wu-fierce-red-panda.html): Ruby, cost 7, Character, Rare
+- [Grandmother Fa - Spirited Elder](https://www.readysetink.com/card/grandmother-fa-spirited-elder.html): Ruby, cost 2, Character, Common
+- [Graveyard of Christmas Future - Lonely Resting Place](https://www.readysetink.com/card/graveyard-of-christmas-future-lonely-resting-place.html): Ruby, cost 4, Location, Rare
+- [Gyro Gearloose - Eccentric Inventor](https://www.readysetink.com/card/gyro-gearloose-eccentric-inventor.html): Ruby / Sapphire, cost 3, Character, Rare
+- [Hades - Fast Talker](https://www.readysetink.com/card/hades-fast-talker.html): Amethyst / Ruby, cost 6, Character, Rare
+- [Hades - Ruthless Tyrant](https://www.readysetink.com/card/hades-ruthless-tyrant.html): Amethyst / Ruby, cost 7, Character, Super Rare
+- [Hades - Strong Arm](https://www.readysetink.com/card/hades-strong-arm.html): Ruby, cost 5, Character, Legendary
+- [Hand-in-the-Box - Sid's Toy](https://www.readysetink.com/card/hand-in-the-box-sids-toy.html): Ruby, cost 2, Character, Uncommon
+- [Hans - Brazen Manipulator](https://www.readysetink.com/card/hans-brazen-manipulator.html): Ruby, cost 6, Character, Super Rare
+- [He's Got a Sword!](https://www.readysetink.com/card/hes-got-a-sword.html): Ruby, cost 1, Action, Common
+- [HeiHei - Accidental Explorer](https://www.readysetink.com/card/heihei-accidental-explorer.html): Ruby, cost 2, Character, Uncommon
+- [HeiHei - At the Crosswalk](https://www.readysetink.com/card/heihei-at-the-crosswalk.html): Ruby, cost 2, Character, Common
+- [Hercules - Clumsy Kid](https://www.readysetink.com/card/hercules-clumsy-kid.html): Ruby, cost 3, Character, Common
+- [Hercules - Daring Demigod](https://www.readysetink.com/card/hercules-daring-demigod.html): Ruby, cost 5, Character, Uncommon
+- [Hercules - Mighty Leader](https://www.readysetink.com/card/hercules-mighty-leader.html): Ruby, cost 4, Character, Legendary
+- [Hercules - Spectral Demigod](https://www.readysetink.com/card/hercules-spectral-demigod.html): Ruby, cost 1, Character, Common
+- [Hercules - Young Rescuer](https://www.readysetink.com/card/hercules-young-rescuer.html): Ruby, cost 2, Character, Super Rare
+- [Hermes - Harried Messenger](https://www.readysetink.com/card/hermes-harried-messenger.html): Ruby, cost 3, Character, Common
+- [Hero Work](https://www.readysetink.com/card/hero-work.html): Ruby, cost 2, Action, Rare
+- [Honest John - Not That Honest](https://www.readysetink.com/card/honest-john-not-that-honest.html): Ruby, cost 3, Character, Rare
+- [Honest John - Shameless Schemer](https://www.readysetink.com/card/honest-john-shameless-schemer.html): Ruby, cost 6, Character, Uncommon
+- [Hydra - Deadly Serpent](https://www.readysetink.com/card/hydra-deadly-serpent.html): Ruby, cost 6, Character, Legendary
+- [Héctor Rivera - Gone to Pieces](https://www.readysetink.com/card/h-ctor-rivera-gone-to-pieces.html): Ruby, cost 4, Character, Special
+- [I've Got a Dream](https://www.readysetink.com/card/ive-got-a-dream.html): Ruby, cost 2, Action, Uncommon
+- [I2I](https://www.readysetink.com/card/i2i.html): Ruby, cost 9, Action, Rare
+- [Iduna - Alarmed Queen](https://www.readysetink.com/card/iduna-alarmed-queen.html): Ruby, cost 2, Character, Common
+- [Imperial Proclamation](https://www.readysetink.com/card/imperial-proclamation.html): Ruby, cost 1, Item, Rare
+- [Inner Strength](https://www.readysetink.com/card/inner-strength.html): Ruby, cost 1, Action, Common
+- [Intimidation Tactics](https://www.readysetink.com/card/intimidation-tactics.html): Ruby, cost 2, Action, Uncommon
+- [It's Gonna Be Great!](https://www.readysetink.com/card/its-gonna-be-great.html): Ruby, cost 2, Action, Common
+- [Jack-Jack Parr - Incredible Potential](https://www.readysetink.com/card/jack-jack-parr-incredible-potential.html): Ruby, cost 4, Character, Super Rare
+- [Jasmine - Rebellious Princess](https://www.readysetink.com/card/jasmine-rebellious-princess.html): Ruby, cost 3, Character, Uncommon
+- [Jasper - Dodgy Boater](https://www.readysetink.com/card/jasper-dodgy-boater.html): Ruby, cost 5, Character, Uncommon
+- [Jebidiah Farnsworth - Cookie](https://www.readysetink.com/card/jebidiah-farnsworth-cookie.html): Ruby, cost 2, Character, Uncommon
+- [Jim Hawkins - Space Traveler](https://www.readysetink.com/card/jim-hawkins-space-traveler.html): Ruby, cost 5, Character, Legendary
+- [Jim Hawkins - Thrill Seeker](https://www.readysetink.com/card/jim-hawkins-thrill-seeker.html): Ruby, cost 2, Character, Common
+- [Jingle Joe - Sid's Toy](https://www.readysetink.com/card/jingle-joe-sids-toy.html): Ruby, cost 2, Character, Common
+- [John Darling - Sophisticated Swordsman](https://www.readysetink.com/card/john-darling-sophisticated-swordsman.html): Ruby, cost 2, Character, Uncommon
+- [John Silver - Ferocious Friend](https://www.readysetink.com/card/john-silver-ferocious-friend.html): Ruby, cost 4, Character, Uncommon
+- [Jolly Roger - Hook's Ship](https://www.readysetink.com/card/jolly-roger-hooks-ship.html): Ruby, cost 1, Location, Uncommon
+- [Jukebox](https://www.readysetink.com/card/jukebox.html): Ruby, cost 2, Item, Rare
+- [Kakamora - Boarding Party](https://www.readysetink.com/card/kakamora-boarding-party.html): Ruby, cost 4, Character, Uncommon
+- [Kakamora - Menacing Sailor](https://www.readysetink.com/card/kakamora-menacing-sailor.html): Ruby, cost 3, Character, Common
+- [Kakamora - Pirate Pitcher](https://www.readysetink.com/card/kakamora-pirate-pitcher.html): Ruby, cost 2, Character, Common
+- [Katrina Van Tassel - Rosy-Cheeked Lass](https://www.readysetink.com/card/katrina-van-tassel-rosy-cheeked-lass.html): Ruby, cost 4, Character, Uncommon
+- [Khan - Beloved Steed](https://www.readysetink.com/card/khan-beloved-steed.html): Ruby, cost 2, Character, Uncommon
+- [King Candy - Royal Racer](https://www.readysetink.com/card/king-candy-royal-racer.html): Amber / Ruby, cost 4, Character, Super Rare
+- [King Candy - Sugar Rush Nightmare](https://www.readysetink.com/card/king-candy-sugar-rush-nightmare.html): Amber / Ruby, cost 3, Character, Uncommon
+- [King Louie - King of Swing](https://www.readysetink.com/card/king-louie-king-of-swing.html): Ruby, cost 4, Character, Common
+- [Kristoff's Lute](https://www.readysetink.com/card/kristoffs-lute.html): Ruby, cost 3, Item, Rare
+- [Kuzco - Picky Customer](https://www.readysetink.com/card/kuzco-picky-customer.html): Ruby, cost 2, Character, Uncommon
+- [Lady Tremaine - Imperious Queen](https://www.readysetink.com/card/lady-tremaine-imperious-queen.html): Ruby, cost 6, Character, Super Rare
+- [Lady Tremaine - Overbearing Matriarch](https://www.readysetink.com/card/lady-tremaine-overbearing-matriarch.html): Ruby, cost 2, Character, Common
+- [Lady Tremaine - Scornful Snob](https://www.readysetink.com/card/lady-tremaine-scornful-snob.html): Ruby, cost 3, Character, Super Rare
+- [Lady Tremaine - Sinister Socialite](https://www.readysetink.com/card/lady-tremaine-sinister-socialite.html): Ruby, cost 5, Character, Super Rare
+- [Lafayette - Sleepy Basset Hound](https://www.readysetink.com/card/lafayette-sleepy-basset-hound.html): Ruby, cost 5, Character, Common
+- [LeFou - Cake Thief](https://www.readysetink.com/card/lefou-cake-thief.html): Ruby / Sapphire, cost 2, Character, Uncommon
+- [LeFou - Instigator](https://www.readysetink.com/card/lefou-instigator.html): Ruby, cost 2, Character, Rare
+- [Lead the Way](https://www.readysetink.com/card/lead-the-way.html): Ruby, cost 2, Action, Common
+- [Leviathan's Lair - Dangerous Ground](https://www.readysetink.com/card/leviathans-lair-dangerous-ground.html): Ruby, cost 4, Location, Rare
+- [Li Shang - General's Son](https://www.readysetink.com/card/li-shang-generals-son.html): Ruby, cost 1, Character, Common
+- [Li Shang - Newly Promoted](https://www.readysetink.com/card/li-shang-newly-promoted.html): Ruby / Steel, cost 3, Character, Uncommon
+- [Li Shang - Valorous General](https://www.readysetink.com/card/li-shang-valorous-general.html): Ruby, cost 3, Character, Uncommon
+- [Light the Fuse](https://www.readysetink.com/card/light-the-fuse.html): Ruby / Steel, cost 1, Action, Uncommon
+- [Like a Bird in the Sky](https://www.readysetink.com/card/like-a-bird-in-the-sky.html): Ruby, cost 2, Action, Common
+- [Lilo - Causing an Uproar](https://www.readysetink.com/card/lilo-causing-an-uproar.html): Ruby, cost 5, Character, Legendary
+- [Liquidator - Iced Over](https://www.readysetink.com/card/liquidator-iced-over.html): Ruby, cost 2, Character, Uncommon
+- [Lonely Grave](https://www.readysetink.com/card/lonely-grave.html): Ruby, cost 1, Item, Uncommon
+- [Longboat](https://www.readysetink.com/card/longboat.html): Ruby, cost 2, Item, Uncommon
+- [Lumiere - Fiery Friend](https://www.readysetink.com/card/lumiere-fiery-friend.html): Ruby, cost 2, Character, Rare
+- [Lumiere - Fired Up](https://www.readysetink.com/card/lumiere-fired-up.html): Ruby / Sapphire, cost 5, Character, Super Rare
+- [Lumiere - Hotheaded Candelabra](https://www.readysetink.com/card/lumiere-hotheaded-candelabra.html): Ruby, cost 7, Character, Rare
+- [Lumiere - Nimble Candelabra](https://www.readysetink.com/card/lumiere-nimble-candelabra.html): Ruby, cost 2, Character, Common
+- [Lyle Tiberius Rourke - Crystallized Commander](https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-commander.html): Ruby, cost 6, Character, Rare
+- [Lyle Tiberius Rourke - Crystallized Mercenary](https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-mercenary.html): Ruby, cost 8, Character, Rare
+- [Lyle Tiberius Rourke - Looking for His Moment](https://www.readysetink.com/card/lyle-tiberius-rourke-looking-for-his-moment.html): Ruby, cost 3, Character, Common
+- [Mad Hatter - Unruly Eccentric](https://www.readysetink.com/card/mad-hatter-unruly-eccentric.html): Emerald / Ruby, cost 6, Character, Rare
+- [Madam Mim - Rhino](https://www.readysetink.com/card/madam-mim-rhino.html): Amethyst / Ruby, cost 6, Character, Uncommon
+- [Madame Medusa - Deceiving Partner](https://www.readysetink.com/card/madame-medusa-deceiving-partner.html): Amethyst / Ruby, cost 3, Character, Uncommon
+- [Madame Medusa - Diamond Lover](https://www.readysetink.com/card/madame-medusa-diamond-lover.html): Amethyst / Ruby, cost 4, Character, Uncommon
+- [Madame Medusa - The Boss](https://www.readysetink.com/card/madame-medusa-the-boss.html): Ruby, cost 6, Character, Super Rare
+- [Maleficent - Monstrous Dragon](https://www.readysetink.com/card/maleficent-monstrous-dragon.html): Ruby, cost 9, Character, Legendary
+- [Marching Off to Battle](https://www.readysetink.com/card/marching-off-to-battle.html): Ruby, cost 4, Action, Common
+- [Markowski - Space Trooper](https://www.readysetink.com/card/markowski-space-trooper.html): Ruby, cost 4, Character, Common
+- [Maui - Half-Shark](https://www.readysetink.com/card/maui-half-shark.html): Ruby, cost 6, Character, Legendary
+- [Maui - Hero to All](https://www.readysetink.com/card/maui-hero-to-all.html): Ruby, cost 5, Character, Rare
+- [Maui - Snow Slider](https://www.readysetink.com/card/maui-snow-slider.html): Ruby, cost 4, Character, Common
+- [Maui - Soaring Demigod](https://www.readysetink.com/card/maui-soaring-demigod.html): Ruby, cost 3, Character, Uncommon
+- [Maui - Whale](https://www.readysetink.com/card/maui-whale.html): Ruby, cost 7, Character, Rare
+- [Maui's Fish Hook](https://www.readysetink.com/card/mauis-fish-hook.html): Ruby, cost 3, Item, Rare
+- [Maurice - Unconventional Inventor](https://www.readysetink.com/card/maurice-unconventional-inventor.html): Ruby, cost 4, Character, Rare
+- [Maurice's Machine](https://www.readysetink.com/card/maurices-machine.html): Ruby / Sapphire, cost 3, Item, Uncommon
+- [Max Goof - Rockin' Teen](https://www.readysetink.com/card/max-goof-rockin-teen.html): Ruby, cost 3, Character, Common
+- [Maximus - Team Champion](https://www.readysetink.com/card/maximus-team-champion.html): Ruby, cost 6, Character, Super Rare
+- [Medallion Weights](https://www.readysetink.com/card/medallion-weights.html): Ruby, cost 2, Item, Uncommon
+- [Meilin Lee - Popular Red Panda](https://www.readysetink.com/card/meilin-lee-popular-red-panda.html): Ruby, cost 6, Character, Legendary
+- [Michael Darling - Playful Swordsman](https://www.readysetink.com/card/michael-darling-playful-swordsman.html): Ruby, cost 1, Character, Common
+- [Mickey Mouse - Brave Little Prince](https://www.readysetink.com/card/mickey-mouse-brave-little-prince.html): Ruby, cost 3, Character, Legendary
+- [Mickey Mouse - Brave Little Tailor](https://www.readysetink.com/card/mickey-mouse-brave-little-tailor.html): Ruby, cost 8, Character, Legendary
+- [Mickey Mouse - Courageous Sailor](https://www.readysetink.com/card/mickey-mouse-courageous-sailor.html): Ruby, cost 3, Character, Common
+- [Mickey Mouse - Enthusiastic Dancer](https://www.readysetink.com/card/mickey-mouse-enthusiastic-dancer.html): Ruby, cost 4, Character, Common
+- [Mickey Mouse - Pirate Captain](https://www.readysetink.com/card/mickey-mouse-pirate-captain.html): Ruby, cost 5, Character, Super Rare
+- [Milo Thatch - Courageous Explorer](https://www.readysetink.com/card/milo-thatch-courageous-explorer.html): Ruby, cost 3, Character, Common
+- [Milo Thatch - Spirited Scholar](https://www.readysetink.com/card/milo-thatch-spirited-scholar.html): Ruby, cost 2, Character, Common
+- [Milo Thatch - Undaunted Scholar](https://www.readysetink.com/card/milo-thatch-undaunted-scholar.html): Ruby, cost 2, Character, Rare
+- [Ming Lee - Giant Red Panda](https://www.readysetink.com/card/ming-lee-giant-red-panda.html): Ruby, cost 9, Character, Super Rare
+- [Minnie Mouse - Always Classy](https://www.readysetink.com/card/minnie-mouse-always-classy.html): Ruby, cost 1, Character, Common
+- [Minnie Mouse - Daring Defender](https://www.readysetink.com/card/minnie-mouse-daring-defender.html): Amber / Ruby, cost 4, Character, Rare
+- [Minnie Mouse - Dazzling Dancer](https://www.readysetink.com/card/minnie-mouse-dazzling-dancer.html): Ruby, cost 3, Character, Uncommon
+- [Minnie Mouse - Pirate Lookout](https://www.readysetink.com/card/minnie-mouse-pirate-lookout.html): Ruby, cost 3, Character, Super Rare
+- [Minnie Mouse - Stylish Surfer](https://www.readysetink.com/card/minnie-mouse-stylish-surfer.html): Ruby, cost 3, Character, Uncommon
+- [Minnie Mouse - Wide-Eyed Diver](https://www.readysetink.com/card/minnie-mouse-wide-eyed-diver.html): Ruby, cost 4, Character, Rare
+- [Minnie Mouse - Zipping Around](https://www.readysetink.com/card/minnie-mouse-zipping-around.html): Ruby, cost 2, Character, Common
+- [Moana - Born Leader](https://www.readysetink.com/card/moana-born-leader.html): Ruby, cost 5, Character, Rare
+- [Moana - Chosen by the Ocean](https://www.readysetink.com/card/moana-chosen-by-the-ocean.html): Ruby, cost 5, Character, Uncommon
+- [Moana - Island Explorer](https://www.readysetink.com/card/moana-island-explorer.html): Ruby, cost 4, Character, Uncommon
+- [Moana - Kakamora Leader](https://www.readysetink.com/card/moana-kakamora-leader.html): Ruby, cost 7, Character, Rare
+- [Moana - Self-Taught Sailor](https://www.readysetink.com/card/moana-self-taught-sailor.html): Ruby, cost 1, Character, Common
+- [Moana - Undeterred Voyager](https://www.readysetink.com/card/moana-undeterred-voyager.html): Ruby, cost 4, Character, Common
+- [Most Everyone's Mad Here](https://www.readysetink.com/card/most-everyones-mad-here.html): Ruby, cost 7, Action, Rare
+- [Mother Gothel - Knows What's Best](https://www.readysetink.com/card/mother-gothel-knows-whats-best.html): Amethyst / Ruby, cost 2, Character, Rare
+- [Mother Gothel - Underhanded Schemer](https://www.readysetink.com/card/mother-gothel-underhanded-schemer.html): Ruby, cost 1, Character, Common
+- [Mother Gothel - Vain Sorceress](https://www.readysetink.com/card/mother-gothel-vain-sorceress.html): Amethyst / Ruby, cost 3, Character, Uncommon
+- [Mother Gothel - Withered and Wicked](https://www.readysetink.com/card/mother-gothel-withered-and-wicked.html): Ruby, cost 2, Character, Uncommon
+- [Mr. Incredible - Bob Parr](https://www.readysetink.com/card/mr-incredible-bob-parr.html): Ruby, cost 1, Character, Common
+- [Mr. Incredible - Super Strong](https://www.readysetink.com/card/mr-incredible-super-strong.html): Ruby, cost 5, Character, Legendary
+- [Mr. Snoops - Betrayed Partner](https://www.readysetink.com/card/mr-snoops-betrayed-partner.html): Ruby, cost 3, Character, Common
+- [Mulan - Charging Ahead](https://www.readysetink.com/card/mulan-charging-ahead.html): Ruby / Steel, cost 4, Character, Super Rare
+- [Mulan - Elite Archer](https://www.readysetink.com/card/mulan-elite-archer.html): Ruby, cost 6, Character, Legendary
+- [Mulan - Enemy of Entanglement](https://www.readysetink.com/card/mulan-enemy-of-entanglement.html): Ruby, cost 2, Character, Uncommon
+- [Mulan - Imperial General](https://www.readysetink.com/card/mulan-imperial-general.html): Ruby / Steel, cost 7, Character, Super Rare
+- [Mulan - Imperial Soldier](https://www.readysetink.com/card/mulan-imperial-soldier.html): Ruby, cost 5, Character, Super Rare
+- [Mulan - Injured Soldier](https://www.readysetink.com/card/mulan-injured-soldier.html): Ruby, cost 1, Character, Common
+- [Mulan - Ready for Battle](https://www.readysetink.com/card/mulan-ready-for-battle.html): Ruby, cost 4, Character, Uncommon
+- [Mulan - Soldier in Training](https://www.readysetink.com/card/mulan-soldier-in-training.html): Ruby, cost 4, Character, Common
+- [Mulan - Standing Her Ground](https://www.readysetink.com/card/mulan-standing-her-ground.html): Ruby, cost 3, Character, Uncommon
+- [Mushu - Fast-Talking Dragon](https://www.readysetink.com/card/mushu-fast-talking-dragon.html): Ruby, cost 3, Character, Common
+- [Mushu - Majestic Dragon](https://www.readysetink.com/card/mushu-majestic-dragon.html): Ruby / Steel, cost 5, Character, Rare
+- [Mushu - Your Worst Nightmare](https://www.readysetink.com/card/mushu-your-worst-nightmare.html): Ruby / Steel, cost 6, Character, Rare
+- [Mushu's Rocket](https://www.readysetink.com/card/mushus-rocket.html): Ruby, cost 1, Item, Uncommon
+- [Namaari - Heir of Fang](https://www.readysetink.com/card/namaari-heir-of-fang.html): Ruby, cost 3, Character, Rare
+- [Namaari - Nemesis](https://www.readysetink.com/card/namaari-nemesis.html): Ruby, cost 4, Character, Super Rare
+- [Nani's Payback](https://www.readysetink.com/card/nanis-payback.html): Ruby, cost 4, Action, Super Rare
+- [Negaduck - Evil Doppelganger](https://www.readysetink.com/card/negaduck-evil-doppelganger.html): Ruby, cost 2, Character, Common
+- [Negaduck - Public Enemy Number One](https://www.readysetink.com/card/negaduck-public-enemy-number-one.html): Ruby, cost 5, Character, Rare
+- [Nessus - River Guardian](https://www.readysetink.com/card/nessus-river-guardian.html): Ruby, cost 6, Character, Uncommon
+- [Next Stop, Olympus](https://www.readysetink.com/card/next-stop-olympus.html): Ruby, cost 2, Action, Rare
+- [Noi - Acrobatic Baby](https://www.readysetink.com/card/noi-acrobatic-baby.html): Ruby, cost 4, Character, Super Rare
+- [Nothing We Won't Do](https://www.readysetink.com/card/nothing-we-wont-do.html): Ruby, cost 8, Action, Rare
+- [Nutsy - Vulture Henchman](https://www.readysetink.com/card/nutsy-vulture-henchman.html): Ruby, cost 2, Character, Common
+- [Olaf - Snowman of Action](https://www.readysetink.com/card/olaf-snowman-of-action.html): Ruby, cost 9, Character, Rare
+- [On Your Feet! Now!](https://www.readysetink.com/card/on-your-feet-now.html): Ruby, cost 4, Action, Rare
+- [Out of Order](https://www.readysetink.com/card/out-of-order.html): Ruby, cost 7, Action, Common
+- [P.J. Pete - Caught Up in the Music](https://www.readysetink.com/card/p-j-pete-caught-up-in-the-music.html): Ruby, cost 4, Character, Common
+- [Pacha - Panicked Customer](https://www.readysetink.com/card/pacha-panicked-customer.html): Ruby, cost 4, Character, Uncommon
+- [Pegasus - Flying Steed](https://www.readysetink.com/card/pegasus-flying-steed.html): Ruby, cost 2, Character, Common
+- [Pegasus - Searching High and Low](https://www.readysetink.com/card/pegasus-searching-high-and-low.html): Ruby, cost 6, Character, Common
+- [Pete - Freebooter](https://www.readysetink.com/card/pete-freebooter.html): Ruby, cost 3, Character, Rare
+- [Pete - Pastry Chomper](https://www.readysetink.com/card/pete-pastry-chomper.html): Ruby, cost 3, Character, Common
+- [Pete - Steamboat Rival](https://www.readysetink.com/card/pete-steamboat-rival.html): Ruby, cost 7, Character, Super Rare
+- [Peter Pan - Fearless Fighter](https://www.readysetink.com/card/peter-pan-fearless-fighter.html): Ruby, cost 3, Character, Common
+- [Peter Pan - High Flyer](https://www.readysetink.com/card/peter-pan-high-flyer.html): Ruby, cost 3, Character, Common
+- [Peter Pan - Never Land Hero](https://www.readysetink.com/card/peter-pan-never-land-hero.html): Ruby, cost 3, Character, Common
+- [Peter Pan - Pirate's Bane](https://www.readysetink.com/card/peter-pan-pirates-bane.html): Ruby, cost 6, Character, Rare
+- [Peter Pan - Vine Duelist](https://www.readysetink.com/card/peter-pan-vine-duelist.html): Ruby, cost 1, Character, Common
+- [Peter Pan & Tinker Bell - Fast Friends](https://www.readysetink.com/card/peter-pan-tinker-bell-fast-friends.html): Amethyst / Ruby, cost 6, Character, Super Rare
+- [Peter Pan's Dagger](https://www.readysetink.com/card/peter-pans-dagger.html): Ruby, cost 2, Item, Common
+- [Poisoned Apple](https://www.readysetink.com/card/poisoned-apple.html): Ruby, cost 3, Item, Rare
+- [Pongo - Ol' Rascal](https://www.readysetink.com/card/pongo-ol-rascal.html): Ruby, cost 4, Character, Common
+- [Potion of Might](https://www.readysetink.com/card/potion-of-might.html): Ruby, cost 1, Item, Common
+- [Powerline - Musical Superstar](https://www.readysetink.com/card/powerline-musical-superstar.html): Ruby, cost 3, Character, Rare
+- [Powerline - Taking the Stage](https://www.readysetink.com/card/powerline-taking-the-stage.html): Ruby, cost 2, Character, Common
+- [Powerline - World's Greatest Rock Star](https://www.readysetink.com/card/powerline-worlds-greatest-rock-star.html): Ruby, cost 6, Character, Super Rare
+- [Preston Whitmore - Expedition Financier](https://www.readysetink.com/card/preston-whitmore-expedition-financier.html): Ruby, cost 5, Character, Common
+- [Prince Eric - Expert Helmsman](https://www.readysetink.com/card/prince-eric-expert-helmsman.html): Ruby, cost 4, Character, Super Rare
+- [Prince John - Fraidy-Cat](https://www.readysetink.com/card/prince-john-fraidy-cat.html): Ruby, cost 3, Character, Rare
+- [Prophetic Vision](https://www.readysetink.com/card/prophetic-vision.html): Ruby, cost 2, Action, Uncommon
+- [Pterodactyl Janie Doll - Sid's Toy](https://www.readysetink.com/card/pterodactyl-janie-doll-sids-toy.html): Ruby, cost 1, Character, Common
+- [Pushing Boundaries](https://www.readysetink.com/card/pushing-boundaries.html): Ruby, cost 2, Action, Uncommon
+- [Queen of Hearts - Haughty Monarch](https://www.readysetink.com/card/queen-of-hearts-haughty-monarch.html): Emerald / Ruby, cost 4, Character, Super Rare
+- [Queen of Hearts - Impatient Traveler](https://www.readysetink.com/card/queen-of-hearts-impatient-traveler.html): Ruby, cost 4, Character, Rare
+- [Queen of Hearts - Impulsive Ruler](https://www.readysetink.com/card/queen-of-hearts-impulsive-ruler.html): Ruby, cost 2, Character, Uncommon
+- [Queen of Hearts - Losing Her Temper](https://www.readysetink.com/card/queen-of-hearts-losing-her-temper.html): Ruby, cost 2, Character, Common
+- [Queen of Hearts - Sensing Weakness](https://www.readysetink.com/card/queen-of-hearts-sensing-weakness.html): Ruby, cost 5, Character, Uncommon
+- [Queen of Hearts - Unpredictable Bully](https://www.readysetink.com/card/queen-of-hearts-unpredictable-bully.html): Emerald / Ruby, cost 5, Character, Super Rare
+- [RLS Legacy - Solar Galleon](https://www.readysetink.com/card/rls-legacy-solar-galleon.html): Ruby, cost 4, Location, Rare
+- [Rahr!](https://www.readysetink.com/card/rahr.html): Ruby, cost 1, Action, Common
+- [Raksha - Fearless Mother](https://www.readysetink.com/card/raksha-fearless-mother.html): Ruby, cost 3, Character, Common
+- [Rama - Vigilant Father](https://www.readysetink.com/card/rama-vigilant-father.html): Ruby, cost 6, Character, Common
+- [Rancis Fluggerbutter - Chocolate Charger](https://www.readysetink.com/card/rancis-fluggerbutter-chocolate-charger.html): Ruby, cost 4, Character, Common
+- [Randall Boggs - Envious Coworker](https://www.readysetink.com/card/randall-boggs-envious-coworker.html): Ruby, cost 2, Character, Rare
+- [Rapunzel - Letting Down Her Hair](https://www.readysetink.com/card/rapunzel-letting-down-her-hair.html): Ruby, cost 6, Character, Uncommon
+- [Ratigan - Nefarious Criminal](https://www.readysetink.com/card/ratigan-nefarious-criminal.html): Ruby, cost 4, Character, Legendary
+- [Ratigan - Party Crasher](https://www.readysetink.com/card/ratigan-party-crasher.html): Ruby, cost 7, Character, Rare
+- [Ratigan - Raging Rat](https://www.readysetink.com/card/ratigan-raging-rat.html): Ruby, cost 3, Character, Common
+- [Ratigan - Very Large Mouse](https://www.readysetink.com/card/ratigan-very-large-mouse.html): Ruby, cost 5, Character, Rare
+- [Ratigan's Party - Seedy Back Room](https://www.readysetink.com/card/ratigans-party-seedy-back-room.html): Ruby, cost 2, Location, Uncommon
+- [Raya - Fierce Protector](https://www.readysetink.com/card/raya-fierce-protector.html): Ruby, cost 3, Character, Super Rare
+- [Raya - Guardian of the Dragon Gem](https://www.readysetink.com/card/raya-guardian-of-the-dragon-gem.html): Ruby, cost 4, Character, Common
+- [Raya - Headstrong](https://www.readysetink.com/card/raya-headstrong.html): Ruby, cost 3, Character, Common
+- [Raya - Kumandran Rider](https://www.readysetink.com/card/raya-kumandran-rider.html): Ruby, cost 4, Character, Rare
+- [Raya - Leader of Heart](https://www.readysetink.com/card/raya-leader-of-heart.html): Ruby, cost 6, Character, Super Rare
+- [Raya - Warrior of Kumandra](https://www.readysetink.com/card/raya-warrior-of-kumandra.html): Ruby, cost 4, Character, Uncommon
+- [Red Alert](https://www.readysetink.com/card/red-alert.html): Ruby, cost 4, Action, Uncommon
+- [Red Moon Ritual](https://www.readysetink.com/card/red-moon-ritual.html): Ruby, cost 7, Action, Uncommon
+- [Remote Inklands - Desert Ruins](https://www.readysetink.com/card/remote-inklands-desert-ruins.html): Ruby, cost 2, Location, Rare
+- [Robin Hood - Sharpshooter](https://www.readysetink.com/card/robin-hood-sharpshooter.html): Ruby, cost 4, Character, Legendary
+- [Roller Bob - Sid's Toy](https://www.readysetink.com/card/roller-bob-sids-toy.html): Ruby, cost 3, Character, Uncommon
+- [Roxanne - Concert Lover](https://www.readysetink.com/card/roxanne-concert-lover.html): Ruby, cost 2, Character, Rare
+- [Roxanne - Powerline Fan](https://www.readysetink.com/card/roxanne-powerline-fan.html): Ruby, cost 2, Character, Uncommon
+- [Ruby Chromicon](https://www.readysetink.com/card/ruby-chromicon.html): Ruby, cost 1, Item, Uncommon
+- [Ruby Coil](https://www.readysetink.com/card/ruby-coil.html): Ruby, cost 2, Item, Uncommon
+- [Scar - Betrayer](https://www.readysetink.com/card/scar-betrayer.html): Ruby, cost 5, Character, Uncommon
+- [Scar - Fiery Usurper](https://www.readysetink.com/card/scar-fiery-usurper.html): Ruby, cost 4, Character, Common
+- [Scar - Heartless Hunter](https://www.readysetink.com/card/scar-heartless-hunter.html): Ruby, cost 5, Character, Super Rare
+- [Scar - Shameless Firebrand](https://www.readysetink.com/card/scar-shameless-firebrand.html): Ruby, cost 8, Character, Rare
+- [Scar - Vicious Cheater](https://www.readysetink.com/card/scar-vicious-cheater.html): Ruby, cost 7, Character, Legendary
+- [Scream Canister](https://www.readysetink.com/card/scream-canister.html): Ruby, cost 2, Item, Uncommon
+- [Scrooge McDuck - Ebenezer Scrooge](https://www.readysetink.com/card/scrooge-mcduck-ebenezer-scrooge.html): Ruby, cost 4, Character, Super Rare
+- [Scrooge McDuck - Ghostly Ebenezer](https://www.readysetink.com/card/scrooge-mcduck-ghostly-ebenezer.html): Ruby, cost 2, Character, Uncommon
+- [Scrooge's Counting House - Ebenezer's Office](https://www.readysetink.com/card/scrooges-counting-house-ebenezers-office.html): Ruby, cost 2, Location, Uncommon
+- [Scroop - Backstabber](https://www.readysetink.com/card/scroop-backstabber.html): Ruby, cost 5, Character, Uncommon
+- [Sergeant Tibbs - Courageous Cat](https://www.readysetink.com/card/sergeant-tibbs-courageous-cat.html): Ruby, cost 1, Character, Common
+- [Shere Khan - Fierce and Furious](https://www.readysetink.com/card/shere-khan-fierce-and-furious.html): Ruby, cost 8, Character, Rare
+- [Shere Khan - Keen-Eyed Hunter](https://www.readysetink.com/card/shere-khan-keen-eyed-hunter.html): Ruby, cost 2, Character, Common
+- [Shere Khan - Menacing Predator](https://www.readysetink.com/card/shere-khan-menacing-predator.html): Ruby, cost 3, Character, Rare
+- [Shield of Virtue](https://www.readysetink.com/card/shield-of-virtue.html): Ruby, cost 1, Item, Uncommon
+- [Sid Phillips - Toy Surgeon](https://www.readysetink.com/card/sid-phillips-toy-surgeon.html): Ruby, cost 6, Character, Legendary
+- [Simba - Adventurous Successor](https://www.readysetink.com/card/simba-adventurous-successor.html): Ruby, cost 1, Character, Common
+- [Simba - Scrappy Cub](https://www.readysetink.com/card/simba-scrappy-cub.html): Ruby, cost 2, Character, Rare
+- [Sir Kay - Unruly Knight](https://www.readysetink.com/card/sir-kay-unruly-knight.html): Ruby, cost 2, Character, Uncommon
+- [Sisu - Daring Visitor](https://www.readysetink.com/card/sisu-daring-visitor.html): Ruby, cost 3, Character, Uncommon
+- [Sisu - Emboldened Warrior](https://www.readysetink.com/card/sisu-emboldened-warrior.html): Ruby, cost 3, Character, Rare
+- [Sisu - Empowered Sibling](https://www.readysetink.com/card/sisu-empowered-sibling.html): Ruby, cost 8, Character, Legendary
+- [Skull Rock - Isolated Fortress](https://www.readysetink.com/card/skull-rock-isolated-fortress.html): Ruby, cost 2, Location, Common
+- [Sleepy Hollow - The Bridge](https://www.readysetink.com/card/sleepy-hollow-the-bridge.html): Ruby, cost 3, Location, Uncommon
+- [Slightly - Lost Boy](https://www.readysetink.com/card/slightly-lost-boy.html): Ruby, cost 4, Character, Uncommon
+- [Slushy - Glacial Guster](https://www.readysetink.com/card/slushy-glacial-guster.html): Ruby, cost 4, Character, Uncommon
+- [Snowanna Rainbeau - Cool Competitor](https://www.readysetink.com/card/snowanna-rainbeau-cool-competitor.html): Ruby, cost 3, Character, Common
+- [Snuggly Duckling - Disreputable Pub](https://www.readysetink.com/card/snuggly-duckling-disreputable-pub.html): Ruby, cost 2, Location, Rare
+- [Splodyhead - Experiment 619](https://www.readysetink.com/card/splodyhead-experiment-619.html): Ruby, cost 3, Character, Common
+- [Stabbington Brother - With a Patch](https://www.readysetink.com/card/stabbington-brother-with-a-patch.html): Ruby, cost 5, Character, Common
+- [Stabbington Brother - Without a Patch](https://www.readysetink.com/card/stabbington-brother-without-a-patch.html): Ruby, cost 4, Character, Common
+- [Stacey - Powerline Superfan](https://www.readysetink.com/card/stacey-powerline-superfan.html): Ruby, cost 3, Character, Uncommon
+- [Stitch - Abomination](https://www.readysetink.com/card/stitch-abomination.html): Ruby, cost 6, Character, Rare
+- [Stitch - Little Rocket](https://www.readysetink.com/card/stitch-little-rocket.html): Ruby, cost 2, Character, Common
+- [Sugar Rush Speedway - Starting Line](https://www.readysetink.com/card/sugar-rush-speedway-starting-line.html): Ruby, cost 1, Location, Rare
+- [Sulley - Protective Monster](https://www.readysetink.com/card/sulley-protective-monster.html): Ruby, cost 3, Character, Uncommon
+- [Sulley & Boo - Scare Buddies](https://www.readysetink.com/card/sulley-boo-scare-buddies.html): Amber / Ruby, cost 6, Character, Super Rare
+- [Sumerian Talisman](https://www.readysetink.com/card/sumerian-talisman.html): Ruby, cost 3, Item, Uncommon
+- [Sun Yee - Red Panda Spirit](https://www.readysetink.com/card/sun-yee-red-panda-spirit.html): Ruby, cost 5, Character, Uncommon
+- [Sword in the Stone](https://www.readysetink.com/card/sword-in-the-stone.html): Ruby, cost 1, Item, Uncommon
+- [Sword of Truth](https://www.readysetink.com/card/sword-of-truth.html): Ruby, cost 4, Item, Rare
+- [Taffyta Muttonfudge - Crowd Favorite](https://www.readysetink.com/card/taffyta-muttonfudge-crowd-favorite.html): Ruby, cost 1, Character, Common
+- [Taffyta Muttonfudge - Ruthless Rival](https://www.readysetink.com/card/taffyta-muttonfudge-ruthless-rival.html): Ruby, cost 2, Character, Uncommon
+- [Taffyta Muttonfudge - Sour Speedster](https://www.readysetink.com/card/taffyta-muttonfudge-sour-speedster.html): Ruby, cost 4, Character, Uncommon
+- [Tangle](https://www.readysetink.com/card/tangle.html): Ruby, cost 2, Action, Common
+- [Taurus Bulba - Steerminator](https://www.readysetink.com/card/taurus-bulba-steerminator.html): Ruby, cost 3, Character, Common
+- [Te Kā - Elemental Terror](https://www.readysetink.com/card/te-k-elemental-terror.html): Amethyst / Ruby, cost 10, Character, Super Rare
+- [Te Kā - The Burning One](https://www.readysetink.com/card/te-k-the-burning-one.html): Ruby, cost 6, Character, Super Rare
+- [Teeth and Ambitions](https://www.readysetink.com/card/teeth-and-ambitions.html): Ruby, cost 2, Action, Rare
+- [The Bear - Territorial Animal](https://www.readysetink.com/card/the-bear-territorial-animal.html): Ruby, cost 3, Character, Common
+- [The Bitterwood - Underground Forest](https://www.readysetink.com/card/the-bitterwood-underground-forest.html): Ruby, cost 4, Location, Rare
+- [The Coachman - Greedy Deceiver](https://www.readysetink.com/card/the-coachman-greedy-deceiver.html): Ruby / Steel, cost 2, Character, Uncommon
+- [The Cold Never Bothered Me](https://www.readysetink.com/card/the-cold-never-bothered-me.html): Ruby, cost 3, Action, Rare
+- [The Dodo - Outlandish Storyteller](https://www.readysetink.com/card/the-dodo-outlandish-storyteller.html): Ruby, cost 3, Character, Common
+- [The Headless Horseman - Terror of Sleepy Hollow](https://www.readysetink.com/card/the-headless-horseman-terror-of-sleepy-hollow.html): Ruby, cost 5, Character, Legendary
+- [The Islands I Pulled from the Sea](https://www.readysetink.com/card/the-islands-i-pulled-from-the-sea.html): Ruby, cost 3, Action, Uncommon
+- [The Leviathan - Guardian of Atlantis](https://www.readysetink.com/card/the-leviathan-guardian-of-atlantis.html): Ruby, cost 10, Character, Super Rare
+- [The Matchmaker - Unforgiving Expert](https://www.readysetink.com/card/the-matchmaker-unforgiving-expert.html): Ruby, cost 4, Character, Common
+- [The Most Diabolical Scheme](https://www.readysetink.com/card/the-most-diabolical-scheme.html): Ruby, cost 3, Action, Uncommon
+- [The Phantom Blot - Shadowy Figure](https://www.readysetink.com/card/the-phantom-blot-shadowy-figure.html): Ruby, cost 2, Character, Uncommon
+- [The Plank](https://www.readysetink.com/card/the-plank.html): Ruby, cost 3, Item, Common
+- [The Sword Released](https://www.readysetink.com/card/the-sword-released.html): Ruby, cost 3, Item, Rare
+- [The Sword of Shan-Yu](https://www.readysetink.com/card/the-sword-of-shan-yu.html): Ruby, cost 1, Item, Rare
+- [Thievery](https://www.readysetink.com/card/thievery.html): Ruby, cost 1, Action, Common
+- [Thumper - Young Bunny](https://www.readysetink.com/card/thumper-young-bunny.html): Ruby, cost 2, Character, Uncommon
+- [Tigger - Hunny Barbarian](https://www.readysetink.com/card/tigger-hunny-barbarian.html): Ruby, cost 4, Character, Rare
+- [Tigger - In the Crow's Nest](https://www.readysetink.com/card/tigger-in-the-crows-nest.html): Ruby, cost 3, Character, Rare
+- [Tigger - One of a Kind](https://www.readysetink.com/card/tigger-one-of-a-kind.html): Ruby, cost 3, Character, Common
+- [Tigger - Wonderful Thing](https://www.readysetink.com/card/tigger-wonderful-thing.html): Ruby, cost 6, Character, Uncommon
+- [Time to Go!](https://www.readysetink.com/card/time-to-go.html): Ruby, cost 3, Action, Uncommon
+- [Tinker Bell - Fancy Footwork](https://www.readysetink.com/card/tinker-bell-fancy-footwork.html): Ruby, cost 1, Character, Common
+- [Tinker Bell - Insistent Fairy](https://www.readysetink.com/card/tinker-bell-insistent-fairy.html): Ruby, cost 2, Character, Legendary
+- [Tinker Bell - Temperamental Fairy](https://www.readysetink.com/card/tinker-bell-temperamental-fairy.html): Ruby, cost 5, Character, Uncommon
+- [Toby - Dogged Companion](https://www.readysetink.com/card/toby-dogged-companion.html): Ruby, cost 1, Character, Common
+- [Tong - Survivor](https://www.readysetink.com/card/tong-survivor.html): Ruby, cost 4, Character, Common
+- [Training Grounds - Impossible Pillar](https://www.readysetink.com/card/training-grounds-impossible-pillar.html): Ruby, cost 1, Location, Common
+- [Tramp - Quick on His Feet](https://www.readysetink.com/card/tramp-quick-on-his-feet.html): Ruby, cost 2, Character, Rare
+- [Trigger - Not-So-Sharp Shooter](https://www.readysetink.com/card/trigger-not-so-sharp-shooter.html): Ruby, cost 2, Character, Uncommon
+- [Tuk Tuk - Lively Partner](https://www.readysetink.com/card/tuk-tuk-lively-partner.html): Ruby, cost 3, Character, Rare
+- [Tuk Tuk - Wrecking Ball](https://www.readysetink.com/card/tuk-tuk-wrecking-ball.html): Ruby, cost 4, Character, Rare
+- [Turbo - Royal Hack](https://www.readysetink.com/card/turbo-royal-hack.html): Ruby, cost 2, Character, Uncommon
+- [Tweedledee & Tweedledum - Strange Storytellers](https://www.readysetink.com/card/tweedledee-tweedledum-strange-storytellers.html): Emerald / Ruby, cost 5, Character, Uncommon
+- [Twitterpated](https://www.readysetink.com/card/twitterpated.html): Ruby, cost 1, Action, Uncommon
+- [Unconventional Tool](https://www.readysetink.com/card/unconventional-tool.html): Ruby, cost 1, Item, Common
+- [Undermine](https://www.readysetink.com/card/undermine.html): Emerald / Ruby, cost 2, Action, Uncommon
+- [Vanellope von Schweetz - Gutsy Go-Getter](https://www.readysetink.com/card/vanellope-von-schweetz-gutsy-go-getter.html): Ruby, cost 3, Character, Uncommon
+- [Vanellope von Schweetz - Random Roster Racer](https://www.readysetink.com/card/vanellope-von-schweetz-random-roster-racer.html): Ruby, cost 4, Character, Rare
+- [Vanellope von Schweetz - Spunky Speedster](https://www.readysetink.com/card/vanellope-von-schweetz-spunky-speedster.html): Ruby, cost 2, Character, Common
+- [Vincenzo Santorini - On the Run](https://www.readysetink.com/card/vincenzo-santorini-on-the-run.html): Ruby, cost 4, Character, Rare
+- [Vitalisphere](https://www.readysetink.com/card/vitalisphere.html): Ruby, cost 1, Item, Common
+- [Voyage](https://www.readysetink.com/card/voyage.html): Ruby, cost 1, Action, Common
+- [Wasabi - Called into Battle](https://www.readysetink.com/card/wasabi-called-into-battle.html): Ruby, cost 5, Character, Super Rare
+- [We've Got Company!](https://www.readysetink.com/card/weve-got-company.html): Ruby, cost 3, Action, Rare
+- [Webby Vanderquack - Enthusiastic Duck](https://www.readysetink.com/card/webby-vanderquack-enthusiastic-duck.html): Ruby, cost 3, Character, Common
+- [Wendy Darling - Courageous Captain](https://www.readysetink.com/card/wendy-darling-courageous-captain.html): Ruby, cost 2, Character, Rare
+- [Wendy Darling - Pirate Queen](https://www.readysetink.com/card/wendy-darling-pirate-queen.html): Amber / Ruby, cost 7, Character, Uncommon
+- [What Did You Call Me?](https://www.readysetink.com/card/what-did-you-call-me.html): Ruby, cost 1, Action, Common
+- [Who's With Me?](https://www.readysetink.com/card/whos-with-me.html): Ruby, cost 3, Action, Super Rare
+- [Willie the Giant - Ghost of Christmas Present](https://www.readysetink.com/card/willie-the-giant-ghost-of-christmas-present.html): Ruby, cost 4, Character, Rare
+- [Wind-Up Frog - Sid's Toy](https://www.readysetink.com/card/wind-up-frog-sids-toy.html): Ruby, cost 2, Character, Common
+- [Wreck-It Ralph - Back Seat Driver](https://www.readysetink.com/card/wreck-it-ralph-back-seat-driver.html): Ruby, cost 3, Character, Rare
+- [Wreck-It Ralph - Big Lug](https://www.readysetink.com/card/wreck-it-ralph-big-lug.html): Amber / Ruby, cost 7, Character, Super Rare
+- [Wreck-It Ralph - Demolition Dude](https://www.readysetink.com/card/wreck-it-ralph-demolition-dude.html): Ruby, cost 3, Character, Rare
+- [Wreck-It Ralph - Raging Wrecker](https://www.readysetink.com/card/wreck-it-ralph-raging-wrecker.html): Ruby, cost 7, Character, Legendary
+- [You Can Fly!](https://www.readysetink.com/card/you-can-fly.html): Ruby, cost 2, Action, Uncommon
+- [Yzma - Choosy Customer](https://www.readysetink.com/card/yzma-choosy-customer.html): Ruby, cost 4, Character, Common
+- [Zeus - Defiant God](https://www.readysetink.com/card/zeus-defiant-god.html): Ruby, cost 5, Character, Uncommon

@@ -1,0 +1,64 @@
+# Alien: Disney Lorcana Alien cards
+
+Source: https://www.readysetink.com/classifications/alien/
+
+58 cards.
+
+- [Alien - True Believer](https://www.readysetink.com/card/alien-true-believer.html): Emerald, cost 1, Character, Rare
+- [Angel - Experiment 624](https://www.readysetink.com/card/angel-experiment-624.html): Steel, cost 4, Character, Legendary
+- [Angel - Siren Singer](https://www.readysetink.com/card/angel-siren-singer.html): Amber, cost 2, Character, Uncommon
+- [Billy Bones - Keeper of the Map](https://www.readysetink.com/card/billy-bones-keeper-of-the-map.html): Ruby, cost 5, Character, Common
+- [Billy Bones - Space Sailor](https://www.readysetink.com/card/billy-bones-space-sailor.html): Steel, cost 3, Character, Uncommon
+- [Captain Amelia - Commander of the Legacy](https://www.readysetink.com/card/captain-amelia-commander-of-the-legacy.html): Steel, cost 4, Character, Super Rare
+- [Captain Amelia - First in Command](https://www.readysetink.com/card/captain-amelia-first-in-command.html): Sapphire, cost 3, Character, Common
+- [Dr. Delbert Doppler - Fussy Astronomer](https://www.readysetink.com/card/dr-delbert-doppler-fussy-astronomer.html): Sapphire, cost 4, Character, Uncommon
+- [Dr. Hamsterviel - Evil Observer](https://www.readysetink.com/card/dr-hamsterviel-evil-observer.html): Steel, cost 3, Character, Uncommon
+- [Dr. Hamsterviel - Infamous Scientist](https://www.readysetink.com/card/dr-hamsterviel-infamous-scientist.html): Steel, cost 8, Character, Rare
+- [Gantu - Captain Crankyhead](https://www.readysetink.com/card/gantu-captain-crankyhead.html): Steel, cost 5, Character, Rare
+- [Gantu - Experienced Enforcer](https://www.readysetink.com/card/gantu-experienced-enforcer.html): Steel, cost 4, Character, Super Rare
+- [Gantu - Galactic Federation Captain](https://www.readysetink.com/card/gantu-galactic-federation-captain.html): Steel, cost 8, Character, Legendary
+- [Gantu - Hamsterviel's Accomplice](https://www.readysetink.com/card/gantu-hamsterviels-accomplice.html): Steel, cost 1, Character, Uncommon
+- [Gigi - Best in Snow](https://www.readysetink.com/card/gigi-best-in-snow.html): Steel, cost 3, Character, Uncommon
+- [Grand Councilwoman - Federation Leader](https://www.readysetink.com/card/grand-councilwoman-federation-leader.html): Amber, cost 2, Character, Uncommon
+- [Grand Councilwoman - Galactic Authority](https://www.readysetink.com/card/grand-councilwoman-galactic-authority.html): Steel, cost 4, Character, Rare
+- [John Silver - Alien Pirate](https://www.readysetink.com/card/john-silver-alien-pirate.html): Emerald, cost 6, Character, Legendary
+- [John Silver - Ferocious Friend](https://www.readysetink.com/card/john-silver-ferocious-friend.html): Ruby, cost 4, Character, Uncommon
+- [John Silver - Greedy Treasure Seeker](https://www.readysetink.com/card/john-silver-greedy-treasure-seeker.html): Steel, cost 3, Character, Rare
+- [John Silver - Ship's Cook](https://www.readysetink.com/card/john-silver-ships-cook.html): Steel, cost 3, Character, Common
+- [John Silver - Stern Captain](https://www.readysetink.com/card/john-silver-stern-captain.html): Steel, cost 8, Character, Legendary
+- [John Silver - Terror of the Realm](https://www.readysetink.com/card/john-silver-terror-of-the-realm.html): Sapphire, cost 8, Character, Rare
+- [John Silver - Vengeful Pirate](https://www.readysetink.com/card/john-silver-vengeful-pirate.html): Emerald / Steel, cost 8, Character, Rare
+- [Jumba Jookiba - Critical Scientist](https://www.readysetink.com/card/jumba-jookiba-critical-scientist.html): Sapphire, cost 4, Character, Uncommon
+- [Jumba Jookiba - Prolific Inventor](https://www.readysetink.com/card/jumba-jookiba-prolific-inventor.html): Amber, cost 8, Character, Rare
+- [Jumba Jookiba - Renegade Scientist](https://www.readysetink.com/card/jumba-jookiba-renegade-scientist.html): Emerald, cost 5, Character, Uncommon
+- [Lilo & Stitch - Fun-Loving Friends](https://www.readysetink.com/card/lilo-stitch-fun-loving-friends.html): Amber / Steel, cost 5, Character, Super Rare
+- [Morph - Little Imitator](https://www.readysetink.com/card/morph-little-imitator.html): Amethyst, cost 2, Character, Uncommon
+- [Morph - Space Goo](https://www.readysetink.com/card/morph-space-goo.html): Emerald, cost 2, Character, Rare
+- [Mr. Arrow - Legacy's First Mate](https://www.readysetink.com/card/mr-arrow-legacys-first-mate.html): Steel, cost 2, Character, Common
+- [Nathaniel Flint - Notorious Pirate](https://www.readysetink.com/card/nathaniel-flint-notorious-pirate.html): Steel, cost 2, Character, Rare
+- [Penumbra - Moon Alien](https://www.readysetink.com/card/penumbra-moon-alien.html): Emerald, cost 5, Character, Rare
+- [Pleakley - Arctic Naturalist](https://www.readysetink.com/card/pleakley-arctic-naturalist.html): Amber, cost 3, Character, Uncommon
+- [Pleakley - Scientific Expert](https://www.readysetink.com/card/pleakley-scientific-expert.html): Sapphire, cost 3, Character, Uncommon
+- [Reuben - Sandwich Expert](https://www.readysetink.com/card/reuben-sandwich-expert.html): Amber, cost 2, Character, Rare
+- [Scroop - Backstabber](https://www.readysetink.com/card/scroop-backstabber.html): Ruby, cost 5, Character, Uncommon
+- [Scroop - Odious Mutineer](https://www.readysetink.com/card/scroop-odious-mutineer.html): Emerald, cost 3, Character, Super Rare
+- [Slushy - Glacial Guster](https://www.readysetink.com/card/slushy-glacial-guster.html): Ruby, cost 4, Character, Uncommon
+- [Space Cows - Unexpected Allies](https://www.readysetink.com/card/space-cows-unexpected-allies.html): Amethyst, cost 7, Character, Common
+- [Splodyhead - Experiment 619](https://www.readysetink.com/card/splodyhead-experiment-619.html): Ruby, cost 3, Character, Common
+- [Sprout - Experiment 509](https://www.readysetink.com/card/sprout-experiment-509.html): Steel, cost 5, Character, Rare
+- [Stitch - Abomination](https://www.readysetink.com/card/stitch-abomination.html): Ruby, cost 6, Character, Rare
+- [Stitch - Alien Buccaneer](https://www.readysetink.com/card/stitch-alien-buccaneer.html): Emerald, cost 4, Character, Rare
+- [Stitch - Alien Dancer](https://www.readysetink.com/card/stitch-alien-dancer.html): Amber, cost 2, Character, Common
+- [Stitch - Alien Troublemaker](https://www.readysetink.com/card/stitch-alien-troublemaker.html): Steel, cost 4, Character, Rare
+- [Stitch - Carefree Snowboarder](https://www.readysetink.com/card/stitch-carefree-snowboarder.html): Amber, cost 5, Character, Rare
+- [Stitch - Carefree Surfer](https://www.readysetink.com/card/stitch-carefree-surfer.html): Amber, cost 7, Character, Legendary
+- [Stitch - Covert Agent](https://www.readysetink.com/card/stitch-covert-agent.html): Emerald, cost 5, Character, Rare
+- [Stitch - Experiment 626](https://www.readysetink.com/card/stitch-experiment-626.html): Sapphire, cost 3, Character, Legendary
+- [Stitch - High Badness Level](https://www.readysetink.com/card/stitch-high-badness-level.html): Steel, cost 2, Character, Common
+- [Stitch - Little Rocket](https://www.readysetink.com/card/stitch-little-rocket.html): Ruby, cost 2, Character, Common
+- [Stitch - Little Trickster](https://www.readysetink.com/card/stitch-little-trickster.html): Emerald, cost 2, Character, Common
+- [Stitch - Naughty Experiment](https://www.readysetink.com/card/stitch-naughty-experiment.html): Emerald, cost 1, Character, Common
+- [Stitch - New Dog](https://www.readysetink.com/card/stitch-new-dog.html): Amber, cost 1, Character, Common
+- [Stitch - Protector of Frogs](https://www.readysetink.com/card/stitch-protector-of-frogs.html): Steel, cost 1, Character, Common
+- [Stitch - Rock Star](https://www.readysetink.com/card/stitch-rock-star.html): Amber, cost 6, Character, Super Rare
+- [Stitch - Team Underdog](https://www.readysetink.com/card/stitch-team-underdog.html): Steel, cost 4, Character, Uncommon

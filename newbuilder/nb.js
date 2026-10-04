@@ -1309,6 +1309,7 @@ const HOME=nbEl(`<div class="nbhome" id="nbHome" role="dialog" aria-modal="true"
     <aside class="nbh-promo" id="nbHPromo"></aside>
   </div>
   <div class="nbh-foot"><span class="nbh-keys"><kbd>↑</kbd><kbd>↓</kbd> choose · <kbd>Enter</kbd> select · <kbd>Esc</kbd> skip</span>
+    <nav class="nbh-browse" aria-label="Browse the card database"><a href="/card/">Cards</a><a href="/sets/">Sets</a><a href="/keywords/">Keywords</a><a href="/glossary/">Glossary</a><a href="/learn/how-to-play-lorcana/">How to play</a></nav>
     <button type="button" class="nbh-skip" id="nbHSkip">Skip to the deck builder ${ic("arrow-right")}</button></div>
 </div>`);
 document.body.appendChild(HOME);

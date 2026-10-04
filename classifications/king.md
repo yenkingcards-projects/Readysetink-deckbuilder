@@ -1,0 +1,65 @@
+# King: Disney Lorcana King cards
+
+Source: https://www.readysetink.com/classifications/king/
+
+59 cards.
+
+- [Agnarr - King of Arendelle](https://www.readysetink.com/card/agnarr-king-of-arendelle.html): Ruby, cost 3, Character, Common
+- [Arthur - King Victorious](https://www.readysetink.com/card/arthur-king-victorious.html): Steel, cost 7, Character, Legendary
+- [Benja - Bold Uniter](https://www.readysetink.com/card/benja-bold-uniter.html): Ruby, cost 4, Character, Common
+- [Benja - Guardian of the Dragon Gem](https://www.readysetink.com/card/benja-guardian-of-the-dragon-gem.html): Steel, cost 3, Character, Common
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Chief Powhatan - Protective Leader](https://www.readysetink.com/card/chief-powhatan-protective-leader.html): Amber, cost 4, Character, Uncommon
+- [Chief Tui - Proud of Motunui](https://www.readysetink.com/card/chief-tui-proud-of-motunui.html): Steel, cost 4, Character, Common
+- [Chief Tui - Respected Leader](https://www.readysetink.com/card/chief-tui-respected-leader.html): Sapphire, cost 7, Character, Uncommon
+- [Chief Tui - Weaving a Tale](https://www.readysetink.com/card/chief-tui-weaving-a-tale.html): Sapphire, cost 5, Character, Common
+- [Fergus - King of DunBroch](https://www.readysetink.com/card/fergus-king-of-dunbroch.html): Steel, cost 2, Character, Common
+- [Fergus - Outpost Builder](https://www.readysetink.com/card/fergus-outpost-builder.html): Steel, cost 6, Character, Super Rare
+- [Hades - King of Olympus](https://www.readysetink.com/card/hades-king-of-olympus.html): Amber, cost 8, Character, Rare
+- [Jafar - High Sultan of Lorcana](https://www.readysetink.com/card/jafar-high-sultan-of-lorcana.html): Amethyst / Steel, cost 5, Character, Super Rare
+- [Kashekim - Ancient Ruler](https://www.readysetink.com/card/kashekim-ancient-ruler.html): Amethyst, cost 3, Character, Uncommon
+- [Kashekim - Wise King](https://www.readysetink.com/card/kashekim-wise-king.html): Sapphire, cost 5, Character, Uncommon
+- [King Candy - Royal Racer](https://www.readysetink.com/card/king-candy-royal-racer.html): Amber / Ruby, cost 4, Character, Super Rare
+- [King Candy - Sovereign of Sugar](https://www.readysetink.com/card/king-candy-sovereign-of-sugar.html): Sapphire, cost 1, Character, Common
+- [King Candy - Sugar Rush Nightmare](https://www.readysetink.com/card/king-candy-sugar-rush-nightmare.html): Amber / Ruby, cost 3, Character, Uncommon
+- [King Candy - Sweet Abomination](https://www.readysetink.com/card/king-candy-sweet-abomination.html): Sapphire, cost 5, Character, Uncommon
+- [King Hubert - Phillip's Father](https://www.readysetink.com/card/king-hubert-phillips-father.html): Steel, cost 3, Character, Common
+- [King Louie - Bandleader](https://www.readysetink.com/card/king-louie-bandleader.html): Sapphire, cost 7, Character, Common
+- [King Louie - Jungle VIP](https://www.readysetink.com/card/king-louie-jungle-vip.html): Amber, cost 7, Character, Super Rare
+- [King Louie - King of Swing](https://www.readysetink.com/card/king-louie-king-of-swing.html): Ruby, cost 4, Character, Common
+- [King Stefan - New Father](https://www.readysetink.com/card/king-stefan-new-father.html): Amber, cost 5, Character, Common
+- [King of Hearts - Monarch of Wonderland](https://www.readysetink.com/card/king-of-hearts-monarch-of-wonderland.html): Amethyst, cost 4, Character, Uncommon
+- [King of Hearts - Picky Ruler](https://www.readysetink.com/card/king-of-hearts-picky-ruler.html): Emerald, cost 4, Character, Rare
+- [Kuzco - Bored Royal](https://www.readysetink.com/card/kuzco-bored-royal.html): Amethyst, cost 4, Character, Common
+- [Kuzco - Impulsive Llama](https://www.readysetink.com/card/kuzco-impulsive-llama.html): Amethyst / Emerald, cost 7, Character, Rare
+- [Kuzco - Panicked Llama](https://www.readysetink.com/card/kuzco-panicked-llama.html): Amethyst / Emerald, cost 4, Character, Uncommon
+- [Kuzco - Picky Customer](https://www.readysetink.com/card/kuzco-picky-customer.html): Ruby, cost 2, Character, Uncommon
+- [Kuzco - Selfish Emperor](https://www.readysetink.com/card/kuzco-selfish-emperor.html): Sapphire, cost 6, Character, Super Rare
+- [Kuzco - Temperamental Emperor](https://www.readysetink.com/card/kuzco-temperamental-emperor.html): Emerald, cost 5, Character, Rare
+- [Kuzco - Temporary Whale](https://www.readysetink.com/card/kuzco-temporary-whale.html): Amethyst, cost 5, Character, Rare
+- [Kuzco - Wanted Llama](https://www.readysetink.com/card/kuzco-wanted-llama.html): Amethyst, cost 2, Character, Common
+- [Milo Thatch - King of Atlantis](https://www.readysetink.com/card/milo-thatch-king-of-atlantis.html): Emerald, cost 7, Character, Legendary
+- [Mufasa - Among the Stars](https://www.readysetink.com/card/mufasa-among-the-stars.html): Amethyst / Steel, cost 7, Character, Uncommon
+- [Mufasa - Betrayed Leader](https://www.readysetink.com/card/mufasa-betrayed-leader.html): Amber, cost 5, Character, Legendary
+- [Mufasa - Champion of the Pride Lands](https://www.readysetink.com/card/mufasa-champion-of-the-pride-lands.html): Steel, cost 7, Character, Rare
+- [Mufasa - King of the Pride Lands](https://www.readysetink.com/card/mufasa-king-of-the-pride-lands.html): Sapphire, cost 6, Character, Common
+- [Mufasa - Respected King](https://www.readysetink.com/card/mufasa-respected-king.html): Steel, cost 4, Character, Uncommon
+- [Mufasa - Ruler of Pride Rock](https://www.readysetink.com/card/mufasa-ruler-of-pride-rock.html): Sapphire, cost 8, Character, Legendary
+- [Scar - Finally King](https://www.readysetink.com/card/scar-finally-king.html): Steel, cost 5, Character, Legendary
+- [Scar - Shameless Firebrand](https://www.readysetink.com/card/scar-shameless-firebrand.html): Ruby, cost 8, Character, Rare
+- [Simba - Returned King](https://www.readysetink.com/card/simba-returned-king.html): Steel, cost 7, Character, Rare
+- [Simba - Rightful King](https://www.readysetink.com/card/simba-rightful-king.html): Steel, cost 5, Character, Uncommon
+- [Simba - Son of Mufasa](https://www.readysetink.com/card/simba-son-of-mufasa.html): Steel, cost 6, Character, Uncommon
+- [The Horned King - Heartless Devil](https://www.readysetink.com/card/the-horned-king-heartless-devil.html): Amethyst, cost 1, Character, Common
+- [The Horned King - Merciless Master](https://www.readysetink.com/card/the-horned-king-merciless-master.html): Amber, cost 5, Character, Legendary
+- [The Horned King - Triumphant Ghoul](https://www.readysetink.com/card/the-horned-king-triumphant-ghoul.html): Amethyst, cost 2, Character, Rare
+- [The Horned King - Wicked Ruler](https://www.readysetink.com/card/the-horned-king-wicked-ruler.html): Amethyst, cost 4, Character, Super Rare
+- [The Sultan - Playful Monarch](https://www.readysetink.com/card/the-sultan-playful-monarch.html): Sapphire, cost 1, Character, Rare
+- [The Sultan - Royal Apparition](https://www.readysetink.com/card/the-sultan-royal-apparition.html): Amethyst / Steel, cost 5, Character, Rare
+- [The Sultan - Spectral Ruler](https://www.readysetink.com/card/the-sultan-spectral-ruler.html): cost 4, Character, Special
+- [Triton - Champion of Atlantica](https://www.readysetink.com/card/triton-champion-of-atlantica.html): Sapphire, cost 9, Character, Legendary
+- [Triton - Discerning King](https://www.readysetink.com/card/triton-discerning-king.html): Sapphire, cost 3, Character, Rare
+- [Triton - The Sea King](https://www.readysetink.com/card/triton-the-sea-king.html): Sapphire, cost 7, Character, Uncommon
+- [Zeus - Defiant God](https://www.readysetink.com/card/zeus-defiant-god.html): Ruby, cost 5, Character, Uncommon
+- [Zeus - Missing His Spark](https://www.readysetink.com/card/zeus-missing-his-spark.html): Steel, cost 3, Character, Uncommon
+- [Zeus - Mr. Lightning Bolts](https://www.readysetink.com/card/zeus-mr-lightning-bolts.html): Emerald, cost 3, Character, Super Rare

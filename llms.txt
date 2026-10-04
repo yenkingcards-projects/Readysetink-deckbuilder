@@ -9,11 +9,13 @@ Prefer the raw data files below over scraping HTML. They are static JSON, free t
 - [Card database](https://www.readysetink.com/card-db.json): every card as JSON. Top-level keys: `fetched`, `priced`, `sets`, `cards`. Each card has `n` name, `v` version, `c` cost, `ik` inkable, `co` ink colors, `ty` type, `sub` subtypes, `tx` rules text, `ef` effect text, `kw` keywords, `st` strength, `wi` willpower, `lo` lore, `r` rarity, `s` set number, `num` collector number, `sto` source story, `ar` artists, `fl` flavor text, `p` / `pf` USD price (regular / foil).
 - [Official rulings](https://www.readysetink.com/card-rules.json): rulings from Ravensburger's set release notes, keyed by exact card name.
 - [Meta decks](https://www.readysetink.com/meta-decks.json): competitive deck lists grouped by point in a set's life.
-- [Prices](https://www.readysetink.com/card-prices.json): USD snapshot per printing, dated 2026-10-01. A rough guide, not a live quote.
+- [Data guide](https://www.readysetink.com/data/): what each file contains, how it is structured, and where it comes from.
 
 ## Pages
 
 - [Home](https://www.readysetink.com/): card search and the full app.
+- [How to play Disney Lorcana](https://www.readysetink.com/learn/how-to-play-lorcana/): a plain-English beginner guide to the rules, with links to the keyword and glossary pages.
+- [Inks](https://www.readysetink.com/inks/) and [classifications](https://www.readysetink.com/classifications/): cards grouped by ink color (Amber, Ruby...) and by classification (Princess, Villain, Pirate...).
 - [Glossary](https://www.readysetink.com/glossary/): over 120 Lorcana terms in plain English - rules vocabulary, all 14 keyword abilities with rule numbers, formats, community slang and collecting words. Also as [markdown](https://www.readysetink.com/glossary.md) and [JSON](https://www.readysetink.com/glossary.json).
 - [Keywords](https://www.readysetink.com/keywords/): all 14 keyword abilities, one page each at `https://www.readysetink.com/keywords/<keyword>/` with the rule in plain English and every card that has it.
 - [Sets](https://www.readysetink.com/sets/): one page per set at `https://www.readysetink.com/sets/<set>/` with the cards first printed in it. Reprints appear under their original set.
@@ -33,4 +35,4 @@ Append `.md` to any card, keyword, set, franchise or character URL for a compact
 
 ## Sitemap
 
-- [sitemap.xml](https://www.readysetink.com/sitemap.xml): every page, 2,653 card pages included.
+- [sitemap.xml](https://www.readysetink.com/sitemap.xml): index of three sitemaps (core pages, browse pages, and 2,653 card pages).

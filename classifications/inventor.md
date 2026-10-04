@@ -1,0 +1,70 @@
+# Inventor: Disney Lorcana Inventor cards
+
+Source: https://www.readysetink.com/classifications/inventor/
+
+64 cards.
+
+- [Alistair Krei - Ambitious Entrepreneur](https://www.readysetink.com/card/alistair-krei-ambitious-entrepreneur.html): Emerald, cost 3, Character, Common
+- [Beast - Frustrated Designer](https://www.readysetink.com/card/beast-frustrated-designer.html): Ruby / Sapphire, cost 6, Character, Rare
+- [Belle - Apprentice Inventor](https://www.readysetink.com/card/belle-apprentice-inventor.html): Sapphire, cost 3, Character, Common
+- [Belle - Inventive Engineer](https://www.readysetink.com/card/belle-inventive-engineer.html): Sapphire, cost 3, Character, Uncommon
+- [Belle - Mechanic Extraordinaire](https://www.readysetink.com/card/belle-mechanic-extraordinaire.html): Ruby / Sapphire, cost 9, Character, Super Rare
+- [Charles Muntz - Obsessive Explorer](https://www.readysetink.com/card/charles-muntz-obsessive-explorer.html): Sapphire, cost 4, Character, Super Rare
+- [Donald Duck - Strutting His Stuff](https://www.readysetink.com/card/donald-duck-strutting-his-stuff.html): Sapphire, cost 5, Character, Common
+- [Dr. Hamsterviel - Evil Observer](https://www.readysetink.com/card/dr-hamsterviel-evil-observer.html): Steel, cost 3, Character, Uncommon
+- [Dr. Hamsterviel - Infamous Scientist](https://www.readysetink.com/card/dr-hamsterviel-infamous-scientist.html): Steel, cost 8, Character, Rare
+- [Dr. Sara Bellum - Head of Research](https://www.readysetink.com/card/dr-sara-bellum-head-of-research.html): Sapphire, cost 3, Character, Common
+- [Edna Mode - Fashion Designer](https://www.readysetink.com/card/edna-mode-fashion-designer.html): Amethyst, cost 3, Character, Rare
+- [Edna Mode - Super Suit Designer](https://www.readysetink.com/card/edna-mode-super-suit-designer.html): Sapphire, cost 2, Character, Rare
+- [Gadget Hackwrench - Brilliant Bosun](https://www.readysetink.com/card/gadget-hackwrench-brilliant-bosun.html): Sapphire, cost 6, Character, Super Rare
+- [Gadget Hackwrench - Creative Thinker](https://www.readysetink.com/card/gadget-hackwrench-creative-thinker.html): Sapphire, cost 3, Character, Common
+- [Gadget Hackwrench - Finder of Lost Parts](https://www.readysetink.com/card/gadget-hackwrench-finder-of-lost-parts.html): Sapphire, cost 2, Character, Common
+- [Gadget Hackwrench - Perceptive Mouse](https://www.readysetink.com/card/gadget-hackwrench-perceptive-mouse.html): Sapphire, cost 2, Character, Common
+- [Gadget Hackwrench - Quirky Scientist](https://www.readysetink.com/card/gadget-hackwrench-quirky-scientist.html): Emerald, cost 4, Character, Rare
+- [Gadget Hackwrench - Resourceful Mechanic](https://www.readysetink.com/card/gadget-hackwrench-resourceful-mechanic.html): Sapphire, cost 4, Character, Super Rare
+- [Geppetto - Skilled Craftsman](https://www.readysetink.com/card/geppetto-skilled-craftsman.html): Sapphire, cost 5, Character, Rare
+- [Gizmoduck - Duckburg Defender](https://www.readysetink.com/card/gizmoduck-duckburg-defender.html): Steel, cost 5, Character, Rare
+- [Gizmoduck - Suited Up](https://www.readysetink.com/card/gizmoduck-suited-up.html): Emerald / Steel, cost 4, Character, Uncommon
+- [Go Go Tomago - Cutting Edge](https://www.readysetink.com/card/go-go-tomago-cutting-edge.html): Emerald / Sapphire, cost 4, Character, Super Rare
+- [Go Go Tomago - Darting Dynamo](https://www.readysetink.com/card/go-go-tomago-darting-dynamo.html): Emerald, cost 2, Character, Rare
+- [Go Go Tomago - Extreme Tester](https://www.readysetink.com/card/go-go-tomago-extreme-tester.html): Emerald, cost 2, Character, Common
+- [Go Go Tomago - Mechanical Engineer](https://www.readysetink.com/card/go-go-tomago-mechanical-engineer.html): Sapphire, cost 2, Character, Common
+- [Goofy - Expert Shipwright](https://www.readysetink.com/card/goofy-expert-shipwright.html): Emerald, cost 5, Character, Rare
+- [Gyro Gearloose - Eccentric Inventor](https://www.readysetink.com/card/gyro-gearloose-eccentric-inventor.html): Ruby / Sapphire, cost 3, Character, Rare
+- [Gyro Gearloose - Gadget Whiz](https://www.readysetink.com/card/gyro-gearloose-gadget-whiz.html): Sapphire, cost 3, Character, Rare
+- [Hiram Flaversham - Intrigued Inventor](https://www.readysetink.com/card/hiram-flaversham-intrigued-inventor.html): Sapphire, cost 2, Character, Rare
+- [Hiram Flaversham - Toymaker](https://www.readysetink.com/card/hiram-flaversham-toymaker.html): Sapphire, cost 4, Character, Rare
+- [Hiro Hamada - Armor Designer](https://www.readysetink.com/card/hiro-hamada-armor-designer.html): Emerald / Sapphire, cost 7, Character, Super Rare
+- [Hiro Hamada - Future Champion](https://www.readysetink.com/card/hiro-hamada-future-champion.html): Emerald, cost 3, Character, Common
+- [Hiro Hamada - Intuitive Thinker](https://www.readysetink.com/card/hiro-hamada-intuitive-thinker.html): Emerald / Sapphire, cost 2, Character, Uncommon
+- [Hiro Hamada - Pioneering Inventor](https://www.readysetink.com/card/hiro-hamada-pioneering-inventor.html): Sapphire, cost 4, Character, Common
+- [Hiro Hamada - Robotics Prodigy](https://www.readysetink.com/card/hiro-hamada-robotics-prodigy.html): Sapphire, cost 3, Character, Uncommon
+- [Hiro Hamada - Team Leader](https://www.readysetink.com/card/hiro-hamada-team-leader.html): Sapphire, cost 4, Character, Rare
+- [Hiro Hamada - Versatile Inventor](https://www.readysetink.com/card/hiro-hamada-versatile-inventor.html): Emerald, cost 2, Character, Uncommon
+- [Honey Lemon - Chemical Genius](https://www.readysetink.com/card/honey-lemon-chemical-genius.html): Emerald, cost 2, Character, Uncommon
+- [Honey Lemon - Chemistry Whiz](https://www.readysetink.com/card/honey-lemon-chemistry-whiz.html): Sapphire, cost 2, Character, Common
+- [Honey Lemon - Costumed Catalyst](https://www.readysetink.com/card/honey-lemon-costumed-catalyst.html): Emerald / Sapphire, cost 4, Character, Rare
+- [Honey Lemon - Endlessly Curious](https://www.readysetink.com/card/honey-lemon-endlessly-curious.html): Sapphire, cost 1, Character, Common
+- [Honey Lemon - Testing the Limits](https://www.readysetink.com/card/honey-lemon-testing-the-limits.html): Emerald, cost 3, Character, Rare
+- [Honker Muddlefoot - Timid Genius](https://www.readysetink.com/card/honker-muddlefoot-timid-genius.html): Sapphire, cost 1, Character, Common
+- [Incrediboy - Buddy Pine](https://www.readysetink.com/card/incrediboy-buddy-pine.html): Steel, cost 2, Character, Common
+- [Jumba Jookiba - Critical Scientist](https://www.readysetink.com/card/jumba-jookiba-critical-scientist.html): Sapphire, cost 4, Character, Uncommon
+- [Jumba Jookiba - Prolific Inventor](https://www.readysetink.com/card/jumba-jookiba-prolific-inventor.html): Amber, cost 8, Character, Rare
+- [Jumba Jookiba - Renegade Scientist](https://www.readysetink.com/card/jumba-jookiba-renegade-scientist.html): Emerald, cost 5, Character, Uncommon
+- [Maurice - Unconventional Inventor](https://www.readysetink.com/card/maurice-unconventional-inventor.html): Ruby, cost 4, Character, Rare
+- [Maurice - World-Famous Inventor](https://www.readysetink.com/card/maurice-world-famous-inventor.html): Sapphire, cost 6, Character, Rare
+- [Minnie Mouse - Quick-Thinking Inventor](https://www.readysetink.com/card/minnie-mouse-quick-thinking-inventor.html): Sapphire, cost 1, Character, Common
+- [Norton Nimnul - Misanthropic Genius](https://www.readysetink.com/card/norton-nimnul-misanthropic-genius.html): Sapphire, cost 3, Character, Uncommon
+- [Quackerjack - Loony Toymaker](https://www.readysetink.com/card/quackerjack-loony-toymaker.html): Sapphire, cost 5, Character, Legendary
+- [Syndrome - Evil Inventor](https://www.readysetink.com/card/syndrome-evil-inventor.html): Sapphire, cost 3, Character, Common
+- [Syndrome - Out for Revenge](https://www.readysetink.com/card/syndrome-out-for-revenge.html): Steel, cost 6, Character, Super Rare
+- [Tadashi Hamada - Baymax Inventor](https://www.readysetink.com/card/tadashi-hamada-baymax-inventor.html): Sapphire, cost 6, Character, Super Rare
+- [Tadashi Hamada - Gifted Roboticist](https://www.readysetink.com/card/tadashi-hamada-gifted-roboticist.html): Sapphire, cost 3, Character, Rare
+- [Wasabi - Always Prepared](https://www.readysetink.com/card/wasabi-always-prepared.html): Sapphire, cost 5, Character, Common
+- [Wasabi - Called into Battle](https://www.readysetink.com/card/wasabi-called-into-battle.html): Ruby, cost 5, Character, Super Rare
+- [Wasabi - Future Thinker](https://www.readysetink.com/card/wasabi-future-thinker.html): Sapphire, cost 5, Character, Uncommon
+- [Wasabi - Methodical Engineer](https://www.readysetink.com/card/wasabi-methodical-engineer.html): Sapphire, cost 4, Character, Uncommon
+- [Yokai - Enigmatic Inventor](https://www.readysetink.com/card/yokai-enigmatic-inventor.html): Sapphire, cost 4, Character, Uncommon
+- [Yokai - Intellectual Schemer](https://www.readysetink.com/card/yokai-intellectual-schemer.html): Emerald / Sapphire, cost 2, Character, Uncommon
+- [Yokai - Professor Callaghan](https://www.readysetink.com/card/yokai-professor-callaghan.html): Sapphire, cost 1, Character, Common
+- [Yokai - Scientific Supervillain](https://www.readysetink.com/card/yokai-scientific-supervillain.html): Sapphire, cost 9, Character, Rare

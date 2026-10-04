@@ -599,6 +599,9 @@ html.nb .nbh-foot kbd{background:rgba(255,255,255,.12);color:#fff;border-color:r
 .nbh-skip{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid rgba(255,255,255,.4);border-radius:24px;
   background:none;color:#fff;font:800 13px var(--sans);cursor:pointer}
 .nbh-skip:hover{background:rgba(255,255,255,.1)}
+.nbh-browse{display:flex;flex-wrap:wrap;gap:2px 14px;justify-content:center;font:600 12px var(--sans)}
+.nbh-browse a{color:#c7d6ff;text-decoration:underline;text-underline-offset:3px}
+.nbh-browse a:hover,.nbh-browse a:focus-visible{color:#fff}
 @media(max-width:900px){
   .nbh-in{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:14px;padding:14px 14px 6px}
   .nbh-panel{grid-row:1;grid-column:1;min-height:230px;padding:0 14px}

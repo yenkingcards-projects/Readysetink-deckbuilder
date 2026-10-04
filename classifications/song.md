@@ -1,0 +1,132 @@
+# Song: Disney Lorcana Song cards
+
+Source: https://www.readysetink.com/classifications/song/
+
+126 cards.
+
+- [A Pirate's Life](https://www.readysetink.com/card/a-pirates-life.html): Ruby, cost 6, Action, Uncommon
+- [A Very Merry Unbirthday](https://www.readysetink.com/card/a-very-merry-unbirthday.html): Amethyst, cost 1, Action, Common
+- [A Whole New World](https://www.readysetink.com/card/a-whole-new-world.html): Steel, cost 5, Action, Super Rare
+- [Above the Crowd](https://www.readysetink.com/card/above-the-crowd.html): Emerald, cost 5, Action, Rare
+- [Akood et Emuti](https://www.readysetink.com/card/akood-et-emuti.html): Amber, cost 3, Action, Rare
+- [All Is Found](https://www.readysetink.com/card/all-is-found.html): Sapphire, cost 5, Action, Rare
+- [And Then Along Came Zeus](https://www.readysetink.com/card/and-then-along-came-zeus.html): Steel, cost 4, Action, Rare
+- [Another Tale to Spin](https://www.readysetink.com/card/another-tale-to-spin.html): Emerald, cost 2, Action, Common
+- [Be King Undisputed](https://www.readysetink.com/card/be-king-undisputed.html): Ruby, cost 4, Action, Rare
+- [Be Our Guest](https://www.readysetink.com/card/be-our-guest.html): Amber, cost 2, Action, Uncommon
+- [Be Prepared](https://www.readysetink.com/card/be-prepared.html): Ruby, cost 7, Action, Rare
+- [Beyond the Horizon](https://www.readysetink.com/card/beyond-the-horizon.html): Steel, cost 7, Action, Uncommon
+- [Bibbidi Bobbidi Boo](https://www.readysetink.com/card/bibbidi-bobbidi-boo.html): Emerald, cost 3, Action, Rare
+- [Blast from Your Past](https://www.readysetink.com/card/blast-from-your-past.html): Amber, cost 6, Action, Super Rare
+- [But I'm Much Faster](https://www.readysetink.com/card/but-im-much-faster.html): Steel, cost 1, Action, Common
+- [Can't Hold It Back Anymore](https://www.readysetink.com/card/cant-hold-it-back-anymore.html): Amethyst, cost 4, Action, Rare
+- [Circle of Life](https://www.readysetink.com/card/circle-of-life.html): Amber, cost 8, Action, Legendary
+- [Colors of the Wind](https://www.readysetink.com/card/colors-of-the-wind.html): Amethyst, cost 4, Action, Super Rare
+- [Della's Moon Lullaby](https://www.readysetink.com/card/dellas-moon-lullaby.html): Amber, cost 2, Action, Common
+- [Dig a Little Deeper](https://www.readysetink.com/card/dig-a-little-deeper.html): Sapphire, cost 8, Action, Uncommon
+- [Do You Want to Build A Snowman?](https://www.readysetink.com/card/do-you-want-to-build-a-snowman.html): Amethyst, cost 3, Action, Rare
+- [Don't Let the Frostbite Bite](https://www.readysetink.com/card/dont-let-the-frostbite-bite.html): Ruby, cost 7, Action, Rare
+- [Down in New Orleans](https://www.readysetink.com/card/down-in-new-orleans.html): Sapphire, cost 6, Action, Super Rare
+- [Education or Elimination](https://www.readysetink.com/card/education-or-elimination.html): Emerald, cost 4, Action, Uncommon
+- [Ever as Before](https://www.readysetink.com/card/ever-as-before.html): Sapphire, cost 2, Action, Common
+- [Everyone Knows Juanita](https://www.readysetink.com/card/everyone-knows-juanita.html): Amethyst, cost 5, Action, Common
+- [Fantastical and Magical](https://www.readysetink.com/card/fantastical-and-magical.html): Amethyst, cost 9, Action, Rare
+- [Force of a Great Typhoon](https://www.readysetink.com/card/force-of-a-great-typhoon.html): Ruby, cost 2, Action, Common
+- [Four Dozen Eggs](https://www.readysetink.com/card/four-dozen-eggs.html): Sapphire, cost 4, Action, Uncommon
+- [Fragile as a Flower](https://www.readysetink.com/card/fragile-as-a-flower.html): Amethyst, cost 3, Action, Common
+- [Friend Like Me](https://www.readysetink.com/card/friend-like-me.html): Sapphire, cost 5, Action, Rare
+- [Friends on the Other Side](https://www.readysetink.com/card/friends-on-the-other-side.html): Amethyst, cost 3, Action, Common
+- [Go the Distance](https://www.readysetink.com/card/go-the-distance.html): Ruby, cost 2, Action, Common
+- [Grab Your Bow](https://www.readysetink.com/card/grab-your-bow.html): Ruby, cost 5, Action, Uncommon
+- [Grab Your Sword](https://www.readysetink.com/card/grab-your-sword.html): Steel, cost 5, Action, Rare
+- [Gruesome and Grim](https://www.readysetink.com/card/gruesome-and-grim.html): Amethyst, cost 3, Action, Rare
+- [Hakuna Matata](https://www.readysetink.com/card/hakuna-matata.html): Amber, cost 4, Action, Common
+- [Has Set My Heaaaaaaart...](https://www.readysetink.com/card/has-set-my-heaaaaaaart.html): Emerald, cost 2, Action, Uncommon
+- [He Hurled His Thunderbolt](https://www.readysetink.com/card/he-hurled-his-thunderbolt.html): Steel, cost 4, Action, Uncommon
+- [He's a Tramp](https://www.readysetink.com/card/hes-a-tramp.html): Emerald, cost 1, Action, Common
+- [Heads Held High](https://www.readysetink.com/card/heads-held-high.html): Sapphire, cost 6, Action, Rare
+- [Heal What Has Been Hurt](https://www.readysetink.com/card/heal-what-has-been-hurt.html): Amber, cost 3, Action, Common
+- [Heffalumps and Woozles](https://www.readysetink.com/card/heffalumps-and-woozles.html): Emerald, cost 2, Action, Common
+- [Higitus Figitus](https://www.readysetink.com/card/higitus-figitus.html): Amethyst, cost 6, Action, Common
+- [How Far I'll Go](https://www.readysetink.com/card/how-far-ill-go.html): Sapphire, cost 4, Action, Uncommon
+- [I Find 'Em, I Flatten 'Em](https://www.readysetink.com/card/i-find-em-i-flatten-em.html): Steel, cost 4, Action, Uncommon
+- [I Will Find My Way](https://www.readysetink.com/card/i-will-find-my-way.html): Emerald, cost 1, Action, Common
+- [I Won't Give In](https://www.readysetink.com/card/i-wont-give-in.html): Amber, cost 2, Action, Common
+- [I'm Never Not by Your Side](https://www.readysetink.com/card/im-never-not-by-your-side.html): Amber, cost 5, Action, Uncommon
+- [I'm Still Here](https://www.readysetink.com/card/im-still-here.html): Steel, cost 3, Action, Common
+- [I've Got a Dream](https://www.readysetink.com/card/ive-got-a-dream.html): Ruby, cost 2, Action, Uncommon
+- [I2I](https://www.readysetink.com/card/i2i.html): Ruby, cost 9, Action, Rare
+- [If I Didn't Have You](https://www.readysetink.com/card/if-i-didnt-have-you.html): Amber, cost 3, Action, Common
+- [Into the Unknown](https://www.readysetink.com/card/into-the-unknown.html): Amethyst / Sapphire, cost 3, Action, Super Rare
+- [It Calls Me](https://www.readysetink.com/card/it-calls-me.html): Amethyst, cost 1, Action, Uncommon
+- [It Means No Worries](https://www.readysetink.com/card/it-means-no-worries.html): Amber, cost 9, Action, Rare
+- [It's Gonna Be Great!](https://www.readysetink.com/card/its-gonna-be-great.html): Ruby, cost 2, Action, Common
+- [Keep the Ancient Ways](https://www.readysetink.com/card/keep-the-ancient-ways.html): Steel, cost 2, Action, Uncommon
+- [Legend of the Sword in the Stone](https://www.readysetink.com/card/legend-of-the-sword-in-the-stone.html): Amethyst, cost 2, Action, Common
+- [Let It Go](https://www.readysetink.com/card/let-it-go.html): Sapphire, cost 5, Action, Rare
+- [Let the Storm Rage On](https://www.readysetink.com/card/let-the-storm-rage-on.html): Steel, cost 3, Action, Common
+- [Let's Get Dangerous](https://www.readysetink.com/card/lets-get-dangerous.html): Steel, cost 4, Action, Rare
+- [Like a Bird in the Sky](https://www.readysetink.com/card/like-a-bird-in-the-sky.html): Ruby, cost 2, Action, Common
+- [Look at This Family](https://www.readysetink.com/card/look-at-this-family.html): Amber, cost 7, Action, Rare
+- [Lost in the Woods](https://www.readysetink.com/card/lost-in-the-woods.html): Amber, cost 4, Action, Uncommon
+- [Magnificent, Marvelous](https://www.readysetink.com/card/magnificent-marvelous.html): Amethyst, cost 4, Action, Uncommon
+- [Malicious, Mean, and Scary](https://www.readysetink.com/card/malicious-mean-and-scary.html): Emerald, cost 3, Action, Uncommon
+- [Marching Off to Battle](https://www.readysetink.com/card/marching-off-to-battle.html): Ruby, cost 4, Action, Common
+- [Might Solve a Mystery](https://www.readysetink.com/card/might-solve-a-mystery.html): Sapphire, cost 4, Action, Uncommon
+- [Mother Knows Best](https://www.readysetink.com/card/mother-knows-best.html): Emerald, cost 3, Action, Uncommon
+- [Mother Will Protect You](https://www.readysetink.com/card/mother-will-protect-you.html): Amber, cost 2, Action, Common
+- [Never Gonna Let You Cry](https://www.readysetink.com/card/never-gonna-let-you-cry.html): Amber, cost 5, Action, Uncommon
+- [Nobody Like U](https://www.readysetink.com/card/nobody-like-u.html): Amber, cost 5, Action, Rare
+- [Nothing We Won't Do](https://www.readysetink.com/card/nothing-we-wont-do.html): Ruby, cost 8, Action, Rare
+- [One Jump Ahead](https://www.readysetink.com/card/one-jump-ahead.html): Sapphire, cost 2, Action, Uncommon
+- [One Last Hope](https://www.readysetink.com/card/one-last-hope.html): Steel, cost 3, Action, Rare
+- [Or Rewrite History!](https://www.readysetink.com/card/or-rewrite-history.html): Amber, cost 3, Action, Uncommon
+- [Painting the Roses Red](https://www.readysetink.com/card/painting-the-roses-red.html): Amber, cost 2, Action, Common
+- [Part of Your World](https://www.readysetink.com/card/part-of-your-world.html): Amber, cost 3, Action, Rare
+- [Poor Unfortunate Souls](https://www.readysetink.com/card/poor-unfortunate-souls.html): Amethyst, cost 2, Action, Common
+- [Put That Thing Back](https://www.readysetink.com/card/put-that-thing-back.html): Emerald, cost 4, Action, Uncommon
+- [Red Moon Ritual](https://www.readysetink.com/card/red-moon-ritual.html): Ruby, cost 7, Action, Uncommon
+- [Reflection](https://www.readysetink.com/card/reflection.html): Amethyst, cost 1, Action, Uncommon
+- [Remember Me](https://www.readysetink.com/card/remember-me.html): Amber, cost 6, Action, Super Rare
+- [Second Star to the Right](https://www.readysetink.com/card/second-star-to-the-right.html): Amethyst, cost 10, Action, Rare
+- [Seldom All They Seem](https://www.readysetink.com/card/seldom-all-they-seem.html): Sapphire, cost 2, Action, Common
+- [So Much to Give](https://www.readysetink.com/card/so-much-to-give.html): Amber, cost 2, Action, Common
+- [Someone Will Lose His Head](https://www.readysetink.com/card/someone-will-lose-his-head.html): Sapphire, cost 3, Action, Common
+- [Stand Out](https://www.readysetink.com/card/stand-out.html): Emerald, cost 3, Action, Uncommon
+- [Stopped Chaos in Its Tracks](https://www.readysetink.com/card/stopped-chaos-in-its-tracks.html): Emerald, cost 8, Action, Uncommon
+- [Strange Things](https://www.readysetink.com/card/strange-things.html): Emerald, cost 4, Action, Uncommon
+- [Strength of a Raging Fire](https://www.readysetink.com/card/strength-of-a-raging-fire.html): Steel, cost 3, Action, Rare
+- [Strike a Good Match](https://www.readysetink.com/card/strike-a-good-match.html): Emerald, cost 2, Action, Common
+- [Sudden Chill](https://www.readysetink.com/card/sudden-chill.html): Emerald, cost 2, Action, Common
+- [Teeth and Ambitions](https://www.readysetink.com/card/teeth-and-ambitions.html): Ruby, cost 2, Action, Rare
+- [The Bare Necessities](https://www.readysetink.com/card/the-bare-necessities.html): Amber, cost 2, Action, Rare
+- [The Boss is on a Roll](https://www.readysetink.com/card/the-boss-is-on-a-roll.html): Amethyst, cost 3, Action, Rare
+- [The Cold Never Bothered Me](https://www.readysetink.com/card/the-cold-never-bothered-me.html): Ruby, cost 3, Action, Rare
+- [The Family Madrigal](https://www.readysetink.com/card/the-family-madrigal.html): Amber / Amethyst, cost 5, Action, Rare
+- [The Islands I Pulled from the Sea](https://www.readysetink.com/card/the-islands-i-pulled-from-the-sea.html): Ruby, cost 3, Action, Uncommon
+- [The Mob Song](https://www.readysetink.com/card/the-mob-song.html): Steel, cost 10, Action, Uncommon
+- [The Most Diabolical Scheme](https://www.readysetink.com/card/the-most-diabolical-scheme.html): Ruby, cost 3, Action, Uncommon
+- [This Growing Pressure](https://www.readysetink.com/card/this-growing-pressure.html): Amber, cost 3, Action, Common
+- [This Is My Family](https://www.readysetink.com/card/this-is-my-family.html): Amethyst, cost 2, Action, Common
+- [To Wither a Flower](https://www.readysetink.com/card/to-wither-a-flower.html): Emerald, cost 4, Action, Rare
+- [Touch the Sky](https://www.readysetink.com/card/touch-the-sky.html): Steel, cost 2, Action, Rare
+- [Treasures Untold](https://www.readysetink.com/card/treasures-untold.html): Sapphire, cost 6, Action, Rare
+- [Trials and Tribulations](https://www.readysetink.com/card/trials-and-tribulations.html): Amber, cost 2, Action, Uncommon
+- [Trust In Me](https://www.readysetink.com/card/trust-in-me.html): Emerald, cost 6, Action, Rare
+- [Try Everything](https://www.readysetink.com/card/try-everything.html): Amber, cost 4, Action, Uncommon
+- [Under the Sea](https://www.readysetink.com/card/under-the-sea.html): Emerald, cost 8, Action, Rare
+- [We Could Be Immortals](https://www.readysetink.com/card/we-could-be-immortals.html): Sapphire, cost 4, Action, Rare
+- [We Don't Talk About Bruno](https://www.readysetink.com/card/we-dont-talk-about-bruno.html): Emerald, cost 5, Action, Rare
+- [We Know the Way](https://www.readysetink.com/card/we-know-the-way.html): Amethyst, cost 3, Action, Rare
+- [We'll Save Our Village](https://www.readysetink.com/card/well-save-our-village.html): Steel, cost 2, Action, Common
+- [We've Got a Lot to Do!](https://www.readysetink.com/card/weve-got-a-lot-to-do.html): Sapphire, cost 3, Action, Common
+- [What Else Can I Do?](https://www.readysetink.com/card/what-else-can-i-do.html): Sapphire, cost 5, Action, Rare
+- [When Will My Life Begin?](https://www.readysetink.com/card/when-will-my-life-begin.html): Steel, cost 3, Action, Common
+- [When You Need Help, Just Call](https://www.readysetink.com/card/when-you-need-help-just-call.html): Amber, cost 3, Action, Rare
+- [With a Few Good Friends](https://www.readysetink.com/card/with-a-few-good-friends.html): Amethyst, cost 6, Action, Rare
+- [World's Greatest Criminal Mind](https://www.readysetink.com/card/worlds-greatest-criminal-mind.html): Amber, cost 3, Action, Rare
+- [You Can Fly!](https://www.readysetink.com/card/you-can-fly.html): Ruby, cost 2, Action, Uncommon
+- [You're Welcome](https://www.readysetink.com/card/youre-welcome.html): Emerald, cost 4, Action, Uncommon
+- [You've Got Some Punch](https://www.readysetink.com/card/youve-got-some-punch.html): Amethyst, cost 2, Action, Common
+- [You've Got a Friend in Me](https://www.readysetink.com/card/youve-got-a-friend-in-me.html): Amber, cost 3, Action, Super Rare
+- [Zero to Hero](https://www.readysetink.com/card/zero-to-hero.html): Amber, cost 2, Action, Uncommon

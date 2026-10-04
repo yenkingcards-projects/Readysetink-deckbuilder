@@ -1,0 +1,72 @@
+# Queen: Disney Lorcana Queen cards
+
+Source: https://www.readysetink.com/classifications/queen/
+
+66 cards.
+
+- [Anna - Braving the Storm](https://www.readysetink.com/card/anna-braving-the-storm.html): Sapphire, cost 2, Character, Common
+- [Anna - Diplomatic Queen](https://www.readysetink.com/card/anna-diplomatic-queen.html): Emerald, cost 3, Character, Legendary
+- [Anna - Eager Acolyte](https://www.readysetink.com/card/anna-eager-acolyte.html): Amethyst, cost 3, Character, Common
+- [Anna - Ensnared Sister](https://www.readysetink.com/card/anna-ensnared-sister.html): cost 6, Character, Special
+- [Anna - Heir to Arendelle](https://www.readysetink.com/card/anna-heir-to-arendelle.html): Amethyst, cost 4, Character, Uncommon
+- [Anna - Ice Breaker](https://www.readysetink.com/card/anna-ice-breaker.html): Amethyst / Sapphire, cost 4, Character, Uncommon
+- [Anna - Little Sister](https://www.readysetink.com/card/anna-little-sister.html): Amethyst, cost 2, Character, Uncommon
+- [Anna - Magical Mission](https://www.readysetink.com/card/anna-magical-mission.html): Amethyst / Sapphire, cost 6, Character, Rare
+- [Anna - Making Snow Plans](https://www.readysetink.com/card/anna-making-snow-plans.html): Sapphire, cost 4, Character, Common
+- [Anna - Mystical Majesty](https://www.readysetink.com/card/anna-mystical-majesty.html): Amethyst, cost 7, Character, Rare
+- [Anna - Soothing Sister](https://www.readysetink.com/card/anna-soothing-sister.html): Amethyst, cost 5, Character, Legendary
+- [Anna - True-Hearted](https://www.readysetink.com/card/anna-true-hearted.html): Sapphire, cost 4, Character, Super Rare
+- [Anna - Trusting Sister](https://www.readysetink.com/card/anna-trusting-sister.html): Sapphire, cost 3, Character, Common
+- [Arianna - Queen of Corona](https://www.readysetink.com/card/arianna-queen-of-corona.html): Steel, cost 5, Character, Common
+- [Elinor - Bespelled Queen](https://www.readysetink.com/card/elinor-bespelled-queen.html): Amethyst, cost 4, Character, Uncommon
+- [Elinor - Renowned Diplomat](https://www.readysetink.com/card/elinor-renowned-diplomat.html): Emerald, cost 4, Character, Super Rare
+- [Elsa - Concerned Sister](https://www.readysetink.com/card/elsa-concerned-sister.html): Ruby, cost 3, Character, Uncommon
+- [Elsa - Exploring the Unknown](https://www.readysetink.com/card/elsa-exploring-the-unknown.html): Amethyst, cost 3, Character, Common
+- [Elsa - Fierce Protector](https://www.readysetink.com/card/elsa-fierce-protector.html): Amethyst, cost 4, Character, Rare
+- [Elsa - Gloves Off](https://www.readysetink.com/card/elsa-gloves-off.html): Amethyst, cost 4, Character, Common
+- [Elsa - Ice Artisan](https://www.readysetink.com/card/elsa-ice-artisan.html): Ruby, cost 6, Character, Legendary
+- [Elsa - Ice Maker](https://www.readysetink.com/card/elsa-ice-maker.html): Amethyst / Sapphire, cost 7, Character, Super Rare
+- [Elsa - Ice Surfer](https://www.readysetink.com/card/elsa-ice-surfer.html): Ruby, cost 4, Character, Common
+- [Elsa - Queen Regent](https://www.readysetink.com/card/elsa-queen-regent.html): Amethyst, cost 4, Character, Common
+- [Elsa - Snow Queen](https://www.readysetink.com/card/elsa-snow-queen.html): Amethyst, cost 3, Character, Uncommon
+- [Elsa - Spirit of Winter](https://www.readysetink.com/card/elsa-spirit-of-winter.html): Amethyst, cost 8, Character, Legendary
+- [Elsa - Storm Chaser](https://www.readysetink.com/card/elsa-storm-chaser.html): Amethyst, cost 3, Character, Rare
+- [Elsa - The Fifth Spirit](https://www.readysetink.com/card/elsa-the-fifth-spirit.html): Amethyst, cost 5, Character, Super Rare
+- [Elsa - Trusted Sister](https://www.readysetink.com/card/elsa-trusted-sister.html): Amethyst, cost 2, Character, Common
+- [Hera - Created by the Vine](https://www.readysetink.com/card/hera-created-by-the-vine.html): Amethyst, cost 5, Character, Uncommon
+- [Hera - Queen of the Gods](https://www.readysetink.com/card/hera-queen-of-the-gods.html): Emerald, cost 3, Character, Rare
+- [Iduna - Alarmed Queen](https://www.readysetink.com/card/iduna-alarmed-queen.html): Ruby, cost 2, Character, Common
+- [Iduna - Caring Mother](https://www.readysetink.com/card/iduna-caring-mother.html): Sapphire, cost 4, Character, Uncommon
+- [Jasmine - Queen of Agrabah](https://www.readysetink.com/card/jasmine-queen-of-agrabah.html): Sapphire, cost 5, Character, Rare
+- [Lady Tremaine - Imperious Queen](https://www.readysetink.com/card/lady-tremaine-imperious-queen.html): Ruby, cost 6, Character, Super Rare
+- [Maleficent - Formidable Queen](https://www.readysetink.com/card/maleficent-formidable-queen.html): Amethyst, cost 8, Character, Super Rare
+- [Queen of Hearts - Capricious Monarch](https://www.readysetink.com/card/queen-of-hearts-capricious-monarch.html): Steel, cost 7, Character, Rare
+- [Queen of Hearts - Haughty Monarch](https://www.readysetink.com/card/queen-of-hearts-haughty-monarch.html): Emerald / Ruby, cost 4, Character, Super Rare
+- [Queen of Hearts - Impatient Traveler](https://www.readysetink.com/card/queen-of-hearts-impatient-traveler.html): Ruby, cost 4, Character, Rare
+- [Queen of Hearts - Impulsive Ruler](https://www.readysetink.com/card/queen-of-hearts-impulsive-ruler.html): Ruby, cost 2, Character, Uncommon
+- [Queen of Hearts - Losing Her Temper](https://www.readysetink.com/card/queen-of-hearts-losing-her-temper.html): Ruby, cost 2, Character, Common
+- [Queen of Hearts - Quick-Tempered](https://www.readysetink.com/card/queen-of-hearts-quick-tempered.html): Emerald, cost 2, Character, Common
+- [Queen of Hearts - Sensing Weakness](https://www.readysetink.com/card/queen-of-hearts-sensing-weakness.html): Ruby, cost 5, Character, Uncommon
+- [Queen of Hearts - Unpredictable Bully](https://www.readysetink.com/card/queen-of-hearts-unpredictable-bully.html): Emerald / Ruby, cost 5, Character, Super Rare
+- [Queen of Hearts - Wonderland Empress](https://www.readysetink.com/card/queen-of-hearts-wonderland-empress.html): Amber, cost 3, Character, Uncommon
+- [Sarabi - Protecting the Pride](https://www.readysetink.com/card/sarabi-protecting-the-pride.html): Amber, cost 4, Character, Common
+- [The Mouse Queen - Ruler of Mousedom](https://www.readysetink.com/card/the-mouse-queen-ruler-of-mousedom.html): Sapphire, cost 4, Character, Common
+- [The Queen - Commanding Presence](https://www.readysetink.com/card/the-queen-commanding-presence.html): Amber, cost 5, Character, Super Rare
+- [The Queen - Conceited Ruler](https://www.readysetink.com/card/the-queen-conceited-ruler.html): Amber, cost 3, Character, Rare
+- [The Queen - Crown of the Council](https://www.readysetink.com/card/the-queen-crown-of-the-council.html): Sapphire, cost 4, Character, Rare
+- [The Queen - Cruelest of All](https://www.readysetink.com/card/the-queen-cruelest-of-all.html): Sapphire, cost 2, Character, Common
+- [The Queen - Devious Disguise](https://www.readysetink.com/card/the-queen-devious-disguise.html): Emerald, cost 4, Character, Legendary
+- [The Queen - Disguised Peddler](https://www.readysetink.com/card/the-queen-disguised-peddler.html): Emerald, cost 3, Character, Super Rare
+- [The Queen - Diviner](https://www.readysetink.com/card/the-queen-diviner.html): Sapphire, cost 3, Character, Legendary
+- [The Queen - Evil Ruler](https://www.readysetink.com/card/the-queen-evil-ruler.html): Emerald, cost 1, Character, Common
+- [The Queen - Fairest of All](https://www.readysetink.com/card/the-queen-fairest-of-all.html): Sapphire, cost 5, Character, Super Rare
+- [The Queen - Hateful Rival](https://www.readysetink.com/card/the-queen-hateful-rival.html): Amethyst, cost 3, Character, Common
+- [The Queen - Jealous Beauty](https://www.readysetink.com/card/the-queen-jealous-beauty.html): Amethyst, cost 4, Character, Legendary
+- [The Queen - Mirror Seeker](https://www.readysetink.com/card/the-queen-mirror-seeker.html): Sapphire, cost 4, Character, Uncommon
+- [The Queen - Regal Monarch](https://www.readysetink.com/card/the-queen-regal-monarch.html): Amber, cost 1, Character, Common
+- [The Queen - Wicked and Vain](https://www.readysetink.com/card/the-queen-wicked-and-vain.html): Amethyst, cost 5, Character, Super Rare
+- [Tinker Bell - Queen of the Azurite Fairies](https://www.readysetink.com/card/tinker-bell-queen-of-the-azurite-fairies.html): Amethyst, cost 7, Character, Uncommon
+- [Ursula - Sea Witch Queen](https://www.readysetink.com/card/ursula-sea-witch-queen.html): Amethyst, cost 7, Character, Legendary
+- [Virana - Fang Chief](https://www.readysetink.com/card/virana-fang-chief.html): Emerald, cost 5, Character, Common
+- [Wendy Darling - Pirate Queen](https://www.readysetink.com/card/wendy-darling-pirate-queen.html): Amber / Ruby, cost 7, Character, Uncommon
+- [Yzma - Above It All](https://www.readysetink.com/card/yzma-above-it-all.html): Amethyst / Emerald, cost 7, Character, Super Rare
