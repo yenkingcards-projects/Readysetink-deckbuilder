@@ -25,3 +25,25 @@ test("extracts current records and optional tiebreakers instead of pairings", ()
     { name: "Inkme", w: 1, l: 1, d: 0, omw: 75, gw: 50, ogw: 65 },
   ]);
 });
+
+const { parsePasted, parseStanding, formatStanding } = require("../screenshot-import.js");
+
+test("reads standings pasted cell-per-line, as the official table copies", () => {
+  const result = parsePasted("STANDINGS\nPREVIOUS ROUND STANDINGS (ROUND 6)\nRANK\t\tPOINTS\tRECORD\tOMW %\tGW %\tOGW %\tSTATUS\n1\t\nReadysetink\n\t16\t\n5\n-\n0\n-\n1\n\t68.0%\t73.3%\t63.7%\tActive\n2\t\n[Ink Pass] Inkme 2\n\t15\t\n5\n-\n1\n-\n0\n\t64.7%\t66.7%\t60.8%\tDROPPED\n");
+  assert.equal(result.round, 6);
+  assert.deepEqual(result.standings, [
+    { name: "Readysetink", w: 5, l: 0, d: 1, omw: 68, gw: 73.3, ogw: 63.7 },
+    { name: "[Ink Pass] Inkme 2", w: 5, l: 1, d: 0, omw: 64.7, gw: 66.7, ogw: 60.8 },
+  ]);
+});
+
+test("reads standings pasted one tab-separated row per line", () => {
+  const result = parsePasted("1\tReadysetink\t9\t3-0-0\t55.6%\t77.8%\t50.0%\tActive\n2\tZeroDEF7\t6\t2-1-0\t66.7%\t57.1%\t58.3%\tActive");
+  assert.deepEqual(result.standings.map(p => p.name), ["Readysetink", "ZeroDEF7"]);
+  assert.equal(result.standings[1].l, 1);
+});
+
+test("reviewed names survive a format/parse round trip without a trailing comma", () => {
+  const p = { name: "Inkme", w: 2, l: 1, d: 0, omw: 50, gw: 60, ogw: 55 };
+  assert.equal(parseStanding(formatStanding(p)).name, "Inkme");
+});
