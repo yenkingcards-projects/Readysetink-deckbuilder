@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mulan-disguised-soldier.html
 Flavor text: “Okay this is it, time to show 'em your man walk.”
 —Mushu
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $1.04 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $1.04 foil

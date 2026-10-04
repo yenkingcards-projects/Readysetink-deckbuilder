@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/maui-half-shark.html
 > CHEEEEHOOOO! Whenever this character challenges another character, you may return an action card from your discard to your hand.
 > WAYFINDING Whenever you play an action, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $6.46 regular, $11.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $6.26 regular, $11.76 foil

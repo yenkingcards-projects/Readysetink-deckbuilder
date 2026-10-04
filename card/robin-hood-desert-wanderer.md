@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/robin-hood-desert-wanderer.html
 Flavor text: “I say, those glowing symbols look interesting.
 I think it's time to go in for a closer look!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.32 foil

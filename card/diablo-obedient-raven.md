@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/diablo-obedient-raven.html
 Flavor text: “Go, and do not fail me.”
 —Maleficent
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.40 regular, $1.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.37 regular, $1.22 foil

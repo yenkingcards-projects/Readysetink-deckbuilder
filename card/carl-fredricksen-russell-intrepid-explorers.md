@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/carl-fredricksen-russell-intrepid-explo
 > OUTDOOR SKILLS While this character is at a location, all characters at that location get +1 ◊ and gain Evasive.
 > (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.87 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.82 foil

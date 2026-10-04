@@ -20,4 +20,4 @@ Flavor text: Hunnymancy is a powerful magic, suitable only for the pure of heart
 - Q: If I have two Winnie the Pooh – Hunny Archmage characters in play, do they count for each other?
   A: Yes. “Other Hunny characters” means a Hunny character that isn’t itself, regardless of the name of the character. One Winnie the Pooh sees the second Winnie the Pooh as an “other” Hunny character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.52 foil

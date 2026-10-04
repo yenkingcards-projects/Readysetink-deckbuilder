@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/henry-j-waternoose-iii-chief-executive-
 
 > THE BOTTOM LINE While you have more cards in your inkwell than each opposing player, this character gets +2 ◊ and gains Ward. (Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.40 foil

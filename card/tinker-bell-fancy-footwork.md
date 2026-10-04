@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/tinker-bell-fancy-footwork.html
 Flavor text: “Okay, now we know pixie dust doesn't affect the torn lorebook pages. Thanks, Tink.”
 —Venturo, an Illumineer
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.27 foil

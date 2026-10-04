@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/promising-lead.html
 Flavor text: “The books on these pages match up with those shelves. And the ley lines...The answer's right here!”
 —Judy Hopps
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil

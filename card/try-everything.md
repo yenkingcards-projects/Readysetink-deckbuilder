@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/try-everything.html
 
 Flavor text: I want to try even though I could fail
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.27 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/noi-orphaned-thief.html
 
 > HIDE AND SEEK While you have an item in play, this character gains Resist +1 and Ward. (Damage dealt to this character is reduced by 1. Opponents can't choose this character except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.37 foil

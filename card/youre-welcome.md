@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/youre-welcome.html
 
 Flavor text: I make everything happen!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $1.03 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.03 foil

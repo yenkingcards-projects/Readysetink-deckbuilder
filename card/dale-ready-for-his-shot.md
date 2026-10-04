@@ -21,4 +21,4 @@ Flavor text: “He's bonkus in the conkus, you know.”
 - Q: If I have Dale – Ready for His Shot in play, would an effect that modifies the {S} of a character affect how much damage a character deals in a challenge?
   A: No. Dale’s Spike Suit ability replaces the characteristic that’s used to calculate the total amount of damage dealt in a challenge. Instead of using the {S} value, you’d use the {W} value, so anything that modifies the {S} of the character doesn’t affect the damage calculation. However, anything that modifies the {W} of a character does affect the damage calculation. disneylorcana.com Ranger Team-Up Ranger Team-Up
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $4.51 regular, $7.92 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $4.53 regular, $7.84 foil

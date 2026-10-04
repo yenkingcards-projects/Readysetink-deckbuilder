@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/pride-lands-pride-rock.html
 > WE ARE ALL CONNECTED Characters get +2 ⛉ while here.
 > LION HOME If you have a Prince or King character here, you pay 1 ⬡ less to play characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.51 foil

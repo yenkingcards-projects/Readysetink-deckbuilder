@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/strange-things.html
 > (A character with cost 4 or more can ⟳ to sing this song for free.)
 > Up to 2 chosen characters can't quest until the start of your next turn. Draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.61 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.59 foil

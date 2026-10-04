@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merryweather-good-fairy.html
 
 Flavor text: “The most beautiful color is blue!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.25 foil

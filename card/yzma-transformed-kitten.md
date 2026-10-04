@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/yzma-transformed-kitten.html
 
 Flavor text: “Yes, I've already finished this course. I'm still going to bounce a few more times.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.24 foil

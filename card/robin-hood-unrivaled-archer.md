@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/robin-hood-unrivaled-archer.html
 
 Flavor text: “We never rob. We just sort of borrow a bit from those who can afford it.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $2.34 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $2.41 foil

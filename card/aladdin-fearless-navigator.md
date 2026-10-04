@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/aladdin-fearless-navigator.html
 
 Flavor text: Finding your way through the Azurite Sea takes a stout heart, plenty of courage, and more than a little luck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil

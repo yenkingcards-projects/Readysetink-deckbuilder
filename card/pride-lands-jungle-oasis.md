@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/pride-lands-jungle-oasis.html
 
 > OUR HUMBLE HOME While you have 3 or more characters here, you may banish this location to play a character from your discard for free.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.40 foil

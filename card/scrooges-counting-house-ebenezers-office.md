@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scrooges-counting-house-ebenezers-offic
 > Boost 2 ⬡ (Once during your turn, you may pay 2 ⬡ to put the top card of your deck facedown under this location.)
 > GOOD BUSINESS This location gets +1 ⛉ and +1 ◊ for each card under it.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $9.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $9.43 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/most-everyones-mad-here.html
 
 Flavor text: “Well, some go this way, some go that way. But as for me, myself, personally, I prefer the shortcut.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.52 foil

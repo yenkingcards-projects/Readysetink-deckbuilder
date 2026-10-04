@@ -16,4 +16,4 @@ Flavor text: “Ripples are so small at first, then look how they grow.
 But someone has to start them.”
 —Grandmother Willow
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.42 foil

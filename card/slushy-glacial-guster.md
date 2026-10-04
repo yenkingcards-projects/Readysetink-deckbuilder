@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/slushy-glacial-guster.html
 Flavor text: “All right, Slushy. Do your stuff.”
 —Lilo
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.51 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.52 foil

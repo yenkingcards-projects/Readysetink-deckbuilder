@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/zipper-big-helper.html
 > Shift 2 ⬡ (You may pay 2 ⬡ to play this on top of one of your characters named Zipper.)
 > BUZZING ENTHUSIASM Whenever this character quests, you may add his ⛉ to another chosen character's ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $0.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $0.77 foil

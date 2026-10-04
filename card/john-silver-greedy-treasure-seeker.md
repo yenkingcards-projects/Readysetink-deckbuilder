@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/john-silver-greedy-treasure-seeker.html
 
 Flavor text: “I was never much good at games. Always hated to lose.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.55 foil

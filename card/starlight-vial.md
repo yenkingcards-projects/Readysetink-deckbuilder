@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/starlight-vial.html
 
 Flavor text: In the wrong hands, this vial of magic could be disastrous.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.24 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mrs-potts-head-housekeeper.html
 
 Flavor text: “Now, don't fret over the mess, love. We'll have everything shipshape in no time.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.22 foil

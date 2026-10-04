@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/bambi-little-prince.html
 > SAY HELLO When you play this character, gain 1 lore.
 > KIND OF BASHFUL When an opponent plays a character, return this character to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.26 regular, $3.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.26 regular, $3.26 foil

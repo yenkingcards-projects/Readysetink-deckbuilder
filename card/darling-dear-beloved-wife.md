@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/darling-dear-beloved-wife.html
 
 Flavor text: “I don't imagine anything could ever take her place in our hearts.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.31 foil

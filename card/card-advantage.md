@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/card-advantage.html
 Flavor text: “I didn't plant the vine! It was the Nine, the Nine!”
 —Three of Spades
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.39 foil

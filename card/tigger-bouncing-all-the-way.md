@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tigger-bouncing-all-the-way.html
 
 Flavor text: “What do you mean, can Tiggers bounce in the snow? Just watch!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.44 foil

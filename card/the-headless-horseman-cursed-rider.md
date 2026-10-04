@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-headless-horseman-cursed-rider.html
 > WITCHING HOUR When you play this character, each player draws 3 cards, then discards 3 cards at random.
 > Choose an opposing character and deal 2 damage to them for each action card discarded this way.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $1.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $1.24 foil

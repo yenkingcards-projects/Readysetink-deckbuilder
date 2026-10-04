@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/tootles-lost-boy.html
 
 Flavor text: Every Lost Boy has a favorite hiding spot. Tootles has twelve.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.09 foil

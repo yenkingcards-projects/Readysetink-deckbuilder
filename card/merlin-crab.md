@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merlin-crab.html
 
 Flavor text: He'll be out of this in a snap!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.38 foil

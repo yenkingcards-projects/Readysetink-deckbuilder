@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hero-work.html
 Flavor text: “It's a whole family of Supers!”
 —Syndrome
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.52 foil

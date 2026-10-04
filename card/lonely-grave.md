@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/lonely-grave.html
 
 Flavor text: A frightening prospect for the richest man in town.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.38 foil

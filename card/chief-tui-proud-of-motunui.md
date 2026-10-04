@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/chief-tui-proud-of-motunui.html
 
 Flavor text: “Look at our home! There is no better place to be.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.09 foil

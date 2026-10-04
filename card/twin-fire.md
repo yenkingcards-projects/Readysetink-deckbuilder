@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/twin-fire.html
 Flavor text: “I got 'em!”
 “No, I got 'em!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.24 foil

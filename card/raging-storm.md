@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/raging-storm.html
 Flavor text: “The storm...it's too much, Lilo. We have to go back!”
 —Nani
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $3.91 regular, $10.85 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.92 regular, $10.80 foil

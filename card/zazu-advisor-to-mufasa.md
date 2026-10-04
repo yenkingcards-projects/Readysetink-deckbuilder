@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/zazu-advisor-to-mufasa.html
 
 Flavor text: “Oh, I guess one quick spin through the lights won't hurt.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.16 foil

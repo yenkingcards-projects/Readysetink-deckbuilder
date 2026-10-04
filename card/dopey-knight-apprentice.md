@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/dopey-knight-apprentice.html
 
 > STRONGER TOGETHER When you play this character, if you have another Knight character in play, you may deal 1 damage to chosen character or location.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil

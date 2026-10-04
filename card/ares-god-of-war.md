@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ares-god-of-war.html
 > Reckless (This character can't quest and must challenge each turn if able.)
 > CALL TO BATTLE Once during your turn, whenever you put a card under one of your characters or locations, you may ready chosen character. If you do, that character can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.31 foil

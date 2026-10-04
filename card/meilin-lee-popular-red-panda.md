@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/meilin-lee-popular-red-panda.html
 > At the end of your turn, remove all damage from this character and return only this card to your hand.)
 > KARAOKE QUEEN Once during your turn, whenever this character sings a song, gain 3 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.61 regular, $2.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.57 regular, $2.35 foil

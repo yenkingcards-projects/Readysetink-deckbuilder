@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/alistair-krei-ambitious-entrepreneur.ht
 
 Flavor text: “Sleek yet strong...These inkrunners are an extraordinary feat of engineering.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.19 foil

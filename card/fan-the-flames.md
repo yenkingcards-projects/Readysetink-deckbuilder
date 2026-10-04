@@ -19,4 +19,4 @@ Flavor text: Pretty words can move a crowd, but so can ugly ones.
 - Q: If I use Elsa – Spirit of Winter’s ability Deep Freeze to exert 2 characters, can they be readied with Fan the Flames on their next turn?
   A: Yes. Deep Freeze only keeps characters from readying during the Ready step of their next turn. It doesn’t keep them from being readied by Fan the Flames and similar abilities.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.48 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/genie-the-ever-impressive.html
 
 Flavor text: “You can wish for nearly anything! Do you want the short version, or should I give you the whole song and dance?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.22 foil

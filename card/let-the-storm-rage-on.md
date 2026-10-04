@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/let-the-storm-rage-on.html
 
 Flavor text: The cold never bothered me anyway
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $1.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $1.19 foil

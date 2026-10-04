@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sleepy-nodding-off.html
 
 Flavor text: He never gets tired of naps.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.27 foil

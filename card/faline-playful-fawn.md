@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/faline-playful-fawn.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > PRECOCIOUS FRIEND While you have a character in play with more ¤ than each opposing character, this character gets +2 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.23 foil

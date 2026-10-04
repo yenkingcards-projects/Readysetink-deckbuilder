@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-leader-of-the-band.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > STRIKE UP THE MUSIC When you play this character, chosen character gains Support this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.34 foil

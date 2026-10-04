@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-admiral-underpants.html
 
 Flavor text: If he must give a victory speech, he'll keep it brief.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.41 foil

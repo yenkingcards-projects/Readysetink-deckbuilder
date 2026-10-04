@@ -22,4 +22,4 @@ Flavor text: “Great teamwork, pal! Now, make sure that helmet is fastened nice
 - Q: If an effect is modifying a character’s {W}, does Ranger Team-Up take the modified {W} or the printed {W}?
   A: It uses the modified {W}. For example, if the chosen character has 2 {W} and an effect gives that character +1 {W}, then the chosen character would get +3 {S}. Metamorphosis Metamorphosis
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil

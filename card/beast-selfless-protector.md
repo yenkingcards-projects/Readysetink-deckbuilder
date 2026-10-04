@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beast-selfless-protector.html
 
 Flavor text: “You'll have to go through me first.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.91 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.90 foil

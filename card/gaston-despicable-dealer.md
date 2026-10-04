@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gaston-despicable-dealer.html
 
 Flavor text: “Yes, yes, everything will be ready. Just make sure you do your part.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.64 foil

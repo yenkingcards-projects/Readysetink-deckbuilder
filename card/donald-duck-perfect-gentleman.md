@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/donald-duck-perfect-gentleman.html
 - Q: If I choose not to draw a card for Donald Duck – Perfect Gentleman’s Allow Me ability, can my opponent still draw a card?
   A: Yes. Each player decides individually whether they want to draw a card at the start of your turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.82 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.81 foil

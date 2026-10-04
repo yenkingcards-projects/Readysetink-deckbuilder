@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/abu-wise-sultan.html
 Flavor text: “Well, that's just great. I guess anyone can be sultan now.”
 —Iago
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.42 foil

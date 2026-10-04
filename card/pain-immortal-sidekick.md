@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/pain-immortal-sidekick.html
 
 Flavor text: “We totally took care of that thing you told us to do and definitely did not spend the day in Thebes ticketing chariots and stealing people's laundry.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.23 foil

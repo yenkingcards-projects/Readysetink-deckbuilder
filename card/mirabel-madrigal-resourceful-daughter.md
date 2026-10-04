@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-resourceful-daughter.h
 
 Flavor text: “We'll get you something to eat when we get to camp. For now, you should drink this.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.18 foil

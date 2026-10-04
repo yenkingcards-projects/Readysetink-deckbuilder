@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/aladdin-on-the-edge-of-adventure.html
 
 > QUICK ON HIS FEET Whenever you play an action, this character gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil

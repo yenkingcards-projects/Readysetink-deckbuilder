@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/beast-tragic-hero.html
 
 Flavor text: “It must be my destiny—to remain a beast forever.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $8.96 regular, $23.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $8.63 regular, $23.09 foil

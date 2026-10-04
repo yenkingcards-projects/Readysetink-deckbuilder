@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/li-shang-valiant-leader.html
 
 Flavor text: “The best way I can honor my father's memory is to finish his fight.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.24 foil

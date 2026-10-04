@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/lumiere-hotheaded-candelabra.html
 
 Flavor text: When things heat up, no one can hold a candle to him.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.36 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/penny-the-orphan-clever-child.html
 Flavor text: “Penny, dear, now don't cry. We are here to help you.”
 —Miss Bianca
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.13 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/iduna-alarmed-queen.html
 
 Flavor text: “Oh, dear. Look at the ice! Do you think this means...?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.23 foil

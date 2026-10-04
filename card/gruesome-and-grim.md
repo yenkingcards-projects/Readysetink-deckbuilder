@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/gruesome-and-grim.html
 > (A character with cost 3 or more can ⟳ to sing this song for free.)
 > Play a character with cost 4 or less for free. They gain Rush. At the end of the turn, banish them. (They can challenge the turn they're played.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.40 foil

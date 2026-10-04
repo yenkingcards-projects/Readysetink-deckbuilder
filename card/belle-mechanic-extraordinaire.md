@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/belle-mechanic-extraordinaire.html
 > Shift 7 SALVAGE For each item card in your discard, you pay 1 ⬡ less to play this character using her Shift ability.
 > REPURPOSE Whenever this character quests, you may put up to 3 item cards from your discard on the bottom of your deck to gain 1 lore for each item card moved this way.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.25 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.43 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/hades-double-dealer.html
 
 > HERE'S THE TRADE-OFF ⟳, Banish one of your other characters — Play a character with the same name as the banished character for free.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.85 regular, $2.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.84 regular, $2.39 foil

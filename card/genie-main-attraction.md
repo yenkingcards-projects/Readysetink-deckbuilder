@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/genie-main-attraction.html
 
 Flavor text: “Keep your eyes on me, folks! It's time for a little prestidigitation!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.88 regular, $1.74 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.89 regular, $1.74 foil

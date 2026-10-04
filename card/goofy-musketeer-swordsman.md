@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/goofy-musketeer-swordsman.html
 
 Flavor text: “Count me in!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.41 foil

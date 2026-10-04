@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/aladdin-barreling-through.html
 > Reckless (This character can't quest and must challenge each turn if able.)
 > ONLY THE BOLD While there's a card under this character, your characters with Reckless gain “⟳ — Gain 1 lore.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.37 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.36 regular, $0.44 foil

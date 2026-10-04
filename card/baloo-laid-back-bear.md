@@ -13,4 +13,4 @@ Flavor text: “I tell ya, for a spooky forest, this place is all right.
 Plenty of berries, lots of trees for back-scratching...
 A bear could do a lot worse.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.14 foil

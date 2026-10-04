@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/angel-siren-singer.html
 > UNDERDOG If this is your first turn and you're not the first player, you pay 1 ⬡ less to play this character.
 > Singer 3 (This character counts as cost 3 to sing songs.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.39 regular, $6.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.36 regular, $6.07 foil

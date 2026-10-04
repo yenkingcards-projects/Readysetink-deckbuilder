@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/rabbit-fed-up.html
 
 Flavor text: “Not another step. I've got a shovel full of snow, and I'm not afraid to use it!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.27 foil

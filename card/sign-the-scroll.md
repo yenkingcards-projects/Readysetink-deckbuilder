@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/sign-the-scroll.html
 
 > Each opponent may choose and discard a card. For each opponent who doesn't, you gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.24 foil

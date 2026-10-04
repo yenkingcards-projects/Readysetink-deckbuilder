@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/panic-high-strung-imp.html
 Flavor text: “What the boss doesn't know won't hurt us. Much.
 I hope.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/stitch-carefree-surfer.html
 Flavor text: “So you're from outer space, huh? I hear the surfing's choice.”
 —David
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $16.66 regular, $49.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $16.04 regular, $50.19 foil

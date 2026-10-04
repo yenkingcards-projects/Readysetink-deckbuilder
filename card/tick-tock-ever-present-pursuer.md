@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/tick-tock-ever-present-pursuer.html
 Flavor text: “That cursed beast liked the taste of me so well he's followed me ever since....”
 —Captain Hook
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.16 foil

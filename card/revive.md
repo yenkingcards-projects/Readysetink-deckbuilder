@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/revive.html
 
 Flavor text: Not all that is lost is gone forever.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.32 foil

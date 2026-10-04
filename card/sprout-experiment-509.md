@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sprout-experiment-509.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > BOTANICAL EVIL When you play this character, you may choose and discard an Alien character card or a location card from your hand. If you do, deal 2 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.46 foil

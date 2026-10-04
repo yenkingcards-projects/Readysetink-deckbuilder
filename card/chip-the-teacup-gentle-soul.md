@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/chip-the-teacup-gentle-soul.html
 
 Flavor text: “Wanna see me do a trick?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.25 foil

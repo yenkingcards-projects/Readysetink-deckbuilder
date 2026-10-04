@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-prophecy-finder.html
 
 Flavor text: “Why would Bruno break this prophecy? Could it be something dangerous? We have to find out!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.16 foil

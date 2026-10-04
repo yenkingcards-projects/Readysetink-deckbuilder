@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/splodyhead-experiment-619.html
 Flavor text: “Is ideal experiment for making of campfires, roasting of marshmallows, and also blowing up of things.”
 —Jumba Jookiba
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-demolition-dude.html
 
 > REFRESHING BREAK Whenever you ready this character, gain 1 lore for each 1 damage on him.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.22 foil

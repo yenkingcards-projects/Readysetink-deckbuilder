@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/timothy-q-mouse-flight-instructor.html
 
 Flavor text: “Stick with me, kid, and we'll fly all the way to the top!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.36 foil

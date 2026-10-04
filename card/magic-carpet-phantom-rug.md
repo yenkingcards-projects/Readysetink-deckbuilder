@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/magic-carpet-phantom-rug.html
 > Vanish (When an opponent chooses this character for an action, banish them.)
 > SPECTRAL FORCE Your other Illusion characters gain Challenger +1. (They get +1 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.20 foil

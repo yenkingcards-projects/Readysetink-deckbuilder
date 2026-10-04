@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ursula-deceiver-of-all.html
 
 Flavor text: “I don't want much—just the most powerful lore!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.40 regular, $6.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.38 regular, $6.54 foil

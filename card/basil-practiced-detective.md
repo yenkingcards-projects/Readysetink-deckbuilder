@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/basil-practiced-detective.html
 Flavor text: “This case is as good as solved!”
 —Basil
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.78 foil

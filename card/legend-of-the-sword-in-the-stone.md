@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/legend-of-the-sword-in-the-stone.html
 
 Flavor text: A legend is sung of when England was young And knights were brave and bold
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/raya-leader-of-heart.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Raya.)
 > CHAMPION OF KUMANDRA Whenever this character challenges a damaged character, she takes no damage from the challenge.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.47 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.47 foil

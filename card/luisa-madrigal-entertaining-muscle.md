@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/luisa-madrigal-entertaining-muscle.html
 
 Flavor text: “This is just a warm-up, folks! Wait 'til you see the big finale!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.37 foil

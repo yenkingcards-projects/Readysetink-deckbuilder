@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/mad-hatter-eccentric-host.html
 
 > WE'LL HAVE TO LOOK INTO THIS Whenever this character quests, you may look at the top card of chosen player's deck. Put it on top of their deck or into their discard.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $0.74 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.74 foil

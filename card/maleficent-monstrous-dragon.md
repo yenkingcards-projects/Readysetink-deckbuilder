@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/maleficent-monstrous-dragon.html
 
 Flavor text: The ninth Rule of Villainy: When all else fails, turn into a dragon.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $3.51 regular, $46.85 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.45 regular, $46.57 foil

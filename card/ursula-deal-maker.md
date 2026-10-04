@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ursula-deal-maker.html
 > QUITE THE BARGAIN When you play this character and whenever she quests, another chosen character gets +1 ◊ this turn.
 > BY THE WAY At the end of your turn, if this character is exerted, put chosen character of yours into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.45 regular, $1.94 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.43 regular, $1.93 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mr-snoops-betrayed-partner.html
 
 Flavor text: “You can't do this to me, you swindler! We had a verbal agreement!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.18 foil

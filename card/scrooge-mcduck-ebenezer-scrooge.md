@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-ebenezer-scrooge.html
 > PAYMENT DUE Whenever this character quests, each opponent loses 1 lore. Draw a card for each 1 lore lost this way.
 > FORECLOSURE At the end of your turn, if an opponent has 0 lore, you gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $1.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.28 foil

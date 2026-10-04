@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/duckburg-funsos-funzone.html
 
 > WHERE FUN IS IN THE ZONE Whenever a character quests while here, you pay 2 ⬡ less for the next character you play this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.29 foil

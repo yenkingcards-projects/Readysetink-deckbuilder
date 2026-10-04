@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/nala-mischievous-cub.html
 
 Flavor text: The Lorcana Hide-and-Seek Championship was hers for the taking.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.24 foil

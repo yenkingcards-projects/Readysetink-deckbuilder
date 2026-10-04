@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/thomas-wide-eyed-recruit.html
 
 Flavor text: “I've never seen a winter so beautiful! Look at the snow—pristine as far as the eye can see!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil

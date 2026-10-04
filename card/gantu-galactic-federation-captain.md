@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gantu-galactic-federation-captain.html
 
 Flavor text: “Relax, enjoy the trip...and don't get any ideas!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.81 regular, $18.75 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.80 regular, $18.99 foil

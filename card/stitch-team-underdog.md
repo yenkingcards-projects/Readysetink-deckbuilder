@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/stitch-team-underdog.html
 
 Flavor text: He's not the biggest glimmer on the team, but he still packs a wallop.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.27 foil

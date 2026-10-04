@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/simba-rightful-king.html
 
 Flavor text: With dangers multiplying all around, the pride needs its guardian.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.22 foil

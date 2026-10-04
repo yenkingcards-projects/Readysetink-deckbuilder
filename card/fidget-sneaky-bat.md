@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fidget-sneaky-bat.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > I TOOK CARE OF EVERYTHING Whenever this character quests, another chosen character of yours gains Evasive until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.29 foil

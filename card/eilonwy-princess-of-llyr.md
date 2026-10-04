@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/eilonwy-princess-of-llyr.html
 
 Flavor text: “If you want to come with me, you may.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.51 foil

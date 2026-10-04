@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-robot-queen.html
 Flavor text: “To our beloved Queen this gift we send, As her 60-year reign comes to an end.”
 —Note delivered with the robot queen
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.30 foil

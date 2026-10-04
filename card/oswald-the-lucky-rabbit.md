@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/oswald-the-lucky-rabbit.html
 > FAVORABLE CHANCE During your turn, whenever a card is put into your inkwell, you may reveal the top card of your deck. If it's an item card, you may play that item for free and it enters play exerted.
 > Otherwise, put it on the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.56 regular, $9.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.53 regular, $9.26 foil

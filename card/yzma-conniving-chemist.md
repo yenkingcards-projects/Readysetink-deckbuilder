@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/yzma-conniving-chemist.html
 
 Flavor text: “One of these has got to work. Let's see what happens.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.08 regular, $4.51 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.06 regular, $4.63 foil

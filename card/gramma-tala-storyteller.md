@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/gramma-tala-storyteller.html
 Flavor text: Moana: “Is there something you want to tell me?”
 Gramma Tala: “Is there something you want to hear?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.67 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.65 foil

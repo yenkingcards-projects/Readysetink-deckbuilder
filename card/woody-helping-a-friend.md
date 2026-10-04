@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/woody-helping-a-friend.html
 - Q: If I play Woody – Helping a Friend while I have another Toy character in play, can I choose the order of resolving the effects?
   A: No, the effects are resolved in the order written on the card. If you have a Toy character in play when you play Woody, “choose one of the following” is replaced with “choose both.” When that happens, you’ll first return the character card with cost 2 or less from your discard to your hand, then you may play a character with cost 2 or less for free. The effects will always resolve in that order if both are chosen.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.33 regular, $0.77 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $0.73 foil

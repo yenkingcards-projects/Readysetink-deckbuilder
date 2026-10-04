@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/lythos-rock-titan.html
 
 Flavor text: “Crush Zeus!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.28 foil

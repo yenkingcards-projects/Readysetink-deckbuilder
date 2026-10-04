@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/grandma-wu-wise-grandmother.html
 > Challenger +2 (While challenging, this character gets +2 ¤.)
 > ANCESTRAL UNDERSTANDING When you shift a character on top of this character, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.39 foil

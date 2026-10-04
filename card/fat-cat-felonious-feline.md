@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/fat-cat-felonious-feline.html
 
 Flavor text: “I'm afraid your information is out of date, my dear rodent. I know what the glyphs are for, and more importantly...how to use them.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.15 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/calhoun-marine-sergeant.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > LEVEL UP During your turn, whenever this character banishes another character in a challenge, gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.39 regular, $2.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $2.28 foil

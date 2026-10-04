@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/freckles-good-boy.html
 
 Flavor text: “I want to play with the others! Can I, Dad? Please?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.22 foil

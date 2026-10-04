@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-spinning-skater.html
 
 Flavor text: She's the epitome of grace, beauty, and a whole lot of fun.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.29 foil

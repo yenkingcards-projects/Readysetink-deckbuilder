@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/monstro-infamous-whale.html
 > Rush (This character can challenge the turn they're played.)
 > FULL BREACH Choose and discard a card — Ready this character. He can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.33 regular, $1.07 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.34 regular, $0.99 foil

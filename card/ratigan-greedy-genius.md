@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ratigan-greedy-genius.html
 > Ward (Opponents can't choose this character except to challenge.)
 > TIME RUNS OUT At the end of your turn, if you didn't put any cards into your inkwell this turn, banish this character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.71 regular, $2.34 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.66 regular, $2.34 foil

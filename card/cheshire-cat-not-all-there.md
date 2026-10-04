@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cheshire-cat-not-all-there.html
 
 Flavor text: “You may have noticed that I'm not all there myself.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $1.08 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.08 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/raya-infiltration-expert.html
 
 > UNCONVENTIONAL TACTICS Whenever this character quests, you may pay 2 ⬡ to ready another chosen character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.68 regular, $2.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.68 regular, $2.53 foil

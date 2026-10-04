@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/yokai-scientific-supervillain.html
 > NEUROTRANSMITTER You may play items named Microbots for free.
 > TECHNICAL GAIN Whenever this character quests, draw a card for each opposing character with 0 ¤.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.62 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/prince-phillip-warden-of-the-woods.html
 
 Flavor text: He stands ready to protect his friends from any threat.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.50 foil

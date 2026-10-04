@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/go-go-tomago-darting-dynamo.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > STOP WHINING, WOMAN UP When you play this character, you may pay 2 ⬡ to gain lore equal to the damage on chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.38 regular, $0.79 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.38 regular, $0.79 foil

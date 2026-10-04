@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/little-john-loyal-friend.html
 
 Flavor text: “What's the rush, Rob? Take a load off! There's plenty of time to go lookin' for lore lost in that crazy ink.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.24 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.37 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/sherwood-forest-outlaw-hideaway.html
 > FOREST HOME Your characters named Robin Hood may move here for free.
 > FAMILIAR TERRAIN Characters gain Ward and “⟳, 1 ⬡ — Deal 2 damage to chosen damaged character” while here. (Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.49 foil

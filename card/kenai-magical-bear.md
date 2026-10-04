@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kenai-magical-bear.html
 > Challenger +2 (While challenging, this character gets +2 ¤.)
 > WISDOM OF HIS STORY During your turn, when this character is banished in a challenge, return this card to your hand and gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.48 foil

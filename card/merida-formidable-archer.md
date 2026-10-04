@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/merida-formidable-archer.html
 > FULL QUIVER When you play this character, you may return an action card named Three Arrows from your discard to your hand.
 > STEADY AIM Whenever one of your actions deals damage to an opposing character, deal 2 damage to that character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.90 regular, $5.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.82 regular, $5.13 foil

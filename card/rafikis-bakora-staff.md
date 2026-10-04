@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/rafikis-bakora-staff.html
 > READ THE OMENS ⟳, 1 ⬡ — Draw a card, then choose and discard a card.
 > BONK! 1 ⬡, Banish this item — Deal 1 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.20 foil

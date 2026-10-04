@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hera-created-by-the-vine.html
 
 Flavor text: You could do a lot worse than make a copy of a goddess.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.33 foil

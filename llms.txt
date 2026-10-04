@@ -9,7 +9,7 @@ Prefer the raw data files below over scraping HTML. They are static JSON, free t
 - [Card database](https://www.readysetink.com/card-db.json): every card as JSON. Top-level keys: `fetched`, `priced`, `sets`, `cards`. Each card has `n` name, `v` version, `c` cost, `ik` inkable, `co` ink colors, `ty` type, `sub` subtypes, `tx` rules text, `ef` effect text, `kw` keywords, `st` strength, `wi` willpower, `lo` lore, `r` rarity, `s` set number, `num` collector number, `sto` source story, `ar` artists, `fl` flavor text, `p` / `pf` USD price (regular / foil).
 - [Official rulings](https://www.readysetink.com/card-rules.json): rulings from Ravensburger's set release notes, keyed by exact card name.
 - [Meta decks](https://www.readysetink.com/meta-decks.json): competitive deck lists grouped by point in a set's life.
-- [Prices](https://www.readysetink.com/card-prices.json): USD price snapshot per printing, dated 2026-10-01, sourced from Lorcast. A rough guide, not a live quote.
+- [Prices](https://www.readysetink.com/card-prices.json): USD price snapshot per printing, dated 2026-10-03, sourced from Lorcast. A rough guide, not a live quote.
 - [Data guide](https://www.readysetink.com/data/): what each file contains, how it is structured, and where it comes from.
 
 ## Pages

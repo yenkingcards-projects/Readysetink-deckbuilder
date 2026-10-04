@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-weedwhacker.html
 > FULL POWER ⟳, 1 ⬡ — Chosen character gains Challenger +2 this turn. (They get +2 ¤ while challenging.)
 > CLEAR-CUT 2 ⬡, Banish this item — Banish chosen Vineling character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil

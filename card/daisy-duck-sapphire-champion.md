@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/daisy-duck-sapphire-champion.html
 > STAND FAST Your other Sapphire characters gain Resist +1. (Damage dealt to them is reduced by 1.)
 > LOOK AHEAD Whenever one of your other Sapphire characters quests, you may look at the top card of your deck. Put it on either the top or the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.64 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lefou-instigator.html
 
 Flavor text: All a mob needs is a push in the wrong direction.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $1.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $1.58 foil

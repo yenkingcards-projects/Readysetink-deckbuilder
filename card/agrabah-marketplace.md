@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/agrabah-marketplace.html
 Flavor text: “Welcome to Agrabah, city of mystery, of enchantment, and the finest merchandise this side of the river.”
 —Merchant
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.16 foil

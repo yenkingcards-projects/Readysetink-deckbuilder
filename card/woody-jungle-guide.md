@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/woody-jungle-guide.html
 > LET'S GET MOVIN' Whenever this character quests, draw a card. Then, you may play a character with cost 2 or less for free.
 > EVERYONE GATHER 'ROUND Your other Toy characters get +1 ⛉.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.57 regular, $4.82 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.52 regular, $4.78 foil

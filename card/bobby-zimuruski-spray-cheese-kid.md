@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/bobby-zimuruski-spray-cheese-kid.html
 
 Flavor text: “It's the Leaning Tower of Cheese-a.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.72 regular, $5.97 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.60 regular, $5.97 foil

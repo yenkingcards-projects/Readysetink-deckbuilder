@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/family-fishing-pole.html
 > WATCH CLOSELY This item enters play exerted.
 > THE PERFECT CAST ⟳, 1 ⬡, Banish this item — Return chosen exerted character of yours to your hand to gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.38 regular, $0.98 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.37 regular, $0.97 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sisu-divine-water-dragon.html
 
 Flavor text: No matter her shape, you can't mistake her heart.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.83 regular, $4.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.82 regular, $4.76 foil

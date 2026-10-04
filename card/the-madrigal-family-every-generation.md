@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-madrigal-family-every-generation.ht
 > Madrigal Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your Madrigal characters.)
 > FAMILY BLESSINGS Once during your turn, whenever you remove 1 or more damage from one of your characters, put the top card of your deck into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.50 foil

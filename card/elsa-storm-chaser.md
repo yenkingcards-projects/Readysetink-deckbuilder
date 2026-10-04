@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/elsa-storm-chaser.html
 
 Flavor text: After Elsa dispersed Ursula's storm, Anna was nowhere to be found.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.56 foil

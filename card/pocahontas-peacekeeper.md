@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pocahontas-peacekeeper.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Pocahontas.)
 > CALMING WORDS When you play this character, if you used Shift to play her and none of your characters challenged this turn, characters can't challenge until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $21.51 regular, $37.87 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $21.51 regular, $37.85 foil

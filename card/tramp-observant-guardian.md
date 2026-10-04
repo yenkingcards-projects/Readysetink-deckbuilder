@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tramp-observant-guardian.html
 
 Flavor text: One glance at the tiny tracks, and his protective instincts kicked in.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.16 foil

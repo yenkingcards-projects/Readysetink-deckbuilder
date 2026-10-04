@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/duchess-elegant-feline.html
 
 Flavor text: “Now darlings, pay close attention to where we are. What can you learn about the Owl from the house?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.28 foil

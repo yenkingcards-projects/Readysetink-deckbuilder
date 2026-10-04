@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/honey-lemon-costumed-catalyst.html
 
 > LET'S DO THIS! Whenever you play a Floodborn character, if you used Shift to play them, you may return chosen character to their player's hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.65 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.64 foil

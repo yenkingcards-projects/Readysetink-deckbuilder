@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/queen-of-hearts-impatient-traveler.html
 
 Flavor text: Hours of walking in the heat had not improved her rosy disposition.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.30 foil

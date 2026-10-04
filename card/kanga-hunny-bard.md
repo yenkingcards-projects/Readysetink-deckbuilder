@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/kanga-hunny-bard.html
 
 Flavor text: No matter how scary things got, Kanga's uplifting tunes kept the party's spirits—and courage—high.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.31 foil

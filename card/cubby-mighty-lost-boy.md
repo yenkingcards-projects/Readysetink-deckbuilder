@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cubby-mighty-lost-boy.html
 
 Flavor text: With Peter holding off Hook, Cubby did what he does best: break stuff.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.09 foil

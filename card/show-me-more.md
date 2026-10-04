@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/show-me-more.html
 
 Flavor text: “Weave of time, attend to me— Reveal the moments soon to be!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.41 regular, $2.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.42 regular, $2.32 foil

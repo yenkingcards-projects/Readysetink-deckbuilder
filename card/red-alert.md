@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/red-alert.html
 Flavor text: “Please remain calm. This is not a drill.”
 —CDA Agent
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $3.47 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $3.47 foil

@@ -20,4 +20,4 @@ Flavor text: The secret contract has already been written.
 - Q: When I use Ursula – Sea Witch’s ability You’re Too Late, can I choose a ready character?
   A: Yes. Note, however, that You’re Too Late doesn’t exert the character you’ve chosen. It only prevents them from being readied if they’re exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.31 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sulley-strategic-scarer.html
 Flavor text: “Show them what it takes to be our top scarer!”
 —Henry J. Waternoose III
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil

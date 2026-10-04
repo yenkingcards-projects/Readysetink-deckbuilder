@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/stampede.html
 
 Flavor text: A wildebeest stampede is like a raging river: best experienced from a distance.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.19 foil

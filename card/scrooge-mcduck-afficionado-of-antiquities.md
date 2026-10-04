@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-afficionado-of-antiquiti
 
 Flavor text: “The secret room should be right here! Ach, I cannot believe I paid a whole penny for this map.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.31 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $0.64 foil

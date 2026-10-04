@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/the-sorcerers-hat.html
 
 Flavor text: Minnie approached it cautiously. Whoever had placed it here might have prepared traps.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.49 foil

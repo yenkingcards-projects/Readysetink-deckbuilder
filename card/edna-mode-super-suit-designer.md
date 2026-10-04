@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/edna-mode-super-suit-designer.html
 > KEY ACCESSORY ⟳ — Ready chosen item.
 > ALL THE BASICS While you have an item named Super Suit in play, this character gains Ward. (Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.28 foil

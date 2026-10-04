@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mulan-armored-fighter.html
 
 Flavor text: “Maybe what I really wanted was to prove I could do things right, so when I looked in the mirror, I'd see someone worthwhile.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.21 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/aurora-holding-court.html
 
 Flavor text: The other princesses were especially happy to attend her long-awaited celebration.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.19 regular, $5.91 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.29 regular, $5.99 foil

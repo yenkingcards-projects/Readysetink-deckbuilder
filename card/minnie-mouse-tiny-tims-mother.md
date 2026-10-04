@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-tiny-tims-mother.html
 
 Flavor text: She's always ready with a warm plate and a warm heart.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil

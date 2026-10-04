@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/ranger-plane.html
 > AIR SUPPORT Your characters gain Support. (Whenever they quest, you may add their ¤ to another chosen character's ¤ this turn.)
 > BIG LIFT ⟳ — Chosen character with 10 ¤ or more gets +3 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.56 foil

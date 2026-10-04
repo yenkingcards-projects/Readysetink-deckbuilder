@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/mordu-wicked-with-pride.html
 Flavor text: “Believing that he alone should be the sole heir, a seed of selfishness grew in him like a poison.”
 —The Witch
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.19 foil

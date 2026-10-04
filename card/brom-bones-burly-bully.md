@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/brom-bones-burly-bully.html
 Flavor text: “Hold on, schoolmaster! That's a mighty big book.
 Let me take that for you!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.09 foil

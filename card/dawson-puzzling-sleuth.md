@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dawson-puzzling-sleuth.html
 
 Flavor text: “I say, what sort of contraption is this?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.54 foil

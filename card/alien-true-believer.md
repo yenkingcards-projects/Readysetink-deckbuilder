@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/alien-true-believer.html
 > WE ARE ONE This character gets +1 ¤ for each other Toy character you have in play.
 > HE HAS BEEN CHOSEN During your turn, when this character is banished, return another character card named Alien from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.74 regular, $3.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.70 regular, $3.10 foil

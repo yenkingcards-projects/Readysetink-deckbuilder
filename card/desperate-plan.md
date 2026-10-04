@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/desperate-plan.html
 Flavor text: “It's my decision. My choice. And you won't stop me.”
 —Namaari
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $0.89 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $0.89 foil

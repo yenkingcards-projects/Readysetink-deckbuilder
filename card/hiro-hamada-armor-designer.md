@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/hiro-hamada-armor-designer.html
 > (Only characters with Evasive can challenge them.
 > Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.81 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.81 foil

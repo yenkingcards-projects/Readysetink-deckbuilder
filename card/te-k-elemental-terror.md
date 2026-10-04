@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/te-k-elemental-terror.html
 > Shift 7 (You may pay 7 ⬡ to play this on top of one of your characters named Te Kā.)
 > ANCIENT RAGE During your turn, whenever an opposing character is exerted, banish them.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.82 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.80 foil

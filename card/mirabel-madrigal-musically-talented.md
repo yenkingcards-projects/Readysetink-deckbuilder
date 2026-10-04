@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-musically-talented.htm
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Mirabel Madrigal.)
 > HER OWN SPECIAL GIFT Whenever this character quests, you may return a song card with cost 3 or less from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $1.03 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $1.05 foil

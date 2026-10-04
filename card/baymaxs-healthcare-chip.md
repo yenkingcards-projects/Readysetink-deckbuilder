@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/baymaxs-healthcare-chip.html
 > • Remove up to 1 damage from chosen character.
 > • If you have a Robot character in play, remove up to 3 damage from chosen character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.22 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/anna-magical-mission.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > COORDINATED PLAN Whenever this character quests, if you have a character named Elsa in play, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $1.89 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.88 foil

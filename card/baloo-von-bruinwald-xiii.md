@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/baloo-von-bruinwald-xiii.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > LET'S MAKE LIKE A TREE When this character is banished, gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.39 foil

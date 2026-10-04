@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rhino-motivational-speaker.html
 
 Flavor text: “Don't forget, you are awesome. You can handle anything. Now channel your inner awesomeness and CLEAR THIS TRAP!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.55 foil

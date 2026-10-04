@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/rescue-rangers-away.html
 > Count the number of characters you have in play.
 > Chosen character loses ¤ equal to that number until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.24 foil

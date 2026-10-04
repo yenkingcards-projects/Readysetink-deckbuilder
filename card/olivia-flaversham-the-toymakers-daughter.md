@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/olivia-flaversham-the-toymakers-daughte
 
 Flavor text: She had searched high and low in the Illuminary for any hint of Basil. Instead, she found something completely unexpected...
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.63 foil

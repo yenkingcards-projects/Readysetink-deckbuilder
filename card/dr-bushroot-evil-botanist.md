@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dr-bushroot-evil-botanist.html
 > Ward (Opponents can't choose this character except to challenge.)
 > FAIR IS FAIR Whenever this character is challenged, chosen opponent chooses and discards a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.75 regular, $2.06 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.78 regular, $2.06 foil

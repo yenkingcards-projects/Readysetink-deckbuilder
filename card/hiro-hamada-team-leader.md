@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/hiro-hamada-team-leader.html
 > I NEED TO UPGRADE ALL OF YOU Your other Inventor characters gain Resist +1. (Damage dealt to them is reduced by 1.)
 > SHAPE THE FUTURE 2 ⬡ — Look at the top card of your deck. Put it on either the top or the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.40 foil

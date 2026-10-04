@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tigger-wonderful-thing.html
 
 Flavor text: “I'm the bounciest bouncer that ever bounced!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.58 foil

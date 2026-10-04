@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/the-horned-king-wicked-ruler.html
 - Q: If I choose not to return a card to my hand, do I still have to discard a card?
   A: No. If you choose not to do the “may” part of an ability, nothing in the sentence after that happens, which includes the effect to choose and discard a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $0.67 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.64 foil

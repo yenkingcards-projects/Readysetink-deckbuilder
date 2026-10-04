@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/cauldron-born-mindless-horde.html
 Flavor text: “My beloved warriors have come to life! All the dead of centuries past! Never has anyone created an army like this!”
 —The Horned King
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil

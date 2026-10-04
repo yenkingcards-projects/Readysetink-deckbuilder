@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/christopher-robin-adventurer.html
 Flavor text: “Look, Pooh! Have you ever seen anything so grand?”
 —Christopher Robin
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.61 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.59 foil

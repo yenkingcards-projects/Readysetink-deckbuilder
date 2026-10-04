@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-zipping-around.html
 
 Flavor text: Zero to fun in under three seconds!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.18 foil

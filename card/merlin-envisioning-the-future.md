@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/merlin-envisioning-the-future.html
 > MINOR TRICKERY When you play this character, you may draw a card from the bottom of your deck.
 > AGE OF INCONVENIENCE When this character is banished, put this card from your discard on the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.39 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/performance-review.html
 
 Flavor text: “Listen, fellas, it's a real ‘what have you done for me lately’ business. So give me something to work with here!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil

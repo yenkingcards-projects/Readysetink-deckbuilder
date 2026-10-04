@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/zootopia-police-headquarters.html
 
 > NEW INFORMATION Once during your turn, whenever you move a character here, you may draw a card, then choose and discard a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.40 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/prince-eric-dashing-and-brave.html
 
 Flavor text: “I lost her once! I'm not gonna lose her again!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.22 foil

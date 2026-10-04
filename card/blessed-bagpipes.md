@@ -18,4 +18,4 @@ Source: https://www.readysetink.com/card/blessed-bagpipes.html
 - Q: If my Beast – Aggressive Lord challenges a character with a card under them and my opponent has a Blessed Bagpipes in play, what happens if they’re at 19 lore?
   A: When you declare Beast as a challenger, both his triggered ability and Blessed Bagpipes’ triggered ability go into the bag. The active player chooses and resolves their triggered abilities first, so you resolve Beast’s ability and gain 1 lore while your opponent loses 1 lore, bringing their lore total to 18. With no more triggered abilities in the bag for you to resolve, your opponent then resolves the Bagpipes’ ability and gains 1 lore, which brings them back up to 19. This all happens before damage is dealt.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.29 foil

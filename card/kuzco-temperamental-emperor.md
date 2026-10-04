@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/kuzco-temperamental-emperor.html
 
 Flavor text: “I asked for emerald and that is clearly jade! What is wrong with you people?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $1.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $1.13 foil

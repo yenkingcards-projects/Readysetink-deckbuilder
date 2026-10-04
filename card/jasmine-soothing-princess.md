@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jasmine-soothing-princess.html
 > Boost 2 ⬡ (Once during your turn, you may pay 2 ⬡ to put the top card of your deck facedown under this character.)
 > UPLIFTING AURA Whenever this character quests, if there's a card under her, remove up to 3 damage from each of your characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.49 foil

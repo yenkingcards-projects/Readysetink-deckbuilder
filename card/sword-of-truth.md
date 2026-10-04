@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/sword-of-truth.html
 
 Flavor text: Almost as powerful as True Love's Kiss.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $1.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.12 foil

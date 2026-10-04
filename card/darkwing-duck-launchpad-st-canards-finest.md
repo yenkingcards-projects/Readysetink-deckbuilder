@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/darkwing-duck-launchpad-st-canards-fine
 > Ward (Opponents can't choose this character except to challenge.)
 > VICTORY POSE During your turn, whenever this character banishes another character in a challenge, gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.72 regular, $1.88 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.79 regular, $1.88 foil

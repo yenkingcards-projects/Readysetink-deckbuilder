@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/maleficent-vengeful-sorceress.html
 Flavor text: “Evidently my invitation was lost. How dreadful.
 Here, let me help with the decorations...”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.23 foil

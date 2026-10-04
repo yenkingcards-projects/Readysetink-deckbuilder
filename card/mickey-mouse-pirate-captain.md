@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-pirate-captain.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Mickey Mouse.)
 > MARINER'S MIGHT Whenever this character quests, chosen Pirate character gets +2 ¤ and gains “This character takes no damage from challenges” this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.32 regular, $1.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $1.27 foil

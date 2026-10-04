@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/donald-duck-musketeer-soldier.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > WAIT FOR ME! When you play this character, chosen character gets +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.51 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.51 foil

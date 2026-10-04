@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/chief-powhatan-protective-leader.html
 > Bodyguard (This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > STANDS HIS GROUND This character can't challenge.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $1.04 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $1.04 foil

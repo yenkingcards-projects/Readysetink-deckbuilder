@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/pete-steamboat-rival.html
 
 > SCRAM! When you play this character, if you have another character named Pete in play, you may banish chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $1.07 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $1.07 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/robin-hood-timely-contestant.html
 > TAG ME IN! For each 1 damage on opposing characters, you pay 1 ⬡ less to play this character.
 > Ward (Opponents can't choose this character except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.64 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.64 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/look-what-youve-done.html
 - Q: If I play Look What You’ve Done and put it into my discard after dealing damage, can I pay its cost again to play it from my discard?
   A: No. The second effect of Look What You’ve Done occurs separately from the deal damage effect. For example, if something instructs you to discard a card on your turn, you could discard it and then the option to play it from your discard would trigger.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.92 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.92 foil

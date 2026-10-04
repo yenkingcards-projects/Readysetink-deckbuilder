@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/widow-tweed-kindly-soul.html
 
 Flavor text: “No, I just can't leave you out here all alone.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.53 foil

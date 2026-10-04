@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/the-sultan-playful-monarch.html
 
 Flavor text: Never mind what the Curator intended these trinkets for; the sultan found his own use for them soon enough.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.60 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.60 foil

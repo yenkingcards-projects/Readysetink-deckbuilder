@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/heffalumps-and-woozles.html
 
 Flavor text: If honey's what you covet, you'll find that they love it
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.30 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dalmatian-puppy-tail-wagger.html
 
 Flavor text: First they steal your heart. Then they steal your chair.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.32 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $0.54 foil

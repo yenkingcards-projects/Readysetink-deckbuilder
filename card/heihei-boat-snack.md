@@ -18,4 +18,4 @@ Flavor text: “Sometimes, our strengths lie beneath the surface.
 Far beneath, in some cases....”
 —Moana
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.26 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/namaari-nemesis.html
 
 Flavor text: “I don't need swords to beat you. They just make it more fun.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.45 foil

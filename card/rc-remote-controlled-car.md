@@ -22,4 +22,4 @@ Flavor text: Racing around Andy's room is fun, but he really loves going off roa
 - Q: If RC gains the Reckless ability, am I forced to pay 1 {I} to quest or challenge with him?
   A: No. RC’s ability says he can’t challenge or quest unless 1 {I} is paid, and Reckless only requires that RC be declared a challenger if he’s able to challenge. Since RC can’t challenge normally due to his static ability, he can’t challenge unless you choose to pay the cost. If you do pay 1 {I}, then RC can challenge only because of Reckless.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.41 foil

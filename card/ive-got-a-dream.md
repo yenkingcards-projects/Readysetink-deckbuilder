@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ive-got-a-dream.html
 
 Flavor text: Tor would like to quit and be a florist Gunther does interior design
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.21 foil

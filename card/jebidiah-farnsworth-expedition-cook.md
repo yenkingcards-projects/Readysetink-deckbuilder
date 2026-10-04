@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jebidiah-farnsworth-expedition-cook.htm
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > I GOT YOUR FOUR BASIC FOOD GROUPS When you play this character, chosen character gains Resist +1 until the start of your next turn. (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.28 foil

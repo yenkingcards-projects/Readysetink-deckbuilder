@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/dash-parr-super-fast.html
 > FOLLOW ME! Whenever this character quests, you may reveal the top card of your deck. If you do, you may play it.
 > Otherwise, put it into your discard. (You pay all costs.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.37 regular, $1.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.44 regular, $1.40 foil

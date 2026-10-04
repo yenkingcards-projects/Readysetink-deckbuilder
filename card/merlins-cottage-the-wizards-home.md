@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/merlins-cottage-the-wizards-home.html
 
 > KNOWLEDGE IS POWER Each player plays with the top card of their deck face up.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil

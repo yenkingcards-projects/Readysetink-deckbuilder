@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/scar-finally-king.html
 > BE GRATEFUL Your Ally characters get +1 ¤.
 > STICK WITH ME At the end of your turn, if this character is exerted, you may draw cards equal to the ¤ of chosen Ally character of yours. If you do, choose and discard 2 cards and banish that character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $3.11 regular, $12.59 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.12 regular, $12.63 foil

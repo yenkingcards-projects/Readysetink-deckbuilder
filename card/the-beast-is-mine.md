@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-beast-is-mine.html
 Flavor text: “It's only fitting that the finest hunter gets the foulest beast!”
 —Gaston
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.37 foil

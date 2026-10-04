@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/toby-dogged-companion.html
 Flavor text: “Toby has the most splendid sense of smell of any hound I've trained. But he can be deucedly frisky.”
 —Basil
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.18 foil

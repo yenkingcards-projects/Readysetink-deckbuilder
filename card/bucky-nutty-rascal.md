@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/bucky-nutty-rascal.html
 Flavor text: “Oh, hang on. I love this bit! He pops the balloon and all those acorns go flying out. Gets me every time.”
 —Kronk
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil

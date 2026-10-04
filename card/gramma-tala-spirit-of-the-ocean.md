@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/gramma-tala-spirit-of-the-ocean.html
 
 Flavor text: She will always be with you, no matter how far your journey takes you.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.65 regular, $1.54 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.65 regular, $1.55 foil

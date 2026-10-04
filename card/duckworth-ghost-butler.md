@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/duckworth-ghost-butler.html
 > Rush (This character can challenge the turn they're played.)
 > FINAL ACT During your turn, when this character is banished, you may put the top card of your deck facedown under one of your characters or locations with Boost.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.33 foil

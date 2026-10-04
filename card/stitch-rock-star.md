@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/stitch-rock-star.html
 
 Flavor text: The best part about a beachside concert is that there's always room for one more.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.59 regular, $7.66 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.59 regular, $7.92 foil

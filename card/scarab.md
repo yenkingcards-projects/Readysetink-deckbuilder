@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scarab.html
 Flavor text: “If we can catch one, maybe we can recalibrate it to help us get rid of Jafar's illusions!”
 —Venturo, an Illumineer
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.17 foil

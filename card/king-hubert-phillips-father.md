@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/king-hubert-phillips-father.html
 
 Flavor text: “I told you we'd find an island eventually! Excellent navigating. Yes, yes, I'm quite proud. Now, a toast to our success!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.10 foil

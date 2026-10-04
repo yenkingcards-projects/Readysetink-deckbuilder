@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/syndrome-out-for-revenge.html
 - Q: Does a Robot character need to have the Shift ability in order to be shifted into play with Syndrome’s Got Me Monologuing! ability?
   A: Yes. This also means that you need to have a character in play that you can shift the Robot character on top of.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.15 regular, $4.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.01 regular, $4.02 foil

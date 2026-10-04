@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/sisu-daring-visitor.html
 
 Flavor text: “Come on—what's the worst that can happen?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.55 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/stitch-protector-of-frogs.html
 
 Flavor text: “MY frog! It is very important!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.50 foil

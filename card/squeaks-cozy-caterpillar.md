@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/squeaks-cozy-caterpillar.html
 Flavor text: “Snug as a bug, while we're out here freezin' our b-b-beaks off!”
 —Boomer
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil

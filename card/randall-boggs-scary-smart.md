@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/randall-boggs-scary-smart.html
 > GET OUTTA HERE! When you play this character, put chosen character of yours into your inkwell facedown and exerted.
 > DEVIOUS PLAN At the end of your turn, if all cards in your inkwell are exerted, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.54 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/kevin-flightless-bird.html
 Flavor text: “She has been gathering food for her babies and must get back to them.”
 —Dug
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.36 foil

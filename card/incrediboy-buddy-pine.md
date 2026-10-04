@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/incrediboy-buddy-pine.html
 
 Flavor text: “Not every superhero has powers, you know.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.21 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beast-gracious-prince.html
 
 Flavor text: His heart warmed as the music began and the dancers took their places.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $0.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $0.80 foil

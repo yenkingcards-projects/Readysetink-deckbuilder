@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/negaduck-public-enemy-number-one.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Negaduck.)
 > STICKY FINGERS Whenever this character challenges another character, each opponent loses 1 lore and you gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.76 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.76 foil

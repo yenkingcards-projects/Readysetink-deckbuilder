@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/rapunzel-escaping-the-tower.html
 
 > THE CALL OF ADVENTURE Once during your turn, you may discard a card to give this character +1 ◊ and Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.36 regular, $1.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.35 regular, $1.19 foil

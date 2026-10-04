@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/im-still-here.html
 > (A character with cost 3 or more can ⟳ to sing this song for free.)
 > Chosen character gains Resist +2 until the start of your next turn. Draw a card. (Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.29 foil

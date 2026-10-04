@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/kaa-secretive-snake.html
 
 Flavor text: It's hard to tell where the branches end and the snake begins.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.28 foil

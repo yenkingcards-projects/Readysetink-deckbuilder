@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/madam-mim-up-to-no-good.html
 
 Flavor text: “They think they know my tricks...Oh, this one's going to be marvelously malicious!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.25 foil

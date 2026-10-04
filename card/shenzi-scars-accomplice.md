@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/shenzi-scars-accomplice.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > EASY PICKINGS While challenging a damaged character, this character gets +2 ¤.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.23 foil

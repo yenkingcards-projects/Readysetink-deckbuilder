@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/training-grounds-impossible-pillar.html
 
 > STRENGTH OF MIND 1 ⬡ — Chosen character here gets +1 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.10 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/milo-thatch-courageous-explorer.html
 
 Flavor text: “Just think, Amazu—without the vine, we might never have discovered these ruins!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.14 foil

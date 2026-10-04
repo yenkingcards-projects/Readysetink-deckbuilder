@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/maid-marian-created-by-the-vine.html
 
 > INKFLOW Whenever one of your Floodborn characters is banished, you may put the top card of your deck into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular

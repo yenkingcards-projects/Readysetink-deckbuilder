@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/poisoned-apple.html
 Flavor text: “One taste of the poisoned apple, and the victim's eyes will close forever....”
 —The Queen
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $1.03 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $1.06 foil

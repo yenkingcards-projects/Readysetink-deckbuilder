@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/arthur-king-victorious.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Arthur.)
 > KNIGHTED BY THE KING When you play this character, chosen character gains Challenger +2 and Resist +2 and can challenge ready characters this turn. (They get +2 ¤ while challenging. Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.76 regular, $2.06 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.75 regular, $2.06 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gaston-superior-archer.html
 
 Flavor text: “Is that the best you can do? Let me show you how a real marksman does it!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.35 regular, $7.06 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.40 regular, $7.06 foil

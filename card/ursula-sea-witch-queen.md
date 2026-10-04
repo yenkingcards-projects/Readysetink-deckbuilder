@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ursula-sea-witch-queen.html
 > NOW I AM THE RULER! Whenever this character quests, exert chosen character.
 > YOU'LL LISTEN TO ME! Other characters can't exert to sing songs.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.92 regular, $2.85 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.89 regular, $2.88 foil

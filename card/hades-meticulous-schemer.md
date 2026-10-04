@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/hades-meticulous-schemer.html
 
 Flavor text: “This little guy is so hideous! I love it! And the way it sucks up flood ink? Even I couldn't have planned it any better.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $1.08 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $1.08 foil

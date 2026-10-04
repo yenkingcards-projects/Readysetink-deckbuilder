@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/fauna-good-natured-fairy.html
 
 Flavor text: “Oh dear, let me help you with that.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular

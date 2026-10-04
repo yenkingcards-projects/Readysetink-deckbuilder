@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/honey-lemon-chemical-genius.html
 
 Flavor text: “You're going to love this!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.21 foil

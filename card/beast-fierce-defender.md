@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beast-fierce-defender.html
 
 Flavor text: The Beast treasured two things above all: the enchanted rose and the love who could break his curse.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.28 foil

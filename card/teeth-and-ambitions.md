@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/teeth-and-ambitions.html
 
 Flavor text: Of course, quid pro quo, you're expected To take certain duties on board
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.28 regular, $1.00 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.28 regular, $1.00 foil

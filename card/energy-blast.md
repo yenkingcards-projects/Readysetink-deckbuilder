@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/energy-blast.html
 Flavor text: “Did you really think I would fight fair?”
 —Jafar
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.27 foil

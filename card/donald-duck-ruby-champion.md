@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/donald-duck-ruby-champion.html
 > HIGH ENERGY Your other Ruby characters get +1 ¤.
 > POWERFUL REWARD Your other Ruby characters with 7 ¤ or more get +1 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.68 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.68 foil

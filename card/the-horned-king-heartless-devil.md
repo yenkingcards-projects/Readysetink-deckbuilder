@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/the-horned-king-heartless-devil.html
 Flavor text: “Untried courage is no match for his evil.”
 —Dallben
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil

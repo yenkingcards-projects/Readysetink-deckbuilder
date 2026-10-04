@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/beast-thick-skinned.html
 
 Flavor text: He's even tougher than he looks.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil

@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/christopher-robin-hunny-sage.html
 - Q: If I have two or more Christopher Robin – Hunny Sage cards, can I include them in any deck?
   A: No. For Christopher Robin to be included in a deck, it has to match his ink types. Christopher Robin is Amethyst and Sapphire, so he can’t be put into a deck that has any other ink types. Winnie the Pooh & Piglet – Hunny Mages Winnie the Pooh & Piglet – Hunny Mages Amethyst
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.83 regular, $4.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.88 regular, $4.28 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gurgi-apple-lover.html
 
 Flavor text: In its reflection he could see the future: Moments from now, they'd be less hungry.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.21 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/judy-hopps-snowball-patrol.html
 > UNDERDOG If this is your first turn and you're not the first player, you pay 1 ⬡ less to play this character.
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.36 foil

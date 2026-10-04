@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/freeze-the-vine.html
 Flavor text: “There's only one way to stop this vine. Wait, no...
 It's full of mixed ink? There's too much! I can't control it!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.44 foil

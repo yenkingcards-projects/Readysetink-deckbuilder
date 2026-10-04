@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/fairy-ship-royal-vessel.html
 
 Flavor text: Legends say that whenever something goes missing, it's been taken to build the fairy ships of the Azurite Sea.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil

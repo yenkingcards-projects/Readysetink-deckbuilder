@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/hook-hand-unexpectedly-friendly.html
 
 Flavor text: “You're a strange lookin' glimmer, ain'tcha?” he said to the whisper lingering uncertainly in the doorway. “Welcome to the Snuggly Duckling!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.18 foil

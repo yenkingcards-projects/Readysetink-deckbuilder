@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/diablo-spiteful-raven.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > Challenger +2 (While challenging, this character gets +2 ¤.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.97 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.99 foil

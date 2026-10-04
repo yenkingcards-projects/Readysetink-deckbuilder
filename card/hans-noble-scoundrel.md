@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hans-noble-scoundrel.html
 
 Flavor text: Hans was confident he could bring Anna to Ursula— all he needed was something of Kristoff's to lure her in.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.15 foil

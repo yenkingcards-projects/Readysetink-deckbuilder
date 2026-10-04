@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/antonio-madrigal-animal-expert.html
 
 Flavor text: “Once upon a time, there was a casita in the mountains with a very special family....”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil

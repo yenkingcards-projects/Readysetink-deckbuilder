@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/robin-hood-ephemeral-archer.html
 > Boost 1 ⬡ (Once during your turn, you may pay 1 ⬡ to put the top card of your deck facedown under this character.)
 > EXPERT SHOT Whenever this character quests, if there's a card under him, deal 1 damage to up to 2 chosen characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.25 regular, $0.97 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.91 foil

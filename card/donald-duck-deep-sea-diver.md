@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/donald-duck-deep-sea-diver.html
 
 Flavor text: “You go ahead, Minnie! I'm going to see if there's any lore over here.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.25 foil

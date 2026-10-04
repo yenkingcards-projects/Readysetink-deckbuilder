@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beasts-castle-overrun-by-the-vine.html
 
 Flavor text: A deep rumble echoed through the forest as the vine ripped the castle from its foundation.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.21 foil

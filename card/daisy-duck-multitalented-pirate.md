@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/daisy-duck-multitalented-pirate.html
 
 Flavor text: A captain must be inventive, commanding, and unafraid of trampolines.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.51 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.50 foil

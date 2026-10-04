@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pete-games-referee.html
 
 Flavor text: “It ain't cheatin' if you're the one makin' the rules.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $1.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.15 foil

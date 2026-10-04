@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/tramp-street-smart-dog.html
 > NOW IT'S A PARTY For each character you have in play, you pay 1 ⬡ less to play this character.
 > HOW'S PICKINGS? When you play this character, you may draw a card for each other character you have in play, then choose and discard that many cards.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.37 regular, $1.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $1.55 foil

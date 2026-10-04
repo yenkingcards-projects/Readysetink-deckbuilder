@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dale-friend-in-need.html
 
 Flavor text: “But Chip, hanging around is what I do best!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil

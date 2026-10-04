@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-giant-mouse.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > THE BIGGEST STAR EVER When this character is banished, deal 5 damage to each opposing character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.65 regular, $17.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.69 regular, $18.03 foil

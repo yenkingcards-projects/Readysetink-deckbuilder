@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scar-mastermind.html
 
 Flavor text: “The best plans involve a little danger. Just not for me.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.80 foil

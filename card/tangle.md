@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tangle.html
 Flavor text: “Stay right there! I mean, you don't have a choice, I guess. But still! Don't move!”
 —Rapunzel
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.24 foil

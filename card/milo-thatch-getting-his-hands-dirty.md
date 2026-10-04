@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/milo-thatch-getting-his-hands-dirty.htm
 > Ward SCHOLAR'S GAMBIT When you play this character, you may choose and discard a card to return chosen character to their player's hand.
 > PRACTICAL KNOWLEDGE At the end of your turn, if 2 or more cards were put into your discard this turn, draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $4.60 regular, $11.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $4.44 regular, $11.64 foil

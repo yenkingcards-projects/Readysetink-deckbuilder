@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/stratos-tornado-titan.html
 
 Flavor text: “Blow Zeus away!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.41 foil

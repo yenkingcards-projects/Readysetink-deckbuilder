@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/be-king-undisputed.html
 
 Flavor text: Respected, saluted
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $0.65 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $0.65 foil

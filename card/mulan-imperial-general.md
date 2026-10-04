@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mulan-imperial-general.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > EXCEPTIONAL LEADER Whenever this character challenges another character, your other characters gain “This character can challenge ready characters” this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $1.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $1.81 foil

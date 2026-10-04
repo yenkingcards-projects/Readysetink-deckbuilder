@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/miss-bianca-unwavering-agent.html
 
 Flavor text: “We'll reach the top of this tower in no time if we work together, darling.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.26 foil

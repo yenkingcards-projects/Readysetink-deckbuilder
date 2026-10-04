@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/cinderella-dream-come-true.html
 
 > WHATEVER YOU WISH FOR At the end of your turn, if you played a Princess character this turn, you may put a card from your hand into your inkwell facedown to draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $24.74 regular, $37.93 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $25.63 regular, $37.93 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/hamish-hubert-harris-troublemaking-trip
 Flavor text: “Oh, aye, they're slippery little devils. Ye should see what they did to the garden.”
 —Merida
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.24 foil

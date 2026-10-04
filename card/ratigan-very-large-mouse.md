@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ratigan-very-large-mouse.html
 
 Flavor text: “This time, nothing, not even Basil, can stand in my way!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.57 foil

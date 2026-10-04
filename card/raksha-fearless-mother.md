@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/raksha-fearless-mother.html
 
 Flavor text: Her name means “protection,” and she'll do anything to defend the cubs under her care.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.11 foil

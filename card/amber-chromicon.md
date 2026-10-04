@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/amber-chromicon.html
 Flavor text: “Comfort the weak and weary.”
 —Inscription
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.27 foil

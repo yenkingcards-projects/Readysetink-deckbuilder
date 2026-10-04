@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merlin-intellectual-visionary.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Merlin.)
 > OVERDEVELOPED BRAIN When you play this character, if you used Shift to play him, you may search your deck for any card, put that card into your hand, then shuffle your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.86 regular, $2.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.71 regular, $2.19 foil

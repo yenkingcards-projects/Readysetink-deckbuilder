@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/omnidroid-scanning-for-threats.html
 Flavor text: “All right, let's see who's gonna be facing this bad boy!”
 —Syndrome
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.25 foil

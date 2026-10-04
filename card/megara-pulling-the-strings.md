@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/megara-pulling-the-strings.html
 
 Flavor text: “A deal's a deal. But falling in love was never supposed to be part of it.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.19 foil

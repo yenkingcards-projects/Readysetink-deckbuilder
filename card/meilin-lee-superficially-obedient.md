@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/meilin-lee-superficially-obedient.html
 
 > NEWFOUND CONFIDENCE When you shift a character on top of her, this character gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.15 foil

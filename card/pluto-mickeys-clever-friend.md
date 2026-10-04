@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/pluto-mickeys-clever-friend.html
 
 Flavor text: Pluto's job was to keep Gustav's attention so Minnie could get to the cave.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.15 foil

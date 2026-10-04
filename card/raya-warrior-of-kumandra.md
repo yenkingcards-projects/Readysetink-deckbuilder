@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/raya-warrior-of-kumandra.html
 
 Flavor text: “My ba dreams of a united Kumandra. I fight to honor that dream.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.22 foil

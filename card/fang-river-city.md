@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fang-river-city.html
 
 Flavor text: A nation protected by fierce assassins and their even fiercer cats.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.31 foil

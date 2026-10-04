@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-steamboat-pilot.html
 
 Flavor text: On rivers throughout the Inklands, the little steamboat's whistle answers the cheery tunes of its pilot.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.40 foil

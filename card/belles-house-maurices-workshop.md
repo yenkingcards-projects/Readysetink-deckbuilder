@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/belles-house-maurices-workshop.html
 
 Flavor text: Some of the most important tools in Lorcana are crafted here.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.26 foil

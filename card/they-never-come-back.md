@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/they-never-come-back.html
 Flavor text: “You boys have had your fun. Now, pay for it.”
 —The Coachman
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.31 foil

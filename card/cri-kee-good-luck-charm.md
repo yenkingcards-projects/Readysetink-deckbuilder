@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/cri-kee-good-luck-charm.html
 Flavor text: “Small glimmers may feel safe in the jungle around the Mysterious Ruins, where they can easily go unnoticed.”
 —Hana's Herborium
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.20 foil

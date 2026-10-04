@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/daisy-duck-paranormal-investigator.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > STRANGE HAPPENINGS While this character is exerted, cards enter opponents' inkwells exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.90 regular, $1.78 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.93 regular, $1.78 foil

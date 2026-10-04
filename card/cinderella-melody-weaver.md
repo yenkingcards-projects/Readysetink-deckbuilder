@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cinderella-melody-weaver.html
 > Singer 9 (This character counts as cost 9 to sing songs.)
 > BEAUTIFUL VOICE Whenever this character sings a song, your other Princess characters get +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.03 regular, $4.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.01 regular, $4.37 foil

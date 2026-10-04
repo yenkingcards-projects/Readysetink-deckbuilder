@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/snow-fort.html
 > THE HIGH GROUND Your characters get +1 ¤.
 > BARRICADE During opponents' turns, your characters gain Resist +1. (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $2.45 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $2.45 foil

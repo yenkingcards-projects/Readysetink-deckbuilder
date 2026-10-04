@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/magic-broom-bucket-brigade.html
 
 Flavor text: In the immense story-forge known as the Great Illuminary, there is always work to be done.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.27 foil

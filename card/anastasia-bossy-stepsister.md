@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/anastasia-bossy-stepsister.html
 
 Flavor text: “Out of my way! I'm going to be the first to finish!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil

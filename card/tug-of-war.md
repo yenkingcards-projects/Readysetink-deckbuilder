@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/tug-of-war.html
 > • Deal 1 damage to each opposing character without Evasive.
 > • Deal 3 damage to each opposing character with Evasive.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.58 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.58 foil

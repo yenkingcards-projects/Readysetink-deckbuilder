@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gumbo-pot.html
 Flavor text: “A gift this special just got to be shared.”
 —James
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil

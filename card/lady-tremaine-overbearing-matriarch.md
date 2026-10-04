@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lady-tremaine-overbearing-matriarch.htm
 
 Flavor text: “Make no mistake: this time I will make certain the key remains safe!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.16 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/dash-parr-dodgeball-dynamo.html
 Flavor text: “Hey look, I'm here! No wait, I'm over here now!
 Nope, back here again!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.31 foil

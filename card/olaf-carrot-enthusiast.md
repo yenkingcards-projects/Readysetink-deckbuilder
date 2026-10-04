@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/olaf-carrot-enthusiast.html
 > Shift: Discard an item card (You may discard an item card to play this on top of one of your characters named Olaf.)
 > CARROTS ALL AROUND! Whenever he quests, each of your other characters gets +¤ equal to this character's ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.24 foil

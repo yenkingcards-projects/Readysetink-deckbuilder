@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-nokk-mythical-spirit.html
 
 > TURNING TIDES When you play this character, you may move up to 2 damage counters from chosen character to chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

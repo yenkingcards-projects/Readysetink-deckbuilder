@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/doc-leader-of-the-seven-dwarfs.html
 
 Flavor text: He's in charge of this outfit.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.62 foil

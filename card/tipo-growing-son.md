@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tipo-growing-son.html
 
 Flavor text: “Mom, Mom! I think I'm still growing!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.51 regular, $2.72 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.49 regular, $2.72 foil

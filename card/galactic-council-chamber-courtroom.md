@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/galactic-council-chamber-courtroom.html
 
 > FEDERATION DECREE While you have an Alien or Robot character here, this location can't be challenged.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil

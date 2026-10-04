@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/mulan-considerate-diplomat.html
 
 > IMPERIAL INVITATION Whenever this character quests, look at the top 4 cards of your deck. You may reveal a Princess character card and put it into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.51 regular, $1.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.53 regular, $1.39 foil

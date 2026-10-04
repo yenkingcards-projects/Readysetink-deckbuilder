@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-playful-sorcerer.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > SWEEP AWAY When you play this character, deal damage to chosen character equal to the number of Broom characters you have in play.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.61 regular, $1.70 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.58 regular, $1.70 foil

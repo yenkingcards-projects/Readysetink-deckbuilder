@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/flynn-rider-breaking-and-entering.html
 
 Flavor text: “One way or another, I get what I want.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.24 regular, $0.64 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $0.64 foil

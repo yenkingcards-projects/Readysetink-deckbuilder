@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mertle-edmonds-lilos-rival.html
 
 Flavor text: “Get out of my way before I run you over.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.21 foil

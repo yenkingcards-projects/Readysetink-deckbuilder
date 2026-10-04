@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pack-tactics.html
 Flavor text: Pacha: “You want to survive the jungle? Start thinking like you belong here.”
 Kuzco: “No problem...Grrr, look at me, I'm a jaguar.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.66 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.65 foil

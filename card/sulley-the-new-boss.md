@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sulley-the-new-boss.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > REHIRE When you play this character, you may return a character card from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.52 regular, $4.98 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.51 regular, $4.98 foil

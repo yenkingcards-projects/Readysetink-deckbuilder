@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/captain-amelia-first-in-command.html
 Flavor text: “I've spotted a strange structure on the horizon.
 Hard to port, helmsman!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil

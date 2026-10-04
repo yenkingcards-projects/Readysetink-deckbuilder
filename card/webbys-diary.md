@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/webbys-diary.html
 Flavor text: “A girl needs a place to put her innermost thoughts and feelings—not to mention trap designs!”
 —Webby
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $6.79 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $6.79 foil

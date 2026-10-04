@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/basils-magnifying-glass.html
 
 Flavor text: “I say, a piece of the Hexwell Crown!” —Basil
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.39 foil

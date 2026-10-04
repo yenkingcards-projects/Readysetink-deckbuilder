@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gyro-gearloose-eccentric-inventor.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > I'LL SHOW YOU! When you play this character, chosen opposing character gets -3 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.43 foil

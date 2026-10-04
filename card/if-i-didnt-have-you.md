@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/if-i-didnt-have-you.html
 > (A character with cost 3 or more can ⟳ to sing this song for free.)
 > You and another chosen player each draw 2 cards.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.25 foil

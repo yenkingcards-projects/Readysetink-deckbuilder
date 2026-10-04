@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/pocahontas-meeko-adventurous-friends.ht
 - Q: Do I return a character before or after I gain the lore from questing with Pocahontas & Meeko – Adventurous Friends?
   A: After. All triggers related to the condition of a character questing resolve after the lore is gained from the quest.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.72 regular, $3.06 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.77 regular, $3.07 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/fairy-godmother-here-to-help.html
 
 Flavor text: “Use a humdrum spell, and you'll end up with humdrum magic. I like my magic to have something special!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.29 foil

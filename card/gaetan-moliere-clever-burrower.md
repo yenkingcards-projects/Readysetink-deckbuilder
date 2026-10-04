@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gaetan-moliere-clever-burrower.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > UNEARTH Whenever this character quests, you may draw 2 cards, then choose and discard 2 cards.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $1.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $1.10 foil

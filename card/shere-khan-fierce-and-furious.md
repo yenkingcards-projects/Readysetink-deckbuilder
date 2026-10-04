@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/shere-khan-fierce-and-furious.html
 > Shift 5 ⬡ (You may pay 5 ⬡ to play this on top of one of your characters named Shere Khan.)
 > WILD RAGE 1 ⬡, Deal 1 damage to this character — Ready this character. He can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.55 foil

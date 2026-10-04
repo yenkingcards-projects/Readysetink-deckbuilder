@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/poe-de-spell-magicas-brother.html
 
 Flavor text: “Sister, dear, if we turn all the townspeople into frogs, who will give us our gold and turnips?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil

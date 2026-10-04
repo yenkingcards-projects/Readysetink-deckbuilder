@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-thunderquack.html
 > VIGILANTE JUSTICE All opposing characters gain the Villain classification.
 > LAY OF THE LAND ⟳ — If a character was banished in a challenge this turn, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $1.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $1.10 foil

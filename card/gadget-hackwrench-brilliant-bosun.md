@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gadget-hackwrench-brilliant-bosun.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Gadget Hackwrench.)
 > MECHANICALLY SAVVY While you have 3 or more items in play, you pay 1 ⬡ less to play Inventor characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.18 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/transformed-chef-castle-stove.html
 Flavor text: “A good, hot meal will set you right as rain.”
 —Mrs. Potts
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil

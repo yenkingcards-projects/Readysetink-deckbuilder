@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pete-pirate-scoundrel.html
 
 Flavor text: “I wasn't stealin' it! I was just keepin' it safe.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil

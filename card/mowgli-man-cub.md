@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mowgli-man-cub.html
 
 Flavor text: “This place is just a different kind of jungle.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.21 regular, $7.93 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.09 regular, $7.93 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/queen-of-hearts-sensing-weakness.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Queen of Hearts.)
 > LET THE GAME BEGIN Whenever one of your characters challenges another character, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.75 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.75 foil

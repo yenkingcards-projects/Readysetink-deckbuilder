@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/pegasus-searching-high-and-low.html
 Flavor text: Lorcana had changed. It felt bigger somehow.
 But no matter how big it got, he was determined to find his friend.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular

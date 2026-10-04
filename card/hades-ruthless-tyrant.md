@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hades-ruthless-tyrant.html
 
 Flavor text: “Don't forget—I'm the guy with the leverage here.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $2.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $2.18 foil

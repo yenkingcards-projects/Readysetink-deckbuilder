@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/bagheera-cautious-explorer.html
 
 Flavor text: He had seen many strange things in the Mysterious Ruins, but the glowing river was the most concerning. It looked and moved like water but somehow felt...different.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.34 foil

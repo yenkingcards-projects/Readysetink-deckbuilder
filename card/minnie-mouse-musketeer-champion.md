@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-musketeer-champion.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > DRAMATIC ENTRANCE When you play this character, banish chosen opposing character with 5 ¤ or more.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.68 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.68 foil

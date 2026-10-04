@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/alice-tea-alchemist.html
 
 Flavor text: With the right tea leaves and a little magic, she creates the perfect cup for any party guest.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.43 foil

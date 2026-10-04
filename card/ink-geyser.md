@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/ink-geyser.html
 > Each player exerts all the cards in their inkwell.
 > Then each player with more than 3 cards in their inkwell returns cards at random from their inkwell to their hand until they have 3 cards in their inkwell.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $1.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $1.22 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sheriff-of-nottingham-vine-slayer.html
 
 Flavor text: “Now, look here, you overgrown weed...”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.15 foil

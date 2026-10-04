@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/enigmatic-inkcaster.html
 Flavor text: “Whoever's room this was, I think we just found their inkcaster.”
 —Shanzay, an Illumineer
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.37 regular, $1.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.37 regular, $1.45 foil

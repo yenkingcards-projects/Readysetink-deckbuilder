@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/tanana-tribal-elder.html
 
 Flavor text: “This is a place of wonder and learning. Pay attention to the Owl and see what she can teach you.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.10 foil

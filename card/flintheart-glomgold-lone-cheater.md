@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/flintheart-glomgold-lone-cheater.html
 
 Flavor text: “Nobody tells Flintheart Glomgold what to do!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.23 foil

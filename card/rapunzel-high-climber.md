@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rapunzel-high-climber.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > WRAPPED UP Whenever this character quests, chosen opposing character can't quest during their next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.62 regular, $4.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.59 regular, $4.25 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/belle-hidden-archer.html
 
 Flavor text: She slips through the trees as easily as shadow.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.30 regular, $8.51 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.26 regular, $8.54 foil

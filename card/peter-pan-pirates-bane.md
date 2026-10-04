@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/peter-pan-pirates-bane.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > YOU'RE NEXT! Whenever he challenges a Pirate character, this character takes no damage from the challenge.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.35 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/madam-mim-truly-marvelous.html
 
 Flavor text: “I'll give you a sporting chance. I'm mad about games, you know.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.36 foil

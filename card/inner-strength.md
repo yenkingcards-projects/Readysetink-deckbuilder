@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/inner-strength.html
 
 Flavor text: Just when you think you've given it all you've got, sometimes you can give a little more.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.24 foil

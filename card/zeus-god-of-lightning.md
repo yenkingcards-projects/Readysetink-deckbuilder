@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/zeus-god-of-lightning.html
 
 Flavor text: “A little lightning solves a whole lot of problems.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $1.01 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $1.00 foil

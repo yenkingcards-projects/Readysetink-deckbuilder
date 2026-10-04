@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tiana-natural-talent.html
 > Singer 6 (This character counts as cost 6 to sing songs.)
 > CAPTIVATING MELODY Whenever you play a song, each opposing character gets -1 ¤ until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.23 foil
