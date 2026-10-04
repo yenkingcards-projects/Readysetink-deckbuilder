@@ -1,8 +1,8 @@
-# Build report — 2026-10-01
+# Build report — 2026-10-04
 
 **2,653 cards** · 2,653 with art · 2,476 priced · 93 official rulings · 4 of your notes
 
-Compared against the build of **2026-10-01**.
+Compared against the build of **2026-10-04**.
 
 ## Price movers since 2026-09-18
 

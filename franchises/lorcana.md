@@ -1,0 +1,106 @@
+# Lorcana original cards: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/lorcana/
+
+100 cards.
+
+- [Absorbing Bloom](https://www.readysetink.com/card/absorbing-bloom.html): Steel, cost 2, Item, Uncommon
+- [Amazu's Inkcaster](https://www.readysetink.com/card/amazus-inkcaster.html): Ruby, cost 2, Item, Uncommon
+- [Amber Chromicon](https://www.readysetink.com/card/amber-chromicon.html): Amber, cost 2, Item, Uncommon
+- [Amber Coil](https://www.readysetink.com/card/amber-coil.html): Amber, cost 1, Item, Uncommon
+- [Amethyst Chromicon](https://www.readysetink.com/card/amethyst-chromicon.html): Amethyst, cost 2, Item, Uncommon
+- [Amethyst Coil](https://www.readysetink.com/card/amethyst-coil.html): Amethyst, cost 3, Item, Uncommon
+- [Arcane Quake](https://www.readysetink.com/card/arcane-quake.html): cost 4, Action, Special
+- [Aurelian Gyrosensor](https://www.readysetink.com/card/aurelian-gyrosensor.html): Sapphire, cost 2, Item, Rare
+- [Broken Pod](https://www.readysetink.com/card/broken-pod.html): Amethyst, cost 1, Item, Uncommon
+- [Capsize](https://www.readysetink.com/card/capsize.html): cost 3, Action, Special
+- [Cataclysmic Cyclone](https://www.readysetink.com/card/cataclysmic-cyclone.html): cost 6, Action, Special
+- [Choppy Waters](https://www.readysetink.com/card/choppy-waters.html): cost 3, Action, Special
+- [Clockwork Sawblades - Treacherous Trap](https://www.readysetink.com/card/clockwork-sawblades-treacherous-trap.html): cost 6, Location, Special
+- [Cobra Pit - Seething Serpents](https://www.readysetink.com/card/cobra-pit-seething-serpents.html): cost 2, Location, Special
+- [Crushing Wave](https://www.readysetink.com/card/crushing-wave.html): cost 4, Action, Special
+- [Crystal Gate - Unbreakable Boundary](https://www.readysetink.com/card/crystal-gate-unbreakable-boundary.html): cost 6, Location, Special
+- [Deepwell Labyrinth - Mystifying Halls](https://www.readysetink.com/card/deepwell-labyrinth-mystifying-halls.html): cost 3, Location, Special
+- [Destructive Misstep](https://www.readysetink.com/card/destructive-misstep.html): cost 3, Action, Special
+- [Disastrous Sandstorm](https://www.readysetink.com/card/disastrous-sandstorm.html): cost 4, Action, Special
+- [Emerald Chromicon](https://www.readysetink.com/card/emerald-chromicon.html): Emerald, cost 3, Item, Uncommon
+- [Emerald Coil](https://www.readysetink.com/card/emerald-coil.html): Emerald, cost 3, Item, Uncommon
+- [Endless Staircase - Perilous Ascent](https://www.readysetink.com/card/endless-staircase-perilous-ascent.html): cost 4, Location, Special
+- [Enigmatic Inkcaster](https://www.readysetink.com/card/enigmatic-inkcaster.html): Emerald, cost 2, Item, Rare
+- [Entangling Magic](https://www.readysetink.com/card/entangling-magic.html): cost 2, Action, Special
+- [Fairy Ship - Royal Vessel](https://www.readysetink.com/card/fairy-ship-royal-vessel.html): Amethyst, cost 1, Location, Common
+- [Fiery Basin](https://www.readysetink.com/card/fiery-basin.html): cost 2, Item, Special
+- [Fortisphere](https://www.readysetink.com/card/fortisphere.html): Steel, cost 1, Item, Common
+- [Fortunate Hit](https://www.readysetink.com/card/fortunate-hit.html): cost 0, Action, Special
+- [Gargantuan Cobra - Slithering Statue](https://www.readysetink.com/card/gargantuan-cobra-slithering-statue.html): cost 7, Character, Special
+- [Giant Hourglass](https://www.readysetink.com/card/giant-hourglass.html): cost 6, Item, Special
+- [Half Hexwell Crown](https://www.readysetink.com/card/half-hexwell-crown.html): Amethyst, cost 6, Item, Rare
+- [Hall of Illusions - Mysterious Chamber](https://www.readysetink.com/card/hall-of-illusions-mysterious-chamber.html): cost 4, Location, Special
+- [Hana's Inkcaster](https://www.readysetink.com/card/hanas-inkcaster.html): Sapphire, cost 2, Item, Uncommon
+- [Healing Decanter](https://www.readysetink.com/card/healing-decanter.html): Amber, cost 2, Item, Common
+- [Hidden Cove - Tranquil Haven](https://www.readysetink.com/card/hidden-cove-tranquil-haven.html): Emerald, cost 1, Location, Common
+- [Hidden Inkcaster](https://www.readysetink.com/card/hidden-inkcaster.html): Emerald, cost 2, Item, Common
+- [Hyperia City Express](https://www.readysetink.com/card/hyperia-city-express.html): Steel, cost 1, Item, Uncommon
+- [Ice Block](https://www.readysetink.com/card/ice-block.html): Sapphire, cost 1, Item, Common
+- [Illuminary Tunnels - Linked Caverns](https://www.readysetink.com/card/illuminary-tunnels-linked-caverns.html): Steel, cost 3, Location, Super Rare
+- [Ink Amplifier](https://www.readysetink.com/card/ink-amplifier.html): Sapphire, cost 3, Item, Rare
+- [Ink Geyser](https://www.readysetink.com/card/ink-geyser.html): Emerald / Sapphire, cost 3, Action, Rare
+- [Ink Moat - First Line of Defense](https://www.readysetink.com/card/ink-moat-first-line-of-defense.html): cost 0, Location, Special
+- [Inkcaster Skates](https://www.readysetink.com/card/inkcaster-skates.html): Amethyst, cost 3, Item, Rare
+- [Inkrunner](https://www.readysetink.com/card/inkrunner.html): Sapphire, cost 2, Item, Uncommon
+- [Inscrutable Map](https://www.readysetink.com/card/inscrutable-map.html): Emerald, cost 3, Item, Uncommon
+- [Jeweled Collar](https://www.readysetink.com/card/jeweled-collar.html): Emerald / Sapphire, cost 2, Item, Uncommon
+- [Jukebox](https://www.readysetink.com/card/jukebox.html): Ruby, cost 2, Item, Rare
+- [King's Sensor Core](https://www.readysetink.com/card/kings-sensor-core.html): Steel, cost 3, Item, Rare
+- [Lash Out](https://www.readysetink.com/card/lash-out.html): cost 2, Action, Special
+- [Launch](https://www.readysetink.com/card/launch.html): Sapphire, cost 3, Action, Uncommon
+- [Lightning Storm](https://www.readysetink.com/card/lightning-storm.html): cost 6, Action, Special
+- [Mechanical Snake](https://www.readysetink.com/card/mechanical-snake.html): cost 0, Item, Special
+- [Metal Scorpion - Deadly Statue](https://www.readysetink.com/card/metal-scorpion-deadly-statue.html): cost 7, Character, Special
+- [Monumental Scarab - Skittering Statue](https://www.readysetink.com/card/monumental-scarab-skittering-statue.html): cost 5, Character, Special
+- [Mystical Inkcaster](https://www.readysetink.com/card/mystical-inkcaster.html): Amethyst, cost 3, Item, Rare
+- [Obscurosphere](https://www.readysetink.com/card/obscurosphere.html): Emerald, cost 1, Item, Common
+- [Owl Island - Secluded Entrance](https://www.readysetink.com/card/owl-island-secluded-entrance.html): Emerald, cost 3, Location, Rare
+- [Perilous Maze - Watery Labyrinth](https://www.readysetink.com/card/perilous-maze-watery-labyrinth.html): Emerald, cost 3, Location, Common
+- [Petrify](https://www.readysetink.com/card/petrify.html): Amethyst, cost 1, Action, Common
+- [Piercing Attack](https://www.readysetink.com/card/piercing-attack.html): Emerald, cost 2, Action, Common
+- [Port Authority - Center Hub](https://www.readysetink.com/card/port-authority-center-hub.html): Amber, cost 4, Location, Uncommon
+- [Potato](https://www.readysetink.com/card/potato.html): Emerald, cost 1, Item, Common
+- [Queen's Sensor Core](https://www.readysetink.com/card/queens-sensor-core.html): Amber, cost 2, Item, Rare
+- [Recovered Page](https://www.readysetink.com/card/recovered-page.html): Amber, cost 2, Item, Uncommon
+- [Remote Inklands - Desert Ruins](https://www.readysetink.com/card/remote-inklands-desert-ruins.html): Ruby, cost 2, Location, Rare
+- [Restoring the Crown](https://www.readysetink.com/card/restoring-the-crown.html): Amethyst / Steel, cost 6, Action, Rare
+- [Retrosphere](https://www.readysetink.com/card/retrosphere.html): Amethyst, cost 1, Item, Common
+- [Riptide](https://www.readysetink.com/card/riptide.html): cost 6, Action, Special
+- [Royal Armory - Heavily Guarded](https://www.readysetink.com/card/royal-armory-heavily-guarded.html): cost 2, Location, Special
+- [Ruby Chromicon](https://www.readysetink.com/card/ruby-chromicon.html): Ruby, cost 1, Item, Uncommon
+- [Ruby Coil](https://www.readysetink.com/card/ruby-coil.html): Ruby, cost 2, Item, Uncommon
+- [Safety Rope](https://www.readysetink.com/card/safety-rope.html): Amber, cost 2, Item, Uncommon
+- [Sail the Azurite Sea](https://www.readysetink.com/card/sail-the-azurite-sea.html): Sapphire, cost 2, Action, Common
+- [Sand Wave](https://www.readysetink.com/card/sand-wave.html): cost 5, Action, Special
+- [Sandblast](https://www.readysetink.com/card/sandblast.html): cost 2, Action, Special
+- [Sapphire Chromicon](https://www.readysetink.com/card/sapphire-chromicon.html): Sapphire, cost 4, Item, Uncommon
+- [Sapphire Coil](https://www.readysetink.com/card/sapphire-coil.html): Sapphire, cost 2, Item, Uncommon
+- [Snow Fort](https://www.readysetink.com/card/snow-fort.html): Emerald, cost 3, Item, Uncommon
+- [Source of the Vine](https://www.readysetink.com/card/source-of-the-vine.html): Amethyst, cost 4, Item, Super Rare
+- [Starlight Vial](https://www.readysetink.com/card/starlight-vial.html): Emerald, cost 4, Item, Rare
+- [Steel Chromicon](https://www.readysetink.com/card/steel-chromicon.html): Steel, cost 6, Item, Uncommon
+- [Steel Coil](https://www.readysetink.com/card/steel-coil.html): Steel, cost 2, Item, Uncommon
+- [Sudden Power](https://www.readysetink.com/card/sudden-power.html): cost 3, Action, Special
+- [Tentacle Swipe](https://www.readysetink.com/card/tentacle-swipe.html): cost 2, Action, Special
+- [The Bitterwood - Underground Forest](https://www.readysetink.com/card/the-bitterwood-underground-forest.html): Ruby, cost 4, Location, Rare
+- [The Frozen Vine - Monstrous Plant](https://www.readysetink.com/card/the-frozen-vine-monstrous-plant.html): Amethyst, cost 3, Location, Uncommon
+- [The Great Illuminary - Abandoned Laboratory](https://www.readysetink.com/card/the-great-illuminary-abandoned-laboratory.html): Amethyst, cost 2, Location, Uncommon
+- [The Great Illuminary - Radiant Ballroom](https://www.readysetink.com/card/the-great-illuminary-radiant-ballroom.html): Sapphire, cost 3, Location, Rare
+- [The Hexwell Crown](https://www.readysetink.com/card/the-hexwell-crown.html): cost 3, Item, Special
+- [The Vine - Towering Stalk](https://www.readysetink.com/card/the-vine-towering-stalk.html): Steel, cost 10, Character, Super Rare
+- [Tiger Behemoth - Hulking Statue](https://www.readysetink.com/card/tiger-behemoth-hulking-statue.html): cost 7, Character, Special
+- [Tsunami](https://www.readysetink.com/card/tsunami.html): cost 7, Action, Special
+- [Typhoon](https://www.readysetink.com/card/typhoon.html): cost 5, Action, Special
+- [Ursula's Contract](https://www.readysetink.com/card/ursulas-contract.html): cost 0, Item, Special
+- [Ursula's Stolen Trident](https://www.readysetink.com/card/ursulas-stolen-trident.html): cost 0, Item, Special
+- [Vine Entrance - Ominous Passageway](https://www.readysetink.com/card/vine-entrance-ominous-passageway.html): Steel, cost 3, Location, Rare
+- [Vine Pod](https://www.readysetink.com/card/vine-pod.html): Emerald, cost 4, Item, Rare
+- [Vitalisphere](https://www.readysetink.com/card/vitalisphere.html): Ruby, cost 1, Item, Common
+- [Whirlpool](https://www.readysetink.com/card/whirlpool.html): cost 4, Action, Special
+- [Winterspell](https://www.readysetink.com/card/winterspell.html): Steel, cost 1, Action, Uncommon

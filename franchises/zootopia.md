@@ -1,0 +1,63 @@
+# Zootopia: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/zootopia/
+
+57 cards.
+
+- [Bellwether - Assistant Mayor](https://www.readysetink.com/card/bellwether-assistant-mayor.html): Emerald, cost 3, Character, Uncommon
+- [Bellwether - Master Manipulator](https://www.readysetink.com/card/bellwether-master-manipulator.html): Emerald, cost 4, Character, Uncommon
+- [Chief Bogo - Calling the Shots](https://www.readysetink.com/card/chief-bogo-calling-the-shots.html): Steel, cost 4, Character, Rare
+- [Chief Bogo - Commanding Officer](https://www.readysetink.com/card/chief-bogo-commanding-officer.html): Amber, cost 6, Character, Legendary
+- [Chief Bogo - Gazelle Fan](https://www.readysetink.com/card/chief-bogo-gazelle-fan.html): Amber, cost 4, Character, Common
+- [Chief Bogo - Respected Officer](https://www.readysetink.com/card/chief-bogo-respected-officer.html): Steel, cost 4, Character, Rare
+- [Clawhauser - Donut Detective](https://www.readysetink.com/card/clawhauser-donut-detective.html): Steel, cost 6, Character, Common
+- [Clawhauser - Front Desk Officer](https://www.readysetink.com/card/clawhauser-front-desk-officer.html): Amber, cost 3, Character, Rare
+- [Detective's Badge](https://www.readysetink.com/card/detectives-badge.html): Sapphire, cost 1, Item, Common
+- [Doug - Lying in Wait](https://www.readysetink.com/card/doug-lying-in-wait.html): Sapphire, cost 4, Character, Common
+- [Duke Weaselton - Small-Time Crook](https://www.readysetink.com/card/duke-weaselton-small-time-crook.html): Sapphire, cost 2, Character, Common
+- [Duke Weaselton - Surly Crook](https://www.readysetink.com/card/duke-weaselton-surly-crook.html): Steel, cost 3, Character, Rare
+- [Fangmeyer - Icy Officer](https://www.readysetink.com/card/fangmeyer-icy-officer.html): Amber, cost 5, Character, Common
+- [Finnick - Tiny Terror](https://www.readysetink.com/card/finnick-tiny-terror.html): Emerald, cost 1, Character, Common
+- [Flash - Records Specialist](https://www.readysetink.com/card/flash-records-specialist.html): Amber, cost 3, Character, Common
+- [Francine - Eyeing the Evidence](https://www.readysetink.com/card/francine-eyeing-the-evidence.html): Steel, cost 3, Character, Common
+- [Fru Fru - VIP Guest](https://www.readysetink.com/card/fru-fru-vip-guest.html): Amber, cost 1, Character, Common
+- [Gazelle - Angel with Horns](https://www.readysetink.com/card/gazelle-angel-with-horns.html): Emerald, cost 2, Character, Common
+- [Gazelle - Ballad Singer](https://www.readysetink.com/card/gazelle-ballad-singer.html): Amber, cost 5, Character, Rare
+- [Gazelle - Pop Star](https://www.readysetink.com/card/gazelle-pop-star.html): Amber, cost 3, Character, Common
+- [Good Job!](https://www.readysetink.com/card/good-job.html): Amber, cost 1, Action, Common
+- [Helping Hand](https://www.readysetink.com/card/helping-hand.html): Sapphire, cost 1, Action, Common
+- [Higgins - Undercover Officer](https://www.readysetink.com/card/higgins-undercover-officer.html): Amber, cost 1, Character, Common
+- [I Won't Give In](https://www.readysetink.com/card/i-wont-give-in.html): Amber, cost 2, Action, Common
+- [Judy Hopps - Always Vigilant](https://www.readysetink.com/card/judy-hopps-always-vigilant.html): Amber, cost 4, Character, Rare
+- [Judy Hopps - Day Camp Instructor](https://www.readysetink.com/card/judy-hopps-day-camp-instructor.html): Sapphire, cost 2, Character, Rare
+- [Judy Hopps - Helpful Officer](https://www.readysetink.com/card/judy-hopps-helpful-officer.html): Amber, cost 1, Character, Common
+- [Judy Hopps - Lead Detective](https://www.readysetink.com/card/judy-hopps-lead-detective.html): Sapphire, cost 6, Character, Rare
+- [Judy Hopps - On the Case](https://www.readysetink.com/card/judy-hopps-on-the-case.html): Sapphire, cost 3, Character, Uncommon
+- [Judy Hopps - Optimistic Officer](https://www.readysetink.com/card/judy-hopps-optimistic-officer.html): Sapphire, cost 3, Character, Uncommon
+- [Judy Hopps - Resourceful Rabbit](https://www.readysetink.com/card/judy-hopps-resourceful-rabbit.html): Amber, cost 6, Character, Rare
+- [Judy Hopps - Snowball Patrol](https://www.readysetink.com/card/judy-hopps-snowball-patrol.html): Steel, cost 2, Character, Uncommon
+- [Judy Hopps - Uncovering Clues](https://www.readysetink.com/card/judy-hopps-uncovering-clues.html): Sapphire, cost 4, Character, Super Rare
+- [Jumbo Pop](https://www.readysetink.com/card/jumbo-pop.html): Sapphire, cost 3, Item, Common
+- [Koslov - Imposing Enforcer](https://www.readysetink.com/card/koslov-imposing-enforcer.html): Steel, cost 4, Character, Common
+- [Lionheart - Cleaning Up the City](https://www.readysetink.com/card/lionheart-cleaning-up-the-city.html): Sapphire, cost 4, Character, Uncommon
+- [Lionheart - Incumbent Mayor](https://www.readysetink.com/card/lionheart-incumbent-mayor.html): Amber, cost 6, Character, Rare
+- [Mayor Winddancer - Actor-Turned-Politician](https://www.readysetink.com/card/mayor-winddancer-actor-turned-politician.html): Steel, cost 4, Character, Rare
+- [McHorn - Ice-Cold Officer](https://www.readysetink.com/card/mchorn-ice-cold-officer.html): Steel, cost 5, Character, Common
+- [Mr. Big - Shrewd Tycoon](https://www.readysetink.com/card/mr-big-shrewd-tycoon.html): Steel, cost 4, Character, Rare
+- [Nick Wilde - Inquisitive Harbormaster](https://www.readysetink.com/card/nick-wilde-inquisitive-harbormaster.html): Amber, cost 6, Character, Rare
+- [Nick Wilde - Persistent Investigator](https://www.readysetink.com/card/nick-wilde-persistent-investigator.html): Steel, cost 5, Character, Rare
+- [Nick Wilde - Providing Backup](https://www.readysetink.com/card/nick-wilde-providing-backup.html): Amber, cost 2, Character, Uncommon
+- [Nick Wilde - Sly Fox](https://www.readysetink.com/card/nick-wilde-sly-fox.html): Sapphire, cost 3, Character, Uncommon
+- [Nick Wilde - Sly Fox Sleuth](https://www.readysetink.com/card/nick-wilde-sly-fox-sleuth.html): Steel, cost 1, Character, Common
+- [Nick Wilde - Soggy Fox](https://www.readysetink.com/card/nick-wilde-soggy-fox.html): Sapphire, cost 1, Character, Common
+- [Nick Wilde - Wily Fox](https://www.readysetink.com/card/nick-wilde-wily-fox.html): Sapphire, cost 4, Character, Uncommon
+- [Night Howler Rage](https://www.readysetink.com/card/night-howler-rage.html): Emerald, cost 3, Action, Common
+- [Pawpsicle](https://www.readysetink.com/card/pawpsicle.html): Sapphire, cost 1, Item, Common
+- [Promising Lead](https://www.readysetink.com/card/promising-lead.html): Sapphire, cost 2, Action, Common
+- [Putting It All Together](https://www.readysetink.com/card/putting-it-all-together.html): Steel, cost 2, Action, Common
+- [Search for Clues](https://www.readysetink.com/card/search-for-clues.html): Amber, cost 4, Action, Uncommon
+- [Try Everything](https://www.readysetink.com/card/try-everything.html): Amber, cost 4, Action, Uncommon
+- [Woolter & Jesse - Bellwether's Henchmen](https://www.readysetink.com/card/woolter-jesse-bellwethers-henchmen.html): Steel, cost 3, Character, Uncommon
+- [Yax - Concert Goer](https://www.readysetink.com/card/yax-concert-goer.html): Amber, cost 7, Character, Uncommon
+- [Zootopia - Police Headquarters](https://www.readysetink.com/card/zootopia-police-headquarters.html): Steel, cost 1, Location, Uncommon
+- [Zootopia - Tundratown](https://www.readysetink.com/card/zootopia-tundratown.html): Amber, cost 1, Location, Common

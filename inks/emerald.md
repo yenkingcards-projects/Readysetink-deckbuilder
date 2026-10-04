@@ -1,0 +1,464 @@
+# Emerald: Disney Lorcana Emerald ink cards
+
+Source: https://www.readysetink.com/inks/emerald/
+
+458 cards.
+
+- [Above the Crowd](https://www.readysetink.com/card/above-the-crowd.html): Emerald, cost 5, Action, Rare
+- [Air Drop](https://www.readysetink.com/card/air-drop.html): Emerald, cost 4, Action, Common
+- [Airfoil](https://www.readysetink.com/card/airfoil.html): Emerald, cost 2, Item, Common
+- [Akela - Forest Runner](https://www.readysetink.com/card/akela-forest-runner.html): Emerald, cost 3, Character, Common
+- [Aladdin - Doing His Part](https://www.readysetink.com/card/aladdin-doing-his-part.html): Emerald, cost 2, Character, Common
+- [Aladdin - On the Edge of Adventure](https://www.readysetink.com/card/aladdin-on-the-edge-of-adventure.html): Emerald, cost 3, Character, Common
+- [Aladdin - Prince Ali](https://www.readysetink.com/card/aladdin-prince-ali.html): Emerald, cost 2, Character, Common
+- [Aladdin & Genie - Mischievous Pals](https://www.readysetink.com/card/aladdin-genie-mischievous-pals.html): Amethyst / Emerald, cost 5, Character, Super Rare
+- [Alice - Clumsy as Can Be](https://www.readysetink.com/card/alice-clumsy-as-can-be.html): Emerald / Ruby, cost 6, Character, Rare
+- [Alien - True Believer](https://www.readysetink.com/card/alien-true-believer.html): Emerald, cost 1, Character, Rare
+- [Alistair Krei - Ambitious Entrepreneur](https://www.readysetink.com/card/alistair-krei-ambitious-entrepreneur.html): Emerald, cost 3, Character, Common
+- [Anastasia - Bossy Stepsister](https://www.readysetink.com/card/anastasia-bossy-stepsister.html): Emerald, cost 3, Character, Uncommon
+- [Anna - Diplomatic Queen](https://www.readysetink.com/card/anna-diplomatic-queen.html): Emerald, cost 3, Character, Legendary
+- [Another Tale to Spin](https://www.readysetink.com/card/another-tale-to-spin.html): Emerald, cost 2, Action, Common
+- [Archimedes - Resourceful Owl](https://www.readysetink.com/card/archimedes-resourceful-owl.html): Emerald, cost 3, Character, Rare
+- [Arthur - Trained Swordsman](https://www.readysetink.com/card/arthur-trained-swordsman.html): Emerald, cost 4, Character, Common
+- [Baloo - Carefree Bear](https://www.readysetink.com/card/baloo-carefree-bear.html): Emerald, cost 5, Character, Rare
+- [Baloo - Laid-Back Bear](https://www.readysetink.com/card/baloo-laid-back-bear.html): Emerald, cost 2, Character, Common
+- [Banzai - Gluttonous Predator](https://www.readysetink.com/card/banzai-gluttonous-predator.html): Emerald, cost 2, Character, Rare
+- [Banzai - Taunting Hyena](https://www.readysetink.com/card/banzai-taunting-hyena.html): Emerald, cost 2, Character, Common
+- [Basil - Disguised Detective](https://www.readysetink.com/card/basil-disguised-detective.html): Emerald, cost 6, Character, Uncommon
+- [Basil - Hypnotized Mouse](https://www.readysetink.com/card/basil-hypnotized-mouse.html): Emerald, cost 3, Character, Common
+- [Basil - Secret Informer](https://www.readysetink.com/card/basil-secret-informer.html): Emerald, cost 6, Character, Rare
+- [Basil - Undercover Detective](https://www.readysetink.com/card/basil-undercover-detective.html): Emerald, cost 7, Character, Rare
+- [Battering Ram](https://www.readysetink.com/card/battering-ram.html): Emerald, cost 4, Item, Rare
+- [Baymax - Giant Robot](https://www.readysetink.com/card/baymax-giant-robot.html): Emerald / Sapphire, cost 6, Character, Uncommon
+- [Baymax - Lab Assistant](https://www.readysetink.com/card/baymax-lab-assistant.html): Emerald, cost 4, Character, Rare
+- [Baymax - Low Battery](https://www.readysetink.com/card/baymax-low-battery.html): Emerald, cost 2, Character, Common
+- [Beast - Relentless](https://www.readysetink.com/card/beast-relentless.html): Emerald, cost 6, Character, Legendary
+- [Beast - Wolfsbane](https://www.readysetink.com/card/beast-wolfsbane.html): Emerald, cost 5, Character, Legendary
+- [Belle - Bookworm](https://www.readysetink.com/card/belle-bookworm.html): Emerald, cost 3, Character, Uncommon
+- [Belle - Hidden Archer](https://www.readysetink.com/card/belle-hidden-archer.html): Emerald, cost 5, Character, Legendary
+- [Belle - Reflective Writer](https://www.readysetink.com/card/belle-reflective-writer.html): Emerald, cost 2, Character, Uncommon
+- [Bellwether - Assistant Mayor](https://www.readysetink.com/card/bellwether-assistant-mayor.html): Emerald, cost 3, Character, Uncommon
+- [Bellwether - Master Manipulator](https://www.readysetink.com/card/bellwether-master-manipulator.html): Emerald, cost 4, Character, Uncommon
+- [Bend to My Will](https://www.readysetink.com/card/bend-to-my-will.html): Emerald, cost 7, Action, Super Rare
+- [Berlioz - Mischievous Kitten](https://www.readysetink.com/card/berlioz-mischievous-kitten.html): Emerald, cost 3, Character, Common
+- [Bibbidi Bobbidi Boo](https://www.readysetink.com/card/bibbidi-bobbidi-boo.html): Emerald, cost 3, Action, Rare
+- [Big Mama - Clever and Calming](https://www.readysetink.com/card/big-mama-clever-and-calming.html): Emerald, cost 4, Character, Uncommon
+- [Big Nose - Lovesick Poet](https://www.readysetink.com/card/big-nose-lovesick-poet.html): Emerald, cost 1, Character, Common
+- [Bill the Lizard - Chimney Sweep](https://www.readysetink.com/card/bill-the-lizard-chimney-sweep.html): Emerald, cost 1, Character, Common
+- [Blessed Bagpipes](https://www.readysetink.com/card/blessed-bagpipes.html): Emerald, cost 2, Item, Uncommon
+- [Bobby Zimuruski - Spray Cheese Kid](https://www.readysetink.com/card/bobby-zimuruski-spray-cheese-kid.html): Emerald, cost 1, Character, Uncommon
+- [Boomer - Has the Beak](https://www.readysetink.com/card/boomer-has-the-beak.html): Emerald, cost 3, Character, Common
+- [Bounce](https://www.readysetink.com/card/bounce.html): Emerald, cost 2, Action, Uncommon
+- [Bucky - Squirrel Squeak Tutor](https://www.readysetink.com/card/bucky-squirrel-squeak-tutor.html): Emerald, cost 3, Character, Uncommon
+- [Buzz Lightyear - Grounded](https://www.readysetink.com/card/buzz-lightyear-grounded.html): Emerald, cost 3, Character, Common
+- [Buzz Lightyear - Jungle Ranger](https://www.readysetink.com/card/buzz-lightyear-jungle-ranger.html): Emerald, cost 7, Character, Legendary
+- [Buzz Lightyear - On the Way](https://www.readysetink.com/card/buzz-lightyear-on-the-way.html): Emerald, cost 3, Character, Rare
+- [Buzz Lightyear - Providing Cover](https://www.readysetink.com/card/buzz-lightyear-providing-cover.html): Emerald, cost 4, Character, Rare
+- [Buzz Lightyear - Space Ranger](https://www.readysetink.com/card/buzz-lightyear-space-ranger.html): Emerald, cost 2, Character, Common
+- [Buzz's Arm](https://www.readysetink.com/card/buzzs-arm.html): Emerald, cost 2, Item, Uncommon
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Captain Hook - Underhanded](https://www.readysetink.com/card/captain-hook-underhanded.html): Emerald, cost 3, Character, Rare
+- [Carl Fredricksen - Loving Husband](https://www.readysetink.com/card/carl-fredricksen-loving-husband.html): Emerald, cost 1, Character, Uncommon
+- [Carl Fredricksen & Russell - Intrepid Explorers](https://www.readysetink.com/card/carl-fredricksen-russell-intrepid-explorers.html): Emerald / Ruby, cost 6, Character, Rare
+- [Cetus - Mighty Serpent](https://www.readysetink.com/card/cetus-mighty-serpent.html): Emerald, cost 6, Character, Common
+- [Chaca - Junior Chipmunk](https://www.readysetink.com/card/chaca-junior-chipmunk.html): Emerald, cost 4, Character, Common
+- [Chem Purse](https://www.readysetink.com/card/chem-purse.html): Emerald, cost 2, Item, Common
+- [Chernabog - Unnatural Force](https://www.readysetink.com/card/chernabog-unnatural-force.html): Emerald, cost 5, Character, Super Rare
+- [Cheshire Cat - Always Grinning](https://www.readysetink.com/card/cheshire-cat-always-grinning.html): Emerald, cost 2, Character, Uncommon
+- [Cheshire Cat - From the Shadows](https://www.readysetink.com/card/cheshire-cat-from-the-shadows.html): Emerald, cost 8, Character, Super Rare
+- [Cheshire Cat - Not All There](https://www.readysetink.com/card/cheshire-cat-not-all-there.html): Emerald, cost 3, Character, Uncommon
+- [Cheshire Cat - Perplexing Feline](https://www.readysetink.com/card/cheshire-cat-perplexing-feline.html): Emerald, cost 5, Character, Common
+- [Chien-Po - Snow Warrior](https://www.readysetink.com/card/chien-po-snow-warrior.html): Emerald, cost 7, Character, Uncommon
+- [Chip - Quick Thinker](https://www.readysetink.com/card/chip-quick-thinker.html): Emerald, cost 4, Character, Uncommon
+- [Chomp!](https://www.readysetink.com/card/chomp.html): Emerald, cost 1, Action, Common
+- [Clarabelle - Clumsy Guest](https://www.readysetink.com/card/clarabelle-clumsy-guest.html): Emerald, cost 1, Character, Common
+- [Clarabelle - Contented Wallflower](https://www.readysetink.com/card/clarabelle-contented-wallflower.html): Emerald, cost 3, Character, Uncommon
+- [Clarabelle - Light on Her Hooves](https://www.readysetink.com/card/clarabelle-light-on-her-hooves.html): Emerald, cost 7, Character, Legendary
+- [Copper - Champion of the Forest](https://www.readysetink.com/card/copper-champion-of-the-forest.html): Emerald, cost 5, Character, Rare
+- [Copper - Creative Storyteller](https://www.readysetink.com/card/copper-creative-storyteller.html): Emerald, cost 2, Character, Uncommon
+- [Copper - Hound Pup](https://www.readysetink.com/card/copper-hound-pup.html): Emerald, cost 1, Character, Common
+- [Cri-Kee - Lucky Cricket](https://www.readysetink.com/card/cri-kee-lucky-cricket.html): Emerald, cost 5, Character, Rare
+- [Cruella De Vil - Judgmental Traveler](https://www.readysetink.com/card/cruella-de-vil-judgmental-traveler.html): Emerald, cost 6, Character, Rare
+- [Cruella De Vil - Miserable as Usual](https://www.readysetink.com/card/cruella-de-vil-miserable-as-usual.html): Emerald, cost 2, Character, Rare
+- [Cubby - Mighty Lost Boy](https://www.readysetink.com/card/cubby-mighty-lost-boy.html): Emerald, cost 4, Character, Common
+- [Cursed Merfolk - Ursula's Handiwork](https://www.readysetink.com/card/cursed-merfolk-ursulas-handiwork.html): Emerald, cost 1, Character, Rare
+- [Daisy Duck - Multitalented Pirate](https://www.readysetink.com/card/daisy-duck-multitalented-pirate.html): Emerald, cost 8, Character, Rare
+- [Daisy Duck - Pirate Captain](https://www.readysetink.com/card/daisy-duck-pirate-captain.html): Emerald, cost 4, Character, Super Rare
+- [Daisy Duck - Secret Agent](https://www.readysetink.com/card/daisy-duck-secret-agent.html): Emerald, cost 4, Character, Uncommon
+- [Dale - Bumbler](https://www.readysetink.com/card/dale-bumbler.html): Emerald, cost 1, Character, Common
+- [Dawson - Basil's Assistant](https://www.readysetink.com/card/dawson-basils-assistant.html): Emerald, cost 4, Character, Common
+- [De Vil Manor - Cruella's Estate](https://www.readysetink.com/card/de-vil-manor-cruellas-estate.html): Emerald, cost 1, Location, Common
+- [Diablo - Devoted Herald](https://www.readysetink.com/card/diablo-devoted-herald.html): Emerald, cost 3, Character, Legendary
+- [Diablo - Maleficent's Spy](https://www.readysetink.com/card/diablo-maleficents-spy.html): Emerald, cost 1, Character, Common
+- [Diablo - Spiteful Raven](https://www.readysetink.com/card/diablo-spiteful-raven.html): Amethyst / Emerald, cost 2, Character, Uncommon
+- [Dinky - Has the Brains](https://www.readysetink.com/card/dinky-has-the-brains.html): Emerald, cost 2, Character, Common
+- [Do It Again!](https://www.readysetink.com/card/do-it-again.html): Emerald, cost 3, Action, Rare
+- [Dodge!](https://www.readysetink.com/card/dodge.html): Emerald, cost 2, Action, Common
+- [Don Karnage - Air Pirate Leader](https://www.readysetink.com/card/don-karnage-air-pirate-leader.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Don Karnage - Prince of Pirates](https://www.readysetink.com/card/don-karnage-prince-of-pirates.html): Emerald, cost 5, Character, Common
+- [Donald Duck - Distracted Traveler](https://www.readysetink.com/card/donald-duck-distracted-traveler.html): Emerald, cost 5, Character, Uncommon
+- [Donald Duck - First Mate](https://www.readysetink.com/card/donald-duck-first-mate.html): Emerald, cost 3, Character, Uncommon
+- [Donald Duck - Fred Honeywell](https://www.readysetink.com/card/donald-duck-fred-honeywell.html): Emerald, cost 4, Character, Legendary
+- [Donald Duck - Lively Pirate](https://www.readysetink.com/card/donald-duck-lively-pirate.html): Emerald, cost 2, Character, Rare
+- [Donald Duck - Perfect Gentleman](https://www.readysetink.com/card/donald-duck-perfect-gentleman.html): Emerald, cost 4, Character, Uncommon
+- [Donald Duck - Sleepwalker](https://www.readysetink.com/card/donald-duck-sleepwalker.html): Emerald, cost 3, Character, Common
+- [Dormouse - Easily Agitated](https://www.readysetink.com/card/dormouse-easily-agitated.html): Emerald / Ruby, cost 2, Character, Uncommon
+- [Dr. Bushroot - Evil Botanist](https://www.readysetink.com/card/dr-bushroot-evil-botanist.html): Emerald, cost 5, Character, Rare
+- [Dr. Facilier - Fortune Teller](https://www.readysetink.com/card/dr-facilier-fortune-teller.html): Emerald, cost 7, Character, Super Rare
+- [Dr. Facilier's Cards](https://www.readysetink.com/card/dr-faciliers-cards.html): Emerald, cost 2, Item, Uncommon
+- [Drizella - Spoiled Stepsister](https://www.readysetink.com/card/drizella-spoiled-stepsister.html): Emerald, cost 4, Character, Common
+- [Duchess - Elegant Feline](https://www.readysetink.com/card/duchess-elegant-feline.html): Emerald, cost 2, Character, Uncommon
+- [Duke of Weselton - Opportunistic Official](https://www.readysetink.com/card/duke-of-weselton-opportunistic-official.html): Emerald, cost 1, Character, Common
+- [Ed - Hysterical Partygoer](https://www.readysetink.com/card/ed-hysterical-partygoer.html): Emerald, cost 4, Character, Uncommon
+- [Ed - Laughing Hyena](https://www.readysetink.com/card/ed-laughing-hyena.html): Emerald, cost 3, Character, Common
+- [Education or Elimination](https://www.readysetink.com/card/education-or-elimination.html): Emerald, cost 4, Action, Uncommon
+- [Elinor - Renowned Diplomat](https://www.readysetink.com/card/elinor-renowned-diplomat.html): Emerald, cost 4, Character, Super Rare
+- [Ellie Fredricksen - Loving Wife](https://www.readysetink.com/card/ellie-fredricksen-loving-wife.html): Emerald, cost 2, Character, Common
+- [Emerald Chromicon](https://www.readysetink.com/card/emerald-chromicon.html): Emerald, cost 3, Item, Uncommon
+- [Emerald Coil](https://www.readysetink.com/card/emerald-coil.html): Emerald, cost 3, Item, Uncommon
+- [Emily Quackfaster - Level-Headed Librarian](https://www.readysetink.com/card/emily-quackfaster-level-headed-librarian.html): Emerald, cost 2, Character, Uncommon
+- [Enchantress - Unexpected Judge](https://www.readysetink.com/card/enchantress-unexpected-judge.html): Emerald, cost 2, Character, Common
+- [Enigmatic Inkcaster](https://www.readysetink.com/card/enigmatic-inkcaster.html): Emerald, cost 2, Item, Rare
+- [Family Fishing Pole](https://www.readysetink.com/card/family-fishing-pole.html): Emerald, cost 2, Item, Rare
+- [Fang - River City](https://www.readysetink.com/card/fang-river-city.html): Emerald, cost 4, Location, Rare
+- [Fauna - Good Fairy](https://www.readysetink.com/card/fauna-good-fairy.html): Emerald, cost 5, Character, Common
+- [Fidget - Sneaky Bat](https://www.readysetink.com/card/fidget-sneaky-bat.html): Emerald / Ruby, cost 4, Character, Uncommon
+- [Finnick - Tiny Terror](https://www.readysetink.com/card/finnick-tiny-terror.html): Emerald, cost 1, Character, Common
+- [Flintheart Glomgold - Scheming Billionaire](https://www.readysetink.com/card/flintheart-glomgold-scheming-billionaire.html): Emerald, cost 4, Character, Uncommon
+- [Flippant Taunt](https://www.readysetink.com/card/flippant-taunt.html): Emerald, cost 1, Action, Common
+- [Flora - Good Fairy](https://www.readysetink.com/card/flora-good-fairy.html): Emerald, cost 3, Character, Common
+- [Flotsam - Riffraff](https://www.readysetink.com/card/flotsam-riffraff.html): Emerald, cost 3, Character, Common
+- [Flotsam - Slippery as an Eel](https://www.readysetink.com/card/flotsam-slippery-as-an-eel.html): Emerald, cost 3, Character, Common
+- [Flynn Rider - Breaking and Entering](https://www.readysetink.com/card/flynn-rider-breaking-and-entering.html): Emerald, cost 4, Character, Super Rare
+- [Flynn Rider - Charming Rogue](https://www.readysetink.com/card/flynn-rider-charming-rogue.html): Emerald, cost 2, Character, Uncommon
+- [Flynn Rider - Confident Vagabond](https://www.readysetink.com/card/flynn-rider-confident-vagabond.html): Emerald, cost 1, Character, Common
+- [Flynn Rider - His Own Biggest Fan](https://www.readysetink.com/card/flynn-rider-his-own-biggest-fan.html): Emerald, cost 4, Character, Rare
+- [Flynn Rider - Spectral Scoundrel](https://www.readysetink.com/card/flynn-rider-spectral-scoundrel.html): Emerald, cost 1, Character, Uncommon
+- [Fred - Awesome Boss](https://www.readysetink.com/card/fred-awesome-boss.html): Emerald, cost 6, Character, Rare
+- [Fred - Big Stomper](https://www.readysetink.com/card/fred-big-stomper.html): Emerald, cost 5, Character, Common
+- [Fred - Giant-Sized](https://www.readysetink.com/card/fred-giant-sized.html): Emerald, cost 7, Character, Rare
+- [Fred - Major Science Enthusiast](https://www.readysetink.com/card/fred-major-science-enthusiast.html): Emerald, cost 3, Character, Common
+- [Fred - Mascot by Day](https://www.readysetink.com/card/fred-mascot-by-day.html): Emerald, cost 1, Character, Common
+- [Freeze the Vine](https://www.readysetink.com/card/freeze-the-vine.html): Emerald, cost 4, Action, Rare
+- [Friar Tuck - Priest of Nottingham](https://www.readysetink.com/card/friar-tuck-priest-of-nottingham.html): Emerald, cost 4, Character, Uncommon
+- [Gadget Hackwrench - Quirky Scientist](https://www.readysetink.com/card/gadget-hackwrench-quirky-scientist.html): Emerald, cost 4, Character, Rare
+- [Gaetan Moliere - Clever Burrower](https://www.readysetink.com/card/gaetan-moliere-clever-burrower.html): Emerald, cost 4, Character, Uncommon
+- [Galactic Communicator](https://www.readysetink.com/card/galactic-communicator.html): Emerald, cost 2, Item, Common
+- [Game Preserve - Protected Land](https://www.readysetink.com/card/game-preserve-protected-land.html): Emerald, cost 3, Location, Common
+- [Gaston - Scheming Suitor](https://www.readysetink.com/card/gaston-scheming-suitor.html): Emerald, cost 2, Character, Common
+- [Gazelle - Angel with Horns](https://www.readysetink.com/card/gazelle-angel-with-horns.html): Emerald, cost 2, Character, Common
+- [Genie - Of the Lamp](https://www.readysetink.com/card/genie-of-the-lamp.html): Emerald, cost 4, Character, Super Rare
+- [Genie - On the Job](https://www.readysetink.com/card/genie-on-the-job.html): Emerald, cost 6, Character, Super Rare
+- [Genie - Powers Unleashed](https://www.readysetink.com/card/genie-powers-unleashed.html): Emerald, cost 8, Character, Rare
+- [Genie - The Ever Impressive](https://www.readysetink.com/card/genie-the-ever-impressive.html): Emerald, cost 2, Character, Common
+- [Gizmoduck - Suited Up](https://www.readysetink.com/card/gizmoduck-suited-up.html): Emerald / Steel, cost 4, Character, Uncommon
+- [Go Go Tomago - Cutting Edge](https://www.readysetink.com/card/go-go-tomago-cutting-edge.html): Emerald / Sapphire, cost 4, Character, Super Rare
+- [Go Go Tomago - Darting Dynamo](https://www.readysetink.com/card/go-go-tomago-darting-dynamo.html): Emerald, cost 2, Character, Rare
+- [Go Go Tomago - Extreme Tester](https://www.readysetink.com/card/go-go-tomago-extreme-tester.html): Emerald, cost 2, Character, Common
+- [Goldie O'Gilt - Cunning Prospector](https://www.readysetink.com/card/goldie-ogilt-cunning-prospector.html): Emerald, cost 3, Character, Rare
+- [Goofy - Emerald Champion](https://www.readysetink.com/card/goofy-emerald-champion.html): Emerald, cost 5, Character, Rare
+- [Goofy - Expert Shipwright](https://www.readysetink.com/card/goofy-expert-shipwright.html): Emerald, cost 5, Character, Rare
+- [Goofy - Ghost of Jacob Marley](https://www.readysetink.com/card/goofy-ghost-of-jacob-marley.html): Emerald, cost 4, Character, Super Rare
+- [Goofy - Set for Adventure](https://www.readysetink.com/card/goofy-set-for-adventure.html): Emerald, cost 2, Character, Rare
+- [Gopher - Hunny Cook](https://www.readysetink.com/card/gopher-hunny-cook.html): Emerald, cost 2, Character, Rare
+- [Grewnge - Cannon Expert](https://www.readysetink.com/card/grewnge-cannon-expert.html): Emerald, cost 2, Character, Common
+- [Gunther - Interior Designer](https://www.readysetink.com/card/gunther-interior-designer.html): Emerald, cost 4, Character, Common
+- [Gus - Champion of Cheese](https://www.readysetink.com/card/gus-champion-of-cheese.html): Emerald, cost 2, Character, Common
+- [Gyro-Evac](https://www.readysetink.com/card/gyro-evac.html): Emerald, cost 3, Item, Uncommon
+- [Hades - Double Dealer](https://www.readysetink.com/card/hades-double-dealer.html): Emerald, cost 4, Character, Legendary
+- [Hamish, Hubert & Harris - Troublemaking Triplets](https://www.readysetink.com/card/hamish-hubert-harris-troublemaking-triplets.html): Emerald, cost 3, Character, Common
+- [Hans - Scheming Prince](https://www.readysetink.com/card/hans-scheming-prince.html): Emerald, cost 4, Character, Rare
+- [Has Set My Heaaaaaaart...](https://www.readysetink.com/card/has-set-my-heaaaaaaart.html): Emerald, cost 2, Action, Uncommon
+- [He Who Steals and Runs Away](https://www.readysetink.com/card/he-who-steals-and-runs-away.html): Emerald, cost 3, Action, Common
+- [He's a Tramp](https://www.readysetink.com/card/hes-a-tramp.html): Emerald, cost 1, Action, Common
+- [Heathcliff - Stoic Butler](https://www.readysetink.com/card/heathcliff-stoic-butler.html): Emerald, cost 4, Character, Common
+- [Heffalumps and Woozles](https://www.readysetink.com/card/heffalumps-and-woozles.html): Emerald, cost 2, Action, Common
+- [HeiHei - Bumbling Rooster](https://www.readysetink.com/card/heihei-bumbling-rooster.html): Emerald, cost 3, Character, Uncommon
+- [Helga Sinclair - Femme Fatale](https://www.readysetink.com/card/helga-sinclair-femme-fatale.html): Emerald, cost 5, Character, Super Rare
+- [Helga Sinclair - No Backup Needed](https://www.readysetink.com/card/helga-sinclair-no-backup-needed.html): Emerald, cost 4, Character, Common
+- [Helga Sinclair - Prepared for Anything](https://www.readysetink.com/card/helga-sinclair-prepared-for-anything.html): Emerald, cost 6, Character, Rare
+- [Helga Sinclair - Vengeful Partner](https://www.readysetink.com/card/helga-sinclair-vengeful-partner.html): Emerald, cost 2, Character, Rare
+- [Hera - Queen of the Gods](https://www.readysetink.com/card/hera-queen-of-the-gods.html): Emerald, cost 3, Character, Rare
+- [Hercules - Baby Demigod](https://www.readysetink.com/card/hercules-baby-demigod.html): Emerald, cost 6, Character, Legendary
+- [Hidden Cove - Tranquil Haven](https://www.readysetink.com/card/hidden-cove-tranquil-haven.html): Emerald, cost 1, Location, Common
+- [Hidden Inkcaster](https://www.readysetink.com/card/hidden-inkcaster.html): Emerald, cost 2, Item, Common
+- [Hiro Hamada - Armor Designer](https://www.readysetink.com/card/hiro-hamada-armor-designer.html): Emerald / Sapphire, cost 7, Character, Super Rare
+- [Hiro Hamada - Future Champion](https://www.readysetink.com/card/hiro-hamada-future-champion.html): Emerald, cost 3, Character, Common
+- [Hiro Hamada - Intuitive Thinker](https://www.readysetink.com/card/hiro-hamada-intuitive-thinker.html): Emerald / Sapphire, cost 2, Character, Uncommon
+- [Hiro Hamada - Versatile Inventor](https://www.readysetink.com/card/hiro-hamada-versatile-inventor.html): Emerald, cost 2, Character, Uncommon
+- [Honey Lemon - Chemical Genius](https://www.readysetink.com/card/honey-lemon-chemical-genius.html): Emerald, cost 2, Character, Uncommon
+- [Honey Lemon - Costumed Catalyst](https://www.readysetink.com/card/honey-lemon-costumed-catalyst.html): Emerald / Sapphire, cost 4, Character, Rare
+- [Honey Lemon - Testing the Limits](https://www.readysetink.com/card/honey-lemon-testing-the-limits.html): Emerald, cost 3, Character, Rare
+- [Hook Hand - Unexpectedly Friendly](https://www.readysetink.com/card/hook-hand-unexpectedly-friendly.html): Emerald, cost 5, Character, Uncommon
+- [Horace - Clumsy Clod](https://www.readysetink.com/card/horace-clumsy-clod.html): Emerald, cost 3, Character, Common
+- [Horace - No-Good Scoundrel](https://www.readysetink.com/card/horace-no-good-scoundrel.html): Emerald, cost 3, Character, Common
+- [Hypnotic Deduction](https://www.readysetink.com/card/hypnotic-deduction.html): Emerald, cost 2, Action, Common
+- [Hypnotize](https://www.readysetink.com/card/hypnotize.html): Emerald, cost 3, Action, Common
+- [I Will Find My Way](https://www.readysetink.com/card/i-will-find-my-way.html): Emerald, cost 1, Action, Common
+- [Iago - Fake Flamingo](https://www.readysetink.com/card/iago-fake-flamingo.html): Emerald, cost 4, Character, Rare
+- [Iago - Loud-Mouthed Parrot](https://www.readysetink.com/card/iago-loud-mouthed-parrot.html): Emerald, cost 3, Character, Rare
+- [Improvise](https://www.readysetink.com/card/improvise.html): Emerald, cost 1, Action, Common
+- [Ink Geyser](https://www.readysetink.com/card/ink-geyser.html): Emerald / Sapphire, cost 3, Action, Rare
+- [Inscrutable Map](https://www.readysetink.com/card/inscrutable-map.html): Emerald, cost 3, Item, Uncommon
+- [Jaq - Connoisseur of Climbing](https://www.readysetink.com/card/jaq-connoisseur-of-climbing.html): Emerald, cost 3, Character, Common
+- [Jasmine - Desert Warrior](https://www.readysetink.com/card/jasmine-desert-warrior.html): Emerald, cost 5, Character, Rare
+- [Jasmine - Royal Commodore](https://www.readysetink.com/card/jasmine-royal-commodore.html): Emerald, cost 6, Character, Legendary
+- [Jasmine - Royal Seafarer](https://www.readysetink.com/card/jasmine-royal-seafarer.html): Emerald, cost 3, Character, Rare
+- [Jasper - Common Crook](https://www.readysetink.com/card/jasper-common-crook.html): Emerald, cost 3, Character, Uncommon
+- [Jetsam - Opportunistic Eel](https://www.readysetink.com/card/jetsam-opportunistic-eel.html): Emerald, cost 7, Character, Common
+- [Jetsam - Riffraff](https://www.readysetink.com/card/jetsam-riffraff.html): Emerald, cost 3, Character, Common
+- [Jeweled Collar](https://www.readysetink.com/card/jeweled-collar.html): Emerald / Sapphire, cost 2, Item, Uncommon
+- [Jock - Attentive Uncle](https://www.readysetink.com/card/jock-attentive-uncle.html): Emerald, cost 4, Character, Common
+- [Jock - Enjoying the Sights](https://www.readysetink.com/card/jock-enjoying-the-sights.html): Emerald, cost 4, Character, Common
+- [John Silver - Alien Pirate](https://www.readysetink.com/card/john-silver-alien-pirate.html): Emerald, cost 6, Character, Legendary
+- [John Silver - Vengeful Pirate](https://www.readysetink.com/card/john-silver-vengeful-pirate.html): Emerald / Steel, cost 8, Character, Rare
+- [Joshua Sweet - Field Surgeon](https://www.readysetink.com/card/joshua-sweet-field-surgeon.html): Emerald, cost 2, Character, Common
+- [Jumba Jookiba - Renegade Scientist](https://www.readysetink.com/card/jumba-jookiba-renegade-scientist.html): Emerald, cost 5, Character, Uncommon
+- [Kaa - Hypnotizing Python](https://www.readysetink.com/card/kaa-hypnotizing-python.html): Amber / Emerald, cost 4, Character, Uncommon
+- [Kaa - Secretive Snake](https://www.readysetink.com/card/kaa-secretive-snake.html): Emerald, cost 7, Character, Uncommon
+- [Kaa - Suspicious Serpent](https://www.readysetink.com/card/kaa-suspicious-serpent.html): Emerald, cost 3, Character, Common
+- [Kevin - Flightless Bird](https://www.readysetink.com/card/kevin-flightless-bird.html): Emerald, cost 2, Character, Uncommon
+- [King of Hearts - Picky Ruler](https://www.readysetink.com/card/king-of-hearts-picky-ruler.html): Emerald, cost 4, Character, Rare
+- [Kit Cloudkicker - Irrepressible Bear](https://www.readysetink.com/card/kit-cloudkicker-irrepressible-bear.html): Emerald, cost 3, Character, Common
+- [Kit Cloudkicker - Tough Guy](https://www.readysetink.com/card/kit-cloudkicker-tough-guy.html): Emerald, cost 3, Character, Uncommon
+- [Kronk - Laid Back](https://www.readysetink.com/card/kronk-laid-back.html): Amethyst / Emerald, cost 5, Character, Rare
+- [Kuzco - Impulsive Llama](https://www.readysetink.com/card/kuzco-impulsive-llama.html): Amethyst / Emerald, cost 7, Character, Rare
+- [Kuzco - Panicked Llama](https://www.readysetink.com/card/kuzco-panicked-llama.html): Amethyst / Emerald, cost 4, Character, Uncommon
+- [Kuzco - Temperamental Emperor](https://www.readysetink.com/card/kuzco-temperamental-emperor.html): Emerald, cost 5, Character, Rare
+- [Kuzco's Palace - Home of the Emperor](https://www.readysetink.com/card/kuzcos-palace-home-of-the-emperor.html): Emerald, cost 3, Location, Uncommon
+- [Lady - Decisive Dog](https://www.readysetink.com/card/lady-decisive-dog.html): Amber / Emerald, cost 1, Character, Rare
+- [Lady - Elegant Spaniel](https://www.readysetink.com/card/lady-elegant-spaniel.html): Emerald, cost 1, Character, Common
+- [Lady - Miss Park Avenue](https://www.readysetink.com/card/lady-miss-park-avenue.html): Amber / Emerald, cost 5, Character, Super Rare
+- [Lady Tremaine - Bitterly Jealous](https://www.readysetink.com/card/lady-tremaine-bitterly-jealous.html): Emerald, cost 6, Character, Legendary
+- [Lady Tremaine - Wicked Stepmother](https://www.readysetink.com/card/lady-tremaine-wicked-stepmother.html): Emerald, cost 6, Character, Rare
+- [Launchpad - Exceptional Pilot](https://www.readysetink.com/card/launchpad-exceptional-pilot.html): Emerald, cost 4, Character, Common
+- [Leaning Tower of Cheese-a](https://www.readysetink.com/card/leaning-tower-of-cheese-a.html): Emerald, cost 1, Item, Rare
+- [Lenny - Toy Binoculars](https://www.readysetink.com/card/lenny-toy-binoculars.html): Emerald, cost 3, Character, Rare
+- [Ling - Snow Warrior](https://www.readysetink.com/card/ling-snow-warrior.html): Emerald, cost 3, Character, Rare
+- [Little John - Camp Cook](https://www.readysetink.com/card/little-john-camp-cook.html): Emerald, cost 1, Character, Uncommon
+- [Little John - Impermanent Outlaw](https://www.readysetink.com/card/little-john-impermanent-outlaw.html): Emerald, cost 6, Character, Super Rare
+- [Little John - Loyal Friend](https://www.readysetink.com/card/little-john-loyal-friend.html): Emerald, cost 6, Character, Rare
+- [Lord MacGuffin - Clever Swordsman](https://www.readysetink.com/card/lord-macguffin-clever-swordsman.html): Emerald, cost 5, Character, Uncommon
+- [Louis - Endearing Alligator](https://www.readysetink.com/card/louis-endearing-alligator.html): Emerald, cost 3, Character, Uncommon
+- [Lucifer - Cunning Cat](https://www.readysetink.com/card/lucifer-cunning-cat.html): Emerald, cost 5, Character, Rare
+- [Lyle Tiberius Rourke - Adventurer for Hire](https://www.readysetink.com/card/lyle-tiberius-rourke-adventurer-for-hire.html): Emerald, cost 2, Character, Uncommon
+- [Lyle Tiberius Rourke - Cunning Mercenary](https://www.readysetink.com/card/lyle-tiberius-rourke-cunning-mercenary.html): Emerald, cost 3, Character, Super Rare
+- [Mad Dog - Karnage's First Mate](https://www.readysetink.com/card/mad-dog-karnages-first-mate.html): Emerald, cost 4, Character, Common
+- [Mad Hatter - Gracious Host](https://www.readysetink.com/card/mad-hatter-gracious-host.html): Emerald, cost 5, Character, Uncommon
+- [Mad Hatter - Unruly Eccentric](https://www.readysetink.com/card/mad-hatter-unruly-eccentric.html): Emerald / Ruby, cost 6, Character, Rare
+- [Madam Mim - Hummingbird](https://www.readysetink.com/card/madam-mim-hummingbird.html): Emerald, cost 2, Character, Uncommon
+- [Magica De Spell - Shadow Form](https://www.readysetink.com/card/magica-de-spell-shadow-form.html): Amethyst / Emerald, cost 5, Character, Uncommon
+- [Make the Potion](https://www.readysetink.com/card/make-the-potion.html): Emerald, cost 2, Action, Common
+- [Malicious, Mean, and Scary](https://www.readysetink.com/card/malicious-mean-and-scary.html): Emerald, cost 3, Action, Uncommon
+- [March Hare - Hare-Brained Eccentric](https://www.readysetink.com/card/march-hare-hare-brained-eccentric.html): Emerald, cost 4, Character, Common
+- [Maui - Stubborn Trickster](https://www.readysetink.com/card/maui-stubborn-trickster.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Max Goof - Chart Topper](https://www.readysetink.com/card/max-goof-chart-topper.html): Emerald, cost 6, Character, Legendary
+- [Max Goof - Karaoke Star](https://www.readysetink.com/card/max-goof-karaoke-star.html): Emerald, cost 3, Character, Legendary
+- [Max Goof - Rebellious Teen](https://www.readysetink.com/card/max-goof-rebellious-teen.html): Emerald, cost 3, Character, Rare
+- [MegaBot](https://www.readysetink.com/card/megabot.html): Emerald, cost 2, Item, Uncommon
+- [Megara - Captivating Cynic](https://www.readysetink.com/card/megara-captivating-cynic.html): Emerald, cost 3, Character, Common
+- [Megara - Liberated One](https://www.readysetink.com/card/megara-liberated-one.html): Emerald, cost 5, Character, Uncommon
+- [Megara - Pulling the Strings](https://www.readysetink.com/card/megara-pulling-the-strings.html): Emerald, cost 2, Character, Common
+- [Megara - Secret Keeper](https://www.readysetink.com/card/megara-secret-keeper.html): Emerald, cost 3, Character, Rare
+- [Merida - Defiant Daughter](https://www.readysetink.com/card/merida-defiant-daughter.html): Emerald, cost 2, Character, Common
+- [Merida - Gifted Archer](https://www.readysetink.com/card/merida-gifted-archer.html): Emerald, cost 5, Character, Rare
+- [Merida's Bow](https://www.readysetink.com/card/meridas-bow.html): Emerald, cost 2, Item, Common
+- [Merryweather - Good Fairy](https://www.readysetink.com/card/merryweather-good-fairy.html): Emerald, cost 1, Character, Common
+- [Mertle Edmonds - Lilo's Rival](https://www.readysetink.com/card/mertle-edmonds-lilos-rival.html): Emerald, cost 1, Character, Uncommon
+- [Mickey Mouse - Artful Rogue](https://www.readysetink.com/card/mickey-mouse-artful-rogue.html): Emerald, cost 7, Character, Super Rare
+- [Mickey Mouse - Snowboard Ace](https://www.readysetink.com/card/mickey-mouse-snowboard-ace.html): Emerald, cost 6, Character, Uncommon
+- [Mickey Mouse - Steamboat Pilot](https://www.readysetink.com/card/mickey-mouse-steamboat-pilot.html): Emerald, cost 3, Character, Common
+- [Mickey Mouse & Minnie Mouse - Adventuring Duo](https://www.readysetink.com/card/mickey-mouse-minnie-mouse-adventuring-duo.html): Emerald / Sapphire, cost 7, Character, Legendary
+- [Milo Thatch - Clever Cartographer](https://www.readysetink.com/card/milo-thatch-clever-cartographer.html): Emerald, cost 1, Character, Common
+- [Milo Thatch - Getting His Hands Dirty](https://www.readysetink.com/card/milo-thatch-getting-his-hands-dirty.html): Emerald, cost 7, Character, Super Rare
+- [Milo Thatch - King of Atlantis](https://www.readysetink.com/card/milo-thatch-king-of-atlantis.html): Emerald, cost 7, Character, Legendary
+- [Minnie Mouse - Curious Adventurer](https://www.readysetink.com/card/minnie-mouse-curious-adventurer.html): Emerald, cost 1, Character, Common
+- [Minnie Mouse - Mrs. Cratchit](https://www.readysetink.com/card/minnie-mouse-mrs-cratchit.html): Emerald, cost 5, Character, Rare
+- [Minnie Mouse - Spinning Skater](https://www.readysetink.com/card/minnie-mouse-spinning-skater.html): Emerald, cost 2, Character, Common
+- [Molly Cunningham - Remembers to Share](https://www.readysetink.com/card/molly-cunningham-remembers-to-share.html): Emerald, cost 2, Character, Uncommon
+- [Morph - Space Goo](https://www.readysetink.com/card/morph-space-goo.html): Emerald, cost 2, Character, Rare
+- [Mosquito Bite](https://www.readysetink.com/card/mosquito-bite.html): Emerald, cost 1, Action, Uncommon
+- [Mother Gothel - Conceited Manipulator](https://www.readysetink.com/card/mother-gothel-conceited-manipulator.html): Emerald, cost 2, Character, Uncommon
+- [Mother Gothel - Evil as Ever](https://www.readysetink.com/card/mother-gothel-evil-as-ever.html): Emerald, cost 2, Character, Common
+- [Mother Gothel - Selfish Manipulator](https://www.readysetink.com/card/mother-gothel-selfish-manipulator.html): Emerald, cost 6, Character, Super Rare
+- [Mother Gothel - Unwavering Schemer](https://www.readysetink.com/card/mother-gothel-unwavering-schemer.html): Emerald, cost 6, Character, Super Rare
+- [Mother Knows Best](https://www.readysetink.com/card/mother-knows-best.html): Emerald, cost 3, Action, Uncommon
+- [Mr. Smee - Efficient Captain](https://www.readysetink.com/card/mr-smee-efficient-captain.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Mulan - Resourceful Recruit](https://www.readysetink.com/card/mulan-resourceful-recruit.html): Emerald, cost 2, Character, Super Rare
+- [Mushu - Sneaky Dragon](https://www.readysetink.com/card/mushu-sneaky-dragon.html): Emerald, cost 5, Character, Uncommon
+- [Mushu - Stealthy Dragon](https://www.readysetink.com/card/mushu-stealthy-dragon.html): Emerald, cost 3, Character, Legendary
+- [My Adventure Book](https://www.readysetink.com/card/my-adventure-book.html): Emerald, cost 3, Item, Uncommon
+- [Napoleon - Clever Bloodhound](https://www.readysetink.com/card/napoleon-clever-bloodhound.html): Emerald, cost 4, Character, Uncommon
+- [Night Howler Rage](https://www.readysetink.com/card/night-howler-rage.html): Emerald, cost 3, Action, Common
+- [Obscurosphere](https://www.readysetink.com/card/obscurosphere.html): Emerald, cost 1, Item, Common
+- [Olivia Flaversham - The Toymaker's Daughter](https://www.readysetink.com/card/olivia-flaversham-the-toymakers-daughter.html): Emerald, cost 2, Character, Rare
+- [Only So Much Room](https://www.readysetink.com/card/only-so-much-room.html): Amber / Emerald, cost 4, Action, Uncommon
+- [Owl Island - Secluded Entrance](https://www.readysetink.com/card/owl-island-secluded-entrance.html): Emerald, cost 3, Location, Rare
+- [Pacha - Trekmate](https://www.readysetink.com/card/pacha-trekmate.html): Emerald, cost 3, Character, Common
+- [Pack Tactics](https://www.readysetink.com/card/pack-tactics.html): Emerald, cost 4, Action, Rare
+- [Pain - Immortal Sidekick](https://www.readysetink.com/card/pain-immortal-sidekick.html): Emerald, cost 3, Character, Uncommon
+- [Pain - Underworld Imp](https://www.readysetink.com/card/pain-underworld-imp.html): Emerald, cost 2, Character, Uncommon
+- [Panic - Immortal Sidekick](https://www.readysetink.com/card/panic-immortal-sidekick.html): Emerald, cost 4, Character, Uncommon
+- [Panic - Underworld Imp](https://www.readysetink.com/card/panic-underworld-imp.html): Emerald, cost 3, Character, Common
+- [Paradise Falls - Exotic Destination](https://www.readysetink.com/card/paradise-falls-exotic-destination.html): Emerald, cost 4, Location, Rare
+- [Peg - Natural Performer](https://www.readysetink.com/card/peg-natural-performer.html): Amber / Emerald, cost 3, Character, Uncommon
+- [Pegasus - Cloud Racer](https://www.readysetink.com/card/pegasus-cloud-racer.html): Emerald, cost 5, Character, Uncommon
+- [Pegasus - Gift for Hercules](https://www.readysetink.com/card/pegasus-gift-for-hercules.html): Emerald, cost 1, Character, Common
+- [Penumbra - Moon Alien](https://www.readysetink.com/card/penumbra-moon-alien.html): Emerald, cost 5, Character, Rare
+- [Perilous Maze - Watery Labyrinth](https://www.readysetink.com/card/perilous-maze-watery-labyrinth.html): Emerald, cost 3, Location, Common
+- [Perla - Nimble Seamstress](https://www.readysetink.com/card/perla-nimble-seamstress.html): Amber / Emerald, cost 3, Character, Uncommon
+- [Pete - Bad Guy](https://www.readysetink.com/card/pete-bad-guy.html): Emerald, cost 5, Character, Rare
+- [Pete - Born to Cheat](https://www.readysetink.com/card/pete-born-to-cheat.html): Emerald, cost 2, Character, Super Rare
+- [Pete - Pirate Scoundrel](https://www.readysetink.com/card/pete-pirate-scoundrel.html): Emerald, cost 1, Character, Common
+- [Pete - Rotten Guy](https://www.readysetink.com/card/pete-rotten-guy.html): Emerald, cost 4, Character, Uncommon
+- [Pete - Space Pirate](https://www.readysetink.com/card/pete-space-pirate.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Peter Pan - Created by the Vine](https://www.readysetink.com/card/peter-pan-created-by-the-vine.html): Emerald, cost 3, Character, Rare
+- [Peter Pan - Lost Boy Leader](https://www.readysetink.com/card/peter-pan-lost-boy-leader.html): Emerald, cost 4, Character, Rare
+- [Peter Pan - Never Land Prankster](https://www.readysetink.com/card/peter-pan-never-land-prankster.html): Emerald, cost 7, Character, Super Rare
+- [Peter Pan - Never Landing](https://www.readysetink.com/card/peter-pan-never-landing.html): Emerald, cost 3, Character, Common
+- [Peter Pan - Searching Far and Wide](https://www.readysetink.com/card/peter-pan-searching-far-and-wide.html): Emerald, cost 3, Character, Uncommon
+- [Piercing Attack](https://www.readysetink.com/card/piercing-attack.html): Emerald, cost 2, Action, Common
+- [Pizza Planet - Spaceport](https://www.readysetink.com/card/pizza-planet-spaceport.html): Emerald, cost 2, Location, Rare
+- [Posey - Vampire Potato](https://www.readysetink.com/card/posey-vampire-potato.html): Emerald, cost 7, Character, Uncommon
+- [Potato](https://www.readysetink.com/card/potato.html): Emerald, cost 1, Item, Common
+- [Potion of Malice](https://www.readysetink.com/card/potion-of-malice.html): Emerald, cost 3, Item, Super Rare
+- [Prepare to Board!](https://www.readysetink.com/card/prepare-to-board.html): Emerald, cost 1, Action, Common
+- [Prince John - Greediest of All](https://www.readysetink.com/card/prince-john-greediest-of-all.html): Emerald, cost 3, Character, Rare
+- [Prince John - Phony King](https://www.readysetink.com/card/prince-john-phony-king.html): Emerald, cost 5, Character, Uncommon
+- [Prince John's Mirror](https://www.readysetink.com/card/prince-johns-mirror.html): Emerald, cost 3, Item, Rare
+- [Prince Phillip - Royal Explorer](https://www.readysetink.com/card/prince-phillip-royal-explorer.html): Emerald, cost 3, Character, Uncommon
+- [Prince Phillip - Swordsman of the Realm](https://www.readysetink.com/card/prince-phillip-swordsman-of-the-realm.html): Emerald, cost 7, Character, Super Rare
+- [Prince Phillip - Vanquisher of Foes](https://www.readysetink.com/card/prince-phillip-vanquisher-of-foes.html): Emerald, cost 9, Character, Super Rare
+- [Prince Phillip - Warden of the Woods](https://www.readysetink.com/card/prince-phillip-warden-of-the-woods.html): Emerald, cost 4, Character, Rare
+- [Pull the Lever!](https://www.readysetink.com/card/pull-the-lever.html): Amethyst / Emerald, cost 3, Action, Uncommon
+- [Put That Thing Back](https://www.readysetink.com/card/put-that-thing-back.html): Emerald, cost 4, Action, Uncommon
+- [Queen of Hearts - Haughty Monarch](https://www.readysetink.com/card/queen-of-hearts-haughty-monarch.html): Emerald / Ruby, cost 4, Character, Super Rare
+- [Queen of Hearts - Quick-Tempered](https://www.readysetink.com/card/queen-of-hearts-quick-tempered.html): Emerald, cost 2, Character, Common
+- [Queen of Hearts - Unpredictable Bully](https://www.readysetink.com/card/queen-of-hearts-unpredictable-bully.html): Emerald / Ruby, cost 5, Character, Super Rare
+- [RC - Remote-Controlled Car](https://www.readysetink.com/card/rc-remote-controlled-car.html): Emerald, cost 1, Character, Common
+- [Rafiki's Bakora Staff](https://www.readysetink.com/card/rafikis-bakora-staff.html): Emerald, cost 2, Item, Uncommon
+- [Rapunzel - Escaping the Tower](https://www.readysetink.com/card/rapunzel-escaping-the-tower.html): Emerald, cost 1, Character, Super Rare
+- [Rapunzel - High Climber](https://www.readysetink.com/card/rapunzel-high-climber.html): Emerald, cost 5, Character, Legendary
+- [Rapunzel - Tower Defender](https://www.readysetink.com/card/rapunzel-tower-defender.html): Emerald, cost 4, Character, Common
+- [Rapunzel & Flynn Rider - Unlikely Pair](https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html): Emerald / Steel, cost 5, Character, Legendary
+- [Ratigan - Criminal Mastermind](https://www.readysetink.com/card/ratigan-criminal-mastermind.html): Emerald, cost 4, Character, Common
+- [Ratigan's Marvelous Trap](https://www.readysetink.com/card/ratigans-marvelous-trap.html): Emerald, cost 3, Item, Rare
+- [Ray - Easygoing Firefly](https://www.readysetink.com/card/ray-easygoing-firefly.html): Emerald, cost 5, Character, Common
+- [Raya - Infiltration Expert](https://www.readysetink.com/card/raya-infiltration-expert.html): Emerald, cost 6, Character, Legendary
+- [Rebecca Cunningham - Savvy Manager](https://www.readysetink.com/card/rebecca-cunningham-savvy-manager.html): Emerald, cost 3, Character, Common
+- [Remember Who You Are](https://www.readysetink.com/card/remember-who-you-are.html): Emerald, cost 4, Action, Rare
+- [Retro Evolution Device](https://www.readysetink.com/card/retro-evolution-device.html): Emerald, cost 3, Item, Rare
+- [Ring the Bell](https://www.readysetink.com/card/ring-the-bell.html): Emerald, cost 3, Action, Uncommon
+- [Robin Hood - Archery Contestant](https://www.readysetink.com/card/robin-hood-archery-contestant.html): Emerald, cost 2, Character, Common
+- [Robin Hood - Daydreamer](https://www.readysetink.com/card/robin-hood-daydreamer.html): Emerald, cost 6, Character, Rare
+- [Robin Hood - Sneaky Sleuth](https://www.readysetink.com/card/robin-hood-sneaky-sleuth.html): Emerald, cost 5, Character, Uncommon
+- [Robin Hood - Timely Contestant](https://www.readysetink.com/card/robin-hood-timely-contestant.html): Emerald, cost 9, Character, Rare
+- [Robin's Bow](https://www.readysetink.com/card/robins-bow.html): Emerald, cost 3, Item, Uncommon
+- [Roo - Hunny Rogue](https://www.readysetink.com/card/roo-hunny-rogue.html): Emerald, cost 1, Character, Uncommon
+- [Russell - Junior Wilderness Explorer](https://www.readysetink.com/card/russell-junior-wilderness-explorer.html): Emerald, cost 2, Character, Common
+- [Russell - Senior Wilderness Explorer](https://www.readysetink.com/card/russell-senior-wilderness-explorer.html): Emerald, cost 5, Character, Super Rare
+- [Sabotage](https://www.readysetink.com/card/sabotage.html): Emerald, cost 3, Action, Common
+- [Scar - Vengeful Lion](https://www.readysetink.com/card/scar-vengeful-lion.html): Emerald, cost 4, Character, Rare
+- [Scout Ahead](https://www.readysetink.com/card/scout-ahead.html): Emerald, cost 1, Action, Common
+- [Scrooge McDuck - S.H.U.S.H. Agent](https://www.readysetink.com/card/scrooge-mcduck-s-h-u-s-h-agent.html): Emerald, cost 2, Character, Super Rare
+- [Scroop - Odious Mutineer](https://www.readysetink.com/card/scroop-odious-mutineer.html): Emerald, cost 3, Character, Super Rare
+- [Shenzi - Head Hyena](https://www.readysetink.com/card/shenzi-head-hyena.html): Emerald, cost 5, Character, Rare
+- [Shenzi - Hyena Pack Leader](https://www.readysetink.com/card/shenzi-hyena-pack-leader.html): Emerald, cost 4, Character, Super Rare
+- [Shenzi - Scar's Accomplice](https://www.readysetink.com/card/shenzi-scars-accomplice.html): Emerald, cost 3, Character, Uncommon
+- [Shere Khan - Fearsome Tiger](https://www.readysetink.com/card/shere-khan-fearsome-tiger.html): Emerald, cost 6, Character, Legendary
+- [Shere Khan - Infamous Tiger](https://www.readysetink.com/card/shere-khan-infamous-tiger.html): Emerald, cost 4, Character, Rare
+- [Shere Khan - Opportunistic Tycoon](https://www.readysetink.com/card/shere-khan-opportunistic-tycoon.html): Emerald, cost 4, Character, Uncommon
+- [Sherwood Forest - Outlaw Hideaway](https://www.readysetink.com/card/sherwood-forest-outlaw-hideaway.html): Emerald, cost 2, Location, Rare
+- [Signed Contract](https://www.readysetink.com/card/signed-contract.html): Emerald, cost 2, Item, Uncommon
+- [Sir Hiss - Aggravating Asp](https://www.readysetink.com/card/sir-hiss-aggravating-asp.html): Emerald, cost 2, Character, Common
+- [Skippy - Energetic Rabbit](https://www.readysetink.com/card/skippy-energetic-rabbit.html): Emerald, cost 2, Character, Common
+- [Snow Fort](https://www.readysetink.com/card/snow-fort.html): Emerald, cost 3, Item, Uncommon
+- [Snowball Fight](https://www.readysetink.com/card/snowball-fight.html): Emerald, cost 2, Action, Common
+- [So Be It!](https://www.readysetink.com/card/so-be-it.html): Emerald, cost 2, Action, Common
+- [Squeaks - Cozy Caterpillar](https://www.readysetink.com/card/squeaks-cozy-caterpillar.html): Emerald, cost 2, Character, Common
+- [Stampede](https://www.readysetink.com/card/stampede.html): Emerald, cost 1, Action, Common
+- [Stand Out](https://www.readysetink.com/card/stand-out.html): Emerald, cost 3, Action, Uncommon
+- [Starkey - Devious Pirate](https://www.readysetink.com/card/starkey-devious-pirate.html): Emerald, cost 7, Character, Uncommon
+- [Starlight Vial](https://www.readysetink.com/card/starlight-vial.html): Emerald, cost 4, Item, Rare
+- [Steal from the Rich](https://www.readysetink.com/card/steal-from-the-rich.html): Emerald, cost 5, Action, Rare
+- [Stegmutt - Clumsy Dinosaur](https://www.readysetink.com/card/stegmutt-clumsy-dinosaur.html): Emerald, cost 8, Character, Rare
+- [Stitch - Alien Buccaneer](https://www.readysetink.com/card/stitch-alien-buccaneer.html): Emerald, cost 4, Character, Rare
+- [Stitch - Covert Agent](https://www.readysetink.com/card/stitch-covert-agent.html): Emerald, cost 5, Character, Rare
+- [Stitch - Little Trickster](https://www.readysetink.com/card/stitch-little-trickster.html): Emerald, cost 2, Character, Common
+- [Stitch - Naughty Experiment](https://www.readysetink.com/card/stitch-naughty-experiment.html): Emerald, cost 1, Character, Common
+- [Stolen Scimitar](https://www.readysetink.com/card/stolen-scimitar.html): Emerald, cost 2, Item, Common
+- [Stopped Chaos in Its Tracks](https://www.readysetink.com/card/stopped-chaos-in-its-tracks.html): Emerald, cost 8, Action, Uncommon
+- [Strange Things](https://www.readysetink.com/card/strange-things.html): Emerald, cost 4, Action, Uncommon
+- [Strike a Good Match](https://www.readysetink.com/card/strike-a-good-match.html): Emerald, cost 2, Action, Common
+- [Sudden Chill](https://www.readysetink.com/card/sudden-chill.html): Emerald, cost 2, Action, Common
+- [Tamatoa - Drab Little Crab](https://www.readysetink.com/card/tamatoa-drab-little-crab.html): Emerald, cost 2, Character, Uncommon
+- [The Beast is Mine!](https://www.readysetink.com/card/the-beast-is-mine.html): Emerald, cost 3, Action, Uncommon
+- [The Claw](https://www.readysetink.com/card/the-claw.html): Emerald, cost 4, Item, Rare
+- [The Family Scattered](https://www.readysetink.com/card/the-family-scattered.html): Emerald, cost 8, Action, Super Rare
+- [The Fates - Only One Eye](https://www.readysetink.com/card/the-fates-only-one-eye.html): Emerald, cost 1, Character, Common
+- [The Huntsman - On the Queen's Orders](https://www.readysetink.com/card/the-huntsman-on-the-queens-orders.html): Emerald, cost 3, Character, Uncommon
+- [The Muses - Proclaimers of Heroes](https://www.readysetink.com/card/the-muses-proclaimers-of-heroes.html): Emerald, cost 4, Character, Rare
+- [The Queen - Devious Disguise](https://www.readysetink.com/card/the-queen-devious-disguise.html): Emerald, cost 4, Character, Legendary
+- [The Queen - Disguised Peddler](https://www.readysetink.com/card/the-queen-disguised-peddler.html): Emerald, cost 3, Character, Super Rare
+- [The Queen - Evil Ruler](https://www.readysetink.com/card/the-queen-evil-ruler.html): Emerald, cost 1, Character, Common
+- [The Return of Hercules](https://www.readysetink.com/card/the-return-of-hercules.html): Emerald, cost 5, Action, Legendary
+- [The Witch - Wily Woodcarver](https://www.readysetink.com/card/the-witch-wily-woodcarver.html): Emerald, cost 5, Character, Common
+- [This Is Business](https://www.readysetink.com/card/this-is-business.html): Emerald, cost 3, Action, Rare
+- [Thomas O'Malley - Feline Charmer](https://www.readysetink.com/card/thomas-omalley-feline-charmer.html): Emerald, cost 3, Character, Uncommon
+- [Tiana - True Princess](https://www.readysetink.com/card/tiana-true-princess.html): Emerald, cost 5, Character, Uncommon
+- [Tinker Bell - Most Helpful](https://www.readysetink.com/card/tinker-bell-most-helpful.html): Emerald, cost 4, Character, Common
+- [Tipo - Junior Chipmunk](https://www.readysetink.com/card/tipo-junior-chipmunk.html): Emerald, cost 2, Character, Common
+- [To Wither a Flower](https://www.readysetink.com/card/to-wither-a-flower.html): Emerald, cost 4, Action, Rare
+- [Tod - All Alone](https://www.readysetink.com/card/tod-all-alone.html): Emerald, cost 1, Character, Common
+- [Tod - Clever Fox](https://www.readysetink.com/card/tod-clever-fox.html): Emerald, cost 3, Character, Uncommon
+- [Tod - Knows All the Tricks](https://www.readysetink.com/card/tod-knows-all-the-tricks.html): Emerald, cost 7, Character, Legendary
+- [Tod - Nimble Fox](https://www.readysetink.com/card/tod-nimble-fox.html): Emerald, cost 5, Character, Common
+- [Tod - Playful Kit](https://www.readysetink.com/card/tod-playful-kit.html): Emerald, cost 4, Character, Rare
+- [Tod & Copper - Best of Friends](https://www.readysetink.com/card/tod-copper-best-of-friends.html): Emerald, cost 4, Character, Rare
+- [Tootles - Lost Boy](https://www.readysetink.com/card/tootles-lost-boy.html): Emerald, cost 1, Character, Common
+- [Tor - Florist](https://www.readysetink.com/card/tor-florist.html): Emerald, cost 5, Character, Common
+- [Tramp - Dapper Rascal](https://www.readysetink.com/card/tramp-dapper-rascal.html): Amber / Emerald, cost 6, Character, Super Rare
+- [Tramp - Enterprising Dog](https://www.readysetink.com/card/tramp-enterprising-dog.html): Emerald, cost 2, Character, Rare
+- [Tramp - Observant Guardian](https://www.readysetink.com/card/tramp-observant-guardian.html): Emerald, cost 3, Character, Common
+- [Tramp - Street-Smart Dog](https://www.readysetink.com/card/tramp-street-smart-dog.html): Amber / Emerald, cost 7, Character, Rare
+- [Transport Pod](https://www.readysetink.com/card/transport-pod.html): Emerald, cost 1, Item, Uncommon
+- [Tropical Rainforest - Jaguar Lair](https://www.readysetink.com/card/tropical-rainforest-jaguar-lair.html): Emerald, cost 3, Location, Uncommon
+- [Trust In Me](https://www.readysetink.com/card/trust-in-me.html): Emerald, cost 6, Action, Rare
+- [Trusty - Along for the Ride](https://www.readysetink.com/card/trusty-along-for-the-ride.html): Emerald, cost 5, Character, Common
+- [Tweedledee & Tweedledum - Strange Storytellers](https://www.readysetink.com/card/tweedledee-tweedledum-strange-storytellers.html): Emerald / Ruby, cost 5, Character, Uncommon
+- [Ulf - Mime](https://www.readysetink.com/card/ulf-mime.html): Emerald, cost 4, Character, Common
+- [Under the Sea](https://www.readysetink.com/card/under-the-sea.html): Emerald, cost 8, Action, Rare
+- [Undermine](https://www.readysetink.com/card/undermine.html): Emerald / Ruby, cost 2, Action, Uncommon
+- [Ursula - Deceiver](https://www.readysetink.com/card/ursula-deceiver.html): Emerald, cost 2, Character, Uncommon
+- [Ursula - Deceiver of All](https://www.readysetink.com/card/ursula-deceiver-of-all.html): Emerald, cost 3, Character, Legendary
+- [Ursula's Garden - Full of the Unfortunate](https://www.readysetink.com/card/ursulas-garden-full-of-the-unfortunate.html): Emerald, cost 4, Location, Rare
+- [Ursula's Trickery](https://www.readysetink.com/card/ursulas-trickery.html): Emerald, cost 1, Action, Uncommon
+- [Vicious Betrayal](https://www.readysetink.com/card/vicious-betrayal.html): Emerald, cost 1, Action, Common
+- [Vine Pod](https://www.readysetink.com/card/vine-pod.html): Emerald, cost 4, Item, Rare
+- [Virana - Fang Chief](https://www.readysetink.com/card/virana-fang-chief.html): Emerald, cost 5, Character, Common
+- [Vision Slab](https://www.readysetink.com/card/vision-slab.html): Emerald, cost 3, Item, Uncommon
+- [Vixey - Forest Friend](https://www.readysetink.com/card/vixey-forest-friend.html): Emerald, cost 3, Character, Uncommon
+- [Vladimir - Ceramic Unicorn Fan](https://www.readysetink.com/card/vladimir-ceramic-unicorn-fan.html): Emerald, cost 6, Character, Common
+- [Wake Up, Alice!](https://www.readysetink.com/card/wake-up-alice.html): Emerald, cost 1, Action, Common
+- [Walk the Plank!](https://www.readysetink.com/card/walk-the-plank.html): Emerald / Steel, cost 3, Action, Uncommon
+- [We Don't Talk About Bruno](https://www.readysetink.com/card/we-dont-talk-about-bruno.html): Emerald, cost 5, Action, Rare
+- [Webby Vanderquack - Junior Prospector](https://www.readysetink.com/card/webby-vanderquack-junior-prospector.html): Emerald, cost 4, Character, Legendary
+- [Webby Vanderquack - Mystery Enthusiast](https://www.readysetink.com/card/webby-vanderquack-mystery-enthusiast.html): Emerald, cost 1, Character, Common
+- [White Agony Plains - Golden Lagoon](https://www.readysetink.com/card/white-agony-plains-golden-lagoon.html): Emerald, cost 2, Location, Rare
+- [White Rabbit - Late Again](https://www.readysetink.com/card/white-rabbit-late-again.html): Emerald, cost 2, Character, Uncommon
+- [Wildcat - Mechanic](https://www.readysetink.com/card/wildcat-mechanic.html): Emerald, cost 3, Character, Uncommon
+- [Wilhelmina Packard - The Radio Operator](https://www.readysetink.com/card/wilhelmina-packard-the-radio-operator.html): Emerald, cost 3, Character, Common
+- [Winifred - Exasperated Elephant](https://www.readysetink.com/card/winifred-exasperated-elephant.html): Emerald, cost 6, Character, Common
+- [Woody & Buzz Lightyear - Best Buddies](https://www.readysetink.com/card/woody-buzz-lightyear-best-buddies.html): Amber / Emerald, cost 7, Character, Legendary
+- [Wrong Lever!](https://www.readysetink.com/card/wrong-lever.html): Emerald, cost 3, Action, Rare
+- [Yao - Snow Warrior](https://www.readysetink.com/card/yao-snow-warrior.html): Emerald, cost 4, Character, Common
+- [Yokai - Intellectual Schemer](https://www.readysetink.com/card/yokai-intellectual-schemer.html): Emerald / Sapphire, cost 2, Character, Uncommon
+- [You Came Back](https://www.readysetink.com/card/you-came-back.html): Emerald, cost 3, Action, Rare
+- [You're Welcome](https://www.readysetink.com/card/youre-welcome.html): Emerald, cost 4, Action, Uncommon
+- [Young MacGuffin - Soft-Spoken Son](https://www.readysetink.com/card/young-macguffin-soft-spoken-son.html): Emerald, cost 1, Character, Common
+- [Yzma - Above It All](https://www.readysetink.com/card/yzma-above-it-all.html): Amethyst / Emerald, cost 7, Character, Super Rare
+- [Yzma - Exasperated Schemer](https://www.readysetink.com/card/yzma-exasperated-schemer.html): Emerald, cost 2, Character, Common
+- [Yzma - On Edge](https://www.readysetink.com/card/yzma-on-edge.html): Amethyst / Emerald, cost 6, Character, Super Rare
+- [Zazu - Advisor to Mufasa](https://www.readysetink.com/card/zazu-advisor-to-mufasa.html): Emerald, cost 5, Character, Common
+- [Zazu - Steward of the Pride Lands](https://www.readysetink.com/card/zazu-steward-of-the-pride-lands.html): Emerald, cost 1, Character, Common
+- [Zeus - Mr. Lightning Bolts](https://www.readysetink.com/card/zeus-mr-lightning-bolts.html): Emerald, cost 3, Character, Super Rare

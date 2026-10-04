@@ -1,0 +1,72 @@
+# Pirate: Disney Lorcana Pirate cards
+
+Source: https://www.readysetink.com/classifications/pirate/
+
+66 cards.
+
+- [B.E.N. - Eccentric Robot](https://www.readysetink.com/card/b-e-n-eccentric-robot.html): Sapphire, cost 4, Character, Common
+- [Billy Bones - Keeper of the Map](https://www.readysetink.com/card/billy-bones-keeper-of-the-map.html): Ruby, cost 5, Character, Common
+- [Billy Bones - Space Sailor](https://www.readysetink.com/card/billy-bones-space-sailor.html): Steel, cost 3, Character, Uncommon
+- [Captain Hook - Captain of the Jolly Roger](https://www.readysetink.com/card/captain-hook-captain-of-the-jolly-roger.html): Steel, cost 4, Character, Rare
+- [Captain Hook - Conniving Pirate](https://www.readysetink.com/card/captain-hook-conniving-pirate.html): Ruby, cost 2, Character, Uncommon
+- [Captain Hook - Devious Duelist](https://www.readysetink.com/card/captain-hook-devious-duelist.html): cost 5, Character, Special
+- [Captain Hook - Forceful Duelist](https://www.readysetink.com/card/captain-hook-forceful-duelist.html): Steel, cost 1, Character, Common
+- [Captain Hook - Master Swordsman](https://www.readysetink.com/card/captain-hook-master-swordsman.html): Ruby, cost 5, Character, Rare
+- [Captain Hook - Ruthless Pirate](https://www.readysetink.com/card/captain-hook-ruthless-pirate.html): Ruby, cost 7, Character, Rare
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Captain Hook - Thinking a Happy Thought](https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.html): Steel, cost 5, Character, Rare
+- [Captain Hook - Underhanded](https://www.readysetink.com/card/captain-hook-underhanded.html): Emerald, cost 3, Character, Rare
+- [Daisy Duck - Multitalented Pirate](https://www.readysetink.com/card/daisy-duck-multitalented-pirate.html): Emerald, cost 8, Character, Rare
+- [Daisy Duck - Pirate Captain](https://www.readysetink.com/card/daisy-duck-pirate-captain.html): Emerald, cost 4, Character, Super Rare
+- [Don Karnage - Air Pirate Leader](https://www.readysetink.com/card/don-karnage-air-pirate-leader.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Don Karnage - Prince of Pirates](https://www.readysetink.com/card/don-karnage-prince-of-pirates.html): Emerald, cost 5, Character, Common
+- [Donald Duck - Buccaneer](https://www.readysetink.com/card/donald-duck-buccaneer.html): Steel, cost 4, Character, Legendary
+- [Donald Duck - First Mate](https://www.readysetink.com/card/donald-duck-first-mate.html): Emerald, cost 3, Character, Uncommon
+- [Donald Duck - Lively Pirate](https://www.readysetink.com/card/donald-duck-lively-pirate.html): Emerald, cost 2, Character, Rare
+- [Dumptruck - Karnage's Second Mate](https://www.readysetink.com/card/dumptruck-karnages-second-mate.html): Steel, cost 1, Character, Common
+- [Gopher - Ship's Carpenter](https://www.readysetink.com/card/gopher-ships-carpenter.html): Amber, cost 4, Character, Uncommon
+- [Grewnge - Cannon Expert](https://www.readysetink.com/card/grewnge-cannon-expert.html): Emerald, cost 2, Character, Common
+- [Jim Hawkins - Honorable Pirate](https://www.readysetink.com/card/jim-hawkins-honorable-pirate.html): Amber, cost 7, Character, Super Rare
+- [John Darling - Sophisticated Swordsman](https://www.readysetink.com/card/john-darling-sophisticated-swordsman.html): Ruby, cost 2, Character, Uncommon
+- [John Silver - Alien Pirate](https://www.readysetink.com/card/john-silver-alien-pirate.html): Emerald, cost 6, Character, Legendary
+- [John Silver - Ferocious Friend](https://www.readysetink.com/card/john-silver-ferocious-friend.html): Ruby, cost 4, Character, Uncommon
+- [John Silver - Greedy Treasure Seeker](https://www.readysetink.com/card/john-silver-greedy-treasure-seeker.html): Steel, cost 3, Character, Rare
+- [John Silver - Ship's Cook](https://www.readysetink.com/card/john-silver-ships-cook.html): Steel, cost 3, Character, Common
+- [John Silver - Stern Captain](https://www.readysetink.com/card/john-silver-stern-captain.html): Steel, cost 8, Character, Legendary
+- [John Silver - Terror of the Realm](https://www.readysetink.com/card/john-silver-terror-of-the-realm.html): Sapphire, cost 8, Character, Rare
+- [John Silver - Vengeful Pirate](https://www.readysetink.com/card/john-silver-vengeful-pirate.html): Emerald / Steel, cost 8, Character, Rare
+- [Kakamora - Band of Pirates](https://www.readysetink.com/card/kakamora-band-of-pirates.html): Steel, cost 4, Character, Common
+- [Kakamora - Boarding Party](https://www.readysetink.com/card/kakamora-boarding-party.html): Ruby, cost 4, Character, Uncommon
+- [Kakamora - Long-Range Specialist](https://www.readysetink.com/card/kakamora-long-range-specialist.html): Steel, cost 1, Character, Common
+- [Kakamora - Menacing Sailor](https://www.readysetink.com/card/kakamora-menacing-sailor.html): Ruby, cost 3, Character, Common
+- [Kakamora - Pirate Chief](https://www.readysetink.com/card/kakamora-pirate-chief.html): Steel, cost 7, Character, Rare
+- [Kakamora - Pirate Pitcher](https://www.readysetink.com/card/kakamora-pirate-pitcher.html): Ruby, cost 2, Character, Common
+- [Mad Dog - Karnage's First Mate](https://www.readysetink.com/card/mad-dog-karnages-first-mate.html): Emerald, cost 4, Character, Common
+- [Michael Darling - Playful Swordsman](https://www.readysetink.com/card/michael-darling-playful-swordsman.html): Ruby, cost 1, Character, Common
+- [Mickey Mouse - Pirate Captain](https://www.readysetink.com/card/mickey-mouse-pirate-captain.html): Ruby, cost 5, Character, Super Rare
+- [Minnie Mouse - Pirate Lookout](https://www.readysetink.com/card/minnie-mouse-pirate-lookout.html): Ruby, cost 3, Character, Super Rare
+- [Moana - Kakamora Leader](https://www.readysetink.com/card/moana-kakamora-leader.html): Ruby, cost 7, Character, Rare
+- [Moana - Self-Taught Sailor](https://www.readysetink.com/card/moana-self-taught-sailor.html): Ruby, cost 1, Character, Common
+- [Mr. Smee - Bumbling Mate](https://www.readysetink.com/card/mr-smee-bumbling-mate.html): Steel, cost 2, Character, Uncommon
+- [Mr. Smee - Captain of the Jolly Roger](https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html): Steel, cost 6, Character, Super Rare
+- [Mr. Smee - Efficient Captain](https://www.readysetink.com/card/mr-smee-efficient-captain.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Mr. Smee - Loyal First Mate](https://www.readysetink.com/card/mr-smee-loyal-first-mate.html): Amber, cost 3, Character, Common
+- [Mr. Smee - Steadfast Mate](https://www.readysetink.com/card/mr-smee-steadfast-mate.html): Steel, cost 2, Character, Uncommon
+- [Mullins - Seasoned Shipmate](https://www.readysetink.com/card/mullins-seasoned-shipmate.html): Steel, cost 5, Character, Common
+- [Nathaniel Flint - Notorious Pirate](https://www.readysetink.com/card/nathaniel-flint-notorious-pirate.html): Steel, cost 2, Character, Rare
+- [Owl - Pirate Lookout](https://www.readysetink.com/card/owl-pirate-lookout.html): Amber, cost 3, Character, Uncommon
+- [Pete - Freebooter](https://www.readysetink.com/card/pete-freebooter.html): Ruby, cost 3, Character, Rare
+- [Pete - Pirate Scoundrel](https://www.readysetink.com/card/pete-pirate-scoundrel.html): Emerald, cost 1, Character, Common
+- [Pete - Space Pirate](https://www.readysetink.com/card/pete-space-pirate.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Piglet - Pooh Pirate Captain](https://www.readysetink.com/card/piglet-pooh-pirate-captain.html): Amber, cost 2, Character, Super Rare
+- [Rabbit - Indignant Pirate](https://www.readysetink.com/card/rabbit-indignant-pirate.html): Amber, cost 1, Character, Common
+- [Roo - Littlest Pirate](https://www.readysetink.com/card/roo-littlest-pirate.html): Amber, cost 2, Character, Common
+- [Scroop - Backstabber](https://www.readysetink.com/card/scroop-backstabber.html): Ruby, cost 5, Character, Uncommon
+- [Scroop - Odious Mutineer](https://www.readysetink.com/card/scroop-odious-mutineer.html): Emerald, cost 3, Character, Super Rare
+- [Starkey - Devious Pirate](https://www.readysetink.com/card/starkey-devious-pirate.html): Emerald, cost 7, Character, Uncommon
+- [Starkey - Hook's Henchman](https://www.readysetink.com/card/starkey-hooks-henchman.html): Steel, cost 5, Character, Uncommon
+- [Stitch - Alien Buccaneer](https://www.readysetink.com/card/stitch-alien-buccaneer.html): Emerald, cost 4, Character, Rare
+- [Tigger - In the Crow's Nest](https://www.readysetink.com/card/tigger-in-the-crows-nest.html): Ruby, cost 3, Character, Rare
+- [Wendy Darling - Courageous Captain](https://www.readysetink.com/card/wendy-darling-courageous-captain.html): Ruby, cost 2, Character, Rare
+- [Wendy Darling - Pirate Queen](https://www.readysetink.com/card/wendy-darling-pirate-queen.html): Amber / Ruby, cost 7, Character, Uncommon
+- [Winnie the Pooh - Hunny Pirate](https://www.readysetink.com/card/winnie-the-pooh-hunny-pirate.html): Amber, cost 2, Character, Rare

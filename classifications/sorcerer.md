@@ -1,0 +1,158 @@
+# Sorcerer: Disney Lorcana Sorcerer cards
+
+Source: https://www.readysetink.com/classifications/sorcerer/
+
+152 cards.
+
+- [Alice - Tea Alchemist](https://www.readysetink.com/card/alice-tea-alchemist.html): Amethyst, cost 6, Character, Super Rare
+- [Anna - Ice Breaker](https://www.readysetink.com/card/anna-ice-breaker.html): Amethyst / Sapphire, cost 4, Character, Uncommon
+- [Anna - Magical Mission](https://www.readysetink.com/card/anna-magical-mission.html): Amethyst / Sapphire, cost 6, Character, Rare
+- [Anna - Mystical Majesty](https://www.readysetink.com/card/anna-mystical-majesty.html): Amethyst, cost 7, Character, Rare
+- [Arthur - Wizard's Apprentice](https://www.readysetink.com/card/arthur-wizards-apprentice.html): Amethyst, cost 3, Character, Super Rare
+- [Belle - Accomplished Mystic](https://www.readysetink.com/card/belle-accomplished-mystic.html): Amethyst, cost 5, Character, Super Rare
+- [Demona - Betrayer of the Clan](https://www.readysetink.com/card/demona-betrayer-of-the-clan.html): Amethyst, cost 4, Character, Common
+- [Demona - Scourge of the Wyvern Clan](https://www.readysetink.com/card/demona-scourge-of-the-wyvern-clan.html): Amethyst, cost 6, Character, Legendary
+- [Donald Duck - Flustered Sorcerer](https://www.readysetink.com/card/donald-duck-flustered-sorcerer.html): Amethyst, cost 7, Character, Legendary
+- [Dr. Facilier - Agent Provocateur](https://www.readysetink.com/card/dr-facilier-agent-provocateur.html): Amethyst, cost 7, Character, Rare
+- [Dr. Facilier - Charlatan](https://www.readysetink.com/card/dr-facilier-charlatan.html): Amethyst, cost 2, Character, Common
+- [Dr. Facilier - Fortune Teller](https://www.readysetink.com/card/dr-facilier-fortune-teller.html): Emerald, cost 7, Character, Super Rare
+- [Dr. Facilier - Remarkable Gentleman](https://www.readysetink.com/card/dr-facilier-remarkable-gentleman.html): Amethyst, cost 3, Character, Rare
+- [Dr. Facilier - Savvy Opportunist](https://www.readysetink.com/card/dr-facilier-savvy-opportunist.html): Amethyst, cost 4, Character, Common
+- [Elsa - Concerned Sister](https://www.readysetink.com/card/elsa-concerned-sister.html): Ruby, cost 3, Character, Uncommon
+- [Elsa - Exploring the Unknown](https://www.readysetink.com/card/elsa-exploring-the-unknown.html): Amethyst, cost 3, Character, Common
+- [Elsa - Fierce Protector](https://www.readysetink.com/card/elsa-fierce-protector.html): Amethyst, cost 4, Character, Rare
+- [Elsa - Gloves Off](https://www.readysetink.com/card/elsa-gloves-off.html): Amethyst, cost 4, Character, Common
+- [Elsa - Ice Artisan](https://www.readysetink.com/card/elsa-ice-artisan.html): Ruby, cost 6, Character, Legendary
+- [Elsa - Ice Maker](https://www.readysetink.com/card/elsa-ice-maker.html): Amethyst / Sapphire, cost 7, Character, Super Rare
+- [Elsa - Ice Surfer](https://www.readysetink.com/card/elsa-ice-surfer.html): Ruby, cost 4, Character, Common
+- [Elsa - Queen Regent](https://www.readysetink.com/card/elsa-queen-regent.html): Amethyst, cost 4, Character, Common
+- [Elsa - Snow Queen](https://www.readysetink.com/card/elsa-snow-queen.html): Amethyst, cost 3, Character, Uncommon
+- [Elsa - Spirit of Winter](https://www.readysetink.com/card/elsa-spirit-of-winter.html): Amethyst, cost 8, Character, Legendary
+- [Elsa - Storm Chaser](https://www.readysetink.com/card/elsa-storm-chaser.html): Amethyst, cost 3, Character, Rare
+- [Elsa - The Fifth Spirit](https://www.readysetink.com/card/elsa-the-fifth-spirit.html): Amethyst, cost 5, Character, Super Rare
+- [Elsa - Trusted Sister](https://www.readysetink.com/card/elsa-trusted-sister.html): Amethyst, cost 2, Character, Common
+- [Enchantress - Unexpected Judge](https://www.readysetink.com/card/enchantress-unexpected-judge.html): Emerald, cost 2, Character, Common
+- [Fairy Godmother - Magical Benefactor](https://www.readysetink.com/card/fairy-godmother-magical-benefactor.html): Steel, cost 4, Character, Super Rare
+- [Jafar - Aspiring Ruler](https://www.readysetink.com/card/jafar-aspiring-ruler.html): Steel, cost 3, Character, Common
+- [Jafar - Double-Crossing Vizier](https://www.readysetink.com/card/jafar-double-crossing-vizier.html): cost 7, Character, Special
+- [Jafar - Dreadnought](https://www.readysetink.com/card/jafar-dreadnought.html): Steel, cost 4, Character, Uncommon
+- [Jafar - High Sultan of Lorcana](https://www.readysetink.com/card/jafar-high-sultan-of-lorcana.html): Amethyst / Steel, cost 5, Character, Super Rare
+- [Jafar - Keeper of Secrets](https://www.readysetink.com/card/jafar-keeper-of-secrets.html): Amethyst, cost 4, Character, Rare
+- [Jafar - Lamp Thief](https://www.readysetink.com/card/jafar-lamp-thief.html): Amethyst, cost 3, Character, Uncommon
+- [Jafar - Newly Crowned](https://www.readysetink.com/card/jafar-newly-crowned.html): Amethyst / Steel, cost 4, Character, Super Rare
+- [Jafar - Power-Hungry Vizier](https://www.readysetink.com/card/jafar-power-hungry-vizier.html): Steel, cost 5, Character, Super Rare
+- [Jafar - Royal Vizier](https://www.readysetink.com/card/jafar-royal-vizier.html): Steel, cost 2, Character, Common
+- [Jafar - Spectral Sorcerer](https://www.readysetink.com/card/jafar-spectral-sorcerer.html): cost 4, Character, Special
+- [Jafar - Striking Illusionist](https://www.readysetink.com/card/jafar-striking-illusionist.html): Amethyst, cost 7, Character, Legendary
+- [Jafar - Tyrannical Hypnotist](https://www.readysetink.com/card/jafar-tyrannical-hypnotist.html): Steel, cost 6, Character, Legendary
+- [Jafar - Wicked Sorcerer](https://www.readysetink.com/card/jafar-wicked-sorcerer.html): Amethyst, cost 4, Character, Common
+- [Lena Sabrewing - Mysterious Duck](https://www.readysetink.com/card/lena-sabrewing-mysterious-duck.html): Amethyst, cost 4, Character, Common
+- [Lena Sabrewing - Pure Energy](https://www.readysetink.com/card/lena-sabrewing-pure-energy.html): Amethyst / Steel, cost 3, Character, Uncommon
+- [Lena Sabrewing - Rebellious Teenager](https://www.readysetink.com/card/lena-sabrewing-rebellious-teenager.html): Amethyst, cost 2, Character, Common
+- [Madam Mim - Bauble Chaser](https://www.readysetink.com/card/madam-mim-bauble-chaser.html): Amethyst, cost 1, Character, Common
+- [Madam Mim - Cheating Spellcaster](https://www.readysetink.com/card/madam-mim-cheating-spellcaster.html): Amethyst, cost 6, Character, Rare
+- [Madam Mim - Elephant](https://www.readysetink.com/card/madam-mim-elephant.html): Amethyst, cost 4, Character, Super Rare
+- [Madam Mim - Fox](https://www.readysetink.com/card/madam-mim-fox.html): Amethyst, cost 3, Character, Rare
+- [Madam Mim - Hummingbird](https://www.readysetink.com/card/madam-mim-hummingbird.html): Emerald, cost 2, Character, Uncommon
+- [Madam Mim - Nosy Neighbor](https://www.readysetink.com/card/madam-mim-nosy-neighbor.html): Sapphire, cost 5, Character, Common
+- [Madam Mim - Purple Dragon](https://www.readysetink.com/card/madam-mim-purple-dragon.html): Amethyst, cost 7, Character, Legendary
+- [Madam Mim - Resourceful Trickster](https://www.readysetink.com/card/madam-mim-resourceful-trickster.html): Amethyst, cost 8, Character, Legendary
+- [Madam Mim - Rhino](https://www.readysetink.com/card/madam-mim-rhino.html): Amethyst / Ruby, cost 6, Character, Uncommon
+- [Madam Mim - Rival of Merlin](https://www.readysetink.com/card/madam-mim-rival-of-merlin.html): Amethyst, cost 5, Character, Rare
+- [Madam Mim - Snake](https://www.readysetink.com/card/madam-mim-snake.html): Amethyst, cost 2, Character, Uncommon
+- [Madam Mim - Tiny Adversary](https://www.readysetink.com/card/madam-mim-tiny-adversary.html): Amethyst, cost 2, Character, Rare
+- [Madam Mim - Truly Marvelous](https://www.readysetink.com/card/madam-mim-truly-marvelous.html): Amethyst, cost 3, Character, Super Rare
+- [Madam Mim - Up to No Good](https://www.readysetink.com/card/madam-mim-up-to-no-good.html): Amethyst, cost 3, Character, Uncommon
+- [Magica De Spell - Ambitious Witch](https://www.readysetink.com/card/magica-de-spell-ambitious-witch.html): Amethyst, cost 2, Character, Common
+- [Magica De Spell - Conniving Sorceress](https://www.readysetink.com/card/magica-de-spell-conniving-sorceress.html): Amethyst, cost 7, Character, Super Rare
+- [Magica De Spell - Cruel Sorceress](https://www.readysetink.com/card/magica-de-spell-cruel-sorceress.html): Amethyst, cost 4, Character, Rare
+- [Magica De Spell - Shadow Form](https://www.readysetink.com/card/magica-de-spell-shadow-form.html): Amethyst / Emerald, cost 5, Character, Uncommon
+- [Magica De Spell - Shadowy Sorceress](https://www.readysetink.com/card/magica-de-spell-shadowy-sorceress.html): cost 3, Character, Special
+- [Magica De Spell - Shadowy and Sinister](https://www.readysetink.com/card/magica-de-spell-shadowy-and-sinister.html): Amethyst, cost 3, Character, Common
+- [Magica De Spell - Spiteful Sorceress](https://www.readysetink.com/card/magica-de-spell-spiteful-sorceress.html): Amethyst, cost 5, Character, Rare
+- [Magica De Spell - The Midas Touch](https://www.readysetink.com/card/magica-de-spell-the-midas-touch.html): Amethyst, cost 7, Character, Super Rare
+- [Magica De Spell - Thieving Sorceress](https://www.readysetink.com/card/magica-de-spell-thieving-sorceress.html): Amethyst, cost 4, Character, Uncommon
+- [Maleficent - Biding Her Time](https://www.readysetink.com/card/maleficent-biding-her-time.html): Amethyst, cost 1, Character, Rare
+- [Maleficent - Exultant Spellcaster](https://www.readysetink.com/card/maleficent-exultant-spellcaster.html): Amethyst, cost 1, Character, Common
+- [Maleficent - Formidable Queen](https://www.readysetink.com/card/maleficent-formidable-queen.html): Amethyst, cost 8, Character, Super Rare
+- [Maleficent - Imperious Traveler](https://www.readysetink.com/card/maleficent-imperious-traveler.html): Amethyst, cost 5, Character, Rare
+- [Maleficent - Mistress of All Evil](https://www.readysetink.com/card/maleficent-mistress-of-all-evil.html): Amethyst, cost 5, Character, Legendary
+- [Maleficent - Sinister Visitor](https://www.readysetink.com/card/maleficent-sinister-visitor.html): Sapphire, cost 4, Character, Common
+- [Maleficent - Sorceress](https://www.readysetink.com/card/maleficent-sorceress.html): Amethyst, cost 3, Character, Common
+- [Maleficent - Uninvited](https://www.readysetink.com/card/maleficent-uninvited.html): Sapphire, cost 5, Character, Rare
+- [Maleficent - Vengeful Sorceress](https://www.readysetink.com/card/maleficent-vengeful-sorceress.html): Amethyst, cost 2, Character, Common
+- [Maleficent - Vexed Partygoer](https://www.readysetink.com/card/maleficent-vexed-partygoer.html): Amethyst, cost 3, Character, Uncommon
+- [Maleficent & Diablo - Evil Incarnate](https://www.readysetink.com/card/maleficent-diablo-evil-incarnate.html): Amethyst / Steel, cost 7, Character, Rare
+- [Mama Odie - Solitary Sage](https://www.readysetink.com/card/mama-odie-solitary-sage.html): Amethyst, cost 5, Character, Rare
+- [Mama Odie - Voice of Wisdom](https://www.readysetink.com/card/mama-odie-voice-of-wisdom.html): Amethyst, cost 6, Character, Uncommon
+- [Merida - Wisp Conjurer](https://www.readysetink.com/card/merida-wisp-conjurer.html): Amethyst, cost 4, Character, Legendary
+- [Merlin - Back from Bermuda](https://www.readysetink.com/card/merlin-back-from-bermuda.html): Sapphire, cost 4, Character, Common
+- [Merlin - Bauble Expert](https://www.readysetink.com/card/merlin-bauble-expert.html): Amethyst, cost 3, Character, Common
+- [Merlin - Clever Clairvoyant](https://www.readysetink.com/card/merlin-clever-clairvoyant.html): Amethyst / Sapphire, cost 1, Character, Rare
+- [Merlin - Completing His Research](https://www.readysetink.com/card/merlin-completing-his-research.html): Amethyst, cost 2, Character, Uncommon
+- [Merlin - Crab](https://www.readysetink.com/card/merlin-crab.html): Amethyst, cost 3, Character, Common
+- [Merlin - Envisioning the Future](https://www.readysetink.com/card/merlin-envisioning-the-future.html): Sapphire, cost 4, Character, Rare
+- [Merlin - Goat](https://www.readysetink.com/card/merlin-goat.html): Amethyst, cost 4, Character, Uncommon
+- [Merlin - Ink Drop Tinkerer](https://www.readysetink.com/card/merlin-ink-drop-tinkerer.html): Amethyst, cost 7, Character, Rare
+- [Merlin - Intellectual Visionary](https://www.readysetink.com/card/merlin-intellectual-visionary.html): Sapphire, cost 6, Character, Legendary
+- [Merlin - Rabbit](https://www.readysetink.com/card/merlin-rabbit.html): Amethyst, cost 4, Character, Rare
+- [Merlin - Self-Appointed Mentor](https://www.readysetink.com/card/merlin-self-appointed-mentor.html): Sapphire, cost 4, Character, Common
+- [Merlin - Shapeshifter](https://www.readysetink.com/card/merlin-shapeshifter.html): Amethyst, cost 4, Character, Rare
+- [Merlin - Squirrel](https://www.readysetink.com/card/merlin-squirrel.html): Amethyst, cost 2, Character, Common
+- [Merlin - Turtle](https://www.readysetink.com/card/merlin-turtle.html): Amethyst, cost 4, Character, Common
+- [Mickey Mouse - Experienced Traveler](https://www.readysetink.com/card/mickey-mouse-experienced-traveler.html): Amethyst, cost 3, Character, Uncommon
+- [Mickey Mouse - Playful Sorcerer](https://www.readysetink.com/card/mickey-mouse-playful-sorcerer.html): Steel, cost 5, Character, Rare
+- [Mickey Mouse - Wayward Sorcerer](https://www.readysetink.com/card/mickey-mouse-wayward-sorcerer.html): Amethyst, cost 4, Character, Super Rare
+- [Morgana Macawber - Reformed Spellcaster](https://www.readysetink.com/card/morgana-macawber-reformed-spellcaster.html): Amethyst, cost 6, Character, Rare
+- [Morgana Macawber - Self-Centered Spellcaster](https://www.readysetink.com/card/morgana-macawber-self-centered-spellcaster.html): Amethyst, cost 3, Character, Common
+- [Mother Gothel - Knows What's Best](https://www.readysetink.com/card/mother-gothel-knows-whats-best.html): Amethyst / Ruby, cost 2, Character, Rare
+- [Mother Gothel - Underhanded Schemer](https://www.readysetink.com/card/mother-gothel-underhanded-schemer.html): Ruby, cost 1, Character, Common
+- [Mother Gothel - Vain Sorceress](https://www.readysetink.com/card/mother-gothel-vain-sorceress.html): Amethyst / Ruby, cost 3, Character, Uncommon
+- [Piglet - Hunny Mage Apprentice](https://www.readysetink.com/card/piglet-hunny-mage-apprentice.html): Sapphire, cost 1, Character, Common
+- [Poe De Spell - Magica's Brother](https://www.readysetink.com/card/poe-de-spell-magicas-brother.html): Amethyst, cost 3, Character, Common
+- [Rafiki - Ethereal Guide](https://www.readysetink.com/card/rafiki-ethereal-guide.html): Amethyst, cost 9, Character, Rare
+- [Rafiki - Mysterious Sage](https://www.readysetink.com/card/rafiki-mysterious-sage.html): Amethyst, cost 3, Character, Uncommon
+- [Rafiki - Mystical Fighter](https://www.readysetink.com/card/rafiki-mystical-fighter.html): Amethyst, cost 1, Character, Rare
+- [Rafiki - Shaman Duelist](https://www.readysetink.com/card/rafiki-shaman-duelist.html): Amethyst, cost 4, Character, Rare
+- [Rafiki - Shaman of the Savanna](https://www.readysetink.com/card/rafiki-shaman-of-the-savanna.html): Amethyst, cost 1, Character, Common
+- [Scar - Tempestuous Lion](https://www.readysetink.com/card/scar-tempestuous-lion.html): Amethyst, cost 6, Character, Uncommon
+- [The Horned King - Heartless Devil](https://www.readysetink.com/card/the-horned-king-heartless-devil.html): Amethyst, cost 1, Character, Common
+- [The Horned King - Merciless Master](https://www.readysetink.com/card/the-horned-king-merciless-master.html): Amber, cost 5, Character, Legendary
+- [The Horned King - Triumphant Ghoul](https://www.readysetink.com/card/the-horned-king-triumphant-ghoul.html): Amethyst, cost 2, Character, Rare
+- [The Horned King - Wicked Ruler](https://www.readysetink.com/card/the-horned-king-wicked-ruler.html): Amethyst, cost 4, Character, Super Rare
+- [The Queen - Conceited Ruler](https://www.readysetink.com/card/the-queen-conceited-ruler.html): Amber, cost 3, Character, Rare
+- [The Queen - Crown of the Council](https://www.readysetink.com/card/the-queen-crown-of-the-council.html): Sapphire, cost 4, Character, Rare
+- [The Queen - Cruelest of All](https://www.readysetink.com/card/the-queen-cruelest-of-all.html): Sapphire, cost 2, Character, Common
+- [The Queen - Devious Disguise](https://www.readysetink.com/card/the-queen-devious-disguise.html): Emerald, cost 4, Character, Legendary
+- [The Queen - Diviner](https://www.readysetink.com/card/the-queen-diviner.html): Sapphire, cost 3, Character, Legendary
+- [The Queen - Evil Ruler](https://www.readysetink.com/card/the-queen-evil-ruler.html): Emerald, cost 1, Character, Common
+- [The Queen - Fairest of All](https://www.readysetink.com/card/the-queen-fairest-of-all.html): Sapphire, cost 5, Character, Super Rare
+- [The Queen - Hateful Rival](https://www.readysetink.com/card/the-queen-hateful-rival.html): Amethyst, cost 3, Character, Common
+- [The Queen - Jealous Beauty](https://www.readysetink.com/card/the-queen-jealous-beauty.html): Amethyst, cost 4, Character, Legendary
+- [The Queen - Mirror Seeker](https://www.readysetink.com/card/the-queen-mirror-seeker.html): Sapphire, cost 4, Character, Uncommon
+- [The Witch - Wily Woodcarver](https://www.readysetink.com/card/the-witch-wily-woodcarver.html): Emerald, cost 5, Character, Common
+- [Ursula - Deal Maker](https://www.readysetink.com/card/ursula-deal-maker.html): Sapphire, cost 3, Character, Legendary
+- [Ursula - Deceiver](https://www.readysetink.com/card/ursula-deceiver.html): Emerald, cost 2, Character, Uncommon
+- [Ursula - Deceiver of All](https://www.readysetink.com/card/ursula-deceiver-of-all.html): Emerald, cost 3, Character, Legendary
+- [Ursula - Eric's Bride](https://www.readysetink.com/card/ursula-erics-bride.html): Amber, cost 4, Character, Rare
+- [Ursula - Mad Sea Witch](https://www.readysetink.com/card/ursula-mad-sea-witch.html): Amethyst, cost 2, Character, Uncommon
+- [Ursula - Power Hungry](https://www.readysetink.com/card/ursula-power-hungry.html): Amethyst, cost 7, Character, Legendary
+- [Ursula - Sea Witch](https://www.readysetink.com/card/ursula-sea-witch.html): Amethyst, cost 3, Character, Rare
+- [Ursula - Sea Witch Queen](https://www.readysetink.com/card/ursula-sea-witch-queen.html): Amethyst, cost 7, Character, Legendary
+- [Ursula - Vanessa](https://www.readysetink.com/card/ursula-vanessa.html): Amber, cost 2, Character, Common
+- [Ursula - Voice Stealer](https://www.readysetink.com/card/ursula-voice-stealer.html): Amethyst, cost 5, Character, Super Rare
+- [Ursula - Whisper of Vanessa](https://www.readysetink.com/card/ursula-whisper-of-vanessa.html): Amethyst, cost 5, Character, Rare
+- [Winnie the Pooh - Hunny Archmage](https://www.readysetink.com/card/winnie-the-pooh-hunny-archmage.html): Amethyst, cost 2, Character, Common
+- [Winnie the Pooh - Hunny Wizard](https://www.readysetink.com/card/winnie-the-pooh-hunny-wizard.html): Amethyst, cost 5, Character, Common
+- [Winnie the Pooh & Piglet - Hunny Mages](https://www.readysetink.com/card/winnie-the-pooh-piglet-hunny-mages.html): Amethyst / Sapphire, cost 5, Character, Super Rare
+- [Witches of Morva - Orddu, Orwen, and Orgoch](https://www.readysetink.com/card/witches-of-morva-orddu-orwen-and-orgoch.html): Amethyst, cost 5, Character, Rare
+- [Yen Sid - Powerful Sorcerer](https://www.readysetink.com/card/yen-sid-powerful-sorcerer.html): Amethyst, cost 2, Character, Legendary
+- [Yzma - Alchemist](https://www.readysetink.com/card/yzma-alchemist.html): Amethyst, cost 2, Character, Common
+- [Yzma - Choosy Customer](https://www.readysetink.com/card/yzma-choosy-customer.html): Ruby, cost 4, Character, Common
+- [Yzma - Conniving Chemist](https://www.readysetink.com/card/yzma-conniving-chemist.html): Amethyst, cost 4, Character, Legendary
+- [Yzma - Exasperated Schemer](https://www.readysetink.com/card/yzma-exasperated-schemer.html): Emerald, cost 2, Character, Common
+- [Yzma - On Edge](https://www.readysetink.com/card/yzma-on-edge.html): Amethyst / Emerald, cost 6, Character, Super Rare
+- [Yzma - Scary Beyond All Reason](https://www.readysetink.com/card/yzma-scary-beyond-all-reason.html): Amethyst, cost 6, Character, Super Rare
+- [Yzma - Transformed Kitten](https://www.readysetink.com/card/yzma-transformed-kitten.html): Amethyst, cost 2, Character, Common
+- [Yzma - Unjustly Treated](https://www.readysetink.com/card/yzma-unjustly-treated.html): Steel, cost 4, Character, Rare
+- [Yzma - Without Beauty Sleep](https://www.readysetink.com/card/yzma-without-beauty-sleep.html): Amethyst, cost 3, Character, Uncommon

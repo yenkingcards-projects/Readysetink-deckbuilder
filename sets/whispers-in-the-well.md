@@ -1,0 +1,208 @@
+# Whispers in the Well (Set 10): Disney Lorcana card list
+
+Source: https://www.readysetink.com/sets/whispers-in-the-well/
+
+Released november 14, 2025. 202 cards first printed in this set (reprints appear under their original set).
+
+- [Baloo - Friend and Guardian](https://www.readysetink.com/card/baloo-friend-and-guardian.html): Amber, cost 6, Character, Rare
+- [Gaston - Frightful Bully](https://www.readysetink.com/card/gaston-frightful-bully.html): Amber, cost 2, Character, Uncommon
+- [Rapunzel - Ready for Adventure](https://www.readysetink.com/card/rapunzel-ready-for-adventure.html): Amber, cost 2, Character, Legendary
+- [Headless Manhorse - Manny](https://www.readysetink.com/card/headless-manhorse-manny.html): Amber, cost 6, Character, Common
+- [Higgins - Undercover Officer](https://www.readysetink.com/card/higgins-undercover-officer.html): Amber, cost 1, Character, Common
+- [Rajah - Devoted Protector](https://www.readysetink.com/card/rajah-devoted-protector.html): Amber, cost 3, Character, Common
+- [Eilonwy - Princess of Llyr](https://www.readysetink.com/card/eilonwy-princess-of-llyr.html): Amber, cost 1, Character, Common
+- [Scrooge McDuck - On the Right Track](https://www.readysetink.com/card/scrooge-mcduck-on-the-right-track.html): Amber, cost 3, Character, Uncommon
+- [Webby Vanderquack - Knowledge Seeker](https://www.readysetink.com/card/webby-vanderquack-knowledge-seeker.html): Amber, cost 3, Character, Uncommon
+- [Gurgi - Apple Lover](https://www.readysetink.com/card/gurgi-apple-lover.html): Amber, cost 2, Character, Common
+- [Mrs. Beakley - Former S.H.U.S.H. Agent](https://www.readysetink.com/card/mrs-beakley-former-s-h-u-s-h-agent.html): Amber, cost 4, Character, Common
+- [Bagheera - Cautious Explorer](https://www.readysetink.com/card/bagheera-cautious-explorer.html): Amber, cost 3, Character, Uncommon
+- [Shanti - Village Girl](https://www.readysetink.com/card/shanti-village-girl.html): Amber, cost 3, Character, Common
+- [Flash - Records Specialist](https://www.readysetink.com/card/flash-records-specialist.html): Amber, cost 3, Character, Common
+- [Taran - Pig Keeper](https://www.readysetink.com/card/taran-pig-keeper.html): Amber, cost 5, Character, Uncommon
+- [Sebastian - Loyal Crab](https://www.readysetink.com/card/sebastian-loyal-crab.html): Amber, cost 2, Character, Rare
+- [Ariel - Ethereal Voice](https://www.readysetink.com/card/ariel-ethereal-voice.html): Amber, cost 4, Character, Rare
+- [Scrooge McDuck - Cavern Prospector](https://www.readysetink.com/card/scrooge-mcduck-cavern-prospector.html): Amber, cost 6, Character, Rare
+- [Mowgli - Man Cub](https://www.readysetink.com/card/mowgli-man-cub.html): Amber, cost 2, Character, Super Rare
+- [Simba - King in the Making](https://www.readysetink.com/card/simba-king-in-the-making.html): Amber, cost 7, Character, Super Rare
+- [Goofy - Ghost Hunter](https://www.readysetink.com/card/goofy-ghost-hunter.html): Amber, cost 4, Character, Common
+- [Della Duck - Returning Mother](https://www.readysetink.com/card/della-duck-returning-mother.html): Amber, cost 4, Character, Common
+- [Mickey Mouse - Amber Champion](https://www.readysetink.com/card/mickey-mouse-amber-champion.html): Amber, cost 4, Character, Rare
+- [Goofy - Galumphing Gumshoe](https://www.readysetink.com/card/goofy-galumphing-gumshoe.html): Amber, cost 8, Character, Super Rare
+- [Gazelle - Ballad Singer](https://www.readysetink.com/card/gazelle-ballad-singer.html): Amber, cost 5, Character, Rare
+- [Search for Clues](https://www.readysetink.com/card/search-for-clues.html): Amber, cost 4, Action, Uncommon
+- [Or Rewrite History!](https://www.readysetink.com/card/or-rewrite-history.html): Amber, cost 3, Action, Uncommon
+- [Della's Moon Lullaby](https://www.readysetink.com/card/dellas-moon-lullaby.html): Amber, cost 2, Action, Common
+- [The Horseman Strikes!](https://www.readysetink.com/card/the-horseman-strikes.html): Amber, cost 3, Action, Rare
+- [Recovered Page](https://www.readysetink.com/card/recovered-page.html): Amber, cost 2, Item, Uncommon
+- [Webby's Diary](https://www.readysetink.com/card/webbys-diary.html): Amber, cost 3, Item, Uncommon
+- [The Black Cauldron](https://www.readysetink.com/card/the-black-cauldron.html): Amber, cost 3, Item, Legendary
+- [Munchings and Crunchings](https://www.readysetink.com/card/munchings-and-crunchings.html): Amber, cost 2, Item, Common
+- [Duckburg - Funso's Funzone](https://www.readysetink.com/card/duckburg-funsos-funzone.html): Amber, cost 2, Location, Rare
+- [Minnie Mouse - Amethyst Champion](https://www.readysetink.com/card/minnie-mouse-amethyst-champion.html): Amethyst, cost 4, Character, Rare
+- [The Horned King - Wicked Ruler](https://www.readysetink.com/card/the-horned-king-wicked-ruler.html): Amethyst, cost 4, Character, Super Rare
+- [Gwythaint - Savage Hunter](https://www.readysetink.com/card/gwythaint-savage-hunter.html): Amethyst, cost 5, Character, Uncommon
+- [The Horned King - Heartless Devil](https://www.readysetink.com/card/the-horned-king-heartless-devil.html): Amethyst, cost 1, Character, Common
+- [Cauldron Born - Mindless Horde](https://www.readysetink.com/card/cauldron-born-mindless-horde.html): Amethyst, cost 5, Character, Common
+- [Demona - Betrayer of the Clan](https://www.readysetink.com/card/demona-betrayer-of-the-clan.html): Amethyst, cost 4, Character, Common
+- [Magica De Spell - Shadowy and Sinister](https://www.readysetink.com/card/magica-de-spell-shadowy-and-sinister.html): Amethyst, cost 3, Character, Common
+- [Lena Sabrewing - Mysterious Duck](https://www.readysetink.com/card/lena-sabrewing-mysterious-duck.html): Amethyst, cost 4, Character, Common
+- [Iago - Stompin' Mad](https://www.readysetink.com/card/iago-stompin-mad.html): Amethyst, cost 2, Character, Uncommon
+- [Violet Sabrewing - Senior Junior Woodchuck](https://www.readysetink.com/card/violet-sabrewing-senior-junior-woodchuck.html): Amethyst, cost 2, Character, Common
+- [Elsa - Exploring the Unknown](https://www.readysetink.com/card/elsa-exploring-the-unknown.html): Amethyst, cost 3, Character, Common
+- [Mushu - Braggin' Dragon](https://www.readysetink.com/card/mushu-braggin-dragon.html): Amethyst, cost 4, Character, Common
+- [Duckworth - Ghost Butler](https://www.readysetink.com/card/duckworth-ghost-butler.html): Amethyst, cost 3, Character, Uncommon
+- [Nibs - Lost Boy](https://www.readysetink.com/card/nibs-lost-boy.html): Amethyst, cost 4, Character, Uncommon
+- [The Horned King - Triumphant Ghoul](https://www.readysetink.com/card/the-horned-king-triumphant-ghoul.html): Amethyst, cost 2, Character, Rare
+- [Creeper - Loyal Lackey](https://www.readysetink.com/card/creeper-loyal-lackey.html): Amethyst, cost 6, Character, Rare
+- [Coldstone - Reincarnated Cyborg](https://www.readysetink.com/card/coldstone-reincarnated-cyborg.html): Amethyst, cost 5, Character, Rare
+- [Magica De Spell - Spiteful Sorceress](https://www.readysetink.com/card/magica-de-spell-spiteful-sorceress.html): Amethyst, cost 5, Character, Rare
+- [Nana - Canine Caregiver](https://www.readysetink.com/card/nana-canine-caregiver.html): Amethyst, cost 3, Character, Uncommon
+- [Magica De Spell - Conniving Sorceress](https://www.readysetink.com/card/magica-de-spell-conniving-sorceress.html): Amethyst, cost 7, Character, Super Rare
+- [Demona - Scourge of the Wyvern Clan](https://www.readysetink.com/card/demona-scourge-of-the-wyvern-clan.html): Amethyst, cost 6, Character, Legendary
+- [Hades - Looking for a Deal](https://www.readysetink.com/card/hades-looking-for-a-deal.html): Amethyst, cost 5, Character, Legendary
+- [Olaf - Helping Hand](https://www.readysetink.com/card/olaf-helping-hand.html): Amethyst, cost 1, Character, Uncommon
+- [Merlin - Completing His Research](https://www.readysetink.com/card/merlin-completing-his-research.html): Amethyst, cost 2, Character, Uncommon
+- [Ursula - Whisper of Vanessa](https://www.readysetink.com/card/ursula-whisper-of-vanessa.html): Amethyst, cost 5, Character, Rare
+- [Cheshire Cat - Inexplicable](https://www.readysetink.com/card/cheshire-cat-inexplicable.html): Amethyst, cost 3, Character, Super Rare
+- [Begone!](https://www.readysetink.com/card/begone.html): Amethyst, cost 3, Action, Common
+- [Can't Hold It Back Anymore](https://www.readysetink.com/card/cant-hold-it-back-anymore.html): Amethyst, cost 4, Action, Rare
+- [Swooping Strike](https://www.readysetink.com/card/swooping-strike.html): Amethyst, cost 1, Action, Common
+- [Performance Review](https://www.readysetink.com/card/performance-review.html): Amethyst, cost 2, Action, Uncommon
+- [Fragile as a Flower](https://www.readysetink.com/card/fragile-as-a-flower.html): Amethyst, cost 3, Action, Common
+- [Junior Woodchuck Guidebook](https://www.readysetink.com/card/junior-woodchuck-guidebook.html): Amethyst, cost 2, Item, Common
+- [Grimorum Arcanorum](https://www.readysetink.com/card/grimorum-arcanorum.html): Amethyst, cost 3, Item, Rare
+- [The Great Illuminary - Abandoned Laboratory](https://www.readysetink.com/card/the-great-illuminary-abandoned-laboratory.html): Amethyst, cost 2, Location, Uncommon
+- [Baloo - Laid-Back Bear](https://www.readysetink.com/card/baloo-laid-back-bear.html): Emerald, cost 2, Character, Common
+- [Big Nose - Lovesick Poet](https://www.readysetink.com/card/big-nose-lovesick-poet.html): Emerald, cost 1, Character, Common
+- [Flotsam - Slippery as an Eel](https://www.readysetink.com/card/flotsam-slippery-as-an-eel.html): Emerald, cost 3, Character, Common
+- [Kaa - Suspicious Serpent](https://www.readysetink.com/card/kaa-suspicious-serpent.html): Emerald, cost 3, Character, Common
+- [Webby Vanderquack - Mystery Enthusiast](https://www.readysetink.com/card/webby-vanderquack-mystery-enthusiast.html): Emerald, cost 1, Character, Common
+- [Finnick - Tiny Terror](https://www.readysetink.com/card/finnick-tiny-terror.html): Emerald, cost 1, Character, Common
+- [Vladimir - Ceramic Unicorn Fan](https://www.readysetink.com/card/vladimir-ceramic-unicorn-fan.html): Emerald, cost 6, Character, Common
+- [Flintheart Glomgold - Scheming Billionaire](https://www.readysetink.com/card/flintheart-glomgold-scheming-billionaire.html): Emerald, cost 4, Character, Uncommon
+- [Jetsam - Opportunistic Eel](https://www.readysetink.com/card/jetsam-opportunistic-eel.html): Emerald, cost 7, Character, Common
+- [Hook Hand - Unexpectedly Friendly](https://www.readysetink.com/card/hook-hand-unexpectedly-friendly.html): Emerald, cost 5, Character, Uncommon
+- [Kaa - Secretive Snake](https://www.readysetink.com/card/kaa-secretive-snake.html): Emerald, cost 7, Character, Uncommon
+- [Emily Quackfaster - Level-Headed Librarian](https://www.readysetink.com/card/emily-quackfaster-level-headed-librarian.html): Emerald, cost 2, Character, Uncommon
+- [Flynn Rider - Spectral Scoundrel](https://www.readysetink.com/card/flynn-rider-spectral-scoundrel.html): Emerald, cost 1, Character, Uncommon
+- [Bellwether - Master Manipulator](https://www.readysetink.com/card/bellwether-master-manipulator.html): Emerald, cost 4, Character, Uncommon
+- [Launchpad - Exceptional Pilot](https://www.readysetink.com/card/launchpad-exceptional-pilot.html): Emerald, cost 4, Character, Common
+- [Penumbra - Moon Alien](https://www.readysetink.com/card/penumbra-moon-alien.html): Emerald, cost 5, Character, Rare
+- [Baloo - Carefree Bear](https://www.readysetink.com/card/baloo-carefree-bear.html): Emerald, cost 5, Character, Rare
+- [Megara - Secret Keeper](https://www.readysetink.com/card/megara-secret-keeper.html): Emerald, cost 3, Character, Rare
+- [Goldie O'Gilt - Cunning Prospector](https://www.readysetink.com/card/goldie-ogilt-cunning-prospector.html): Emerald, cost 3, Character, Rare
+- [Shere Khan - Fearsome Tiger](https://www.readysetink.com/card/shere-khan-fearsome-tiger.html): Emerald, cost 6, Character, Legendary
+- [Scrooge McDuck - S.H.U.S.H. Agent](https://www.readysetink.com/card/scrooge-mcduck-s-h-u-s-h-agent.html): Emerald, cost 2, Character, Super Rare
+- [Akela - Forest Runner](https://www.readysetink.com/card/akela-forest-runner.html): Emerald, cost 3, Character, Common
+- [Goofy - Emerald Champion](https://www.readysetink.com/card/goofy-emerald-champion.html): Emerald, cost 5, Character, Rare
+- [Little John - Impermanent Outlaw](https://www.readysetink.com/card/little-john-impermanent-outlaw.html): Emerald, cost 6, Character, Super Rare
+- [Webby Vanderquack - Junior Prospector](https://www.readysetink.com/card/webby-vanderquack-junior-prospector.html): Emerald, cost 4, Character, Legendary
+- [So Be It!](https://www.readysetink.com/card/so-be-it.html): Emerald, cost 2, Action, Common
+- [Trust In Me](https://www.readysetink.com/card/trust-in-me.html): Emerald, cost 6, Action, Rare
+- [Chomp!](https://www.readysetink.com/card/chomp.html): Emerald, cost 1, Action, Common
+- [Malicious, Mean, and Scary](https://www.readysetink.com/card/malicious-mean-and-scary.html): Emerald, cost 3, Action, Uncommon
+- [Potion of Malice](https://www.readysetink.com/card/potion-of-malice.html): Emerald, cost 3, Item, Super Rare
+- [Inscrutable Map](https://www.readysetink.com/card/inscrutable-map.html): Emerald, cost 3, Item, Uncommon
+- [Enigmatic Inkcaster](https://www.readysetink.com/card/enigmatic-inkcaster.html): Emerald, cost 2, Item, Rare
+- [Blessed Bagpipes](https://www.readysetink.com/card/blessed-bagpipes.html): Emerald, cost 2, Item, Uncommon
+- [White Agony Plains - Golden Lagoon](https://www.readysetink.com/card/white-agony-plains-golden-lagoon.html): Emerald, cost 2, Location, Rare
+- [Diablo - Watchful Raven](https://www.readysetink.com/card/diablo-watchful-raven.html): Ruby, cost 2, Character, Rare
+- [Ares - God of War](https://www.readysetink.com/card/ares-god-of-war.html): Ruby, cost 2, Character, Uncommon
+- [Peter Pan - High Flyer](https://www.readysetink.com/card/peter-pan-high-flyer.html): Ruby, cost 3, Character, Common
+- [Tinker Bell - Fancy Footwork](https://www.readysetink.com/card/tinker-bell-fancy-footwork.html): Ruby, cost 1, Character, Common
+- [Raksha - Fearless Mother](https://www.readysetink.com/card/raksha-fearless-mother.html): Ruby, cost 3, Character, Common
+- [Shere Khan - Keen-Eyed Hunter](https://www.readysetink.com/card/shere-khan-keen-eyed-hunter.html): Ruby, cost 2, Character, Common
+- [Rama - Vigilant Father](https://www.readysetink.com/card/rama-vigilant-father.html): Ruby, cost 6, Character, Common
+- [Mother Gothel - Underhanded Schemer](https://www.readysetink.com/card/mother-gothel-underhanded-schemer.html): Ruby, cost 1, Character, Common
+- [Katrina Van Tassel - Rosy-Cheeked Lass](https://www.readysetink.com/card/katrina-van-tassel-rosy-cheeked-lass.html): Ruby, cost 4, Character, Uncommon
+- [Hermes - Harried Messenger](https://www.readysetink.com/card/hermes-harried-messenger.html): Ruby, cost 3, Character, Common
+- [Beast - Aggressive Lord](https://www.readysetink.com/card/beast-aggressive-lord.html): Ruby, cost 2, Character, Uncommon
+- [Bronx - Ferocious Beast](https://www.readysetink.com/card/bronx-ferocious-beast.html): Ruby, cost 3, Character, Common
+- [Tinker Bell - Temperamental Fairy](https://www.readysetink.com/card/tinker-bell-temperamental-fairy.html): Ruby, cost 5, Character, Uncommon
+- [David Xanatos - Charismatic Leader](https://www.readysetink.com/card/david-xanatos-charismatic-leader.html): Ruby, cost 6, Character, Super Rare
+- [Hans - Brazen Manipulator](https://www.readysetink.com/card/hans-brazen-manipulator.html): Ruby, cost 6, Character, Super Rare
+- [Hercules - Mighty Leader](https://www.readysetink.com/card/hercules-mighty-leader.html): Ruby, cost 4, Character, Legendary
+- [Goliath - Guardian of Castle Wyvern](https://www.readysetink.com/card/goliath-guardian-of-castle-wyvern.html): Ruby, cost 4, Character, Uncommon
+- [Brooklyn - Second in Command](https://www.readysetink.com/card/brooklyn-second-in-command.html): Ruby, cost 2, Character, Common
+- [Donald Duck - Ruby Champion](https://www.readysetink.com/card/donald-duck-ruby-champion.html): Ruby, cost 4, Character, Rare
+- [Elisa Maza - Intrepid Investigator](https://www.readysetink.com/card/elisa-maza-intrepid-investigator.html): Ruby, cost 3, Character, Rare
+- [Aladdin - Barreling Through](https://www.readysetink.com/card/aladdin-barreling-through.html): Ruby, cost 3, Character, Rare
+- [Lady Tremaine - Sinister Socialite](https://www.readysetink.com/card/lady-tremaine-sinister-socialite.html): Ruby, cost 5, Character, Super Rare
+- [The Headless Horseman - Terror of Sleepy Hollow](https://www.readysetink.com/card/the-headless-horseman-terror-of-sleepy-hollow.html): Ruby, cost 5, Character, Legendary
+- [Mulan - Standing Her Ground](https://www.readysetink.com/card/mulan-standing-her-ground.html): Ruby, cost 3, Character, Uncommon
+- [Brom Bones - Burly Bully](https://www.readysetink.com/card/brom-bones-burly-bully.html): Ruby, cost 4, Character, Common
+- [Shere Khan - Fierce and Furious](https://www.readysetink.com/card/shere-khan-fierce-and-furious.html): Ruby, cost 8, Character, Rare
+- [Next Stop, Olympus](https://www.readysetink.com/card/next-stop-olympus.html): Ruby, cost 2, Action, Rare
+- [Get to Safety!](https://www.readysetink.com/card/get-to-safety.html): Ruby, cost 1, Action, Rare
+- [Time to Go!](https://www.readysetink.com/card/time-to-go.html): Ruby, cost 3, Action, Uncommon
+- [Ghostly Tale](https://www.readysetink.com/card/ghostly-tale.html): Ruby, cost 4, Action, Common
+- [Mushu's Rocket](https://www.readysetink.com/card/mushus-rocket.html): Ruby, cost 1, Item, Uncommon
+- [The Bitterwood - Underground Forest](https://www.readysetink.com/card/the-bitterwood-underground-forest.html): Ruby, cost 4, Location, Rare
+- [Sleepy Hollow - The Bridge](https://www.readysetink.com/card/sleepy-hollow-the-bridge.html): Ruby, cost 3, Location, Uncommon
+- [Judy Hopps - On the Case](https://www.readysetink.com/card/judy-hopps-on-the-case.html): Sapphire, cost 3, Character, Uncommon
+- [Hen Wen - Prophetic Pig](https://www.readysetink.com/card/hen-wen-prophetic-pig.html): Sapphire, cost 2, Character, Common
+- [Anna - Making Snow Plans](https://www.readysetink.com/card/anna-making-snow-plans.html): Sapphire, cost 4, Character, Common
+- [Chef Louis - In Over His Head](https://www.readysetink.com/card/chef-louis-in-over-his-head.html): Sapphire, cost 7, Character, Uncommon
+- [Daisy Duck - Ghost Finder](https://www.readysetink.com/card/daisy-duck-ghost-finder.html): Sapphire, cost 2, Character, Common
+- [Cri-Kee - Good Luck Charm](https://www.readysetink.com/card/cri-kee-good-luck-charm.html): Sapphire, cost 2, Character, Common
+- [Rapunzel - Creative Captor](https://www.readysetink.com/card/rapunzel-creative-captor.html): Sapphire, cost 5, Character, Common
+- [Fergus McDuck - Scrooge's Father](https://www.readysetink.com/card/fergus-mcduck-scrooges-father.html): Sapphire, cost 3, Character, Common
+- [Li Shang - Seasoned Strategist](https://www.readysetink.com/card/li-shang-seasoned-strategist.html): Sapphire, cost 3, Character, Common
+- [Genie - Investigative Mind](https://www.readysetink.com/card/genie-investigative-mind.html): Sapphire, cost 5, Character, Common
+- [Scuttle - Birdbrained](https://www.readysetink.com/card/scuttle-birdbrained.html): Sapphire, cost 5, Character, Uncommon
+- [Ichabod Crane - Bookish Schoolmaster](https://www.readysetink.com/card/ichabod-crane-bookish-schoolmaster.html): Sapphire, cost 4, Character, Rare
+- [Jasmine - Soothing Princess](https://www.readysetink.com/card/jasmine-soothing-princess.html): Sapphire, cost 4, Character, Uncommon
+- [Judy Hopps - Lead Detective](https://www.readysetink.com/card/judy-hopps-lead-detective.html): Sapphire, cost 6, Character, Rare
+- [The Sultan - Playful Monarch](https://www.readysetink.com/card/the-sultan-playful-monarch.html): Sapphire, cost 1, Character, Rare
+- [Ichabod Crane - Scared Out of His Mind](https://www.readysetink.com/card/ichabod-crane-scared-out-of-his-mind.html): Sapphire, cost 2, Character, Uncommon
+- [Scar - Eerily Prepared](https://www.readysetink.com/card/scar-eerily-prepared.html): Sapphire, cost 5, Character, Super Rare
+- [Daisy Duck - Paranormal Investigator](https://www.readysetink.com/card/daisy-duck-paranormal-investigator.html): Sapphire, cost 6, Character, Legendary
+- [Cinderella - Dream Come True](https://www.readysetink.com/card/cinderella-dream-come-true.html): Sapphire, cost 4, Character, Legendary
+- [Judy Hopps - Uncovering Clues](https://www.readysetink.com/card/judy-hopps-uncovering-clues.html): Sapphire, cost 4, Character, Super Rare
+- [Pluto - Clever Cluefinder](https://www.readysetink.com/card/pluto-clever-cluefinder.html): Sapphire, cost 2, Character, Uncommon
+- [Daisy Duck - Sapphire Champion](https://www.readysetink.com/card/daisy-duck-sapphire-champion.html): Sapphire, cost 5, Character, Rare
+- [Kristoff - Mining the Ruins](https://www.readysetink.com/card/kristoff-mining-the-ruins.html): Sapphire, cost 3, Character, Rare
+- [Hen Wen's Visions](https://www.readysetink.com/card/hen-wens-visions.html): Sapphire, cost 1, Action, Common
+- [Promising Lead](https://www.readysetink.com/card/promising-lead.html): Sapphire, cost 2, Action, Common
+- [Might Solve a Mystery](https://www.readysetink.com/card/might-solve-a-mystery.html): Sapphire, cost 4, Action, Uncommon
+- [Sudden Scare](https://www.readysetink.com/card/sudden-scare.html): Sapphire, cost 4, Action, Uncommon
+- [Spooky Sight](https://www.readysetink.com/card/spooky-sight.html): Sapphire, cost 6, Action, Rare
+- [Detective's Badge](https://www.readysetink.com/card/detectives-badge.html): Sapphire, cost 1, Item, Common
+- [Ink Amplifier](https://www.readysetink.com/card/ink-amplifier.html): Sapphire, cost 3, Item, Rare
+- [Fairy Godmother's Wand](https://www.readysetink.com/card/fairy-godmothers-wand.html): Sapphire, cost 2, Item, Super Rare
+- [Inkrunner](https://www.readysetink.com/card/inkrunner.html): Sapphire, cost 2, Item, Uncommon
+- [Castle of the Horned King - Bastion of Evil](https://www.readysetink.com/card/castle-of-the-horned-king-bastion-of-evil.html): Sapphire, cost 1, Location, Rare
+- [Robin Hood - Ephemeral Archer](https://www.readysetink.com/card/robin-hood-ephemeral-archer.html): Steel, cost 4, Character, Rare
+- [Donald Duck - Ghost Hunter](https://www.readysetink.com/card/donald-duck-ghost-hunter.html): Steel, cost 4, Character, Common
+- [Goliath - Clan Leader](https://www.readysetink.com/card/goliath-clan-leader.html): Steel, cost 6, Character, Legendary
+- [The Headless Horseman - Cursed Rider](https://www.readysetink.com/card/the-headless-horseman-cursed-rider.html): Steel, cost 8, Character, Super Rare
+- [Clawhauser - Donut Detective](https://www.readysetink.com/card/clawhauser-donut-detective.html): Steel, cost 6, Character, Common
+- [Francine - Eyeing the Evidence](https://www.readysetink.com/card/francine-eyeing-the-evidence.html): Steel, cost 3, Character, Common
+- [Inspector Tezuka - Resolute Officer](https://www.readysetink.com/card/inspector-tezuka-resolute-officer.html): Steel, cost 2, Character, Common
+- [Nick Wilde - Sly Fox Sleuth](https://www.readysetink.com/card/nick-wilde-sly-fox-sleuth.html): Steel, cost 1, Character, Common
+- [Basil - Tenacious Mouse](https://www.readysetink.com/card/basil-tenacious-mouse.html): Steel, cost 3, Character, Common
+- [Hudson - Determined Reader](https://www.readysetink.com/card/hudson-determined-reader.html): Steel, cost 2, Character, Common
+- [Minnie Mouse - Ghost Hunter](https://www.readysetink.com/card/minnie-mouse-ghost-hunter.html): Steel, cost 2, Character, Common
+- [Black Heron - Real Bad Egg](https://www.readysetink.com/card/black-heron-real-bad-egg.html): Steel, cost 2, Character, Uncommon
+- [Lexington - Small in Stature](https://www.readysetink.com/card/lexington-small-in-stature.html): Steel, cost 3, Character, Uncommon
+- [David Xanatos - Steel Clan Leader](https://www.readysetink.com/card/david-xanatos-steel-clan-leader.html): Steel, cost 3, Character, Uncommon
+- [Chief Bogo - Calling the Shots](https://www.readysetink.com/card/chief-bogo-calling-the-shots.html): Steel, cost 4, Character, Rare
+- [The Twins - Lost Boys](https://www.readysetink.com/card/the-twins-lost-boys.html): Steel, cost 6, Character, Common
+- [Nick Wilde - Persistent Investigator](https://www.readysetink.com/card/nick-wilde-persistent-investigator.html): Steel, cost 5, Character, Rare
+- [Mayor Winddancer - Actor-Turned-Politician](https://www.readysetink.com/card/mayor-winddancer-actor-turned-politician.html): Steel, cost 4, Character, Rare
+- [Prince Charming - Protector of the Realm](https://www.readysetink.com/card/prince-charming-protector-of-the-realm.html): Steel, cost 7, Character, Legendary
+- [Broadway - Sturdy and Strong](https://www.readysetink.com/card/broadway-sturdy-and-strong.html): Steel, cost 5, Character, Uncommon
+- [Pluto - Steel Champion](https://www.readysetink.com/card/pluto-steel-champion.html): Steel, cost 5, Character, Rare
+- [Fairy Godmother - Magical Benefactor](https://www.readysetink.com/card/fairy-godmother-magical-benefactor.html): Steel, cost 4, Character, Super Rare
+- [Zeus - Missing His Spark](https://www.readysetink.com/card/zeus-missing-his-spark.html): Steel, cost 3, Character, Uncommon
+- [The Headless Horseman - Relentless Spirit](https://www.readysetink.com/card/the-headless-horseman-relentless-spirit.html): Steel, cost 4, Character, Common
+- [But I'm Much Faster](https://www.readysetink.com/card/but-im-much-faster.html): Steel, cost 1, Action, Common
+- [Putting It All Together](https://www.readysetink.com/card/putting-it-all-together.html): Steel, cost 2, Action, Common
+- [He Hurled His Thunderbolt](https://www.readysetink.com/card/he-hurled-his-thunderbolt.html): Steel, cost 4, Action, Uncommon
+- [The Game's Afoot!](https://www.readysetink.com/card/the-games-afoot.html): Steel, cost 2, Action, Uncommon
+- [The Robot Queen](https://www.readysetink.com/card/the-robot-queen.html): Steel, cost 1, Item, Uncommon
+- [The Sword of Hercules](https://www.readysetink.com/card/the-sword-of-hercules.html): Steel, cost 2, Item, Rare
+- [Ingenious Device](https://www.readysetink.com/card/ingenious-device.html): Steel, cost 3, Item, Rare
+- [Illuminary Tunnels - Linked Caverns](https://www.readysetink.com/card/illuminary-tunnels-linked-caverns.html): Steel, cost 3, Location, Super Rare
+- [Zootopia - Police Headquarters](https://www.readysetink.com/card/zootopia-police-headquarters.html): Steel, cost 1, Location, Uncommon
+- [Castle Wyvern - Above the Clouds](https://www.readysetink.com/card/castle-wyvern-above-the-clouds.html): Steel, cost 2, Location, Rare

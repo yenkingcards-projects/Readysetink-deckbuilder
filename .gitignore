@@ -51,3 +51,7 @@ art-tools/set-outputs/
 art-tools/overnight-run.log
 .vercel
 .env*
+
+# Per-developer notes, never committed
+CLAUDE.local.md
+**/CLAUDE.local.md

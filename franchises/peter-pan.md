@@ -1,0 +1,88 @@
+# Peter Pan: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/peter-pan/
+
+82 cards.
+
+- [A Pirate's Life](https://www.readysetink.com/card/a-pirates-life.html): Ruby, cost 6, Action, Uncommon
+- [Ambush!](https://www.readysetink.com/card/ambush.html): Steel, cost 3, Action, Rare
+- [Break Free](https://www.readysetink.com/card/break-free.html): Ruby, cost 1, Action, Common
+- [Captain Hook - Captain of the Jolly Roger](https://www.readysetink.com/card/captain-hook-captain-of-the-jolly-roger.html): Steel, cost 4, Character, Rare
+- [Captain Hook - Conniving Pirate](https://www.readysetink.com/card/captain-hook-conniving-pirate.html): Ruby, cost 2, Character, Uncommon
+- [Captain Hook - Devious Duelist](https://www.readysetink.com/card/captain-hook-devious-duelist.html): cost 5, Character, Special
+- [Captain Hook - Forceful Duelist](https://www.readysetink.com/card/captain-hook-forceful-duelist.html): Steel, cost 1, Character, Common
+- [Captain Hook - Master Swordsman](https://www.readysetink.com/card/captain-hook-master-swordsman.html): Ruby, cost 5, Character, Rare
+- [Captain Hook - Ruthless Pirate](https://www.readysetink.com/card/captain-hook-ruthless-pirate.html): Ruby, cost 7, Character, Rare
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Captain Hook - Thinking a Happy Thought](https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.html): Steel, cost 5, Character, Rare
+- [Captain Hook - Underhanded](https://www.readysetink.com/card/captain-hook-underhanded.html): Emerald, cost 3, Character, Rare
+- [Captain Hook's Rapier](https://www.readysetink.com/card/captain-hooks-rapier.html): Steel, cost 3, Item, Uncommon
+- [Cubby - Mighty Lost Boy](https://www.readysetink.com/card/cubby-mighty-lost-boy.html): Emerald, cost 4, Character, Common
+- [Fire the Cannons!](https://www.readysetink.com/card/fire-the-cannons.html): Steel, cost 1, Action, Common
+- [Ingenious Device](https://www.readysetink.com/card/ingenious-device.html): Steel, cost 3, Item, Rare
+- [John Darling - Sophisticated Swordsman](https://www.readysetink.com/card/john-darling-sophisticated-swordsman.html): Ruby, cost 2, Character, Uncommon
+- [Jolly Roger - Hook's Ship](https://www.readysetink.com/card/jolly-roger-hooks-ship.html): Ruby, cost 1, Location, Uncommon
+- [Michael Darling - Playful Swordsman](https://www.readysetink.com/card/michael-darling-playful-swordsman.html): Ruby, cost 1, Character, Common
+- [Mr. Smee - Bumbling Mate](https://www.readysetink.com/card/mr-smee-bumbling-mate.html): Steel, cost 2, Character, Uncommon
+- [Mr. Smee - Captain of the Jolly Roger](https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html): Steel, cost 6, Character, Super Rare
+- [Mr. Smee - Efficient Captain](https://www.readysetink.com/card/mr-smee-efficient-captain.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Mr. Smee - Loyal First Mate](https://www.readysetink.com/card/mr-smee-loyal-first-mate.html): Amber, cost 3, Character, Common
+- [Mr. Smee - Steadfast Mate](https://www.readysetink.com/card/mr-smee-steadfast-mate.html): Steel, cost 2, Character, Uncommon
+- [Mullins - Seasoned Shipmate](https://www.readysetink.com/card/mullins-seasoned-shipmate.html): Steel, cost 5, Character, Common
+- [Nana - Canine Caregiver](https://www.readysetink.com/card/nana-canine-caregiver.html): Amethyst, cost 3, Character, Uncommon
+- [Nana - Darling Family Pet](https://www.readysetink.com/card/nana-darling-family-pet.html): Amber, cost 2, Character, Uncommon
+- [Narrow Escape](https://www.readysetink.com/card/narrow-escape.html): Amethyst, cost 4, Action, Common
+- [Never Land - Mermaid Lagoon](https://www.readysetink.com/card/never-land-mermaid-lagoon.html): Amber, cost 1, Location, Common
+- [Nibs - Lost Boy](https://www.readysetink.com/card/nibs-lost-boy.html): Amethyst, cost 4, Character, Uncommon
+- [On Your Feet! Now!](https://www.readysetink.com/card/on-your-feet-now.html): Ruby, cost 4, Action, Rare
+- [Peter Pan - Created by the Vine](https://www.readysetink.com/card/peter-pan-created-by-the-vine.html): Emerald, cost 3, Character, Rare
+- [Peter Pan - Fearless Fighter](https://www.readysetink.com/card/peter-pan-fearless-fighter.html): Ruby, cost 3, Character, Common
+- [Peter Pan - High Flyer](https://www.readysetink.com/card/peter-pan-high-flyer.html): Ruby, cost 3, Character, Common
+- [Peter Pan - Lost Boy Leader](https://www.readysetink.com/card/peter-pan-lost-boy-leader.html): Emerald, cost 4, Character, Rare
+- [Peter Pan - Never Land Hero](https://www.readysetink.com/card/peter-pan-never-land-hero.html): Ruby, cost 3, Character, Common
+- [Peter Pan - Never Land Prankster](https://www.readysetink.com/card/peter-pan-never-land-prankster.html): Emerald, cost 7, Character, Super Rare
+- [Peter Pan - Never Landing](https://www.readysetink.com/card/peter-pan-never-landing.html): Emerald, cost 3, Character, Common
+- [Peter Pan - Pirate's Bane](https://www.readysetink.com/card/peter-pan-pirates-bane.html): Ruby, cost 6, Character, Rare
+- [Peter Pan - Playful Prankster](https://www.readysetink.com/card/peter-pan-playful-prankster.html): Amethyst, cost 2, Character, Common
+- [Peter Pan - Searching Far and Wide](https://www.readysetink.com/card/peter-pan-searching-far-and-wide.html): Emerald, cost 3, Character, Uncommon
+- [Peter Pan - Shadow Catcher](https://www.readysetink.com/card/peter-pan-shadow-catcher.html): Amethyst, cost 4, Character, Uncommon
+- [Peter Pan - Shadow Finder](https://www.readysetink.com/card/peter-pan-shadow-finder.html): Amethyst, cost 3, Character, Super Rare
+- [Peter Pan - Vine Duelist](https://www.readysetink.com/card/peter-pan-vine-duelist.html): Ruby, cost 1, Character, Common
+- [Peter Pan & Tinker Bell - Fast Friends](https://www.readysetink.com/card/peter-pan-tinker-bell-fast-friends.html): Amethyst / Ruby, cost 6, Character, Super Rare
+- [Peter Pan's Dagger](https://www.readysetink.com/card/peter-pans-dagger.html): Ruby, cost 2, Item, Common
+- [Peter Pan's Shadow - Not Sewn On](https://www.readysetink.com/card/peter-pans-shadow-not-sewn-on.html): Amethyst, cost 4, Character, Super Rare
+- [Pixie Dust](https://www.readysetink.com/card/pixie-dust.html): Amethyst, cost 4, Item, Uncommon
+- [Prepare to Board!](https://www.readysetink.com/card/prepare-to-board.html): Emerald, cost 1, Action, Common
+- [Second Star to the Right](https://www.readysetink.com/card/second-star-to-the-right.html): Amethyst, cost 10, Action, Rare
+- [Skull Rock - Isolated Fortress](https://www.readysetink.com/card/skull-rock-isolated-fortress.html): Ruby, cost 2, Location, Common
+- [Slightly - Lost Boy](https://www.readysetink.com/card/slightly-lost-boy.html): Ruby, cost 4, Character, Uncommon
+- [Starkey - Devious Pirate](https://www.readysetink.com/card/starkey-devious-pirate.html): Emerald, cost 7, Character, Uncommon
+- [Starkey - Hook's Henchman](https://www.readysetink.com/card/starkey-hooks-henchman.html): Steel, cost 5, Character, Uncommon
+- [The Plank](https://www.readysetink.com/card/the-plank.html): Ruby, cost 3, Item, Common
+- [The Twins - Lost Boys](https://www.readysetink.com/card/the-twins-lost-boys.html): Steel, cost 6, Character, Common
+- [Tick-Tock - Canal Croc](https://www.readysetink.com/card/tick-tock-canal-croc.html): Steel, cost 8, Character, Uncommon
+- [Tick-Tock - Ever-Present Pursuer](https://www.readysetink.com/card/tick-tock-ever-present-pursuer.html): Amethyst, cost 6, Character, Common
+- [Tick-Tock - Relentless Crocodile](https://www.readysetink.com/card/tick-tock-relentless-crocodile.html): Steel, cost 5, Character, Common
+- [Tinker Bell - Curious Fairy](https://www.readysetink.com/card/tinker-bell-curious-fairy.html): Amethyst, cost 1, Character, Common
+- [Tinker Bell - Fancy Footwork](https://www.readysetink.com/card/tinker-bell-fancy-footwork.html): Ruby, cost 1, Character, Common
+- [Tinker Bell - Fast Flier](https://www.readysetink.com/card/tinker-bell-fast-flier.html): Amethyst, cost 3, Character, Common
+- [Tinker Bell - Finding a Way](https://www.readysetink.com/card/tinker-bell-finding-a-way.html): Amethyst, cost 2, Character, Uncommon
+- [Tinker Bell - Generous Fairy](https://www.readysetink.com/card/tinker-bell-generous-fairy.html): Amber, cost 4, Character, Uncommon
+- [Tinker Bell - Giant Fairy](https://www.readysetink.com/card/tinker-bell-giant-fairy.html): Steel, cost 6, Character, Super Rare
+- [Tinker Bell - Insistent Fairy](https://www.readysetink.com/card/tinker-bell-insistent-fairy.html): Ruby, cost 2, Character, Legendary
+- [Tinker Bell - Most Helpful](https://www.readysetink.com/card/tinker-bell-most-helpful.html): Emerald, cost 4, Character, Common
+- [Tinker Bell - Peter Pan's Ally](https://www.readysetink.com/card/tinker-bell-peter-pans-ally.html): Amethyst, cost 5, Character, Common
+- [Tinker Bell - Queen of the Azurite Fairies](https://www.readysetink.com/card/tinker-bell-queen-of-the-azurite-fairies.html): Amethyst, cost 7, Character, Uncommon
+- [Tinker Bell - Snowflake Collector](https://www.readysetink.com/card/tinker-bell-snowflake-collector.html): Amethyst, cost 3, Character, Legendary
+- [Tinker Bell - Temperamental Fairy](https://www.readysetink.com/card/tinker-bell-temperamental-fairy.html): Ruby, cost 5, Character, Uncommon
+- [Tinker Bell - Tiny Tactician](https://www.readysetink.com/card/tinker-bell-tiny-tactician.html): Steel, cost 3, Character, Common
+- [Tinker Bell - Very Clever Fairy](https://www.readysetink.com/card/tinker-bell-very-clever-fairy.html): Sapphire, cost 5, Character, Super Rare
+- [Tootles - Lost Boy](https://www.readysetink.com/card/tootles-lost-boy.html): Emerald, cost 1, Character, Common
+- [Tug-of-War](https://www.readysetink.com/card/tug-of-war.html): Steel, cost 5, Action, Rare
+- [Twin Fire](https://www.readysetink.com/card/twin-fire.html): Steel, cost 2, Action, Common
+- [Walk the Plank!](https://www.readysetink.com/card/walk-the-plank.html): Emerald / Steel, cost 3, Action, Uncommon
+- [Wendy Darling - Authority on Peter Pan](https://www.readysetink.com/card/wendy-darling-authority-on-peter-pan.html): Sapphire, cost 3, Character, Super Rare
+- [Wendy Darling - Courageous Captain](https://www.readysetink.com/card/wendy-darling-courageous-captain.html): Ruby, cost 2, Character, Rare
+- [Wendy Darling - Pirate Queen](https://www.readysetink.com/card/wendy-darling-pirate-queen.html): Amber / Ruby, cost 7, Character, Uncommon
+- [Wendy Darling - Talented Sailor](https://www.readysetink.com/card/wendy-darling-talented-sailor.html): Amber, cost 2, Character, Uncommon
+- [You Can Fly!](https://www.readysetink.com/card/you-can-fly.html): Ruby, cost 2, Action, Uncommon

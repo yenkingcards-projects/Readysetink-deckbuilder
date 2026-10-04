@@ -1,0 +1,62 @@
+# Snow White and the Seven Dwarfs: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/snow-white-and-the-seven-dwarfs/
+
+56 cards.
+
+- [Bashful - Adoring Knight](https://www.readysetink.com/card/bashful-adoring-knight.html): Steel, cost 4, Character, Uncommon
+- [Bashful - Hopeless Romantic](https://www.readysetink.com/card/bashful-hopeless-romantic.html): Amber, cost 4, Character, Uncommon
+- [Bashful - Riding the Rails](https://www.readysetink.com/card/bashful-riding-the-rails.html): Amethyst, cost 5, Character, Common
+- [Doc - Bold Knight](https://www.readysetink.com/card/doc-bold-knight.html): Steel, cost 2, Character, Rare
+- [Doc - Leader of the Seven Dwarfs](https://www.readysetink.com/card/doc-leader-of-the-seven-dwarfs.html): Amber, cost 3, Character, Uncommon
+- [Doc - Taking Notes](https://www.readysetink.com/card/doc-taking-notes.html): Amethyst, cost 4, Character, Uncommon
+- [Don't Be Nervous](https://www.readysetink.com/card/dont-be-nervous.html): Amethyst, cost 5, Action, Rare
+- [Dopey - Always Playful](https://www.readysetink.com/card/dopey-always-playful.html): Amber, cost 3, Character, Uncommon
+- [Dopey - Drawn to Music](https://www.readysetink.com/card/dopey-drawn-to-music.html): Amethyst, cost 6, Character, Uncommon
+- [Dopey - Knight Apprentice](https://www.readysetink.com/card/dopey-knight-apprentice.html): Steel, cost 3, Character, Common
+- [Grumpy - Bad-Tempered](https://www.readysetink.com/card/grumpy-bad-tempered.html): Amber, cost 4, Character, Common
+- [Grumpy - Skeptical Knight](https://www.readysetink.com/card/grumpy-skeptical-knight.html): Steel, cost 3, Character, Super Rare
+- [Grumpy - Soreheaded Miner](https://www.readysetink.com/card/grumpy-soreheaded-miner.html): Amethyst, cost 7, Character, Common
+- [Happy - Good-Natured](https://www.readysetink.com/card/happy-good-natured.html): Amber, cost 5, Character, Common
+- [Happy - Joyful Adventurer](https://www.readysetink.com/card/happy-joyful-adventurer.html): Amethyst, cost 2, Character, Common
+- [Happy - Lively Knight](https://www.readysetink.com/card/happy-lively-knight.html): Steel, cost 1, Character, Common
+- [Magic Mirror](https://www.readysetink.com/card/magic-mirror.html): Amethyst, cost 2, Item, Rare
+- [Make the Potion](https://www.readysetink.com/card/make-the-potion.html): Emerald, cost 2, Action, Common
+- [Poisoned Apple](https://www.readysetink.com/card/poisoned-apple.html): Ruby, cost 3, Item, Rare
+- [Potion of Might](https://www.readysetink.com/card/potion-of-might.html): Ruby, cost 1, Item, Common
+- [Right Behind You](https://www.readysetink.com/card/right-behind-you.html): Amethyst, cost 3, Action, Uncommon
+- [Seven Dwarfs' Mine - Secure Fortress](https://www.readysetink.com/card/seven-dwarfs-mine-secure-fortress.html): Steel, cost 2, Location, Uncommon
+- [Show Me More!](https://www.readysetink.com/card/show-me-more.html): Amethyst, cost 2, Action, Super Rare
+- [Sleepy - Deep Sleeper](https://www.readysetink.com/card/sleepy-deep-sleeper.html): Amethyst, cost 1, Character, Common
+- [Sleepy - Nodding Off](https://www.readysetink.com/card/sleepy-nodding-off.html): Amber, cost 2, Character, Common
+- [Sleepy - Sluggish Knight](https://www.readysetink.com/card/sleepy-sluggish-knight.html): Steel, cost 2, Character, Uncommon
+- [Sleepy's Flute](https://www.readysetink.com/card/sleepys-flute.html): Amber, cost 2, Item, Rare
+- [Sneezy - Noisy Knight](https://www.readysetink.com/card/sneezy-noisy-knight.html): Steel, cost 4, Character, Common
+- [Sneezy - Startlingly Loud](https://www.readysetink.com/card/sneezy-startlingly-loud.html): Amethyst, cost 3, Character, Common
+- [Sneezy - Very Allergic](https://www.readysetink.com/card/sneezy-very-allergic.html): Amber, cost 2, Character, Common
+- [Snow White - Fair-Hearted](https://www.readysetink.com/card/snow-white-fair-hearted.html): Steel, cost 5, Character, Super Rare
+- [Snow White - Fairest in the Land](https://www.readysetink.com/card/snow-white-fairest-in-the-land.html): Amber, cost 4, Character, Uncommon
+- [Snow White - Lost in the Forest](https://www.readysetink.com/card/snow-white-lost-in-the-forest.html): Amber, cost 2, Character, Common
+- [Snow White - Merry as the Morning](https://www.readysetink.com/card/snow-white-merry-as-the-morning.html): Amethyst, cost 3, Character, Legendary
+- [Snow White - Unexpected Houseguest](https://www.readysetink.com/card/snow-white-unexpected-houseguest.html): Amber, cost 2, Character, Uncommon
+- [Snow White - Well Wisher](https://www.readysetink.com/card/snow-white-well-wisher.html): Amber, cost 6, Character, Legendary
+- [The Huntsman - On the Queen's Orders](https://www.readysetink.com/card/the-huntsman-on-the-queens-orders.html): Emerald, cost 3, Character, Uncommon
+- [The Huntsman - Reluctant Enforcer](https://www.readysetink.com/card/the-huntsman-reluctant-enforcer.html): Steel, cost 2, Character, Rare
+- [The Prince - Never Gives Up](https://www.readysetink.com/card/the-prince-never-gives-up.html): Steel, cost 3, Character, Uncommon
+- [The Prince - Searching for His Love](https://www.readysetink.com/card/the-prince-searching-for-his-love.html): Amber, cost 1, Character, Rare
+- [The Prince - Vigilant Suitor](https://www.readysetink.com/card/the-prince-vigilant-suitor.html): Amber, cost 2, Character, Uncommon
+- [The Queen - Commanding Presence](https://www.readysetink.com/card/the-queen-commanding-presence.html): Amber, cost 5, Character, Super Rare
+- [The Queen - Conceited Ruler](https://www.readysetink.com/card/the-queen-conceited-ruler.html): Amber, cost 3, Character, Rare
+- [The Queen - Crown of the Council](https://www.readysetink.com/card/the-queen-crown-of-the-council.html): Sapphire, cost 4, Character, Rare
+- [The Queen - Cruelest of All](https://www.readysetink.com/card/the-queen-cruelest-of-all.html): Sapphire, cost 2, Character, Common
+- [The Queen - Devious Disguise](https://www.readysetink.com/card/the-queen-devious-disguise.html): Emerald, cost 4, Character, Legendary
+- [The Queen - Disguised Peddler](https://www.readysetink.com/card/the-queen-disguised-peddler.html): Emerald, cost 3, Character, Super Rare
+- [The Queen - Diviner](https://www.readysetink.com/card/the-queen-diviner.html): Sapphire, cost 3, Character, Legendary
+- [The Queen - Evil Ruler](https://www.readysetink.com/card/the-queen-evil-ruler.html): Emerald, cost 1, Character, Common
+- [The Queen - Fairest of All](https://www.readysetink.com/card/the-queen-fairest-of-all.html): Sapphire, cost 5, Character, Super Rare
+- [The Queen - Hateful Rival](https://www.readysetink.com/card/the-queen-hateful-rival.html): Amethyst, cost 3, Character, Common
+- [The Queen - Jealous Beauty](https://www.readysetink.com/card/the-queen-jealous-beauty.html): Amethyst, cost 4, Character, Legendary
+- [The Queen - Mirror Seeker](https://www.readysetink.com/card/the-queen-mirror-seeker.html): Sapphire, cost 4, Character, Uncommon
+- [The Queen - Regal Monarch](https://www.readysetink.com/card/the-queen-regal-monarch.html): Amber, cost 1, Character, Common
+- [The Queen - Wicked and Vain](https://www.readysetink.com/card/the-queen-wicked-and-vain.html): Amethyst, cost 5, Character, Super Rare
+- [The Queen's Castle - Mirror Chamber](https://www.readysetink.com/card/the-queens-castle-mirror-chamber.html): Amethyst, cost 4, Location, Rare

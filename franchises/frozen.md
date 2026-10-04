@@ -1,0 +1,88 @@
+# Frozen: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/frozen/
+
+82 cards.
+
+- [Agnarr - King of Arendelle](https://www.readysetink.com/card/agnarr-king-of-arendelle.html): Ruby, cost 3, Character, Common
+- [All Is Found](https://www.readysetink.com/card/all-is-found.html): Sapphire, cost 5, Action, Rare
+- [Anna - Braving the Storm](https://www.readysetink.com/card/anna-braving-the-storm.html): Sapphire, cost 2, Character, Common
+- [Anna - Diplomatic Queen](https://www.readysetink.com/card/anna-diplomatic-queen.html): Emerald, cost 3, Character, Legendary
+- [Anna - Eager Acolyte](https://www.readysetink.com/card/anna-eager-acolyte.html): Amethyst, cost 3, Character, Common
+- [Anna - Ensnared Sister](https://www.readysetink.com/card/anna-ensnared-sister.html): cost 6, Character, Special
+- [Anna - Heir to Arendelle](https://www.readysetink.com/card/anna-heir-to-arendelle.html): Amethyst, cost 4, Character, Uncommon
+- [Anna - Ice Breaker](https://www.readysetink.com/card/anna-ice-breaker.html): Amethyst / Sapphire, cost 4, Character, Uncommon
+- [Anna - Little Sister](https://www.readysetink.com/card/anna-little-sister.html): Amethyst, cost 2, Character, Uncommon
+- [Anna - Magical Mission](https://www.readysetink.com/card/anna-magical-mission.html): Amethyst / Sapphire, cost 6, Character, Rare
+- [Anna - Making Snow Plans](https://www.readysetink.com/card/anna-making-snow-plans.html): Sapphire, cost 4, Character, Common
+- [Anna - Mystical Majesty](https://www.readysetink.com/card/anna-mystical-majesty.html): Amethyst, cost 7, Character, Rare
+- [Anna - Soothing Sister](https://www.readysetink.com/card/anna-soothing-sister.html): Amethyst, cost 5, Character, Legendary
+- [Anna - True-Hearted](https://www.readysetink.com/card/anna-true-hearted.html): Sapphire, cost 4, Character, Super Rare
+- [Anna - Trusting Sister](https://www.readysetink.com/card/anna-trusting-sister.html): Sapphire, cost 3, Character, Common
+- [Bruni - Fire Salamander](https://www.readysetink.com/card/bruni-fire-salamander.html): Amethyst, cost 4, Character, Uncommon
+- [Can't Hold It Back Anymore](https://www.readysetink.com/card/cant-hold-it-back-anymore.html): Amethyst, cost 4, Action, Rare
+- [Do You Want to Build A Snowman?](https://www.readysetink.com/card/do-you-want-to-build-a-snowman.html): Amethyst, cost 3, Action, Rare
+- [Don't Let the Frostbite Bite](https://www.readysetink.com/card/dont-let-the-frostbite-bite.html): Ruby, cost 7, Action, Rare
+- [Duke of Weselton - Opportunistic Official](https://www.readysetink.com/card/duke-of-weselton-opportunistic-official.html): Emerald, cost 1, Character, Common
+- [Earth Giant - Living Mountain](https://www.readysetink.com/card/earth-giant-living-mountain.html): Amethyst, cost 4, Character, Common
+- [Elsa - Concerned Sister](https://www.readysetink.com/card/elsa-concerned-sister.html): Ruby, cost 3, Character, Uncommon
+- [Elsa - Exploring the Unknown](https://www.readysetink.com/card/elsa-exploring-the-unknown.html): Amethyst, cost 3, Character, Common
+- [Elsa - Fierce Protector](https://www.readysetink.com/card/elsa-fierce-protector.html): Amethyst, cost 4, Character, Rare
+- [Elsa - Gloves Off](https://www.readysetink.com/card/elsa-gloves-off.html): Amethyst, cost 4, Character, Common
+- [Elsa - Ice Artisan](https://www.readysetink.com/card/elsa-ice-artisan.html): Ruby, cost 6, Character, Legendary
+- [Elsa - Ice Maker](https://www.readysetink.com/card/elsa-ice-maker.html): Amethyst / Sapphire, cost 7, Character, Super Rare
+- [Elsa - Ice Surfer](https://www.readysetink.com/card/elsa-ice-surfer.html): Ruby, cost 4, Character, Common
+- [Elsa - Queen Regent](https://www.readysetink.com/card/elsa-queen-regent.html): Amethyst, cost 4, Character, Common
+- [Elsa - Snow Queen](https://www.readysetink.com/card/elsa-snow-queen.html): Amethyst, cost 3, Character, Uncommon
+- [Elsa - Spirit of Winter](https://www.readysetink.com/card/elsa-spirit-of-winter.html): Amethyst, cost 8, Character, Legendary
+- [Elsa - Storm Chaser](https://www.readysetink.com/card/elsa-storm-chaser.html): Amethyst, cost 3, Character, Rare
+- [Elsa - The Fifth Spirit](https://www.readysetink.com/card/elsa-the-fifth-spirit.html): Amethyst, cost 5, Character, Super Rare
+- [Elsa - Trusted Sister](https://www.readysetink.com/card/elsa-trusted-sister.html): Amethyst, cost 2, Character, Common
+- [Elsa's Ice Palace - Place of Solitude](https://www.readysetink.com/card/elsas-ice-palace-place-of-solitude.html): Amethyst, cost 3, Location, Rare
+- [Field of Ice](https://www.readysetink.com/card/field-of-ice.html): Sapphire, cost 3, Item, Rare
+- [Freeze](https://www.readysetink.com/card/freeze.html): Amethyst, cost 2, Action, Common
+- [Freeze the Vine](https://www.readysetink.com/card/freeze-the-vine.html): Emerald, cost 4, Action, Rare
+- [Gale - Wind Spirit](https://www.readysetink.com/card/gale-wind-spirit.html): Amethyst, cost 3, Character, Common
+- [Grand Pabbie - Oldest and Wisest](https://www.readysetink.com/card/grand-pabbie-oldest-and-wisest.html): Sapphire, cost 7, Character, Super Rare
+- [Hans - Brazen Manipulator](https://www.readysetink.com/card/hans-brazen-manipulator.html): Ruby, cost 6, Character, Super Rare
+- [Hans - Noble Scoundrel](https://www.readysetink.com/card/hans-noble-scoundrel.html): Sapphire, cost 3, Character, Common
+- [Hans - Scheming Prince](https://www.readysetink.com/card/hans-scheming-prince.html): Emerald, cost 4, Character, Rare
+- [Hans - Thirteenth in Line](https://www.readysetink.com/card/hans-thirteenth-in-line.html): Steel, cost 4, Character, Super Rare
+- [Healing Touch](https://www.readysetink.com/card/healing-touch.html): Amber, cost 3, Action, Common
+- [Honeymaren - Northuldra Guide](https://www.readysetink.com/card/honeymaren-northuldra-guide.html): Amethyst, cost 2, Character, Common
+- [Ice Spikes](https://www.readysetink.com/card/ice-spikes.html): Amethyst / Sapphire, cost 2, Item, Uncommon
+- [Iduna - Alarmed Queen](https://www.readysetink.com/card/iduna-alarmed-queen.html): Ruby, cost 2, Character, Common
+- [Iduna - Caring Mother](https://www.readysetink.com/card/iduna-caring-mother.html): Sapphire, cost 4, Character, Uncommon
+- [Into the Unknown](https://www.readysetink.com/card/into-the-unknown.html): Amethyst / Sapphire, cost 3, Action, Super Rare
+- [Kristoff - Icy Explorer](https://www.readysetink.com/card/kristoff-icy-explorer.html): Amethyst, cost 4, Character, Rare
+- [Kristoff - Mining the Ruins](https://www.readysetink.com/card/kristoff-mining-the-ruins.html): Sapphire, cost 3, Character, Rare
+- [Kristoff - Official Ice Master](https://www.readysetink.com/card/kristoff-official-ice-master.html): Steel, cost 3, Character, Common
+- [Kristoff - Reindeer Keeper](https://www.readysetink.com/card/kristoff-reindeer-keeper.html): Amber, cost 9, Character, Rare
+- [Kristoff's Lute](https://www.readysetink.com/card/kristoffs-lute.html): Ruby, cost 3, Item, Rare
+- [Let It Go](https://www.readysetink.com/card/let-it-go.html): Sapphire, cost 5, Action, Rare
+- [Let the Storm Rage On](https://www.readysetink.com/card/let-the-storm-rage-on.html): Steel, cost 3, Action, Common
+- [Lost in the Woods](https://www.readysetink.com/card/lost-in-the-woods.html): Amber, cost 4, Action, Uncommon
+- [Marshmallow - Cranky Climber](https://www.readysetink.com/card/marshmallow-cranky-climber.html): Amethyst, cost 5, Character, Rare
+- [Marshmallow - Persistent Guardian](https://www.readysetink.com/card/marshmallow-persistent-guardian.html): Amethyst, cost 6, Character, Super Rare
+- [Marshmallow - Terrifying Snowman](https://www.readysetink.com/card/marshmallow-terrifying-snowman.html): Amethyst, cost 3, Character, Uncommon
+- [Mattias - Arendelle General](https://www.readysetink.com/card/mattias-arendelle-general.html): Sapphire, cost 2, Character, Common
+- [Olaf - Carrot Enthusiast](https://www.readysetink.com/card/olaf-carrot-enthusiast.html): Sapphire, cost 3, Character, Uncommon
+- [Olaf - Friendly Snowman](https://www.readysetink.com/card/olaf-friendly-snowman.html): Amethyst, cost 1, Character, Uncommon
+- [Olaf - Happy Passenger](https://www.readysetink.com/card/olaf-happy-passenger.html): Amethyst, cost 9, Character, Rare
+- [Olaf - Helping Hand](https://www.readysetink.com/card/olaf-helping-hand.html): Amethyst, cost 1, Character, Uncommon
+- [Olaf - Recapping the Story](https://www.readysetink.com/card/olaf-recapping-the-story.html): Sapphire, cost 1, Character, Common
+- [Olaf - Snowman of Action](https://www.readysetink.com/card/olaf-snowman-of-action.html): Ruby, cost 9, Character, Rare
+- [Olaf - Trusting Companion](https://www.readysetink.com/card/olaf-trusting-companion.html): Sapphire, cost 1, Character, Common
+- [Ryder - Fleet-Footed Infiltrator](https://www.readysetink.com/card/ryder-fleet-footed-infiltrator.html): Amethyst, cost 4, Character, Common
+- [Scepter of Arendelle](https://www.readysetink.com/card/scepter-of-arendelle.html): Sapphire, cost 1, Item, Uncommon
+- [Shield of Arendelle](https://www.readysetink.com/card/shield-of-arendelle.html): Steel, cost 1, Item, Common
+- [Smash](https://www.readysetink.com/card/smash.html): Steel, cost 3, Action, Uncommon
+- [Sven - Keen-Eyed Reindeer](https://www.readysetink.com/card/sven-keen-eyed-reindeer.html): Amethyst / Sapphire, cost 5, Character, Uncommon
+- [Sven - Leaping Reindeer](https://www.readysetink.com/card/sven-leaping-reindeer.html): Amethyst, cost 4, Character, Super Rare
+- [Sven - Official Ice Deliverer](https://www.readysetink.com/card/sven-official-ice-deliverer.html): Amethyst, cost 6, Character, Uncommon
+- [Sven - Reindeer Steed](https://www.readysetink.com/card/sven-reindeer-steed.html): Amber, cost 4, Character, Uncommon
+- [The Cold Never Bothered Me](https://www.readysetink.com/card/the-cold-never-bothered-me.html): Ruby, cost 3, Action, Rare
+- [The Nokk - Mythical Spirit](https://www.readysetink.com/card/the-nokk-mythical-spirit.html): Amethyst, cost 6, Character, Common
+- [The Nokk - Water Spirit](https://www.readysetink.com/card/the-nokk-water-spirit.html): Sapphire, cost 4, Character, Common
+- [Water Has Memory](https://www.readysetink.com/card/water-has-memory.html): Sapphire, cost 1, Action, Common
+- [Yelana - Northuldra Leader](https://www.readysetink.com/card/yelana-northuldra-leader.html): Amethyst, cost 3, Character, Common

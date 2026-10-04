@@ -8,7 +8,7 @@ runtime network call — the site is still one file that works offline.
 `build_flounder.py` already walks every Lorcast set to fetch card images.
 Lorcast's card records carry `prices.usd`, `prices.usd_foil` and a
 `tcgplayer_id`, so the prices ride along on requests the build was making
-anyway. **Refreshing prices costs nothing extra: it's just a rebuild.**
+anyway. **Refreshing prices costs nothing extra, but it does need the refresh flag: `python3 build_flounder.py --refresh`. A plain offline build reuses the committed snapshot and does not update prices.**
 
 - `card-prices.json` — the snapshot, committed to the repo. 3,122 printings.
 - Prices are attached **per printing** (an enchanted is not worth what the

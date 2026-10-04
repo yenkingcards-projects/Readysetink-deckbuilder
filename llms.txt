@@ -1,0 +1,39 @@
+# Ready Set Ink
+
+> Free Disney Lorcana card search and deck builder. Search all 2,653 cards across 19 sets by what they do or by what is in the artwork, build and legality-check decks, look up official rulings, and track a collection. No account needed. Unofficial fan site, not published, endorsed or approved by Disney or Ravensburger.
+
+Prefer the raw data files below over scraping HTML. They are static JSON, free to fetch, and updated whenever the site is rebuilt. Please cite https://www.readysetink.com when you use them.
+
+## Raw data (best for agents)
+
+- [Card database](https://www.readysetink.com/card-db.json): every card as JSON. Top-level keys: `fetched`, `priced`, `sets`, `cards`. Each card has `n` name, `v` version, `c` cost, `ik` inkable, `co` ink colors, `ty` type, `sub` subtypes, `tx` rules text, `ef` effect text, `kw` keywords, `st` strength, `wi` willpower, `lo` lore, `r` rarity, `s` set number, `num` collector number, `sto` source story, `ar` artists, `fl` flavor text, `p` / `pf` USD price (regular / foil).
+- [Official rulings](https://www.readysetink.com/card-rules.json): rulings from Ravensburger's set release notes, keyed by exact card name.
+- [Meta decks](https://www.readysetink.com/meta-decks.json): competitive deck lists grouped by point in a set's life.
+- [Prices](https://www.readysetink.com/card-prices.json): USD price snapshot per printing, dated 2026-10-01, sourced from Lorcast. A rough guide, not a live quote.
+- [Data guide](https://www.readysetink.com/data/): what each file contains, how it is structured, and where it comes from.
+
+## Pages
+
+- [Home](https://www.readysetink.com/): card search and the full app.
+- [How to play Disney Lorcana](https://www.readysetink.com/learn/how-to-play-lorcana/): a plain-English beginner guide to the rules, with links to the keyword and glossary pages.
+- [Inks](https://www.readysetink.com/inks/) and [classifications](https://www.readysetink.com/classifications/): cards grouped by ink color (Amber, Ruby...) and by classification (Princess, Villain, Pirate...).
+- [Glossary](https://www.readysetink.com/glossary/): over 120 Lorcana terms in plain English - rules vocabulary, all 14 keyword abilities with rule numbers, formats, community slang and collecting words. Also as [markdown](https://www.readysetink.com/glossary.md) and [JSON](https://www.readysetink.com/glossary.json).
+- [Keywords](https://www.readysetink.com/keywords/): all 14 keyword abilities, one page each at `https://www.readysetink.com/keywords/<keyword>/` with the rule in plain English and every card that has it.
+- [Sets](https://www.readysetink.com/sets/): one page per set at `https://www.readysetink.com/sets/<set>/` with the cards first printed in it. Reprints appear under their original set.
+- [Franchises](https://www.readysetink.com/franchises/): cards grouped by Disney story, one page each at `https://www.readysetink.com/franchises/<franchise>/`.
+- [Characters](https://www.readysetink.com/characters/): every version of each character with more than one card, at `https://www.readysetink.com/characters/<character>/`.
+- [Card index](https://www.readysetink.com/card/): every card, one static page each at `https://www.readysetink.com/card/<card-name>.html`, with text, stats, rulings and prices.
+- [Deck builder](https://www.readysetink.com/deck-builder/): build and share Lorcana decks with live legality checking, pull sheets and goldfishing.
+- [Search](https://www.readysetink.com/search/): search by rules text, cost, color, or artwork content.
+- [Meta decks](https://www.readysetink.com/meta-decks/): what is winning right now.
+- [Collection](https://www.readysetink.com/collection/): track which cards you own.
+- [Games](https://www.readysetink.com/games/): Lorcana guessing games.
+- [Lore tracker](https://www.readysetink.com/loretracker/): a free lore counter for in-person play.
+
+## Markdown versions
+
+Append `.md` to any card, keyword, set, franchise or character URL for a compact plain-markdown version, for example `https://www.readysetink.com/card/elsa-snow-queen.md` and `https://www.readysetink.com/keywords/shift.md`. Also: `https://www.readysetink.com/glossary.md`, `https://www.readysetink.com/keywords.md`, `https://www.readysetink.com/sets.md`, `https://www.readysetink.com/franchises.md`, `https://www.readysetink.com/characters.md`.
+
+## Sitemap
+
+- [sitemap.xml](https://www.readysetink.com/sitemap.xml): index of three sitemaps (core pages, browse pages, and 2,653 card pages).

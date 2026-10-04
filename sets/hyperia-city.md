@@ -1,0 +1,116 @@
+# Hyperia City (Set 14): Disney Lorcana card list
+
+Source: https://www.readysetink.com/sets/hyperia-city/
+
+Releases october 23, 2026. 110 cards listed so far.
+
+- [Fru Fru - VIP Guest](https://www.readysetink.com/card/fru-fru-vip-guest.html): Amber, cost 1, Character, Common
+- [Pete - Suave Showoff](https://www.readysetink.com/card/pete-suave-showoff.html): Amber, cost 4, Character, Common
+- [Miriam Mendelsohn - Front-Row Fan](https://www.readysetink.com/card/miriam-mendelsohn-front-row-fan.html): Amber, cost 1, Character, Uncommon
+- [Priya Mangal - Immovable Fan](https://www.readysetink.com/card/priya-mangal-immovable-fan.html): Amber, cost 2, Character, Common
+- [Yax - Concert Goer](https://www.readysetink.com/card/yax-concert-goer.html): Amber, cost 7, Character, Uncommon
+- [Judy Hopps - Helpful Officer](https://www.readysetink.com/card/judy-hopps-helpful-officer.html): Amber, cost 1, Character, Common
+- [Nick Wilde - Inquisitive Harbormaster](https://www.readysetink.com/card/nick-wilde-inquisitive-harbormaster.html): Amber, cost 6, Character, Rare
+- [Héctor Rivera - Gone to Pieces](https://www.readysetink.com/card/h-ctor-rivera-gone-to-pieces.html): Ruby, cost 4, Character, Special
+- [Elisa Maza - Hardworking Detective](https://www.readysetink.com/card/elisa-maza-hardworking-detective.html): Amber, cost 4, Character, Uncommon
+- [Powerline - Megastar](https://www.readysetink.com/card/powerline-megastar.html): Amber, cost 6, Character, Legendary
+- [Lionheart - Incumbent Mayor](https://www.readysetink.com/card/lionheart-incumbent-mayor.html): Amber, cost 6, Character, Rare
+- [Aurora - Delightful Musician](https://www.readysetink.com/card/aurora-delightful-musician.html): Amber, cost 3, Character, Legendary
+- [Mickey Mouse - Best in Town](https://www.readysetink.com/card/mickey-mouse-best-in-town.html): Amber, cost 1, Character, Super Rare
+- [Judy Hopps - Always Vigilant](https://www.readysetink.com/card/judy-hopps-always-vigilant.html): Amber, cost 4, Character, Rare
+- [Nick Wilde - Providing Backup](https://www.readysetink.com/card/nick-wilde-providing-backup.html): Amber, cost 2, Character, Uncommon
+- [Remember Me](https://www.readysetink.com/card/remember-me.html): Amber, cost 6, Action, Super Rare
+- [Never Gonna Let You Cry](https://www.readysetink.com/card/never-gonna-let-you-cry.html): Amber, cost 5, Action, Uncommon
+- [Speaker Stack](https://www.readysetink.com/card/speaker-stack.html): Amber, cost 2, Item, Common
+- [Mamá Imelda's Blessing](https://www.readysetink.com/card/mam-imeldas-blessing.html): Amber, cost 1, Item, Common
+- [Port Authority - Center Hub](https://www.readysetink.com/card/port-authority-center-hub.html): Amber, cost 4, Location, Uncommon
+- [Owen Burnett - Xanatos's Assistant](https://www.readysetink.com/card/owen-burnett-xanatoss-assistant.html): Amethyst, cost 3, Character, Common
+- [David Xanatos - Arcane Industrialist](https://www.readysetink.com/card/david-xanatos-arcane-industrialist.html): Amethyst, cost 5, Character, Common
+- [Lexington - Fearless Flier](https://www.readysetink.com/card/lexington-fearless-flier.html): Amethyst, cost 2, Character, Common
+- [Merlin - Bauble Expert](https://www.readysetink.com/card/merlin-bauble-expert.html): Amethyst, cost 3, Character, Common
+- [Mamá Coco - Visiting the Park](https://www.readysetink.com/card/mam-coco-visiting-the-park.html): Amethyst, cost 4, Character, Rare
+- [Tinker Bell - Curious Fairy](https://www.readysetink.com/card/tinker-bell-curious-fairy.html): Amethyst, cost 1, Character, Common
+- [Madam Mim - Bauble Chaser](https://www.readysetink.com/card/madam-mim-bauble-chaser.html): Amethyst, cost 1, Character, Common
+- [Fox Xanatos - Charismatic Outlaw](https://www.readysetink.com/card/fox-xanatos-charismatic-outlaw.html): Amethyst, cost 5, Character, Uncommon
+- [Brooklyn - Full Throttle](https://www.readysetink.com/card/brooklyn-full-throttle.html): Amethyst, cost 1, Character, Uncommon
+- [Merlin - Ink Drop Tinkerer](https://www.readysetink.com/card/merlin-ink-drop-tinkerer.html): Amethyst, cost 7, Character, Rare
+- [Goliath - Transformed Warrior](https://www.readysetink.com/card/goliath-transformed-warrior.html): Amethyst, cost 4, Character, Rare
+- [Archimedes - Messenger Owl](https://www.readysetink.com/card/archimedes-messenger-owl.html): Amethyst, cost 3, Character, Rare
+- [Madam Mim - Resourceful Trickster](https://www.readysetink.com/card/madam-mim-resourceful-trickster.html): Amethyst, cost 8, Character, Legendary
+- [Everyone Knows Juanita](https://www.readysetink.com/card/everyone-knows-juanita.html): Amethyst, cost 5, Action, Common
+- [Higitus Figitus](https://www.readysetink.com/card/higitus-figitus.html): Amethyst, cost 6, Action, Common
+- [Magnificent, Marvelous](https://www.readysetink.com/card/magnificent-marvelous.html): Amethyst, cost 4, Action, Uncommon
+- [Inkcaster Skates](https://www.readysetink.com/card/inkcaster-skates.html): Amethyst, cost 3, Item, Rare
+- [Trusty - Along for the Ride](https://www.readysetink.com/card/trusty-along-for-the-ride.html): Emerald, cost 5, Character, Common
+- [Hiro Hamada - Versatile Inventor](https://www.readysetink.com/card/hiro-hamada-versatile-inventor.html): Emerald, cost 2, Character, Uncommon
+- [Go Go Tomago - Extreme Tester](https://www.readysetink.com/card/go-go-tomago-extreme-tester.html): Emerald, cost 2, Character, Common
+- [Molly Cunningham - Remembers to Share](https://www.readysetink.com/card/molly-cunningham-remembers-to-share.html): Emerald, cost 2, Character, Uncommon
+- [Kit Cloudkicker - Irrepressible Bear](https://www.readysetink.com/card/kit-cloudkicker-irrepressible-bear.html): Emerald, cost 3, Character, Common
+- [Belle - Reflective Writer](https://www.readysetink.com/card/belle-reflective-writer.html): Emerald, cost 2, Character, Uncommon
+- [Jock - Enjoying the Sights](https://www.readysetink.com/card/jock-enjoying-the-sights.html): Emerald, cost 4, Character, Common
+- [Rebecca Cunningham - Savvy Manager](https://www.readysetink.com/card/rebecca-cunningham-savvy-manager.html): Emerald, cost 3, Character, Common
+- [Shere Khan - Opportunistic Tycoon](https://www.readysetink.com/card/shere-khan-opportunistic-tycoon.html): Emerald, cost 4, Character, Uncommon
+- [Horace - Clumsy Clod](https://www.readysetink.com/card/horace-clumsy-clod.html): Emerald, cost 3, Character, Common
+- [Baymax - Lab Assistant](https://www.readysetink.com/card/baymax-lab-assistant.html): Emerald, cost 4, Character, Rare
+- [Fred - Awesome Boss](https://www.readysetink.com/card/fred-awesome-boss.html): Emerald, cost 6, Character, Rare
+- [Max Goof - Karaoke Star](https://www.readysetink.com/card/max-goof-karaoke-star.html): Emerald, cost 3, Character, Legendary
+- [Fred - Big Stomper](https://www.readysetink.com/card/fred-big-stomper.html): Emerald, cost 5, Character, Common
+- [Honey Lemon - Testing the Limits](https://www.readysetink.com/card/honey-lemon-testing-the-limits.html): Emerald, cost 3, Character, Rare
+- [Air Drop](https://www.readysetink.com/card/air-drop.html): Emerald, cost 4, Action, Common
+- [Above the Crowd](https://www.readysetink.com/card/above-the-crowd.html): Emerald, cost 5, Action, Rare
+- [Another Tale to Spin](https://www.readysetink.com/card/another-tale-to-spin.html): Emerald, cost 2, Action, Common
+- [This Is Business](https://www.readysetink.com/card/this-is-business.html): Emerald, cost 3, Action, Rare
+- [Flippant Taunt](https://www.readysetink.com/card/flippant-taunt.html): Emerald, cost 1, Action, Common
+- [Leaning Tower of Cheese-a](https://www.readysetink.com/card/leaning-tower-of-cheese-a.html): Emerald, cost 1, Item, Rare
+- [HeiHei - At the Crosswalk](https://www.readysetink.com/card/heihei-at-the-crosswalk.html): Ruby, cost 2, Character, Common
+- [Abby Park - Intense Fan](https://www.readysetink.com/card/abby-park-intense-fan.html): Ruby, cost 4, Character, Common
+- [Goofy - Dancing Superstar](https://www.readysetink.com/card/goofy-dancing-superstar.html): Ruby, cost 5, Character, Rare
+- [Donald Duck - Taxi Driver](https://www.readysetink.com/card/donald-duck-taxi-driver.html): Ruby, cost 3, Character, Common
+- [Goofy - Enthusiastic Tourist](https://www.readysetink.com/card/goofy-enthusiastic-tourist.html): Ruby, cost 1, Character, Common
+- [Cruella De Vil - Dodging Traffic](https://www.readysetink.com/card/cruella-de-vil-dodging-traffic.html): Ruby, cost 6, Character, Common
+- [Jasper - Dodgy Boater](https://www.readysetink.com/card/jasper-dodgy-boater.html): Ruby, cost 5, Character, Uncommon
+- [Stacey - Powerline Superfan](https://www.readysetink.com/card/stacey-powerline-superfan.html): Ruby, cost 3, Character, Uncommon
+- [Ernesto de la Cruz - Ruthless Musician](https://www.readysetink.com/card/ernesto-de-la-cruz-ruthless-musician.html): Ruby, cost 6, Character, Rare
+- [Tramp - Quick on His Feet](https://www.readysetink.com/card/tramp-quick-on-his-feet.html): Ruby, cost 2, Character, Rare
+- [Roxanne - Concert Lover](https://www.readysetink.com/card/roxanne-concert-lover.html): Ruby, cost 2, Character, Rare
+- [Wasabi - Called into Battle](https://www.readysetink.com/card/wasabi-called-into-battle.html): Ruby, cost 5, Character, Super Rare
+- [Lady Tremaine - Scornful Snob](https://www.readysetink.com/card/lady-tremaine-scornful-snob.html): Ruby, cost 3, Character, Super Rare
+- [Intimidation Tactics](https://www.readysetink.com/card/intimidation-tactics.html): Ruby, cost 2, Action, Uncommon
+- [Pushing Boundaries](https://www.readysetink.com/card/pushing-boundaries.html): Ruby, cost 2, Action, Uncommon
+- [Jukebox](https://www.readysetink.com/card/jukebox.html): Ruby, cost 2, Item, Rare
+- [Cinderella - Homespun Dressmaker](https://www.readysetink.com/card/cinderella-homespun-dressmaker.html): Sapphire, cost 2, Character, Common
+- [Wasabi - Future Thinker](https://www.readysetink.com/card/wasabi-future-thinker.html): Sapphire, cost 5, Character, Uncommon
+- [Baymax - Qualified Physician](https://www.readysetink.com/card/baymax-qualified-physician.html): Sapphire, cost 3, Character, Common
+- [Abigail & Amelia - Gossiping Geese](https://www.readysetink.com/card/abigail-amelia-gossiping-geese.html): Sapphire, cost 2, Character, Common
+- [Madam Mim - Nosy Neighbor](https://www.readysetink.com/card/madam-mim-nosy-neighbor.html): Sapphire, cost 5, Character, Common
+- [Lionheart - Cleaning Up the City](https://www.readysetink.com/card/lionheart-cleaning-up-the-city.html): Sapphire, cost 4, Character, Uncommon
+- [Hiro Hamada - Pioneering Inventor](https://www.readysetink.com/card/hiro-hamada-pioneering-inventor.html): Sapphire, cost 4, Character, Common
+- [Honey Lemon - Endlessly Curious](https://www.readysetink.com/card/honey-lemon-endlessly-curious.html): Sapphire, cost 1, Character, Common
+- [Thomas O'Malley - Savvy Vagabond](https://www.readysetink.com/card/thomas-omalley-savvy-vagabond.html): Sapphire, cost 2, Character, Super Rare
+- [Duchess - Cosmopolitan Cat](https://www.readysetink.com/card/duchess-cosmopolitan-cat.html): Sapphire, cost 1, Character, Rare
+- [Judy Hopps - Day Camp Instructor](https://www.readysetink.com/card/judy-hopps-day-camp-instructor.html): Sapphire, cost 2, Character, Rare
+- [Minnie Mouse - Urban Visionary](https://www.readysetink.com/card/minnie-mouse-urban-visionary.html): Sapphire, cost 8, Character, Super Rare
+- [Cinderella - Unintentional Icon](https://www.readysetink.com/card/cinderella-unintentional-icon.html): Sapphire, cost 7, Character, Super Rare
+- [Doug - Lying in Wait](https://www.readysetink.com/card/doug-lying-in-wait.html): Sapphire, cost 4, Character, Common
+- [A Dark Age No More](https://www.readysetink.com/card/a-dark-age-no-more.html): Sapphire, cost 3, Action, Rare
+- [Intense Research](https://www.readysetink.com/card/intense-research.html): Sapphire, cost 2, Action, Rare
+- [Scram!](https://www.readysetink.com/card/scram.html): Sapphire, cost 1, Action, Uncommon
+- [Spyglass Hat](https://www.readysetink.com/card/spyglass-hat.html): Sapphire, cost 3, Item, Rare
+- [Upgraded Chem Purse](https://www.readysetink.com/card/upgraded-chem-purse.html): Sapphire, cost 2, Item, Rare
+- [Tick-Tock - Canal Croc](https://www.readysetink.com/card/tick-tock-canal-croc.html): Steel, cost 8, Character, Uncommon
+- [Woolter & Jesse - Bellwether's Henchmen](https://www.readysetink.com/card/woolter-jesse-bellwethers-henchmen.html): Steel, cost 3, Character, Uncommon
+- [Napoleon - Patient Watchdog](https://www.readysetink.com/card/napoleon-patient-watchdog.html): Steel, cost 3, Character, Common
+- [Toulouse - Rough and Tumble](https://www.readysetink.com/card/toulouse-rough-and-tumble.html): Steel, cost 2, Character, Uncommon
+- [Sir Pellinore - Tougher Than He Looks](https://www.readysetink.com/card/sir-pellinore-tougher-than-he-looks.html): Steel, cost 3, Character, Uncommon
+- [Arthur - Novice Blacksmith](https://www.readysetink.com/card/arthur-novice-blacksmith.html): Steel, cost 2, Character, Common
+- [Berlioz - Tiny Rascal](https://www.readysetink.com/card/berlioz-tiny-rascal.html): Steel, cost 1, Character, Rare
+- [Marie - Caught in the Act](https://www.readysetink.com/card/marie-caught-in-the-act.html): Steel, cost 1, Character, Rare
+- [Koslov - Imposing Enforcer](https://www.readysetink.com/card/koslov-imposing-enforcer.html): Steel, cost 4, Character, Common
+- [Baloo - Freight Pilot](https://www.readysetink.com/card/baloo-freight-pilot.html): Steel, cost 4, Character, Common
+- [Kit Cloudkicker - Sure Shot](https://www.readysetink.com/card/kit-cloudkicker-sure-shot.html): Steel, cost 5, Character, Super Rare
+- [Arthur - Jousting Knight](https://www.readysetink.com/card/arthur-jousting-knight.html): Steel, cost 6, Character, Super Rare
+- [Shere Khan - Khan Industries CEO](https://www.readysetink.com/card/shere-khan-khan-industries-ceo.html): Steel, cost 4, Character, Legendary
+- [Tiana - Party Hostess](https://www.readysetink.com/card/tiana-party-hostess.html): Steel, cost 7, Character, Legendary
+- [Jousting Match](https://www.readysetink.com/card/jousting-match.html): Steel, cost 3, Action, Rare
+- [Khan Transport Delivery](https://www.readysetink.com/card/khan-transport-delivery.html): Steel, cost 2, Action, Common
+- [Hyperia City Express](https://www.readysetink.com/card/hyperia-city-express.html): Steel, cost 1, Item, Uncommon

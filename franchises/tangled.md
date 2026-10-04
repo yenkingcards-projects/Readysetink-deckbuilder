@@ -1,0 +1,68 @@
+# Tangled: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/tangled/
+
+62 cards.
+
+- [Arianna - Queen of Corona](https://www.readysetink.com/card/arianna-queen-of-corona.html): Steel, cost 5, Character, Common
+- [Big Nose - Lovesick Poet](https://www.readysetink.com/card/big-nose-lovesick-poet.html): Emerald, cost 1, Character, Common
+- [Brawl](https://www.readysetink.com/card/brawl.html): Ruby, cost 3, Action, Common
+- [Flynn Rider - Breaking and Entering](https://www.readysetink.com/card/flynn-rider-breaking-and-entering.html): Emerald, cost 4, Character, Super Rare
+- [Flynn Rider - Charming Rogue](https://www.readysetink.com/card/flynn-rider-charming-rogue.html): Emerald, cost 2, Character, Uncommon
+- [Flynn Rider - Confident Vagabond](https://www.readysetink.com/card/flynn-rider-confident-vagabond.html): Emerald, cost 1, Character, Common
+- [Flynn Rider - Frenemy](https://www.readysetink.com/card/flynn-rider-frenemy.html): Ruby, cost 2, Character, Super Rare
+- [Flynn Rider - High-Climbing Rogue](https://www.readysetink.com/card/flynn-rider-high-climbing-rogue.html): Steel, cost 3, Character, Common
+- [Flynn Rider - His Own Biggest Fan](https://www.readysetink.com/card/flynn-rider-his-own-biggest-fan.html): Emerald, cost 4, Character, Rare
+- [Flynn Rider - Spectral Scoundrel](https://www.readysetink.com/card/flynn-rider-spectral-scoundrel.html): Emerald, cost 1, Character, Uncommon
+- [Fragile as a Flower](https://www.readysetink.com/card/fragile-as-a-flower.html): Amethyst, cost 3, Action, Common
+- [Frying Pan](https://www.readysetink.com/card/frying-pan.html): Steel, cost 2, Item, Uncommon
+- [Gunther - Interior Designer](https://www.readysetink.com/card/gunther-interior-designer.html): Emerald, cost 4, Character, Common
+- [Heal What Has Been Hurt](https://www.readysetink.com/card/heal-what-has-been-hurt.html): Amber, cost 3, Action, Common
+- [Healing Glow](https://www.readysetink.com/card/healing-glow.html): Amber, cost 1, Action, Common
+- [Hook Hand - Unexpectedly Friendly](https://www.readysetink.com/card/hook-hand-unexpectedly-friendly.html): Emerald, cost 5, Character, Uncommon
+- [I've Got a Dream](https://www.readysetink.com/card/ive-got-a-dream.html): Ruby, cost 2, Action, Uncommon
+- [Lantern](https://www.readysetink.com/card/lantern.html): Amber, cost 2, Item, Rare
+- [Look What You've Done](https://www.readysetink.com/card/look-what-youve-done.html): Steel, cost 2, Action, Uncommon
+- [Magic Golden Flower](https://www.readysetink.com/card/magic-golden-flower.html): Sapphire, cost 1, Item, Common
+- [Malicious, Mean, and Scary](https://www.readysetink.com/card/malicious-mean-and-scary.html): Emerald, cost 3, Action, Uncommon
+- [Maximus - Palace Horse](https://www.readysetink.com/card/maximus-palace-horse.html): Amber, cost 5, Character, Super Rare
+- [Maximus - Relentless Pursuer](https://www.readysetink.com/card/maximus-relentless-pursuer.html): Amber, cost 3, Character, Uncommon
+- [Maximus - Relentless Stallion](https://www.readysetink.com/card/maximus-relentless-stallion.html): Steel, cost 5, Character, Rare
+- [Maximus - Team Champion](https://www.readysetink.com/card/maximus-team-champion.html): Ruby, cost 6, Character, Super Rare
+- [Mother Gothel - Conceited Manipulator](https://www.readysetink.com/card/mother-gothel-conceited-manipulator.html): Emerald, cost 2, Character, Uncommon
+- [Mother Gothel - Evil as Ever](https://www.readysetink.com/card/mother-gothel-evil-as-ever.html): Emerald, cost 2, Character, Common
+- [Mother Gothel - Knows What's Best](https://www.readysetink.com/card/mother-gothel-knows-whats-best.html): Amethyst / Ruby, cost 2, Character, Rare
+- [Mother Gothel - Selfish Manipulator](https://www.readysetink.com/card/mother-gothel-selfish-manipulator.html): Emerald, cost 6, Character, Super Rare
+- [Mother Gothel - Underhanded Schemer](https://www.readysetink.com/card/mother-gothel-underhanded-schemer.html): Ruby, cost 1, Character, Common
+- [Mother Gothel - Unwavering Schemer](https://www.readysetink.com/card/mother-gothel-unwavering-schemer.html): Emerald, cost 6, Character, Super Rare
+- [Mother Gothel - Vain Sorceress](https://www.readysetink.com/card/mother-gothel-vain-sorceress.html): Amethyst / Ruby, cost 3, Character, Uncommon
+- [Mother Gothel - Withered and Wicked](https://www.readysetink.com/card/mother-gothel-withered-and-wicked.html): Ruby, cost 2, Character, Uncommon
+- [Mother Knows Best](https://www.readysetink.com/card/mother-knows-best.html): Emerald, cost 3, Action, Uncommon
+- [Mother Will Protect You](https://www.readysetink.com/card/mother-will-protect-you.html): Amber, cost 2, Action, Common
+- [Pascal - Garden Chameleon](https://www.readysetink.com/card/pascal-garden-chameleon.html): Amber / Amethyst, cost 4, Character, Uncommon
+- [Pascal - Inquisitive Pet](https://www.readysetink.com/card/pascal-inquisitive-pet.html): Sapphire, cost 3, Character, Common
+- [Pascal - Rapunzel's Companion](https://www.readysetink.com/card/pascal-rapunzels-companion.html): Amethyst, cost 1, Character, Uncommon
+- [Rapunzel - Appreciative Artist](https://www.readysetink.com/card/rapunzel-appreciative-artist.html): Sapphire, cost 5, Character, Rare
+- [Rapunzel - Creative Captor](https://www.readysetink.com/card/rapunzel-creative-captor.html): Sapphire, cost 5, Character, Common
+- [Rapunzel - Escaping the Tower](https://www.readysetink.com/card/rapunzel-escaping-the-tower.html): Emerald, cost 1, Character, Super Rare
+- [Rapunzel - Ethereal Protector](https://www.readysetink.com/card/rapunzel-ethereal-protector.html): Steel, cost 3, Character, Rare
+- [Rapunzel - Gifted Artist](https://www.readysetink.com/card/rapunzel-gifted-artist.html): Amber, cost 5, Character, Uncommon
+- [Rapunzel - Gifted with Healing](https://www.readysetink.com/card/rapunzel-gifted-with-healing.html): Amber, cost 4, Character, Legendary
+- [Rapunzel - High Climber](https://www.readysetink.com/card/rapunzel-high-climber.html): Emerald, cost 5, Character, Legendary
+- [Rapunzel - Letting Down Her Hair](https://www.readysetink.com/card/rapunzel-letting-down-her-hair.html): Ruby, cost 6, Character, Uncommon
+- [Rapunzel - Ready for Adventure](https://www.readysetink.com/card/rapunzel-ready-for-adventure.html): Amber, cost 2, Character, Legendary
+- [Rapunzel - Sunshine](https://www.readysetink.com/card/rapunzel-sunshine.html): Amber, cost 2, Character, Common
+- [Rapunzel - Tower Defender](https://www.readysetink.com/card/rapunzel-tower-defender.html): Emerald, cost 4, Character, Common
+- [Rapunzel & Flynn Rider - Unlikely Pair](https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html): Emerald / Steel, cost 5, Character, Legendary
+- [Rapunzel's Tower - Secluded Prison](https://www.readysetink.com/card/rapunzels-tower-secluded-prison.html): Amber, cost 2, Location, Uncommon
+- [Rapunzel's Tower - Taken by the Vine](https://www.readysetink.com/card/rapunzels-tower-taken-by-the-vine.html): Amber, cost 4, Location, Uncommon
+- [Revive](https://www.readysetink.com/card/revive.html): Amber, cost 5, Action, Rare
+- [Snuggly Duckling - Disreputable Pub](https://www.readysetink.com/card/snuggly-duckling-disreputable-pub.html): Ruby, cost 2, Location, Rare
+- [Stabbington Brother - With a Patch](https://www.readysetink.com/card/stabbington-brother-with-a-patch.html): Ruby, cost 5, Character, Common
+- [Stabbington Brother - Without a Patch](https://www.readysetink.com/card/stabbington-brother-without-a-patch.html): Ruby, cost 4, Character, Common
+- [Tangle](https://www.readysetink.com/card/tangle.html): Ruby, cost 2, Action, Common
+- [Tor - Florist](https://www.readysetink.com/card/tor-florist.html): Emerald, cost 5, Character, Common
+- [Ulf - Mime](https://www.readysetink.com/card/ulf-mime.html): Emerald, cost 4, Character, Common
+- [Vladimir - Ceramic Unicorn Fan](https://www.readysetink.com/card/vladimir-ceramic-unicorn-fan.html): Emerald, cost 6, Character, Common
+- [When Will My Life Begin?](https://www.readysetink.com/card/when-will-my-life-begin.html): Steel, cost 3, Action, Common
+- [You Broke My Smolder](https://www.readysetink.com/card/you-broke-my-smolder.html): Steel, cost 1, Action, Uncommon

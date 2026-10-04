@@ -1,0 +1,458 @@
+# Steel: Disney Lorcana Steel ink cards
+
+Source: https://www.readysetink.com/inks/steel/
+
+452 cards.
+
+- [A Whole New World](https://www.readysetink.com/card/a-whole-new-world.html): Steel, cost 5, Action, Super Rare
+- [Absorbing Bloom](https://www.readysetink.com/card/absorbing-bloom.html): Steel, cost 2, Item, Uncommon
+- [Abu - Illusory Pachyderm](https://www.readysetink.com/card/abu-illusory-pachyderm.html): Amethyst / Steel, cost 6, Character, Uncommon
+- [Akela - Wolf Pack Elder](https://www.readysetink.com/card/akela-wolf-pack-elder.html): Steel, cost 2, Character, Common
+- [Aladdin - Brave Rescuer](https://www.readysetink.com/card/aladdin-brave-rescuer.html): Steel, cost 3, Character, Uncommon
+- [Aladdin - Cornered Swordsman](https://www.readysetink.com/card/aladdin-cornered-swordsman.html): Steel, cost 2, Character, Common
+- [Aladdin - Created by the Vine](https://www.readysetink.com/card/aladdin-created-by-the-vine.html): Steel, cost 3, Character, Rare
+- [Aladdin - Research Assistant](https://www.readysetink.com/card/aladdin-research-assistant.html): Steel, cost 4, Character, Rare
+- [Aladdin - Resolute Swordsman](https://www.readysetink.com/card/aladdin-resolute-swordsman.html): Steel, cost 1, Character, Common
+- [Aladdin - Vigilant Guard](https://www.readysetink.com/card/aladdin-vigilant-guard.html): Sapphire / Steel, cost 6, Character, Rare
+- [Ambush!](https://www.readysetink.com/card/ambush.html): Steel, cost 3, Action, Rare
+- [Amos Slade - Tenacious Tracker](https://www.readysetink.com/card/amos-slade-tenacious-tracker.html): Steel, cost 4, Character, Common
+- [And Then Along Came Zeus](https://www.readysetink.com/card/and-then-along-came-zeus.html): Steel, cost 4, Action, Rare
+- [Angel - Experiment 624](https://www.readysetink.com/card/angel-experiment-624.html): Steel, cost 4, Character, Legendary
+- [Angela - Night Warrior](https://www.readysetink.com/card/angela-night-warrior.html): Steel, cost 3, Character, Super Rare
+- [Angus - Mighty Horse](https://www.readysetink.com/card/angus-mighty-horse.html): Steel, cost 3, Character, Common
+- [Arges - The Cyclops](https://www.readysetink.com/card/arges-the-cyclops.html): Steel, cost 2, Character, Common
+- [Arianna - Queen of Corona](https://www.readysetink.com/card/arianna-queen-of-corona.html): Steel, cost 5, Character, Common
+- [Ariel - Determined Mermaid](https://www.readysetink.com/card/ariel-determined-mermaid.html): Steel, cost 3, Character, Common
+- [Ariel - Sonic Warrior](https://www.readysetink.com/card/ariel-sonic-warrior.html): Steel, cost 6, Character, Super Rare
+- [Arthur - Determined Squire](https://www.readysetink.com/card/arthur-determined-squire.html): Sapphire / Steel, cost 4, Character, Uncommon
+- [Arthur - Jousting Knight](https://www.readysetink.com/card/arthur-jousting-knight.html): Steel, cost 6, Character, Super Rare
+- [Arthur - King Victorious](https://www.readysetink.com/card/arthur-king-victorious.html): Steel, cost 7, Character, Legendary
+- [Arthur - Novice Blacksmith](https://www.readysetink.com/card/arthur-novice-blacksmith.html): Steel, cost 2, Character, Common
+- [Arthur - Wart](https://www.readysetink.com/card/arthur-wart.html): Steel, cost 2, Character, Uncommon
+- [Atitaya - Fang General](https://www.readysetink.com/card/atitaya-fang-general.html): Steel, cost 7, Character, Uncommon
+- [Attack of the Vine!](https://www.readysetink.com/card/attack-of-the-vine.html): Steel, cost 6, Action, Rare
+- [Avalanche](https://www.readysetink.com/card/avalanche.html): Steel, cost 4, Action, Uncommon
+- [Ba-Boom!](https://www.readysetink.com/card/ba-boom.html): Steel, cost 2, Action, Common
+- [Bad-Anon - Villain Support Center](https://www.readysetink.com/card/bad-anon-villain-support-center.html): Steel, cost 3, Location, Rare
+- [Bagheera - Guardian Jaguar](https://www.readysetink.com/card/bagheera-guardian-jaguar.html): Steel, cost 5, Character, Legendary
+- [Baloo - Freight Pilot](https://www.readysetink.com/card/baloo-freight-pilot.html): Steel, cost 4, Character, Common
+- [Bashful - Adoring Knight](https://www.readysetink.com/card/bashful-adoring-knight.html): Steel, cost 4, Character, Uncommon
+- [Basil - Tenacious Mouse](https://www.readysetink.com/card/basil-tenacious-mouse.html): Steel, cost 3, Character, Common
+- [Beast - Forbidding Recluse](https://www.readysetink.com/card/beast-forbidding-recluse.html): Steel, cost 4, Character, Common
+- [Beast - Hardheaded](https://www.readysetink.com/card/beast-hardheaded.html): Steel, cost 5, Character, Uncommon
+- [Beast - Selfless Protector](https://www.readysetink.com/card/beast-selfless-protector.html): Steel, cost 6, Character, Super Rare
+- [Beast - Thick-Skinned](https://www.readysetink.com/card/beast-thick-skinned.html): Steel, cost 3, Character, Common
+- [Beast - Tragic Hero](https://www.readysetink.com/card/beast-tragic-hero.html): Steel, cost 5, Character, Legendary
+- [Beast's Mirror](https://www.readysetink.com/card/beasts-mirror.html): Steel, cost 2, Item, Common
+- [Benja - Guardian of the Dragon Gem](https://www.readysetink.com/card/benja-guardian-of-the-dragon-gem.html): Steel, cost 3, Character, Common
+- [Berlioz - Tiny Rascal](https://www.readysetink.com/card/berlioz-tiny-rascal.html): Steel, cost 1, Character, Rare
+- [Bernard - Over-Prepared](https://www.readysetink.com/card/bernard-over-prepared.html): Sapphire / Steel, cost 2, Character, Uncommon
+- [Beyond the Horizon](https://www.readysetink.com/card/beyond-the-horizon.html): Steel, cost 7, Action, Uncommon
+- [Billy Bones - Space Sailor](https://www.readysetink.com/card/billy-bones-space-sailor.html): Steel, cost 3, Character, Uncommon
+- [Black Heron - Real Bad Egg](https://www.readysetink.com/card/black-heron-real-bad-egg.html): Steel, cost 2, Character, Uncommon
+- [Bobby - Purple Pigeon](https://www.readysetink.com/card/bobby-purple-pigeon.html): Steel, cost 3, Character, Common
+- [Bolt - Down but Not Out](https://www.readysetink.com/card/bolt-down-but-not-out.html): Amber / Steel, cost 3, Character, Rare
+- [Bolt - Headstrong Dog](https://www.readysetink.com/card/bolt-headstrong-dog.html): Steel, cost 2, Character, Common
+- [Bolt - Superdog](https://www.readysetink.com/card/bolt-superdog.html): Amber / Steel, cost 5, Character, Super Rare
+- [Break](https://www.readysetink.com/card/break.html): Steel, cost 2, Action, Common
+- [Broadway - Sturdy and Strong](https://www.readysetink.com/card/broadway-sturdy-and-strong.html): Steel, cost 5, Character, Uncommon
+- [But I'm Much Faster](https://www.readysetink.com/card/but-im-much-faster.html): Steel, cost 1, Action, Common
+- [Calhoun - Marine Sergeant](https://www.readysetink.com/card/calhoun-marine-sergeant.html): Steel, cost 2, Character, Rare
+- [Captain Amelia - Commander of the Legacy](https://www.readysetink.com/card/captain-amelia-commander-of-the-legacy.html): Steel, cost 4, Character, Super Rare
+- [Captain Hook - Captain of the Jolly Roger](https://www.readysetink.com/card/captain-hook-captain-of-the-jolly-roger.html): Steel, cost 4, Character, Rare
+- [Captain Hook - Forceful Duelist](https://www.readysetink.com/card/captain-hook-forceful-duelist.html): Steel, cost 1, Character, Common
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Captain Hook - Thinking a Happy Thought](https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.html): Steel, cost 5, Character, Rare
+- [Captain Hook's Rapier](https://www.readysetink.com/card/captain-hooks-rapier.html): Steel, cost 3, Item, Uncommon
+- [Card Advantage](https://www.readysetink.com/card/card-advantage.html): Steel, cost 2, Action, Uncommon
+- [Castle Wyvern - Above the Clouds](https://www.readysetink.com/card/castle-wyvern-above-the-clouds.html): Steel, cost 2, Location, Rare
+- [Cerberus - Three-Headed Dog](https://www.readysetink.com/card/cerberus-three-headed-dog.html): Steel, cost 5, Character, Common
+- [Charge!](https://www.readysetink.com/card/charge.html): Steel, cost 2, Action, Common
+- [Chi-Fu - Imperial Advisor](https://www.readysetink.com/card/chi-fu-imperial-advisor.html): Steel, cost 3, Character, Uncommon
+- [Chief - Seasoned Tracker](https://www.readysetink.com/card/chief-seasoned-tracker.html): Steel, cost 3, Character, Uncommon
+- [Chief Bogo - Calling the Shots](https://www.readysetink.com/card/chief-bogo-calling-the-shots.html): Steel, cost 4, Character, Rare
+- [Chief Bogo - Respected Officer](https://www.readysetink.com/card/chief-bogo-respected-officer.html): Steel, cost 4, Character, Rare
+- [Chief Tui - Proud of Motunui](https://www.readysetink.com/card/chief-tui-proud-of-motunui.html): Steel, cost 4, Character, Common
+- [Chien-Po - Imperial Soldier](https://www.readysetink.com/card/chien-po-imperial-soldier.html): Steel, cost 5, Character, Common
+- [Cinderella - Knight in Training](https://www.readysetink.com/card/cinderella-knight-in-training.html): Steel, cost 2, Character, Common
+- [Cinderella - Stouthearted](https://www.readysetink.com/card/cinderella-stouthearted.html): Steel, cost 7, Character, Super Rare
+- [Clawhauser - Donut Detective](https://www.readysetink.com/card/clawhauser-donut-detective.html): Steel, cost 6, Character, Common
+- [Club Door](https://www.readysetink.com/card/club-door.html): Steel, cost 3, Item, Uncommon
+- [Cobra Bubbles - Former CIA](https://www.readysetink.com/card/cobra-bubbles-former-cia.html): Steel, cost 5, Character, Rare
+- [Containment Unit](https://www.readysetink.com/card/containment-unit.html): Steel, cost 2, Item, Rare
+- [Cower Before Me!](https://www.readysetink.com/card/cower-before-me.html): Steel, cost 2, Action, Common
+- [Darkwing Duck - Cool Under Pressure](https://www.readysetink.com/card/darkwing-duck-cool-under-pressure.html): Steel, cost 7, Character, Legendary
+- [Darkwing Duck - Crime Fighter](https://www.readysetink.com/card/darkwing-duck-crime-fighter.html): Steel, cost 1, Character, Common
+- [Darkwing Duck - Darkwarrior](https://www.readysetink.com/card/darkwing-duck-darkwarrior.html): Steel, cost 5, Character, Rare
+- [Darkwing Duck - Shadowy Superhero](https://www.readysetink.com/card/darkwing-duck-shadowy-superhero.html): Steel, cost 3, Character, Common
+- [Darkwing Duck & Launchpad - St. Canard's Finest](https://www.readysetink.com/card/darkwing-duck-launchpad-st-canards-finest.html): Sapphire / Steel, cost 7, Character, Super Rare
+- [Darkwing Tower - Icy Headquarters](https://www.readysetink.com/card/darkwing-tower-icy-headquarters.html): Steel, cost 4, Location, Uncommon
+- [Dash Parr & Violet Parr - Super Siblings](https://www.readysetink.com/card/dash-parr-violet-parr-super-siblings.html): Ruby / Steel, cost 8, Character, Legendary
+- [David Xanatos - Steel Clan Leader](https://www.readysetink.com/card/david-xanatos-steel-clan-leader.html): Steel, cost 3, Character, Uncommon
+- [Denahi - Impatient Hunter](https://www.readysetink.com/card/denahi-impatient-hunter.html): Ruby / Steel, cost 3, Character, Uncommon
+- [Desperate Plan](https://www.readysetink.com/card/desperate-plan.html): Steel, cost 3, Action, Rare
+- [Diablo - Protecting His Mistress](https://www.readysetink.com/card/diablo-protecting-his-mistress.html): Steel, cost 2, Character, Common
+- [Diablo - Stone Servant](https://www.readysetink.com/card/diablo-stone-servant.html): Steel, cost 2, Character, Super Rare
+- [Discarded Armor](https://www.readysetink.com/card/discarded-armor.html): Steel, cost 1, Item, Uncommon
+- [Doc - Bold Knight](https://www.readysetink.com/card/doc-bold-knight.html): Steel, cost 2, Character, Rare
+- [Don Karnage - Air Pirate Leader](https://www.readysetink.com/card/don-karnage-air-pirate-leader.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Donald Duck - Along for the Ride](https://www.readysetink.com/card/donald-duck-along-for-the-ride.html): Steel, cost 5, Character, Common
+- [Donald Duck - Buccaneer](https://www.readysetink.com/card/donald-duck-buccaneer.html): Steel, cost 4, Character, Legendary
+- [Donald Duck - Deep-Sea Diver](https://www.readysetink.com/card/donald-duck-deep-sea-diver.html): Steel, cost 5, Character, Common
+- [Donald Duck - Ghost Hunter](https://www.readysetink.com/card/donald-duck-ghost-hunter.html): Steel, cost 4, Character, Common
+- [Donald Duck - Musketeer](https://www.readysetink.com/card/donald-duck-musketeer.html): Steel, cost 4, Character, Uncommon
+- [Dopey - Knight Apprentice](https://www.readysetink.com/card/dopey-knight-apprentice.html): Steel, cost 3, Character, Common
+- [Double Trouble](https://www.readysetink.com/card/double-trouble.html): Steel, cost 2, Action, Uncommon
+- [Dr. Calico - Green-Eyed Man](https://www.readysetink.com/card/dr-calico-green-eyed-man.html): Steel, cost 4, Character, Common
+- [Dr. Hamsterviel - Evil Observer](https://www.readysetink.com/card/dr-hamsterviel-evil-observer.html): Steel, cost 3, Character, Uncommon
+- [Dr. Hamsterviel - Infamous Scientist](https://www.readysetink.com/card/dr-hamsterviel-infamous-scientist.html): Steel, cost 8, Character, Rare
+- [Duck for Cover!](https://www.readysetink.com/card/duck-for-cover.html): Steel, cost 2, Action, Common
+- [Duke Weaselton - Surly Crook](https://www.readysetink.com/card/duke-weaselton-surly-crook.html): Steel, cost 3, Character, Rare
+- [Dumptruck - Karnage's Second Mate](https://www.readysetink.com/card/dumptruck-karnages-second-mate.html): Steel, cost 1, Character, Common
+- [Eeyore - Overstuffed Donkey](https://www.readysetink.com/card/eeyore-overstuffed-donkey.html): Steel, cost 5, Character, Common
+- [Eli La Bouff - Big Daddy](https://www.readysetink.com/card/eli-la-bouff-big-daddy.html): Steel, cost 4, Character, Uncommon
+- [Fa Zhou - War Hero](https://www.readysetink.com/card/fa-zhou-war-hero.html): Steel, cost 3, Character, Rare
+- [Fairy Godmother - Magical Benefactor](https://www.readysetink.com/card/fairy-godmother-magical-benefactor.html): Steel, cost 4, Character, Super Rare
+- [Fat Cat - Criminal Businessman](https://www.readysetink.com/card/fat-cat-criminal-businessman.html): Steel, cost 4, Character, Rare
+- [Fat Cat - Felonious Feline](https://www.readysetink.com/card/fat-cat-felonious-feline.html): Steel, cost 6, Character, Common
+- [Fat Cat's Club - Seedy Headquarters](https://www.readysetink.com/card/fat-cats-club-seedy-headquarters.html): Steel, cost 3, Location, Common
+- [Fergus - King of DunBroch](https://www.readysetink.com/card/fergus-king-of-dunbroch.html): Steel, cost 2, Character, Common
+- [Fergus - Outpost Builder](https://www.readysetink.com/card/fergus-outpost-builder.html): Steel, cost 6, Character, Super Rare
+- [Fire the Cannons!](https://www.readysetink.com/card/fire-the-cannons.html): Steel, cost 1, Action, Common
+- [Flynn Rider - High-Climbing Rogue](https://www.readysetink.com/card/flynn-rider-high-climbing-rogue.html): Steel, cost 3, Character, Common
+- [Food Fight!](https://www.readysetink.com/card/food-fight.html): Steel, cost 1, Action, Uncommon
+- [Fortisphere](https://www.readysetink.com/card/fortisphere.html): Steel, cost 1, Item, Common
+- [Francine - Eyeing the Evidence](https://www.readysetink.com/card/francine-eyeing-the-evidence.html): Steel, cost 3, Character, Common
+- [Frying Pan](https://www.readysetink.com/card/frying-pan.html): Steel, cost 2, Item, Uncommon
+- [Galactic Council Chamber - Courtroom](https://www.readysetink.com/card/galactic-council-chamber-courtroom.html): Steel, cost 3, Location, Common
+- [Gantu - Captain Crankyhead](https://www.readysetink.com/card/gantu-captain-crankyhead.html): Steel, cost 5, Character, Rare
+- [Gantu - Experienced Enforcer](https://www.readysetink.com/card/gantu-experienced-enforcer.html): Steel, cost 4, Character, Super Rare
+- [Gantu - Galactic Federation Captain](https://www.readysetink.com/card/gantu-galactic-federation-captain.html): Steel, cost 8, Character, Legendary
+- [Gantu - Hamsterviel's Accomplice](https://www.readysetink.com/card/gantu-hamsterviels-accomplice.html): Steel, cost 1, Character, Uncommon
+- [General Li - Head of the Imperial Army](https://www.readysetink.com/card/general-li-head-of-the-imperial-army.html): Steel, cost 3, Character, Common
+- [Genie - Satisfied Dragon](https://www.readysetink.com/card/genie-satisfied-dragon.html): Steel, cost 3, Character, Common
+- [Giant Cobra - Ghostly Serpent](https://www.readysetink.com/card/giant-cobra-ghostly-serpent.html): Amethyst / Steel, cost 3, Character, Uncommon
+- [Gigi - Best in Snow](https://www.readysetink.com/card/gigi-best-in-snow.html): Steel, cost 3, Character, Uncommon
+- [Gizmoduck - Duckburg Defender](https://www.readysetink.com/card/gizmoduck-duckburg-defender.html): Steel, cost 5, Character, Rare
+- [Gizmoduck - Suited Up](https://www.readysetink.com/card/gizmoduck-suited-up.html): Emerald / Steel, cost 4, Character, Uncommon
+- [Gizmosuit](https://www.readysetink.com/card/gizmosuit.html): Steel, cost 3, Item, Common
+- [Goliath - Clan Leader](https://www.readysetink.com/card/goliath-clan-leader.html): Steel, cost 6, Character, Legendary
+- [Goofy - Determined Traveler](https://www.readysetink.com/card/goofy-determined-traveler.html): Steel, cost 2, Character, Uncommon
+- [Goofy - Knight for a Day](https://www.readysetink.com/card/goofy-knight-for-a-day.html): Steel, cost 9, Character, Rare
+- [Goons - Maleficent's Underlings](https://www.readysetink.com/card/goons-maleficents-underlings.html): Steel, cost 1, Character, Common
+- [Grab Your Sword](https://www.readysetink.com/card/grab-your-sword.html): Steel, cost 5, Action, Rare
+- [Grand Councilwoman - Galactic Authority](https://www.readysetink.com/card/grand-councilwoman-galactic-authority.html): Steel, cost 4, Character, Rare
+- [Grumpy - Skeptical Knight](https://www.readysetink.com/card/grumpy-skeptical-knight.html): Steel, cost 3, Character, Super Rare
+- [Gustav the Giant - Terror of the Kingdom](https://www.readysetink.com/card/gustav-the-giant-terror-of-the-kingdom.html): Steel, cost 3, Character, Rare
+- [Hades - Hotheaded Ruler](https://www.readysetink.com/card/hades-hotheaded-ruler.html): Steel, cost 6, Character, Rare
+- [Hamster Ball](https://www.readysetink.com/card/hamster-ball.html): Steel, cost 3, Item, Common
+- [Hans - Thirteenth in Line](https://www.readysetink.com/card/hans-thirteenth-in-line.html): Steel, cost 4, Character, Super Rare
+- [Happy - Lively Knight](https://www.readysetink.com/card/happy-lively-knight.html): Steel, cost 1, Character, Common
+- [He Hurled His Thunderbolt](https://www.readysetink.com/card/he-hurled-his-thunderbolt.html): Steel, cost 4, Action, Uncommon
+- [HeiHei - Expanded Consciousness](https://www.readysetink.com/card/heihei-expanded-consciousness.html): Sapphire / Steel, cost 5, Character, Uncommon
+- [HeiHei - Protective Rooster](https://www.readysetink.com/card/heihei-protective-rooster.html): Steel, cost 5, Character, Common
+- [HeiHei - Rambling Rooster](https://www.readysetink.com/card/heihei-rambling-rooster.html): Steel, cost 1, Character, Common
+- [Helga Sinclair - Right-Hand Woman](https://www.readysetink.com/card/helga-sinclair-right-hand-woman.html): Steel, cost 3, Character, Common
+- [Helga Sinclair - Tough as Nails](https://www.readysetink.com/card/helga-sinclair-tough-as-nails.html): Steel, cost 2, Character, Uncommon
+- [Hercules - Beloved Hero](https://www.readysetink.com/card/hercules-beloved-hero.html): Steel, cost 6, Character, Rare
+- [Hercules - Divine Hero](https://www.readysetink.com/card/hercules-divine-hero.html): Steel, cost 6, Character, Rare
+- [Hercules - Hero in Training](https://www.readysetink.com/card/hercules-hero-in-training.html): Steel, cost 2, Character, Common
+- [Hercules - True Hero](https://www.readysetink.com/card/hercules-true-hero.html): Steel, cost 3, Character, Common
+- [Hercules - Unwavering Demigod](https://www.readysetink.com/card/hercules-unwavering-demigod.html): Steel, cost 4, Character, Common
+- [Hot Potato](https://www.readysetink.com/card/hot-potato.html): Steel, cost 3, Action, Uncommon
+- [Hudson - Determined Reader](https://www.readysetink.com/card/hudson-determined-reader.html): Steel, cost 2, Character, Common
+- [Hyperia City Express](https://www.readysetink.com/card/hyperia-city-express.html): Steel, cost 1, Item, Uncommon
+- [I Find 'Em, I Flatten 'Em](https://www.readysetink.com/card/i-find-em-i-flatten-em.html): Steel, cost 4, Action, Uncommon
+- [I'm Still Here](https://www.readysetink.com/card/im-still-here.html): Steel, cost 3, Action, Common
+- [Iago - Out of Reach](https://www.readysetink.com/card/iago-out-of-reach.html): Steel, cost 4, Character, Rare
+- [Illuminary Tunnels - Linked Caverns](https://www.readysetink.com/card/illuminary-tunnels-linked-caverns.html): Steel, cost 3, Location, Super Rare
+- [Imperial Bow](https://www.readysetink.com/card/imperial-bow.html): Steel, cost 2, Item, Uncommon
+- [Incrediboy - Buddy Pine](https://www.readysetink.com/card/incrediboy-buddy-pine.html): Steel, cost 2, Character, Common
+- [Infra-Pink Ultra Scan Specs](https://www.readysetink.com/card/infra-pink-ultra-scan-specs.html): Steel, cost 1, Item, Common
+- [Ingenious Device](https://www.readysetink.com/card/ingenious-device.html): Steel, cost 3, Item, Rare
+- [Inspector Tezuka - Resolute Officer](https://www.readysetink.com/card/inspector-tezuka-resolute-officer.html): Steel, cost 2, Character, Common
+- [Jafar - Aspiring Ruler](https://www.readysetink.com/card/jafar-aspiring-ruler.html): Steel, cost 3, Character, Common
+- [Jafar - Dreadnought](https://www.readysetink.com/card/jafar-dreadnought.html): Steel, cost 4, Character, Uncommon
+- [Jafar - High Sultan of Lorcana](https://www.readysetink.com/card/jafar-high-sultan-of-lorcana.html): Amethyst / Steel, cost 5, Character, Super Rare
+- [Jafar - Newly Crowned](https://www.readysetink.com/card/jafar-newly-crowned.html): Amethyst / Steel, cost 4, Character, Super Rare
+- [Jafar - Power-Hungry Vizier](https://www.readysetink.com/card/jafar-power-hungry-vizier.html): Steel, cost 5, Character, Super Rare
+- [Jafar - Royal Vizier](https://www.readysetink.com/card/jafar-royal-vizier.html): Steel, cost 2, Character, Common
+- [Jafar - Tyrannical Hypnotist](https://www.readysetink.com/card/jafar-tyrannical-hypnotist.html): Steel, cost 6, Character, Legendary
+- [Jasmine - Fearless Princess](https://www.readysetink.com/card/jasmine-fearless-princess.html): Steel, cost 5, Character, Rare
+- [Jasmine - Inspired Researcher](https://www.readysetink.com/card/jasmine-inspired-researcher.html): Sapphire / Steel, cost 5, Character, Rare
+- [Jasmine - Steady Strategist](https://www.readysetink.com/card/jasmine-steady-strategist.html): Sapphire / Steel, cost 4, Character, Super Rare
+- [Jim Hawkins - Rigging Specialist](https://www.readysetink.com/card/jim-hawkins-rigging-specialist.html): Steel, cost 5, Character, Uncommon
+- [Jim Hawkins - Stubborn Cabin Boy](https://www.readysetink.com/card/jim-hawkins-stubborn-cabin-boy.html): Steel, cost 2, Character, Common
+- [John Silver - Greedy Treasure Seeker](https://www.readysetink.com/card/john-silver-greedy-treasure-seeker.html): Steel, cost 3, Character, Rare
+- [John Silver - Ship's Cook](https://www.readysetink.com/card/john-silver-ships-cook.html): Steel, cost 3, Character, Common
+- [John Silver - Stern Captain](https://www.readysetink.com/card/john-silver-stern-captain.html): Steel, cost 8, Character, Legendary
+- [John Silver - Vengeful Pirate](https://www.readysetink.com/card/john-silver-vengeful-pirate.html): Emerald / Steel, cost 8, Character, Rare
+- [John Smith - Skillful Explorer](https://www.readysetink.com/card/john-smith-skillful-explorer.html): Steel, cost 1, Character, Rare
+- [John Smith - Undaunted Protector](https://www.readysetink.com/card/john-smith-undaunted-protector.html): Steel, cost 5, Character, Super Rare
+- [Jousting Match](https://www.readysetink.com/card/jousting-match.html): Steel, cost 3, Action, Rare
+- [Judy Hopps - Snowball Patrol](https://www.readysetink.com/card/judy-hopps-snowball-patrol.html): Steel, cost 2, Character, Uncommon
+- [Kakamora - Band of Pirates](https://www.readysetink.com/card/kakamora-band-of-pirates.html): Steel, cost 4, Character, Common
+- [Kakamora - Long-Range Specialist](https://www.readysetink.com/card/kakamora-long-range-specialist.html): Steel, cost 1, Character, Common
+- [Kakamora - Pirate Chief](https://www.readysetink.com/card/kakamora-pirate-chief.html): Steel, cost 7, Character, Rare
+- [Keep the Ancient Ways](https://www.readysetink.com/card/keep-the-ancient-ways.html): Steel, cost 2, Action, Uncommon
+- [Khan - War Horse](https://www.readysetink.com/card/khan-war-horse.html): Steel, cost 4, Character, Common
+- [Khan Transport Delivery](https://www.readysetink.com/card/khan-transport-delivery.html): Steel, cost 2, Action, Common
+- [Kida - Royal Warrior](https://www.readysetink.com/card/kida-royal-warrior.html): Steel, cost 2, Character, Common
+- [King Hubert - Phillip's Father](https://www.readysetink.com/card/king-hubert-phillips-father.html): Steel, cost 3, Character, Common
+- [King's Sensor Core](https://www.readysetink.com/card/kings-sensor-core.html): Steel, cost 3, Item, Rare
+- [Kit Cloudkicker - Sure Shot](https://www.readysetink.com/card/kit-cloudkicker-sure-shot.html): Steel, cost 5, Character, Super Rare
+- [Kohut - Trusted Marine](https://www.readysetink.com/card/kohut-trusted-marine.html): Steel, cost 2, Character, Common
+- [Koslov - Imposing Enforcer](https://www.readysetink.com/card/koslov-imposing-enforcer.html): Steel, cost 4, Character, Common
+- [Kristoff - Official Ice Master](https://www.readysetink.com/card/kristoff-official-ice-master.html): Steel, cost 3, Character, Common
+- [Kronk - Head of Security](https://www.readysetink.com/card/kronk-head-of-security.html): Steel, cost 7, Character, Super Rare
+- [Kronk - Junior Chipmunk](https://www.readysetink.com/card/kronk-junior-chipmunk.html): Steel, cost 6, Character, Rare
+- [Kronk - Meat Hut Cook](https://www.readysetink.com/card/kronk-meat-hut-cook.html): Steel, cost 2, Character, Rare
+- [Kronk - Right-Hand Man](https://www.readysetink.com/card/kronk-right-hand-man.html): Steel, cost 6, Character, Uncommon
+- [Kronk - Unlicensed Investigator](https://www.readysetink.com/card/kronk-unlicensed-investigator.html): Steel, cost 2, Character, Common
+- [Lady Kluck - Protective Confidant](https://www.readysetink.com/card/lady-kluck-protective-confidant.html): Sapphire / Steel, cost 5, Character, Uncommon
+- [Last Cannon](https://www.readysetink.com/card/last-cannon.html): Steel, cost 1, Item, Common
+- [Launchpad - Hideout Defender](https://www.readysetink.com/card/launchpad-hideout-defender.html): Steel, cost 3, Character, Uncommon
+- [Launchpad - Trusty Sidekick](https://www.readysetink.com/card/launchpad-trusty-sidekick.html): Steel, cost 2, Character, Common
+- [Lawrence - Jealous Manservant](https://www.readysetink.com/card/lawrence-jealous-manservant.html): Steel, cost 3, Character, Uncommon
+- [LeFou - Opportunistic Flunky](https://www.readysetink.com/card/lefou-opportunistic-flunky.html): Steel, cost 3, Character, Rare
+- [Lena Sabrewing - Pure Energy](https://www.readysetink.com/card/lena-sabrewing-pure-energy.html): Amethyst / Steel, cost 3, Character, Uncommon
+- [Let the Storm Rage On](https://www.readysetink.com/card/let-the-storm-rage-on.html): Steel, cost 3, Action, Common
+- [Let's Get Dangerous](https://www.readysetink.com/card/lets-get-dangerous.html): Steel, cost 4, Action, Rare
+- [Lexington - Small in Stature](https://www.readysetink.com/card/lexington-small-in-stature.html): Steel, cost 3, Character, Uncommon
+- [Li Shang - Archery Instructor](https://www.readysetink.com/card/li-shang-archery-instructor.html): Steel, cost 5, Character, Uncommon
+- [Li Shang - Imperial Captain](https://www.readysetink.com/card/li-shang-imperial-captain.html): Steel, cost 5, Character, Uncommon
+- [Li Shang - Newly Promoted](https://www.readysetink.com/card/li-shang-newly-promoted.html): Ruby / Steel, cost 3, Character, Uncommon
+- [Li Shang - Solemn Son](https://www.readysetink.com/card/li-shang-solemn-son.html): Steel, cost 3, Character, Common
+- [Li Shang - Valiant Leader](https://www.readysetink.com/card/li-shang-valiant-leader.html): Steel, cost 7, Character, Uncommon
+- [Light the Fuse](https://www.readysetink.com/card/light-the-fuse.html): Ruby / Steel, cost 1, Action, Uncommon
+- [Lilo - Best Explorer Ever](https://www.readysetink.com/card/lilo-best-explorer-ever.html): Steel, cost 3, Character, Super Rare
+- [Lilo - Bundled Up](https://www.readysetink.com/card/lilo-bundled-up.html): Steel, cost 2, Character, Super Rare
+- [Lilo - Galactic Hero](https://www.readysetink.com/card/lilo-galactic-hero.html): Steel, cost 3, Character, Uncommon
+- [Lilo & Stitch - Fun-Loving Friends](https://www.readysetink.com/card/lilo-stitch-fun-loving-friends.html): Amber / Steel, cost 5, Character, Super Rare
+- [Ling - Imperial Soldier](https://www.readysetink.com/card/ling-imperial-soldier.html): Steel, cost 3, Character, Uncommon
+- [Little John - Resourceful Outlaw](https://www.readysetink.com/card/little-john-resourceful-outlaw.html): Steel, cost 6, Character, Super Rare
+- [Little John - Robin's Pal](https://www.readysetink.com/card/little-john-robins-pal.html): Steel, cost 3, Character, Uncommon
+- [Little John - Sir Reginald](https://www.readysetink.com/card/little-john-sir-reginald.html): Steel, cost 2, Character, Uncommon
+- [Look What You've Done](https://www.readysetink.com/card/look-what-youve-done.html): Steel, cost 2, Action, Uncommon
+- [Lord Dingwall - Bullheaded](https://www.readysetink.com/card/lord-dingwall-bullheaded.html): Steel, cost 5, Character, Uncommon
+- [Lord Macintosh - Wiry and High-Strung](https://www.readysetink.com/card/lord-macintosh-wiry-and-high-strung.html): Steel, cost 4, Character, Uncommon
+- [Luisa Madrigal - Rock of the Family](https://www.readysetink.com/card/luisa-madrigal-rock-of-the-family.html): Steel, cost 3, Character, Common
+- [Lythos - Rock Titan](https://www.readysetink.com/card/lythos-rock-titan.html): Steel, cost 4, Character, Uncommon
+- [Magic Broom - Aerial Cleaner](https://www.readysetink.com/card/magic-broom-aerial-cleaner.html): Steel, cost 2, Character, Common
+- [Magic Broom - Brigade Commander](https://www.readysetink.com/card/magic-broom-brigade-commander.html): Steel, cost 6, Character, Super Rare
+- [Magic Broom - Industrial Model](https://www.readysetink.com/card/magic-broom-industrial-model.html): Steel, cost 3, Character, Common
+- [Magic Carpet - Phantom Rug](https://www.readysetink.com/card/magic-carpet-phantom-rug.html): Steel, cost 3, Character, Common
+- [Maid Marian - Badminton Ace](https://www.readysetink.com/card/maid-marian-badminton-ace.html): Sapphire / Steel, cost 4, Character, Super Rare
+- [Maleficent & Diablo - Evil Incarnate](https://www.readysetink.com/card/maleficent-diablo-evil-incarnate.html): Amethyst / Steel, cost 7, Character, Rare
+- [Map of Treasure Planet](https://www.readysetink.com/card/map-of-treasure-planet.html): Steel, cost 3, Item, Rare
+- [Marie - Caught in the Act](https://www.readysetink.com/card/marie-caught-in-the-act.html): Steel, cost 1, Character, Rare
+- [Mata - Meat Hut Waitress](https://www.readysetink.com/card/mata-meat-hut-waitress.html): Steel, cost 1, Character, Common
+- [Maudie - Exasperated Nursemaid](https://www.readysetink.com/card/maudie-exasperated-nursemaid.html): Steel, cost 3, Character, Uncommon
+- [Maui - Demigod](https://www.readysetink.com/card/maui-demigod.html): Steel, cost 8, Character, Rare
+- [Maui - Stubborn Trickster](https://www.readysetink.com/card/maui-stubborn-trickster.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Maui's Place of Exile - Hidden Island](https://www.readysetink.com/card/mauis-place-of-exile-hidden-island.html): Steel, cost 2, Location, Rare
+- [Maximus - Relentless Stallion](https://www.readysetink.com/card/maximus-relentless-stallion.html): Steel, cost 5, Character, Rare
+- [Mayor Winddancer - Actor-Turned-Politician](https://www.readysetink.com/card/mayor-winddancer-actor-turned-politician.html): Steel, cost 4, Character, Rare
+- [McHorn - Ice-Cold Officer](https://www.readysetink.com/card/mchorn-ice-cold-officer.html): Steel, cost 5, Character, Common
+- [Megavolt - Electrical Menace](https://www.readysetink.com/card/megavolt-electrical-menace.html): Steel, cost 4, Character, Uncommon
+- [Merida - Formidable Archer](https://www.readysetink.com/card/merida-formidable-archer.html): Steel, cost 5, Character, Legendary
+- [Mickey Mouse - Food Fight Defender](https://www.readysetink.com/card/mickey-mouse-food-fight-defender.html): Steel, cost 1, Character, Common
+- [Mickey Mouse - Giant Mouse](https://www.readysetink.com/card/mickey-mouse-giant-mouse.html): Steel, cost 10, Character, Legendary
+- [Mickey Mouse - Inspirational Warrior](https://www.readysetink.com/card/mickey-mouse-inspirational-warrior.html): Steel, cost 2, Character, Legendary
+- [Mickey Mouse - Musketeer](https://www.readysetink.com/card/mickey-mouse-musketeer.html): Steel, cost 6, Character, Rare
+- [Mickey Mouse - Night Watch](https://www.readysetink.com/card/mickey-mouse-night-watch.html): Steel, cost 3, Character, Uncommon
+- [Mickey Mouse - Playful Sorcerer](https://www.readysetink.com/card/mickey-mouse-playful-sorcerer.html): Steel, cost 5, Character, Rare
+- [Mickey Mouse - Stalwart Explorer](https://www.readysetink.com/card/mickey-mouse-stalwart-explorer.html): Steel, cost 3, Character, Common
+- [Mickey Mouse - Standard Bearer](https://www.readysetink.com/card/mickey-mouse-standard-bearer.html): Steel, cost 2, Character, Common
+- [Mickey Mouse - Trumpeter](https://www.readysetink.com/card/mickey-mouse-trumpeter.html): Steel, cost 4, Character, Legendary
+- [Minnie Mouse - Funky Spelunker](https://www.readysetink.com/card/minnie-mouse-funky-spelunker.html): Steel, cost 1, Character, Common
+- [Minnie Mouse - Ghost Hunter](https://www.readysetink.com/card/minnie-mouse-ghost-hunter.html): Steel, cost 2, Character, Common
+- [Miss Bianca - Unwavering Agent](https://www.readysetink.com/card/miss-bianca-unwavering-agent.html): Steel, cost 6, Character, Common
+- [Monterey Jack - Defiant Protector](https://www.readysetink.com/card/monterey-jack-defiant-protector.html): Steel, cost 5, Character, Common
+- [Mouse Armor](https://www.readysetink.com/card/mouse-armor.html): Steel, cost 2, Item, Uncommon
+- [Mr. Arrow - Legacy's First Mate](https://www.readysetink.com/card/mr-arrow-legacys-first-mate.html): Steel, cost 2, Character, Common
+- [Mr. Big - Shrewd Tycoon](https://www.readysetink.com/card/mr-big-shrewd-tycoon.html): Steel, cost 4, Character, Rare
+- [Mr. Incredible - Taking Out the Trash](https://www.readysetink.com/card/mr-incredible-taking-out-the-trash.html): Steel, cost 4, Character, Uncommon
+- [Mr. Smee - Bumbling Mate](https://www.readysetink.com/card/mr-smee-bumbling-mate.html): Steel, cost 2, Character, Uncommon
+- [Mr. Smee - Captain of the Jolly Roger](https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html): Steel, cost 6, Character, Super Rare
+- [Mr. Smee - Efficient Captain](https://www.readysetink.com/card/mr-smee-efficient-captain.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Mr. Smee - Steadfast Mate](https://www.readysetink.com/card/mr-smee-steadfast-mate.html): Steel, cost 2, Character, Uncommon
+- [Mrs. Incredible - Determined Rescuer](https://www.readysetink.com/card/mrs-incredible-determined-rescuer.html): Steel, cost 7, Character, Legendary
+- [Mrs. Incredible - Helen Parr](https://www.readysetink.com/card/mrs-incredible-helen-parr.html): Steel, cost 2, Character, Common
+- [Mufasa - Among the Stars](https://www.readysetink.com/card/mufasa-among-the-stars.html): Amethyst / Steel, cost 7, Character, Uncommon
+- [Mufasa - Champion of the Pride Lands](https://www.readysetink.com/card/mufasa-champion-of-the-pride-lands.html): Steel, cost 7, Character, Rare
+- [Mufasa - Respected King](https://www.readysetink.com/card/mufasa-respected-king.html): Steel, cost 4, Character, Uncommon
+- [Mulan - Armored Fighter](https://www.readysetink.com/card/mulan-armored-fighter.html): Steel, cost 4, Character, Uncommon
+- [Mulan - Charging Ahead](https://www.readysetink.com/card/mulan-charging-ahead.html): Ruby / Steel, cost 4, Character, Super Rare
+- [Mulan - Created by the Vine](https://www.readysetink.com/card/mulan-created-by-the-vine.html): Steel, cost 4, Character, Common
+- [Mulan - Disguised Soldier](https://www.readysetink.com/card/mulan-disguised-soldier.html): Steel, cost 1, Character, Common
+- [Mulan - Imperial General](https://www.readysetink.com/card/mulan-imperial-general.html): Ruby / Steel, cost 7, Character, Super Rare
+- [Mullins - Seasoned Shipmate](https://www.readysetink.com/card/mullins-seasoned-shipmate.html): Steel, cost 5, Character, Common
+- [Mushu - Majestic Dragon](https://www.readysetink.com/card/mushu-majestic-dragon.html): Ruby / Steel, cost 5, Character, Rare
+- [Mushu - Your Worst Nightmare](https://www.readysetink.com/card/mushu-your-worst-nightmare.html): Ruby / Steel, cost 6, Character, Rare
+- [Musketeer Tabard](https://www.readysetink.com/card/musketeer-tabard.html): Steel, cost 4, Item, Rare
+- [Nala - Fierce Friend](https://www.readysetink.com/card/nala-fierce-friend.html): Steel, cost 3, Character, Uncommon
+- [Nala - Undaunted Lioness](https://www.readysetink.com/card/nala-undaunted-lioness.html): Steel, cost 2, Character, Rare
+- [Namaari - Morning Mist](https://www.readysetink.com/card/namaari-morning-mist.html): Steel, cost 4, Character, Legendary
+- [Namaari - Resolute Daughter](https://www.readysetink.com/card/namaari-resolute-daughter.html): Steel, cost 9, Character, Rare
+- [Namaari - Single-Minded Rival](https://www.readysetink.com/card/namaari-single-minded-rival.html): Steel, cost 5, Character, Legendary
+- [Nani - No Worries](https://www.readysetink.com/card/nani-no-worries.html): Steel, cost 2, Character, Common
+- [Napoleon - Patient Watchdog](https://www.readysetink.com/card/napoleon-patient-watchdog.html): Steel, cost 3, Character, Common
+- [Nathaniel Flint - Notorious Pirate](https://www.readysetink.com/card/nathaniel-flint-notorious-pirate.html): Steel, cost 2, Character, Rare
+- [Nearly Indestructible](https://www.readysetink.com/card/nearly-indestructible.html): Steel, cost 1, Action, Common
+- [Nick Wilde - Persistent Investigator](https://www.readysetink.com/card/nick-wilde-persistent-investigator.html): Steel, cost 5, Character, Rare
+- [Nick Wilde - Sly Fox Sleuth](https://www.readysetink.com/card/nick-wilde-sly-fox-sleuth.html): Steel, cost 1, Character, Common
+- [Nottingham - Prince John's Castle](https://www.readysetink.com/card/nottingham-prince-johns-castle.html): Steel, cost 2, Location, Common
+- [Olympus Would Be That Way](https://www.readysetink.com/card/olympus-would-be-that-way.html): Steel, cost 1, Action, Common
+- [Omnidroid - Scanning for Threats](https://www.readysetink.com/card/omnidroid-scanning-for-threats.html): Steel, cost 3, Character, Common
+- [Omnidroid - Ultimate Iteration](https://www.readysetink.com/card/omnidroid-ultimate-iteration.html): Steel, cost 8, Character, Rare
+- [Omnidroid - V.10](https://www.readysetink.com/card/omnidroid-v-10.html): Steel, cost 6, Character, Rare
+- [Omnidroid - V.8](https://www.readysetink.com/card/omnidroid-v-8.html): Steel, cost 1, Character, Common
+- [Omnidroid - V.9](https://www.readysetink.com/card/omnidroid-v-9.html): Steel, cost 4, Character, Uncommon
+- [One Last Hope](https://www.readysetink.com/card/one-last-hope.html): Steel, cost 3, Action, Rare
+- [Orville - Albatross Air](https://www.readysetink.com/card/orville-albatross-air.html): Steel, cost 3, Character, Common
+- [Owl - Hunny Ranger](https://www.readysetink.com/card/owl-hunny-ranger.html): Steel, cost 2, Character, Common
+- [Pacha - Village Leader](https://www.readysetink.com/card/pacha-village-leader.html): Steel, cost 6, Character, Uncommon
+- [Penny - Bolt's Person](https://www.readysetink.com/card/penny-bolts-person.html): Amber / Steel, cost 2, Character, Uncommon
+- [Pete - Games Referee](https://www.readysetink.com/card/pete-games-referee.html): Steel, cost 3, Character, Uncommon
+- [Pete - Space Pirate](https://www.readysetink.com/card/pete-space-pirate.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Pete - Wrestling Champ](https://www.readysetink.com/card/pete-wrestling-champ.html): Steel, cost 3, Character, Rare
+- [Philoctetes - No-Nonsense Instructor](https://www.readysetink.com/card/philoctetes-no-nonsense-instructor.html): Steel, cost 4, Character, Rare
+- [Pick a Fight](https://www.readysetink.com/card/pick-a-fight.html): Steel, cost 2, Action, Uncommon
+- [Piglet - Sturdy Swordsman](https://www.readysetink.com/card/piglet-sturdy-swordsman.html): Steel, cost 5, Character, Legendary
+- [Plasma Blaster](https://www.readysetink.com/card/plasma-blaster.html): Steel, cost 3, Item, Rare
+- [Plate Armor](https://www.readysetink.com/card/plate-armor.html): Steel, cost 4, Item, Rare
+- [Plunger Crossbow](https://www.readysetink.com/card/plunger-crossbow.html): Steel, cost 1, Item, Common
+- [Pluto - Guard Dog](https://www.readysetink.com/card/pluto-guard-dog.html): Steel, cost 4, Character, Uncommon
+- [Pluto - Steel Champion](https://www.readysetink.com/card/pluto-steel-champion.html): Steel, cost 5, Character, Rare
+- [Pluto - Tried and True](https://www.readysetink.com/card/pluto-tried-and-true.html): Amber / Steel, cost 6, Character, Uncommon
+- [Pocahontas - Steadfast Traveler](https://www.readysetink.com/card/pocahontas-steadfast-traveler.html): Steel, cost 4, Character, Rare
+- [Prince Achmed - Rival Suitor](https://www.readysetink.com/card/prince-achmed-rival-suitor.html): Steel, cost 2, Character, Common
+- [Prince Charming - Protector of the Realm](https://www.readysetink.com/card/prince-charming-protector-of-the-realm.html): Steel, cost 7, Character, Legendary
+- [Prince Eric - Dashing and Brave](https://www.readysetink.com/card/prince-eric-dashing-and-brave.html): Steel, cost 2, Character, Common
+- [Prince Naveen - Bundled Up](https://www.readysetink.com/card/prince-naveen-bundled-up.html): Steel, cost 5, Character, Common
+- [Prince Naveen - Penniless Royal](https://www.readysetink.com/card/prince-naveen-penniless-royal.html): Steel, cost 3, Character, Common
+- [Putting It All Together](https://www.readysetink.com/card/putting-it-all-together.html): Steel, cost 2, Action, Common
+- [Pyros - Lava Titan](https://www.readysetink.com/card/pyros-lava-titan.html): Steel, cost 5, Character, Rare
+- [Queen of Hearts - Capricious Monarch](https://www.readysetink.com/card/queen-of-hearts-capricious-monarch.html): Steel, cost 7, Character, Rare
+- [Quick Shot](https://www.readysetink.com/card/quick-shot.html): Steel, cost 2, Action, Uncommon
+- [RLS Legacy's Cannon](https://www.readysetink.com/card/rls-legacys-cannon.html): Steel, cost 3, Item, Rare
+- [Rajah - Royal Protector](https://www.readysetink.com/card/rajah-royal-protector.html): Steel, cost 4, Character, Rare
+- [Ransack](https://www.readysetink.com/card/ransack.html): Steel, cost 2, Action, Uncommon
+- [Rapunzel - Ethereal Protector](https://www.readysetink.com/card/rapunzel-ethereal-protector.html): Steel, cost 3, Character, Rare
+- [Rapunzel & Flynn Rider - Unlikely Pair](https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html): Emerald / Steel, cost 5, Character, Legendary
+- [Rat Capone - Rodent Gangster](https://www.readysetink.com/card/rat-capone-rodent-gangster.html): Steel, cost 4, Character, Common
+- [Raya - Guidance Seeker](https://www.readysetink.com/card/raya-guidance-seeker.html): Steel, cost 3, Character, Rare
+- [Raya - Unstoppable Force](https://www.readysetink.com/card/raya-unstoppable-force.html): Steel, cost 7, Character, Super Rare
+- [Razoul - Menacing Guard](https://www.readysetink.com/card/razoul-menacing-guard.html): Steel, cost 2, Character, Common
+- [Razoul - Palace Guard](https://www.readysetink.com/card/razoul-palace-guard.html): Steel, cost 2, Character, Common
+- [Restoring Atlantis](https://www.readysetink.com/card/restoring-atlantis.html): Steel, cost 5, Action, Rare
+- [Restoring the Crown](https://www.readysetink.com/card/restoring-the-crown.html): Amethyst / Steel, cost 6, Action, Rare
+- [Rhino - Motivational Speaker](https://www.readysetink.com/card/rhino-motivational-speaker.html): Amber / Steel, cost 6, Character, Rare
+- [Rhino - Power Hamster](https://www.readysetink.com/card/rhino-power-hamster.html): Amber / Steel, cost 4, Character, Super Rare
+- [Rise of the Titans](https://www.readysetink.com/card/rise-of-the-titans.html): Steel, cost 3, Action, Uncommon
+- [Robin Hood - Beloved Outlaw](https://www.readysetink.com/card/robin-hood-beloved-outlaw.html): Steel, cost 1, Character, Common
+- [Robin Hood - Capable Fighter](https://www.readysetink.com/card/robin-hood-capable-fighter.html): Steel, cost 2, Character, Uncommon
+- [Robin Hood - Champion of Sherwood](https://www.readysetink.com/card/robin-hood-champion-of-sherwood.html): Steel, cost 5, Character, Legendary
+- [Robin Hood - Ephemeral Archer](https://www.readysetink.com/card/robin-hood-ephemeral-archer.html): Steel, cost 4, Character, Rare
+- [Royal Guard - Bovine Protector](https://www.readysetink.com/card/royal-guard-bovine-protector.html): Steel, cost 4, Character, Common
+- [Rudy - Groove Disrupter](https://www.readysetink.com/card/rudy-groove-disrupter.html): Steel, cost 1, Character, Common
+- [Scar - Created by the Vine](https://www.readysetink.com/card/scar-created-by-the-vine.html): Steel, cost 5, Character, Legendary
+- [Scar - Finally King](https://www.readysetink.com/card/scar-finally-king.html): Steel, cost 5, Character, Legendary
+- [Seven Dwarfs' Mine - Secure Fortress](https://www.readysetink.com/card/seven-dwarfs-mine-secure-fortress.html): Steel, cost 2, Location, Uncommon
+- [She's Your Person](https://www.readysetink.com/card/shes-your-person.html): Amber / Steel, cost 1, Action, Uncommon
+- [Shere Khan - Khan Industries CEO](https://www.readysetink.com/card/shere-khan-khan-industries-ceo.html): Steel, cost 4, Character, Legendary
+- [Sheriff of Nottingham - Corrupt Official](https://www.readysetink.com/card/sheriff-of-nottingham-corrupt-official.html): Steel, cost 4, Character, Super Rare
+- [Sheriff of Nottingham - Vine Slayer](https://www.readysetink.com/card/sheriff-of-nottingham-vine-slayer.html): Steel, cost 5, Character, Common
+- [Shield of Arendelle](https://www.readysetink.com/card/shield-of-arendelle.html): Steel, cost 1, Item, Common
+- [Simba - Fighting Prince](https://www.readysetink.com/card/simba-fighting-prince.html): Steel, cost 7, Character, Super Rare
+- [Simba - Future King](https://www.readysetink.com/card/simba-future-king.html): Steel, cost 1, Character, Common
+- [Simba - Lost Prince](https://www.readysetink.com/card/simba-lost-prince.html): Steel, cost 3, Character, Common
+- [Simba - Returned King](https://www.readysetink.com/card/simba-returned-king.html): Steel, cost 7, Character, Rare
+- [Simba - Rightful Heir](https://www.readysetink.com/card/simba-rightful-heir.html): Steel, cost 5, Character, Uncommon
+- [Simba - Rightful King](https://www.readysetink.com/card/simba-rightful-king.html): Steel, cost 5, Character, Uncommon
+- [Simba - Son of Mufasa](https://www.readysetink.com/card/simba-son-of-mufasa.html): Steel, cost 6, Character, Uncommon
+- [Sir Ector - Castle Lord](https://www.readysetink.com/card/sir-ector-castle-lord.html): Steel, cost 7, Character, Rare
+- [Sir Pellinore - Tougher Than He Looks](https://www.readysetink.com/card/sir-pellinore-tougher-than-he-looks.html): Steel, cost 3, Character, Uncommon
+- [Sleepy - Sluggish Knight](https://www.readysetink.com/card/sleepy-sluggish-knight.html): Steel, cost 2, Character, Uncommon
+- [Smash](https://www.readysetink.com/card/smash.html): Steel, cost 3, Action, Uncommon
+- [Sneezy - Noisy Knight](https://www.readysetink.com/card/sneezy-noisy-knight.html): Steel, cost 4, Character, Common
+- [Snow White - Fair-Hearted](https://www.readysetink.com/card/snow-white-fair-hearted.html): Steel, cost 5, Character, Super Rare
+- [Sprout - Experiment 509](https://www.readysetink.com/card/sprout-experiment-509.html): Steel, cost 5, Character, Rare
+- [Starkey - Hook's Henchman](https://www.readysetink.com/card/starkey-hooks-henchman.html): Steel, cost 5, Character, Uncommon
+- [Steel Chromicon](https://www.readysetink.com/card/steel-chromicon.html): Steel, cost 6, Item, Uncommon
+- [Steel Coil](https://www.readysetink.com/card/steel-coil.html): Steel, cost 2, Item, Uncommon
+- [Stitch - Alien Troublemaker](https://www.readysetink.com/card/stitch-alien-troublemaker.html): Steel, cost 4, Character, Rare
+- [Stitch - High Badness Level](https://www.readysetink.com/card/stitch-high-badness-level.html): Steel, cost 2, Character, Common
+- [Stitch - Protector of Frogs](https://www.readysetink.com/card/stitch-protector-of-frogs.html): Steel, cost 1, Character, Common
+- [Stitch - Team Underdog](https://www.readysetink.com/card/stitch-team-underdog.html): Steel, cost 4, Character, Uncommon
+- [Strength of a Raging Fire](https://www.readysetink.com/card/strength-of-a-raging-fire.html): Steel, cost 3, Action, Rare
+- [Sunglasses](https://www.readysetink.com/card/sunglasses.html): Steel, cost 4, Item, Common
+- [Syndrome - Out for Revenge](https://www.readysetink.com/card/syndrome-out-for-revenge.html): Steel, cost 6, Character, Super Rare
+- [Syndrome's Remote](https://www.readysetink.com/card/syndromes-remote.html): Steel, cost 2, Item, Rare
+- [Te Kā - Heartless](https://www.readysetink.com/card/te-k-heartless.html): Steel, cost 6, Character, Legendary
+- [Thaddeus E. Klang - Metallic Leader](https://www.readysetink.com/card/thaddeus-e-klang-metallic-leader.html): Steel, cost 5, Character, Uncommon
+- [The Bayou - Mysterious Swamp](https://www.readysetink.com/card/the-bayou-mysterious-swamp.html): Steel, cost 1, Location, Uncommon
+- [The Coachman - Greedy Deceiver](https://www.readysetink.com/card/the-coachman-greedy-deceiver.html): Ruby / Steel, cost 2, Character, Uncommon
+- [The Game's Afoot!](https://www.readysetink.com/card/the-games-afoot.html): Steel, cost 2, Action, Uncommon
+- [The Headless Horseman - Cursed Rider](https://www.readysetink.com/card/the-headless-horseman-cursed-rider.html): Steel, cost 8, Character, Super Rare
+- [The Headless Horseman - Relentless Spirit](https://www.readysetink.com/card/the-headless-horseman-relentless-spirit.html): Steel, cost 4, Character, Common
+- [The Huntsman - Reluctant Enforcer](https://www.readysetink.com/card/the-huntsman-reluctant-enforcer.html): Steel, cost 2, Character, Rare
+- [The Irate Chef - Meat Hut Cook](https://www.readysetink.com/card/the-irate-chef-meat-hut-cook.html): Steel, cost 4, Character, Uncommon
+- [The Island of Nomanisan - Syndrome's Headquarters](https://www.readysetink.com/card/the-island-of-nomanisan-syndromes-headquarters.html): Steel, cost 3, Location, Rare
+- [The Mob Song](https://www.readysetink.com/card/the-mob-song.html): Steel, cost 10, Action, Uncommon
+- [The Prince - Never Gives Up](https://www.readysetink.com/card/the-prince-never-gives-up.html): Steel, cost 3, Character, Uncommon
+- [The Robot Queen](https://www.readysetink.com/card/the-robot-queen.html): Steel, cost 1, Item, Uncommon
+- [The Sultan - Royal Apparition](https://www.readysetink.com/card/the-sultan-royal-apparition.html): Amethyst / Steel, cost 5, Character, Rare
+- [The Sword of Hercules](https://www.readysetink.com/card/the-sword-of-hercules.html): Steel, cost 2, Item, Rare
+- [The Terror That Flaps in the Night](https://www.readysetink.com/card/the-terror-that-flaps-in-the-night.html): Steel, cost 2, Action, Common
+- [The Thunderquack](https://www.readysetink.com/card/the-thunderquack.html): Steel, cost 3, Item, Rare
+- [The Troubadour - Musical Narrator](https://www.readysetink.com/card/the-troubadour-musical-narrator.html): Amber / Steel, cost 2, Character, Uncommon
+- [The Twins - Lost Boys](https://www.readysetink.com/card/the-twins-lost-boys.html): Steel, cost 6, Character, Common
+- [The Vine - Towering Stalk](https://www.readysetink.com/card/the-vine-towering-stalk.html): Steel, cost 10, Character, Super Rare
+- [The Wall - Border Fortress](https://www.readysetink.com/card/the-wall-border-fortress.html): Steel, cost 4, Location, Rare
+- [The Weedwhacker](https://www.readysetink.com/card/the-weedwhacker.html): Steel, cost 3, Item, Uncommon
+- [Thebes - The Big Olive](https://www.readysetink.com/card/thebes-the-big-olive.html): Steel, cost 2, Location, Common
+- [Three Arrows](https://www.readysetink.com/card/three-arrows.html): Steel, cost 3, Action, Uncommon
+- [Tiana - Celebrating Princess](https://www.readysetink.com/card/tiana-celebrating-princess.html): Steel, cost 4, Character, Super Rare
+- [Tiana - Diligent Waitress](https://www.readysetink.com/card/tiana-diligent-waitress.html): Steel, cost 1, Character, Common
+- [Tiana - Party Hostess](https://www.readysetink.com/card/tiana-party-hostess.html): Steel, cost 7, Character, Legendary
+- [Tick-Tock - Canal Croc](https://www.readysetink.com/card/tick-tock-canal-croc.html): Steel, cost 8, Character, Uncommon
+- [Tick-Tock - Relentless Crocodile](https://www.readysetink.com/card/tick-tock-relentless-crocodile.html): Steel, cost 5, Character, Common
+- [Tinker Bell - Giant Fairy](https://www.readysetink.com/card/tinker-bell-giant-fairy.html): Steel, cost 6, Character, Super Rare
+- [Tinker Bell - Tiny Tactician](https://www.readysetink.com/card/tinker-bell-tiny-tactician.html): Steel, cost 3, Character, Common
+- [Toby Turtle - Wary Friend](https://www.readysetink.com/card/toby-turtle-wary-friend.html): Steel, cost 2, Character, Common
+- [Touch the Sky](https://www.readysetink.com/card/touch-the-sky.html): Steel, cost 2, Action, Rare
+- [Toulouse - Rough and Tumble](https://www.readysetink.com/card/toulouse-rough-and-tumble.html): Steel, cost 2, Character, Uncommon
+- [Training Dummy](https://www.readysetink.com/card/training-dummy.html): Steel, cost 2, Item, Uncommon
+- [Training Staff](https://www.readysetink.com/card/training-staff.html): Steel, cost 2, Item, Common
+- [Treasure Mountain - Azurite Sea Island](https://www.readysetink.com/card/treasure-mountain-azurite-sea-island.html): Steel, cost 5, Location, Rare
+- [Triton's Decree](https://www.readysetink.com/card/tritons-decree.html): Steel, cost 1, Action, Common
+- [Tug-of-War](https://www.readysetink.com/card/tug-of-war.html): Steel, cost 5, Action, Rare
+- [Tuk Tuk - Big Buddy](https://www.readysetink.com/card/tuk-tuk-big-buddy.html): Steel, cost 5, Character, Uncommon
+- [Tuk Tuk - Disarmingly Cute](https://www.readysetink.com/card/tuk-tuk-disarmingly-cute.html): Steel, cost 2, Character, Rare
+- [Twin Fire](https://www.readysetink.com/card/twin-fire.html): Steel, cost 2, Action, Common
+- [Unfortunate Situation](https://www.readysetink.com/card/unfortunate-situation.html): Steel, cost 4, Action, Uncommon
+- [Vincenzo Santorini - The Explosives Expert](https://www.readysetink.com/card/vincenzo-santorini-the-explosives-expert.html): Steel, cost 7, Character, Rare
+- [Vine Entrance - Ominous Passageway](https://www.readysetink.com/card/vine-entrance-ominous-passageway.html): Steel, cost 3, Location, Rare
+- [Vinnie - Green Pigeon](https://www.readysetink.com/card/vinnie-green-pigeon.html): Steel, cost 3, Character, Rare
+- [Violet Parr - At Wits' End](https://www.readysetink.com/card/violet-parr-at-wits-end.html): Steel, cost 1, Character, Common
+- [Violet Parr - Force Field Practice](https://www.readysetink.com/card/violet-parr-force-field-practice.html): Steel, cost 2, Character, Common
+- [Violet Parr - Super Resilient](https://www.readysetink.com/card/violet-parr-super-resilient.html): Steel, cost 5, Character, Super Rare
+- [Walk the Plank!](https://www.readysetink.com/card/walk-the-plank.html): Emerald / Steel, cost 3, Action, Uncommon
+- [We'll Save Our Village](https://www.readysetink.com/card/well-save-our-village.html): Steel, cost 2, Action, Common
+- [Wee Dingwall - Scrappy Lad](https://www.readysetink.com/card/wee-dingwall-scrappy-lad.html): Steel, cost 3, Character, Common
+- [Weight Set](https://www.readysetink.com/card/weight-set.html): Steel, cost 3, Item, Rare
+- [When Will My Life Begin?](https://www.readysetink.com/card/when-will-my-life-begin.html): Steel, cost 3, Action, Common
+- [Willie the Giant - Created by the Vine](https://www.readysetink.com/card/willie-the-giant-created-by-the-vine.html): Steel, cost 6, Character, Uncommon
+- [Windstorm](https://www.readysetink.com/card/windstorm.html): Steel, cost 4, Action, Rare
+- [Winterspell](https://www.readysetink.com/card/winterspell.html): Steel, cost 1, Action, Uncommon
+- [Woolter & Jesse - Bellwether's Henchmen](https://www.readysetink.com/card/woolter-jesse-bellwethers-henchmen.html): Steel, cost 3, Character, Uncommon
+- [Wreck-It Ralph - Ham Hands](https://www.readysetink.com/card/wreck-it-ralph-ham-hands.html): Steel, cost 6, Character, Legendary
+- [Yao - Imperial Soldier](https://www.readysetink.com/card/yao-imperial-soldier.html): Steel, cost 4, Character, Common
+- [You Broke My Smolder](https://www.readysetink.com/card/you-broke-my-smolder.html): Steel, cost 1, Action, Uncommon
+- [Young Macintosh - Proud Son](https://www.readysetink.com/card/young-macintosh-proud-son.html): Steel, cost 3, Character, Common
+- [Yzma - Unjustly Treated](https://www.readysetink.com/card/yzma-unjustly-treated.html): Steel, cost 4, Character, Rare
+- [Zeus - Missing His Spark](https://www.readysetink.com/card/zeus-missing-his-spark.html): Steel, cost 3, Character, Uncommon
+- [Zipper - Flying Ranger](https://www.readysetink.com/card/zipper-flying-ranger.html): Steel, cost 3, Character, Uncommon
+- [Zootopia - Police Headquarters](https://www.readysetink.com/card/zootopia-police-headquarters.html): Steel, cost 1, Location, Uncommon

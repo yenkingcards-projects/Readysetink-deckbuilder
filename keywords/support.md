@@ -1,0 +1,64 @@
+# Support: Disney Lorcana keyword
+
+Source: https://www.readysetink.com/keywords/support/
+
+Whenever this character quests, you may add its Strength to another chosen character's Strength for the rest of the turn. Official rule 8.13. 58 cards.
+
+- [Agustin Madrigal - Exceptionally Kind](https://www.readysetink.com/card/agustin-madrigal-exceptionally-kind.html): Amber, cost 4, Character, Common, Support
+- [Anna - Ice Breaker](https://www.readysetink.com/card/anna-ice-breaker.html): Amethyst / Sapphire, cost 4, Character, Uncommon, Support
+- [Anna - Magical Mission](https://www.readysetink.com/card/anna-magical-mission.html): Amethyst / Sapphire, cost 6, Character, Rare, Support
+- [Anna - Making Snow Plans](https://www.readysetink.com/card/anna-making-snow-plans.html): Sapphire, cost 4, Character, Common, Support
+- [B.E.N. - Eccentric Robot](https://www.readysetink.com/card/b-e-n-eccentric-robot.html): Sapphire, cost 4, Character, Common, Support
+- [Baloo - Friend and Guardian](https://www.readysetink.com/card/baloo-friend-and-guardian.html): Amber, cost 6, Character, Rare, Support
+- [Basil - Of Baker Street](https://www.readysetink.com/card/basil-of-baker-street.html): Sapphire, cost 2, Character, Common, Support
+- [Basil - Practiced Detective](https://www.readysetink.com/card/basil-practiced-detective.html): Sapphire, cost 1, Character, Common, Support
+- [Baymax - Upgraded Robot](https://www.readysetink.com/card/baymax-upgraded-robot.html): Sapphire, cost 5, Character, Rare, Support
+- [Blue Fairy - Guiding Light](https://www.readysetink.com/card/blue-fairy-guiding-light.html): Amethyst / Sapphire, cost 2, Character, Uncommon, Support
+- [Bolt - Dependable Friend](https://www.readysetink.com/card/bolt-dependable-friend.html): Amber, cost 4, Character, Common, Support
+- [Chicha - Dedicated Mother](https://www.readysetink.com/card/chicha-dedicated-mother.html): Sapphire, cost 2, Character, Rare, Support
+- [Chief Tui - Respected Leader](https://www.readysetink.com/card/chief-tui-respected-leader.html): Sapphire, cost 7, Character, Uncommon, Support
+- [Clarabelle - News Reporter](https://www.readysetink.com/card/clarabelle-news-reporter.html): Sapphire, cost 4, Character, Rare, Support
+- [Daisy Duck - Ghost Finder](https://www.readysetink.com/card/daisy-duck-ghost-finder.html): Sapphire, cost 2, Character, Common, Support
+- [Daisy Duck - Paranormal Investigator](https://www.readysetink.com/card/daisy-duck-paranormal-investigator.html): Sapphire, cost 6, Character, Legendary, Support
+- [Dewey - Showy Nephew](https://www.readysetink.com/card/dewey-showy-nephew.html): Sapphire, cost 3, Character, Uncommon, Support
+- [Eilonwy - Princess of Llyr](https://www.readysetink.com/card/eilonwy-princess-of-llyr.html): Amber, cost 1, Character, Common, Support
+- [Fauna - Good-Natured Fairy](https://www.readysetink.com/card/fauna-good-natured-fairy.html): Sapphire, cost 1, Character, Common, Support
+- [Flounder - Collector's Companion](https://www.readysetink.com/card/flounder-collectors-companion.html): Sapphire, cost 3, Character, Uncommon, Support
+- [Happy - Good-Natured](https://www.readysetink.com/card/happy-good-natured.html): Amber, cost 5, Character, Common, Support
+- [HeiHei - Boat Snack](https://www.readysetink.com/card/heihei-boat-snack.html): Amber, cost 1, Character, Common, Support
+- [Huey - Savvy Nephew](https://www.readysetink.com/card/huey-savvy-nephew.html): Sapphire, cost 2, Character, Rare, Support
+- [Jebidiah Farnsworth - Expedition Cook](https://www.readysetink.com/card/jebidiah-farnsworth-expedition-cook.html): Sapphire, cost 4, Character, Uncommon, Support
+- [Judy Hopps - Day Camp Instructor](https://www.readysetink.com/card/judy-hopps-day-camp-instructor.html): Sapphire, cost 2, Character, Rare, Support
+- [Judy Hopps - Resourceful Rabbit](https://www.readysetink.com/card/judy-hopps-resourceful-rabbit.html): Amber, cost 6, Character, Rare, Support
+- [Lilo - Junior Cake Decorator](https://www.readysetink.com/card/lilo-junior-cake-decorator.html): Amber, cost 2, Character, Common, Support
+- [Lilo - Patient Weaver](https://www.readysetink.com/card/lilo-patient-weaver.html): Amber, cost 2, Character, Common, Support
+- [Lilo & Stitch - Fun-Loving Friends](https://www.readysetink.com/card/lilo-stitch-fun-loving-friends.html): Amber / Steel, cost 5, Character, Super Rare, Support
+- [Louie - Chill Nephew](https://www.readysetink.com/card/louie-chill-nephew.html): Sapphire, cost 4, Character, Common, Support
+- [Maximus - Palace Horse](https://www.readysetink.com/card/maximus-palace-horse.html): Amber, cost 5, Character, Super Rare, Support
+- [Merlin - Self-Appointed Mentor](https://www.readysetink.com/card/merlin-self-appointed-mentor.html): Sapphire, cost 4, Character, Common, Support
+- [Mickey Mouse - Leader of the Band](https://www.readysetink.com/card/mickey-mouse-leader-of-the-band.html): Amber, cost 4, Character, Uncommon, Support
+- [Mickey Mouse - Musketeer Captain](https://www.readysetink.com/card/mickey-mouse-musketeer-captain.html): Amber, cost 7, Character, Legendary, Support
+- [Minnie Mouse - Tiny Tim's Mother](https://www.readysetink.com/card/minnie-mouse-tiny-tims-mother.html): Sapphire, cost 3, Character, Common, Support
+- [Mirabel Madrigal - Gift of the Family](https://www.readysetink.com/card/mirabel-madrigal-gift-of-the-family.html): Amber, cost 5, Character, Super Rare, Support
+- [Mirabel Madrigal - Prophecy Finder](https://www.readysetink.com/card/mirabel-madrigal-prophecy-finder.html): Amber, cost 2, Character, Common, Support
+- [Miriam Mendelsohn - Front-Row Fan](https://www.readysetink.com/card/miriam-mendelsohn-front-row-fan.html): Amber, cost 1, Character, Uncommon, Support
+- [Mulan - Free Spirit](https://www.readysetink.com/card/mulan-free-spirit.html): Amber, cost 3, Character, Common, Support
+- [Nani - Caring Sister](https://www.readysetink.com/card/nani-caring-sister.html): Amber, cost 5, Character, Rare, Support
+- [Olaf - Trusting Companion](https://www.readysetink.com/card/olaf-trusting-companion.html): Sapphire, cost 1, Character, Common, Support
+- [Perla - Nimble Seamstress](https://www.readysetink.com/card/perla-nimble-seamstress.html): Amber / Emerald, cost 3, Character, Uncommon, Support
+- [Philoctetes - Trainer of Heroes](https://www.readysetink.com/card/philoctetes-trainer-of-heroes.html): Sapphire, cost 2, Character, Common, Support
+- [Pluto - Suspicious Sentry](https://www.readysetink.com/card/pluto-suspicious-sentry.html): Sapphire, cost 5, Character, Common, Support
+- [Prince Phillip - Gallant Defender](https://www.readysetink.com/card/prince-phillip-gallant-defender.html): Sapphire, cost 3, Character, Rare, Support
+- [Rapunzel - Ready for Adventure](https://www.readysetink.com/card/rapunzel-ready-for-adventure.html): Amber, cost 2, Character, Legendary, Support
+- [Robin Hood - Eye for Detail](https://www.readysetink.com/card/robin-hood-eye-for-detail.html): Sapphire, cost 3, Character, Common, Support
+- [Rolly - Chubby Puppy](https://www.readysetink.com/card/rolly-chubby-puppy.html): Amber / Sapphire, cost 4, Character, Uncommon, Support
+- [Rolly - Hungry Pup](https://www.readysetink.com/card/rolly-hungry-pup.html): Amber, cost 3, Character, Uncommon, Support
+- [Rutt - Northern Moose](https://www.readysetink.com/card/rutt-northern-moose.html): Amber, cost 4, Character, Common, Support
+- [Sheriff of Nottingham - Bushel Britches](https://www.readysetink.com/card/sheriff-of-nottingham-bushel-britches.html): Sapphire, cost 9, Character, Rare, Support
+- [Taran - Pig Keeper](https://www.readysetink.com/card/taran-pig-keeper.html): Amber, cost 5, Character, Uncommon, Support
+- [The Queen - Conceited Ruler](https://www.readysetink.com/card/the-queen-conceited-ruler.html): Amber, cost 3, Character, Rare, Support
+- [Tiana - Warm and Happy](https://www.readysetink.com/card/tiana-warm-and-happy.html): Amber, cost 4, Character, Common, Support
+- [Trusty - Loyal Bloodhound](https://www.readysetink.com/card/trusty-loyal-bloodhound.html): Amber, cost 2, Character, Common, Support
+- [Wasabi - Always Prepared](https://www.readysetink.com/card/wasabi-always-prepared.html): Sapphire, cost 5, Character, Common, Support
+- [Wendy Darling - Authority on Peter Pan](https://www.readysetink.com/card/wendy-darling-authority-on-peter-pan.html): Sapphire, cost 3, Character, Super Rare, Support
+- [Winnie the Pooh - Hunny Pirate](https://www.readysetink.com/card/winnie-the-pooh-hunny-pirate.html): Amber, cost 2, Character, Rare, Support

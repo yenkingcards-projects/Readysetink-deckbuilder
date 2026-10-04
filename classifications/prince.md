@@ -1,0 +1,99 @@
+# Prince: Disney Lorcana Prince cards
+
+Source: https://www.readysetink.com/classifications/prince/
+
+93 cards.
+
+- [Aladdin - Fearless Navigator](https://www.readysetink.com/card/aladdin-fearless-navigator.html): Ruby, cost 2, Character, Common
+- [Aladdin - Intrepid Commander](https://www.readysetink.com/card/aladdin-intrepid-commander.html): Ruby, cost 4, Character, Uncommon
+- [Aladdin - Prince Ali](https://www.readysetink.com/card/aladdin-prince-ali.html): Emerald, cost 2, Character, Common
+- [Aladdin - Vigilant Guard](https://www.readysetink.com/card/aladdin-vigilant-guard.html): Sapphire / Steel, cost 6, Character, Rare
+- [Bambi - Ethereal Fawn](https://www.readysetink.com/card/bambi-ethereal-fawn.html): Amber, cost 4, Character, Super Rare
+- [Bambi - Little Prince](https://www.readysetink.com/card/bambi-little-prince.html): Amethyst, cost 3, Character, Legendary
+- [Bambi - Prince of the Forest](https://www.readysetink.com/card/bambi-prince-of-the-forest.html): Amethyst, cost 2, Character, Common
+- [Beast - Aggressive Lord](https://www.readysetink.com/card/beast-aggressive-lord.html): Ruby, cost 2, Character, Uncommon
+- [Beast - Fierce Defender](https://www.readysetink.com/card/beast-fierce-defender.html): Ruby, cost 3, Character, Common
+- [Beast - Forbidding Recluse](https://www.readysetink.com/card/beast-forbidding-recluse.html): Steel, cost 4, Character, Common
+- [Beast - Frustrated Designer](https://www.readysetink.com/card/beast-frustrated-designer.html): Ruby / Sapphire, cost 6, Character, Rare
+- [Beast - Gracious Prince](https://www.readysetink.com/card/beast-gracious-prince.html): Amber, cost 5, Character, Rare
+- [Beast - Hardheaded](https://www.readysetink.com/card/beast-hardheaded.html): Steel, cost 5, Character, Uncommon
+- [Beast - Relentless](https://www.readysetink.com/card/beast-relentless.html): Emerald, cost 6, Character, Legendary
+- [Beast - Selfless Protector](https://www.readysetink.com/card/beast-selfless-protector.html): Steel, cost 6, Character, Super Rare
+- [Beast - Snowfield Troublemaker](https://www.readysetink.com/card/beast-snowfield-troublemaker.html): Ruby, cost 2, Character, Super Rare
+- [Beast - Thick-Skinned](https://www.readysetink.com/card/beast-thick-skinned.html): Steel, cost 3, Character, Common
+- [Beast - Tragic Hero](https://www.readysetink.com/card/beast-tragic-hero.html): Steel, cost 5, Character, Legendary
+- [Beast - Wolfsbane](https://www.readysetink.com/card/beast-wolfsbane.html): Emerald, cost 5, Character, Legendary
+- [Beast - Wounded](https://www.readysetink.com/card/beast-wounded.html): Ruby, cost 3, Character, Uncommon
+- [Belle & Beast - Certain as the Sun](https://www.readysetink.com/card/belle-beast-certain-as-the-sun.html): Ruby / Sapphire, cost 8, Character, Super Rare
+- [Don Karnage - Air Pirate Leader](https://www.readysetink.com/card/don-karnage-air-pirate-leader.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Don Karnage - Prince of Pirates](https://www.readysetink.com/card/don-karnage-prince-of-pirates.html): Emerald, cost 5, Character, Common
+- [Flynn Rider - Breaking and Entering](https://www.readysetink.com/card/flynn-rider-breaking-and-entering.html): Emerald, cost 4, Character, Super Rare
+- [Flynn Rider - Charming Rogue](https://www.readysetink.com/card/flynn-rider-charming-rogue.html): Emerald, cost 2, Character, Uncommon
+- [Flynn Rider - Confident Vagabond](https://www.readysetink.com/card/flynn-rider-confident-vagabond.html): Emerald, cost 1, Character, Common
+- [Flynn Rider - Frenemy](https://www.readysetink.com/card/flynn-rider-frenemy.html): Ruby, cost 2, Character, Super Rare
+- [Flynn Rider - High-Climbing Rogue](https://www.readysetink.com/card/flynn-rider-high-climbing-rogue.html): Steel, cost 3, Character, Common
+- [Flynn Rider - His Own Biggest Fan](https://www.readysetink.com/card/flynn-rider-his-own-biggest-fan.html): Emerald, cost 4, Character, Rare
+- [Flynn Rider - Spectral Scoundrel](https://www.readysetink.com/card/flynn-rider-spectral-scoundrel.html): Emerald, cost 1, Character, Uncommon
+- [Hamish, Hubert & Harris - Making Mischief](https://www.readysetink.com/card/hamish-hubert-harris-making-mischief.html): Amethyst, cost 3, Character, Uncommon
+- [Hamish, Hubert & Harris - Troublemaking Triplets](https://www.readysetink.com/card/hamish-hubert-harris-troublemaking-triplets.html): Emerald, cost 3, Character, Common
+- [Hans - Brazen Manipulator](https://www.readysetink.com/card/hans-brazen-manipulator.html): Ruby, cost 6, Character, Super Rare
+- [Hans - Noble Scoundrel](https://www.readysetink.com/card/hans-noble-scoundrel.html): Sapphire, cost 3, Character, Common
+- [Hans - Scheming Prince](https://www.readysetink.com/card/hans-scheming-prince.html): Emerald, cost 4, Character, Rare
+- [Hans - Thirteenth in Line](https://www.readysetink.com/card/hans-thirteenth-in-line.html): Steel, cost 4, Character, Super Rare
+- [Hercules - Baby Demigod](https://www.readysetink.com/card/hercules-baby-demigod.html): Emerald, cost 6, Character, Legendary
+- [Hercules - Beloved Hero](https://www.readysetink.com/card/hercules-beloved-hero.html): Steel, cost 6, Character, Rare
+- [Hercules - Clumsy Kid](https://www.readysetink.com/card/hercules-clumsy-kid.html): Ruby, cost 3, Character, Common
+- [Hercules - Daring Demigod](https://www.readysetink.com/card/hercules-daring-demigod.html): Ruby, cost 5, Character, Uncommon
+- [Hercules - Divine Hero](https://www.readysetink.com/card/hercules-divine-hero.html): Steel, cost 6, Character, Rare
+- [Hercules - Hero in Training](https://www.readysetink.com/card/hercules-hero-in-training.html): Steel, cost 2, Character, Common
+- [Hercules - Manipulated Hero](https://www.readysetink.com/card/hercules-manipulated-hero.html): cost 4, Character, Special
+- [Hercules - Mighty Leader](https://www.readysetink.com/card/hercules-mighty-leader.html): Ruby, cost 4, Character, Legendary
+- [Hercules - Spectral Demigod](https://www.readysetink.com/card/hercules-spectral-demigod.html): Ruby, cost 1, Character, Common
+- [Hercules - True Hero](https://www.readysetink.com/card/hercules-true-hero.html): Steel, cost 3, Character, Common
+- [Hercules - Unwavering Demigod](https://www.readysetink.com/card/hercules-unwavering-demigod.html): Steel, cost 4, Character, Common
+- [Hercules - Young Rescuer](https://www.readysetink.com/card/hercules-young-rescuer.html): Ruby, cost 2, Character, Super Rare
+- [Mickey Mouse - Brave Little Prince](https://www.readysetink.com/card/mickey-mouse-brave-little-prince.html): Ruby, cost 3, Character, Legendary
+- [Mor'du - Savage Cursed Prince](https://www.readysetink.com/card/mordu-savage-cursed-prince.html): Amethyst, cost 5, Character, Super Rare
+- [Mor'du - Wicked with Pride](https://www.readysetink.com/card/mordu-wicked-with-pride.html): Amethyst, cost 2, Character, Common
+- [Prince Achmed - Rival Suitor](https://www.readysetink.com/card/prince-achmed-rival-suitor.html): Steel, cost 2, Character, Common
+- [Prince Charming - Heir to the Throne](https://www.readysetink.com/card/prince-charming-heir-to-the-throne.html): Sapphire, cost 4, Character, Rare
+- [Prince Charming - Protector of the Realm](https://www.readysetink.com/card/prince-charming-protector-of-the-realm.html): Steel, cost 7, Character, Legendary
+- [Prince Charming - Searching for Answers](https://www.readysetink.com/card/prince-charming-searching-for-answers.html): Sapphire, cost 2, Character, Common
+- [Prince Eric - Dashing and Brave](https://www.readysetink.com/card/prince-eric-dashing-and-brave.html): Steel, cost 2, Character, Common
+- [Prince Eric - Expert Helmsman](https://www.readysetink.com/card/prince-eric-expert-helmsman.html): Ruby, cost 4, Character, Super Rare
+- [Prince Eric - Grim Groom](https://www.readysetink.com/card/prince-eric-grim-groom.html): cost 1, Character, Special
+- [Prince Eric - Noble Swordsman](https://www.readysetink.com/card/prince-eric-noble-swordsman.html): Amber, cost 5, Character, Common
+- [Prince Eric - Seafaring Prince](https://www.readysetink.com/card/prince-eric-seafaring-prince.html): Amber, cost 3, Character, Common
+- [Prince Eric - Ursula's Groom](https://www.readysetink.com/card/prince-eric-ursulas-groom.html): Amber, cost 6, Character, Uncommon
+- [Prince John - Fraidy-Cat](https://www.readysetink.com/card/prince-john-fraidy-cat.html): Ruby, cost 3, Character, Rare
+- [Prince John - Gold Lover](https://www.readysetink.com/card/prince-john-gold-lover.html): Sapphire, cost 4, Character, Super Rare
+- [Prince John - Greediest of All](https://www.readysetink.com/card/prince-john-greediest-of-all.html): Emerald, cost 3, Character, Rare
+- [Prince John - Opportunistic Briber](https://www.readysetink.com/card/prince-john-opportunistic-briber.html): Sapphire, cost 3, Character, Common
+- [Prince John - Phony King](https://www.readysetink.com/card/prince-john-phony-king.html): Emerald, cost 5, Character, Uncommon
+- [Prince Naveen - Bundled Up](https://www.readysetink.com/card/prince-naveen-bundled-up.html): Steel, cost 5, Character, Common
+- [Prince Naveen - Carefree Explorer](https://www.readysetink.com/card/prince-naveen-carefree-explorer.html): Amber, cost 2, Character, Common
+- [Prince Naveen - Penniless Royal](https://www.readysetink.com/card/prince-naveen-penniless-royal.html): Steel, cost 3, Character, Common
+- [Prince Naveen - Ukulele Player](https://www.readysetink.com/card/prince-naveen-ukulele-player.html): Amber, cost 4, Character, Legendary
+- [Prince Naveen - Vigilant First Mate](https://www.readysetink.com/card/prince-naveen-vigilant-first-mate.html): Amber, cost 5, Character, Uncommon
+- [Prince Phillip - Dragonslayer](https://www.readysetink.com/card/prince-phillip-dragonslayer.html): Amber, cost 4, Character, Uncommon
+- [Prince Phillip - Gallant Defender](https://www.readysetink.com/card/prince-phillip-gallant-defender.html): Sapphire, cost 3, Character, Rare
+- [Prince Phillip - Royal Explorer](https://www.readysetink.com/card/prince-phillip-royal-explorer.html): Emerald, cost 3, Character, Uncommon
+- [Prince Phillip - Swordsman of the Realm](https://www.readysetink.com/card/prince-phillip-swordsman-of-the-realm.html): Emerald, cost 7, Character, Super Rare
+- [Prince Phillip - Vanquisher of Foes](https://www.readysetink.com/card/prince-phillip-vanquisher-of-foes.html): Emerald, cost 9, Character, Super Rare
+- [Prince Phillip - Warden of the Woods](https://www.readysetink.com/card/prince-phillip-warden-of-the-woods.html): Emerald, cost 4, Character, Rare
+- [Rapunzel & Flynn Rider - Unlikely Pair](https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html): Emerald / Steel, cost 5, Character, Legendary
+- [Simba - Adventurous Successor](https://www.readysetink.com/card/simba-adventurous-successor.html): Ruby, cost 1, Character, Common
+- [Simba - Fighting Prince](https://www.readysetink.com/card/simba-fighting-prince.html): Steel, cost 7, Character, Super Rare
+- [Simba - Future King](https://www.readysetink.com/card/simba-future-king.html): Steel, cost 1, Character, Common
+- [Simba - Happy-Go-Lucky](https://www.readysetink.com/card/simba-happy-go-lucky.html): Amber, cost 2, Character, Common
+- [Simba - King in the Making](https://www.readysetink.com/card/simba-king-in-the-making.html): Amber, cost 7, Character, Super Rare
+- [Simba - Lost Prince](https://www.readysetink.com/card/simba-lost-prince.html): Steel, cost 3, Character, Common
+- [Simba - Playful Pouncer](https://www.readysetink.com/card/simba-playful-pouncer.html): Amber, cost 2, Character, Uncommon
+- [Simba - Pride Protector](https://www.readysetink.com/card/simba-pride-protector.html): Amber, cost 5, Character, Legendary
+- [Simba - Protective Cub](https://www.readysetink.com/card/simba-protective-cub.html): Amber, cost 2, Character, Common
+- [Simba - Rightful Heir](https://www.readysetink.com/card/simba-rightful-heir.html): Steel, cost 5, Character, Uncommon
+- [Simba - Scrappy Cub](https://www.readysetink.com/card/simba-scrappy-cub.html): Ruby, cost 2, Character, Rare
+- [The Prince - Never Gives Up](https://www.readysetink.com/card/the-prince-never-gives-up.html): Steel, cost 3, Character, Uncommon
+- [The Prince - Searching for His Love](https://www.readysetink.com/card/the-prince-searching-for-his-love.html): Amber, cost 1, Character, Rare
+- [The Prince - Vigilant Suitor](https://www.readysetink.com/card/the-prince-vigilant-suitor.html): Amber, cost 2, Character, Uncommon
+- [Triton - Young Prince](https://www.readysetink.com/card/triton-young-prince.html): Sapphire, cost 4, Character, Uncommon

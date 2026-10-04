@@ -1,0 +1,70 @@
+# The Sword in the Stone: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/the-sword-in-the-stone/
+
+64 cards.
+
+- [A Dark Age No More](https://www.readysetink.com/card/a-dark-age-no-more.html): Sapphire, cost 3, Action, Rare
+- [Archimedes - Electrified Owl](https://www.readysetink.com/card/archimedes-electrified-owl.html): Amethyst, cost 5, Character, Uncommon
+- [Archimedes - Exasperated Owl](https://www.readysetink.com/card/archimedes-exasperated-owl.html): Amethyst, cost 3, Character, Common
+- [Archimedes - Exceptional Owl](https://www.readysetink.com/card/archimedes-exceptional-owl.html): Amethyst, cost 2, Character, Uncommon
+- [Archimedes - Highly Educated Owl](https://www.readysetink.com/card/archimedes-highly-educated-owl.html): Amethyst, cost 1, Character, Common
+- [Archimedes - Messenger Owl](https://www.readysetink.com/card/archimedes-messenger-owl.html): Amethyst, cost 3, Character, Rare
+- [Archimedes - Resourceful Owl](https://www.readysetink.com/card/archimedes-resourceful-owl.html): Emerald, cost 3, Character, Rare
+- [Arthur - Determined Squire](https://www.readysetink.com/card/arthur-determined-squire.html): Sapphire / Steel, cost 4, Character, Uncommon
+- [Arthur - Jousting Knight](https://www.readysetink.com/card/arthur-jousting-knight.html): Steel, cost 6, Character, Super Rare
+- [Arthur - King Victorious](https://www.readysetink.com/card/arthur-king-victorious.html): Steel, cost 7, Character, Legendary
+- [Arthur - Novice Blacksmith](https://www.readysetink.com/card/arthur-novice-blacksmith.html): Steel, cost 2, Character, Common
+- [Arthur - Novice Sparrow](https://www.readysetink.com/card/arthur-novice-sparrow.html): Ruby, cost 1, Character, Uncommon
+- [Arthur - Trained Swordsman](https://www.readysetink.com/card/arthur-trained-swordsman.html): Emerald, cost 4, Character, Common
+- [Arthur - Wart](https://www.readysetink.com/card/arthur-wart.html): Steel, cost 2, Character, Uncommon
+- [Arthur - Wizard's Apprentice](https://www.readysetink.com/card/arthur-wizards-apprentice.html): Amethyst, cost 3, Character, Super Rare
+- [Befuddle](https://www.readysetink.com/card/befuddle.html): Amethyst, cost 1, Action, Uncommon
+- [Begone!](https://www.readysetink.com/card/begone.html): Amethyst, cost 3, Action, Common
+- [Develop Your Brain](https://www.readysetink.com/card/develop-your-brain.html): Sapphire, cost 1, Action, Common
+- [Gathering Knowledge and Wisdom](https://www.readysetink.com/card/gathering-knowledge-and-wisdom.html): Amethyst, cost 2, Action, Common
+- [Gruesome and Grim](https://www.readysetink.com/card/gruesome-and-grim.html): Amethyst, cost 3, Action, Rare
+- [Higitus Figitus](https://www.readysetink.com/card/higitus-figitus.html): Amethyst, cost 6, Action, Common
+- [Jousting Match](https://www.readysetink.com/card/jousting-match.html): Steel, cost 3, Action, Rare
+- [Legend of the Sword in the Stone](https://www.readysetink.com/card/legend-of-the-sword-in-the-stone.html): Amethyst, cost 2, Action, Common
+- [Madam Mim - Bauble Chaser](https://www.readysetink.com/card/madam-mim-bauble-chaser.html): Amethyst, cost 1, Character, Common
+- [Madam Mim - Cheating Spellcaster](https://www.readysetink.com/card/madam-mim-cheating-spellcaster.html): Amethyst, cost 6, Character, Rare
+- [Madam Mim - Elephant](https://www.readysetink.com/card/madam-mim-elephant.html): Amethyst, cost 4, Character, Super Rare
+- [Madam Mim - Fox](https://www.readysetink.com/card/madam-mim-fox.html): Amethyst, cost 3, Character, Rare
+- [Madam Mim - Hummingbird](https://www.readysetink.com/card/madam-mim-hummingbird.html): Emerald, cost 2, Character, Uncommon
+- [Madam Mim - Nosy Neighbor](https://www.readysetink.com/card/madam-mim-nosy-neighbor.html): Sapphire, cost 5, Character, Common
+- [Madam Mim - Purple Dragon](https://www.readysetink.com/card/madam-mim-purple-dragon.html): Amethyst, cost 7, Character, Legendary
+- [Madam Mim - Resourceful Trickster](https://www.readysetink.com/card/madam-mim-resourceful-trickster.html): Amethyst, cost 8, Character, Legendary
+- [Madam Mim - Rhino](https://www.readysetink.com/card/madam-mim-rhino.html): Amethyst / Ruby, cost 6, Character, Uncommon
+- [Madam Mim - Rival of Merlin](https://www.readysetink.com/card/madam-mim-rival-of-merlin.html): Amethyst, cost 5, Character, Rare
+- [Madam Mim - Snake](https://www.readysetink.com/card/madam-mim-snake.html): Amethyst, cost 2, Character, Uncommon
+- [Madam Mim - Tiny Adversary](https://www.readysetink.com/card/madam-mim-tiny-adversary.html): Amethyst, cost 2, Character, Rare
+- [Madam Mim - Truly Marvelous](https://www.readysetink.com/card/madam-mim-truly-marvelous.html): Amethyst, cost 3, Character, Super Rare
+- [Madam Mim - Up to No Good](https://www.readysetink.com/card/madam-mim-up-to-no-good.html): Amethyst, cost 3, Character, Uncommon
+- [Magnificent, Marvelous](https://www.readysetink.com/card/magnificent-marvelous.html): Amethyst, cost 4, Action, Uncommon
+- [Merlin - Back from Bermuda](https://www.readysetink.com/card/merlin-back-from-bermuda.html): Sapphire, cost 4, Character, Common
+- [Merlin - Bauble Expert](https://www.readysetink.com/card/merlin-bauble-expert.html): Amethyst, cost 3, Character, Common
+- [Merlin - Clever Clairvoyant](https://www.readysetink.com/card/merlin-clever-clairvoyant.html): Amethyst / Sapphire, cost 1, Character, Rare
+- [Merlin - Completing His Research](https://www.readysetink.com/card/merlin-completing-his-research.html): Amethyst, cost 2, Character, Uncommon
+- [Merlin - Crab](https://www.readysetink.com/card/merlin-crab.html): Amethyst, cost 3, Character, Common
+- [Merlin - Envisioning the Future](https://www.readysetink.com/card/merlin-envisioning-the-future.html): Sapphire, cost 4, Character, Rare
+- [Merlin - Goat](https://www.readysetink.com/card/merlin-goat.html): Amethyst, cost 4, Character, Uncommon
+- [Merlin - Ink Drop Tinkerer](https://www.readysetink.com/card/merlin-ink-drop-tinkerer.html): Amethyst, cost 7, Character, Rare
+- [Merlin - Intellectual Visionary](https://www.readysetink.com/card/merlin-intellectual-visionary.html): Sapphire, cost 6, Character, Legendary
+- [Merlin - Rabbit](https://www.readysetink.com/card/merlin-rabbit.html): Amethyst, cost 4, Character, Rare
+- [Merlin - Self-Appointed Mentor](https://www.readysetink.com/card/merlin-self-appointed-mentor.html): Sapphire, cost 4, Character, Common
+- [Merlin - Shapeshifter](https://www.readysetink.com/card/merlin-shapeshifter.html): Amethyst, cost 4, Character, Rare
+- [Merlin - Squirrel](https://www.readysetink.com/card/merlin-squirrel.html): Amethyst, cost 2, Character, Common
+- [Merlin - Turtle](https://www.readysetink.com/card/merlin-turtle.html): Amethyst, cost 4, Character, Common
+- [Merlin's Carpetbag](https://www.readysetink.com/card/merlins-carpetbag.html): Sapphire, cost 5, Item, Uncommon
+- [Merlin's Cottage - The Wizard's Home](https://www.readysetink.com/card/merlins-cottage-the-wizards-home.html): Sapphire, cost 1, Location, Uncommon
+- [Plate Armor](https://www.readysetink.com/card/plate-armor.html): Steel, cost 4, Item, Rare
+- [Scram!](https://www.readysetink.com/card/scram.html): Sapphire, cost 1, Action, Uncommon
+- [Sir Ector - Castle Lord](https://www.readysetink.com/card/sir-ector-castle-lord.html): Steel, cost 7, Character, Rare
+- [Sir Kay - Unruly Knight](https://www.readysetink.com/card/sir-kay-unruly-knight.html): Ruby, cost 2, Character, Uncommon
+- [Sir Pellinore - Seasoned Knight](https://www.readysetink.com/card/sir-pellinore-seasoned-knight.html): Sapphire, cost 3, Character, Uncommon
+- [Sir Pellinore - Tougher Than He Looks](https://www.readysetink.com/card/sir-pellinore-tougher-than-he-looks.html): Steel, cost 3, Character, Uncommon
+- [Sword in the Stone](https://www.readysetink.com/card/sword-in-the-stone.html): Ruby, cost 1, Item, Uncommon
+- [The Sword Released](https://www.readysetink.com/card/the-sword-released.html): Ruby, cost 3, Item, Rare
+- [To Wither a Flower](https://www.readysetink.com/card/to-wither-a-flower.html): Emerald, cost 4, Action, Rare
+- [Vision of the Future](https://www.readysetink.com/card/vision-of-the-future.html): Sapphire, cost 2, Action, Common

@@ -1,0 +1,86 @@
+# Mentor: Disney Lorcana Mentor cards
+
+Source: https://www.readysetink.com/classifications/mentor/
+
+80 cards.
+
+- [Agnarr - King of Arendelle](https://www.readysetink.com/card/agnarr-king-of-arendelle.html): Ruby, cost 3, Character, Common
+- [Agustin Madrigal - Clumsy Dad](https://www.readysetink.com/card/agustin-madrigal-clumsy-dad.html): Amber, cost 1, Character, Common
+- [Agustin Madrigal - Exceptionally Kind](https://www.readysetink.com/card/agustin-madrigal-exceptionally-kind.html): Amber, cost 4, Character, Common
+- [Alma Madrigal - Accepting Grandmother](https://www.readysetink.com/card/alma-madrigal-accepting-grandmother.html): Amber / Amethyst, cost 6, Character, Uncommon
+- [Alma Madrigal - Family Matriarch](https://www.readysetink.com/card/alma-madrigal-family-matriarch.html): Amber, cost 3, Character, Rare
+- [Alma Madrigal - Heart of the Family](https://www.readysetink.com/card/alma-madrigal-heart-of-the-family.html): Amethyst, cost 3, Character, Common
+- [Alma Madrigal - Keeper of the Flame](https://www.readysetink.com/card/alma-madrigal-keeper-of-the-flame.html): Amethyst, cost 5, Character, Rare
+- [Alma Madrigal - Leading the Way](https://www.readysetink.com/card/alma-madrigal-leading-the-way.html): Amethyst, cost 2, Character, Uncommon
+- [Aunt Cass - Biggest Fan](https://www.readysetink.com/card/aunt-cass-biggest-fan.html): Sapphire, cost 2, Character, Common
+- [Benja - Bold Uniter](https://www.readysetink.com/card/benja-bold-uniter.html): Ruby, cost 4, Character, Common
+- [Benja - Guardian of the Dragon Gem](https://www.readysetink.com/card/benja-guardian-of-the-dragon-gem.html): Steel, cost 3, Character, Common
+- [Chief Powhatan - Protective Leader](https://www.readysetink.com/card/chief-powhatan-protective-leader.html): Amber, cost 4, Character, Uncommon
+- [Chief Tui - Proud of Motunui](https://www.readysetink.com/card/chief-tui-proud-of-motunui.html): Steel, cost 4, Character, Common
+- [Chief Tui - Respected Leader](https://www.readysetink.com/card/chief-tui-respected-leader.html): Sapphire, cost 7, Character, Uncommon
+- [Chief Tui - Weaving a Tale](https://www.readysetink.com/card/chief-tui-weaving-a-tale.html): Sapphire, cost 5, Character, Common
+- [Eli La Bouff - Big Daddy](https://www.readysetink.com/card/eli-la-bouff-big-daddy.html): Steel, cost 4, Character, Uncommon
+- [Elinor - Renowned Diplomat](https://www.readysetink.com/card/elinor-renowned-diplomat.html): Emerald, cost 4, Character, Super Rare
+- [Fa Li - Mulan's Mother](https://www.readysetink.com/card/fa-li-mulans-mother.html): Sapphire, cost 1, Character, Common
+- [Fa Zhou - Honorable Warrior](https://www.readysetink.com/card/fa-zhou-honorable-warrior.html): Ruby, cost 2, Character, Common
+- [Fa Zhou - Mulan's Father](https://www.readysetink.com/card/fa-zhou-mulans-father.html): Ruby, cost 2, Character, Common
+- [Fairy Godmother - Mystic Armorer](https://www.readysetink.com/card/fairy-godmother-mystic-armorer.html): Amethyst, cost 5, Character, Legendary
+- [Fergus - King of DunBroch](https://www.readysetink.com/card/fergus-king-of-dunbroch.html): Steel, cost 2, Character, Common
+- [Fergus - Outpost Builder](https://www.readysetink.com/card/fergus-outpost-builder.html): Steel, cost 6, Character, Super Rare
+- [Fergus McDuck - Scrooge's Father](https://www.readysetink.com/card/fergus-mcduck-scrooges-father.html): Sapphire, cost 3, Character, Common
+- [General Li - Head of the Imperial Army](https://www.readysetink.com/card/general-li-head-of-the-imperial-army.html): Steel, cost 3, Character, Common
+- [Gramma Tala - Connected to Nature](https://www.readysetink.com/card/gramma-tala-connected-to-nature.html): Sapphire, cost 12, Character, Rare
+- [Gramma Tala - Keeper of Ancient Stories](https://www.readysetink.com/card/gramma-tala-keeper-of-ancient-stories.html): Sapphire, cost 4, Character, Common
+- [Gramma Tala - Spirit of the Ocean](https://www.readysetink.com/card/gramma-tala-spirit-of-the-ocean.html): Sapphire, cost 7, Character, Legendary
+- [Gramma Tala - Storyteller](https://www.readysetink.com/card/gramma-tala-storyteller.html): Sapphire, cost 2, Character, Uncommon
+- [Grand Pabbie - Oldest and Wisest](https://www.readysetink.com/card/grand-pabbie-oldest-and-wisest.html): Sapphire, cost 7, Character, Super Rare
+- [Grandma Wu - Fierce Red Panda](https://www.readysetink.com/card/grandma-wu-fierce-red-panda.html): Ruby, cost 7, Character, Rare
+- [Grandma Wu - Wise Grandmother](https://www.readysetink.com/card/grandma-wu-wise-grandmother.html): Amethyst, cost 3, Character, Rare
+- [Grandmother Willow - Ancient Advisor](https://www.readysetink.com/card/grandmother-willow-ancient-advisor.html): Amber, cost 2, Character, Uncommon
+- [Hudson - Determined Reader](https://www.readysetink.com/card/hudson-determined-reader.html): Steel, cost 2, Character, Common
+- [Héctor Rivera - Gone to Pieces](https://www.readysetink.com/card/h-ctor-rivera-gone-to-pieces.html): Ruby, cost 4, Character, Special
+- [Iduna - Alarmed Queen](https://www.readysetink.com/card/iduna-alarmed-queen.html): Ruby, cost 2, Character, Common
+- [Iduna - Caring Mother](https://www.readysetink.com/card/iduna-caring-mother.html): Sapphire, cost 4, Character, Uncommon
+- [James - Role Model](https://www.readysetink.com/card/james-role-model.html): Sapphire, cost 4, Character, Common
+- [Jiminy Cricket - Level-Headed and Wise](https://www.readysetink.com/card/jiminy-cricket-level-headed-and-wise.html): Amethyst, cost 2, Character, Rare
+- [Jiminy Cricket - Pinocchio's Conscience](https://www.readysetink.com/card/jiminy-cricket-pinocchios-conscience.html): Amethyst, cost 2, Character, Common
+- [Julieta Madrigal - Caring Baker](https://www.readysetink.com/card/julieta-madrigal-caring-baker.html): Amber, cost 1, Character, Common
+- [Julieta Madrigal - Excellent Cook](https://www.readysetink.com/card/julieta-madrigal-excellent-cook.html): Amber, cost 3, Character, Uncommon
+- [King Hubert - Phillip's Father](https://www.readysetink.com/card/king-hubert-phillips-father.html): Steel, cost 3, Character, Common
+- [King Stefan - New Father](https://www.readysetink.com/card/king-stefan-new-father.html): Amber, cost 5, Character, Common
+- [Mama Odie - Mystical Maven](https://www.readysetink.com/card/mama-odie-mystical-maven.html): Sapphire, cost 3, Character, Rare
+- [Maurice - Unconventional Inventor](https://www.readysetink.com/card/maurice-unconventional-inventor.html): Ruby, cost 4, Character, Rare
+- [Maurice - World-Famous Inventor](https://www.readysetink.com/card/maurice-world-famous-inventor.html): Sapphire, cost 6, Character, Rare
+- [Merlin - Back from Bermuda](https://www.readysetink.com/card/merlin-back-from-bermuda.html): Sapphire, cost 4, Character, Common
+- [Merlin - Bauble Expert](https://www.readysetink.com/card/merlin-bauble-expert.html): Amethyst, cost 3, Character, Common
+- [Merlin - Clever Clairvoyant](https://www.readysetink.com/card/merlin-clever-clairvoyant.html): Amethyst / Sapphire, cost 1, Character, Rare
+- [Merlin - Completing His Research](https://www.readysetink.com/card/merlin-completing-his-research.html): Amethyst, cost 2, Character, Uncommon
+- [Merlin - Crab](https://www.readysetink.com/card/merlin-crab.html): Amethyst, cost 3, Character, Common
+- [Merlin - Envisioning the Future](https://www.readysetink.com/card/merlin-envisioning-the-future.html): Sapphire, cost 4, Character, Rare
+- [Merlin - Goat](https://www.readysetink.com/card/merlin-goat.html): Amethyst, cost 4, Character, Uncommon
+- [Merlin - Ink Drop Tinkerer](https://www.readysetink.com/card/merlin-ink-drop-tinkerer.html): Amethyst, cost 7, Character, Rare
+- [Merlin - Intellectual Visionary](https://www.readysetink.com/card/merlin-intellectual-visionary.html): Sapphire, cost 6, Character, Legendary
+- [Merlin - Rabbit](https://www.readysetink.com/card/merlin-rabbit.html): Amethyst, cost 4, Character, Rare
+- [Merlin - Self-Appointed Mentor](https://www.readysetink.com/card/merlin-self-appointed-mentor.html): Sapphire, cost 4, Character, Common
+- [Merlin - Shapeshifter](https://www.readysetink.com/card/merlin-shapeshifter.html): Amethyst, cost 4, Character, Rare
+- [Merlin - Squirrel](https://www.readysetink.com/card/merlin-squirrel.html): Amethyst, cost 2, Character, Common
+- [Merlin - Turtle](https://www.readysetink.com/card/merlin-turtle.html): Amethyst, cost 4, Character, Common
+- [Ming Lee - Giant Red Panda](https://www.readysetink.com/card/ming-lee-giant-red-panda.html): Ruby, cost 9, Character, Super Rare
+- [Ming Lee - Overprotective Parent](https://www.readysetink.com/card/ming-lee-overprotective-parent.html): Amethyst, cost 4, Character, Rare
+- [Ming Lee - Proud Parent](https://www.readysetink.com/card/ming-lee-proud-parent.html): Amber, cost 3, Character, Rare
+- [Mufasa - Among the Stars](https://www.readysetink.com/card/mufasa-among-the-stars.html): Amethyst / Steel, cost 7, Character, Uncommon
+- [Mufasa - Betrayed Leader](https://www.readysetink.com/card/mufasa-betrayed-leader.html): Amber, cost 5, Character, Legendary
+- [Mufasa - Champion of the Pride Lands](https://www.readysetink.com/card/mufasa-champion-of-the-pride-lands.html): Steel, cost 7, Character, Rare
+- [Mufasa - King of the Pride Lands](https://www.readysetink.com/card/mufasa-king-of-the-pride-lands.html): Sapphire, cost 6, Character, Common
+- [Mufasa - Respected King](https://www.readysetink.com/card/mufasa-respected-king.html): Steel, cost 4, Character, Uncommon
+- [Mufasa - Ruler of Pride Rock](https://www.readysetink.com/card/mufasa-ruler-of-pride-rock.html): Sapphire, cost 8, Character, Legendary
+- [Philoctetes - Trainer of Heroes](https://www.readysetink.com/card/philoctetes-trainer-of-heroes.html): Sapphire, cost 2, Character, Common
+- [Rafiki - Ethereal Guide](https://www.readysetink.com/card/rafiki-ethereal-guide.html): Amethyst, cost 9, Character, Rare
+- [Rafiki - Mysterious Sage](https://www.readysetink.com/card/rafiki-mysterious-sage.html): Amethyst, cost 3, Character, Uncommon
+- [Rafiki - Mystical Fighter](https://www.readysetink.com/card/rafiki-mystical-fighter.html): Amethyst, cost 1, Character, Rare
+- [Rafiki - Shaman Duelist](https://www.readysetink.com/card/rafiki-shaman-duelist.html): Amethyst, cost 4, Character, Rare
+- [Rafiki - Shaman of the Savanna](https://www.readysetink.com/card/rafiki-shaman-of-the-savanna.html): Amethyst, cost 1, Character, Common
+- [Sarabi - Protecting the Pride](https://www.readysetink.com/card/sarabi-protecting-the-pride.html): Amber, cost 4, Character, Common
+- [Tadashi Hamada - Baymax Inventor](https://www.readysetink.com/card/tadashi-hamada-baymax-inventor.html): Sapphire, cost 6, Character, Super Rare
+- [Tadashi Hamada - Gifted Roboticist](https://www.readysetink.com/card/tadashi-hamada-gifted-roboticist.html): Sapphire, cost 3, Character, Rare
+- [Timothy Q. Mouse - Flight Instructor](https://www.readysetink.com/card/timothy-q-mouse-flight-instructor.html): Amethyst, cost 2, Character, Common

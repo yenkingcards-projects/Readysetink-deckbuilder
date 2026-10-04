@@ -1,0 +1,75 @@
+# Mulan: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/mulan/
+
+69 cards.
+
+- [Avalanche](https://www.readysetink.com/card/avalanche.html): Steel, cost 4, Action, Uncommon
+- [Chi-Fu - Imperial Advisor](https://www.readysetink.com/card/chi-fu-imperial-advisor.html): Steel, cost 3, Character, Uncommon
+- [Chien-Po - Imperial Soldier](https://www.readysetink.com/card/chien-po-imperial-soldier.html): Steel, cost 5, Character, Common
+- [Chien-Po - Snow Warrior](https://www.readysetink.com/card/chien-po-snow-warrior.html): Emerald, cost 7, Character, Uncommon
+- [Cri-Kee - Good Luck Charm](https://www.readysetink.com/card/cri-kee-good-luck-charm.html): Sapphire, cost 2, Character, Common
+- [Cri-Kee - Lucky Cricket](https://www.readysetink.com/card/cri-kee-lucky-cricket.html): Emerald, cost 5, Character, Rare
+- [Cri-Kee - Part of the Team](https://www.readysetink.com/card/cri-kee-part-of-the-team.html): Ruby, cost 4, Character, Common
+- [Discarded Armor](https://www.readysetink.com/card/discarded-armor.html): Steel, cost 1, Item, Uncommon
+- [Fa Li - Mulan's Mother](https://www.readysetink.com/card/fa-li-mulans-mother.html): Sapphire, cost 1, Character, Common
+- [Fa Zhou - Honorable Warrior](https://www.readysetink.com/card/fa-zhou-honorable-warrior.html): Ruby, cost 2, Character, Common
+- [Fa Zhou - Mulan's Father](https://www.readysetink.com/card/fa-zhou-mulans-father.html): Ruby, cost 2, Character, Common
+- [Fa Zhou - War Hero](https://www.readysetink.com/card/fa-zhou-war-hero.html): Steel, cost 3, Character, Rare
+- [Force of a Great Typhoon](https://www.readysetink.com/card/force-of-a-great-typhoon.html): Ruby, cost 2, Action, Common
+- [General Li - Head of the Imperial Army](https://www.readysetink.com/card/general-li-head-of-the-imperial-army.html): Steel, cost 3, Character, Common
+- [Grandmother Fa - Spirited Elder](https://www.readysetink.com/card/grandmother-fa-spirited-elder.html): Ruby, cost 2, Character, Common
+- [Great Stone Dragon](https://www.readysetink.com/card/great-stone-dragon.html): Sapphire, cost 3, Item, Uncommon
+- [Imperial Bow](https://www.readysetink.com/card/imperial-bow.html): Steel, cost 2, Item, Uncommon
+- [Imperial Proclamation](https://www.readysetink.com/card/imperial-proclamation.html): Ruby, cost 1, Item, Rare
+- [Improvise](https://www.readysetink.com/card/improvise.html): Emerald, cost 1, Action, Common
+- [Khan - Beloved Steed](https://www.readysetink.com/card/khan-beloved-steed.html): Ruby, cost 2, Character, Uncommon
+- [Khan - War Horse](https://www.readysetink.com/card/khan-war-horse.html): Steel, cost 4, Character, Common
+- [Last Cannon](https://www.readysetink.com/card/last-cannon.html): Steel, cost 1, Item, Common
+- [Li Shang - Archery Instructor](https://www.readysetink.com/card/li-shang-archery-instructor.html): Steel, cost 5, Character, Uncommon
+- [Li Shang - General's Son](https://www.readysetink.com/card/li-shang-generals-son.html): Ruby, cost 1, Character, Common
+- [Li Shang - Imperial Captain](https://www.readysetink.com/card/li-shang-imperial-captain.html): Steel, cost 5, Character, Uncommon
+- [Li Shang - Newly Promoted](https://www.readysetink.com/card/li-shang-newly-promoted.html): Ruby / Steel, cost 3, Character, Uncommon
+- [Li Shang - Seasoned Strategist](https://www.readysetink.com/card/li-shang-seasoned-strategist.html): Sapphire, cost 3, Character, Common
+- [Li Shang - Solemn Son](https://www.readysetink.com/card/li-shang-solemn-son.html): Steel, cost 3, Character, Common
+- [Li Shang - Valiant Leader](https://www.readysetink.com/card/li-shang-valiant-leader.html): Steel, cost 7, Character, Uncommon
+- [Li Shang - Valorous General](https://www.readysetink.com/card/li-shang-valorous-general.html): Ruby, cost 3, Character, Uncommon
+- [Light the Fuse](https://www.readysetink.com/card/light-the-fuse.html): Ruby / Steel, cost 1, Action, Uncommon
+- [Ling - Imperial Soldier](https://www.readysetink.com/card/ling-imperial-soldier.html): Steel, cost 3, Character, Uncommon
+- [Ling - Snow Warrior](https://www.readysetink.com/card/ling-snow-warrior.html): Emerald, cost 3, Character, Rare
+- [Marching Off to Battle](https://www.readysetink.com/card/marching-off-to-battle.html): Ruby, cost 4, Action, Common
+- [Medallion Weights](https://www.readysetink.com/card/medallion-weights.html): Ruby, cost 2, Item, Uncommon
+- [Mulan - Armored Fighter](https://www.readysetink.com/card/mulan-armored-fighter.html): Steel, cost 4, Character, Uncommon
+- [Mulan - Charging Ahead](https://www.readysetink.com/card/mulan-charging-ahead.html): Ruby / Steel, cost 4, Character, Super Rare
+- [Mulan - Considerate Diplomat](https://www.readysetink.com/card/mulan-considerate-diplomat.html): Sapphire, cost 5, Character, Super Rare
+- [Mulan - Created by the Vine](https://www.readysetink.com/card/mulan-created-by-the-vine.html): Steel, cost 4, Character, Common
+- [Mulan - Disguised Soldier](https://www.readysetink.com/card/mulan-disguised-soldier.html): Steel, cost 1, Character, Common
+- [Mulan - Elite Archer](https://www.readysetink.com/card/mulan-elite-archer.html): Ruby, cost 6, Character, Legendary
+- [Mulan - Enemy of Entanglement](https://www.readysetink.com/card/mulan-enemy-of-entanglement.html): Ruby, cost 2, Character, Uncommon
+- [Mulan - Free Spirit](https://www.readysetink.com/card/mulan-free-spirit.html): Amber, cost 3, Character, Common
+- [Mulan - Imperial General](https://www.readysetink.com/card/mulan-imperial-general.html): Ruby / Steel, cost 7, Character, Super Rare
+- [Mulan - Imperial Soldier](https://www.readysetink.com/card/mulan-imperial-soldier.html): Ruby, cost 5, Character, Super Rare
+- [Mulan - Injured Soldier](https://www.readysetink.com/card/mulan-injured-soldier.html): Ruby, cost 1, Character, Common
+- [Mulan - Ready for Battle](https://www.readysetink.com/card/mulan-ready-for-battle.html): Ruby, cost 4, Character, Uncommon
+- [Mulan - Reflecting](https://www.readysetink.com/card/mulan-reflecting.html): Amber, cost 4, Character, Rare
+- [Mulan - Resourceful Recruit](https://www.readysetink.com/card/mulan-resourceful-recruit.html): Emerald, cost 2, Character, Super Rare
+- [Mulan - Soldier in Training](https://www.readysetink.com/card/mulan-soldier-in-training.html): Ruby, cost 4, Character, Common
+- [Mulan - Standing Her Ground](https://www.readysetink.com/card/mulan-standing-her-ground.html): Ruby, cost 3, Character, Uncommon
+- [Mushu - Braggin' Dragon](https://www.readysetink.com/card/mushu-braggin-dragon.html): Amethyst, cost 4, Character, Common
+- [Mushu - Fast-Talking Dragon](https://www.readysetink.com/card/mushu-fast-talking-dragon.html): Ruby, cost 3, Character, Common
+- [Mushu - Majestic Dragon](https://www.readysetink.com/card/mushu-majestic-dragon.html): Ruby / Steel, cost 5, Character, Rare
+- [Mushu - Sneaky Dragon](https://www.readysetink.com/card/mushu-sneaky-dragon.html): Emerald, cost 5, Character, Uncommon
+- [Mushu - Stealthy Dragon](https://www.readysetink.com/card/mushu-stealthy-dragon.html): Emerald, cost 3, Character, Legendary
+- [Mushu - Your Worst Nightmare](https://www.readysetink.com/card/mushu-your-worst-nightmare.html): Ruby / Steel, cost 6, Character, Rare
+- [Mushu's Rocket](https://www.readysetink.com/card/mushus-rocket.html): Ruby, cost 1, Item, Uncommon
+- [Reflection](https://www.readysetink.com/card/reflection.html): Amethyst, cost 1, Action, Uncommon
+- [Strength of a Raging Fire](https://www.readysetink.com/card/strength-of-a-raging-fire.html): Steel, cost 3, Action, Rare
+- [Strike a Good Match](https://www.readysetink.com/card/strike-a-good-match.html): Emerald, cost 2, Action, Common
+- [The Matchmaker - Unforgiving Expert](https://www.readysetink.com/card/the-matchmaker-unforgiving-expert.html): Ruby, cost 4, Character, Common
+- [The Sword of Shan-Yu](https://www.readysetink.com/card/the-sword-of-shan-yu.html): Ruby, cost 1, Item, Rare
+- [The Wall - Border Fortress](https://www.readysetink.com/card/the-wall-border-fortress.html): Steel, cost 4, Location, Rare
+- [Training Grounds - Impossible Pillar](https://www.readysetink.com/card/training-grounds-impossible-pillar.html): Ruby, cost 1, Location, Common
+- [Training Staff](https://www.readysetink.com/card/training-staff.html): Steel, cost 2, Item, Common
+- [Winter Camp - Medical Tent](https://www.readysetink.com/card/winter-camp-medical-tent.html): Sapphire, cost 3, Location, Common
+- [Yao - Imperial Soldier](https://www.readysetink.com/card/yao-imperial-soldier.html): Steel, cost 4, Character, Common
+- [Yao - Snow Warrior](https://www.readysetink.com/card/yao-snow-warrior.html): Emerald, cost 4, Character, Common

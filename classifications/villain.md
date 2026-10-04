@@ -1,0 +1,319 @@
+# Villain: Disney Lorcana Villain cards
+
+Source: https://www.readysetink.com/classifications/villain/
+
+313 cards.
+
+- [Beagle Boys - Small-Time Crooks](https://www.readysetink.com/card/beagle-boys-small-time-crooks.html): Ruby / Sapphire, cost 4, Character, Uncommon
+- [Bellwether - Assistant Mayor](https://www.readysetink.com/card/bellwether-assistant-mayor.html): Emerald, cost 3, Character, Uncommon
+- [Bellwether - Master Manipulator](https://www.readysetink.com/card/bellwether-master-manipulator.html): Emerald, cost 4, Character, Uncommon
+- [Black Heron - Real Bad Egg](https://www.readysetink.com/card/black-heron-real-bad-egg.html): Steel, cost 2, Character, Uncommon
+- [Captain Hook - Captain of the Jolly Roger](https://www.readysetink.com/card/captain-hook-captain-of-the-jolly-roger.html): Steel, cost 4, Character, Rare
+- [Captain Hook - Conniving Pirate](https://www.readysetink.com/card/captain-hook-conniving-pirate.html): Ruby, cost 2, Character, Uncommon
+- [Captain Hook - Devious Duelist](https://www.readysetink.com/card/captain-hook-devious-duelist.html): cost 5, Character, Special
+- [Captain Hook - Forceful Duelist](https://www.readysetink.com/card/captain-hook-forceful-duelist.html): Steel, cost 1, Character, Common
+- [Captain Hook - Master Swordsman](https://www.readysetink.com/card/captain-hook-master-swordsman.html): Ruby, cost 5, Character, Rare
+- [Captain Hook - Ruthless Pirate](https://www.readysetink.com/card/captain-hook-ruthless-pirate.html): Ruby, cost 7, Character, Rare
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Captain Hook - Thinking a Happy Thought](https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.html): Steel, cost 5, Character, Rare
+- [Captain Hook - Underhanded](https://www.readysetink.com/card/captain-hook-underhanded.html): Emerald, cost 3, Character, Rare
+- [Charles Muntz - Obsessive Explorer](https://www.readysetink.com/card/charles-muntz-obsessive-explorer.html): Sapphire, cost 4, Character, Super Rare
+- [Chernabog - Creature of the Night](https://www.readysetink.com/card/chernabog-creature-of-the-night.html): Amethyst, cost 5, Character, Rare
+- [Chernabog - Evildoer](https://www.readysetink.com/card/chernabog-evildoer.html): Amber, cost 10, Character, Super Rare
+- [Chernabog - Unnatural Force](https://www.readysetink.com/card/chernabog-unnatural-force.html): Emerald, cost 5, Character, Super Rare
+- [Cruella De Vil - Dodging Traffic](https://www.readysetink.com/card/cruella-de-vil-dodging-traffic.html): Ruby, cost 6, Character, Common
+- [Cruella De Vil - Fashionable Cruiser](https://www.readysetink.com/card/cruella-de-vil-fashionable-cruiser.html): Sapphire, cost 2, Character, Common
+- [Cruella De Vil - Judgmental Traveler](https://www.readysetink.com/card/cruella-de-vil-judgmental-traveler.html): Emerald, cost 6, Character, Rare
+- [Cruella De Vil - Miserable as Usual](https://www.readysetink.com/card/cruella-de-vil-miserable-as-usual.html): Emerald, cost 2, Character, Rare
+- [Cruella De Vil - Perfectly Wretched](https://www.readysetink.com/card/cruella-de-vil-perfectly-wretched.html): Sapphire, cost 5, Character, Uncommon
+- [Cruella De Vil - Style Icon](https://www.readysetink.com/card/cruella-de-vil-style-icon.html): Sapphire, cost 3, Character, Legendary
+- [Dang Hu - Talon Chief](https://www.readysetink.com/card/dang-hu-talon-chief.html): Sapphire, cost 5, Character, Rare
+- [David Xanatos - Arcane Industrialist](https://www.readysetink.com/card/david-xanatos-arcane-industrialist.html): Amethyst, cost 5, Character, Common
+- [David Xanatos - Charismatic Leader](https://www.readysetink.com/card/david-xanatos-charismatic-leader.html): Ruby, cost 6, Character, Super Rare
+- [David Xanatos - Steel Clan Leader](https://www.readysetink.com/card/david-xanatos-steel-clan-leader.html): Steel, cost 3, Character, Uncommon
+- [Demona - Betrayer of the Clan](https://www.readysetink.com/card/demona-betrayer-of-the-clan.html): Amethyst, cost 4, Character, Common
+- [Demona - Scourge of the Wyvern Clan](https://www.readysetink.com/card/demona-scourge-of-the-wyvern-clan.html): Amethyst, cost 6, Character, Legendary
+- [Don Karnage - Air Pirate Leader](https://www.readysetink.com/card/don-karnage-air-pirate-leader.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Don Karnage - Prince of Pirates](https://www.readysetink.com/card/don-karnage-prince-of-pirates.html): Emerald, cost 5, Character, Common
+- [Dr. Bushroot - Evil Botanist](https://www.readysetink.com/card/dr-bushroot-evil-botanist.html): Emerald, cost 5, Character, Rare
+- [Dr. Calico - Green-Eyed Man](https://www.readysetink.com/card/dr-calico-green-eyed-man.html): Steel, cost 4, Character, Common
+- [Dr. Facilier - Agent Provocateur](https://www.readysetink.com/card/dr-facilier-agent-provocateur.html): Amethyst, cost 7, Character, Rare
+- [Dr. Facilier - Charlatan](https://www.readysetink.com/card/dr-facilier-charlatan.html): Amethyst, cost 2, Character, Common
+- [Dr. Facilier - Fortune Teller](https://www.readysetink.com/card/dr-facilier-fortune-teller.html): Emerald, cost 7, Character, Super Rare
+- [Dr. Facilier - Remarkable Gentleman](https://www.readysetink.com/card/dr-facilier-remarkable-gentleman.html): Amethyst, cost 3, Character, Rare
+- [Dr. Facilier - Savvy Opportunist](https://www.readysetink.com/card/dr-facilier-savvy-opportunist.html): Amethyst, cost 4, Character, Common
+- [Dr. Hamsterviel - Evil Observer](https://www.readysetink.com/card/dr-hamsterviel-evil-observer.html): Steel, cost 3, Character, Uncommon
+- [Dr. Hamsterviel - Infamous Scientist](https://www.readysetink.com/card/dr-hamsterviel-infamous-scientist.html): Steel, cost 8, Character, Rare
+- [Druun - Ravenous Plague](https://www.readysetink.com/card/druun-ravenous-plague.html): Amethyst, cost 4, Character, Uncommon
+- [Duke of Weselton - Opportunistic Official](https://www.readysetink.com/card/duke-of-weselton-opportunistic-official.html): Emerald, cost 1, Character, Common
+- [Edgar Balthazar - Ambitious Butler](https://www.readysetink.com/card/edgar-balthazar-ambitious-butler.html): Ruby, cost 5, Character, Common
+- [Ernesto de la Cruz - Ruthless Musician](https://www.readysetink.com/card/ernesto-de-la-cruz-ruthless-musician.html): Ruby, cost 6, Character, Rare
+- [Fat Cat - Criminal Businessman](https://www.readysetink.com/card/fat-cat-criminal-businessman.html): Steel, cost 4, Character, Rare
+- [Fat Cat - Felonious Feline](https://www.readysetink.com/card/fat-cat-felonious-feline.html): Steel, cost 6, Character, Common
+- [Flintheart Glomgold - Lone Cheater](https://www.readysetink.com/card/flintheart-glomgold-lone-cheater.html): Sapphire, cost 4, Character, Uncommon
+- [Flintheart Glomgold - Scheming Billionaire](https://www.readysetink.com/card/flintheart-glomgold-scheming-billionaire.html): Emerald, cost 4, Character, Uncommon
+- [Gaston - Arrogant Hunter](https://www.readysetink.com/card/gaston-arrogant-hunter.html): Ruby, cost 2, Character, Common
+- [Gaston - Arrogant Showoff](https://www.readysetink.com/card/gaston-arrogant-showoff.html): Ruby, cost 4, Character, Common
+- [Gaston - Baritone Bully](https://www.readysetink.com/card/gaston-baritone-bully.html): Amber, cost 3, Character, Uncommon
+- [Gaston - Despicable Dealer](https://www.readysetink.com/card/gaston-despicable-dealer.html): Amber, cost 3, Character, Super Rare
+- [Gaston - Egotistical Bully](https://www.readysetink.com/card/gaston-egotistical-bully.html): cost 2, Character, Special
+- [Gaston - Frightful Bully](https://www.readysetink.com/card/gaston-frightful-bully.html): Amber, cost 2, Character, Uncommon
+- [Gaston - Intellectual Powerhouse](https://www.readysetink.com/card/gaston-intellectual-powerhouse.html): Sapphire, cost 6, Character, Rare
+- [Gaston - Pure Paragon](https://www.readysetink.com/card/gaston-pure-paragon.html): Ruby, cost 9, Character, Rare
+- [Gaston - Scheming Suitor](https://www.readysetink.com/card/gaston-scheming-suitor.html): Emerald, cost 2, Character, Common
+- [Gaston - Superior Archer](https://www.readysetink.com/card/gaston-superior-archer.html): Amber, cost 5, Character, Uncommon
+- [Gustav the Giant - Terror of the Kingdom](https://www.readysetink.com/card/gustav-the-giant-terror-of-the-kingdom.html): Steel, cost 3, Character, Rare
+- [Hades - Double Dealer](https://www.readysetink.com/card/hades-double-dealer.html): Emerald, cost 4, Character, Legendary
+- [Hades - Fast Talker](https://www.readysetink.com/card/hades-fast-talker.html): Amethyst / Ruby, cost 6, Character, Rare
+- [Hades - Hotheaded Ruler](https://www.readysetink.com/card/hades-hotheaded-ruler.html): Steel, cost 6, Character, Rare
+- [Hades - Infernal Schemer](https://www.readysetink.com/card/hades-infernal-schemer.html): Sapphire, cost 7, Character, Legendary
+- [Hades - King of Olympus](https://www.readysetink.com/card/hades-king-of-olympus.html): Amber, cost 8, Character, Rare
+- [Hades - Looking for a Deal](https://www.readysetink.com/card/hades-looking-for-a-deal.html): Amethyst, cost 5, Character, Legendary
+- [Hades - Lord of the Dead](https://www.readysetink.com/card/hades-lord-of-the-dead.html): Amethyst, cost 6, Character, Rare
+- [Hades - Lord of the Underworld](https://www.readysetink.com/card/hades-lord-of-the-underworld.html): Amber, cost 4, Character, Rare
+- [Hades - Meticulous Plotter](https://www.readysetink.com/card/hades-meticulous-plotter.html): Sapphire, cost 4, Character, Uncommon
+- [Hades - Meticulous Schemer](https://www.readysetink.com/card/hades-meticulous-schemer.html): Sapphire, cost 6, Character, Uncommon
+- [Hades - Ruthless Tyrant](https://www.readysetink.com/card/hades-ruthless-tyrant.html): Amethyst / Ruby, cost 7, Character, Super Rare
+- [Hades - Strong Arm](https://www.readysetink.com/card/hades-strong-arm.html): Ruby, cost 5, Character, Legendary
+- [Hans - Brazen Manipulator](https://www.readysetink.com/card/hans-brazen-manipulator.html): Ruby, cost 6, Character, Super Rare
+- [Hans - Noble Scoundrel](https://www.readysetink.com/card/hans-noble-scoundrel.html): Sapphire, cost 3, Character, Common
+- [Hans - Scheming Prince](https://www.readysetink.com/card/hans-scheming-prince.html): Emerald, cost 4, Character, Rare
+- [Hans - Thirteenth in Line](https://www.readysetink.com/card/hans-thirteenth-in-line.html): Steel, cost 4, Character, Super Rare
+- [Helga Sinclair - Femme Fatale](https://www.readysetink.com/card/helga-sinclair-femme-fatale.html): Emerald, cost 5, Character, Super Rare
+- [Helga Sinclair - No Backup Needed](https://www.readysetink.com/card/helga-sinclair-no-backup-needed.html): Emerald, cost 4, Character, Common
+- [Helga Sinclair - Prepared for Anything](https://www.readysetink.com/card/helga-sinclair-prepared-for-anything.html): Emerald, cost 6, Character, Rare
+- [Helga Sinclair - Right-Hand Woman](https://www.readysetink.com/card/helga-sinclair-right-hand-woman.html): Steel, cost 3, Character, Common
+- [Helga Sinclair - Tough as Nails](https://www.readysetink.com/card/helga-sinclair-tough-as-nails.html): Steel, cost 2, Character, Uncommon
+- [Helga Sinclair - Vengeful Partner](https://www.readysetink.com/card/helga-sinclair-vengeful-partner.html): Emerald, cost 2, Character, Rare
+- [Henry J. Waternoose III - Chief Executive Officer](https://www.readysetink.com/card/henry-j-waternoose-iii-chief-executive-officer.html): Sapphire, cost 6, Character, Rare
+- [Honest John - Not That Honest](https://www.readysetink.com/card/honest-john-not-that-honest.html): Ruby, cost 3, Character, Rare
+- [Honest John - Shameless Schemer](https://www.readysetink.com/card/honest-john-shameless-schemer.html): Ruby, cost 6, Character, Uncommon
+- [Isis Vanderchill - Ice Queen of St. Canard](https://www.readysetink.com/card/isis-vanderchill-ice-queen-of-st-canard.html): Amethyst, cost 4, Character, Common
+- [Jafar - Aspiring Ruler](https://www.readysetink.com/card/jafar-aspiring-ruler.html): Steel, cost 3, Character, Common
+- [Jafar - Double-Crossing Vizier](https://www.readysetink.com/card/jafar-double-crossing-vizier.html): cost 7, Character, Special
+- [Jafar - Dreadnought](https://www.readysetink.com/card/jafar-dreadnought.html): Steel, cost 4, Character, Uncommon
+- [Jafar - High Sultan of Lorcana](https://www.readysetink.com/card/jafar-high-sultan-of-lorcana.html): Amethyst / Steel, cost 5, Character, Super Rare
+- [Jafar - Keeper of Secrets](https://www.readysetink.com/card/jafar-keeper-of-secrets.html): Amethyst, cost 4, Character, Rare
+- [Jafar - Lamp Thief](https://www.readysetink.com/card/jafar-lamp-thief.html): Amethyst, cost 3, Character, Uncommon
+- [Jafar - Newly Crowned](https://www.readysetink.com/card/jafar-newly-crowned.html): Amethyst / Steel, cost 4, Character, Super Rare
+- [Jafar - Power-Hungry Vizier](https://www.readysetink.com/card/jafar-power-hungry-vizier.html): Steel, cost 5, Character, Super Rare
+- [Jafar - Royal Vizier](https://www.readysetink.com/card/jafar-royal-vizier.html): Steel, cost 2, Character, Common
+- [Jafar - Spectral Sorcerer](https://www.readysetink.com/card/jafar-spectral-sorcerer.html): cost 4, Character, Special
+- [Jafar - Striking Illusionist](https://www.readysetink.com/card/jafar-striking-illusionist.html): Amethyst, cost 7, Character, Legendary
+- [Jafar - Tyrannical Hypnotist](https://www.readysetink.com/card/jafar-tyrannical-hypnotist.html): Steel, cost 6, Character, Legendary
+- [Jafar - Wicked Sorcerer](https://www.readysetink.com/card/jafar-wicked-sorcerer.html): Amethyst, cost 4, Character, Common
+- [John Silver - Alien Pirate](https://www.readysetink.com/card/john-silver-alien-pirate.html): Emerald, cost 6, Character, Legendary
+- [John Silver - Ferocious Friend](https://www.readysetink.com/card/john-silver-ferocious-friend.html): Ruby, cost 4, Character, Uncommon
+- [John Silver - Greedy Treasure Seeker](https://www.readysetink.com/card/john-silver-greedy-treasure-seeker.html): Steel, cost 3, Character, Rare
+- [John Silver - Ship's Cook](https://www.readysetink.com/card/john-silver-ships-cook.html): Steel, cost 3, Character, Common
+- [John Silver - Stern Captain](https://www.readysetink.com/card/john-silver-stern-captain.html): Steel, cost 8, Character, Legendary
+- [John Silver - Terror of the Realm](https://www.readysetink.com/card/john-silver-terror-of-the-realm.html): Sapphire, cost 8, Character, Rare
+- [John Silver - Vengeful Pirate](https://www.readysetink.com/card/john-silver-vengeful-pirate.html): Emerald / Steel, cost 8, Character, Rare
+- [Kaa - Hypnotizing Python](https://www.readysetink.com/card/kaa-hypnotizing-python.html): Amber / Emerald, cost 4, Character, Uncommon
+- [Kaa - Secretive Snake](https://www.readysetink.com/card/kaa-secretive-snake.html): Emerald, cost 7, Character, Uncommon
+- [Kaa - Suspicious Serpent](https://www.readysetink.com/card/kaa-suspicious-serpent.html): Emerald, cost 3, Character, Common
+- [King Candy - Royal Racer](https://www.readysetink.com/card/king-candy-royal-racer.html): Amber / Ruby, cost 4, Character, Super Rare
+- [King Candy - Sovereign of Sugar](https://www.readysetink.com/card/king-candy-sovereign-of-sugar.html): Sapphire, cost 1, Character, Common
+- [King Candy - Sugar Rush Nightmare](https://www.readysetink.com/card/king-candy-sugar-rush-nightmare.html): Amber / Ruby, cost 3, Character, Uncommon
+- [King Candy - Sweet Abomination](https://www.readysetink.com/card/king-candy-sweet-abomination.html): Sapphire, cost 5, Character, Uncommon
+- [Lady Tremaine - Bitterly Jealous](https://www.readysetink.com/card/lady-tremaine-bitterly-jealous.html): Emerald, cost 6, Character, Legendary
+- [Lady Tremaine - Imperious Queen](https://www.readysetink.com/card/lady-tremaine-imperious-queen.html): Ruby, cost 6, Character, Super Rare
+- [Lady Tremaine - Overbearing Matriarch](https://www.readysetink.com/card/lady-tremaine-overbearing-matriarch.html): Ruby, cost 2, Character, Common
+- [Lady Tremaine - Scornful Snob](https://www.readysetink.com/card/lady-tremaine-scornful-snob.html): Ruby, cost 3, Character, Super Rare
+- [Lady Tremaine - Sinister Socialite](https://www.readysetink.com/card/lady-tremaine-sinister-socialite.html): Ruby, cost 5, Character, Super Rare
+- [Lady Tremaine - Wicked Stepmother](https://www.readysetink.com/card/lady-tremaine-wicked-stepmother.html): Emerald, cost 6, Character, Rare
+- [Liquidator - Iced Over](https://www.readysetink.com/card/liquidator-iced-over.html): Ruby, cost 2, Character, Uncommon
+- [Lyle Tiberius Rourke - Adventurer for Hire](https://www.readysetink.com/card/lyle-tiberius-rourke-adventurer-for-hire.html): Emerald, cost 2, Character, Uncommon
+- [Lyle Tiberius Rourke - Crystallized Commander](https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-commander.html): Ruby, cost 6, Character, Rare
+- [Lyle Tiberius Rourke - Crystallized Mercenary](https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-mercenary.html): Ruby, cost 8, Character, Rare
+- [Lyle Tiberius Rourke - Cunning Mercenary](https://www.readysetink.com/card/lyle-tiberius-rourke-cunning-mercenary.html): Emerald, cost 3, Character, Super Rare
+- [Lyle Tiberius Rourke - Looking for His Moment](https://www.readysetink.com/card/lyle-tiberius-rourke-looking-for-his-moment.html): Ruby, cost 3, Character, Common
+- [Madam Mim - Bauble Chaser](https://www.readysetink.com/card/madam-mim-bauble-chaser.html): Amethyst, cost 1, Character, Common
+- [Madam Mim - Cheating Spellcaster](https://www.readysetink.com/card/madam-mim-cheating-spellcaster.html): Amethyst, cost 6, Character, Rare
+- [Madam Mim - Elephant](https://www.readysetink.com/card/madam-mim-elephant.html): Amethyst, cost 4, Character, Super Rare
+- [Madam Mim - Fox](https://www.readysetink.com/card/madam-mim-fox.html): Amethyst, cost 3, Character, Rare
+- [Madam Mim - Hummingbird](https://www.readysetink.com/card/madam-mim-hummingbird.html): Emerald, cost 2, Character, Uncommon
+- [Madam Mim - Nosy Neighbor](https://www.readysetink.com/card/madam-mim-nosy-neighbor.html): Sapphire, cost 5, Character, Common
+- [Madam Mim - Purple Dragon](https://www.readysetink.com/card/madam-mim-purple-dragon.html): Amethyst, cost 7, Character, Legendary
+- [Madam Mim - Resourceful Trickster](https://www.readysetink.com/card/madam-mim-resourceful-trickster.html): Amethyst, cost 8, Character, Legendary
+- [Madam Mim - Rhino](https://www.readysetink.com/card/madam-mim-rhino.html): Amethyst / Ruby, cost 6, Character, Uncommon
+- [Madam Mim - Rival of Merlin](https://www.readysetink.com/card/madam-mim-rival-of-merlin.html): Amethyst, cost 5, Character, Rare
+- [Madam Mim - Snake](https://www.readysetink.com/card/madam-mim-snake.html): Amethyst, cost 2, Character, Uncommon
+- [Madam Mim - Tiny Adversary](https://www.readysetink.com/card/madam-mim-tiny-adversary.html): Amethyst, cost 2, Character, Rare
+- [Madam Mim - Truly Marvelous](https://www.readysetink.com/card/madam-mim-truly-marvelous.html): Amethyst, cost 3, Character, Super Rare
+- [Madam Mim - Up to No Good](https://www.readysetink.com/card/madam-mim-up-to-no-good.html): Amethyst, cost 3, Character, Uncommon
+- [Madame Medusa - Deceiving Partner](https://www.readysetink.com/card/madame-medusa-deceiving-partner.html): Amethyst / Ruby, cost 3, Character, Uncommon
+- [Madame Medusa - Diamond Lover](https://www.readysetink.com/card/madame-medusa-diamond-lover.html): Amethyst / Ruby, cost 4, Character, Uncommon
+- [Madame Medusa - The Boss](https://www.readysetink.com/card/madame-medusa-the-boss.html): Ruby, cost 6, Character, Super Rare
+- [Magica De Spell - Ambitious Witch](https://www.readysetink.com/card/magica-de-spell-ambitious-witch.html): Amethyst, cost 2, Character, Common
+- [Magica De Spell - Conniving Sorceress](https://www.readysetink.com/card/magica-de-spell-conniving-sorceress.html): Amethyst, cost 7, Character, Super Rare
+- [Magica De Spell - Cruel Sorceress](https://www.readysetink.com/card/magica-de-spell-cruel-sorceress.html): Amethyst, cost 4, Character, Rare
+- [Magica De Spell - Shadow Form](https://www.readysetink.com/card/magica-de-spell-shadow-form.html): Amethyst / Emerald, cost 5, Character, Uncommon
+- [Magica De Spell - Shadowy Sorceress](https://www.readysetink.com/card/magica-de-spell-shadowy-sorceress.html): cost 3, Character, Special
+- [Magica De Spell - Shadowy and Sinister](https://www.readysetink.com/card/magica-de-spell-shadowy-and-sinister.html): Amethyst, cost 3, Character, Common
+- [Magica De Spell - Spiteful Sorceress](https://www.readysetink.com/card/magica-de-spell-spiteful-sorceress.html): Amethyst, cost 5, Character, Rare
+- [Magica De Spell - The Midas Touch](https://www.readysetink.com/card/magica-de-spell-the-midas-touch.html): Amethyst, cost 7, Character, Super Rare
+- [Magica De Spell - Thieving Sorceress](https://www.readysetink.com/card/magica-de-spell-thieving-sorceress.html): Amethyst, cost 4, Character, Uncommon
+- [Maleficent - Biding Her Time](https://www.readysetink.com/card/maleficent-biding-her-time.html): Amethyst, cost 1, Character, Rare
+- [Maleficent - Exultant Spellcaster](https://www.readysetink.com/card/maleficent-exultant-spellcaster.html): Amethyst, cost 1, Character, Common
+- [Maleficent - Formidable Queen](https://www.readysetink.com/card/maleficent-formidable-queen.html): Amethyst, cost 8, Character, Super Rare
+- [Maleficent - Imperious Traveler](https://www.readysetink.com/card/maleficent-imperious-traveler.html): Amethyst, cost 5, Character, Rare
+- [Maleficent - Mistress of All Evil](https://www.readysetink.com/card/maleficent-mistress-of-all-evil.html): Amethyst, cost 5, Character, Legendary
+- [Maleficent - Monstrous Dragon](https://www.readysetink.com/card/maleficent-monstrous-dragon.html): Ruby, cost 9, Character, Legendary
+- [Maleficent - Sinister Visitor](https://www.readysetink.com/card/maleficent-sinister-visitor.html): Sapphire, cost 4, Character, Common
+- [Maleficent - Sorceress](https://www.readysetink.com/card/maleficent-sorceress.html): Amethyst, cost 3, Character, Common
+- [Maleficent - Uninvited](https://www.readysetink.com/card/maleficent-uninvited.html): Sapphire, cost 5, Character, Rare
+- [Maleficent - Vengeful Sorceress](https://www.readysetink.com/card/maleficent-vengeful-sorceress.html): Amethyst, cost 2, Character, Common
+- [Maleficent - Vexed Partygoer](https://www.readysetink.com/card/maleficent-vexed-partygoer.html): Amethyst, cost 3, Character, Uncommon
+- [Maleficent & Diablo - Evil Incarnate](https://www.readysetink.com/card/maleficent-diablo-evil-incarnate.html): Amethyst / Steel, cost 7, Character, Rare
+- [Megavolt - Electrical Menace](https://www.readysetink.com/card/megavolt-electrical-menace.html): Steel, cost 4, Character, Uncommon
+- [Monsieur D'Arque - Despicable Proprietor](https://www.readysetink.com/card/monsieur-darque-despicable-proprietor.html): Sapphire, cost 1, Character, Common
+- [Mor'du - Savage Cursed Prince](https://www.readysetink.com/card/mordu-savage-cursed-prince.html): Amethyst, cost 5, Character, Super Rare
+- [Mor'du - Wicked with Pride](https://www.readysetink.com/card/mordu-wicked-with-pride.html): Amethyst, cost 2, Character, Common
+- [Morgana Macawber - Self-Centered Spellcaster](https://www.readysetink.com/card/morgana-macawber-self-centered-spellcaster.html): Amethyst, cost 3, Character, Common
+- [Mother Gothel - Conceited Manipulator](https://www.readysetink.com/card/mother-gothel-conceited-manipulator.html): Emerald, cost 2, Character, Uncommon
+- [Mother Gothel - Evil as Ever](https://www.readysetink.com/card/mother-gothel-evil-as-ever.html): Emerald, cost 2, Character, Common
+- [Mother Gothel - Knows What's Best](https://www.readysetink.com/card/mother-gothel-knows-whats-best.html): Amethyst / Ruby, cost 2, Character, Rare
+- [Mother Gothel - Selfish Manipulator](https://www.readysetink.com/card/mother-gothel-selfish-manipulator.html): Emerald, cost 6, Character, Super Rare
+- [Mother Gothel - Underhanded Schemer](https://www.readysetink.com/card/mother-gothel-underhanded-schemer.html): Ruby, cost 1, Character, Common
+- [Mother Gothel - Unwavering Schemer](https://www.readysetink.com/card/mother-gothel-unwavering-schemer.html): Emerald, cost 6, Character, Super Rare
+- [Mother Gothel - Vain Sorceress](https://www.readysetink.com/card/mother-gothel-vain-sorceress.html): Amethyst / Ruby, cost 3, Character, Uncommon
+- [Mother Gothel - Withered and Wicked](https://www.readysetink.com/card/mother-gothel-withered-and-wicked.html): Ruby, cost 2, Character, Uncommon
+- [Mr. Smee - Captain of the Jolly Roger](https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html): Steel, cost 6, Character, Super Rare
+- [Mr. Smee - Efficient Captain](https://www.readysetink.com/card/mr-smee-efficient-captain.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Namaari - Heir of Fang](https://www.readysetink.com/card/namaari-heir-of-fang.html): Ruby, cost 3, Character, Rare
+- [Namaari - Morning Mist](https://www.readysetink.com/card/namaari-morning-mist.html): Steel, cost 4, Character, Legendary
+- [Namaari - Nemesis](https://www.readysetink.com/card/namaari-nemesis.html): Ruby, cost 4, Character, Super Rare
+- [Namaari - Resolute Daughter](https://www.readysetink.com/card/namaari-resolute-daughter.html): Steel, cost 9, Character, Rare
+- [Namaari - Single-Minded Rival](https://www.readysetink.com/card/namaari-single-minded-rival.html): Steel, cost 5, Character, Legendary
+- [Nathaniel Flint - Notorious Pirate](https://www.readysetink.com/card/nathaniel-flint-notorious-pirate.html): Steel, cost 2, Character, Rare
+- [Negaduck - Evil Doppelganger](https://www.readysetink.com/card/negaduck-evil-doppelganger.html): Ruby, cost 2, Character, Common
+- [Negaduck - Public Enemy Number One](https://www.readysetink.com/card/negaduck-public-enemy-number-one.html): Ruby, cost 5, Character, Rare
+- [Nessus - River Guardian](https://www.readysetink.com/card/nessus-river-guardian.html): Ruby, cost 6, Character, Uncommon
+- [Norton Nimnul - Misanthropic Genius](https://www.readysetink.com/card/norton-nimnul-misanthropic-genius.html): Sapphire, cost 3, Character, Uncommon
+- [Pete - Bad Guy](https://www.readysetink.com/card/pete-bad-guy.html): Emerald, cost 5, Character, Rare
+- [Pete - Born to Cheat](https://www.readysetink.com/card/pete-born-to-cheat.html): Emerald, cost 2, Character, Super Rare
+- [Pete - Freebooter](https://www.readysetink.com/card/pete-freebooter.html): Ruby, cost 3, Character, Rare
+- [Pete - Games Referee](https://www.readysetink.com/card/pete-games-referee.html): Steel, cost 3, Character, Uncommon
+- [Pete - Pastry Chomper](https://www.readysetink.com/card/pete-pastry-chomper.html): Ruby, cost 3, Character, Common
+- [Pete - Pirate Scoundrel](https://www.readysetink.com/card/pete-pirate-scoundrel.html): Emerald, cost 1, Character, Common
+- [Pete - Rotten Guy](https://www.readysetink.com/card/pete-rotten-guy.html): Emerald, cost 4, Character, Uncommon
+- [Pete - Space Pirate](https://www.readysetink.com/card/pete-space-pirate.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Pete - Steamboat Rival](https://www.readysetink.com/card/pete-steamboat-rival.html): Ruby, cost 7, Character, Super Rare
+- [Pete - Wrestling Champ](https://www.readysetink.com/card/pete-wrestling-champ.html): Steel, cost 3, Character, Rare
+- [Prince John - Fraidy-Cat](https://www.readysetink.com/card/prince-john-fraidy-cat.html): Ruby, cost 3, Character, Rare
+- [Prince John - Gold Lover](https://www.readysetink.com/card/prince-john-gold-lover.html): Sapphire, cost 4, Character, Super Rare
+- [Prince John - Greediest of All](https://www.readysetink.com/card/prince-john-greediest-of-all.html): Emerald, cost 3, Character, Rare
+- [Prince John - Opportunistic Briber](https://www.readysetink.com/card/prince-john-opportunistic-briber.html): Sapphire, cost 3, Character, Common
+- [Prince John - Phony King](https://www.readysetink.com/card/prince-john-phony-king.html): Emerald, cost 5, Character, Uncommon
+- [Quackerjack - Loony Toymaker](https://www.readysetink.com/card/quackerjack-loony-toymaker.html): Sapphire, cost 5, Character, Legendary
+- [Queen of Hearts - Capricious Monarch](https://www.readysetink.com/card/queen-of-hearts-capricious-monarch.html): Steel, cost 7, Character, Rare
+- [Queen of Hearts - Haughty Monarch](https://www.readysetink.com/card/queen-of-hearts-haughty-monarch.html): Emerald / Ruby, cost 4, Character, Super Rare
+- [Queen of Hearts - Impatient Traveler](https://www.readysetink.com/card/queen-of-hearts-impatient-traveler.html): Ruby, cost 4, Character, Rare
+- [Queen of Hearts - Impulsive Ruler](https://www.readysetink.com/card/queen-of-hearts-impulsive-ruler.html): Ruby, cost 2, Character, Uncommon
+- [Queen of Hearts - Losing Her Temper](https://www.readysetink.com/card/queen-of-hearts-losing-her-temper.html): Ruby, cost 2, Character, Common
+- [Queen of Hearts - Quick-Tempered](https://www.readysetink.com/card/queen-of-hearts-quick-tempered.html): Emerald, cost 2, Character, Common
+- [Queen of Hearts - Sensing Weakness](https://www.readysetink.com/card/queen-of-hearts-sensing-weakness.html): Ruby, cost 5, Character, Uncommon
+- [Queen of Hearts - Unpredictable Bully](https://www.readysetink.com/card/queen-of-hearts-unpredictable-bully.html): Emerald / Ruby, cost 5, Character, Super Rare
+- [Queen of Hearts - Wonderland Empress](https://www.readysetink.com/card/queen-of-hearts-wonderland-empress.html): Amber, cost 3, Character, Uncommon
+- [Randall Boggs - Envious Coworker](https://www.readysetink.com/card/randall-boggs-envious-coworker.html): Ruby, cost 2, Character, Rare
+- [Randall Boggs - Scary Smart](https://www.readysetink.com/card/randall-boggs-scary-smart.html): Sapphire, cost 4, Character, Rare
+- [Rat Capone - Rodent Gangster](https://www.readysetink.com/card/rat-capone-rodent-gangster.html): Steel, cost 4, Character, Common
+- [Ratigan - Criminal Mastermind](https://www.readysetink.com/card/ratigan-criminal-mastermind.html): Emerald, cost 4, Character, Common
+- [Ratigan - Greedy Genius](https://www.readysetink.com/card/ratigan-greedy-genius.html): Sapphire, cost 8, Character, Legendary
+- [Ratigan - Nefarious Criminal](https://www.readysetink.com/card/ratigan-nefarious-criminal.html): Ruby, cost 4, Character, Legendary
+- [Ratigan - Party Crasher](https://www.readysetink.com/card/ratigan-party-crasher.html): Ruby, cost 7, Character, Rare
+- [Ratigan - Raging Rat](https://www.readysetink.com/card/ratigan-raging-rat.html): Ruby, cost 3, Character, Common
+- [Ratigan - Very Large Mouse](https://www.readysetink.com/card/ratigan-very-large-mouse.html): Ruby, cost 5, Character, Rare
+- [Scar - Betrayer](https://www.readysetink.com/card/scar-betrayer.html): Ruby, cost 5, Character, Uncommon
+- [Scar - Eerily Prepared](https://www.readysetink.com/card/scar-eerily-prepared.html): Sapphire, cost 5, Character, Super Rare
+- [Scar - Fiery Usurper](https://www.readysetink.com/card/scar-fiery-usurper.html): Ruby, cost 4, Character, Common
+- [Scar - Finally King](https://www.readysetink.com/card/scar-finally-king.html): Steel, cost 5, Character, Legendary
+- [Scar - Heartless Hunter](https://www.readysetink.com/card/scar-heartless-hunter.html): Ruby, cost 5, Character, Super Rare
+- [Scar - Mastermind](https://www.readysetink.com/card/scar-mastermind.html): Sapphire, cost 6, Character, Rare
+- [Scar - Shameless Firebrand](https://www.readysetink.com/card/scar-shameless-firebrand.html): Ruby, cost 8, Character, Rare
+- [Scar - Tempestuous Lion](https://www.readysetink.com/card/scar-tempestuous-lion.html): Amethyst, cost 6, Character, Uncommon
+- [Scar - Vengeful Lion](https://www.readysetink.com/card/scar-vengeful-lion.html): Emerald, cost 4, Character, Rare
+- [Scar - Vicious Cheater](https://www.readysetink.com/card/scar-vicious-cheater.html): Ruby, cost 7, Character, Legendary
+- [Scrooge McDuck - Ebenezer Scrooge](https://www.readysetink.com/card/scrooge-mcduck-ebenezer-scrooge.html): Ruby, cost 4, Character, Super Rare
+- [Scrooge McDuck - Ghostly Ebenezer](https://www.readysetink.com/card/scrooge-mcduck-ghostly-ebenezer.html): Ruby, cost 2, Character, Uncommon
+- [Scrooge McDuck - Miserly Ebenezer](https://www.readysetink.com/card/scrooge-mcduck-miserly-ebenezer.html): Sapphire, cost 3, Character, Common
+- [Scroop - Backstabber](https://www.readysetink.com/card/scroop-backstabber.html): Ruby, cost 5, Character, Uncommon
+- [Scroop - Odious Mutineer](https://www.readysetink.com/card/scroop-odious-mutineer.html): Emerald, cost 3, Character, Super Rare
+- [Shere Khan - Fearsome Tiger](https://www.readysetink.com/card/shere-khan-fearsome-tiger.html): Emerald, cost 6, Character, Legendary
+- [Shere Khan - Fierce and Furious](https://www.readysetink.com/card/shere-khan-fierce-and-furious.html): Ruby, cost 8, Character, Rare
+- [Shere Khan - Infamous Tiger](https://www.readysetink.com/card/shere-khan-infamous-tiger.html): Emerald, cost 4, Character, Rare
+- [Shere Khan - Keen-Eyed Hunter](https://www.readysetink.com/card/shere-khan-keen-eyed-hunter.html): Ruby, cost 2, Character, Common
+- [Shere Khan - Khan Industries CEO](https://www.readysetink.com/card/shere-khan-khan-industries-ceo.html): Steel, cost 4, Character, Legendary
+- [Shere Khan - Menacing Predator](https://www.readysetink.com/card/shere-khan-menacing-predator.html): Ruby, cost 3, Character, Rare
+- [Shere Khan - Opportunistic Tycoon](https://www.readysetink.com/card/shere-khan-opportunistic-tycoon.html): Emerald, cost 4, Character, Uncommon
+- [Sheriff of Nottingham - Bushel Britches](https://www.readysetink.com/card/sheriff-of-nottingham-bushel-britches.html): Sapphire, cost 9, Character, Rare
+- [Sheriff of Nottingham - Corrupt Official](https://www.readysetink.com/card/sheriff-of-nottingham-corrupt-official.html): Steel, cost 4, Character, Super Rare
+- [Sheriff of Nottingham - Vine Slayer](https://www.readysetink.com/card/sheriff-of-nottingham-vine-slayer.html): Steel, cost 5, Character, Common
+- [Sid Phillips - Toy Surgeon](https://www.readysetink.com/card/sid-phillips-toy-surgeon.html): Ruby, cost 6, Character, Legendary
+- [Splatter Phoenix - Rejected Artist](https://www.readysetink.com/card/splatter-phoenix-rejected-artist.html): Sapphire, cost 2, Character, Uncommon
+- [Syndrome - Evil Inventor](https://www.readysetink.com/card/syndrome-evil-inventor.html): Sapphire, cost 3, Character, Common
+- [Syndrome - Out for Revenge](https://www.readysetink.com/card/syndrome-out-for-revenge.html): Steel, cost 6, Character, Super Rare
+- [Tamatoa - Grabby Crab](https://www.readysetink.com/card/tamatoa-grabby-crab.html): cost 4, Character, Special
+- [Tamatoa - Happy as a Clam](https://www.readysetink.com/card/tamatoa-happy-as-a-clam.html): Sapphire, cost 6, Character, Legendary
+- [Tamatoa - Seeker of Shine](https://www.readysetink.com/card/tamatoa-seeker-of-shine.html): Sapphire, cost 7, Character, Super Rare
+- [Tamatoa - So Shiny!](https://www.readysetink.com/card/tamatoa-so-shiny.html): Sapphire, cost 8, Character, Super Rare
+- [Taurus Bulba - Steerminator](https://www.readysetink.com/card/taurus-bulba-steerminator.html): Ruby, cost 3, Character, Common
+- [Te Kā - Elemental Terror](https://www.readysetink.com/card/te-k-elemental-terror.html): Amethyst / Ruby, cost 10, Character, Super Rare
+- [Te Kā - Heartless](https://www.readysetink.com/card/te-k-heartless.html): Steel, cost 6, Character, Legendary
+- [Te Kā - Lava Monster](https://www.readysetink.com/card/te-k-lava-monster.html): Amethyst, cost 6, Character, Common
+- [Te Kā - The Burning One](https://www.readysetink.com/card/te-k-the-burning-one.html): Ruby, cost 6, Character, Super Rare
+- [Thaddeus E. Klang - Metallic Leader](https://www.readysetink.com/card/thaddeus-e-klang-metallic-leader.html): Steel, cost 5, Character, Uncommon
+- [The Bear - Territorial Animal](https://www.readysetink.com/card/the-bear-territorial-animal.html): Ruby, cost 3, Character, Common
+- [The Coachman - Greedy Deceiver](https://www.readysetink.com/card/the-coachman-greedy-deceiver.html): Ruby / Steel, cost 2, Character, Uncommon
+- [The Firebird - Force of Destruction](https://www.readysetink.com/card/the-firebird-force-of-destruction.html): Amethyst, cost 4, Character, Common
+- [The Headless Horseman - Cursed Rider](https://www.readysetink.com/card/the-headless-horseman-cursed-rider.html): Steel, cost 8, Character, Super Rare
+- [The Headless Horseman - Relentless Spirit](https://www.readysetink.com/card/the-headless-horseman-relentless-spirit.html): Steel, cost 4, Character, Common
+- [The Headless Horseman - Terror of Sleepy Hollow](https://www.readysetink.com/card/the-headless-horseman-terror-of-sleepy-hollow.html): Ruby, cost 5, Character, Legendary
+- [The Horned King - Heartless Devil](https://www.readysetink.com/card/the-horned-king-heartless-devil.html): Amethyst, cost 1, Character, Common
+- [The Horned King - Merciless Master](https://www.readysetink.com/card/the-horned-king-merciless-master.html): Amber, cost 5, Character, Legendary
+- [The Horned King - Triumphant Ghoul](https://www.readysetink.com/card/the-horned-king-triumphant-ghoul.html): Amethyst, cost 2, Character, Rare
+- [The Horned King - Wicked Ruler](https://www.readysetink.com/card/the-horned-king-wicked-ruler.html): Amethyst, cost 4, Character, Super Rare
+- [The Phantom Blot - Shadowy Figure](https://www.readysetink.com/card/the-phantom-blot-shadowy-figure.html): Ruby, cost 2, Character, Uncommon
+- [The Queen - Commanding Presence](https://www.readysetink.com/card/the-queen-commanding-presence.html): Amber, cost 5, Character, Super Rare
+- [The Queen - Conceited Ruler](https://www.readysetink.com/card/the-queen-conceited-ruler.html): Amber, cost 3, Character, Rare
+- [The Queen - Crown of the Council](https://www.readysetink.com/card/the-queen-crown-of-the-council.html): Sapphire, cost 4, Character, Rare
+- [The Queen - Cruelest of All](https://www.readysetink.com/card/the-queen-cruelest-of-all.html): Sapphire, cost 2, Character, Common
+- [The Queen - Devious Disguise](https://www.readysetink.com/card/the-queen-devious-disguise.html): Emerald, cost 4, Character, Legendary
+- [The Queen - Disguised Peddler](https://www.readysetink.com/card/the-queen-disguised-peddler.html): Emerald, cost 3, Character, Super Rare
+- [The Queen - Diviner](https://www.readysetink.com/card/the-queen-diviner.html): Sapphire, cost 3, Character, Legendary
+- [The Queen - Evil Ruler](https://www.readysetink.com/card/the-queen-evil-ruler.html): Emerald, cost 1, Character, Common
+- [The Queen - Fairest of All](https://www.readysetink.com/card/the-queen-fairest-of-all.html): Sapphire, cost 5, Character, Super Rare
+- [The Queen - Hateful Rival](https://www.readysetink.com/card/the-queen-hateful-rival.html): Amethyst, cost 3, Character, Common
+- [The Queen - Jealous Beauty](https://www.readysetink.com/card/the-queen-jealous-beauty.html): Amethyst, cost 4, Character, Legendary
+- [The Queen - Mirror Seeker](https://www.readysetink.com/card/the-queen-mirror-seeker.html): Sapphire, cost 4, Character, Uncommon
+- [The Queen - Regal Monarch](https://www.readysetink.com/card/the-queen-regal-monarch.html): Amber, cost 1, Character, Common
+- [The Queen - Wicked and Vain](https://www.readysetink.com/card/the-queen-wicked-and-vain.html): Amethyst, cost 5, Character, Super Rare
+- [Turbo - Royal Hack](https://www.readysetink.com/card/turbo-royal-hack.html): Ruby, cost 2, Character, Uncommon
+- [Ursula - Deal Maker](https://www.readysetink.com/card/ursula-deal-maker.html): Sapphire, cost 3, Character, Legendary
+- [Ursula - Deceiver](https://www.readysetink.com/card/ursula-deceiver.html): Emerald, cost 2, Character, Uncommon
+- [Ursula - Deceiver of All](https://www.readysetink.com/card/ursula-deceiver-of-all.html): Emerald, cost 3, Character, Legendary
+- [Ursula - Eric's Bride](https://www.readysetink.com/card/ursula-erics-bride.html): Amber, cost 4, Character, Rare
+- [Ursula - Mad Sea Witch](https://www.readysetink.com/card/ursula-mad-sea-witch.html): Amethyst, cost 2, Character, Uncommon
+- [Ursula - Power Hungry](https://www.readysetink.com/card/ursula-power-hungry.html): Amethyst, cost 7, Character, Legendary
+- [Ursula - Sea Witch](https://www.readysetink.com/card/ursula-sea-witch.html): Amethyst, cost 3, Character, Rare
+- [Ursula - Sea Witch Queen](https://www.readysetink.com/card/ursula-sea-witch-queen.html): Amethyst, cost 7, Character, Legendary
+- [Ursula - Vanessa](https://www.readysetink.com/card/ursula-vanessa.html): Amber, cost 2, Character, Common
+- [Ursula - Voice Stealer](https://www.readysetink.com/card/ursula-voice-stealer.html): Amethyst, cost 5, Character, Super Rare
+- [Ursula - Whisper of Vanessa](https://www.readysetink.com/card/ursula-whisper-of-vanessa.html): Amethyst, cost 5, Character, Rare
+- [Virana - Fang Chief](https://www.readysetink.com/card/virana-fang-chief.html): Emerald, cost 5, Character, Common
+- [Witches of Morva - Orddu, Orwen, and Orgoch](https://www.readysetink.com/card/witches-of-morva-orddu-orwen-and-orgoch.html): Amethyst, cost 5, Character, Rare
+- [Yokai - Enigmatic Inventor](https://www.readysetink.com/card/yokai-enigmatic-inventor.html): Sapphire, cost 4, Character, Uncommon
+- [Yokai - Intellectual Schemer](https://www.readysetink.com/card/yokai-intellectual-schemer.html): Emerald / Sapphire, cost 2, Character, Uncommon
+- [Yokai - Professor Callaghan](https://www.readysetink.com/card/yokai-professor-callaghan.html): Sapphire, cost 1, Character, Common
+- [Yokai - Scientific Supervillain](https://www.readysetink.com/card/yokai-scientific-supervillain.html): Sapphire, cost 9, Character, Rare
+- [Yzma - Above It All](https://www.readysetink.com/card/yzma-above-it-all.html): Amethyst / Emerald, cost 7, Character, Super Rare
+- [Yzma - Alchemist](https://www.readysetink.com/card/yzma-alchemist.html): Amethyst, cost 2, Character, Common
+- [Yzma - Choosy Customer](https://www.readysetink.com/card/yzma-choosy-customer.html): Ruby, cost 4, Character, Common
+- [Yzma - Conniving Chemist](https://www.readysetink.com/card/yzma-conniving-chemist.html): Amethyst, cost 4, Character, Legendary
+- [Yzma - Exasperated Schemer](https://www.readysetink.com/card/yzma-exasperated-schemer.html): Emerald, cost 2, Character, Common
+- [Yzma - On Edge](https://www.readysetink.com/card/yzma-on-edge.html): Amethyst / Emerald, cost 6, Character, Super Rare
+- [Yzma - Scary Beyond All Reason](https://www.readysetink.com/card/yzma-scary-beyond-all-reason.html): Amethyst, cost 6, Character, Super Rare
+- [Yzma - Transformed Kitten](https://www.readysetink.com/card/yzma-transformed-kitten.html): Amethyst, cost 2, Character, Common
+- [Yzma - Unjustly Treated](https://www.readysetink.com/card/yzma-unjustly-treated.html): Steel, cost 4, Character, Rare
+- [Yzma - Without Beauty Sleep](https://www.readysetink.com/card/yzma-without-beauty-sleep.html): Amethyst, cost 3, Character, Uncommon

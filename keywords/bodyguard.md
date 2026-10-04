@@ -1,0 +1,73 @@
+# Bodyguard: Disney Lorcana keyword
+
+Source: https://www.readysetink.com/keywords/bodyguard/
+
+The character may enter play already exerted. While a Bodyguard is in play, opposing characters that challenge you must pick a Bodyguard if one is available. Official rule 8.3. 67 cards.
+
+- [Aladdin - Vigilant Guard](https://www.readysetink.com/card/aladdin-vigilant-guard.html): Sapphire / Steel, cost 6, Character, Rare, Bodyguard
+- [Bagheera - Guardian Jaguar](https://www.readysetink.com/card/bagheera-guardian-jaguar.html): Steel, cost 5, Character, Legendary, Bodyguard
+- [Baloo - Friend and Guardian](https://www.readysetink.com/card/baloo-friend-and-guardian.html): Amber, cost 6, Character, Rare, Bodyguard
+- [Baloo - von Bruinwald XIII](https://www.readysetink.com/card/baloo-von-bruinwald-xiii.html): Amber, cost 3, Character, Rare, Bodyguard
+- [Bobby - Purple Pigeon](https://www.readysetink.com/card/bobby-purple-pigeon.html): Steel, cost 3, Character, Common, Bodyguard
+- [Broadway - Sturdy and Strong](https://www.readysetink.com/card/broadway-sturdy-and-strong.html): Steel, cost 5, Character, Uncommon, Bodyguard
+- [Calhoun - Hard-Nosed Leader](https://www.readysetink.com/card/calhoun-hard-nosed-leader.html): Amber, cost 6, Character, Common, Bodyguard
+- [Chief Powhatan - Protective Leader](https://www.readysetink.com/card/chief-powhatan-protective-leader.html): Amber, cost 4, Character, Uncommon, Bodyguard
+- [Chien-Po - Imperial Soldier](https://www.readysetink.com/card/chien-po-imperial-soldier.html): Steel, cost 5, Character, Common, Bodyguard
+- [Clawhauser - Front Desk Officer](https://www.readysetink.com/card/clawhauser-front-desk-officer.html): Amber, cost 3, Character, Rare, Bodyguard
+- [Cobra Bubbles - Former CIA](https://www.readysetink.com/card/cobra-bubbles-former-cia.html): Steel, cost 5, Character, Rare, Bodyguard
+- [David - Protective Snowboarder](https://www.readysetink.com/card/david-protective-snowboarder.html): Amber, cost 2, Character, Common, Bodyguard
+- [Donald Duck - Musketeer](https://www.readysetink.com/card/donald-duck-musketeer.html): Steel, cost 4, Character, Uncommon, Bodyguard
+- [Donald Duck - Musketeer Soldier](https://www.readysetink.com/card/donald-duck-musketeer-soldier.html): Amber, cost 3, Character, Uncommon, Bodyguard
+- [Fergus - King of DunBroch](https://www.readysetink.com/card/fergus-king-of-dunbroch.html): Steel, cost 2, Character, Common, Bodyguard
+- [Fix-It Felix, Jr. - Trusty Builder](https://www.readysetink.com/card/fix-it-felix-jr-trusty-builder.html): Amber, cost 3, Character, Common, Bodyguard
+- [Flotsam - Wicked Defender](https://www.readysetink.com/card/flotsam-wicked-defender.html): cost 4, Character, Special, Bodyguard
+- [Goofy - Musketeer](https://www.readysetink.com/card/goofy-musketeer.html): Amber, cost 5, Character, Uncommon, Bodyguard
+- [HeiHei - Protective Rooster](https://www.readysetink.com/card/heihei-protective-rooster.html): Steel, cost 5, Character, Common, Bodyguard
+- [Hercules - Beloved Hero](https://www.readysetink.com/card/hercules-beloved-hero.html): Steel, cost 6, Character, Rare, Bodyguard
+- [Hercules - Manipulated Hero](https://www.readysetink.com/card/hercules-manipulated-hero.html): cost 4, Character, Special, Bodyguard
+- [Hercules - True Hero](https://www.readysetink.com/card/hercules-true-hero.html): Steel, cost 3, Character, Common, Bodyguard
+- [Iago - Raucous Lookout](https://www.readysetink.com/card/iago-raucous-lookout.html): cost 4, Character, Special, Bodyguard
+- [Inspector Tezuka - Resolute Officer](https://www.readysetink.com/card/inspector-tezuka-resolute-officer.html): Steel, cost 2, Character, Common, Bodyguard
+- [Jim Dear - Beloved Husband](https://www.readysetink.com/card/jim-dear-beloved-husband.html): Amber, cost 2, Character, Common, Bodyguard
+- [Jim Hawkins - Honorable Pirate](https://www.readysetink.com/card/jim-hawkins-honorable-pirate.html): Amber, cost 7, Character, Super Rare, Bodyguard
+- [John Smith - Undaunted Protector](https://www.readysetink.com/card/john-smith-undaunted-protector.html): Steel, cost 5, Character, Super Rare, Bodyguard
+- [Joshua Sweet - The Doctor](https://www.readysetink.com/card/joshua-sweet-the-doctor.html): Amber, cost 4, Character, Common, Bodyguard
+- [Kida - Royal Warrior](https://www.readysetink.com/card/kida-royal-warrior.html): Steel, cost 2, Character, Common, Bodyguard
+- [Kocoum - Defender of the Tribe](https://www.readysetink.com/card/kocoum-defender-of-the-tribe.html): Amber, cost 6, Character, Common, Bodyguard
+- [Kristoff - Reindeer Keeper](https://www.readysetink.com/card/kristoff-reindeer-keeper.html): Amber, cost 9, Character, Rare, Bodyguard
+- [Lady Kluck - Protective Confidant](https://www.readysetink.com/card/lady-kluck-protective-confidant.html): Sapphire / Steel, cost 5, Character, Uncommon, Bodyguard
+- [Lionheart - Incumbent Mayor](https://www.readysetink.com/card/lionheart-incumbent-mayor.html): Amber, cost 6, Character, Rare, Bodyguard
+- [Little John - Robin's Pal](https://www.readysetink.com/card/little-john-robins-pal.html): Steel, cost 3, Character, Uncommon, Bodyguard
+- [Maximus - Palace Horse](https://www.readysetink.com/card/maximus-palace-horse.html): Amber, cost 5, Character, Super Rare, Bodyguard
+- [McHorn - Ice-Cold Officer](https://www.readysetink.com/card/mchorn-ice-cold-officer.html): Steel, cost 5, Character, Common, Bodyguard
+- [Mickey Mouse - Giant Mouse](https://www.readysetink.com/card/mickey-mouse-giant-mouse.html): Steel, cost 10, Character, Legendary, Bodyguard
+- [Mickey Mouse - Musketeer](https://www.readysetink.com/card/mickey-mouse-musketeer.html): Steel, cost 6, Character, Rare, Bodyguard
+- [Mickey Mouse - Musketeer Captain](https://www.readysetink.com/card/mickey-mouse-musketeer-captain.html): Amber, cost 7, Character, Legendary, Bodyguard
+- [Minnie Mouse - Daring Defender](https://www.readysetink.com/card/minnie-mouse-daring-defender.html): Amber / Ruby, cost 4, Character, Rare, Bodyguard
+- [Minnie Mouse - Musketeer Champion](https://www.readysetink.com/card/minnie-mouse-musketeer-champion.html): Amber, cost 5, Character, Super Rare, Bodyguard
+- [Mittens - Sassy Street Cat](https://www.readysetink.com/card/mittens-sassy-street-cat.html): Amber, cost 5, Character, Rare, Bodyguard
+- [Monterey Jack - Defiant Protector](https://www.readysetink.com/card/monterey-jack-defiant-protector.html): Steel, cost 5, Character, Common, Bodyguard
+- [Mrs. Beakley - Former S.H.U.S.H. Agent](https://www.readysetink.com/card/mrs-beakley-former-s-h-u-s-h-agent.html): Amber, cost 4, Character, Common, Bodyguard
+- [Namaari - Morning Mist](https://www.readysetink.com/card/namaari-morning-mist.html): Steel, cost 4, Character, Legendary, Bodyguard
+- [Nani - Protective Sister](https://www.readysetink.com/card/nani-protective-sister.html): Amber, cost 5, Character, Uncommon, Bodyguard
+- [Pete - Suave Showoff](https://www.readysetink.com/card/pete-suave-showoff.html): Amber, cost 4, Character, Common, Bodyguard
+- [Pluto - Determined Defender](https://www.readysetink.com/card/pluto-determined-defender.html): Amber, cost 7, Character, Rare, Bodyguard
+- [Pluto - Guard Dog](https://www.readysetink.com/card/pluto-guard-dog.html): Steel, cost 4, Character, Uncommon, Bodyguard
+- [Prince Charming - Protector of the Realm](https://www.readysetink.com/card/prince-charming-protector-of-the-realm.html): Steel, cost 7, Character, Legendary, Bodyguard
+- [Prince Eric - Grim Groom](https://www.readysetink.com/card/prince-eric-grim-groom.html): cost 1, Character, Special, Bodyguard
+- [Prince Eric - Seafaring Prince](https://www.readysetink.com/card/prince-eric-seafaring-prince.html): Amber, cost 3, Character, Common, Bodyguard
+- [Prince Naveen - Vigilant First Mate](https://www.readysetink.com/card/prince-naveen-vigilant-first-mate.html): Amber, cost 5, Character, Uncommon, Bodyguard
+- [Pua - Protective Pig](https://www.readysetink.com/card/pua-protective-pig.html): Amber / Amethyst, cost 3, Character, Uncommon, Bodyguard
+- [Rabbit - Hunny Paladin](https://www.readysetink.com/card/rabbit-hunny-paladin.html): Amber, cost 4, Character, Uncommon, Bodyguard
+- [Rajah - Devoted Protector](https://www.readysetink.com/card/rajah-devoted-protector.html): Amber, cost 3, Character, Common, Bodyguard
+- [Razoul - Unyielding Guard](https://www.readysetink.com/card/razoul-unyielding-guard.html): cost 2, Character, Special, Bodyguard
+- [Rex - Protective Dinosaur](https://www.readysetink.com/card/rex-protective-dinosaur.html): Amber, cost 2, Character, Rare, Bodyguard
+- [Simba - Protective Cub](https://www.readysetink.com/card/simba-protective-cub.html): Amber, cost 2, Character, Common, Bodyguard
+- [Sleepy - Sluggish Knight](https://www.readysetink.com/card/sleepy-sluggish-knight.html): Steel, cost 2, Character, Uncommon, Bodyguard
+- [Sulley - The New Boss](https://www.readysetink.com/card/sulley-the-new-boss.html): Amber, cost 5, Character, Super Rare, Bodyguard
+- [The Headless Horseman - Relentless Spirit](https://www.readysetink.com/card/the-headless-horseman-relentless-spirit.html): Steel, cost 4, Character, Common, Bodyguard
+- [The Prince - Never Gives Up](https://www.readysetink.com/card/the-prince-never-gives-up.html): Steel, cost 3, Character, Uncommon, Bodyguard
+- [The Prince - Vigilant Suitor](https://www.readysetink.com/card/the-prince-vigilant-suitor.html): Amber, cost 2, Character, Uncommon, Bodyguard
+- [Thunderbolt - Wonder Dog](https://www.readysetink.com/card/thunderbolt-wonder-dog.html): Amber / Sapphire, cost 5, Character, Uncommon, Bodyguard
+- [Tuk Tuk - Disarmingly Cute](https://www.readysetink.com/card/tuk-tuk-disarmingly-cute.html): Steel, cost 2, Character, Rare, Bodyguard
+- [Woolter & Jesse - Bellwether's Henchmen](https://www.readysetink.com/card/woolter-jesse-bellwethers-henchmen.html): Steel, cost 3, Character, Uncommon, Bodyguard

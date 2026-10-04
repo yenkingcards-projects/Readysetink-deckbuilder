@@ -50,7 +50,7 @@ Save*), `fs3_nb_recent`, `fs3_nb_dview`, `fs3_nb_theme`, `fs3_nb_hint`.
 - The big card preview appears beside the card, only when hovering the picture,
   after 1.5 seconds. It never appears over the + / − buttons.
 - Compare: the button in any card's detail view, press-and-hold on a phone, or the C key.
-- Icons are Ben's icon library (`bendacymedia/Claude apps/icon-library`), inlined in
+- Icons are the project icon library, inlined in
   `nb.js` as `NBI`. There are no emoji on the build path.
 - More lists every page the site has, read from the same `OTHER_GROUPS` list as the
   classic Other page.

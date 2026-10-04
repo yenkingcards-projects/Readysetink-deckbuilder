@@ -1,0 +1,210 @@
+# Wilds Unknown (Set 12): Disney Lorcana card list
+
+Source: https://www.readysetink.com/sets/wilds-unknown/
+
+Released may 15, 2026. 204 cards first printed in this set (reprints appear under their original set).
+
+- [Gosalyn Mallard - The Quiverwing Quack](https://www.readysetink.com/card/gosalyn-mallard-the-quiverwing-quack.html): Amber, cost 2, Character, Common
+- [Monterey Jack - Watchful Ranger](https://www.readysetink.com/card/monterey-jack-watchful-ranger.html): Amber, cost 3, Character, Common
+- [Woody - Waiting for a Friend](https://www.readysetink.com/card/woody-waiting-for-a-friend.html): Amber, cost 1, Character, Common
+- [Dale - Excited Friend](https://www.readysetink.com/card/dale-excited-friend.html): Amber, cost 3, Character, Common
+- [Pedro Madrigal - Family Patriarch](https://www.readysetink.com/card/pedro-madrigal-family-patriarch.html): Amber, cost 2, Character, Uncommon
+- [Agustin Madrigal - Exceptionally Kind](https://www.readysetink.com/card/agustin-madrigal-exceptionally-kind.html): Amber, cost 4, Character, Common
+- [Alan-a-Dale - Loyal Bard](https://www.readysetink.com/card/alan-a-dale-loyal-bard.html): Amber, cost 2, Character, Common
+- [Prince Eric - Noble Swordsman](https://www.readysetink.com/card/prince-eric-noble-swordsman.html): Amber, cost 5, Character, Common
+- [Dolores Madrigal - Hears Everything](https://www.readysetink.com/card/dolores-madrigal-hears-everything.html): Amber, cost 5, Character, Common
+- [Rex - Protective Dinosaur](https://www.readysetink.com/card/rex-protective-dinosaur.html): Amber, cost 2, Character, Rare
+- [Hamm - Piggy Bank](https://www.readysetink.com/card/hamm-piggy-bank.html): Amber, cost 2, Character, Uncommon
+- [Monterey Jack - Hypnotized by Cheese](https://www.readysetink.com/card/monterey-jack-hypnotized-by-cheese.html): Amber, cost 2, Character, Rare
+- [Bo Peep - Caring Shepherd](https://www.readysetink.com/card/bo-peep-caring-shepherd.html): Amber, cost 3, Character, Uncommon
+- [Chip - Retrieval Expert](https://www.readysetink.com/card/chip-retrieval-expert.html): Amber, cost 4, Character, Uncommon
+- [Woody - Jungle Guide](https://www.readysetink.com/card/woody-jungle-guide.html): Amber, cost 5, Character, Legendary
+- [Isabela Madrigal - Such a Lovely Voice](https://www.readysetink.com/card/isabela-madrigal-such-a-lovely-voice.html): Amber, cost 3, Character, Uncommon
+- [Bullseye - Loyal Horse](https://www.readysetink.com/card/bullseye-loyal-horse.html): Amber, cost 3, Character, Common
+- [Ariel - Curious Traveler](https://www.readysetink.com/card/ariel-curious-traveler.html): Amber, cost 4, Character, Rare
+- [Isabela Madrigal - Caring Cultivator](https://www.readysetink.com/card/isabela-madrigal-caring-cultivator.html): Amber, cost 6, Character, Rare
+- [Jessie - Lively Cowgirl](https://www.readysetink.com/card/jessie-lively-cowgirl.html): Amber, cost 3, Character, Super Rare
+- [Woody - Leader of the Toys](https://www.readysetink.com/card/woody-leader-of-the-toys.html): Amber, cost 4, Character, Uncommon
+- [Dale - Ready for His Shot](https://www.readysetink.com/card/dale-ready-for-his-shot.html): Amber, cost 4, Character, Legendary
+- [The Prince - Searching for His Love](https://www.readysetink.com/card/the-prince-searching-for-his-love.html): Amber, cost 1, Character, Rare
+- [Julieta Madrigal - Caring Baker](https://www.readysetink.com/card/julieta-madrigal-caring-baker.html): Amber, cost 1, Character, Common
+- [Pluto - Vigilant Traveler](https://www.readysetink.com/card/pluto-vigilant-traveler.html): Amber, cost 2, Character, Uncommon
+- [Mickey Mouse - Expedition Leader](https://www.readysetink.com/card/mickey-mouse-expedition-leader.html): Amber, cost 4, Character, Super Rare
+- [Chip - Team Player](https://www.readysetink.com/card/chip-team-player.html): Amber, cost 6, Character, Common
+- [Ranger Team-Up](https://www.readysetink.com/card/ranger-team-up.html): Amber, cost 2, Action, Uncommon
+- [This Growing Pressure](https://www.readysetink.com/card/this-growing-pressure.html): Amber, cost 3, Action, Common
+- [You've Got a Friend in Me](https://www.readysetink.com/card/youve-got-a-friend-in-me.html): Amber, cost 3, Action, Super Rare
+- [Metamorphosis](https://www.readysetink.com/card/metamorphosis.html): Amber, cost 3, Action, Rare
+- [When You Need Help, Just Call](https://www.readysetink.com/card/when-you-need-help-just-call.html): Amber, cost 3, Action, Rare
+- [Safety Rope](https://www.readysetink.com/card/safety-rope.html): Amber, cost 2, Item, Uncommon
+- [Andy's Room - Home Base](https://www.readysetink.com/card/andys-room-home-base.html): Amber, cost 3, Location, Rare
+- [Mor'du - Wicked with Pride](https://www.readysetink.com/card/mordu-wicked-with-pride.html): Amethyst, cost 2, Character, Common
+- [Alma Madrigal - Leading the Way](https://www.readysetink.com/card/alma-madrigal-leading-the-way.html): Amethyst, cost 2, Character, Uncommon
+- [Snow White - Merry as the Morning](https://www.readysetink.com/card/snow-white-merry-as-the-morning.html): Amethyst, cost 3, Character, Legendary
+- [Dopey - Drawn to Music](https://www.readysetink.com/card/dopey-drawn-to-music.html): Amethyst, cost 6, Character, Uncommon
+- [Bashful - Riding the Rails](https://www.readysetink.com/card/bashful-riding-the-rails.html): Amethyst, cost 5, Character, Common
+- [Doc - Taking Notes](https://www.readysetink.com/card/doc-taking-notes.html): Amethyst, cost 4, Character, Uncommon
+- [Grumpy - Soreheaded Miner](https://www.readysetink.com/card/grumpy-soreheaded-miner.html): Amethyst, cost 7, Character, Common
+- [Sneezy - Startlingly Loud](https://www.readysetink.com/card/sneezy-startlingly-loud.html): Amethyst, cost 3, Character, Common
+- [Happy - Joyful Adventurer](https://www.readysetink.com/card/happy-joyful-adventurer.html): Amethyst, cost 2, Character, Common
+- [Sleepy - Deep Sleeper](https://www.readysetink.com/card/sleepy-deep-sleeper.html): Amethyst, cost 1, Character, Common
+- [Alma Madrigal - Heart of the Family](https://www.readysetink.com/card/alma-madrigal-heart-of-the-family.html): Amethyst, cost 3, Character, Common
+- [Frozone - Super Slick](https://www.readysetink.com/card/frozone-super-slick.html): Amethyst, cost 2, Character, Common
+- [Will o' the Wisp - Forest Spirit](https://www.readysetink.com/card/will-o-the-wisp-forest-spirit.html): Amethyst, cost 1, Character, Common
+- [Violet Parr - Learning New Powers](https://www.readysetink.com/card/violet-parr-learning-new-powers.html): Amethyst, cost 3, Character, Uncommon
+- [Mrs. Incredible - Super Stretchy](https://www.readysetink.com/card/mrs-incredible-super-stretchy.html): Amethyst, cost 5, Character, Rare
+- [Hamish, Hubert & Harris - Making Mischief](https://www.readysetink.com/card/hamish-hubert-harris-making-mischief.html): Amethyst, cost 3, Character, Uncommon
+- [Elinor - Bespelled Queen](https://www.readysetink.com/card/elinor-bespelled-queen.html): Amethyst, cost 4, Character, Uncommon
+- [Mickey Mouse - Experienced Traveler](https://www.readysetink.com/card/mickey-mouse-experienced-traveler.html): Amethyst, cost 3, Character, Uncommon
+- [Mirage - Super Recruiter](https://www.readysetink.com/card/mirage-super-recruiter.html): Amethyst, cost 4, Character, Common
+- [Edna Mode - Fashion Designer](https://www.readysetink.com/card/edna-mode-fashion-designer.html): Amethyst, cost 3, Character, Rare
+- [Maleficent - Imperious Traveler](https://www.readysetink.com/card/maleficent-imperious-traveler.html): Amethyst, cost 5, Character, Rare
+- [Pepa Madrigal - Calm Before the Storm](https://www.readysetink.com/card/pepa-madrigal-calm-before-the-storm.html): Amethyst, cost 3, Character, Super Rare
+- [Mor'du - Savage Cursed Prince](https://www.readysetink.com/card/mordu-savage-cursed-prince.html): Amethyst, cost 5, Character, Super Rare
+- [Alma Madrigal - Keeper of the Flame](https://www.readysetink.com/card/alma-madrigal-keeper-of-the-flame.html): Amethyst, cost 5, Character, Rare
+- [Frozone - Super Cool](https://www.readysetink.com/card/frozone-super-cool.html): Amethyst, cost 6, Character, Rare
+- [Luisa Madrigal - Confident Climber](https://www.readysetink.com/card/luisa-madrigal-confident-climber.html): Amethyst, cost 5, Character, Legendary
+- [Dash Parr - Lava Runner](https://www.readysetink.com/card/dash-parr-lava-runner.html): Amethyst, cost 4, Character, Super Rare
+- [Luisa Madrigal - Pushing Through](https://www.readysetink.com/card/luisa-madrigal-pushing-through.html): Amethyst, cost 1, Character, Common
+- [Super Relocation Program](https://www.readysetink.com/card/super-relocation-program.html): Amethyst, cost 4, Action, Common
+- [Right Behind You](https://www.readysetink.com/card/right-behind-you.html): Amethyst, cost 3, Action, Uncommon
+- [Don't Be Nervous](https://www.readysetink.com/card/dont-be-nervous.html): Amethyst, cost 5, Action, Rare
+- [Super Suit](https://www.readysetink.com/card/super-suit.html): Amethyst, cost 2, Item, Uncommon
+- [DunBroch Family Tapestry](https://www.readysetink.com/card/dunbroch-family-tapestry.html): Amethyst, cost 2, Item, Rare
+- [Ring of Stones - Place of Legends](https://www.readysetink.com/card/ring-of-stones-place-of-legends.html): Amethyst, cost 4, Location, Rare
+- [Merida - Defiant Daughter](https://www.readysetink.com/card/merida-defiant-daughter.html): Emerald, cost 2, Character, Common
+- [Hamish, Hubert & Harris - Troublemaking Triplets](https://www.readysetink.com/card/hamish-hubert-harris-troublemaking-triplets.html): Emerald, cost 3, Character, Common
+- [Young MacGuffin - Soft-Spoken Son](https://www.readysetink.com/card/young-macguffin-soft-spoken-son.html): Emerald, cost 1, Character, Common
+- [Tod - Nimble Fox](https://www.readysetink.com/card/tod-nimble-fox.html): Emerald, cost 5, Character, Common
+- [Helga Sinclair - No Backup Needed](https://www.readysetink.com/card/helga-sinclair-no-backup-needed.html): Emerald, cost 4, Character, Common
+- [The Witch - Wily Woodcarver](https://www.readysetink.com/card/the-witch-wily-woodcarver.html): Emerald, cost 5, Character, Common
+- [The Queen - Evil Ruler](https://www.readysetink.com/card/the-queen-evil-ruler.html): Emerald, cost 1, Character, Common
+- [Buzz Lightyear - Space Ranger](https://www.readysetink.com/card/buzz-lightyear-space-ranger.html): Emerald, cost 2, Character, Common
+- [RC - Remote-Controlled Car](https://www.readysetink.com/card/rc-remote-controlled-car.html): Emerald, cost 1, Character, Common
+- [Lord MacGuffin - Clever Swordsman](https://www.readysetink.com/card/lord-macguffin-clever-swordsman.html): Emerald, cost 5, Character, Uncommon
+- [Lenny - Toy Binoculars](https://www.readysetink.com/card/lenny-toy-binoculars.html): Emerald, cost 3, Character, Rare
+- [Gaetan Moliere - Clever Burrower](https://www.readysetink.com/card/gaetan-moliere-clever-burrower.html): Emerald, cost 4, Character, Uncommon
+- [Peter Pan - Searching Far and Wide](https://www.readysetink.com/card/peter-pan-searching-far-and-wide.html): Emerald, cost 3, Character, Uncommon
+- [Milo Thatch - Getting His Hands Dirty](https://www.readysetink.com/card/milo-thatch-getting-his-hands-dirty.html): Emerald, cost 7, Character, Super Rare
+- [Alien - True Believer](https://www.readysetink.com/card/alien-true-believer.html): Emerald, cost 1, Character, Rare
+- [Donald Duck - Distracted Traveler](https://www.readysetink.com/card/donald-duck-distracted-traveler.html): Emerald, cost 5, Character, Uncommon
+- [Buzz Lightyear - On the Way](https://www.readysetink.com/card/buzz-lightyear-on-the-way.html): Emerald, cost 3, Character, Rare
+- [Elinor - Renowned Diplomat](https://www.readysetink.com/card/elinor-renowned-diplomat.html): Emerald, cost 4, Character, Super Rare
+- [Lyle Tiberius Rourke - Adventurer for Hire](https://www.readysetink.com/card/lyle-tiberius-rourke-adventurer-for-hire.html): Emerald, cost 2, Character, Uncommon
+- [Joshua Sweet - Field Surgeon](https://www.readysetink.com/card/joshua-sweet-field-surgeon.html): Emerald, cost 2, Character, Common
+- [Merida - Gifted Archer](https://www.readysetink.com/card/merida-gifted-archer.html): Emerald, cost 5, Character, Rare
+- [The Queen - Devious Disguise](https://www.readysetink.com/card/the-queen-devious-disguise.html): Emerald, cost 4, Character, Legendary
+- [Buzz Lightyear - Jungle Ranger](https://www.readysetink.com/card/buzz-lightyear-jungle-ranger.html): Emerald, cost 7, Character, Legendary
+- [Cruella De Vil - Judgmental Traveler](https://www.readysetink.com/card/cruella-de-vil-judgmental-traveler.html): Emerald, cost 6, Character, Rare
+- [Helga Sinclair - Prepared for Anything](https://www.readysetink.com/card/helga-sinclair-prepared-for-anything.html): Emerald, cost 6, Character, Rare
+- [The Huntsman - On the Queen's Orders](https://www.readysetink.com/card/the-huntsman-on-the-queens-orders.html): Emerald, cost 3, Character, Uncommon
+- [Strange Things](https://www.readysetink.com/card/strange-things.html): Emerald, cost 4, Action, Uncommon
+- [Sabotage](https://www.readysetink.com/card/sabotage.html): Emerald, cost 3, Action, Common
+- [The Family Scattered](https://www.readysetink.com/card/the-family-scattered.html): Emerald, cost 8, Action, Super Rare
+- [Buzz's Arm](https://www.readysetink.com/card/buzzs-arm.html): Emerald, cost 2, Item, Uncommon
+- [The Claw](https://www.readysetink.com/card/the-claw.html): Emerald, cost 4, Item, Rare
+- [Gyro-Evac](https://www.readysetink.com/card/gyro-evac.html): Emerald, cost 3, Item, Uncommon
+- [Merida's Bow](https://www.readysetink.com/card/meridas-bow.html): Emerald, cost 2, Item, Common
+- [Pizza Planet - Spaceport](https://www.readysetink.com/card/pizza-planet-spaceport.html): Emerald, cost 2, Location, Rare
+- [Lyle Tiberius Rourke - Crystallized Commander](https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-commander.html): Ruby, cost 6, Character, Rare
+- [Mr. Incredible - Bob Parr](https://www.readysetink.com/card/mr-incredible-bob-parr.html): Ruby, cost 1, Character, Common
+- [Lyle Tiberius Rourke - Looking for His Moment](https://www.readysetink.com/card/lyle-tiberius-rourke-looking-for-his-moment.html): Ruby, cost 3, Character, Common
+- [Pegasus - Searching High and Low](https://www.readysetink.com/card/pegasus-searching-high-and-low.html): Ruby, cost 6, Character, Common
+- [Audrey Ramirez - Gutsy Mechanic](https://www.readysetink.com/card/audrey-ramirez-gutsy-mechanic.html): Ruby, cost 1, Character, Common
+- [Milo Thatch - Courageous Explorer](https://www.readysetink.com/card/milo-thatch-courageous-explorer.html): Ruby, cost 3, Character, Common
+- [Zeus - Defiant God](https://www.readysetink.com/card/zeus-defiant-god.html): Ruby, cost 5, Character, Uncommon
+- [Preston Whitmore - Expedition Financier](https://www.readysetink.com/card/preston-whitmore-expedition-financier.html): Ruby, cost 5, Character, Common
+- [Jingle Joe - Sid's Toy](https://www.readysetink.com/card/jingle-joe-sids-toy.html): Ruby, cost 2, Character, Common
+- [Wind-Up Frog - Sid's Toy](https://www.readysetink.com/card/wind-up-frog-sids-toy.html): Ruby, cost 2, Character, Common
+- [Roller Bob - Sid's Toy](https://www.readysetink.com/card/roller-bob-sids-toy.html): Ruby, cost 3, Character, Uncommon
+- [Hand-in-the-Box - Sid's Toy](https://www.readysetink.com/card/hand-in-the-box-sids-toy.html): Ruby, cost 2, Character, Uncommon
+- [Daisy Duck - Trendy Traveler](https://www.readysetink.com/card/daisy-duck-trendy-traveler.html): Ruby, cost 3, Character, Uncommon
+- [Copper - Big Dog](https://www.readysetink.com/card/copper-big-dog.html): Ruby, cost 6, Character, Uncommon
+- [Jebidiah Farnsworth - Cookie](https://www.readysetink.com/card/jebidiah-farnsworth-cookie.html): Ruby, cost 2, Character, Uncommon
+- [Dash Parr - Super Speedy](https://www.readysetink.com/card/dash-parr-super-speedy.html): Ruby, cost 5, Character, Uncommon
+- [Babyhead - Leader of Sid's Toys](https://www.readysetink.com/card/babyhead-leader-of-sids-toys.html): Ruby, cost 4, Character, Rare
+- [Bouncing Ducky - Sid's Toy](https://www.readysetink.com/card/bouncing-ducky-sids-toy.html): Ruby, cost 6, Character, Rare
+- [Jack-Jack Parr - Incredible Potential](https://www.readysetink.com/card/jack-jack-parr-incredible-potential.html): Ruby, cost 4, Character, Super Rare
+- [Queen of Hearts - Impatient Traveler](https://www.readysetink.com/card/queen-of-hearts-impatient-traveler.html): Ruby, cost 4, Character, Rare
+- [Hercules - Young Rescuer](https://www.readysetink.com/card/hercules-young-rescuer.html): Ruby, cost 2, Character, Super Rare
+- [Vincenzo Santorini - On the Run](https://www.readysetink.com/card/vincenzo-santorini-on-the-run.html): Ruby, cost 4, Character, Rare
+- [The Leviathan - Guardian of Atlantis](https://www.readysetink.com/card/the-leviathan-guardian-of-atlantis.html): Ruby, cost 10, Character, Super Rare
+- [Sid Phillips - Toy Surgeon](https://www.readysetink.com/card/sid-phillips-toy-surgeon.html): Ruby, cost 6, Character, Legendary
+- [Mr. Incredible - Super Strong](https://www.readysetink.com/card/mr-incredible-super-strong.html): Ruby, cost 5, Character, Legendary
+- [Pterodactyl Janie Doll - Sid's Toy](https://www.readysetink.com/card/pterodactyl-janie-doll-sids-toy.html): Ruby, cost 1, Character, Common
+- [Inner Strength](https://www.readysetink.com/card/inner-strength.html): Ruby, cost 1, Action, Common
+- [Firefly Swarm](https://www.readysetink.com/card/firefly-swarm.html): Ruby, cost 3, Action, Uncommon
+- [Like a Bird in the Sky](https://www.readysetink.com/card/like-a-bird-in-the-sky.html): Ruby, cost 2, Action, Common
+- [Hero Work](https://www.readysetink.com/card/hero-work.html): Ruby, cost 2, Action, Rare
+- [Dangerous Plan](https://www.readysetink.com/card/dangerous-plan.html): Ruby, cost 1, Action, Common
+- [Amazu's Inkcaster](https://www.readysetink.com/card/amazus-inkcaster.html): Ruby, cost 2, Item, Uncommon
+- [Remote Inklands - Desert Ruins](https://www.readysetink.com/card/remote-inklands-desert-ruins.html): Ruby, cost 2, Location, Rare
+- [Leviathan's Lair - Dangerous Ground](https://www.readysetink.com/card/leviathans-lair-dangerous-ground.html): Ruby, cost 4, Location, Rare
+- [Robin Hood - Desert Wanderer](https://www.readysetink.com/card/robin-hood-desert-wanderer.html): Sapphire, cost 1, Character, Common
+- [Prince Charming - Searching for Answers](https://www.readysetink.com/card/prince-charming-searching-for-answers.html): Sapphire, cost 2, Character, Common
+- [Merryweather - Feisty Fairy](https://www.readysetink.com/card/merryweather-feisty-fairy.html): Sapphire, cost 4, Character, Uncommon
+- [Fauna - Good-Natured Fairy](https://www.readysetink.com/card/fauna-good-natured-fairy.html): Sapphire, cost 1, Character, Common
+- [Flora - Strong-Willed Fairy](https://www.readysetink.com/card/flora-strong-willed-fairy.html): Sapphire, cost 5, Character, Rare
+- [Mirabel Madrigal - Resourceful Daughter](https://www.readysetink.com/card/mirabel-madrigal-resourceful-daughter.html): Sapphire, cost 4, Character, Common
+- [Syndrome - Evil Inventor](https://www.readysetink.com/card/syndrome-evil-inventor.html): Sapphire, cost 3, Character, Common
+- [Kida - Guardian of the Path](https://www.readysetink.com/card/kida-guardian-of-the-path.html): Sapphire, cost 2, Character, Common
+- [Gadget Hackwrench - Resourceful Mechanic](https://www.readysetink.com/card/gadget-hackwrench-resourceful-mechanic.html): Sapphire, cost 4, Character, Super Rare
+- [Norton Nimnul - Misanthropic Genius](https://www.readysetink.com/card/norton-nimnul-misanthropic-genius.html): Sapphire, cost 3, Character, Uncommon
+- [Gadget Hackwrench - Finder of Lost Parts](https://www.readysetink.com/card/gadget-hackwrench-finder-of-lost-parts.html): Sapphire, cost 2, Character, Common
+- [Zipper - Tiny Helper](https://www.readysetink.com/card/zipper-tiny-helper.html): Sapphire, cost 1, Character, Uncommon
+- [Edna Mode - Super Suit Designer](https://www.readysetink.com/card/edna-mode-super-suit-designer.html): Sapphire, cost 2, Character, Rare
+- [Zipper - Big Helper](https://www.readysetink.com/card/zipper-big-helper.html): Sapphire, cost 4, Character, Super Rare
+- [Luisa Madrigal - No Pressure](https://www.readysetink.com/card/luisa-madrigal-no-pressure.html): Sapphire, cost 7, Character, Uncommon
+- [Dr. Sara Bellum - Head of Research](https://www.readysetink.com/card/dr-sara-bellum-head-of-research.html): Sapphire, cost 3, Character, Common
+- [Isabela Madrigal - Perfectly in Control](https://www.readysetink.com/card/isabela-madrigal-perfectly-in-control.html): Sapphire, cost 6, Character, Super Rare
+- [Bruno Madrigal - Oasis Oracle](https://www.readysetink.com/card/bruno-madrigal-oasis-oracle.html): Sapphire, cost 5, Character, Rare
+- [Cinderella - Resourceful Traveler](https://www.readysetink.com/card/cinderella-resourceful-traveler.html): Sapphire, cost 4, Character, Rare
+- [Bruno Madrigal - Seeing the Future](https://www.readysetink.com/card/bruno-madrigal-seeing-the-future.html): Sapphire, cost 6, Character, Common
+- [Kida - Discovering the Unknown](https://www.readysetink.com/card/kida-discovering-the-unknown.html): Sapphire, cost 3, Character, Rare
+- [Kashekim - Wise King](https://www.readysetink.com/card/kashekim-wise-king.html): Sapphire, cost 5, Character, Uncommon
+- [Minnie Mouse - Practical Traveler](https://www.readysetink.com/card/minnie-mouse-practical-traveler.html): Sapphire, cost 1, Character, Uncommon
+- [Kida - Crystal Scion](https://www.readysetink.com/card/kida-crystal-scion.html): Sapphire, cost 8, Character, Legendary
+- [Ursula - Deal Maker](https://www.readysetink.com/card/ursula-deal-maker.html): Sapphire, cost 3, Character, Legendary
+- [Someone Will Lose His Head](https://www.readysetink.com/card/someone-will-lose-his-head.html): Sapphire, cost 3, Action, Common
+- [What Else Can I Do?](https://www.readysetink.com/card/what-else-can-i-do.html): Sapphire, cost 5, Action, Rare
+- [Escape Plan](https://www.readysetink.com/card/escape-plan.html): Sapphire, cost 5, Action, Rare
+- [Salvage Operation](https://www.readysetink.com/card/salvage-operation.html): Sapphire, cost 2, Action, Uncommon
+- [Julieta's Arepas](https://www.readysetink.com/card/julietas-arepas.html): Sapphire, cost 1, Item, Common
+- [Ranger Plane](https://www.readysetink.com/card/ranger-plane.html): Sapphire, cost 3, Item, Rare
+- [Gadget's Goggles](https://www.readysetink.com/card/gadgets-goggles.html): Sapphire, cost 2, Item, Uncommon
+- [Shepherd's Journal](https://www.readysetink.com/card/shepherds-journal.html): Sapphire, cost 2, Item, Uncommon
+- [Casa Madrigal - Courtyard](https://www.readysetink.com/card/casa-madrigal-courtyard.html): Sapphire, cost 4, Location, Common
+- [Pocahontas - Steadfast Traveler](https://www.readysetink.com/card/pocahontas-steadfast-traveler.html): Steel, cost 4, Character, Rare
+- [Syndrome - Out for Revenge](https://www.readysetink.com/card/syndrome-out-for-revenge.html): Steel, cost 6, Character, Super Rare
+- [Omnidroid - V.8](https://www.readysetink.com/card/omnidroid-v-8.html): Steel, cost 1, Character, Common
+- [Angus - Mighty Horse](https://www.readysetink.com/card/angus-mighty-horse.html): Steel, cost 3, Character, Common
+- [Fergus - King of DunBroch](https://www.readysetink.com/card/fergus-king-of-dunbroch.html): Steel, cost 2, Character, Common
+- [Wee Dingwall - Scrappy Lad](https://www.readysetink.com/card/wee-dingwall-scrappy-lad.html): Steel, cost 3, Character, Common
+- [Incrediboy - Buddy Pine](https://www.readysetink.com/card/incrediboy-buddy-pine.html): Steel, cost 2, Character, Common
+- [Violet Parr - At Wits' End](https://www.readysetink.com/card/violet-parr-at-wits-end.html): Steel, cost 1, Character, Common
+- [Mrs. Incredible - Helen Parr](https://www.readysetink.com/card/mrs-incredible-helen-parr.html): Steel, cost 2, Character, Common
+- [Young Macintosh - Proud Son](https://www.readysetink.com/card/young-macintosh-proud-son.html): Steel, cost 3, Character, Common
+- [Lord Macintosh - Wiry and High-Strung](https://www.readysetink.com/card/lord-macintosh-wiry-and-high-strung.html): Steel, cost 4, Character, Uncommon
+- [Fat Cat - Felonious Feline](https://www.readysetink.com/card/fat-cat-felonious-feline.html): Steel, cost 6, Character, Common
+- [Rat Capone - Rodent Gangster](https://www.readysetink.com/card/rat-capone-rodent-gangster.html): Steel, cost 4, Character, Common
+- [Omnidroid - V.9](https://www.readysetink.com/card/omnidroid-v-9.html): Steel, cost 4, Character, Uncommon
+- [Mr. Incredible - Taking Out the Trash](https://www.readysetink.com/card/mr-incredible-taking-out-the-trash.html): Steel, cost 4, Character, Uncommon
+- [Lord Dingwall - Bullheaded](https://www.readysetink.com/card/lord-dingwall-bullheaded.html): Steel, cost 5, Character, Uncommon
+- [Fat Cat - Criminal Businessman](https://www.readysetink.com/card/fat-cat-criminal-businessman.html): Steel, cost 4, Character, Rare
+- [Maudie - Exasperated Nursemaid](https://www.readysetink.com/card/maudie-exasperated-nursemaid.html): Steel, cost 3, Character, Uncommon
+- [Goofy - Determined Traveler](https://www.readysetink.com/card/goofy-determined-traveler.html): Steel, cost 2, Character, Uncommon
+- [Omnidroid - V.10](https://www.readysetink.com/card/omnidroid-v-10.html): Steel, cost 6, Character, Rare
+- [Merida - Formidable Archer](https://www.readysetink.com/card/merida-formidable-archer.html): Steel, cost 5, Character, Legendary
+- [John Smith - Skillful Explorer](https://www.readysetink.com/card/john-smith-skillful-explorer.html): Steel, cost 1, Character, Rare
+- [Gizmoduck - Duckburg Defender](https://www.readysetink.com/card/gizmoduck-duckburg-defender.html): Steel, cost 5, Character, Rare
+- [Fergus - Outpost Builder](https://www.readysetink.com/card/fergus-outpost-builder.html): Steel, cost 6, Character, Super Rare
+- [Mrs. Incredible - Determined Rescuer](https://www.readysetink.com/card/mrs-incredible-determined-rescuer.html): Steel, cost 7, Character, Legendary
+- [Diablo - Stone Servant](https://www.readysetink.com/card/diablo-stone-servant.html): Steel, cost 2, Character, Super Rare
+- [Three Arrows](https://www.readysetink.com/card/three-arrows.html): Steel, cost 3, Action, Uncommon
+- [Card Advantage](https://www.readysetink.com/card/card-advantage.html): Steel, cost 2, Action, Uncommon
+- [Touch the Sky](https://www.readysetink.com/card/touch-the-sky.html): Steel, cost 2, Action, Rare
+- [Plunger Crossbow](https://www.readysetink.com/card/plunger-crossbow.html): Steel, cost 1, Item, Common
+- [Syndrome's Remote](https://www.readysetink.com/card/syndromes-remote.html): Steel, cost 2, Item, Rare
+- [Club Door](https://www.readysetink.com/card/club-door.html): Steel, cost 3, Item, Uncommon
+- [Fat Cat's Club - Seedy Headquarters](https://www.readysetink.com/card/fat-cats-club-seedy-headquarters.html): Steel, cost 3, Location, Common
+- [The Island of Nomanisan - Syndrome's Headquarters](https://www.readysetink.com/card/the-island-of-nomanisan-syndromes-headquarters.html): Steel, cost 3, Location, Rare

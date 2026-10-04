@@ -1,0 +1,62 @@
+# Captain: Disney Lorcana Captain cards
+
+Source: https://www.readysetink.com/classifications/captain/
+
+56 cards.
+
+- [Baloo - Freight Pilot](https://www.readysetink.com/card/baloo-freight-pilot.html): Steel, cost 4, Character, Common
+- [Buzz Lightyear - Grounded](https://www.readysetink.com/card/buzz-lightyear-grounded.html): Emerald, cost 3, Character, Common
+- [Buzz Lightyear - Jungle Ranger](https://www.readysetink.com/card/buzz-lightyear-jungle-ranger.html): Emerald, cost 7, Character, Legendary
+- [Buzz Lightyear - On the Way](https://www.readysetink.com/card/buzz-lightyear-on-the-way.html): Emerald, cost 3, Character, Rare
+- [Buzz Lightyear - Providing Cover](https://www.readysetink.com/card/buzz-lightyear-providing-cover.html): Emerald, cost 4, Character, Rare
+- [Buzz Lightyear - Space Ranger](https://www.readysetink.com/card/buzz-lightyear-space-ranger.html): Emerald, cost 2, Character, Common
+- [Captain - Colonel's Lieutenant](https://www.readysetink.com/card/captain-colonels-lieutenant.html): Ruby, cost 5, Character, Uncommon
+- [Captain Amelia - Commander of the Legacy](https://www.readysetink.com/card/captain-amelia-commander-of-the-legacy.html): Steel, cost 4, Character, Super Rare
+- [Captain Amelia - First in Command](https://www.readysetink.com/card/captain-amelia-first-in-command.html): Sapphire, cost 3, Character, Common
+- [Captain Hook - Captain of the Jolly Roger](https://www.readysetink.com/card/captain-hook-captain-of-the-jolly-roger.html): Steel, cost 4, Character, Rare
+- [Captain Hook - Conniving Pirate](https://www.readysetink.com/card/captain-hook-conniving-pirate.html): Ruby, cost 2, Character, Uncommon
+- [Captain Hook - Devious Duelist](https://www.readysetink.com/card/captain-hook-devious-duelist.html): cost 5, Character, Special
+- [Captain Hook - Forceful Duelist](https://www.readysetink.com/card/captain-hook-forceful-duelist.html): Steel, cost 1, Character, Common
+- [Captain Hook - Master Swordsman](https://www.readysetink.com/card/captain-hook-master-swordsman.html): Ruby, cost 5, Character, Rare
+- [Captain Hook - Ruthless Pirate](https://www.readysetink.com/card/captain-hook-ruthless-pirate.html): Ruby, cost 7, Character, Rare
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare
+- [Captain Hook - Thinking a Happy Thought](https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.html): Steel, cost 5, Character, Rare
+- [Captain Hook - Underhanded](https://www.readysetink.com/card/captain-hook-underhanded.html): Emerald, cost 3, Character, Rare
+- [Daisy Duck - Multitalented Pirate](https://www.readysetink.com/card/daisy-duck-multitalented-pirate.html): Emerald, cost 8, Character, Rare
+- [Daisy Duck - Pirate Captain](https://www.readysetink.com/card/daisy-duck-pirate-captain.html): Emerald, cost 4, Character, Super Rare
+- [Donald Duck - Buccaneer](https://www.readysetink.com/card/donald-duck-buccaneer.html): Steel, cost 4, Character, Legendary
+- [Gantu - Captain Crankyhead](https://www.readysetink.com/card/gantu-captain-crankyhead.html): Steel, cost 5, Character, Rare
+- [Gantu - Experienced Enforcer](https://www.readysetink.com/card/gantu-experienced-enforcer.html): Steel, cost 4, Character, Super Rare
+- [Gantu - Galactic Federation Captain](https://www.readysetink.com/card/gantu-galactic-federation-captain.html): Steel, cost 8, Character, Legendary
+- [Gantu - Hamsterviel's Accomplice](https://www.readysetink.com/card/gantu-hamsterviels-accomplice.html): Steel, cost 1, Character, Uncommon
+- [Jim Hawkins - Honorable Pirate](https://www.readysetink.com/card/jim-hawkins-honorable-pirate.html): Amber, cost 7, Character, Super Rare
+- [John Silver - Alien Pirate](https://www.readysetink.com/card/john-silver-alien-pirate.html): Emerald, cost 6, Character, Legendary
+- [John Silver - Ferocious Friend](https://www.readysetink.com/card/john-silver-ferocious-friend.html): Ruby, cost 4, Character, Uncommon
+- [John Silver - Greedy Treasure Seeker](https://www.readysetink.com/card/john-silver-greedy-treasure-seeker.html): Steel, cost 3, Character, Rare
+- [John Silver - Ship's Cook](https://www.readysetink.com/card/john-silver-ships-cook.html): Steel, cost 3, Character, Common
+- [John Silver - Stern Captain](https://www.readysetink.com/card/john-silver-stern-captain.html): Steel, cost 8, Character, Legendary
+- [John Silver - Terror of the Realm](https://www.readysetink.com/card/john-silver-terror-of-the-realm.html): Sapphire, cost 8, Character, Rare
+- [John Silver - Vengeful Pirate](https://www.readysetink.com/card/john-silver-vengeful-pirate.html): Emerald / Steel, cost 8, Character, Rare
+- [Kakamora - Pirate Chief](https://www.readysetink.com/card/kakamora-pirate-chief.html): Steel, cost 7, Character, Rare
+- [Kronk - Head of Security](https://www.readysetink.com/card/kronk-head-of-security.html): Steel, cost 7, Character, Super Rare
+- [Li Shang - Imperial Captain](https://www.readysetink.com/card/li-shang-imperial-captain.html): Steel, cost 5, Character, Uncommon
+- [Li Shang - Newly Promoted](https://www.readysetink.com/card/li-shang-newly-promoted.html): Ruby / Steel, cost 3, Character, Uncommon
+- [Li Shang - Seasoned Strategist](https://www.readysetink.com/card/li-shang-seasoned-strategist.html): Sapphire, cost 3, Character, Common
+- [Li Shang - Solemn Son](https://www.readysetink.com/card/li-shang-solemn-son.html): Steel, cost 3, Character, Common
+- [Li Shang - Valiant Leader](https://www.readysetink.com/card/li-shang-valiant-leader.html): Steel, cost 7, Character, Uncommon
+- [Mickey Mouse - Musketeer Captain](https://www.readysetink.com/card/mickey-mouse-musketeer-captain.html): Amber, cost 7, Character, Legendary
+- [Mickey Mouse - Pirate Captain](https://www.readysetink.com/card/mickey-mouse-pirate-captain.html): Ruby, cost 5, Character, Super Rare
+- [Mickey Mouse - Steamboat Pilot](https://www.readysetink.com/card/mickey-mouse-steamboat-pilot.html): Emerald, cost 3, Character, Common
+- [Moana - Born Leader](https://www.readysetink.com/card/moana-born-leader.html): Ruby, cost 5, Character, Rare
+- [Moana - Kakamora Leader](https://www.readysetink.com/card/moana-kakamora-leader.html): Ruby, cost 7, Character, Rare
+- [Mr. Smee - Captain of the Jolly Roger](https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html): Steel, cost 6, Character, Super Rare
+- [Mr. Smee - Efficient Captain](https://www.readysetink.com/card/mr-smee-efficient-captain.html): Emerald / Steel, cost 3, Character, Uncommon
+- [Nathaniel Flint - Notorious Pirate](https://www.readysetink.com/card/nathaniel-flint-notorious-pirate.html): Steel, cost 2, Character, Rare
+- [Piglet - Pooh Pirate Captain](https://www.readysetink.com/card/piglet-pooh-pirate-captain.html): Amber, cost 2, Character, Super Rare
+- [Razoul - Menacing Guard](https://www.readysetink.com/card/razoul-menacing-guard.html): Steel, cost 2, Character, Common
+- [Razoul - Palace Guard](https://www.readysetink.com/card/razoul-palace-guard.html): Steel, cost 2, Character, Common
+- [Razoul - Unyielding Guard](https://www.readysetink.com/card/razoul-unyielding-guard.html): cost 2, Character, Special
+- [Tinker Bell - Queen of the Azurite Fairies](https://www.readysetink.com/card/tinker-bell-queen-of-the-azurite-fairies.html): Amethyst, cost 7, Character, Uncommon
+- [Wendy Darling - Courageous Captain](https://www.readysetink.com/card/wendy-darling-courageous-captain.html): Ruby, cost 2, Character, Rare
+- [Wendy Darling - Pirate Queen](https://www.readysetink.com/card/wendy-darling-pirate-queen.html): Amber / Ruby, cost 7, Character, Uncommon
+- [Woody & Buzz Lightyear - Best Buddies](https://www.readysetink.com/card/woody-buzz-lightyear-best-buddies.html): Amber / Emerald, cost 7, Character, Legendary

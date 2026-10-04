@@ -1,0 +1,213 @@
+# Attack of the Vine! (Set 13): Disney Lorcana card list
+
+Source: https://www.readysetink.com/sets/attack-of-the-vine/
+
+Released july 24, 2026. 207 cards first printed in this set (reprints appear under their original set).
+
+- [Woody - Helping a Friend](https://www.readysetink.com/card/woody-helping-a-friend.html): Amber, cost 4, Character, Rare
+- [Ming Lee - Proud Parent](https://www.readysetink.com/card/ming-lee-proud-parent.html): Amber, cost 3, Character, Rare
+- [Isabela Madrigal - Kind Cultivator](https://www.readysetink.com/card/isabela-madrigal-kind-cultivator.html): Amber, cost 2, Character, Common
+- [Tyler Nguyen-Baker - 4*Town Fan](https://www.readysetink.com/card/tyler-nguyen-baker-4-town-fan.html): Amber, cost 1, Character, Common
+- [Rabbit - Hunny Paladin](https://www.readysetink.com/card/rabbit-hunny-paladin.html): Amber, cost 4, Character, Uncommon
+- [Celia Mae - Friendly Receptionist](https://www.readysetink.com/card/celia-mae-friendly-receptionist.html): Amber, cost 3, Character, Uncommon
+- [Meilin Lee - Lead Vocalist](https://www.readysetink.com/card/meilin-lee-lead-vocalist.html): Amber, cost 1, Character, Uncommon
+- [Priya Mangal - Serious Music Lover](https://www.readysetink.com/card/priya-mangal-serious-music-lover.html): Amber, cost 2, Character, Common
+- [Miriam Mendelsohn - Ticket Holder](https://www.readysetink.com/card/miriam-mendelsohn-ticket-holder.html): Amber, cost 2, Character, Common
+- [Lilo - Patient Weaver](https://www.readysetink.com/card/lilo-patient-weaver.html): Amber, cost 2, Character, Common
+- [Kocoum - Defender of the Tribe](https://www.readysetink.com/card/kocoum-defender-of-the-tribe.html): Amber, cost 6, Character, Common
+- [Pocahontas - Guiding the Tribe](https://www.readysetink.com/card/pocahontas-guiding-the-tribe.html): Amber, cost 2, Character, Rare
+- [Woody - Town Sheriff](https://www.readysetink.com/card/woody-town-sheriff.html): Amber, cost 3, Character, Common
+- [Abby Park - Over the Top](https://www.readysetink.com/card/abby-park-over-the-top.html): Amber, cost 3, Character, Uncommon
+- [Gaston - Superior Archer](https://www.readysetink.com/card/gaston-superior-archer.html): Amber, cost 5, Character, Uncommon
+- [Meilin Lee - Losing Control](https://www.readysetink.com/card/meilin-lee-losing-control.html): Amber, cost 3, Character, Rare
+- [4*Town - Hottest Band of the Year](https://www.readysetink.com/card/4-town-hottest-band-of-the-year.html): Amber, cost 4, Character, Rare
+- [Mike Wazowski - Heroic Climber](https://www.readysetink.com/card/mike-wazowski-heroic-climber.html): Amber, cost 2, Character, Super Rare
+- [Boo - In Disguise](https://www.readysetink.com/card/boo-in-disguise.html): Amber, cost 2, Character, Uncommon
+- [Jasmine - Vine Expert](https://www.readysetink.com/card/jasmine-vine-expert.html): Amber, cost 4, Character, Common
+- [Mike Wazowski - Well-Rounded Entertainer](https://www.readysetink.com/card/mike-wazowski-well-rounded-entertainer.html): Amber, cost 1, Character, Common
+- [The Horned King - Merciless Master](https://www.readysetink.com/card/the-horned-king-merciless-master.html): Amber, cost 5, Character, Legendary
+- [Kanga - Hunny Bard](https://www.readysetink.com/card/kanga-hunny-bard.html): Amber, cost 3, Character, Common
+- [Sulley - The New Boss](https://www.readysetink.com/card/sulley-the-new-boss.html): Amber, cost 5, Character, Super Rare
+- [Mirabel Madrigal - Family Guardian](https://www.readysetink.com/card/mirabel-madrigal-family-guardian.html): Amber, cost 5, Character, Rare
+- [Ursula - Created by the Vine](https://www.readysetink.com/card/ursula-created-by-the-vine.html): Amber, cost 4, Character, Rare
+- [Pocahontas & Meeko - Adventurous Friends](https://www.readysetink.com/card/pocahontas-meeko-adventurous-friends.html): Amber / Amethyst, cost 4, Character, Legendary
+- [Woody & Buzz Lightyear - Best Buddies](https://www.readysetink.com/card/woody-buzz-lightyear-best-buddies.html): Amber / Emerald, cost 7, Character, Legendary
+- [Sulley & Boo - Scare Buddies](https://www.readysetink.com/card/sulley-boo-scare-buddies.html): Amber / Ruby, cost 6, Character, Super Rare
+- [The Madrigal Family - Every Generation](https://www.readysetink.com/card/the-madrigal-family-every-generation.html): Amber / Sapphire, cost 5, Character, Rare
+- [Lilo & Stitch - Fun-Loving Friends](https://www.readysetink.com/card/lilo-stitch-fun-loving-friends.html): Amber / Steel, cost 5, Character, Super Rare
+- [If I Didn't Have You](https://www.readysetink.com/card/if-i-didnt-have-you.html): Amber, cost 3, Action, Common
+- [I'm Never Not by Your Side](https://www.readysetink.com/card/im-never-not-by-your-side.html): Amber, cost 5, Action, Uncommon
+- [Besties, Assemble!](https://www.readysetink.com/card/besties-assemble.html): Amber, cost 1, Action, Common
+- [Nobody Like U](https://www.readysetink.com/card/nobody-like-u.html): Amber, cost 5, Action, Rare
+- [Powhatan's Staff](https://www.readysetink.com/card/powhatans-staff.html): Amber, cost 1, Item, Uncommon
+- [Rapunzel's Tower - Taken by the Vine](https://www.readysetink.com/card/rapunzels-tower-taken-by-the-vine.html): Amber, cost 4, Location, Uncommon
+- [Fflewddur Fflam - Luckless Bard](https://www.readysetink.com/card/fflewddur-fflam-luckless-bard.html): Amethyst, cost 6, Character, Common
+- [Maleficent - Exultant Spellcaster](https://www.readysetink.com/card/maleficent-exultant-spellcaster.html): Amethyst, cost 1, Character, Common
+- [Winnie the Pooh - Hunny Archmage](https://www.readysetink.com/card/winnie-the-pooh-hunny-archmage.html): Amethyst, cost 2, Character, Common
+- [Panic - Hammer Enthusiast](https://www.readysetink.com/card/panic-hammer-enthusiast.html): Amethyst, cost 3, Character, Common
+- [Lumpy - Hunny Druid](https://www.readysetink.com/card/lumpy-hunny-druid.html): Amethyst, cost 5, Character, Uncommon
+- [Abu - Wise Sultan](https://www.readysetink.com/card/abu-wise-sultan.html): Amethyst, cost 1, Character, Uncommon
+- [Meilin Lee - Superficially Obedient](https://www.readysetink.com/card/meilin-lee-superficially-obedient.html): Amethyst, cost 2, Character, Common
+- [Genie - Hard to Grasp](https://www.readysetink.com/card/genie-hard-to-grasp.html): Amethyst, cost 4, Character, Uncommon
+- [Vixey - Expert Fisher](https://www.readysetink.com/card/vixey-expert-fisher.html): Amethyst, cost 3, Character, Rare
+- [Meeko - Lucky Raccoon](https://www.readysetink.com/card/meeko-lucky-raccoon.html): Amethyst, cost 1, Character, Common
+- [Pain - Running with Scissors](https://www.readysetink.com/card/pain-running-with-scissors.html): Amethyst, cost 4, Character, Common
+- [Ming Lee - Overprotective Parent](https://www.readysetink.com/card/ming-lee-overprotective-parent.html): Amethyst, cost 4, Character, Rare
+- [Merida - Wisp Conjurer](https://www.readysetink.com/card/merida-wisp-conjurer.html): Amethyst, cost 4, Character, Legendary
+- [Mrs. Incredible - Created by the Vine](https://www.readysetink.com/card/mrs-incredible-created-by-the-vine.html): Amethyst, cost 4, Character, Rare
+- [Pete - Created by the Vine](https://www.readysetink.com/card/pete-created-by-the-vine.html): Amethyst, cost 1, Character, Common
+- [Grandma Wu - Wise Grandmother](https://www.readysetink.com/card/grandma-wu-wise-grandmother.html): Amethyst, cost 3, Character, Rare
+- [HeiHei - Created by the Vine](https://www.readysetink.com/card/heihei-created-by-the-vine.html): Amethyst, cost 2, Character, Rare
+- [Hera - Created by the Vine](https://www.readysetink.com/card/hera-created-by-the-vine.html): Amethyst, cost 5, Character, Uncommon
+- [Tinker Bell - Finding a Way](https://www.readysetink.com/card/tinker-bell-finding-a-way.html): Amethyst, cost 2, Character, Uncommon
+- [Morph - Little Imitator](https://www.readysetink.com/card/morph-little-imitator.html): Amethyst, cost 2, Character, Uncommon
+- [Peter Pan - Playful Prankster](https://www.readysetink.com/card/peter-pan-playful-prankster.html): Amethyst, cost 2, Character, Common
+- [Aladdin & Genie - Mischievous Pals](https://www.readysetink.com/card/aladdin-genie-mischievous-pals.html): Amethyst / Emerald, cost 5, Character, Super Rare
+- [Peter Pan & Tinker Bell - Fast Friends](https://www.readysetink.com/card/peter-pan-tinker-bell-fast-friends.html): Amethyst / Ruby, cost 6, Character, Super Rare
+- [Christopher Robin - Hunny Sage](https://www.readysetink.com/card/christopher-robin-hunny-sage.html): Amethyst / Sapphire, cost 6, Character, Legendary
+- [Winnie the Pooh & Piglet - Hunny Mages](https://www.readysetink.com/card/winnie-the-pooh-piglet-hunny-mages.html): Amethyst / Sapphire, cost 5, Character, Super Rare
+- [Maleficent & Diablo - Evil Incarnate](https://www.readysetink.com/card/maleficent-diablo-evil-incarnate.html): Amethyst / Steel, cost 7, Character, Rare
+- [You've Got Some Punch](https://www.readysetink.com/card/youve-got-some-punch.html): Amethyst, cost 2, Action, Common
+- [With a Few Good Friends](https://www.readysetink.com/card/with-a-few-good-friends.html): Amethyst, cost 6, Action, Rare
+- [Petrify](https://www.readysetink.com/card/petrify.html): Amethyst, cost 1, Action, Common
+- [One and Only](https://www.readysetink.com/card/one-and-only.html): Amethyst, cost 3, Action, Uncommon
+- [Protective Aura](https://www.readysetink.com/card/protective-aura.html): Amethyst, cost 2, Action, Uncommon
+- [Narrow Escape](https://www.readysetink.com/card/narrow-escape.html): Amethyst, cost 4, Action, Common
+- [Broken Pod](https://www.readysetink.com/card/broken-pod.html): Amethyst, cost 1, Item, Uncommon
+- [Magical Hunny Staff](https://www.readysetink.com/card/magical-hunny-staff.html): Amethyst, cost 1, Item, Rare
+- [Source of the Vine](https://www.readysetink.com/card/source-of-the-vine.html): Amethyst, cost 4, Item, Super Rare
+- [Ring of Stones - Taken by the Vine](https://www.readysetink.com/card/ring-of-stones-taken-by-the-vine.html): Amethyst, cost 4, Location, Rare
+- [Carl Fredricksen - Loving Husband](https://www.readysetink.com/card/carl-fredricksen-loving-husband.html): Emerald, cost 1, Character, Uncommon
+- [Ellie Fredricksen - Loving Wife](https://www.readysetink.com/card/ellie-fredricksen-loving-wife.html): Emerald, cost 2, Character, Common
+- [Buzz Lightyear - Grounded](https://www.readysetink.com/card/buzz-lightyear-grounded.html): Emerald, cost 3, Character, Common
+- [Buzz Lightyear - Providing Cover](https://www.readysetink.com/card/buzz-lightyear-providing-cover.html): Emerald, cost 4, Character, Rare
+- [Gopher - Hunny Cook](https://www.readysetink.com/card/gopher-hunny-cook.html): Emerald, cost 2, Character, Rare
+- [Russell - Senior Wilderness Explorer](https://www.readysetink.com/card/russell-senior-wilderness-explorer.html): Emerald, cost 5, Character, Super Rare
+- [Rapunzel - Tower Defender](https://www.readysetink.com/card/rapunzel-tower-defender.html): Emerald, cost 4, Character, Common
+- [Tod - Clever Fox](https://www.readysetink.com/card/tod-clever-fox.html): Emerald, cost 3, Character, Uncommon
+- [Russell - Junior Wilderness Explorer](https://www.readysetink.com/card/russell-junior-wilderness-explorer.html): Emerald, cost 2, Character, Common
+- [Roo - Hunny Rogue](https://www.readysetink.com/card/roo-hunny-rogue.html): Emerald, cost 1, Character, Uncommon
+- [Winifred - Exasperated Elephant](https://www.readysetink.com/card/winifred-exasperated-elephant.html): Emerald, cost 6, Character, Common
+- [Aladdin - Doing His Part](https://www.readysetink.com/card/aladdin-doing-his-part.html): Emerald, cost 2, Character, Common
+- [Madam Mim - Hummingbird](https://www.readysetink.com/card/madam-mim-hummingbird.html): Emerald, cost 2, Character, Uncommon
+- [Minnie Mouse - Curious Adventurer](https://www.readysetink.com/card/minnie-mouse-curious-adventurer.html): Emerald, cost 1, Character, Common
+- [Kevin - Flightless Bird](https://www.readysetink.com/card/kevin-flightless-bird.html): Emerald, cost 2, Character, Uncommon
+- [Peter Pan - Created by the Vine](https://www.readysetink.com/card/peter-pan-created-by-the-vine.html): Emerald, cost 3, Character, Rare
+- [Copper - Creative Storyteller](https://www.readysetink.com/card/copper-creative-storyteller.html): Emerald, cost 2, Character, Uncommon
+- [Posey - Vampire Potato](https://www.readysetink.com/card/posey-vampire-potato.html): Emerald, cost 7, Character, Uncommon
+- [Dr. Bushroot - Evil Botanist](https://www.readysetink.com/card/dr-bushroot-evil-botanist.html): Emerald, cost 5, Character, Rare
+- [Mother Gothel - Evil as Ever](https://www.readysetink.com/card/mother-gothel-evil-as-ever.html): Emerald, cost 2, Character, Common
+- [Tod & Copper - Best of Friends](https://www.readysetink.com/card/tod-copper-best-of-friends.html): Emerald, cost 4, Character, Rare
+- [Rapunzel - Escaping the Tower](https://www.readysetink.com/card/rapunzel-escaping-the-tower.html): Emerald, cost 1, Character, Super Rare
+- [Cetus - Mighty Serpent](https://www.readysetink.com/card/cetus-mighty-serpent.html): Emerald, cost 6, Character, Common
+- [Mushu - Stealthy Dragon](https://www.readysetink.com/card/mushu-stealthy-dragon.html): Emerald, cost 3, Character, Legendary
+- [Carl Fredricksen & Russell - Intrepid Explorers](https://www.readysetink.com/card/carl-fredricksen-russell-intrepid-explorers.html): Emerald / Ruby, cost 6, Character, Rare
+- [Mickey Mouse & Minnie Mouse - Adventuring Duo](https://www.readysetink.com/card/mickey-mouse-minnie-mouse-adventuring-duo.html): Emerald / Sapphire, cost 7, Character, Legendary
+- [Rapunzel & Flynn Rider - Unlikely Pair](https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html): Emerald / Steel, cost 5, Character, Legendary
+- [To Wither a Flower](https://www.readysetink.com/card/to-wither-a-flower.html): Emerald, cost 4, Action, Rare
+- [Piercing Attack](https://www.readysetink.com/card/piercing-attack.html): Emerald, cost 2, Action, Common
+- [Put That Thing Back](https://www.readysetink.com/card/put-that-thing-back.html): Emerald, cost 4, Action, Uncommon
+- [Scout Ahead](https://www.readysetink.com/card/scout-ahead.html): Emerald, cost 1, Action, Common
+- [Potato](https://www.readysetink.com/card/potato.html): Emerald, cost 1, Item, Common
+- [My Adventure Book](https://www.readysetink.com/card/my-adventure-book.html): Emerald, cost 3, Item, Uncommon
+- [Vine Pod](https://www.readysetink.com/card/vine-pod.html): Emerald, cost 4, Item, Rare
+- [Paradise Falls - Exotic Destination](https://www.readysetink.com/card/paradise-falls-exotic-destination.html): Emerald, cost 4, Location, Rare
+- [Dash Parr - Super Fast](https://www.readysetink.com/card/dash-parr-super-fast.html): Ruby, cost 5, Character, Rare
+- [Yzma - Choosy Customer](https://www.readysetink.com/card/yzma-choosy-customer.html): Ruby, cost 4, Character, Common
+- [Kuzco - Picky Customer](https://www.readysetink.com/card/kuzco-picky-customer.html): Ruby, cost 2, Character, Uncommon
+- [The Bear - Territorial Animal](https://www.readysetink.com/card/the-bear-territorial-animal.html): Ruby, cost 3, Character, Common
+- [Carl Fredricksen - On the Move](https://www.readysetink.com/card/carl-fredricksen-on-the-move.html): Ruby, cost 4, Character, Super Rare
+- [Dash Parr - Dodgeball Dynamo](https://www.readysetink.com/card/dash-parr-dodgeball-dynamo.html): Ruby, cost 1, Character, Common
+- [Gaston - Created by the Vine](https://www.readysetink.com/card/gaston-created-by-the-vine.html): Ruby, cost 2, Character, Common
+- [Colonel Hathi - On the March](https://www.readysetink.com/card/colonel-hathi-on-the-march.html): Ruby, cost 5, Character, Common
+- [Splodyhead - Experiment 619](https://www.readysetink.com/card/splodyhead-experiment-619.html): Ruby, cost 3, Character, Common
+- [Pacha - Panicked Customer](https://www.readysetink.com/card/pacha-panicked-customer.html): Ruby, cost 4, Character, Uncommon
+- [Sun Yee - Red Panda Spirit](https://www.readysetink.com/card/sun-yee-red-panda-spirit.html): Ruby, cost 5, Character, Uncommon
+- [Grandma Wu - Fierce Red Panda](https://www.readysetink.com/card/grandma-wu-fierce-red-panda.html): Ruby, cost 7, Character, Rare
+- [King Louie - King of Swing](https://www.readysetink.com/card/king-louie-king-of-swing.html): Ruby, cost 4, Character, Common
+- [Beast - Fierce Defender](https://www.readysetink.com/card/beast-fierce-defender.html): Ruby, cost 3, Character, Common
+- [Randall Boggs - Envious Coworker](https://www.readysetink.com/card/randall-boggs-envious-coworker.html): Ruby, cost 2, Character, Rare
+- [Donald Duck - Vineling Rider](https://www.readysetink.com/card/donald-duck-vineling-rider.html): Ruby, cost 2, Character, Common
+- [Meilin Lee - Popular Red Panda](https://www.readysetink.com/card/meilin-lee-popular-red-panda.html): Ruby, cost 6, Character, Legendary
+- [Tigger - Hunny Barbarian](https://www.readysetink.com/card/tigger-hunny-barbarian.html): Ruby, cost 4, Character, Rare
+- [Boo - Energetic Child](https://www.readysetink.com/card/boo-energetic-child.html): Ruby, cost 3, Character, Rare
+- [Sulley - Protective Monster](https://www.readysetink.com/card/sulley-protective-monster.html): Ruby, cost 3, Character, Uncommon
+- [Ming Lee - Giant Red Panda](https://www.readysetink.com/card/ming-lee-giant-red-panda.html): Ruby, cost 9, Character, Super Rare
+- [Captain Hook - Conniving Pirate](https://www.readysetink.com/card/captain-hook-conniving-pirate.html): Ruby, cost 2, Character, Uncommon
+- [Peter Pan - Vine Duelist](https://www.readysetink.com/card/peter-pan-vine-duelist.html): Ruby, cost 1, Character, Common
+- [Belle & Beast - Certain as the Sun](https://www.readysetink.com/card/belle-beast-certain-as-the-sun.html): Ruby / Sapphire, cost 8, Character, Super Rare
+- [Dash Parr & Violet Parr - Super Siblings](https://www.readysetink.com/card/dash-parr-violet-parr-super-siblings.html): Ruby / Steel, cost 8, Character, Legendary
+- [Red Moon Ritual](https://www.readysetink.com/card/red-moon-ritual.html): Ruby, cost 7, Action, Uncommon
+- [Red Alert](https://www.readysetink.com/card/red-alert.html): Ruby, cost 4, Action, Uncommon
+- [Rahr!](https://www.readysetink.com/card/rahr.html): Ruby, cost 1, Action, Common
+- [Prophetic Vision](https://www.readysetink.com/card/prophetic-vision.html): Ruby, cost 2, Action, Uncommon
+- [It's Gonna Be Great!](https://www.readysetink.com/card/its-gonna-be-great.html): Ruby, cost 2, Action, Common
+- [Scream Canister](https://www.readysetink.com/card/scream-canister.html): Ruby, cost 2, Item, Uncommon
+- [Bunch of Balloons](https://www.readysetink.com/card/bunch-of-balloons.html): Ruby, cost 1, Item, Rare
+- [Beast's Castle - Overrun by the Vine](https://www.readysetink.com/card/beasts-castle-overrun-by-the-vine.html): Ruby, cost 4, Location, Rare
+- [Carl's House - Flying High](https://www.readysetink.com/card/carls-house-flying-high.html): Ruby, cost 2, Location, Rare
+- [Launchpad - Sky Patrol](https://www.readysetink.com/card/launchpad-sky-patrol.html): Sapphire, cost 4, Character, Common
+- [Dug - Good Boy](https://www.readysetink.com/card/dug-good-boy.html): Sapphire, cost 3, Character, Uncommon
+- [Roz - Always Watching](https://www.readysetink.com/card/roz-always-watching.html): Sapphire, cost 2, Character, Common
+- [Merlin - Envisioning the Future](https://www.readysetink.com/card/merlin-envisioning-the-future.html): Sapphire, cost 4, Character, Rare
+- [Quackerjack - Loony Toymaker](https://www.readysetink.com/card/quackerjack-loony-toymaker.html): Sapphire, cost 5, Character, Legendary
+- [Belle - Always Reading](https://www.readysetink.com/card/belle-always-reading.html): Sapphire, cost 2, Character, Common
+- [Ellie Fredricksen - Adventure Partner](https://www.readysetink.com/card/ellie-fredricksen-adventure-partner.html): Sapphire, cost 3, Character, Common
+- [Mrs. Hasagawa - Fruit Vendor](https://www.readysetink.com/card/mrs-hasagawa-fruit-vendor.html): Sapphire, cost 2, Character, Uncommon
+- [Alpha - Pack Leader](https://www.readysetink.com/card/alpha-pack-leader.html): Sapphire, cost 2, Character, Rare
+- [Sulley - Strategic Scarer](https://www.readysetink.com/card/sulley-strategic-scarer.html): Sapphire, cost 3, Character, Common
+- [Randall Boggs - Scary Smart](https://www.readysetink.com/card/randall-boggs-scary-smart.html): Sapphire, cost 4, Character, Rare
+- [Piglet - Hunny Mage Apprentice](https://www.readysetink.com/card/piglet-hunny-mage-apprentice.html): Sapphire, cost 1, Character, Common
+- [Mickey Mouse - Inquisitive Explorer](https://www.readysetink.com/card/mickey-mouse-inquisitive-explorer.html): Sapphire, cost 4, Character, Common
+- [Hades - Meticulous Schemer](https://www.readysetink.com/card/hades-meticulous-schemer.html): Sapphire, cost 6, Character, Uncommon
+- [Antonio Madrigal - Animal Doctor](https://www.readysetink.com/card/antonio-madrigal-animal-doctor.html): Sapphire, cost 4, Character, Uncommon
+- [Maid Marian - Created by the Vine](https://www.readysetink.com/card/maid-marian-created-by-the-vine.html): Sapphire, cost 4, Character, Rare
+- [Robin Hood - Created by the Vine](https://www.readysetink.com/card/robin-hood-created-by-the-vine.html): Sapphire, cost 5, Character, Common
+- [Boo - Human Child](https://www.readysetink.com/card/boo-human-child.html): Sapphire, cost 1, Character, Rare
+- [Pluto - Suspicious Sentry](https://www.readysetink.com/card/pluto-suspicious-sentry.html): Sapphire, cost 5, Character, Common
+- [Charles Muntz - Obsessive Explorer](https://www.readysetink.com/card/charles-muntz-obsessive-explorer.html): Sapphire, cost 4, Character, Super Rare
+- [Henry J. Waternoose III - Chief Executive Officer](https://www.readysetink.com/card/henry-j-waternoose-iii-chief-executive-officer.html): Sapphire, cost 6, Character, Rare
+- [Eeyore - Hunny Scholar](https://www.readysetink.com/card/eeyore-hunny-scholar.html): Sapphire, cost 3, Character, Uncommon
+- [Darkwing Duck & Launchpad - St. Canard's Finest](https://www.readysetink.com/card/darkwing-duck-launchpad-st-canards-finest.html): Sapphire / Steel, cost 7, Character, Super Rare
+- [Power Surge](https://www.readysetink.com/card/power-surge.html): Sapphire, cost 4, Action, Uncommon
+- [Focused Search](https://www.readysetink.com/card/focused-search.html): Sapphire, cost 1, Action, Common
+- [We've Got a Lot to Do!](https://www.readysetink.com/card/weve-got-a-lot-to-do.html): Sapphire, cost 3, Action, Common
+- [Startle](https://www.readysetink.com/card/startle.html): Sapphire, cost 1, Action, Common
+- [Closet Door Portal](https://www.readysetink.com/card/closet-door-portal.html): Sapphire, cost 4, Item, Super Rare
+- [Hana's Inkcaster](https://www.readysetink.com/card/hanas-inkcaster.html): Sapphire, cost 2, Item, Uncommon
+- [Laugh Canister](https://www.readysetink.com/card/laugh-canister.html): Sapphire, cost 3, Item, Rare
+- [Translation Collar](https://www.readysetink.com/card/translation-collar.html): Sapphire, cost 2, Item, Rare
+- [Big Book of Hunny](https://www.readysetink.com/card/big-book-of-hunny.html): Sapphire, cost 2, Item, Uncommon
+- [Hundred Acre Wood - Hunny Campsite](https://www.readysetink.com/card/hundred-acre-wood-hunny-campsite.html): Sapphire, cost 3, Location, Uncommon
+- [Violet Parr - Super Resilient](https://www.readysetink.com/card/violet-parr-super-resilient.html): Steel, cost 5, Character, Super Rare
+- [Aladdin - Created by the Vine](https://www.readysetink.com/card/aladdin-created-by-the-vine.html): Steel, cost 3, Character, Rare
+- [Willie the Giant - Created by the Vine](https://www.readysetink.com/card/willie-the-giant-created-by-the-vine.html): Steel, cost 6, Character, Uncommon
+- [Sprout - Experiment 509](https://www.readysetink.com/card/sprout-experiment-509.html): Steel, cost 5, Character, Rare
+- [Stitch - Protector of Frogs](https://www.readysetink.com/card/stitch-protector-of-frogs.html): Steel, cost 1, Character, Common
+- [Sheriff of Nottingham - Vine Slayer](https://www.readysetink.com/card/sheriff-of-nottingham-vine-slayer.html): Steel, cost 5, Character, Common
+- [Mata - Meat Hut Waitress](https://www.readysetink.com/card/mata-meat-hut-waitress.html): Steel, cost 1, Character, Common
+- [Violet Parr - Force Field Practice](https://www.readysetink.com/card/violet-parr-force-field-practice.html): Steel, cost 2, Character, Common
+- [Dr. Hamsterviel - Evil Observer](https://www.readysetink.com/card/dr-hamsterviel-evil-observer.html): Steel, cost 3, Character, Uncommon
+- [Owl - Hunny Ranger](https://www.readysetink.com/card/owl-hunny-ranger.html): Steel, cost 2, Character, Common
+- [Megavolt - Electrical Menace](https://www.readysetink.com/card/megavolt-electrical-menace.html): Steel, cost 4, Character, Uncommon
+- [Darkwing Duck - Shadowy Superhero](https://www.readysetink.com/card/darkwing-duck-shadowy-superhero.html): Steel, cost 3, Character, Common
+- [Omnidroid - Scanning for Threats](https://www.readysetink.com/card/omnidroid-scanning-for-threats.html): Steel, cost 3, Character, Common
+- [Flynn Rider - High-Climbing Rogue](https://www.readysetink.com/card/flynn-rider-high-climbing-rogue.html): Steel, cost 3, Character, Common
+- [The Irate Chef - Meat Hut Cook](https://www.readysetink.com/card/the-irate-chef-meat-hut-cook.html): Steel, cost 4, Character, Uncommon
+- [Kronk - Meat Hut Cook](https://www.readysetink.com/card/kronk-meat-hut-cook.html): Steel, cost 2, Character, Rare
+- [Mulan - Created by the Vine](https://www.readysetink.com/card/mulan-created-by-the-vine.html): Steel, cost 4, Character, Common
+- [Diablo - Protecting His Mistress](https://www.readysetink.com/card/diablo-protecting-his-mistress.html): Steel, cost 2, Character, Common
+- [Scar - Created by the Vine](https://www.readysetink.com/card/scar-created-by-the-vine.html): Steel, cost 5, Character, Legendary
+- [Maximus - Relentless Stallion](https://www.readysetink.com/card/maximus-relentless-stallion.html): Steel, cost 5, Character, Rare
+- [Omnidroid - Ultimate Iteration](https://www.readysetink.com/card/omnidroid-ultimate-iteration.html): Steel, cost 8, Character, Rare
+- [The Vine - Towering Stalk](https://www.readysetink.com/card/the-vine-towering-stalk.html): Steel, cost 10, Character, Super Rare
+- [Cower Before Me!](https://www.readysetink.com/card/cower-before-me.html): Steel, cost 2, Action, Common
+- [We'll Save Our Village](https://www.readysetink.com/card/well-save-our-village.html): Steel, cost 2, Action, Common
+- [Look What You've Done](https://www.readysetink.com/card/look-what-youve-done.html): Steel, cost 2, Action, Uncommon
+- [You Broke My Smolder](https://www.readysetink.com/card/you-broke-my-smolder.html): Steel, cost 1, Action, Uncommon
+- [Attack of the Vine!](https://www.readysetink.com/card/attack-of-the-vine.html): Steel, cost 6, Action, Rare
+- [Windstorm](https://www.readysetink.com/card/windstorm.html): Steel, cost 4, Action, Rare
+- [Discarded Armor](https://www.readysetink.com/card/discarded-armor.html): Steel, cost 1, Item, Uncommon
+- [The Weedwhacker](https://www.readysetink.com/card/the-weedwhacker.html): Steel, cost 3, Item, Uncommon
+- [Absorbing Bloom](https://www.readysetink.com/card/absorbing-bloom.html): Steel, cost 2, Item, Uncommon
+- [Vine Entrance - Ominous Passageway](https://www.readysetink.com/card/vine-entrance-ominous-passageway.html): Steel, cost 3, Location, Rare

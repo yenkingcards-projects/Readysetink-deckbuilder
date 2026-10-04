@@ -1,0 +1,98 @@
+# Beauty and the Beast: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/beauty-and-the-beast/
+
+92 cards.
+
+- [Battering Ram](https://www.readysetink.com/card/battering-ram.html): Emerald, cost 4, Item, Rare
+- [Be Our Guest](https://www.readysetink.com/card/be-our-guest.html): Amber, cost 2, Action, Uncommon
+- [Beast - Aggressive Lord](https://www.readysetink.com/card/beast-aggressive-lord.html): Ruby, cost 2, Character, Uncommon
+- [Beast - Fierce Defender](https://www.readysetink.com/card/beast-fierce-defender.html): Ruby, cost 3, Character, Common
+- [Beast - Forbidding Recluse](https://www.readysetink.com/card/beast-forbidding-recluse.html): Steel, cost 4, Character, Common
+- [Beast - Frustrated Designer](https://www.readysetink.com/card/beast-frustrated-designer.html): Ruby / Sapphire, cost 6, Character, Rare
+- [Beast - Gracious Prince](https://www.readysetink.com/card/beast-gracious-prince.html): Amber, cost 5, Character, Rare
+- [Beast - Hardheaded](https://www.readysetink.com/card/beast-hardheaded.html): Steel, cost 5, Character, Uncommon
+- [Beast - Relentless](https://www.readysetink.com/card/beast-relentless.html): Emerald, cost 6, Character, Legendary
+- [Beast - Selfless Protector](https://www.readysetink.com/card/beast-selfless-protector.html): Steel, cost 6, Character, Super Rare
+- [Beast - Snowfield Troublemaker](https://www.readysetink.com/card/beast-snowfield-troublemaker.html): Ruby, cost 2, Character, Super Rare
+- [Beast - Thick-Skinned](https://www.readysetink.com/card/beast-thick-skinned.html): Steel, cost 3, Character, Common
+- [Beast - Tragic Hero](https://www.readysetink.com/card/beast-tragic-hero.html): Steel, cost 5, Character, Legendary
+- [Beast - Wolfsbane](https://www.readysetink.com/card/beast-wolfsbane.html): Emerald, cost 5, Character, Legendary
+- [Beast - Wounded](https://www.readysetink.com/card/beast-wounded.html): Ruby, cost 3, Character, Uncommon
+- [Beast's Castle - Overrun by the Vine](https://www.readysetink.com/card/beasts-castle-overrun-by-the-vine.html): Ruby, cost 4, Location, Rare
+- [Beast's Castle - Winter Gardens](https://www.readysetink.com/card/beasts-castle-winter-gardens.html): Ruby, cost 1, Location, Common
+- [Beast's Mirror](https://www.readysetink.com/card/beasts-mirror.html): Steel, cost 2, Item, Common
+- [Belle - Accomplished Mystic](https://www.readysetink.com/card/belle-accomplished-mystic.html): Amethyst, cost 5, Character, Super Rare
+- [Belle - Always Reading](https://www.readysetink.com/card/belle-always-reading.html): Sapphire, cost 2, Character, Common
+- [Belle - Apprentice Inventor](https://www.readysetink.com/card/belle-apprentice-inventor.html): Sapphire, cost 3, Character, Common
+- [Belle - Bookworm](https://www.readysetink.com/card/belle-bookworm.html): Emerald, cost 3, Character, Uncommon
+- [Belle - Hidden Archer](https://www.readysetink.com/card/belle-hidden-archer.html): Emerald, cost 5, Character, Legendary
+- [Belle - Inventive Engineer](https://www.readysetink.com/card/belle-inventive-engineer.html): Sapphire, cost 3, Character, Uncommon
+- [Belle - Mechanic Extraordinaire](https://www.readysetink.com/card/belle-mechanic-extraordinaire.html): Ruby / Sapphire, cost 9, Character, Super Rare
+- [Belle - Of the Ball](https://www.readysetink.com/card/belle-of-the-ball.html): Sapphire, cost 4, Character, Rare
+- [Belle - Reflective Writer](https://www.readysetink.com/card/belle-reflective-writer.html): Emerald, cost 2, Character, Uncommon
+- [Belle - Snowfield Strategist](https://www.readysetink.com/card/belle-snowfield-strategist.html): Sapphire, cost 4, Character, Super Rare
+- [Belle - Strange but Special](https://www.readysetink.com/card/belle-strange-but-special.html): Sapphire, cost 4, Character, Legendary
+- [Belle - Untrained Mystic](https://www.readysetink.com/card/belle-untrained-mystic.html): Amethyst, cost 3, Character, Common
+- [Belle & Beast - Certain as the Sun](https://www.readysetink.com/card/belle-beast-certain-as-the-sun.html): Ruby / Sapphire, cost 8, Character, Super Rare
+- [Belle's Favorite Book](https://www.readysetink.com/card/belles-favorite-book.html): Sapphire, cost 3, Item, Rare
+- [Belle's House - Maurice's Workshop](https://www.readysetink.com/card/belles-house-maurices-workshop.html): Sapphire, cost 1, Location, Rare
+- [Break](https://www.readysetink.com/card/break.html): Steel, cost 2, Action, Common
+- [Chip the Teacup - Gentle Soul](https://www.readysetink.com/card/chip-the-teacup-gentle-soul.html): Amethyst, cost 1, Character, Common
+- [Cogsworth - Climbing Clock](https://www.readysetink.com/card/cogsworth-climbing-clock.html): Ruby, cost 3, Character, Common
+- [Cogsworth - Grandfather Clock](https://www.readysetink.com/card/cogsworth-grandfather-clock.html): Sapphire, cost 5, Character, Super Rare
+- [Cogsworth - Illuminary Watchman](https://www.readysetink.com/card/cogsworth-illuminary-watchman.html): Amethyst, cost 1, Character, Common
+- [Cogsworth - Majordomo](https://www.readysetink.com/card/cogsworth-majordomo.html): Amber, cost 4, Character, Common
+- [Cogsworth - Talking Clock](https://www.readysetink.com/card/cogsworth-talking-clock.html): Sapphire, cost 2, Character, Uncommon
+- [Control Your Temper!](https://www.readysetink.com/card/control-your-temper.html): Amber, cost 1, Action, Common
+- [Enchantress - Unexpected Judge](https://www.readysetink.com/card/enchantress-unexpected-judge.html): Emerald, cost 2, Character, Common
+- [Ever as Before](https://www.readysetink.com/card/ever-as-before.html): Sapphire, cost 2, Action, Common
+- [Fan the Flames](https://www.readysetink.com/card/fan-the-flames.html): Ruby, cost 1, Action, Uncommon
+- [Four Dozen Eggs](https://www.readysetink.com/card/four-dozen-eggs.html): Sapphire, cost 4, Action, Uncommon
+- [Gaston - Arrogant Hunter](https://www.readysetink.com/card/gaston-arrogant-hunter.html): Ruby, cost 2, Character, Common
+- [Gaston - Arrogant Showoff](https://www.readysetink.com/card/gaston-arrogant-showoff.html): Ruby, cost 4, Character, Common
+- [Gaston - Baritone Bully](https://www.readysetink.com/card/gaston-baritone-bully.html): Amber, cost 3, Character, Uncommon
+- [Gaston - Created by the Vine](https://www.readysetink.com/card/gaston-created-by-the-vine.html): Ruby, cost 2, Character, Common
+- [Gaston - Despicable Dealer](https://www.readysetink.com/card/gaston-despicable-dealer.html): Amber, cost 3, Character, Super Rare
+- [Gaston - Egotistical Bully](https://www.readysetink.com/card/gaston-egotistical-bully.html): cost 2, Character, Special
+- [Gaston - Frightful Bully](https://www.readysetink.com/card/gaston-frightful-bully.html): Amber, cost 2, Character, Uncommon
+- [Gaston - Intellectual Powerhouse](https://www.readysetink.com/card/gaston-intellectual-powerhouse.html): Sapphire, cost 6, Character, Rare
+- [Gaston - Pure Paragon](https://www.readysetink.com/card/gaston-pure-paragon.html): Ruby, cost 9, Character, Rare
+- [Gaston - Scheming Suitor](https://www.readysetink.com/card/gaston-scheming-suitor.html): Emerald, cost 2, Character, Common
+- [Gaston - Superior Archer](https://www.readysetink.com/card/gaston-superior-archer.html): Amber, cost 5, Character, Uncommon
+- [Get Out!](https://www.readysetink.com/card/get-out.html): Ruby / Sapphire, cost 6, Action, Uncommon
+- [Glean](https://www.readysetink.com/card/glean.html): Sapphire, cost 1, Action, Common
+- [Grab Your Bow](https://www.readysetink.com/card/grab-your-bow.html): Ruby, cost 5, Action, Uncommon
+- [Grab Your Sword](https://www.readysetink.com/card/grab-your-sword.html): Steel, cost 5, Action, Rare
+- [Hold Still](https://www.readysetink.com/card/hold-still.html): Amber, cost 2, Action, Common
+- [If It's Not Baroque](https://www.readysetink.com/card/if-its-not-baroque.html): Sapphire, cost 3, Action, Rare
+- [LeFou - Bumbler](https://www.readysetink.com/card/lefou-bumbler.html): Amber, cost 2, Character, Uncommon
+- [LeFou - Cake Thief](https://www.readysetink.com/card/lefou-cake-thief.html): Ruby / Sapphire, cost 2, Character, Uncommon
+- [LeFou - Instigator](https://www.readysetink.com/card/lefou-instigator.html): Ruby, cost 2, Character, Rare
+- [LeFou - Opportunistic Flunky](https://www.readysetink.com/card/lefou-opportunistic-flunky.html): Steel, cost 3, Character, Rare
+- [Lumiere - Fiery Friend](https://www.readysetink.com/card/lumiere-fiery-friend.html): Ruby, cost 2, Character, Rare
+- [Lumiere - Fired Up](https://www.readysetink.com/card/lumiere-fired-up.html): Ruby / Sapphire, cost 5, Character, Super Rare
+- [Lumiere - Hotheaded Candelabra](https://www.readysetink.com/card/lumiere-hotheaded-candelabra.html): Ruby, cost 7, Character, Rare
+- [Lumiere - Nimble Candelabra](https://www.readysetink.com/card/lumiere-nimble-candelabra.html): Ruby, cost 2, Character, Common
+- [Magical Maid - Feather Duster](https://www.readysetink.com/card/magical-maid-feather-duster.html): Amethyst, cost 2, Character, Uncommon
+- [Maurice - Unconventional Inventor](https://www.readysetink.com/card/maurice-unconventional-inventor.html): Ruby, cost 4, Character, Rare
+- [Maurice - World-Famous Inventor](https://www.readysetink.com/card/maurice-world-famous-inventor.html): Sapphire, cost 6, Character, Rare
+- [Maurice's Machine](https://www.readysetink.com/card/maurices-machine.html): Ruby / Sapphire, cost 3, Item, Uncommon
+- [Maurice's Workshop](https://www.readysetink.com/card/maurices-workshop.html): Sapphire, cost 3, Item, Rare
+- [Monsieur D'Arque - Despicable Proprietor](https://www.readysetink.com/card/monsieur-darque-despicable-proprietor.html): Sapphire, cost 1, Character, Common
+- [Mrs. Potts - Enchanted Teapot](https://www.readysetink.com/card/mrs-potts-enchanted-teapot.html): Amethyst, cost 4, Character, Rare
+- [Mrs. Potts - Head Housekeeper](https://www.readysetink.com/card/mrs-potts-head-housekeeper.html): Sapphire, cost 3, Character, Common
+- [Mystical Rose](https://www.readysetink.com/card/mystical-rose.html): Amethyst, cost 2, Item, Rare
+- [Nothing to Hide](https://www.readysetink.com/card/nothing-to-hide.html): Sapphire, cost 1, Action, Common
+- [Rose Lantern](https://www.readysetink.com/card/rose-lantern.html): Amethyst, cost 2, Item, Common
+- [The Beast is Mine!](https://www.readysetink.com/card/the-beast-is-mine.html): Emerald, cost 3, Action, Uncommon
+- [The Library - A Gift for Belle](https://www.readysetink.com/card/the-library-a-gift-for-belle.html): Amethyst, cost 3, Location, Uncommon
+- [The Mob Song](https://www.readysetink.com/card/the-mob-song.html): Steel, cost 10, Action, Uncommon
+- [The Wardrobe - Belle's Confidant](https://www.readysetink.com/card/the-wardrobe-belles-confidant.html): Amethyst, cost 3, Character, Common
+- [The Wardrobe - Perceptive Friend](https://www.readysetink.com/card/the-wardrobe-perceptive-friend.html): Sapphire, cost 4, Character, Common
+- [Time to Go!](https://www.readysetink.com/card/time-to-go.html): Ruby, cost 3, Action, Uncommon
+- [Transformed Chef - Castle Stove](https://www.readysetink.com/card/transformed-chef-castle-stove.html): Sapphire, cost 4, Character, Common
+- [Unconventional Tool](https://www.readysetink.com/card/unconventional-tool.html): Ruby, cost 1, Item, Common
+- [We'll Save Our Village](https://www.readysetink.com/card/well-save-our-village.html): Steel, cost 2, Action, Common
+- [We've Got a Lot to Do!](https://www.readysetink.com/card/weve-got-a-lot-to-do.html): Sapphire, cost 3, Action, Common
+- [Who's With Me?](https://www.readysetink.com/card/whos-with-me.html): Ruby, cost 3, Action, Super Rare
