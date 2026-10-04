@@ -20,6 +20,8 @@ if "--send" not in sys.argv:
     sys.exit(0)
 for i in range(0, len(LOCS), 10000):
     body = json.dumps({"host": HOST, "key": KEY, "keyLocation": f"https://{HOST}/{KEY}.txt", "urlList": LOCS[i:i + 10000]}).encode()
-    req = urllib.request.Request("https://api.indexnow.org/indexnow", body, {"Content-Type": "application/json; charset=utf-8"})
+    req = urllib.request.Request("https://api.indexnow.org/indexnow", body, {"Content-Type": "application/json; charset=utf-8",
+                                                                              # Python's default User-Agent is rejected with a 403
+                                                                              "User-Agent": "Mozilla/5.0 (compatible; ReadySetInk-IndexNow/1.0)"})
     with urllib.request.urlopen(req, timeout=60) as r:
         print("batch", i // 10000 + 1, "->", r.status)
