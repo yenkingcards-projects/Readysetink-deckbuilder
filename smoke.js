@@ -28,15 +28,29 @@ ok(errs.length===0,`boots clean${errs.length?" — "+errs[0]:""}`);
    so dismissing it IS the first-visit path, and checking it appears at all is
    worth the two lines. Every reload below starts from the same storage, so
    once the flag is set it stays set. */
-ok(await p.isVisible("#tourbg"),"welcome tour appears on a first visit");
+/* The new deck builder replaced the blocking welcome modal (newbuilder/nb.js wraps startTour so
+   only an explicit request opens it). A first visit now shows the home menu plus a one-time hint
+   card with "Take the tour" and "Got it". So this checks that flow, then checks the tour itself
+   still opens and ends when asked, since the hint and More both lead to it. The home menu is a
+   full-screen dialog, so it is skipped before the tab checks below. */
+ok(await p.isVisible("#nbHome"),"home menu appears on a first visit");
+ok(await p.isVisible(".nbhint")&&!(await p.isVisible("#tourbg")),"first visit shows the hint card, not a blocking tour");
+await p.evaluate(()=>document.querySelector('.nbhint [data-t="tour"]').click());await p.waitForTimeout(400);
+ok(await p.isVisible("#tourbg"),"Take the tour opens the tour");
 await p.click('[data-tour="end"]');await p.waitForTimeout(300);
+ok(!(await p.isVisible("#tourbg")),"the tour can be ended");
+await p.click("#nbHSkip");await p.waitForTimeout(300);
+ok(!(await p.isVisible("#nbHome")),"Skip to the deck builder closes the home menu");
 ok(await p.evaluate(()=>document.querySelectorAll("#grid .c").length>0),"cards render");
 
 /* Every tab and every Other page, looking only for a crash. */
 /* tMeta was retired — Recommended decks lives in Other now, and is covered by
    the "meta" entry in the Other-page loop below. */
 for(const t of ["tDeck","tSearch","tColl","tDecks","tOther"]){
-  await p.click("#"+t);await p.waitForTimeout(450);
+  /* The new deck builder hides the legacy tab strip and drives these same buttons from script
+     (the home menu does exactly this), so trigger them the same way. A real click would time
+     out on a hidden element without telling us anything about whether the tab works. */
+  await p.evaluate(t=>document.getElementById(t).click(),t);await p.waitForTimeout(450);
   ok(await p.evaluate(t=>document.querySelector("main .view.on")!==null,t),t+" opens");
 }
 for(const op of ["dust","read","contrib","pref","mick","guess","aqua","quiz:ability","hex","cred","lore","meta"]){
@@ -57,19 +71,27 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
   await p.evaluate(()=>{location.hash="tab=tOther&op=lore"});
   await p.reload();await p.waitForTimeout(900);
   ok(await p.evaluate(()=>!!document.querySelector(".lorewrap")),"lore tracker opens");
-  await p.evaluate(()=>{LORE.n=2;LORE.players=LORE.players.slice(0,2);loreSave();renderLore()});
-  ok(await p.isDisabled("#loreRemove"),"player removal stops at two players");
-  await p.click("#loreAdd");await p.waitForTimeout(150);
-  ok(await p.textContent("#loreN").then(x=>x.trim()==="3 players"),"a player can be added");
-  await p.click("#loreRemove");await p.waitForTimeout(150);
-  ok(await p.evaluate(()=>LORE.n===2&&LORE.players.length===2),
-    "the last player can be removed without leaving stale player data");
-  await p.click('[data-plus="1"]');await p.waitForTimeout(200);
+  /* The tracker now opens on a setup screen (players, format, mode, series) and the scoreboard
+     appears after "Start match". Player count is chosen there, not with add/remove buttons. */
+  const seats=()=>p.evaluate(()=>document.querySelectorAll('[id^="segName"]').length);
+  ok(await seats()===2,"setup defaults to two players");
+  await p.click('#segN button:text-is("3")');await p.waitForTimeout(150);
+  ok(await seats()===3,"a third player can be added in setup");
+  await p.click('#segN button:text-is("2")');await p.waitForTimeout(150);
+  ok(await seats()===2,"going back to two players leaves exactly two");
+  await p.click("#stGo");await p.waitForTimeout(500);
+  ok(await p.evaluate(()=>document.querySelectorAll("#loreseats .seatname").length===2),
+    "the scoreboard seats exactly two players");
+  await p.click('.lorebtn[data-plus="1"]');await p.waitForTimeout(200);
   const before=await p.textContent("#ln1");
   await p.click("#loreJudge");await p.waitForTimeout(500);
   const locked=await p.evaluate(()=>!!document.querySelector(".jpanel")
-    &&document.querySelector('[data-plus="1"]').disabled);
+    &&document.querySelector('.lorebtn[data-plus="1"]').disabled);
   ok(locked,"JUDGE opens the panel and locks the score");
+  /* The judge now opens on a chooser (Basic rulings / Advanced). The two-sided card table the
+     checks below drive is the Advanced view. */
+  await p.evaluate(()=>[...document.querySelectorAll(".jpanel .jhit")].find(b=>/Advanced/.test(b.textContent)).click());
+  await p.waitForTimeout(500);
   ok(await p.evaluate(()=>document.querySelectorAll(".jzone").length===2),
     "judge opens on a two-sided card table");
   /* The header sits OUTSIDE main, which is z-index 1 — so a full-screen panel
@@ -94,28 +116,42 @@ ok(errs.length===0,`every page opens without a JS error${errs.length?" — "+err
     &&x.includes("1 ready / 2 total")&&x.includes("CR 5.1.1.7")),
     "ink and Shift-stack state carry into the cited ruling view");
   await p.click("[data-jback]");await p.waitForTimeout(150);
-  await p.click("[data-jbrowse]");await p.waitForTimeout(150);
+  /* "Browse" is now the chooser's Basic rulings option, one level above the Advanced table, so
+     step back until the chooser is showing. */
+  for(let i=0;i<3&&!(await p.evaluate(()=>[...document.querySelectorAll(".jpanel .jhit")].some(b=>/Basic/.test(b.textContent))));i++){
+    await p.click("[data-jback]");await p.waitForTimeout(200)}
+  await p.evaluate(()=>[...document.querySelectorAll(".jpanel .jhit")].find(b=>/Basic/.test(b.textContent)).click());
+  await p.waitForTimeout(250);
   await p.click('[data-jrule="win"]');await p.waitForTimeout(250);
   ok(await p.textContent("#jbody").then(x=>x.includes("CR 1.8.1.1")),
     "a resolved situation cites the exact Comprehensive Rules section");
   await p.click("[data-jresolved]");await p.waitForTimeout(250);
   ok(await p.evaluate(()=>!document.querySelector(".jpanel")
-    &&!document.querySelector('[data-plus="1"]').disabled),
+    &&!document.querySelector('.lorebtn[data-plus="1"]').disabled),
     "Resolved returns to the table and unlocks the score");
   await p.click("#loreJudge");await p.waitForTimeout(250);
   await p.fill("#jq","Ariel");await p.waitForTimeout(350);
   ok(await p.isVisible(".jambig"),"judge explains ambiguous card-name results");
   const rulingQuery=await p.evaluate(()=>{
-    const card=CARDS.find(c=>(c.ru||[]).length&&c.ru[0].q);
+    const card=DATA.cards.find(c=>(c.ru||[]).length&&c.ru[0].q);
     return card&&card.ru[0].q.split(/\s+/).slice(0,5).join(" ")});
   if(rulingQuery){
     await p.fill("#jq",rulingQuery);await p.waitForTimeout(350);
     ok(await p.textContent("#jbody").then(x=>x.includes("Official ruling matches")),
       "judge searches the text of official rulings");
   }
-  ok(await p.evaluate(()=>{
-    const i=1;LORE.players[i].lore=19;loreAdd(i,1);loreAdd(i,1);
-    return LORE.players[i].lore===20}),"lore is capped at 20");
+  /* Close the judge panel (it locks the score), then tap player 2's plus up to 20. A match is a
+     series now, so reaching 20 ends the game and raises the result screen, which is why the loop
+     stops as soon as it appears instead of tapping past it. */
+  await p.click("#jclose");await p.waitForTimeout(250);
+  for(let i=0;i<24&&!(await p.isVisible("#vic"));i++){await p.click('.lorebtn[data-plus="1"]');await p.waitForTimeout(60)}
+  await p.waitForTimeout(500);
+  ok((await p.textContent("#ln1")).trim()==="20","lore stops at exactly 20");
+  ok(await p.isVisible("#vic"),"reaching 20 lore ends the game and shows the result");
+  /* NOTE: there is no hard cap in the scoring code any more. The win total is per player and
+     configurable (loreWinTotalFor), the game ends when it is reached, and the full-screen result
+     screen stops further taps. So that is what is asserted above; "cannot exceed 20" is no
+     longer a property of loreAdd itself. */
   await p.reload();await p.waitForTimeout(700);
   ok(before==="1","lore counts up");
 }
