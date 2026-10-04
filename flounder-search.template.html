@@ -10776,6 +10776,12 @@ const ACHIEVEMENTS=[
  {id:"coconut",   d:15, t:"Coconut convert",   w:"Finish the Guided Coconut Build"},
  {id:"curator",   d:10, t:"Curator",           w:"Tag ten cards as staples"},
  {id:"quiz",      d:10, t:"Quizmaster",        w:"Win a round of any guessing game"},
+ /* Earned in My Lorcana Journal (/match-history/) — ids must match AWARDS in tournament/model.js */
+ {id:"journal1",  d:25, t:"Into the arena",    w:"Log your first event in My Lorcana Journal"},
+ {id:"firstwin",  d:15, t:"On the board",      w:"Log your first match win"},
+ {id:"regular",   d:30, t:"Regular",           w:"Log five events"},
+ {id:"topcut",    d:50, t:"Made the cut",      w:"Log a Top Cut finish"},
+ {id:"bingo",     d:100,t:"Seen it all",       w:"Beat every ink combination at least once"},
 ];
 /* Titles. Cosmetic only — nothing behind them, which is exactly why they can
    live in localStorage. The last one is deliberately unreachable: a million
@@ -14161,7 +14167,7 @@ const OTHER_GROUPS=[
    ["Dust & secrets","Earn it for doing just about anything on the site, then spend it on titles and secrets you won't find any other way.","dust"],
    ["Contribute","Write notes that get saved right on a card, or just send in a suggestion — the vague search only works because people describe cards.","contrib"],
    ["Judge","The quickest way to check a card interaction — search by name, or go advanced and build out the board state.","judge"],
-   ["Tournament companion","A Swiss calculator and everything else you'd want on match day — still being refined every week.","/match-history/"],
+   ["My Lorcana Journal","Log your events and matches, see your best and toughest matchups, prep for the next one, and a Top Cut calculator for match day.","/match-history/"],
    ["Shopping list","The staples you haven't got, grouped into what you'd buy at a few different budgets. Straight into a TCGplayer cart.","shop"],
    ["Recommended decks","Lists that have actually won something, with the card-by-card reasoning. Copy one straight into the deck builder.","meta"],
    ["Read every card","A carousel through every card at your own pace. Pick a set and an ink, and it tracks what you've already seen.","read"],
@@ -15612,6 +15618,12 @@ paintDeckBar();
 applyPrefs();
 showTab("tDeck");
 drawTitle();
+/* My Lorcana Journal (/match-history/) is a separate page, so it never writes
+   fs3_dust itself — an open tab here would save over it. It queues award ids
+   instead and they're paid out here, through award(), which already handles
+   Dust-off and one-payout-ever. */
+(()=>{const q=load("fs3_award_queue",[]);if(!q.length)return;
+  localStorage.removeItem("fs3_award_queue");q.forEach(id=>award(id));})();
 /* =========================================================================
    Accounts — sign in with Google, carry decks / dust / staples between devices
 
