@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/pull-the-lever.html
 > • Draw 2 cards.
 > • Each opponent chooses and discards a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.40 foil

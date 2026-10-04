@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ursula-vanessa.html
 
 Flavor text: This magic will certainly do the trick.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.52 foil

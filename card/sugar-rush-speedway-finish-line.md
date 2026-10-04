@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/sugar-rush-speedway-finish-line.html
 
 > BRING IT HOME, KID! When you move a character here from a location, you may banish this location to gain 3 lore and draw 3 cards.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $1.02 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $1.02 foil

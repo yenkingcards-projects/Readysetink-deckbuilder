@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/weight-set.html
 
 Flavor text: Personally endorsed by Hercules himself!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.49 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/bobby-purple-pigeon.html
 
 Flavor text: “You come at me, you get the beak, capisce?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.16 foil

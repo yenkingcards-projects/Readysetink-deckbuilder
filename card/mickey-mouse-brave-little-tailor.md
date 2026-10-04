@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-brave-little-tailor.html
 
 Flavor text: When defeat looms and victory hangs by a thread, a hero bolts to the rescue, patching things up through shear determination.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $14.47 regular, $84.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $14.66 regular, $84.20 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/agustin-madrigal-exceptionally-kind.htm
 Flavor text: “I'm happy to bring these arepas to the oasis, mi vida.
 Just think how much more I could help if I had a gift.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.58 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.57 foil

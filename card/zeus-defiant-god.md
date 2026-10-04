@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/zeus-defiant-god.html
 
 Flavor text: “I am the ruler of Olympus! I refuse to be defeated by a bunch of flowers!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.24 foil

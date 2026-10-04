@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ice-spikes.html
 > IT'S STUCK ⟳, 1 ⬡ — Exert chosen opposing item.
 > It can't ready at the start of its next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.29 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beast-forbidding-recluse.html
 
 Flavor text: Woe to the one who draws his gaze.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.32 foil

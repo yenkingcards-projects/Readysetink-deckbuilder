@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/winterspell.html
 Flavor text: “Well, that backfired. Anyone know how to thaw an Illuminary?”
 —Shanzay, an Illumineer
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.28 foil

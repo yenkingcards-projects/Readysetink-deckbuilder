@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ink-amplifier.html
 
 Flavor text: With a crackle of energy, the strange device lit up when the glimmers entered the study.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.54 foil

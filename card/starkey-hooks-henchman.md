@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/starkey-hooks-henchman.html
 
 Flavor text: A pirate must be tough, loyal, and strong. “Smart” doesn't even make the list.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.40 foil

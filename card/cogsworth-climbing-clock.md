@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cogsworth-climbing-clock.html
 
 Flavor text: “Top shelf? Pshaw! If it's a book the mademoiselle wants, I'll find a way to get it for her!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.17 foil

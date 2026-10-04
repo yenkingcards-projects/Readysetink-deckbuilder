@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/queens-sensor-core.html
 > ROYAL SEARCH ⟳, 2 ⬡ — Reveal the top card of your deck.
 > If it's a Princess or Queen character card, you may put it into your hand. Otherwise, put it on the top of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.33 regular, $1.48 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.33 regular, $1.48 foil

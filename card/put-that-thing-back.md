@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/put-that-thing-back.html
 
 Flavor text: ...Where it came from or so help me
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $1.07 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $1.07 foil

@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/dash-parr-violet-parr-super-siblings.ht
 - Q: If I use Combo Shift to play Dash Parr & Violet Parr – Super Siblings on top of a dry Dash Parr and a drying Violet Parr, what happens? What if the Dash Parr they’re shifting onto is ready but the Violet Parr is exerted?
   A: If you shift on top of a dry character and a drying character, the shifted character will be drying. If you shift them on top of a ready character and an exerted character, they’ll be exerted. Have further questions about any cards? Join the community at discord.gg/disneylorcana and ask away! We’re a friendly bunch.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.50 regular, $2.80 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.54 regular, $2.87 foil

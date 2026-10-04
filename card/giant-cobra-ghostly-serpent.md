@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/giant-cobra-ghostly-serpent.html
 > Vanish (When an opponent chooses this character for an action, banish them.)
 > MYSTERIOUS ADVANTAGE When you play this character, you may choose and discard a card to gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $1.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $1.44 foil

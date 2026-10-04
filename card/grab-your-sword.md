@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/grab-your-sword.html
 
 Flavor text: We don't like What we don't understand In fact, it scares us
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.32 regular, $1.71 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $1.73 foil

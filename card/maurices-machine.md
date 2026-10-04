@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/maurices-machine.html
 Flavor text: “I hope it does what I built it to do!”
 —Maurice
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.28 foil

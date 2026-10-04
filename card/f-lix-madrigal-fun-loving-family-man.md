@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/f-lix-madrigal-fun-loving-family-man.ht
 
 Flavor text: Who needs a gift when you're having this much fun?
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil

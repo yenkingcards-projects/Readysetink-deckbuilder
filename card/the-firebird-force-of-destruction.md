@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/the-firebird-force-of-destruction.html
 
 Flavor text: It rages through the forest, Wings spread wide with flame Spring sings its ancient chorus And green renews its claim
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

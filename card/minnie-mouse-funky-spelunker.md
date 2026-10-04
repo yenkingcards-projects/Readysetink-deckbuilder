@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-funky-spelunker.html
 
 Flavor text: She'll never cave under pressure.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.24 foil

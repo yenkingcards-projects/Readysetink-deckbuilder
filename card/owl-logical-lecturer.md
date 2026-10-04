@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/owl-logical-lecturer.html
 
 Flavor text: “For instance, based on the quality of the light and the subtle change in wind direction, I can safely say that it is time for tea.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil

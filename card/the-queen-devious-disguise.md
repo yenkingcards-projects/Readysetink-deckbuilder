@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/the-queen-devious-disguise.html
 > EVIL SCHEME When you play this character, you may draw a card. If you do, each opponent gains 2 lore.
 > JEALOUS HEART While an opponent has more lore than you, this character gets +2 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.40 regular, $4.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.19 regular, $4.40 foil

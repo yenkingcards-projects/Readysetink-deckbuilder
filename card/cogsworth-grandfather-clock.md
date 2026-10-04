@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cogsworth-grandfather-clock.html
 > Ward (Opponents can't choose this character except to challenge.)
 > UNWIND Your other characters gain Resist +1 (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.39 regular, $1.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $1.31 foil

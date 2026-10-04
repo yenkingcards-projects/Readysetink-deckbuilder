@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/figaro-tuxedo-cat.html
 Flavor text: “Say hello to Figaro. Up to mischief already!”
 —Geppetto
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.24 foil

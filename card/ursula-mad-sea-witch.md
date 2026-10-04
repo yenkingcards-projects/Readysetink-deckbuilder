@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ursula-mad-sea-witch.html
 
 Flavor text: “After her, Flotsam! I can't rule Lorcana without the Hexwell Crown!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.28 foil

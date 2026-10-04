@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/belle-apprentice-inventor.html
 
 Flavor text: Helping her dad keep the flying debris to a minimum.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.66 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.68 foil

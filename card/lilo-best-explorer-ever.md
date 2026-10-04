@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/lilo-best-explorer-ever.html
 > COME ON, PEOPLE, LET'S MOVE When you play this character, your other characters gain Challenger +2 this turn. (They get +2 ¤ while challenging.)
 > GO GET 'EM Whenever this character quests, chosen Alien character gains Challenger +2 and “This character can challenge ready characters” this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.39 regular, $3.91 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.35 regular, $3.91 foil

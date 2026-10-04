@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/the-mob-song.html
 > Sing Together 10 (Any number of your or your teammates' characters with total cost 10 or more may ⟳ to sing this song for free.)
 > Deal 3 damage to up to 3 chosen characters and/or locations.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.26 foil

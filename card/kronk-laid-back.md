@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kronk-laid-back.html
 > Ward (Opponents can't choose this character except to challenge.)
 > I'M LOVIN' THIS If an effect would cause you to discard one or more cards, you don't discard.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.46 foil

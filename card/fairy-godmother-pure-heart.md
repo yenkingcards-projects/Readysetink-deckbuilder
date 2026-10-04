@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fairy-godmother-pure-heart.html
 
 Flavor text: “We'll have to hurry, because even miracles take a little time.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.21 foil

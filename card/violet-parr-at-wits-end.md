@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/violet-parr-at-wits-end.html
 
 Flavor text: “Keep laughing, Dash. It's time to play ‘Bowling for Brothers.’” —Violet
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.42 foil

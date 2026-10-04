@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-merce
 
 Flavor text: He got what he wanted—just not the way he planned.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.61 foil

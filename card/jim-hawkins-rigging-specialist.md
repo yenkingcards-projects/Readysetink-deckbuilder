@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jim-hawkins-rigging-specialist.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Jim Hawkins.)
 > BATTLE STATIONS When you play this character, you may deal 1 damage to chosen character or location.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.36 foil

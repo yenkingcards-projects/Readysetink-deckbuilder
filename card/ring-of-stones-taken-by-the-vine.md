@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ring-of-stones-taken-by-the-vine.html
 
 Flavor text: The tendrils wrapped around each stone, searching for more ink.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.34 foil

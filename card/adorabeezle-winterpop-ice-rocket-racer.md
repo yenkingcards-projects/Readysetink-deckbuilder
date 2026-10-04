@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/adorabeezle-winterpop-ice-rocket-racer.
 
 Flavor text: “It'll take more than that to knock me out of the race!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.12 foil

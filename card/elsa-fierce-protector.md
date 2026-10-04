@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/elsa-fierce-protector.html
 
 Flavor text: “I have to protect my sister. You're not going anywhere!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $1.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.16 foil

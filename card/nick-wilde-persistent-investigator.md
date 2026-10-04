@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/nick-wilde-persistent-investigator.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Nick Wilde.)
 > CASE CLOSED During your turn, whenever one of your Detective characters banishes another character in a challenge, draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.38 regular, $2.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.41 regular, $2.25 foil

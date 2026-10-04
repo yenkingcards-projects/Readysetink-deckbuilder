@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/royal-guard-bovine-protector.html
 
 Flavor text: “Hey, I've been turned into a cow. Can I go home?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mulan-reflecting.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Mulan.)
 > HONOR TO THE ANCESTORS Whenever this character quests, you may reveal the top card of your deck. If it's a song card, you may play it for free. Otherwise, put it on the top of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.32 regular, $1.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.31 regular, $1.09 foil

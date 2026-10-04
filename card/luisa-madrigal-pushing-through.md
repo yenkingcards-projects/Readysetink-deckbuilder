@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/luisa-madrigal-pushing-through.html
 
 Flavor text: “One way...or another...I'm getting...all of you...up...this mountain!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $1.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $1.24 foil

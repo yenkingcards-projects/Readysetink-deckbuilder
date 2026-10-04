@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merlin-completing-his-research.html
 > Boost 2 ⬡ (Once during your turn, you may pay 2 ⬡ to put the top card of your deck facedown under this character.)
 > LEGACY OF LEARNING When this character is banished in a challenge, if he had a card under him, draw 2 cards.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.61 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.61 foil

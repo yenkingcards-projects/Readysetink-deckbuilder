@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/julieta-madrigal-caring-baker.html
 
 Flavor text: “Mi amor, your kind heart is the best gift I've ever received.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.23 foil

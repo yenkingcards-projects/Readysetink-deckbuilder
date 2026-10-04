@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/anna-diplomatic-queen.html
 > • Chosen character gets +2 ¤ this turn.
 > • Banish chosen damaged character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.89 regular, $3.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.87 regular, $3.35 foil

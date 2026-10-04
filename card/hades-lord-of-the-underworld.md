@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hades-lord-of-the-underworld.html
 
 Flavor text: “Production is up, costs are down, the rivers are full. Time to talk expansion.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $1.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $1.30 foil

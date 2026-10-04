@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/dr-hamsterviel-evil-observer.html
 
 Flavor text: “No one can hide from me. From here I can see everything!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.61 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/patch-playful-pup.html
 
 Flavor text: Sand sure was more fun than it looked!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.36 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kuzco-bored-royal.html
 
 Flavor text: “Wait'll they get a whiff of this...”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.19 foil

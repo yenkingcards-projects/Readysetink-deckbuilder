@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/belle-snowfield-strategist.html
 
 Flavor text: What the Beast didn't know was that her father had taught her how to throw a perfect snowball.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.11 regular, $2.81 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.06 regular, $2.80 foil

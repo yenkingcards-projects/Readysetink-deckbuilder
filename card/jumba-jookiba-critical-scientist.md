@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/jumba-jookiba-critical-scientist.html
 
 Flavor text: “This little thing has a much more rudimentary design than if I had created it. But if you were rushing development, then this makes sense.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.24 foil

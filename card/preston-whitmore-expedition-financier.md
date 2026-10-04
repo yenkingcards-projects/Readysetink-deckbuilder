@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/preston-whitmore-expedition-financier.h
 
 Flavor text: “I promised all of you I'd keep your secrets. And Preston Whitmore always keeps a promise.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.17 foil

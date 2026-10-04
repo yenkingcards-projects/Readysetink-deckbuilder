@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/morph-space-goo.html
 Flavor text: “You jiggle-headed blob of mischief!”
 —John Silver
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.40 regular, $1.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.40 regular, $1.41 foil

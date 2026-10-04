@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/helga-sinclair-vengeful-partner.html
 
 Flavor text: “You said we were in this together!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.23 foil

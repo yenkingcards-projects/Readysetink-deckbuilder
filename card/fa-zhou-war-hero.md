@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fa-zhou-war-hero.html
 
 Flavor text: “Every trap you disarm, every test you pass, honors us all. Well done.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.57 foil

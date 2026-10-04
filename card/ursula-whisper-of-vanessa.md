@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ursula-whisper-of-vanessa.html
 > Boost 1 ⬡ (Once during your turn, you may pay 1 ⬡ to put the top card of your deck facedown under this character.)
 > SLIPPERY SPELL While there's a card under this character, she gets +1 ◊ and gains Evasive. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.74 regular, $9.03 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.65 regular, $9.03 foil

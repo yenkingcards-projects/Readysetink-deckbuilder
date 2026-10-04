@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/moana-curious-explorer.html
 
 Flavor text: “I've never seen anything like this before! It's so dazzling, so beautiful. So...cold.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $8.12 regular, $15.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $8.32 regular, $15.41 foil

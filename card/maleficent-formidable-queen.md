@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/maleficent-formidable-queen.html
 > Shift 6 (You may pay 6 ⬡ to play this on top of one of your characters named Maleficent.)
 > LISTEN WELL, ALL OF YOU When you play this character, for each of your characters named Maleficent in play, return a chosen opposing character, item, or location with cost 3 or less to their player's hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.67 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.67 foil

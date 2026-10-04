@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/li-shang-valorous-general.html
 > Shift: Discard a character card (You may discard a character card to play this on top of one of your characters named Li Shang.)
 > LEAD THE CHARGE Your characters with 4 ¤ or more get +1 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.28 foil

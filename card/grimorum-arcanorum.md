@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/grimorum-arcanorum.html
 > CELERITAS Your characters named Demona gain Rush.
 > (They can challenge the turn they're played.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $0.70 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.70 foil

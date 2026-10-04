@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pain-underworld-imp.html
 Flavor text: “Get a move on! I'm a busy god, lots to do—meetings, curses, a little light scheming.”
 —Hades
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.27 foil

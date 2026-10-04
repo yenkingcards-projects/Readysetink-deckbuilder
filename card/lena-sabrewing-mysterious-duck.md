@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lena-sabrewing-mysterious-duck.html
 
 Flavor text: “This is a strange kind of magic. These ‘whispers’ seem independent, but they're still incomplete.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.23 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/coconut-basket.html
 
 Flavor text: The coconut is a versatile gift from the gods, used to make nearly everything—including baskets to carry more coconuts.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.28 foil

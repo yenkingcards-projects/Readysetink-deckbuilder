@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/baymaxs-charging-station.html
 Flavor text: “Battery at 100%. Ready for action!”
 —Hiro
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil

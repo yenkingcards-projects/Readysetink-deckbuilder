@@ -17,4 +17,4 @@ Flavor text: “There was something strange about that voice.
 Too beautiful to be real...”
 —Prince Phillip
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.24 foil

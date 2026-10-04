@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ariel-singing-mermaid.html
 
 Flavor text: “Watch and you'll see—some day I'll be part of your world!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.79 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.80 foil

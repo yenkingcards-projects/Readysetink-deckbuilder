@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/flounder-voice-of-reason.html
 
 Flavor text: “Excitement...adventure...danger lurking around every cor— AAAAAGGH!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.22 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/blue-smoke.html
 > CLOUD OF MYSTERY ⟳, 1 ⬡, Banish this item — Chosen character gains Ward until the start of your next turn.
 > (Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil

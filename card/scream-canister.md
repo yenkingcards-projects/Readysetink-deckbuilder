@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/scream-canister.html
 
 Flavor text: “‘Those screams are unstable, Randall.’ Pffft. Maybe for you, you big hairball.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.44 foil

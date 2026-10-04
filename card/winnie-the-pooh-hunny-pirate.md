@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/winnie-the-pooh-hunny-pirate.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > WE'RE PIRATES, YOU SEE Whenever this character quests, you pay 1 ⬡ less for the next Pirate character you play this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $1.77 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.81 foil

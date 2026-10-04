@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/vixey-expert-fisher.html
 
 Flavor text: “I've got my dinner. Where's yours, Tod?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.31 regular, $0.73 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $0.73 foil

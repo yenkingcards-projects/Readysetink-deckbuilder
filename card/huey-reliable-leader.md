@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/huey-reliable-leader.html
 
 Flavor text: “Forget the magical snakes. There's the way out of the trap!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular

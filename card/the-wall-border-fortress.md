@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-wall-border-fortress.html
 
 > PROTECT THE REALM While you have an exerted character here, your other locations can't be challenged.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.29 foil

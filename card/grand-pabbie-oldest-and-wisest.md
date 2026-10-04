@@ -20,4 +20,4 @@ Flavor text: When he talks, even the sky listens.
 - Q: If I have 3 damaged characters in play, including Grand Pabbie – Oldest and Wisest, and I play a card that removes damage from all my characters, how much lore do I gain from his Ancient Insight ability?
   A: 6 lore. Ancient Insight triggers for each character that has damage removed, even if those characters have damage removed simultaneously.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $0.72 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.72 foil

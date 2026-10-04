@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cinderella-resourceful-traveler.html
 
 Flavor text: No matter how difficult the journey, she always takes care of her friends.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.30 foil

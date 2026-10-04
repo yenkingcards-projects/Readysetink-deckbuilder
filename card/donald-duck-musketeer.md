@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/donald-duck-musketeer.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > STAY ALERT! During your turn, your Musketeer characters gain Evasive. (They can challenge characters with Evasive.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.58 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.58 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/della-duck-unstoppable-mom.html
 
 Flavor text: “I survived the moon. How tough could the flooded Inklands be?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.15 foil

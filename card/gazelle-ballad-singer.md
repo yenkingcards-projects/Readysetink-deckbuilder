@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gazelle-ballad-singer.html
 > Singer 7 (This character counts as cost 7 to sing songs.)
 > CROWD FAVORITE When you play this character, you may put a song card from your discard on the top of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.46 foil

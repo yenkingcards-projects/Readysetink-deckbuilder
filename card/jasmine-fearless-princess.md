@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/jasmine-fearless-princess.html
 > TAKE THE LEAP During your turn, this character gains Evasive. (They can challenge characters with Evasive.)
 > NOW'S MY CHANCE Choose and discard a card — This character gains Challenger +3 this turn. (They get +3 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.63 regular, $2.74 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.62 regular, $2.78 foil

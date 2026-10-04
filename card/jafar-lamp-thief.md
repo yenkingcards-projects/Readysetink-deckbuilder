@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/jafar-lamp-thief.html
 
 Flavor text: “I will rule as far as the eye can see.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

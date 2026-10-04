@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/stitch-alien-buccaneer.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Stitch.)
 > READY FOR ACTION When you play this character, if you used Shift to play him, you may put an action card from your discard on the top of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $0.74 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.74 foil

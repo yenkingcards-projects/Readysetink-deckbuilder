@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/raya-headstrong.html
 
 Flavor text: Two parts bravery, one part cleverness, and a whole lot of determination.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil

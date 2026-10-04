@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/madam-mim-fox.html
 > CHASING THE RABBIT When you play this character, banish her or return another chosen character of yours to your hand.
 > Rush (This character can challenge the turn they're played.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.31 regular, $4.86 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.35 regular, $4.86 foil

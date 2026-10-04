@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-compassionate-friend.html
 
 Flavor text: “Oh my! Is that part of the Illuminary? I have to go help!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil

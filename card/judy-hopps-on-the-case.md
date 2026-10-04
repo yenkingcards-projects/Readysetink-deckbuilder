@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/judy-hopps-on-the-case.html
 
 Flavor text: “More torn lorebook pages! Who could have done this?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.40 foil

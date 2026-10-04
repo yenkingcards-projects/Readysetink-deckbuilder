@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/alice-savvy-sailor.html
 > Ward (Opponents can't choose this character except to challenge.)
 > AHOY! Whenever this character quests, another chosen character of yours gets +1 ◊ and gains Ward until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.34 regular, $1.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $1.51 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/finders-keepers.html
 Flavor text: “Three wishes, comin' right up!”
 —Iago
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.38 foil

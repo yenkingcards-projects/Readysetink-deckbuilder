@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/friend-owl-cantankerous-neighbor.html
 
 Flavor text: “Sand? In the forest? I'll bet some magical miscreant's up to no good. Well, it's none of my concern. I'm going back to bed.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.11 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil

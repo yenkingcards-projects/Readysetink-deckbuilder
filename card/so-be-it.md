@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/so-be-it.html
 
 Flavor text: He's a patient merman—up to a point.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.10 foil

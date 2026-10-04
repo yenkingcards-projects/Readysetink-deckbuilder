@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-queen-fairest-of-all.html
 > Ward (Opponents can't choose this character except to challenge.)
 > REFLECTIONS OF VANITY For each other character named The Queen you have in play, this character gets +1 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.53 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.53 foil

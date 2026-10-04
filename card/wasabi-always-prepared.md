@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/wasabi-always-prepared.html
 
 Flavor text: “Okay, so the plan is ‘leave Wasabi to watch our backs while we steal the crown.’ Good to know.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.23 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mufasa-king-of-the-pride-lands.html
 
 Flavor text: “A king must care for all of the creatures in his kingdom, no matter their size.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.29 foil

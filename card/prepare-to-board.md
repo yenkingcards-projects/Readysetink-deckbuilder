@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/prepare-to-board.html
 Flavor text: “Bring me the treasure, bring me that ship, and bring me Peter Pan!”
 —Captain Hook
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil

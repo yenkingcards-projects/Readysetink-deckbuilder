@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/scar-created-by-the-vine.html
 > VICTOR'S REWARD During your turn, whenever one of your Floodborn characters banishes another character in a challenge, gain 1 lore.
 > FILL THE RANKS During an opponent's turn, whenever one of your Floodborn characters is banished, draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.48 regular, $2.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.45 regular, $2.19 foil

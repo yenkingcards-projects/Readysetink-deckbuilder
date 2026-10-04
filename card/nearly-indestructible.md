@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/nearly-indestructible.html
 Flavor text: “I designed this creature for to be unstoppable.”
 —Jumba Jookiba
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.25 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/magica-de-spell-cruel-sorceress.html
 
 > PLAYING WITH POWER During opponents' turns, if an effect would cause you to discard one or more cards from your hand, you don't discard.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.25 foil

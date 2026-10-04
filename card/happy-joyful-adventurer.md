@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/happy-joyful-adventurer.html
 
 Flavor text: “This vine looks mighty peculiar! You fellas think it'd be okay to touch it?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular

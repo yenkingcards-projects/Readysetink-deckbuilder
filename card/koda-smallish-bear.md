@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/koda-smallish-bear.html
 Flavor text: “And then they were like, ‘How'd you catch so many fish, Koda?’ And I said, ‘Well, you know me.
 I know how to catch fish.’ And they said...”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.31 foil

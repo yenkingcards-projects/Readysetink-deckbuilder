@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tinker-bell-fast-flier.html
 
 Flavor text: She zips through the waves without a drop of water touching her.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.36 foil

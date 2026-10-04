@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/anna-soothing-sister.html
 > WARM HEART Whenever this character quests, you may gain lore equal to the ◊ of a character card in your discard.
 > If you do, put that card on the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.69 regular, $4.35 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.62 regular, $4.38 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/snow-white-merry-as-the-morning.html
 > CLARION CALL Whenever this character quests, you may return chosen Seven Dwarfs character of yours to your hand to draw a card.
 > NEVER FORGOTTEN During an opponent's turn, when this character is banished in a challenge, return this card to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.62 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.63 regular

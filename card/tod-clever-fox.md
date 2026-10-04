@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tod-clever-fox.html
 
 Flavor text: “This would be a lot easier if these vines tasted better.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $4.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $4.42 foil

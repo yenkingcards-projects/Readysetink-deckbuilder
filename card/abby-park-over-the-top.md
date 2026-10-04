@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/abby-park-over-the-top.html
 
 Flavor text: Putting the “POW” in “power ballad”!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.26 foil

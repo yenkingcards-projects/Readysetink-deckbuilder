@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gaston-pure-paragon.html
 > A MAN AMONG MEN! For each damaged character you have in play, you pay 2 ⬡ less to play this character.
 > Rush (This character can challenge the turn they're played.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.34 foil

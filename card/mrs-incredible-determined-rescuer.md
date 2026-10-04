@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mrs-incredible-determined-rescuer.html
 > Shift 5 ⬡ PULL BACK Your characters gain Resist +1.
 > REGROUP During your turn, whenever another character is banished in a challenge, you may ready chosen Super character. If you do, they can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.71 regular, $2.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.75 regular, $2.18 foil

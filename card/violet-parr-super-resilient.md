@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/violet-parr-super-resilient.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > HEROIC SYNERGY Whenever you play this or another Hero character, you may draw a card, then choose and discard a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.19 regular, $3.93 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.26 regular, $3.79 foil

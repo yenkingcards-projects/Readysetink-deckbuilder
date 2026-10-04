@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/te-k-the-burning-one.html
 
 Flavor text: She burns for that which was stolen from her.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $1.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $1.08 foil

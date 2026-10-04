@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/wendy-darling-talented-sailor.html
 
 Flavor text: With Tink's upgrades in place, Wendy took them to the skies to find the missing mermaid.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.21 foil

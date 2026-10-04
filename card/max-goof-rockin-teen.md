@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/max-goof-rockin-teen.html
 > Singer 5 (This character counts as cost 5 to sing songs.)
 > I JUST WANNA STAY HOME This character can't move to locations.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.32 foil

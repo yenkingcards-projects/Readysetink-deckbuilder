@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/luisa-madrigal-no-pressure.html
 
 Flavor text: “Who needs a break? I'm fine! I got this!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.29 foil

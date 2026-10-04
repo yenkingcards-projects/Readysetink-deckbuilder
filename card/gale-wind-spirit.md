@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/gale-wind-spirit.html
 
 > RECURRING GUST When this character is banished in a challenge, return this card to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.12 foil

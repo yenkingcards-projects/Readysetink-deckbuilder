@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/baymax-upgraded-robot.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > ADVANCED SCANNER When you play this character, look at the top 4 cards of your deck. You may reveal a Floodborn character card and put it into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.46 foil

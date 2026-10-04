@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-enthusiastic-dancer.html
 
 Flavor text: He loves to share the spotlight with a star like Minnie.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.34 foil

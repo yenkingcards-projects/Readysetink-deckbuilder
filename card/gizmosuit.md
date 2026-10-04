@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/gizmosuit.html
 
 Flavor text: It stands in the Hall of Lorcana, waiting for someone to speak the secret words.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.15 foil

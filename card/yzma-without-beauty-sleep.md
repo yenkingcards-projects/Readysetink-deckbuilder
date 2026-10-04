@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/yzma-without-beauty-sleep.html
 Flavor text: Yzma: “Llamas! All I see when I close my eyes is llamas!”
 Kronk: “Weird. I just saw one in the flood. Poor little guy.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.26 foil

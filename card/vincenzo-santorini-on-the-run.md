@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/vincenzo-santorini-on-the-run.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > NEUTRALIZE Opposing items can't ready at the start of their players' turns.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.44 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/namaari-single-minded-rival.html
 > STRATEGIC EDGE When you play this character and at the start of your turn, you may draw a card, then choose and discard a card.
 > EXTREME FOCUS This character gets +1 ¤ for each card in your discard.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $3.46 regular, $11.07 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.52 regular, $10.98 foil

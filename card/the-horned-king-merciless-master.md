@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-horned-king-merciless-master.html
 
 > CAULDRON'S POWER While this character is exerted, you may play characters from your discard. If you do, they enter play exerted. (You pay all costs.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.57 regular, $2.93 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.55 regular, $2.93 foil

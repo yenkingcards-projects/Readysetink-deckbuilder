@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ghostly-tale.html
 
 Flavor text: Brom dwelled on every frightful detail, determined to put a good scare into his rival.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.19 foil

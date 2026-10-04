@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mauis-fish-hook.html
 > • Chosen character gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 > • Chosen character gets +3 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.43 foil

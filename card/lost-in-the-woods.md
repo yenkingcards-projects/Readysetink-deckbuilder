@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lost-in-the-woods.html
 
 Flavor text: I'm left behind, wondering if I should follow
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.33 foil

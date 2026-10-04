@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/bagheera-guardian-jaguar.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > YOU'VE GOT TO BE BRAVE During an opponent's turn, when this character is banished, deal 2 damage to each opposing character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.09 regular, $3.95 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.10 regular, $4.02 foil

@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/rudy-groove-disrupter.html
 Flavor text: “The Illuminary can't handle this much groove!
 We have to keep the noise down or it'll fall apart for sure!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.14 foil

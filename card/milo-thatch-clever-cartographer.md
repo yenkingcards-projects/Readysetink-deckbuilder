@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/milo-thatch-clever-cartographer.html
 
 Flavor text: “Believe me, studying gibberish really can take you places!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.13 foil

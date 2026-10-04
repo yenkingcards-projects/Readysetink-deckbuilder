@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pocahontas-finding-the-way.html
 Flavor text: “If you don't know the way, the spirits will show you.”
 —Pocahontas
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.23 foil

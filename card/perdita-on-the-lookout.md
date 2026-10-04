@@ -17,4 +17,4 @@ Flavor text: “Where did the forest go? Stay close, my darlings.
 Something's amiss here.”
 —Perdita
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.19 foil

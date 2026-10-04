@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/aladdin-intrepid-commander.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Aladdin.)
 > REMEMBER YOUR TRAINING When you play this character, your characters get +2 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.18 foil

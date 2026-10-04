@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-cavern-prospector.html
 > Shift 4 ⬡ (You may pay 4 ⬡ to play this on top of one of your characters named Scrooge McDuck.)
 > SPECULATION Whenever you play a character or location with Boost, you may put the top card of your deck facedown under them.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.56 foil

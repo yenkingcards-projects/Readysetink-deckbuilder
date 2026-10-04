@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/prince-john-fraidy-cat.html
 
 Flavor text: Even a frightened lion still has claws.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $1.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $1.18 foil

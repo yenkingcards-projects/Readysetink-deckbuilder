@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rajah-royal-protector.html
 
 Flavor text: As regal as his namesake and just as powerful.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.31 foil

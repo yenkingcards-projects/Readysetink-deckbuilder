@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/arthur-wart.html
 Flavor text: “That boy's got real spark. Lots of spirit. Throws himself heart and soul into everything he does.”
 —Merlin
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.22 foil

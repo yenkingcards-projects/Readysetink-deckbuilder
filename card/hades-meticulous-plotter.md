@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/hades-meticulous-plotter.html
 
 Flavor text: “This neat little scheme has Ursula's tentacles all over it. That sneaky sea witch...Wait! I can use this. She can keep those obnoxious Illumineers busy while I roll out my own plan.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.21 foil

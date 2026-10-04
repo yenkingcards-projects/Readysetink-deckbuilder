@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mulan-resourceful-recruit.html
 Flavor text: “Now remember, it's your first day of training, so listen to your teacher and no fightin', play nice with the other kids...”
 —Mushu
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.21 regular, $3.85 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.21 regular, $3.85 foil

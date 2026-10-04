@@ -19,4 +19,4 @@ Flavor text: The vision showed the city but not the source of its power.
 - Q: If I play an action as part of resolving Prophetic Vision, will my opponent lose 1 lore while I gain 1 lore?
   A: No. The lore gain and loss only occur if you don’t choose to play a revealed action card. If the revealed card isn’t an action card or you reveal an action card and choose not to play it, that’s when the lore gain and loss occur. Look What You’ve Done Look What You've Done
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.22 foil

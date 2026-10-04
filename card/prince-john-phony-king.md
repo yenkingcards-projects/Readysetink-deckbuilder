@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/prince-john-phony-king.html
 Flavor text: “Too late to be known as John the First, he's sure to be known as John the Worst!”
 —Sheriff of Nottingham
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.15 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/raya-unstoppable-force.html
 > Resist +2 (Damage dealt to this character is reduced by 2.)
 > YOU GAVE IT YOUR BEST During your turn, whenever this character banishes another character in a challenge, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.40 foil

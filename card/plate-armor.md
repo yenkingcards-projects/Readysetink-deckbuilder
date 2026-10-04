@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/plate-armor.html
 
 > WELL CRAFTED ⟳ — Chosen character gains Resist +2 until the start of your next turn. (Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.30 foil

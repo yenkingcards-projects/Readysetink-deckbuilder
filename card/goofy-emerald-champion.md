@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/goofy-emerald-champion.html
 > EVEN THE SCORE Whenever one of your other Emerald characters is challenged and banished, banish the challenging character.
 > PROVIDE COVER Your other Emerald characters gain Ward. (Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.34 regular, $0.84 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.33 regular, $0.84 foil

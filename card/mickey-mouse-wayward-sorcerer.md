@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-wayward-sorcerer.html
 
 Flavor text: He always goes for the clean sweep.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.53 regular, $6.65 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.52 regular, $6.64 foil

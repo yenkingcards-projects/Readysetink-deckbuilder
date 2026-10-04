@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mothers-necklace.html
 Flavor text: “It's more than a necklace—it's a connection to her past.”
 —Chief Powhatan
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.24 foil

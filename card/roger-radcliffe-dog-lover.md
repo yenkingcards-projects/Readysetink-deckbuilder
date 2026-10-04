@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/roger-radcliffe-dog-lover.html
 
 Flavor text: The best part of completing the obstacle course was finding their human at the end.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.21 foil

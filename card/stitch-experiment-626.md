@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/stitch-experiment-626.html
 > SO NAUGHTY When you play this character, each opponent puts the top card of their deck into their inkwell facedown and exerted.
 > STEALTH MODE At the start of your turn, if this card is in your discard, you may choose and discard a card with ◉ to play this character for free and he enters play exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.51 regular, $16.96 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.47 regular, $16.96 foil

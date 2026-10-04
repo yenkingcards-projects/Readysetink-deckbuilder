@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/beast-relentless.html
 
 > SECOND WIND Whenever an opposing character takes damage, you may ready this character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.01 regular, $5.47 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.99 regular, $5.47 foil

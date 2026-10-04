@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dont-let-the-frostbite-bite.html
 
 Flavor text: Let's call it a night
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.38 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/angus-mighty-horse.html
 
 > DAUNTLESS When you play this character, chosen character gains Alert this turn. (They can challenge as if they had Evasive.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.19 foil

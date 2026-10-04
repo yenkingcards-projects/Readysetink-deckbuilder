@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/all-is-found.html
 
 Flavor text: Where the north wind meets the sea There's a river full of memory
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $1.00 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.01 foil

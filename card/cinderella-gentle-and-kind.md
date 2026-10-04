@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cinderella-gentle-and-kind.html
 > Singer 5 (This character counts as cost 5 to sing songs.)
 > A WONDERFUL DREAM ⟳ — Remove up to 3 damage from chosen Princess character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.50 foil

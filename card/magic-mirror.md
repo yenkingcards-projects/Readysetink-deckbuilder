@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/magic-mirror.html
 
 Flavor text: “What wouldst thou know, my Queen?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.87 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.88 foil

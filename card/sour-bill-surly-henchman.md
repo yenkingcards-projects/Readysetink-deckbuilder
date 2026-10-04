@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sour-bill-surly-henchman.html
 
 Flavor text: “You want to go in there? Fine. If you do, you won't come back out.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.13 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tadashi-hamada-baymax-inventor.html
 
 Flavor text: “I'm not giving up on you. You don't understand this yet, but people need you.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.42 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cinderella-the-right-one.html
 
 Flavor text: “But, you see, I have the other slipper.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.58 foil

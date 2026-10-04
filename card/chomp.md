@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/chomp.html
 Flavor text: Mickey: “What IS that thing?!”
 Goofy: “It's hungry, that's what!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.19 foil

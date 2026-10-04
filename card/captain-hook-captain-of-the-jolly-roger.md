@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/captain-hook-captain-of-the-jolly-roger
 
 Flavor text: “A pretty sight, Mr. Smee. We'll pot 'em like sitting ducks.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $1.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $1.18 foil

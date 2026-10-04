@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/launchpad-sky-patrol.html
 Flavor text: Launchpad: “Don't worry, DW, I'll make sure we crash there safely!”
 Darkwing Duck: “That's what I'm afraid of.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.25 foil

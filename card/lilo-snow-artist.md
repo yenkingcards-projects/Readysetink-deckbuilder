@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lilo-snow-artist.html
 
 Flavor text: “A snow Stitch is like a snowman, but even hungrier.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.38 foil

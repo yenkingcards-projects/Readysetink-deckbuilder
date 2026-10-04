@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/heihei-expanded-consciousness.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > CLEAR YOUR MIND When you play this character, put all cards from your hand into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.48 foil

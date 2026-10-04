@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merlin-rabbit.html
 
 Flavor text: It was turning out to be a bad hare day.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.25 regular, $2.82 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $2.82 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/donald-duck-fred-honeywell.html
 > SPIRIT OF GIVING Whenever you use the Boost ability of a character, you may put the top card of your deck under them facedown.
 > WELL WISHES During opponents' turns, whenever one of your other characters is banished, you may draw a card for each card that was under them.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.49 regular, $5.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.47 regular, $5.40 foil

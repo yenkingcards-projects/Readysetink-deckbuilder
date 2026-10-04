@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/hypnotic-strength.html
 
 Flavor text: Suddenly, Basil felt a strong desire to find the broken crown.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.33 foil

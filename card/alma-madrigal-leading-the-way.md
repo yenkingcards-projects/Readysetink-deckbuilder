@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/alma-madrigal-leading-the-way.html
 
 Flavor text: “In our darkest moment, we were given a miracle.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.34 foil

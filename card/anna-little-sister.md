@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/anna-little-sister.html
 
 Flavor text: Even in the deep forest, Anna could see the vine poking above the treetops.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.29 foil

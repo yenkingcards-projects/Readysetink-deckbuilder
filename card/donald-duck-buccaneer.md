@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/donald-duck-buccaneer.html
 
 Flavor text: Nobody stands a chance against the daring duck of the high seas!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.95 regular, $3.98 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.94 regular, $3.98 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/calhoun-battle-tested.html
 
 Flavor text: “Preparation and luck—you can only rely on one to win a fight!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.16 foil

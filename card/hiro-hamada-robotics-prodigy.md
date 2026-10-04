@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hiro-hamada-robotics-prodigy.html
 
 Flavor text: “A couple more tweaks and I've just about...got it!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.25 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/slightly-lost-boy.html
 
 Flavor text: “Pirates sure are easy to trick!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.15 foil

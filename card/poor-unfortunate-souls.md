@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/poor-unfortunate-souls.html
 
 Flavor text: In pain, in need
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.14 foil

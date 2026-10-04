@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pluto-rescue-dog.html
 
 Flavor text: When you need help, his is the first face you want to see.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-troubadour-musical-narrator.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > Singer 4 (This character counts as cost 4 to sing songs.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $1.92 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $1.92 foil

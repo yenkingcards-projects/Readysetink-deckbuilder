@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-inspirational-warrior.html
 
 Flavor text: He leads the way with a steadfast heart.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.72 regular, $24.81 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.75 regular, $24.81 foil

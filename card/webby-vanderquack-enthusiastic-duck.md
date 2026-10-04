@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/webby-vanderquack-enthusiastic-duck.htm
 
 Flavor text: “Finding lore is a lot easier when you have a grappling hook!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.18 foil

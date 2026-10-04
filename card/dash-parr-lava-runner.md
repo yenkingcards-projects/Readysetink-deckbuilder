@@ -22,4 +22,4 @@ Flavor text: “Whoa! A hidden place inside the mountain!”
 - Q: Can Dash sing songs the turn he’s played?
   A: No. He can’t {E} the turn he’s played for singing, costs, or other abilities. He can only {E} the turn he’s played to challenge because of Rush or to quest because of his ability Record Time. disneylorcana.com DunBroch Family Tapestry DunBroch Family Tapestry
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.44 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.44 regular, $0.76 foil

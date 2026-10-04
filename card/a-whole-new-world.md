@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/a-whole-new-world.html
 
 Flavor text: Shining, shimmering, splendid...
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.91 regular, $11.64 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.91 regular, $11.64 foil

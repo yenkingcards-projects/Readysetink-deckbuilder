@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/wrong-lever.html
 > • Return chosen character to their player's hand.
 > • Put a card named Pull the Lever! from your discard on the bottom of your deck to put chosen character on the bottom of their player's deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.41 regular, $1.61 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.40 regular, $1.61 foil

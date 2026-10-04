@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/megara-captivating-cynic.html
 
 Flavor text: With love, there's always a catch.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

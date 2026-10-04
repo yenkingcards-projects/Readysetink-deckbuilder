@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/anna-heir-to-arendelle.html
 
 Flavor text: “Two sisters, one mind.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.43 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/spooky-sight.html
 Flavor text: “We've got to get out of here!”
 —Mickey Mouse
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.31 regular, $4.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $4.77 foil

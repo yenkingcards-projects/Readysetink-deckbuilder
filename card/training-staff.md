@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/training-staff.html
 Flavor text: “Do not sit idle while others quest for glory.”
 —Li Shang
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.11 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.11 foil

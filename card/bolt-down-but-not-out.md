@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/bolt-down-but-not-out.html
 Flavor text: “The only power you need is the power of AWESOMENESS!”
 —Rhino
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $1.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.27 foil

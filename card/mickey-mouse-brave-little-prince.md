@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-brave-little-prince.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > CROWNING ACHIEVEMENT While this character has a card under him, he gets +3 ¤, +3 ⛉, and +3 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $9.67 regular, $50.58 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $9.61 regular, $52.64 foil

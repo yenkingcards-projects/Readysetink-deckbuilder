@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-frozen-vine-monstrous-plant.html
 
 > PERSISTENT PROBLEM When this location is banished, if there was an exerted character here, return this card from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.22 foil

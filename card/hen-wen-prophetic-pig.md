@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/hen-wen-prophetic-pig.html
 Flavor text: “She's a special pig, Taran.”
 —Dallben
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.16 foil

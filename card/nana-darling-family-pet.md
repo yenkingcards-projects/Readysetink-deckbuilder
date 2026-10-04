@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/nana-darling-family-pet.html
 
 Flavor text: Children are a dog's best friend.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.20 foil

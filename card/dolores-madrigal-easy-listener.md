@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/dolores-madrigal-easy-listener.html
 
 > MAGICAL INFORMANT When you play this character, if an opponent has an exerted character in play, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.20 foil

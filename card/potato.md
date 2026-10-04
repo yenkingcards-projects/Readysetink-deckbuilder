@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/potato.html
 
 Flavor text: It doesn't have much flavor.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.44 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-queen-disguised-peddler.html
 
 Flavor text: “This is no ordinary apple...”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $0.67 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.67 foil

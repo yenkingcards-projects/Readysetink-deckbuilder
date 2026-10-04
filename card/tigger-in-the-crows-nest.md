@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tigger-in-the-crows-nest.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > SWASH YOUR BUCKLES Whenever you play an action, this character gets +1 ¤ and +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.39 foil

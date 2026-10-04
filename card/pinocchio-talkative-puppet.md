@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pinocchio-talkative-puppet.html
 Flavor text: “A lie keeps growing and growing until it's as plain as the nose on your face.”
 —Blue Fairy
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.32 foil

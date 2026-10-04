@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/dig-a-little-deeper.html
 > Sing Together 8 (Any number of your or your teammates' characters with total cost 8 or more may ⟳ to sing this song for free.)
 > Look at the top 7 cards of your deck. Put 2 into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.26 foil

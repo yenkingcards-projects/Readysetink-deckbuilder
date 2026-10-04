@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sina-vigilant-parent.html
 
 Flavor text: Sometimes, people just need to know there's someone watching over them.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.15 foil

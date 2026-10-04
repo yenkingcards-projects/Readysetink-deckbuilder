@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beasts-castle-winter-gardens.html
 
 Flavor text: While the flowers slept, something else began to bloom.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.22 foil

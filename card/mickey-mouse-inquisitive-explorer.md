@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-inquisitive-explorer.html
 Flavor text: “Oh boy, I knew climbing this vine would be worth it.
 There's so much to see up here!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.22 foil

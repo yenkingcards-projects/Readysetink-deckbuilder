@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jiminy-cricket-level-headed-and-wise.ht
 > Evasive (Only characters with Evasive can challenge this character.)
 > ENOUGH'S ENOUGH While this character is exerted, opposing characters with Rush enter play exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.61 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.60 foil

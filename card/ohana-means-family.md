@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ohana-means-family.html
 Flavor text: “Family means nobody is left behind.”
 —Lilo
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $17.54 regular, $28.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $18.52 regular, $28.22 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-friendly-face.html
 
 Flavor text: “Come on in—there's lots to explore.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $2.67 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $2.67 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/russell-junior-wilderness-explorer.html
 
 Flavor text: “An Explorer is a friend to all, be it plants or fish or tiny mole.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil

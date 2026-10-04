@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/violet-parr-force-field-practice.html
 
 Flavor text: “Mom? I'm sorry to call you, but um, I think there's a pretty big problem outside the house.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.86 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.86 foil

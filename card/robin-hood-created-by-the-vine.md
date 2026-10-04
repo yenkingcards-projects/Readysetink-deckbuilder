@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/robin-hood-created-by-the-vine.html
 
 Flavor text: The vine created defenders to keep silent watch on the surrounding lands.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular

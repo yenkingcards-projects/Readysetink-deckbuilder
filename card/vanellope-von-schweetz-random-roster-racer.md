@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/vanellope-von-schweetz-random-roster-ra
 > Rush (This character can challenge the turn they're played.)
 > PIXLEXIA When you play this character, she gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.63 foil

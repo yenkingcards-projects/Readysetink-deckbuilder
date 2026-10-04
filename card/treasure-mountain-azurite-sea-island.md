@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/treasure-mountain-azurite-sea-island.ht
 
 > SECRET WEAPON At the start of your turn, deal damage to chosen character or location equal to the number of characters here.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.53 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.53 foil

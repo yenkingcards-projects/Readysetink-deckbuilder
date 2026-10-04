@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/alma-madrigal-family-matriarch.html
 Flavor text: “Let's be clear, Abuela runs this show.”
 —Mirabel
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.42 foil

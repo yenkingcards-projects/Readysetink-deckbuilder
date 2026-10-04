@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/calhoun-courageous-rescuer.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Calhoun.)
 > BACK TO START POSITIONS! Whenever this character challenges another character, you may return a Racer character card from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.68 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.67 foil

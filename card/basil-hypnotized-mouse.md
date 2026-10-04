@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/basil-hypnotized-mouse.html
 
 Flavor text: “Hmm. Footprints from a large...owl? With droplets of water? Clearly some avian menace has crossed the Azurite Sea and absconded with the crown!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil

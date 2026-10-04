@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/launchpad-exceptional-pilot.html
 
 Flavor text: “You can't spell ‘crash-landed’ without ‘landed’!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.19 foil

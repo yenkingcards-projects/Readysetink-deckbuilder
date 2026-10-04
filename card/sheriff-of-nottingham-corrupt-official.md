@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sheriff-of-nottingham-corrupt-official.
 
 Flavor text: The thirteenth Rule of Villainy: Take everything you can, but do it with a smile.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.36 foil

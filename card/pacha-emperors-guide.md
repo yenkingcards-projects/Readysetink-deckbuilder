@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/pacha-emperors-guide.html
 > HELPFUL SUPPLIES At the start of your turn, if you have an item in play, gain 1 lore.
 > PERFECT DIRECTIONS At the start of your turn, if you have a location in play, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil

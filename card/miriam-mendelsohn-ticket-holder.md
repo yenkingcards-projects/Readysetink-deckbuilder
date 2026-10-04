@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/miriam-mendelsohn-ticket-holder.html
 
 Flavor text: “Most things are, like, whatever. But my friends are, like, yeah!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.14 foil

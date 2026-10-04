@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/genie-hard-to-grasp.html
 
 Flavor text: “Nice try, stinkweed, but there's only one thing that can contain me.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.37 foil

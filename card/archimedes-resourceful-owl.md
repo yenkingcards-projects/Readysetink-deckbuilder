@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/archimedes-resourceful-owl.html
 > YOU DON'T NEED THAT When you play this character, you may banish chosen item.
 > NOW, THAT'S NOT BAD During your turn, whenever an item is banished, you may draw a card, then choose and discard a card.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.44 foil

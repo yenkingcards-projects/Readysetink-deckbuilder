@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cri-kee-lucky-cricket.html
 
 Flavor text: Everyone feels better just knowing he's around.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $1.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $1.31 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-queen-conceited-ruler.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > ROYAL SUMMONS At the start of your turn, you may choose and discard a Princess or Queen character card to return a character card from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.25 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.54 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-daring-defender.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > TRUE VALOR This character gets +1 ¤ for each 1 damage on her.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $0.77 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $0.77 foil

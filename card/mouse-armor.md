@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/mouse-armor.html
 
 Flavor text: Built by the tiniest of hands for the bravest of hearts.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.25 foil

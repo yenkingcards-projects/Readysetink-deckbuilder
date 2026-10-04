@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/white-agony-plains-golden-lagoon.html
 
 > PURE LIQUID GOLD This location gets +1 ◊ for each character here.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.56 foil

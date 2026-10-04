@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/get-to-safety.html
 
 Flavor text: Run scared if you must—but whatever you do, RUN!
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.27 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.63 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/cleansing-rainwater.html
 
 Flavor text: Rainwater lands as stone melts and dragons fly again.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.18 foil

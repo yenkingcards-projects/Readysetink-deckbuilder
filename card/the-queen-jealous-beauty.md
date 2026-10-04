@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-queen-jealous-beauty.html
 
 > NO ORDINARY APPLE ⟳ — Choose 3 cards from chosen opponent's discard and put them on the bottom of their deck to gain 3 lore. If any Princess cards were moved this way, gain 4 lore instead.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.14 regular, $2.85 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.13 regular, $2.84 foil

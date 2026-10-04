@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/liquidator-iced-over.html
 > UNDERDOG If this is your first turn and you're not the first player, you pay 1 ⬡ less to play this character.
 > Reckless (This character can't quest and must challenge each turn if able.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $2.94 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $2.94 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/piglet-cocoa-maker.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Piglet.)
 > SPECIAL RECIPE At the end of your turn, remove up to 2 damage from each of your characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.22 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.49 foil

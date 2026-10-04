@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/zipper-astute-decoy.html
 > Ward (Opponents can't choose this character except to challenge.)
 > RUN INTERFERENCE During your turn, whenever a card is put into your inkwell, another chosen character gains Resist +1 until the start of your next turn. (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.31 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/jiminy-cricket-pinocchios-conscience.ht
 
 Flavor text: “Say, that's pretty swell.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.14 foil

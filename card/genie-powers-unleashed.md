@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/genie-powers-unleashed.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > PHENOMENAL COSMIC POWER! Whenever this character quests, you may play an action with cost 5 or less for free.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $1.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $1.15 foil

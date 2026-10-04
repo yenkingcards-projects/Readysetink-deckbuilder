@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/donald-duck-vineling-rider.html
 Flavor text: Mickey Mouse: “I wouldn't do that, Donald!”
 Donald Duck: “That's why I have more fun!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.02 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.20 foil

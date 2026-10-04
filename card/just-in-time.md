@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/just-in-time.html
 
 Flavor text: The best heroes always arrive at the perfect moment— whether they know it or not.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.32 regular, $1.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $1.16 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/simba-future-king.html
 
 Flavor text: “I'm gonna be the best king the Pride Lands have ever seen!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.47 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.48 foil

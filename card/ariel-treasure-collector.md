@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ariel-treasure-collector.html
 > Ward (Opponents can't choose this character except to challenge.)
 > THE GIRL WHO HAS EVERYTHING While you have more items in play than each opponent, this character gets +2 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.24 regular, $1.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $1.16 foil

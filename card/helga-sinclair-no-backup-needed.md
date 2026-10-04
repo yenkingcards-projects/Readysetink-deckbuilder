@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/helga-sinclair-no-backup-needed.html
 
 Flavor text: “Once again, I find myself cleaning up someone else's mess.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.17 foil

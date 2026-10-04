@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/what-did-you-call-me.html
 Flavor text: “No one can have a higher opinion of you than I have, and I think you're a slimy, contemptible sewer rat!”
 —Basil
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.10 foil

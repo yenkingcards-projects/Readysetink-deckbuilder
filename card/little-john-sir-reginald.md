@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/little-john-sir-reginald.html
 > (Damage dealt to them is reduced by 2.)
 > • Deal 2 damage to chosen Villain character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.49 foil

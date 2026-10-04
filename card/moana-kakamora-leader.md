@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/moana-kakamora-leader.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Moana.)
 > GATHERING FORCES When you play this character, you may move any number of your characters to the same location for free. Gain 1 lore for each character you moved.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.94 foil

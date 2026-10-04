@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pleakley-scientific-expert.html
 
 Flavor text: “As the duly appointed representative for the Galactic Council, I volunteer for this assignment!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.57 foil

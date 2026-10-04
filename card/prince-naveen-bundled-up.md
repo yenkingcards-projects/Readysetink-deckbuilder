@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/prince-naveen-bundled-up.html
 Flavor text: “Achidanza! I've never been this cold in my life.
 It's so...invigorating!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.10 foil

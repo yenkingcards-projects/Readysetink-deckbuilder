@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/judy-hopps-lead-detective.html
 > (They can challenge as if they had Evasive.
 > Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.55 regular, $1.70 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.58 regular, $1.71 foil

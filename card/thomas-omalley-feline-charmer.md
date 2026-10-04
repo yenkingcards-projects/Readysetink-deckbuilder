@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/thomas-omalley-feline-charmer.html
 
 Flavor text: There's nothing he can't talk his way out of.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.10 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.43 foil

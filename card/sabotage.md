@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/sabotage.html
 
 Flavor text: “Ha! That worked even better than last time.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.24 foil

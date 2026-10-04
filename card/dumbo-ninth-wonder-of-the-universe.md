@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/dumbo-ninth-wonder-of-the-universe.html
 > BREAKING RECORDS ⟳, 1 ⬡ — Draw a card and gain 1 lore.
 > MAKING HISTORY Your other characters with Evasive gain “⟳, 1 ⬡ — Draw a card and gain 1 lore.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $38.53 regular, $64.47 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $38.53 regular, $64.65 foil

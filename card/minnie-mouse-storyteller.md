@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-storyteller.html
 > GATHER AROUND Whenever you play a character, this character gets +1 ◊ this turn.
 > JUST ONE MORE Whenever this character quests, chosen opposing character loses ¤ equal to this character's ◊ until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.00 regular, $10.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.94 regular, $10.46 foil

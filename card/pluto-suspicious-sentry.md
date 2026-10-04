@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pluto-suspicious-sentry.html
 
 Flavor text: He didn't like the smell of that vine one bit.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.22 foil

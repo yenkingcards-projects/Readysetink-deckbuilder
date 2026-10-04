@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fa-zhou-honorable-warrior.html
 
 Flavor text: It had been his duty and his honor to serve the Empire.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil

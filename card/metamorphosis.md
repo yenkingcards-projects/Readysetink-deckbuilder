@@ -20,4 +20,4 @@ Flavor text: “The vine is full of flood ink. You won't believe what it can do 
 - Q: Does a character need to have the Shift keyword in order to be played by Metamorphosis?
   A: Yes. This also means that you need to have a character in play that you can shift the character on top of. disneylorcana.com
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.15 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.34 foil

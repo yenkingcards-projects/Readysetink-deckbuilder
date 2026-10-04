@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/paradise-falls-exotic-destination.html
 
 Flavor text: A land lost in time.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.84 regular, $4.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.66 regular, $4.56 foil

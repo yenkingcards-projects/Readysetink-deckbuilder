@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-queen-mirror-seeker.html
 
 Flavor text: She has only one question, and she'd better like the answer.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.22 foil

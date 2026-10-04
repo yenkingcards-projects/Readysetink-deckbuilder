@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beast-hardheaded.html
 
 Flavor text: “She'll never see me as anything...but a monster.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.54 foil

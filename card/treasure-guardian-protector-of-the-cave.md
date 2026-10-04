@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/treasure-guardian-protector-of-the-cave
 
 Flavor text: “Only one may enter here.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.28 foil

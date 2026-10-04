@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/dragon-fire.html
 
 Flavor text: Rare is the hero who can withstand a dragon's wrath.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.60 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.60 foil

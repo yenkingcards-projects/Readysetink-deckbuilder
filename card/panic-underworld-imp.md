@@ -17,4 +17,4 @@ Flavor text: “Who says it's hard to find good help these days?
 Oh, yeah...ME!”
 —Hades
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.20 foil

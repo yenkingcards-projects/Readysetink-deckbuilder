@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/meridas-bow.html
 > EASY SHOT When you play this item, deal 1 damage to chosen character.
 > FINAL ARROW 1 ⬡, Banish this item — Deal 1 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/max-goof-rebellious-teen.html
 
 Flavor text: “Fast board, cool tunes—what more could you want?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $4.54 regular, $6.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $4.60 regular, $5.35 foil

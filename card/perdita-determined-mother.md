@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/perdita-determined-mother.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Perdita.)
 > QUICK, EVERYONE HIDE When you play this character, you may put all Puppy character cards from your discard into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.29 regular, $1.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $1.09 foil

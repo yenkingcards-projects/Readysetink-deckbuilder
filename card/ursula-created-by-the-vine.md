@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ursula-created-by-the-vine.html
 
 Flavor text: The vine-created copy of Vanessa was as dangerous as it was beautiful.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.56 foil

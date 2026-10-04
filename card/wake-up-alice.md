@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wake-up-alice.html
 Flavor text: “Alice! Will you kindly pay attention and recite your lesson?”
 —Alice's sister
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.26 foil

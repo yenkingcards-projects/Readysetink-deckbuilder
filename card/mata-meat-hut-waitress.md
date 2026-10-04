@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mata-meat-hut-waitress.html
 
 Flavor text: “Three pork combos, extra bacon on the side, two chili cheese samplers, a basket of liver and onion rings, a catch of the day, and a steak cut in the shape of a trout.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.02 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.16 foil

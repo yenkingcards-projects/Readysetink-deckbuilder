@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/queen-of-hearts-losing-her-temper.html
 
 Flavor text: Something told the Illumineers she'd had enough of the obstacles.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.41 foil

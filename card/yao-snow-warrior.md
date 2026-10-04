@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/yao-snow-warrior.html
 
 Flavor text: In his mind, he was “Snow-General Yao,” surveying his frozen lands from atop his icy fortress.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/rapunzel-gifted-with-healing.html
 
 > GLEAM AND GLOW When you play this character, remove up to 3 damage from one of your characters. Draw a card for each 1 damage removed this way.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $13.38 regular, $42.68 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $13.06 regular, $42.68 foil

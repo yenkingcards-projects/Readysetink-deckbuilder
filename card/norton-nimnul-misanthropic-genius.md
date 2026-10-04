@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/norton-nimnul-misanthropic-genius.html
 
 Flavor text: “Another successful test! This brilliant devitalizer ray technology will be my finest invention yet!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.02 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.21 foil

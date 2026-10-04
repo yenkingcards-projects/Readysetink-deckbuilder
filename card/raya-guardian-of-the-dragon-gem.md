@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/raya-guardian-of-the-dragon-gem.html
 
 Flavor text: “There are too many of them for me. But not for us.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.14 foil

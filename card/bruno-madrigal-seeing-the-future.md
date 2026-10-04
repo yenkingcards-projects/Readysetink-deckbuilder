@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/bruno-madrigal-seeing-the-future.html
 
 Flavor text: “It's so hard to make out...I think it's something buried deep underground.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.15 foil

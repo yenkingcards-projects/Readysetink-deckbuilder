@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/lord-macintosh-wiry-and-high-strung.htm
 Flavor text: “Clan Macintosh fears no flower, vine, or tree.
 We dinnae mess with shrubs, though.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.30 foil

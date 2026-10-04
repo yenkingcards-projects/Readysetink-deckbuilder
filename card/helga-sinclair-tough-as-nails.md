@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/helga-sinclair-tough-as-nails.html
 > Challenger +3 (While challenging, this character gets +3 ¤.)
 > QUICK REFLEXES During your turn, this character gains Evasive. (They can challenge characters with Evasive.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.45 foil

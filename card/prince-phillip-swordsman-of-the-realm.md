@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/prince-phillip-swordsman-of-the-realm.h
 > SLAYER OF DRAGONS When you play this character, banish chosen opposing Dragon character.
 > PRESSING THE ADVANTAGE Whenever he challenges a damaged character, ready this character after the challenge.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.49 foil

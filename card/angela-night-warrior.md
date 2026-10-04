@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/angela-night-warrior.html
 > SHADOW POWER When you play this character, you may give chosen character Challenger +2 and Resist +2 until the start of your next turn. (They get +2 ¤ while challenging. Damage dealt to them is reduced by 2.)
 > ETERNAL NIGHT Your Gargoyle characters lose the Stone by Day ability.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.98 regular, $8.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.92 regular, $8.13 foil

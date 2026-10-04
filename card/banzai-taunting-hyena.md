@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/banzai-taunting-hyena.html
 
 Flavor text: “What do we got here, a little snack pack?”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.20 foil

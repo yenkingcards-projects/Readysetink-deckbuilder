@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/institute-of-technology-prestigious-uni
 > WELCOME TO THE LAB Inventor characters get +1 ⛉ while here.
 > PUSH THE BOUNDARIES At the start of your turn, if you have a character here, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.19 foil

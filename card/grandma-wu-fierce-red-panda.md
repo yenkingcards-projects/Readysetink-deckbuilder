@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/grandma-wu-fierce-red-panda.html
 > Temporary Shift 4 ⬡ (You may pay 4 ⬡ to play this on top of one of your characters named Grandma Wu. At the end of your turn, remove all damage from this character and return only this card to your hand.)
 > INTIMIDATING CHARGE Whenever this character challenges another character, you gain 2 lore and each opponent loses 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.39 foil

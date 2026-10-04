@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-family-gatherer.html
 
 Flavor text: “There's nothing we can't accomplish together!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.71 regular, $1.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.72 regular, $1.21 foil

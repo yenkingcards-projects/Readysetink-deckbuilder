@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/lefou-opportunistic-flunky.html
 
 > I LEARNED FROM THE BEST During your turn, you may play this character for free if an opposing character was banished in a challenge this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.36 foil

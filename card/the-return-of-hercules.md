@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-return-of-hercules.html
 Flavor text: “Congratulations, Wonderboy. You'll make one heck of a god.”
 —Megara
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.02 regular, $4.24 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.99 regular, $4.27 foil

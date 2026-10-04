@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-sword-of-hercules.html
 > MIGHTY HIT When you play this item, banish chosen opposing Deity character.
 > HAND-TO-HAND During your turn, whenever one of your characters banishes another character in a challenge, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.82 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.79 foil

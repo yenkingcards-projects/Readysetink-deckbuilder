@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-wide-eyed-diver.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > UNDERSEA ADVENTURE Whenever you play a second action in a turn, this character gets +2 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.45 foil

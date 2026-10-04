@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pascal-inquisitive-pet.html
 
 Flavor text: If you want to find something hidden, get someone who's an expert at hiding.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.18 foil

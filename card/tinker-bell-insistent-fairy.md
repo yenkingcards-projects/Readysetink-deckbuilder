@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tinker-bell-insistent-fairy.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > PAY ATTENTION Whenever you play a character with 5 ¤ or more, you may exert them to gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.12 regular, $4.87 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.10 regular, $4.90 foil

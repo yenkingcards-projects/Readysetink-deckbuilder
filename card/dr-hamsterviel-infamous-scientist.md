@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/dr-hamsterviel-infamous-scientist.html
 > CONTROLLED VARIABLES For each Alien character card in your discard, you pay 1 ⬡ less to play this character.
 > AWESTRUCK When you play this character, chosen opposing character can't challenge during their next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.37 foil

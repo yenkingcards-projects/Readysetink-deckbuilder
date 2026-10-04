@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/judy-hopps-resourceful-rabbit.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > NEED SOME HELP? At the end of your turn, you may ready another chosen character of yours.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.56 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.56 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wendy-darling-courageous-captain.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > LOOK LIVELY, CREW! While you have another Pirate character in play, this character gets +1 ¤ and +1 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.59 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.59 foil

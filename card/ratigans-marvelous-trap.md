@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ratigans-marvelous-trap.html
 
 Flavor text: Simple in purpose, elaborate in execution—just like Ratigan.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.51 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.50 foil

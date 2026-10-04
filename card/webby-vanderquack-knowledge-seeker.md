@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/webby-vanderquack-knowledge-seeker.html
 
 Flavor text: “If I'm correct, and I know I am, these are the plants from chapter 6 of Hana's Herborium.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.28 foil

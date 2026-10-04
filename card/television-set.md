@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/television-set.html
 
 Flavor text: Thunderbolt's show was one thing all the puppies could agree on.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.21 foil

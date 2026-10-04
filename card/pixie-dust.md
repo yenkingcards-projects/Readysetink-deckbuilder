@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/pixie-dust.html
 
 > FAITH AND TRUST ⟳, 2 ⬡ — Chosen character gains Challenger +2 and Evasive until the start of your next turn. (While challenging, they get +2 ¤. Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil

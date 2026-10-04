@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gaston-arrogant-showoff.html
 
 Flavor text: “Take this magical stone. You'll need it to keep up with me!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil

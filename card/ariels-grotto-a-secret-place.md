@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/ariels-grotto-a-secret-place.html
 
 > TREASURE TROVE While you have 3 or more items in play, this location gets +2 ◊.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.14 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.35 foil

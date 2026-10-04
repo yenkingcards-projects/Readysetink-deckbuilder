@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/the-black-cauldron.html
 - Q: Can I look at cards put under The Black Cauldron with its The Cauldron Calls ability?
   A: Yes. Any player can look at faceup cards under any card at any time.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.30 regular, $15.94 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.46 regular, $16.23 foil

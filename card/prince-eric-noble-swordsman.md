@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/prince-eric-noble-swordsman.html
 
 Flavor text: Of all the items in Ariel's trove, something about this particular sword called to him. He knew it was meant to be his.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil

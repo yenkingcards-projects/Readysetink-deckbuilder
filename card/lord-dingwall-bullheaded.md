@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lord-dingwall-bullheaded.html
 
 Flavor text: “Ach, look at the size o' that flower! Let's clear that beastie out before it causes any trouble.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.20 foil

@@ -22,4 +22,4 @@ Source: https://www.readysetink.com/card/sulley-boo-scare-buddies.html
 - Q: If I use Combo Shift to play Sulley & Boo on top of a dry Sulley and a drying Boo, what happens? What if the Sulley they’re shifting onto is ready but the Boo is exerted?
   A: If you shift on top of a dry character and a drying character, the shifted character will be drying. If you shift them on top of a ready character and an exerted character, they’ll be exerted. Winnie the Pooh – Hunny Archmage Winnie the Pooh – Hunny Archmage
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.37 regular, $1.74 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.44 regular, $1.82 foil

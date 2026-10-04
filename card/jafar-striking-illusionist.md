@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/jafar-striking-illusionist.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > POWER BEYOND MEASURE During your turn, while this character is exerted, whenever you draw a card, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.09 regular, $2.99 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.14 regular, $2.99 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/chernabogs-followers-creatures-of-evil.
 
 Flavor text: Let chaos reign.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.18 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.55 foil

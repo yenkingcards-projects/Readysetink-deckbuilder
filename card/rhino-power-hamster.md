@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rhino-power-hamster.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Rhino.)
 > EPIC BALL OF AWESOME While this character has no damage, he gains Resist +2. (Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.28 regular, $3.97 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $3.77 foil

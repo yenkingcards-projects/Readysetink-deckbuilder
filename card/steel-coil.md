@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/steel-coil.html
 
 Flavor text: As the coil clicked onto Shanzay's arm, she felt a strengthened sense of clarity.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/darkwing-duck-cool-under-pressure.html
 > TAKE THAT! During your turn, whenever an item is banished, you may pay 1 ⬡ to deal 2 damage to chosen character.
 > EVILDOERS BEWARE! This character can challenge ready Villain characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $4.83 regular, $6.63 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $4.71 regular, $6.58 foil

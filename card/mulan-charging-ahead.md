@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mulan-charging-ahead.html
 > BURST OF SPEED During your turn, this character gains Evasive. (They can challenge characters with Evasive.)
 > LONG RANGE This character can challenge ready characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $0.47 foil

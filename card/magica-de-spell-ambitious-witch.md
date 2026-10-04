@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/magica-de-spell-ambitious-witch.html
 
 Flavor text: “Feed my power, Dark Eclipse. Free my form from the abyss. Dormant magic now unchain, the Shadow Queen be whole again!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil

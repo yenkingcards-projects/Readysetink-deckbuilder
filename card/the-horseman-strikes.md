@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/the-horseman-strikes.html
 
 Flavor text: Just when you thought you'd escaped...
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.48 regular, $3.28 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.22 regular, $3.36 foil

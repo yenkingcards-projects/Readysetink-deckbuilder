@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/donald-duck-not-again.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > PHOOEY! This character gets +1 ◊ for each 1 damage on him.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.93 regular, $6.23 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.92 regular, $6.23 foil

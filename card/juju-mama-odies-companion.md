@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/juju-mama-odies-companion.html
 Flavor text: “Juju! You get yourself out of that there magic, you bad boy!”
 —Mama Odie
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.11 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.11 foil

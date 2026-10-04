@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gizmoduck-duckburg-defender.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > FAIL-SAFE While you have no cards in your hand, opponents can't play actions with cost 4 or more.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.16 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.43 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/robin-hood-eye-for-detail.html
 Flavor text: “There's been a heap of legends and tall tales about Robin Hood. All different too.”
 —Alan-a-Dale
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.14 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/gyro-evac.html
 > TAKE HER UP ⟳, 1 ⬡ — Chosen character of yours gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 > CRASH LANDING ⟳, Banish this item — Each player loses 2 lore.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.28 foil

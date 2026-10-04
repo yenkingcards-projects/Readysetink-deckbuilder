@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tamatoa-seeker-of-shine.html
 > Ward (Opponents can't choose this character except to challenge.)
 > ANYTHING THAT GLITTERS Whenever you put a card under one of your characters or locations, this character gets +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.21 regular, $0.82 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.84 foil

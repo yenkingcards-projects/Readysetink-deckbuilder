@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/john-silver-alien-pirate.html
 
 Flavor text: “Don't be too put off by this...hunk of hardware.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $2.02 regular, $23.04 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.00 regular, $23.13 foil

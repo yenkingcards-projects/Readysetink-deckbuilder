@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-back-seat-driver.html
 Flavor text: “Let's burn rubber, kid!”
 —Wreck-It Ralph
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.24 regular, $1.07 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.04 foil

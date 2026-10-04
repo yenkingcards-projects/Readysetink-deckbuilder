@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/madam-mim-rival-of-merlin.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Madam Mim.)
 > GRUESOME AND GRIM ⟳ — Play a character with cost 4 or less for free. They gain Rush. At the end of the turn, banish them. (They can challenge the turn they're played.)
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.20 regular, $0.58 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.58 foil

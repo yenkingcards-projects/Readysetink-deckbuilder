@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/befuddle.html
 
 Flavor text: Never be afraid to have your mind boggled now and then.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.17 regular, $0.97 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.97 foil

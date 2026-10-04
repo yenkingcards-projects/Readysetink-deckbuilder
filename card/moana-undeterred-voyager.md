@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/moana-undeterred-voyager.html
 
 Flavor text: No fire or storm will keep her from her goal.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.19 foil

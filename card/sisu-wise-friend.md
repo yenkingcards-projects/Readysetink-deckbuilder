@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/sisu-wise-friend.html
 
 Flavor text: “It may feel impossible, but sometimes, you just have to take the first step, even before you're ready.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil

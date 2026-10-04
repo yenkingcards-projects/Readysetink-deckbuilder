@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/billy-bones-keeper-of-the-map.html
 
 Flavor text: “He's after me chest, that fiendish cyborg and his band of cutthroats.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.14 foil

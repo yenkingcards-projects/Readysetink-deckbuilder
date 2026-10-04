@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/nani-caring-sister.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > I AM SO SORRY 2 ⬡ — Chosen character gets -1 ¤ until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.11 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.49 foil

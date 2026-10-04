@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/simba-returned-king.html
 
 Flavor text: “I'll do whatever it takes to save my kingdom.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.12 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.26 foil

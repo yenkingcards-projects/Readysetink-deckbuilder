@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/aurora-lore-guardian.html
 > PRESERVER Opponents can't choose your items for abilities or effects.
 > ROYAL INVENTORY ⟳ one of your items — Look at the top card of your deck and put it on either the top or the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.23 regular, $0.95 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.95 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/maurices-workshop.html
 
 Flavor text: The solution you need could be just a few adjustments away.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.38 regular, $1.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.38 regular, $1.55 foil

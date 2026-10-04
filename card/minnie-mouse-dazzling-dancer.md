@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-dazzling-dancer.html
 
 Flavor text: She doesn't seek the spotlight—the spotlight seeks her.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.30 foil

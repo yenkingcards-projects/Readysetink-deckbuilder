@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/royal-tantrum.html
 
 Flavor text: “I am King! King! King!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.43 foil

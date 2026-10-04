@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/akood-et-emuti.html
 
 Flavor text: Alan ot agan, atoom on ataki Oteem-ich atooca
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $4.54 regular, $11.57 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $4.70 regular, $11.47 foil

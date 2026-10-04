@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/super-relocation-program.html
 Flavor text: “We appreciate what you did in the old days, but those days are over.”
 —Rick Dicker
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.15 foil

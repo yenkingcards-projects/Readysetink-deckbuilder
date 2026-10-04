@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/go-go-tomago-cutting-edge.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > ZERO RESISTANCE When you play this character, if you used Shift to play her, you may put chosen character into their player's inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.24 regular, $1.19 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $1.21 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-hopeful-dreamer.html
 
 Flavor text: “My family's amazing, and I'm in my family, so...”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.40 foil

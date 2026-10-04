@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/detectives-badge.html
 Flavor text: “It's not just a badge. It's who we are. There's no greater honor.”
 —Detective Judy Hopps
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.02 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.13 foil

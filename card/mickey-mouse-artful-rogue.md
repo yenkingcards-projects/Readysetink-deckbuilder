@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-artful-rogue.html
 
 Flavor text: Quiet as a...well, you know.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.30 regular, $12.21 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $12.21 foil

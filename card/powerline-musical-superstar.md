@@ -20,4 +20,4 @@ Flavor text: “For the first time ever, we're seeing it eye to eye.”
 - Q: During my turn, if I play Powerline – Musical Superstar after I played a song, does he still gain Rush?
   A: Yes. Powerline’s ability Electric Move is a static ability, not one that triggers “When you play this character.” It doesn’t matter which card was played first, only that a song was played this turn.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.30 regular, $1.12 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $1.09 foil

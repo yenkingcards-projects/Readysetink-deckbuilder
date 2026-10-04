@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/snowanna-rainbeau-cool-competitor.html
 
 Flavor text: When it comes to racing, she never gets cold feet.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.03 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.15 foil

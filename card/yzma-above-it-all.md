@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/yzma-above-it-all.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > BACK TO WORK Whenever another character is banished in a challenge, return that card to its player's hand, then that player discards a card at random.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.71 foil

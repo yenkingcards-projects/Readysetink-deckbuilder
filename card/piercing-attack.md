@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/piercing-attack.html
 
 > Deal 2 damage to chosen character. This damage can't be reduced by Resist.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.39 foil

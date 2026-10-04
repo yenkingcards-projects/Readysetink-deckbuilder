@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/circle-of-life.html
 > Sing Together 8 (Any number of your or your teammates' characters with total cost 8 or more may ⟳ to sing this song for free.)
 > Play a character from your discard for free.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $21.28 regular, $37.88 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $24.18 regular, $37.76 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-ham-hands.html
 
 Flavor text: “I'm very good at what I do. Probably the best I know.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.43 regular, $1.36 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.45 regular, $1.36 foil

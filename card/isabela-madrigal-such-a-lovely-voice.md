@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/isabela-madrigal-such-a-lovely-voice.ht
 - Q: If I moved damage from one of my characters this turn, would that cause Isabela’s New Motif ability to trigger?
   A: Yes. Moving damage counts as removing damage. You first remove the damage from one card in order to put it on another. disneylorcana.com
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.09 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.25 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/putting-it-all-together.html
 Flavor text: “Okay, so the ghostly glimmers were first seen here, and the trail of torn lorebook pages started in this part of the Illuminary...”
 —Judy Hopps
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.05 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil

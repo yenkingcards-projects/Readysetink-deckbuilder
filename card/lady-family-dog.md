@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lady-family-dog.html
 
 Flavor text: She's happiest in the company of those she loves.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.62 regular, $4.47 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.59 regular, $4.47 foil

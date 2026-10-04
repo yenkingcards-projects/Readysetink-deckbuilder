@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/copper-creative-storyteller.html
 Flavor text: “And then Chief was sleeping, but the vine touched his leg, and he jumped up in the air like this!”
 —Copper
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.07 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.31 foil

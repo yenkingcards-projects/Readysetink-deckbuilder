@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kristoff-mining-the-ruins.html
 > Boost 1 ⬡ (Once during your turn, you may pay 1 ⬡ to put the top card of your deck facedown under this character.)
 > WORTH MINING Whenever this character quests, if there's a card under him, put the top card of your deck into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.19 regular, $1.09 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $1.09 foil

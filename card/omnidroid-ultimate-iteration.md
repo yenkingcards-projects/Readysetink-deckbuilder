@@ -21,4 +21,4 @@ Source: https://www.readysetink.com/card/omnidroid-ultimate-iteration.html
 - Q: If I play Piercing Attack and choose Omnidroid – Ultimate Iteration, which has Resist +2, what happens?
   A: First, start with the base damage of the action, which is 2 damage. Then, apply modifiers to that damage. Resist +2 would normally apply here and reduce the damage to 0. However, Piercing Attack says its damage can’t be reduced by Resist, so Omnidroid’s Resist +2 doesn’t apply. The final total damage dealt by Piercing Attack is 2, and 2 damage counters are then placed on Omnidroid.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.51 regular, $3.04 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.57 regular, $2.93 foil

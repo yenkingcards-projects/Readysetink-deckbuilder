@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mulan-elite-archer.html
 > STRAIGHT SHOOTER When you play this character, if you used Shift to play her, she gets +3 ¤ this turn.
 > TRIPLE SHOT During your turn, whenever this character deals damage to another character in a challenge, deal the same amount of damage to up to 2 other chosen characters.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.35 regular, $3.13 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.32 regular, $3.13 foil

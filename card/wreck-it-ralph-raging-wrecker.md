@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-raging-wrecker.html
 > POWERED UP This character gets +1 ¤ for each card under him.
 > WHO'S COMIN' WITH ME? When this character is banished, banish all characters with ¤ equal to or less than the ¤ he had in play.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $1.30 regular, $3.49 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.30 regular, $3.43 foil

@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/diablo-watchful-raven.html
 Flavor text: “Be careful when gathering herbs in the Inkwell Caverns. You never know who's watching.”
 —Hana's Herborium
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.26 regular, $1.88 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $1.88 foil

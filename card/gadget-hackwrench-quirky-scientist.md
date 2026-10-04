@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gadget-hackwrench-quirky-scientist.html
 
 Flavor text: “The scarab's power source! I knew that if I dug around I'd find it!”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.13 regular, $0.53 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.53 foil

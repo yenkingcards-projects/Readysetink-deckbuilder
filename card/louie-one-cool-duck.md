@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/louie-one-cool-duck.html
 
 Flavor text: “The snakes are cool, I guess. Pretty standard trap, though.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.08 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular

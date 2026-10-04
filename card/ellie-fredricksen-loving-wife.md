@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ellie-fredricksen-loving-wife.html
 
 Flavor text: “Every moment we're together is an adventure.”
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.06 regular
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular

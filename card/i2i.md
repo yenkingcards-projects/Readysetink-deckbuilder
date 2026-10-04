@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/i2i.html
 - Q: If I sing I2I with only 1 character and then ready that character later in the turn, can I quest with them?
   A: Yes. The restriction on questing applies only if 2 or more characters were used to sing I2I.
 
-Market price (USD, snapshot from 2026-10-01; a rough guide, not a live quote): $0.24 regular, $5.55 foil
+Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $5.78 foil
