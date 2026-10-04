@@ -1,0 +1,76 @@
+# Moana: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/moana/
+
+70 cards.
+
+- [Chief Tui - Proud of Motunui](https://www.readysetink.com/card/chief-tui-proud-of-motunui.html): Steel, cost 4, Character, Common
+- [Chief Tui - Respected Leader](https://www.readysetink.com/card/chief-tui-respected-leader.html): Sapphire, cost 7, Character, Uncommon
+- [Chief Tui - Weaving a Tale](https://www.readysetink.com/card/chief-tui-weaving-a-tale.html): Sapphire, cost 5, Character, Common
+- [Coconut Basket](https://www.readysetink.com/card/coconut-basket.html): Sapphire, cost 2, Item, Uncommon
+- [Flotilla - Coconut Armada](https://www.readysetink.com/card/flotilla-coconut-armada.html): Ruby, cost 2, Location, Rare
+- [Gramma Tala - Connected to Nature](https://www.readysetink.com/card/gramma-tala-connected-to-nature.html): Sapphire, cost 12, Character, Rare
+- [Gramma Tala - Keeper of Ancient Stories](https://www.readysetink.com/card/gramma-tala-keeper-of-ancient-stories.html): Sapphire, cost 4, Character, Common
+- [Gramma Tala - Spirit of the Ocean](https://www.readysetink.com/card/gramma-tala-spirit-of-the-ocean.html): Sapphire, cost 7, Character, Legendary
+- [Gramma Tala - Storyteller](https://www.readysetink.com/card/gramma-tala-storyteller.html): Sapphire, cost 2, Character, Uncommon
+- [Heart of Te Fiti](https://www.readysetink.com/card/heart-of-te-fiti.html): Sapphire, cost 3, Item, Rare
+- [HeiHei - Accidental Explorer](https://www.readysetink.com/card/heihei-accidental-explorer.html): Ruby, cost 2, Character, Uncommon
+- [HeiHei - At the Crosswalk](https://www.readysetink.com/card/heihei-at-the-crosswalk.html): Ruby, cost 2, Character, Common
+- [HeiHei - Boat Snack](https://www.readysetink.com/card/heihei-boat-snack.html): Amber, cost 1, Character, Common
+- [HeiHei - Bumbling Rooster](https://www.readysetink.com/card/heihei-bumbling-rooster.html): Emerald, cost 3, Character, Uncommon
+- [HeiHei - Created by the Vine](https://www.readysetink.com/card/heihei-created-by-the-vine.html): Amethyst, cost 2, Character, Rare
+- [HeiHei - Expanded Consciousness](https://www.readysetink.com/card/heihei-expanded-consciousness.html): Sapphire / Steel, cost 5, Character, Uncommon
+- [HeiHei - Not-So-Tricky Chicken](https://www.readysetink.com/card/heihei-not-so-tricky-chicken.html): Sapphire, cost 2, Character, Uncommon
+- [HeiHei - Peckish Pal](https://www.readysetink.com/card/heihei-peckish-pal.html): cost 3, Character, Special
+- [HeiHei - Persistent Presence](https://www.readysetink.com/card/heihei-persistent-presence.html): Amethyst, cost 2, Character, Uncommon
+- [HeiHei - Protective Rooster](https://www.readysetink.com/card/heihei-protective-rooster.html): Steel, cost 5, Character, Common
+- [HeiHei - Rambling Rooster](https://www.readysetink.com/card/heihei-rambling-rooster.html): Steel, cost 1, Character, Common
+- [How Far I'll Go](https://www.readysetink.com/card/how-far-ill-go.html): Sapphire, cost 4, Action, Uncommon
+- [It Calls Me](https://www.readysetink.com/card/it-calls-me.html): Amethyst, cost 1, Action, Uncommon
+- [Just in Time](https://www.readysetink.com/card/just-in-time.html): Amber, cost 3, Action, Rare
+- [Kakamora - Band of Pirates](https://www.readysetink.com/card/kakamora-band-of-pirates.html): Steel, cost 4, Character, Common
+- [Kakamora - Boarding Party](https://www.readysetink.com/card/kakamora-boarding-party.html): Ruby, cost 4, Character, Uncommon
+- [Kakamora - Long-Range Specialist](https://www.readysetink.com/card/kakamora-long-range-specialist.html): Steel, cost 1, Character, Common
+- [Kakamora - Menacing Sailor](https://www.readysetink.com/card/kakamora-menacing-sailor.html): Ruby, cost 3, Character, Common
+- [Kakamora - Pirate Chief](https://www.readysetink.com/card/kakamora-pirate-chief.html): Steel, cost 7, Character, Rare
+- [Kakamora - Pirate Pitcher](https://www.readysetink.com/card/kakamora-pirate-pitcher.html): Ruby, cost 2, Character, Common
+- [Last-Ditch Effort](https://www.readysetink.com/card/last-ditch-effort.html): Amethyst, cost 3, Action, Uncommon
+- [Maui - Demigod](https://www.readysetink.com/card/maui-demigod.html): Steel, cost 8, Character, Rare
+- [Maui - Half-Shark](https://www.readysetink.com/card/maui-half-shark.html): Ruby, cost 6, Character, Legendary
+- [Maui - Hero to All](https://www.readysetink.com/card/maui-hero-to-all.html): Ruby, cost 5, Character, Rare
+- [Maui - Snow Slider](https://www.readysetink.com/card/maui-snow-slider.html): Ruby, cost 4, Character, Common
+- [Maui - Soaring Demigod](https://www.readysetink.com/card/maui-soaring-demigod.html): Ruby, cost 3, Character, Uncommon
+- [Maui - Stubborn Trickster](https://www.readysetink.com/card/maui-stubborn-trickster.html): Emerald / Steel, cost 6, Character, Super Rare
+- [Maui - Whale](https://www.readysetink.com/card/maui-whale.html): Ruby, cost 7, Character, Rare
+- [Maui's Fish Hook](https://www.readysetink.com/card/mauis-fish-hook.html): Ruby, cost 3, Item, Rare
+- [Maui's Place of Exile - Hidden Island](https://www.readysetink.com/card/mauis-place-of-exile-hidden-island.html): Steel, cost 2, Location, Rare
+- [Moana - Adventurer of Land and Sea](https://www.readysetink.com/card/moana-adventurer-of-land-and-sea.html): Sapphire, cost 3, Character, Common
+- [Moana - Born Leader](https://www.readysetink.com/card/moana-born-leader.html): Ruby, cost 5, Character, Rare
+- [Moana - Chosen by the Ocean](https://www.readysetink.com/card/moana-chosen-by-the-ocean.html): Ruby, cost 5, Character, Uncommon
+- [Moana - Curious Explorer](https://www.readysetink.com/card/moana-curious-explorer.html): Sapphire, cost 5, Character, Legendary
+- [Moana - Determined Explorer](https://www.readysetink.com/card/moana-determined-explorer.html): Amber, cost 3, Character, Rare
+- [Moana - Island Explorer](https://www.readysetink.com/card/moana-island-explorer.html): Ruby, cost 4, Character, Uncommon
+- [Moana - Kakamora Leader](https://www.readysetink.com/card/moana-kakamora-leader.html): Ruby, cost 7, Character, Rare
+- [Moana - Of Motunui](https://www.readysetink.com/card/moana-of-motunui.html): Amber, cost 5, Character, Rare
+- [Moana - Self-Taught Sailor](https://www.readysetink.com/card/moana-self-taught-sailor.html): Ruby, cost 1, Character, Common
+- [Moana - Undeterred Voyager](https://www.readysetink.com/card/moana-undeterred-voyager.html): Ruby, cost 4, Character, Common
+- [Motunui - Island Paradise](https://www.readysetink.com/card/motunui-island-paradise.html): Sapphire, cost 2, Location, Uncommon
+- [Pua - Disgruntled Pig](https://www.readysetink.com/card/pua-disgruntled-pig.html): Amethyst, cost 1, Character, Common
+- [Pua - Potbellied Buddy](https://www.readysetink.com/card/pua-potbellied-buddy.html): Amethyst, cost 2, Character, Common
+- [Pua - Protective Pig](https://www.readysetink.com/card/pua-protective-pig.html): Amber / Amethyst, cost 3, Character, Uncommon
+- [Restoring the Heart](https://www.readysetink.com/card/restoring-the-heart.html): Amber / Sapphire, cost 1, Action, Uncommon
+- [Sina - Vigilant Parent](https://www.readysetink.com/card/sina-vigilant-parent.html): Sapphire, cost 1, Character, Common
+- [Tamatoa - Drab Little Crab](https://www.readysetink.com/card/tamatoa-drab-little-crab.html): Emerald, cost 2, Character, Uncommon
+- [Tamatoa - Grabby Crab](https://www.readysetink.com/card/tamatoa-grabby-crab.html): cost 4, Character, Special
+- [Tamatoa - Happy as a Clam](https://www.readysetink.com/card/tamatoa-happy-as-a-clam.html): Sapphire, cost 6, Character, Legendary
+- [Tamatoa - Seeker of Shine](https://www.readysetink.com/card/tamatoa-seeker-of-shine.html): Sapphire, cost 7, Character, Super Rare
+- [Tamatoa - So Shiny!](https://www.readysetink.com/card/tamatoa-so-shiny.html): Sapphire, cost 8, Character, Super Rare
+- [Te Kā - Elemental Terror](https://www.readysetink.com/card/te-k-elemental-terror.html): Amethyst / Ruby, cost 10, Character, Super Rare
+- [Te Kā - Heartless](https://www.readysetink.com/card/te-k-heartless.html): Steel, cost 6, Character, Legendary
+- [Te Kā - Lava Monster](https://www.readysetink.com/card/te-k-lava-monster.html): Amethyst, cost 6, Character, Common
+- [Te Kā - The Burning One](https://www.readysetink.com/card/te-k-the-burning-one.html): Ruby, cost 6, Character, Super Rare
+- [The Islands I Pulled from the Sea](https://www.readysetink.com/card/the-islands-i-pulled-from-the-sea.html): Ruby, cost 3, Action, Uncommon
+- [Vaiana - Adventurer of Land and Sea](https://www.readysetink.com/card/vaiana-adventurer-of-land-and-sea.html): Sapphire, cost 3, Character, Special
+- [Voyage](https://www.readysetink.com/card/voyage.html): Ruby, cost 1, Action, Common
+- [We Know the Way](https://www.readysetink.com/card/we-know-the-way.html): Amethyst, cost 3, Action, Rare
+- [You're Welcome](https://www.readysetink.com/card/youre-welcome.html): Emerald, cost 4, Action, Uncommon

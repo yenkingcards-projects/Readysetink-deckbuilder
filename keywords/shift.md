@@ -1,0 +1,202 @@
+# Shift: Disney Lorcana keyword
+
+Source: https://www.readysetink.com/keywords/shift/
+
+Pay the Shift cost instead of the ink cost to play this card on top of one of your characters with the same name. They become one stack. If the card underneath was exerted, the shifted character enters exerted. Official rule 8.10. 196 cards.
+
+- [Aladdin - Brave Rescuer](https://www.readysetink.com/card/aladdin-brave-rescuer.html): Steel, cost 3, Character, Uncommon, Shift
+- [Aladdin - Heroic Outlaw](https://www.readysetink.com/card/aladdin-heroic-outlaw.html): Ruby, cost 7, Character, Super Rare, Shift 5
+- [Aladdin - Intrepid Commander](https://www.readysetink.com/card/aladdin-intrepid-commander.html): Ruby, cost 4, Character, Uncommon, Shift 2
+- [Aladdin & Genie - Mischievous Pals](https://www.readysetink.com/card/aladdin-genie-mischievous-pals.html): Amethyst / Emerald, cost 5, Character, Super Rare, Shift 3
+- [Alice - Clumsy as Can Be](https://www.readysetink.com/card/alice-clumsy-as-can-be.html): Emerald / Ruby, cost 6, Character, Rare, Shift 3
+- [Alma Madrigal - Keeper of the Flame](https://www.readysetink.com/card/alma-madrigal-keeper-of-the-flame.html): Amethyst, cost 5, Character, Rare, Shift 3
+- [Anna - Magical Mission](https://www.readysetink.com/card/anna-magical-mission.html): Amethyst / Sapphire, cost 6, Character, Rare, Shift 4
+- [Anna - Mystical Majesty](https://www.readysetink.com/card/anna-mystical-majesty.html): Amethyst, cost 7, Character, Rare, Shift 4
+- [Archimedes - Electrified Owl](https://www.readysetink.com/card/archimedes-electrified-owl.html): Amethyst, cost 5, Character, Uncommon, Shift 3
+- [Ariel - Sonic Warrior](https://www.readysetink.com/card/ariel-sonic-warrior.html): Steel, cost 6, Character, Super Rare, Shift 4
+- [Arthur - Jousting Knight](https://www.readysetink.com/card/arthur-jousting-knight.html): Steel, cost 6, Character, Super Rare, Shift 4
+- [Arthur - King Victorious](https://www.readysetink.com/card/arthur-king-victorious.html): Steel, cost 7, Character, Legendary, Shift 5
+- [Aurora - Dreaming Guardian](https://www.readysetink.com/card/aurora-dreaming-guardian.html): Sapphire, cost 5, Character, Super Rare, Shift 3
+- [Aurora - Lore Guardian](https://www.readysetink.com/card/aurora-lore-guardian.html): Sapphire, cost 4, Character, Super Rare, Shift 2
+- [Baloo - Carefree Bear](https://www.readysetink.com/card/baloo-carefree-bear.html): Emerald, cost 5, Character, Rare, Shift 3
+- [Basil - Disguised Detective](https://www.readysetink.com/card/basil-disguised-detective.html): Emerald, cost 6, Character, Uncommon, Shift 4
+- [Basil - Great Mouse Detective](https://www.readysetink.com/card/basil-great-mouse-detective.html): Sapphire, cost 6, Character, Super Rare, Shift 5
+- [Beast - Tragic Hero](https://www.readysetink.com/card/beast-tragic-hero.html): Steel, cost 5, Character, Legendary, Shift 3
+- [Belle - Accomplished Mystic](https://www.readysetink.com/card/belle-accomplished-mystic.html): Amethyst, cost 5, Character, Super Rare, Shift 3
+- [Belle - Hidden Archer](https://www.readysetink.com/card/belle-hidden-archer.html): Emerald, cost 5, Character, Legendary, Shift 3
+- [Belle - Mechanic Extraordinaire](https://www.readysetink.com/card/belle-mechanic-extraordinaire.html): Ruby / Sapphire, cost 9, Character, Super Rare, Shift 7
+- [Belle & Beast - Certain as the Sun](https://www.readysetink.com/card/belle-beast-certain-as-the-sun.html): Ruby / Sapphire, cost 8, Character, Super Rare, Shift 6
+- [Bolt - Superdog](https://www.readysetink.com/card/bolt-superdog.html): Amber / Steel, cost 5, Character, Super Rare, Shift 3
+- [Bruno Madrigal - Singing Seer](https://www.readysetink.com/card/bruno-madrigal-singing-seer.html): Amber / Amethyst, cost 7, Character, Super Rare, Shift 5
+- [Buzz Lightyear - Jungle Ranger](https://www.readysetink.com/card/buzz-lightyear-jungle-ranger.html): Emerald, cost 7, Character, Legendary, Shift 5
+- [Calhoun - Courageous Rescuer](https://www.readysetink.com/card/calhoun-courageous-rescuer.html): Amber / Ruby, cost 6, Character, Rare, Shift 4
+- [Captain Hook - The Pirate King](https://www.readysetink.com/card/captain-hook-the-pirate-king.html): Emerald / Steel, cost 5, Character, Rare, Shift 3
+- [Captain Hook - Thinking a Happy Thought](https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.html): Steel, cost 5, Character, Rare, Shift 3
+- [Carl Fredricksen & Russell - Intrepid Explorers](https://www.readysetink.com/card/carl-fredricksen-russell-intrepid-explorers.html): Emerald / Ruby, cost 6, Character, Rare, Shift 4
+- [Cheshire Cat - From the Shadows](https://www.readysetink.com/card/cheshire-cat-from-the-shadows.html): Emerald, cost 8, Character, Super Rare, Shift 5
+- [Chip 'n' Dale - Recovery Rangers](https://www.readysetink.com/card/chip-n-dale-recovery-rangers.html): Amber, cost 8, Character, Rare, Shift 5
+- [Cinderella - Stouthearted](https://www.readysetink.com/card/cinderella-stouthearted.html): Steel, cost 7, Character, Super Rare, Shift 5
+- [Cinderella - Unintentional Icon](https://www.readysetink.com/card/cinderella-unintentional-icon.html): Sapphire, cost 7, Character, Super Rare, Shift 5
+- [Clarabelle - Light on Her Hooves](https://www.readysetink.com/card/clarabelle-light-on-her-hooves.html): Emerald, cost 7, Character, Legendary, Shift 5
+- [Cogsworth - Grandfather Clock](https://www.readysetink.com/card/cogsworth-grandfather-clock.html): Sapphire, cost 5, Character, Super Rare, Shift 3
+- [Copper - Champion of the Forest](https://www.readysetink.com/card/copper-champion-of-the-forest.html): Emerald, cost 5, Character, Rare, Shift 3
+- [Cruella De Vil - Perfectly Wretched](https://www.readysetink.com/card/cruella-de-vil-perfectly-wretched.html): Sapphire, cost 5, Character, Uncommon, Shift 3
+- [Daisy Duck - Paranormal Investigator](https://www.readysetink.com/card/daisy-duck-paranormal-investigator.html): Sapphire, cost 6, Character, Legendary, Shift 4
+- [Darkwing Duck - Cool Under Pressure](https://www.readysetink.com/card/darkwing-duck-cool-under-pressure.html): Steel, cost 7, Character, Legendary, Shift 5
+- [Darkwing Duck & Launchpad - St. Canard's Finest](https://www.readysetink.com/card/darkwing-duck-launchpad-st-canards-finest.html): Sapphire / Steel, cost 7, Character, Super Rare, Shift 5
+- [Dash Parr - Super Fast](https://www.readysetink.com/card/dash-parr-super-fast.html): Ruby, cost 5, Character, Rare, Shift 3
+- [Diablo - Devoted Herald](https://www.readysetink.com/card/diablo-devoted-herald.html): Emerald, cost 3, Character, Legendary, Shift
+- [Donald Duck - Perfect Gentleman](https://www.readysetink.com/card/donald-duck-perfect-gentleman.html): Emerald, cost 4, Character, Uncommon, Shift 3
+- [Donald Duck - Pie Slinger](https://www.readysetink.com/card/donald-duck-pie-slinger.html): Ruby, cost 5, Character, Legendary, Shift 4
+- [Dr. Facilier - Agent Provocateur](https://www.readysetink.com/card/dr-facilier-agent-provocateur.html): Amethyst, cost 7, Character, Rare, Shift 5
+- [Elsa - Ice Artisan](https://www.readysetink.com/card/elsa-ice-artisan.html): Ruby, cost 6, Character, Legendary, Shift 4
+- [Elsa - Ice Maker](https://www.readysetink.com/card/elsa-ice-maker.html): Amethyst / Sapphire, cost 7, Character, Super Rare, Shift 4
+- [Elsa - Spirit of Winter](https://www.readysetink.com/card/elsa-spirit-of-winter.html): Amethyst, cost 8, Character, Legendary, Shift 6
+- [Fairy Godmother - Mystic Armorer](https://www.readysetink.com/card/fairy-godmother-mystic-armorer.html): Amethyst, cost 5, Character, Legendary, Shift 2
+- [Fix-It Felix, Jr. - Niceland Steward](https://www.readysetink.com/card/fix-it-felix-jr-niceland-steward.html): Amber, cost 5, Character, Uncommon, Shift 3
+- [Flotsam & Jetsam - Entangling Eels](https://www.readysetink.com/card/flotsam-jetsam-entangling-eels.html): Amethyst, cost 6, Character, Uncommon, Shift
+- [Flynn Rider - His Own Biggest Fan](https://www.readysetink.com/card/flynn-rider-his-own-biggest-fan.html): Emerald, cost 4, Character, Rare, Shift 2
+- [Fred - Awesome Boss](https://www.readysetink.com/card/fred-awesome-boss.html): Emerald, cost 6, Character, Rare, Shift 4
+- [Fred - Giant-Sized](https://www.readysetink.com/card/fred-giant-sized.html): Emerald, cost 7, Character, Rare, Shift 5
+- [Gadget Hackwrench - Brilliant Bosun](https://www.readysetink.com/card/gadget-hackwrench-brilliant-bosun.html): Sapphire, cost 6, Character, Super Rare, Shift 4
+- [Gaston - Intellectual Powerhouse](https://www.readysetink.com/card/gaston-intellectual-powerhouse.html): Sapphire, cost 6, Character, Rare, Shift 4
+- [Genie - Powers Unleashed](https://www.readysetink.com/card/genie-powers-unleashed.html): Emerald, cost 8, Character, Rare, Shift 6
+- [Genie - Wonderful Trickster](https://www.readysetink.com/card/genie-wonderful-trickster.html): Amethyst, cost 7, Character, Legendary, Shift 5
+- [Go Go Tomago - Cutting Edge](https://www.readysetink.com/card/go-go-tomago-cutting-edge.html): Emerald / Sapphire, cost 4, Character, Super Rare, Shift 4
+- [Goofy - Dancing Superstar](https://www.readysetink.com/card/goofy-dancing-superstar.html): Ruby, cost 5, Character, Rare, Shift 3
+- [Goofy - Galumphing Gumshoe](https://www.readysetink.com/card/goofy-galumphing-gumshoe.html): Amber, cost 8, Character, Super Rare, Shift 5
+- [Gramma Tala - Spirit of the Ocean](https://www.readysetink.com/card/gramma-tala-spirit-of-the-ocean.html): Sapphire, cost 7, Character, Legendary, Shift 5
+- [Hades - King of Olympus](https://www.readysetink.com/card/hades-king-of-olympus.html): Amber, cost 8, Character, Rare, Shift 6
+- [HeiHei - Expanded Consciousness](https://www.readysetink.com/card/heihei-expanded-consciousness.html): Sapphire / Steel, cost 5, Character, Uncommon, Shift 3
+- [Helga Sinclair - Femme Fatale](https://www.readysetink.com/card/helga-sinclair-femme-fatale.html): Emerald, cost 5, Character, Super Rare, Shift 3
+- [Hercules - Divine Hero](https://www.readysetink.com/card/hercules-divine-hero.html): Steel, cost 6, Character, Rare, Shift 4
+- [Hiro Hamada - Armor Designer](https://www.readysetink.com/card/hiro-hamada-armor-designer.html): Emerald / Sapphire, cost 7, Character, Super Rare, Shift 5
+- [Isabela Madrigal - Caring Cultivator](https://www.readysetink.com/card/isabela-madrigal-caring-cultivator.html): Amber, cost 6, Character, Rare, Shift 4
+- [Jafar - Dreadnought](https://www.readysetink.com/card/jafar-dreadnought.html): Steel, cost 4, Character, Uncommon, Shift 2
+- [Jafar - Striking Illusionist](https://www.readysetink.com/card/jafar-striking-illusionist.html): Amethyst, cost 7, Character, Legendary, Shift 5
+- [Jasmine - Queen of Agrabah](https://www.readysetink.com/card/jasmine-queen-of-agrabah.html): Sapphire, cost 5, Character, Rare, Shift 3
+- [Jasmine - Royal Commodore](https://www.readysetink.com/card/jasmine-royal-commodore.html): Emerald, cost 6, Character, Legendary, Shift 5
+- [Jasmine - Steady Strategist](https://www.readysetink.com/card/jasmine-steady-strategist.html): Sapphire / Steel, cost 4, Character, Super Rare, Shift 2
+- [Jim Hawkins - Rigging Specialist](https://www.readysetink.com/card/jim-hawkins-rigging-specialist.html): Steel, cost 5, Character, Uncommon, Shift 3
+- [John Silver - Stern Captain](https://www.readysetink.com/card/john-silver-stern-captain.html): Steel, cost 8, Character, Legendary, Shift 5
+- [Judy Hopps - Always Vigilant](https://www.readysetink.com/card/judy-hopps-always-vigilant.html): Amber, cost 4, Character, Rare, Shift 2
+- [Judy Hopps - Lead Detective](https://www.readysetink.com/card/judy-hopps-lead-detective.html): Sapphire, cost 6, Character, Rare, Shift 4
+- [Kida - Crystal Scion](https://www.readysetink.com/card/kida-crystal-scion.html): Sapphire, cost 8, Character, Legendary, Shift 6
+- [Kida - Protector of Atlantis](https://www.readysetink.com/card/kida-protector-of-atlantis.html): Amber, cost 5, Character, Legendary, Shift 3
+- [King Candy - Sweet Abomination](https://www.readysetink.com/card/king-candy-sweet-abomination.html): Sapphire, cost 5, Character, Uncommon, Shift 3
+- [Kit Cloudkicker - Navigator](https://www.readysetink.com/card/kit-cloudkicker-navigator.html): Sapphire, cost 6, Character, Uncommon, Shift 3
+- [Kit Cloudkicker - Sure Shot](https://www.readysetink.com/card/kit-cloudkicker-sure-shot.html): Steel, cost 5, Character, Super Rare, Shift 3
+- [Kronk - Head of Security](https://www.readysetink.com/card/kronk-head-of-security.html): Steel, cost 7, Character, Super Rare, Shift 5
+- [Kuzco - Impulsive Llama](https://www.readysetink.com/card/kuzco-impulsive-llama.html): Amethyst / Emerald, cost 7, Character, Rare, Shift 4
+- [Lady - Miss Park Avenue](https://www.readysetink.com/card/lady-miss-park-avenue.html): Amber / Emerald, cost 5, Character, Super Rare, Shift 3
+- [Lady Tremaine - Imperious Queen](https://www.readysetink.com/card/lady-tremaine-imperious-queen.html): Ruby, cost 6, Character, Super Rare, Shift 4
+- [Li Shang - Valiant Leader](https://www.readysetink.com/card/li-shang-valiant-leader.html): Steel, cost 7, Character, Uncommon, Shift 4
+- [Li Shang - Valorous General](https://www.readysetink.com/card/li-shang-valorous-general.html): Ruby, cost 3, Character, Uncommon, Shift
+- [Lilo - Rock Star](https://www.readysetink.com/card/lilo-rock-star.html): Amber, cost 6, Character, Super Rare, Shift 4
+- [Lilo & Stitch - Fun-Loving Friends](https://www.readysetink.com/card/lilo-stitch-fun-loving-friends.html): Amber / Steel, cost 5, Character, Super Rare, Shift 3
+- [Little John - Resourceful Outlaw](https://www.readysetink.com/card/little-john-resourceful-outlaw.html): Steel, cost 6, Character, Super Rare, Shift 4
+- [Luisa Madrigal - Confident Climber](https://www.readysetink.com/card/luisa-madrigal-confident-climber.html): Amethyst, cost 5, Character, Legendary, Shift 3
+- [Lumiere - Fired Up](https://www.readysetink.com/card/lumiere-fired-up.html): Ruby / Sapphire, cost 5, Character, Super Rare, Shift 3
+- [Lyle Tiberius Rourke - Crystallized Commander](https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-commander.html): Ruby, cost 6, Character, Rare, Shift 4
+- [Madam Mim - Rhino](https://www.readysetink.com/card/madam-mim-rhino.html): Amethyst / Ruby, cost 6, Character, Uncommon, Shift 2
+- [Madam Mim - Rival of Merlin](https://www.readysetink.com/card/madam-mim-rival-of-merlin.html): Amethyst, cost 5, Character, Rare, Shift 3
+- [Magica De Spell - Conniving Sorceress](https://www.readysetink.com/card/magica-de-spell-conniving-sorceress.html): Amethyst, cost 7, Character, Super Rare, Shift 7
+- [Magica De Spell - The Midas Touch](https://www.readysetink.com/card/magica-de-spell-the-midas-touch.html): Amethyst, cost 7, Character, Super Rare, Shift 5
+- [Maleficent - Formidable Queen](https://www.readysetink.com/card/maleficent-formidable-queen.html): Amethyst, cost 8, Character, Super Rare, Shift 6
+- [Maleficent & Diablo - Evil Incarnate](https://www.readysetink.com/card/maleficent-diablo-evil-incarnate.html): Amethyst / Steel, cost 7, Character, Rare, Shift 5
+- [Max Goof - Chart Topper](https://www.readysetink.com/card/max-goof-chart-topper.html): Emerald, cost 6, Character, Legendary, Shift 4
+- [Merida - Gifted Archer](https://www.readysetink.com/card/merida-gifted-archer.html): Emerald, cost 5, Character, Rare, Shift 3
+- [Merlin - Ink Drop Tinkerer](https://www.readysetink.com/card/merlin-ink-drop-tinkerer.html): Amethyst, cost 7, Character, Rare, Shift 5
+- [Merlin - Intellectual Visionary](https://www.readysetink.com/card/merlin-intellectual-visionary.html): Sapphire, cost 6, Character, Legendary, Shift 5
+- [Mickey Mouse - Artful Rogue](https://www.readysetink.com/card/mickey-mouse-artful-rogue.html): Emerald, cost 7, Character, Super Rare, Shift 5
+- [Mickey Mouse - Brave Little Prince](https://www.readysetink.com/card/mickey-mouse-brave-little-prince.html): Ruby, cost 3, Character, Legendary, Shift 5
+- [Mickey Mouse - Musketeer Captain](https://www.readysetink.com/card/mickey-mouse-musketeer-captain.html): Amber, cost 7, Character, Legendary, Shift 5
+- [Mickey Mouse - Pirate Captain](https://www.readysetink.com/card/mickey-mouse-pirate-captain.html): Ruby, cost 5, Character, Super Rare, Shift 3
+- [Mickey Mouse - Playful Sorcerer](https://www.readysetink.com/card/mickey-mouse-playful-sorcerer.html): Steel, cost 5, Character, Rare, Shift 3
+- [Milo Thatch - King of Atlantis](https://www.readysetink.com/card/milo-thatch-king-of-atlantis.html): Emerald, cost 7, Character, Legendary, Shift 4
+- [Minnie Mouse - Drum Major](https://www.readysetink.com/card/minnie-mouse-drum-major.html): Amber, cost 5, Character, Super Rare, Shift 4
+- [Minnie Mouse - Wide-Eyed Diver](https://www.readysetink.com/card/minnie-mouse-wide-eyed-diver.html): Ruby, cost 4, Character, Rare, Shift 2
+- [Mirabel Madrigal - Musically Talented](https://www.readysetink.com/card/mirabel-madrigal-musically-talented.html): Amber / Amethyst, cost 6, Character, Super Rare, Shift 4
+- [Moana - Born Leader](https://www.readysetink.com/card/moana-born-leader.html): Ruby, cost 5, Character, Rare, Shift 3
+- [Moana - Kakamora Leader](https://www.readysetink.com/card/moana-kakamora-leader.html): Ruby, cost 7, Character, Rare, Shift 5
+- [Morgana Macawber - Reformed Spellcaster](https://www.readysetink.com/card/morgana-macawber-reformed-spellcaster.html): Amethyst, cost 6, Character, Rare, Shift 4
+- [Mother Gothel - Unwavering Schemer](https://www.readysetink.com/card/mother-gothel-unwavering-schemer.html): Emerald, cost 6, Character, Super Rare, Shift 4
+- [Mr. Incredible - Super Strong](https://www.readysetink.com/card/mr-incredible-super-strong.html): Ruby, cost 5, Character, Legendary, Shift 3
+- [Mr. Smee - Captain of the Jolly Roger](https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html): Steel, cost 6, Character, Super Rare, Shift 4
+- [Mrs. Incredible - Determined Rescuer](https://www.readysetink.com/card/mrs-incredible-determined-rescuer.html): Steel, cost 7, Character, Legendary, Shift 5
+- [Mufasa - Among the Stars](https://www.readysetink.com/card/mufasa-among-the-stars.html): Amethyst / Steel, cost 7, Character, Uncommon, Shift 5
+- [Mulan - Elite Archer](https://www.readysetink.com/card/mulan-elite-archer.html): Ruby, cost 6, Character, Legendary, Shift 5
+- [Mulan - Imperial General](https://www.readysetink.com/card/mulan-imperial-general.html): Ruby / Steel, cost 7, Character, Super Rare, Shift 5
+- [Mulan - Reflecting](https://www.readysetink.com/card/mulan-reflecting.html): Amber, cost 4, Character, Rare, Shift 2
+- [Mushu - Your Worst Nightmare](https://www.readysetink.com/card/mushu-your-worst-nightmare.html): Ruby / Steel, cost 6, Character, Rare, Shift 4
+- [Negaduck - Public Enemy Number One](https://www.readysetink.com/card/negaduck-public-enemy-number-one.html): Ruby, cost 5, Character, Rare, Shift 3
+- [Nick Wilde - Inquisitive Harbormaster](https://www.readysetink.com/card/nick-wilde-inquisitive-harbormaster.html): Amber, cost 6, Character, Rare, Shift 4
+- [Nick Wilde - Persistent Investigator](https://www.readysetink.com/card/nick-wilde-persistent-investigator.html): Steel, cost 5, Character, Rare, Shift 3
+- [Nick Wilde - Sly Fox](https://www.readysetink.com/card/nick-wilde-sly-fox.html): Sapphire, cost 3, Character, Uncommon, Shift 1
+- [Olaf - Carrot Enthusiast](https://www.readysetink.com/card/olaf-carrot-enthusiast.html): Sapphire, cost 3, Character, Uncommon, Shift
+- [Omnidroid - Ultimate Iteration](https://www.readysetink.com/card/omnidroid-ultimate-iteration.html): Steel, cost 8, Character, Rare, Shift 6
+- [Omnidroid - V.10](https://www.readysetink.com/card/omnidroid-v-10.html): Steel, cost 6, Character, Rare, Shift 4
+- [Omnidroid - V.9](https://www.readysetink.com/card/omnidroid-v-9.html): Steel, cost 4, Character, Uncommon, Shift 2
+- [Pegasus - Cloud Racer](https://www.readysetink.com/card/pegasus-cloud-racer.html): Emerald, cost 5, Character, Uncommon, Shift 3
+- [Perdita - Determined Mother](https://www.readysetink.com/card/perdita-determined-mother.html): Amber / Sapphire, cost 6, Character, Super Rare, Shift 4
+- [Pete - Space Pirate](https://www.readysetink.com/card/pete-space-pirate.html): Emerald / Steel, cost 6, Character, Super Rare, Shift 4
+- [Peter Pan - Pirate's Bane](https://www.readysetink.com/card/peter-pan-pirates-bane.html): Ruby, cost 6, Character, Rare, Shift 4
+- [Peter Pan & Tinker Bell - Fast Friends](https://www.readysetink.com/card/peter-pan-tinker-bell-fast-friends.html): Amethyst / Ruby, cost 6, Character, Super Rare, Shift 4
+- [Piglet - Cocoa Maker](https://www.readysetink.com/card/piglet-cocoa-maker.html): Sapphire, cost 5, Character, Rare, Shift 3
+- [Pinocchio - On the Run](https://www.readysetink.com/card/pinocchio-on-the-run.html): Amethyst, cost 5, Character, Uncommon, Shift 3
+- [Pluto - Determined Defender](https://www.readysetink.com/card/pluto-determined-defender.html): Amber, cost 7, Character, Rare, Shift 5
+- [Pocahontas - Peacekeeper](https://www.readysetink.com/card/pocahontas-peacekeeper.html): Amber, cost 5, Character, Legendary, Shift 3
+- [Pocahontas & Meeko - Adventurous Friends](https://www.readysetink.com/card/pocahontas-meeko-adventurous-friends.html): Amber / Amethyst, cost 4, Character, Legendary, Shift 2
+- [Powerline - World's Greatest Rock Star](https://www.readysetink.com/card/powerline-worlds-greatest-rock-star.html): Ruby, cost 6, Character, Super Rare, Shift 4
+- [Prince Eric - Ursula's Groom](https://www.readysetink.com/card/prince-eric-ursulas-groom.html): Amber, cost 6, Character, Uncommon, Shift 4
+- [Prince Naveen - Vigilant First Mate](https://www.readysetink.com/card/prince-naveen-vigilant-first-mate.html): Amber, cost 5, Character, Uncommon, Shift 3
+- [Prince Phillip - Vanquisher of Foes](https://www.readysetink.com/card/prince-phillip-vanquisher-of-foes.html): Emerald, cost 9, Character, Super Rare, Shift 6
+- [Queen of Hearts - Sensing Weakness](https://www.readysetink.com/card/queen-of-hearts-sensing-weakness.html): Ruby, cost 5, Character, Uncommon, Shift 2
+- [Queen of Hearts - Unpredictable Bully](https://www.readysetink.com/card/queen-of-hearts-unpredictable-bully.html): Emerald / Ruby, cost 5, Character, Super Rare, Shift 3
+- [Rafiki - Ethereal Guide](https://www.readysetink.com/card/rafiki-ethereal-guide.html): Amethyst, cost 9, Character, Rare, Shift 7
+- [Rapunzel - Gifted Artist](https://www.readysetink.com/card/rapunzel-gifted-artist.html): Amber, cost 5, Character, Uncommon, Shift 3
+- [Rapunzel & Flynn Rider - Unlikely Pair](https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html): Emerald / Steel, cost 5, Character, Legendary, Shift 3
+- [Ratigan - Party Crasher](https://www.readysetink.com/card/ratigan-party-crasher.html): Ruby, cost 7, Character, Rare, Shift 4
+- [Raya - Leader of Heart](https://www.readysetink.com/card/raya-leader-of-heart.html): Ruby, cost 6, Character, Super Rare, Shift 4
+- [Rhino - Power Hamster](https://www.readysetink.com/card/rhino-power-hamster.html): Amber / Steel, cost 4, Character, Super Rare, Shift 2
+- [Robin Hood - Champion of Sherwood](https://www.readysetink.com/card/robin-hood-champion-of-sherwood.html): Steel, cost 5, Character, Legendary, Shift 3
+- [Robin Hood - Sneaky Sleuth](https://www.readysetink.com/card/robin-hood-sneaky-sleuth.html): Emerald, cost 5, Character, Uncommon, Shift 3
+- [Russell - Senior Wilderness Explorer](https://www.readysetink.com/card/russell-senior-wilderness-explorer.html): Emerald, cost 5, Character, Super Rare, Shift 3
+- [Scar - Shameless Firebrand](https://www.readysetink.com/card/scar-shameless-firebrand.html): Ruby, cost 8, Character, Rare, Shift 6
+- [Scrooge McDuck - Cavern Prospector](https://www.readysetink.com/card/scrooge-mcduck-cavern-prospector.html): Amber, cost 6, Character, Rare, Shift 4
+- [Scrooge McDuck - Reformed Ebenezer](https://www.readysetink.com/card/scrooge-mcduck-reformed-ebenezer.html): Sapphire, cost 6, Character, Legendary, Shift 4
+- [Shere Khan - Fierce and Furious](https://www.readysetink.com/card/shere-khan-fierce-and-furious.html): Ruby, cost 8, Character, Rare, Shift 5
+- [Simba - Pride Protector](https://www.readysetink.com/card/simba-pride-protector.html): Amber, cost 5, Character, Legendary, Shift 3
+- [Simba - Son of Mufasa](https://www.readysetink.com/card/simba-son-of-mufasa.html): Steel, cost 6, Character, Uncommon, Shift 4
+- [Sisu - Empowered Sibling](https://www.readysetink.com/card/sisu-empowered-sibling.html): Ruby, cost 8, Character, Legendary, Shift 6
+- [Snow White - Well Wisher](https://www.readysetink.com/card/snow-white-well-wisher.html): Amber, cost 6, Character, Legendary, Shift 4
+- [Stitch - Alien Buccaneer](https://www.readysetink.com/card/stitch-alien-buccaneer.html): Emerald, cost 4, Character, Rare, Shift 3
+- [Stitch - Rock Star](https://www.readysetink.com/card/stitch-rock-star.html): Amber, cost 6, Character, Super Rare, Shift 4
+- [Syndrome - Out for Revenge](https://www.readysetink.com/card/syndrome-out-for-revenge.html): Steel, cost 6, Character, Super Rare, Shift 4
+- [Taffyta Muttonfudge - Sour Speedster](https://www.readysetink.com/card/taffyta-muttonfudge-sour-speedster.html): Ruby, cost 4, Character, Uncommon, Shift 2
+- [Te Kā - Elemental Terror](https://www.readysetink.com/card/te-k-elemental-terror.html): Amethyst / Ruby, cost 10, Character, Super Rare, Shift 7
+- [The Headless Horseman - Cursed Rider](https://www.readysetink.com/card/the-headless-horseman-cursed-rider.html): Steel, cost 8, Character, Super Rare, Shift 5
+- [The Horned King - Wicked Ruler](https://www.readysetink.com/card/the-horned-king-wicked-ruler.html): Amethyst, cost 4, Character, Super Rare, Shift 2
+- [The Queen - Commanding Presence](https://www.readysetink.com/card/the-queen-commanding-presence.html): Amber, cost 5, Character, Super Rare, Shift 2
+- [The Queen - Fairest of All](https://www.readysetink.com/card/the-queen-fairest-of-all.html): Sapphire, cost 5, Character, Super Rare, Shift 3
+- [Tiana - Party Hostess](https://www.readysetink.com/card/tiana-party-hostess.html): Steel, cost 7, Character, Legendary, Shift 5
+- [Tinker Bell - Giant Fairy](https://www.readysetink.com/card/tinker-bell-giant-fairy.html): Steel, cost 6, Character, Super Rare, Shift 4
+- [Tinker Bell - Queen of the Azurite Fairies](https://www.readysetink.com/card/tinker-bell-queen-of-the-azurite-fairies.html): Amethyst, cost 7, Character, Uncommon, Shift 5
+- [Tinker Bell - Temperamental Fairy](https://www.readysetink.com/card/tinker-bell-temperamental-fairy.html): Ruby, cost 5, Character, Uncommon, Shift 3
+- [Tod - Knows All the Tricks](https://www.readysetink.com/card/tod-knows-all-the-tricks.html): Emerald, cost 7, Character, Legendary, Shift 5
+- [Tod & Copper - Best of Friends](https://www.readysetink.com/card/tod-copper-best-of-friends.html): Emerald, cost 4, Character, Rare, Shift 2
+- [Tramp - Dapper Rascal](https://www.readysetink.com/card/tramp-dapper-rascal.html): Amber / Emerald, cost 6, Character, Super Rare, Shift 4
+- [Triton - Champion of Atlantica](https://www.readysetink.com/card/triton-champion-of-atlantica.html): Sapphire, cost 9, Character, Legendary, Shift 6
+- [Ursula - Eric's Bride](https://www.readysetink.com/card/ursula-erics-bride.html): Amber, cost 4, Character, Rare, Shift
+- [Ursula - Sea Witch Queen](https://www.readysetink.com/card/ursula-sea-witch-queen.html): Amethyst, cost 7, Character, Legendary, Shift 5
+- [Vanellope von Schweetz - Sugar Rush Princess](https://www.readysetink.com/card/vanellope-von-schweetz-sugar-rush-princess.html): Amber, cost 4, Character, Rare, Shift 2
+- [Violet Parr - Super Resilient](https://www.readysetink.com/card/violet-parr-super-resilient.html): Steel, cost 5, Character, Super Rare, Shift 3
+- [Webby Vanderquack - Junior Prospector](https://www.readysetink.com/card/webby-vanderquack-junior-prospector.html): Emerald, cost 4, Character, Legendary, Shift 2
+- [Winnie the Pooh & Piglet - Hunny Mages](https://www.readysetink.com/card/winnie-the-pooh-piglet-hunny-mages.html): Amethyst / Sapphire, cost 5, Character, Super Rare, Shift 3
+- [Woody - Jungle Guide](https://www.readysetink.com/card/woody-jungle-guide.html): Amber, cost 5, Character, Legendary, Shift 3
+- [Woody & Buzz Lightyear - Best Buddies](https://www.readysetink.com/card/woody-buzz-lightyear-best-buddies.html): Amber / Emerald, cost 7, Character, Legendary, Shift 5
+- [Wreck-It Ralph - Big Lug](https://www.readysetink.com/card/wreck-it-ralph-big-lug.html): Amber / Ruby, cost 7, Character, Super Rare, Shift 5
+- [Yokai - Scientific Supervillain](https://www.readysetink.com/card/yokai-scientific-supervillain.html): Sapphire, cost 9, Character, Rare, Shift 6
+- [Yzma - Above It All](https://www.readysetink.com/card/yzma-above-it-all.html): Amethyst / Emerald, cost 7, Character, Super Rare, Shift 5
+- [Yzma - Scary Beyond All Reason](https://www.readysetink.com/card/yzma-scary-beyond-all-reason.html): Amethyst, cost 6, Character, Super Rare, Shift 4
+- [Zipper - Big Helper](https://www.readysetink.com/card/zipper-big-helper.html): Sapphire, cost 4, Character, Super Rare, Shift 2

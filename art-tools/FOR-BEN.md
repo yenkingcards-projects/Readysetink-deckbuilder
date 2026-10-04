@@ -84,7 +84,7 @@ once per file.
 Open Terminal, then paste this first, every time:
 
 ```
-cd "/Users/benjamindacy/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
+cd "$HOME/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
 ```
 
 ---

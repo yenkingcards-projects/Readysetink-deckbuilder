@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "/Users/benjamindacy/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
+cd "$HOME/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
 echo "=================================================="
 echo " Running sets 5 through 13: Shimmering Skies,"
 echo " Azurite Sea, Archazia's Island, The Reign of Jafar,"

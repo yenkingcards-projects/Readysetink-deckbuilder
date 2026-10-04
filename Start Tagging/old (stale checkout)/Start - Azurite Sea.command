@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "/Users/benjamindacy/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
+cd "$HOME/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
 
 echo "=== Azurite Sea ==="
 echo ""

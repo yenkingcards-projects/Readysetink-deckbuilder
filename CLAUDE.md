@@ -36,9 +36,7 @@ silently trust PROJECT.md's numbers; if something's now stale, say so in one
 line to Ben and keep going, don't stop and rewrite PROJECT.md yourself mid-task
 unless he asks.
 
-1. The plan: `/Users/benjamindacy/Documents/ai brian lmao/10-Projects/Ready Set Ink - Deck Builder Site/PROJECT.md`
-   (what's already live, current priorities, constraints, open questions).
-2. `BIGPICTURE.md` in the same vault if relevant to the change.
+1. The project plan and current priorities (kept per-developer in `CLAUDE.local.md`, which is not committed; if you don't have one, ask the owner).
 3. This repo's own docs, which are the day-to-day source of truth and take
    precedence over generic Claude Code habits:
    - `README.md` — the one rule: never hand-edit `index.html` or
@@ -51,9 +49,7 @@ unless he asks.
      the hand-authored data files.
    - `UPLOAD.md` and `CARD-DATA.md` — file-by-file map and where card data
      comes from.
-4. Check for a handoff from the last session at
-   `/Users/benjamindacy/Documents/ai brian lmao/10-Projects/Ready Set Ink - Deck Builder Site/handoffs/LATEST.md`
-   if one exists, and pick up from it.
+4. Check for a handoff from the last session (see `CLAUDE.local.md` if you keep one) and pick up from it.
 
 ## Hard rules (never break these)
 

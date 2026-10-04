@@ -1,0 +1,120 @@
+# Aladdin: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/aladdin/
+
+114 cards.
+
+- [A Whole New World](https://www.readysetink.com/card/a-whole-new-world.html): Steel, cost 5, Action, Super Rare
+- [Abu - Bold Helmsman](https://www.readysetink.com/card/abu-bold-helmsman.html): Ruby, cost 5, Character, Common
+- [Abu - Cheeky Phantasm](https://www.readysetink.com/card/abu-cheeky-phantasm.html): cost 5, Character, Special
+- [Abu - Illusory Pachyderm](https://www.readysetink.com/card/abu-illusory-pachyderm.html): Amethyst / Steel, cost 6, Character, Uncommon
+- [Abu - Mischievous Monkey](https://www.readysetink.com/card/abu-mischievous-monkey.html): Ruby, cost 3, Character, Common
+- [Abu - Wise Sultan](https://www.readysetink.com/card/abu-wise-sultan.html): Amethyst, cost 1, Character, Uncommon
+- [Agrabah - Marketplace](https://www.readysetink.com/card/agrabah-marketplace.html): Ruby, cost 3, Location, Common
+- [Aladdin - Barreling Through](https://www.readysetink.com/card/aladdin-barreling-through.html): Ruby, cost 3, Character, Rare
+- [Aladdin - Brave Rescuer](https://www.readysetink.com/card/aladdin-brave-rescuer.html): Steel, cost 3, Character, Uncommon
+- [Aladdin - Cornered Swordsman](https://www.readysetink.com/card/aladdin-cornered-swordsman.html): Steel, cost 2, Character, Common
+- [Aladdin - Created by the Vine](https://www.readysetink.com/card/aladdin-created-by-the-vine.html): Steel, cost 3, Character, Rare
+- [Aladdin - Doing His Part](https://www.readysetink.com/card/aladdin-doing-his-part.html): Emerald, cost 2, Character, Common
+- [Aladdin - Fearless Navigator](https://www.readysetink.com/card/aladdin-fearless-navigator.html): Ruby, cost 2, Character, Common
+- [Aladdin - Heroic Outlaw](https://www.readysetink.com/card/aladdin-heroic-outlaw.html): Ruby, cost 7, Character, Super Rare
+- [Aladdin - Intrepid Commander](https://www.readysetink.com/card/aladdin-intrepid-commander.html): Ruby, cost 4, Character, Uncommon
+- [Aladdin - Misleading Phantom](https://www.readysetink.com/card/aladdin-misleading-phantom.html): cost 3, Character, Special
+- [Aladdin - On the Edge of Adventure](https://www.readysetink.com/card/aladdin-on-the-edge-of-adventure.html): Emerald, cost 3, Character, Common
+- [Aladdin - Prince Ali](https://www.readysetink.com/card/aladdin-prince-ali.html): Emerald, cost 2, Character, Common
+- [Aladdin - Research Assistant](https://www.readysetink.com/card/aladdin-research-assistant.html): Steel, cost 4, Character, Rare
+- [Aladdin - Resolute Swordsman](https://www.readysetink.com/card/aladdin-resolute-swordsman.html): Steel, cost 1, Character, Common
+- [Aladdin - Street Rat](https://www.readysetink.com/card/aladdin-street-rat.html): Ruby, cost 3, Character, Common
+- [Aladdin - Vigilant Guard](https://www.readysetink.com/card/aladdin-vigilant-guard.html): Sapphire / Steel, cost 6, Character, Rare
+- [Aladdin & Genie - Mischievous Pals](https://www.readysetink.com/card/aladdin-genie-mischievous-pals.html): Amethyst / Emerald, cost 5, Character, Super Rare
+- [Bend to My Will](https://www.readysetink.com/card/bend-to-my-will.html): Emerald, cost 7, Action, Super Rare
+- [Blast from Your Past](https://www.readysetink.com/card/blast-from-your-past.html): Amber, cost 6, Action, Super Rare
+- [But I'm Much Faster](https://www.readysetink.com/card/but-im-much-faster.html): Steel, cost 1, Action, Common
+- [Divebomb](https://www.readysetink.com/card/divebomb.html): Ruby, cost 3, Action, Uncommon
+- [Energy Blast](https://www.readysetink.com/card/energy-blast.html): Ruby, cost 7, Action, Rare
+- [Finders Keepers](https://www.readysetink.com/card/finders-keepers.html): Amethyst, cost 5, Action, Uncommon
+- [Friend Like Me](https://www.readysetink.com/card/friend-like-me.html): Sapphire, cost 5, Action, Rare
+- [Gazeem - Ruthless Ruffian](https://www.readysetink.com/card/gazeem-ruthless-ruffian.html): cost 5, Character, Special
+- [Genie - Cramped in the Lamp](https://www.readysetink.com/card/genie-cramped-in-the-lamp.html): Sapphire, cost 2, Character, Uncommon
+- [Genie - Excited Shipbuilder](https://www.readysetink.com/card/genie-excited-shipbuilder.html): Amethyst, cost 3, Character, Common
+- [Genie - Hard to Grasp](https://www.readysetink.com/card/genie-hard-to-grasp.html): Amethyst, cost 4, Character, Uncommon
+- [Genie - Investigative Mind](https://www.readysetink.com/card/genie-investigative-mind.html): Sapphire, cost 5, Character, Common
+- [Genie - Magical Researcher](https://www.readysetink.com/card/genie-magical-researcher.html): Amethyst, cost 3, Character, Rare
+- [Genie - Main Attraction](https://www.readysetink.com/card/genie-main-attraction.html): Amethyst, cost 7, Character, Legendary
+- [Genie - Of the Lamp](https://www.readysetink.com/card/genie-of-the-lamp.html): Emerald, cost 4, Character, Super Rare
+- [Genie - On the Job](https://www.readysetink.com/card/genie-on-the-job.html): Emerald, cost 6, Character, Super Rare
+- [Genie - Powers Unleashed](https://www.readysetink.com/card/genie-powers-unleashed.html): Emerald, cost 8, Character, Rare
+- [Genie - Satisfied Dragon](https://www.readysetink.com/card/genie-satisfied-dragon.html): Steel, cost 3, Character, Common
+- [Genie - Supportive Friend](https://www.readysetink.com/card/genie-supportive-friend.html): Amethyst, cost 4, Character, Super Rare
+- [Genie - The Ever Impressive](https://www.readysetink.com/card/genie-the-ever-impressive.html): Emerald, cost 2, Character, Common
+- [Genie - Towering Phantasm](https://www.readysetink.com/card/genie-towering-phantasm.html): cost 5, Character, Special
+- [Genie - Wish Fulfilled](https://www.readysetink.com/card/genie-wish-fulfilled.html): Amethyst, cost 4, Character, Rare
+- [Genie - Wonderful Trickster](https://www.readysetink.com/card/genie-wonderful-trickster.html): Amethyst, cost 7, Character, Legendary
+- [Giant Cobra - Ghostly Serpent](https://www.readysetink.com/card/giant-cobra-ghostly-serpent.html): Amethyst / Steel, cost 3, Character, Uncommon
+- [He's Got a Sword!](https://www.readysetink.com/card/hes-got-a-sword.html): Ruby, cost 1, Action, Common
+- [Hypnotic Strength](https://www.readysetink.com/card/hypnotic-strength.html): Amethyst, cost 2, Action, Common
+- [Iago - Crown Seeker](https://www.readysetink.com/card/iago-crown-seeker.html): cost 6, Character, Special
+- [Iago - Fake Flamingo](https://www.readysetink.com/card/iago-fake-flamingo.html): Emerald, cost 4, Character, Rare
+- [Iago - Giant Spectral Parrot](https://www.readysetink.com/card/iago-giant-spectral-parrot.html): Amethyst, cost 4, Character, Rare
+- [Iago - Loud-Mouthed Parrot](https://www.readysetink.com/card/iago-loud-mouthed-parrot.html): Emerald, cost 3, Character, Rare
+- [Iago - Out of Reach](https://www.readysetink.com/card/iago-out-of-reach.html): Steel, cost 4, Character, Rare
+- [Iago - Pretty Polly](https://www.readysetink.com/card/iago-pretty-polly.html): Amethyst, cost 3, Character, Common
+- [Iago - Raucous Lookout](https://www.readysetink.com/card/iago-raucous-lookout.html): cost 4, Character, Special
+- [Iago - Reappearing Parrot](https://www.readysetink.com/card/iago-reappearing-parrot.html): Amethyst, cost 4, Character, Common
+- [Iago - Stompin' Mad](https://www.readysetink.com/card/iago-stompin-mad.html): Amethyst, cost 2, Character, Uncommon
+- [Jafar - Aspiring Ruler](https://www.readysetink.com/card/jafar-aspiring-ruler.html): Steel, cost 3, Character, Common
+- [Jafar - Double-Crossing Vizier](https://www.readysetink.com/card/jafar-double-crossing-vizier.html): cost 7, Character, Special
+- [Jafar - Dreadnought](https://www.readysetink.com/card/jafar-dreadnought.html): Steel, cost 4, Character, Uncommon
+- [Jafar - High Sultan of Lorcana](https://www.readysetink.com/card/jafar-high-sultan-of-lorcana.html): Amethyst / Steel, cost 5, Character, Super Rare
+- [Jafar - Keeper of Secrets](https://www.readysetink.com/card/jafar-keeper-of-secrets.html): Amethyst, cost 4, Character, Rare
+- [Jafar - Lamp Thief](https://www.readysetink.com/card/jafar-lamp-thief.html): Amethyst, cost 3, Character, Uncommon
+- [Jafar - Newly Crowned](https://www.readysetink.com/card/jafar-newly-crowned.html): Amethyst / Steel, cost 4, Character, Super Rare
+- [Jafar - Power-Hungry Vizier](https://www.readysetink.com/card/jafar-power-hungry-vizier.html): Steel, cost 5, Character, Super Rare
+- [Jafar - Royal Vizier](https://www.readysetink.com/card/jafar-royal-vizier.html): Steel, cost 2, Character, Common
+- [Jafar - Spectral Sorcerer](https://www.readysetink.com/card/jafar-spectral-sorcerer.html): cost 4, Character, Special
+- [Jafar - Striking Illusionist](https://www.readysetink.com/card/jafar-striking-illusionist.html): Amethyst, cost 7, Character, Legendary
+- [Jafar - Tyrannical Hypnotist](https://www.readysetink.com/card/jafar-tyrannical-hypnotist.html): Steel, cost 6, Character, Legendary
+- [Jafar - Wicked Sorcerer](https://www.readysetink.com/card/jafar-wicked-sorcerer.html): Amethyst, cost 4, Character, Common
+- [Jasmine - Desert Warrior](https://www.readysetink.com/card/jasmine-desert-warrior.html): Emerald, cost 5, Character, Rare
+- [Jasmine - Disguised](https://www.readysetink.com/card/jasmine-disguised.html): Sapphire, cost 3, Character, Common
+- [Jasmine - Ephemeral Princess](https://www.readysetink.com/card/jasmine-ephemeral-princess.html): cost 4, Character, Special
+- [Jasmine - Fearless Princess](https://www.readysetink.com/card/jasmine-fearless-princess.html): Steel, cost 5, Character, Rare
+- [Jasmine - Heir of Agrabah](https://www.readysetink.com/card/jasmine-heir-of-agrabah.html): Sapphire, cost 1, Character, Common
+- [Jasmine - Inspired Researcher](https://www.readysetink.com/card/jasmine-inspired-researcher.html): Sapphire / Steel, cost 5, Character, Rare
+- [Jasmine - Queen of Agrabah](https://www.readysetink.com/card/jasmine-queen-of-agrabah.html): Sapphire, cost 5, Character, Rare
+- [Jasmine - Rebellious Princess](https://www.readysetink.com/card/jasmine-rebellious-princess.html): Ruby, cost 3, Character, Uncommon
+- [Jasmine - Resourceful Infiltrator](https://www.readysetink.com/card/jasmine-resourceful-infiltrator.html): Sapphire, cost 1, Character, Common
+- [Jasmine - Royal Commodore](https://www.readysetink.com/card/jasmine-royal-commodore.html): Emerald, cost 6, Character, Legendary
+- [Jasmine - Royal Seafarer](https://www.readysetink.com/card/jasmine-royal-seafarer.html): Emerald, cost 3, Character, Rare
+- [Jasmine - Soothing Princess](https://www.readysetink.com/card/jasmine-soothing-princess.html): Sapphire, cost 4, Character, Uncommon
+- [Jasmine - Steady Strategist](https://www.readysetink.com/card/jasmine-steady-strategist.html): Sapphire / Steel, cost 4, Character, Super Rare
+- [Jasmine - Vine Expert](https://www.readysetink.com/card/jasmine-vine-expert.html): Amber, cost 4, Character, Common
+- [Lead the Way](https://www.readysetink.com/card/lead-the-way.html): Ruby, cost 2, Action, Common
+- [Magic Carpet - Amazing Flier](https://www.readysetink.com/card/magic-carpet-amazing-flier.html): Amethyst, cost 3, Character, Uncommon
+- [Magic Carpet - Flying Rug](https://www.readysetink.com/card/magic-carpet-flying-rug.html): Amethyst, cost 2, Character, Common
+- [Magic Carpet - Phantom Rug](https://www.readysetink.com/card/magic-carpet-phantom-rug.html): Steel, cost 3, Character, Common
+- [Magical Aid](https://www.readysetink.com/card/magical-aid.html): Amethyst, cost 3, Action, Uncommon
+- [One Jump Ahead](https://www.readysetink.com/card/one-jump-ahead.html): Sapphire, cost 2, Action, Uncommon
+- [One and Only](https://www.readysetink.com/card/one-and-only.html): Amethyst, cost 3, Action, Uncommon
+- [Palace Guard - Crown Hunter](https://www.readysetink.com/card/palace-guard-crown-hunter.html): cost 3, Character, Special
+- [Palace Guard - Spectral Sentry](https://www.readysetink.com/card/palace-guard-spectral-sentry.html): Amethyst, cost 1, Character, Common
+- [Prince Achmed - Rival Suitor](https://www.readysetink.com/card/prince-achmed-rival-suitor.html): Steel, cost 2, Character, Common
+- [Rajah - Devoted Protector](https://www.readysetink.com/card/rajah-devoted-protector.html): Amber, cost 3, Character, Common
+- [Rajah - Ghostly Tiger](https://www.readysetink.com/card/rajah-ghostly-tiger.html): Amethyst, cost 2, Character, Common
+- [Rajah - Royal Protector](https://www.readysetink.com/card/rajah-royal-protector.html): Steel, cost 4, Character, Rare
+- [Razoul - Menacing Guard](https://www.readysetink.com/card/razoul-menacing-guard.html): Steel, cost 2, Character, Common
+- [Razoul - Palace Guard](https://www.readysetink.com/card/razoul-palace-guard.html): Steel, cost 2, Character, Common
+- [Razoul - Unyielding Guard](https://www.readysetink.com/card/razoul-unyielding-guard.html): cost 2, Character, Special
+- [Scarab](https://www.readysetink.com/card/scarab.html): Amethyst, cost 2, Item, Common
+- [Seeking the Half Crown](https://www.readysetink.com/card/seeking-the-half-crown.html): Amethyst, cost 5, Action, Rare
+- [Startle](https://www.readysetink.com/card/startle.html): Sapphire, cost 1, Action, Common
+- [Stolen Scimitar](https://www.readysetink.com/card/stolen-scimitar.html): Emerald, cost 2, Item, Common
+- [The Lamp](https://www.readysetink.com/card/the-lamp.html): Amethyst, cost 2, Item, Rare
+- [The Sultan - Playful Monarch](https://www.readysetink.com/card/the-sultan-playful-monarch.html): Sapphire, cost 1, Character, Rare
+- [The Sultan - Royal Apparition](https://www.readysetink.com/card/the-sultan-royal-apparition.html): Amethyst / Steel, cost 5, Character, Rare
+- [The Sultan - Spectral Ruler](https://www.readysetink.com/card/the-sultan-spectral-ruler.html): cost 4, Character, Special
+- [Thievery](https://www.readysetink.com/card/thievery.html): Ruby, cost 1, Action, Common
+- [Treasure Guardian - Foreboding Sentry](https://www.readysetink.com/card/treasure-guardian-foreboding-sentry.html): Amethyst, cost 4, Character, Common
+- [Treasure Guardian - Illusionary Protector](https://www.readysetink.com/card/treasure-guardian-illusionary-protector.html): cost 2, Character, Special
+- [Treasure Guardian - Protector of the Cave](https://www.readysetink.com/card/treasure-guardian-protector-of-the-cave.html): Amethyst, cost 4, Character, Rare
+- [You've Got Some Punch](https://www.readysetink.com/card/youve-got-some-punch.html): Amethyst, cost 2, Action, Common

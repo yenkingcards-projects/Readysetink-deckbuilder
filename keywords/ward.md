@@ -1,0 +1,64 @@
+# Ward: Disney Lorcana keyword
+
+Source: https://www.readysetink.com/keywords/ward/
+
+Opponents can't choose this card when resolving an effect. Effects that don't choose, such as ones that hit everything, still affect it. Official rule 8.15. 58 cards.
+
+- [Aladdin - Prince Ali](https://www.readysetink.com/card/aladdin-prince-ali.html): Emerald, cost 2, Character, Common, Ward
+- [Alice - Savvy Sailor](https://www.readysetink.com/card/alice-savvy-sailor.html): Sapphire, cost 3, Character, Super Rare, Ward
+- [Ariel - Treasure Collector](https://www.readysetink.com/card/ariel-treasure-collector.html): Sapphire, cost 6, Character, Super Rare, Ward
+- [Audrey Ramirez - The Engineer](https://www.readysetink.com/card/audrey-ramirez-the-engineer.html): Sapphire, cost 5, Character, Rare, Ward
+- [Aurora - Tranquil Princess](https://www.readysetink.com/card/aurora-tranquil-princess.html): Sapphire, cost 2, Character, Common, Ward
+- [Belle - Of the Ball](https://www.readysetink.com/card/belle-of-the-ball.html): Sapphire, cost 4, Character, Rare, Ward
+- [Big Mama - Clever and Calming](https://www.readysetink.com/card/big-mama-clever-and-calming.html): Emerald, cost 4, Character, Uncommon, Ward
+- [Clockwork Sawblades - Treacherous Trap](https://www.readysetink.com/card/clockwork-sawblades-treacherous-trap.html): cost 6, Location, Special, Ward
+- [Cogsworth - Grandfather Clock](https://www.readysetink.com/card/cogsworth-grandfather-clock.html): Sapphire, cost 5, Character, Super Rare, Ward
+- [Crystal Gate - Unbreakable Boundary](https://www.readysetink.com/card/crystal-gate-unbreakable-boundary.html): cost 6, Location, Special, Ward
+- [Darkwing Duck - Drake Mallard](https://www.readysetink.com/card/darkwing-duck-drake-mallard.html): Sapphire, cost 2, Character, Uncommon, Ward
+- [Darkwing Duck & Launchpad - St. Canard's Finest](https://www.readysetink.com/card/darkwing-duck-launchpad-st-canards-finest.html): Sapphire / Steel, cost 7, Character, Super Rare, Ward
+- [Donald Duck - Strutting His Stuff](https://www.readysetink.com/card/donald-duck-strutting-his-stuff.html): Sapphire, cost 5, Character, Common, Ward
+- [Doug - Lying in Wait](https://www.readysetink.com/card/doug-lying-in-wait.html): Sapphire, cost 4, Character, Common, Ward
+- [Dr. Bushroot - Evil Botanist](https://www.readysetink.com/card/dr-bushroot-evil-botanist.html): Emerald, cost 5, Character, Rare, Ward
+- [Duke Weaselton - Small-Time Crook](https://www.readysetink.com/card/duke-weaselton-small-time-crook.html): Sapphire, cost 2, Character, Common, Ward
+- [Goofy - Expert Shipwright](https://www.readysetink.com/card/goofy-expert-shipwright.html): Emerald, cost 5, Character, Rare, Ward
+- [Hades - Meticulous Schemer](https://www.readysetink.com/card/hades-meticulous-schemer.html): Sapphire, cost 6, Character, Uncommon, Ward
+- [Heathcliff - Stoic Butler](https://www.readysetink.com/card/heathcliff-stoic-butler.html): Emerald, cost 4, Character, Common, Ward
+- [Hera - Queen of the Gods](https://www.readysetink.com/card/hera-queen-of-the-gods.html): Emerald, cost 3, Character, Rare, Ward
+- [Hercules - Baby Demigod](https://www.readysetink.com/card/hercules-baby-demigod.html): Emerald, cost 6, Character, Legendary, Ward
+- [Jetsam - Riffraff](https://www.readysetink.com/card/jetsam-riffraff.html): Emerald, cost 3, Character, Common, Ward
+- [Kaa - Suspicious Serpent](https://www.readysetink.com/card/kaa-suspicious-serpent.html): Emerald, cost 3, Character, Common, Ward
+- [Kida - Creative Thinker](https://www.readysetink.com/card/kida-creative-thinker.html): Sapphire, cost 4, Character, Rare, Ward
+- [Kit Cloudkicker - Navigator](https://www.readysetink.com/card/kit-cloudkicker-navigator.html): Sapphire, cost 6, Character, Uncommon, Ward
+- [Kit Cloudkicker - Spunky Bear Cub](https://www.readysetink.com/card/kit-cloudkicker-spunky-bear-cub.html): Sapphire, cost 1, Character, Common, Ward
+- [Kronk - Laid Back](https://www.readysetink.com/card/kronk-laid-back.html): Amethyst / Emerald, cost 5, Character, Rare, Ward
+- [Kuzco - Temperamental Emperor](https://www.readysetink.com/card/kuzco-temperamental-emperor.html): Emerald, cost 5, Character, Rare, Ward
+- [Lady Kluck - Protective Confidant](https://www.readysetink.com/card/lady-kluck-protective-confidant.html): Sapphire / Steel, cost 5, Character, Uncommon, Ward
+- [Megara - Liberated One](https://www.readysetink.com/card/megara-liberated-one.html): Emerald, cost 5, Character, Uncommon, Ward
+- [Merida - Defiant Daughter](https://www.readysetink.com/card/merida-defiant-daughter.html): Emerald, cost 2, Character, Common, Ward
+- [Merryweather - Feisty Fairy](https://www.readysetink.com/card/merryweather-feisty-fairy.html): Sapphire, cost 4, Character, Uncommon, Ward
+- [Milo Thatch - Getting His Hands Dirty](https://www.readysetink.com/card/milo-thatch-getting-his-hands-dirty.html): Emerald, cost 7, Character, Super Rare, Ward
+- [Minnie Mouse - Mrs. Cratchit](https://www.readysetink.com/card/minnie-mouse-mrs-cratchit.html): Emerald, cost 5, Character, Rare, Ward
+- [Minnie Mouse - Urban Visionary](https://www.readysetink.com/card/minnie-mouse-urban-visionary.html): Sapphire, cost 8, Character, Super Rare, Ward
+- [Patch - Playful Pup](https://www.readysetink.com/card/patch-playful-pup.html): Amber / Sapphire, cost 1, Character, Uncommon, Ward
+- [Pete - Bad Guy](https://www.readysetink.com/card/pete-bad-guy.html): Emerald, cost 5, Character, Rare, Ward
+- [Prince John - Greediest of All](https://www.readysetink.com/card/prince-john-greediest-of-all.html): Emerald, cost 3, Character, Rare, Ward
+- [Prince Phillip - Royal Explorer](https://www.readysetink.com/card/prince-phillip-royal-explorer.html): Emerald, cost 3, Character, Uncommon, Ward
+- [Ratigan - Greedy Genius](https://www.readysetink.com/card/ratigan-greedy-genius.html): Sapphire, cost 8, Character, Legendary, Ward
+- [Robin Hood - Timely Contestant](https://www.readysetink.com/card/robin-hood-timely-contestant.html): Emerald, cost 9, Character, Rare, Ward
+- [Roo - Hunny Rogue](https://www.readysetink.com/card/roo-hunny-rogue.html): Emerald, cost 1, Character, Uncommon, Ward
+- [Scar - Vengeful Lion](https://www.readysetink.com/card/scar-vengeful-lion.html): Emerald, cost 4, Character, Rare, Ward
+- [Scuttle - Birdbrained](https://www.readysetink.com/card/scuttle-birdbrained.html): Sapphire, cost 5, Character, Uncommon, Ward
+- [Skippy - Energetic Rabbit](https://www.readysetink.com/card/skippy-energetic-rabbit.html): Emerald, cost 2, Character, Common, Ward
+- [Splatter Phoenix - Rejected Artist](https://www.readysetink.com/card/splatter-phoenix-rejected-artist.html): Sapphire, cost 2, Character, Uncommon, Ward
+- [Tamatoa - Seeker of Shine](https://www.readysetink.com/card/tamatoa-seeker-of-shine.html): Sapphire, cost 7, Character, Super Rare, Ward
+- [The Huntsman - On the Queen's Orders](https://www.readysetink.com/card/the-huntsman-on-the-queens-orders.html): Emerald, cost 3, Character, Uncommon, Ward
+- [The Muses - Proclaimers of Heroes](https://www.readysetink.com/card/the-muses-proclaimers-of-heroes.html): Emerald, cost 4, Character, Rare, Ward
+- [The Nokk - Water Spirit](https://www.readysetink.com/card/the-nokk-water-spirit.html): Sapphire, cost 4, Character, Common, Ward
+- [The Queen - Crown of the Council](https://www.readysetink.com/card/the-queen-crown-of-the-council.html): Sapphire, cost 4, Character, Rare, Ward
+- [The Queen - Cruelest of All](https://www.readysetink.com/card/the-queen-cruelest-of-all.html): Sapphire, cost 2, Character, Common, Ward
+- [The Queen - Fairest of All](https://www.readysetink.com/card/the-queen-fairest-of-all.html): Sapphire, cost 5, Character, Super Rare, Ward
+- [Thomas O'Malley - Feline Charmer](https://www.readysetink.com/card/thomas-omalley-feline-charmer.html): Emerald, cost 3, Character, Uncommon, Ward
+- [Webby Vanderquack - Junior Prospector](https://www.readysetink.com/card/webby-vanderquack-junior-prospector.html): Emerald, cost 4, Character, Legendary, Ward
+- [Wendy Darling - Authority on Peter Pan](https://www.readysetink.com/card/wendy-darling-authority-on-peter-pan.html): Sapphire, cost 3, Character, Super Rare, Ward
+- [Winifred - Exasperated Elephant](https://www.readysetink.com/card/winifred-exasperated-elephant.html): Emerald, cost 6, Character, Common, Ward
+- [Zipper - Astute Decoy](https://www.readysetink.com/card/zipper-astute-decoy.html): Sapphire, cost 3, Character, Rare, Ward

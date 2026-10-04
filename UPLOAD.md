@@ -90,7 +90,7 @@ errata'd, what moved in price — and shouts if the build looks broken.
 
 1. **Vercel Analytics** — the script is already in every page. Turn it on in the
    Vercel dashboard → Analytics, and it starts working.
-2. **Google Search Console** — submit `https://readysetink.vercel.app/sitemap.xml`.
+2. **Google Search Console** — submit `https://www.readysetink.com/sitemap.xml`.
    2,500 pages take weeks to index; the sooner it starts the better.
 
 And when your affiliate id arrives, it goes in one place:

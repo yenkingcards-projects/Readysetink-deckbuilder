@@ -1,0 +1,82 @@
+# The Little Mermaid: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/the-little-mermaid/
+
+76 cards.
+
+- [Ariel - Adventurous Collector](https://www.readysetink.com/card/ariel-adventurous-collector.html): Ruby, cost 3, Character, Super Rare
+- [Ariel - Curious Traveler](https://www.readysetink.com/card/ariel-curious-traveler.html): Amber, cost 4, Character, Rare
+- [Ariel - Determined Mermaid](https://www.readysetink.com/card/ariel-determined-mermaid.html): Steel, cost 3, Character, Common
+- [Ariel - Ethereal Voice](https://www.readysetink.com/card/ariel-ethereal-voice.html): Amber, cost 4, Character, Rare
+- [Ariel - On Human Legs](https://www.readysetink.com/card/ariel-on-human-legs.html): Amber, cost 4, Character, Uncommon
+- [Ariel - Singing Mermaid](https://www.readysetink.com/card/ariel-singing-mermaid.html): Amber, cost 4, Character, Rare
+- [Ariel - Sonic Warrior](https://www.readysetink.com/card/ariel-sonic-warrior.html): Steel, cost 6, Character, Super Rare
+- [Ariel - Spectacular Singer](https://www.readysetink.com/card/ariel-spectacular-singer.html): Amber, cost 3, Character, Super Rare
+- [Ariel - Treasure Collector](https://www.readysetink.com/card/ariel-treasure-collector.html): Sapphire, cost 6, Character, Super Rare
+- [Ariel - Whoseit Collector](https://www.readysetink.com/card/ariel-whoseit-collector.html): Sapphire, cost 4, Character, Rare
+- [Ariel's Grotto - A Secret Place](https://www.readysetink.com/card/ariels-grotto-a-secret-place.html): Sapphire, cost 2, Location, Rare
+- [Atlantica - Concert Hall](https://www.readysetink.com/card/atlantica-concert-hall.html): Amber, cost 1, Location, Common
+- [Binding Contract](https://www.readysetink.com/card/binding-contract.html): Amethyst, cost 4, Item, Uncommon
+- [Chef Louis - In Over His Head](https://www.readysetink.com/card/chef-louis-in-over-his-head.html): Sapphire, cost 7, Character, Uncommon
+- [Cursed Merfolk - Ursula's Handiwork](https://www.readysetink.com/card/cursed-merfolk-ursulas-handiwork.html): Emerald, cost 1, Character, Rare
+- [Dinglehopper](https://www.readysetink.com/card/dinglehopper.html): Amber, cost 1, Item, Common
+- [Fishbone Quill](https://www.readysetink.com/card/fishbone-quill.html): Sapphire, cost 3, Item, Rare
+- [Flotsam - Riffraff](https://www.readysetink.com/card/flotsam-riffraff.html): Emerald, cost 3, Character, Common
+- [Flotsam - Slippery as an Eel](https://www.readysetink.com/card/flotsam-slippery-as-an-eel.html): Emerald, cost 3, Character, Common
+- [Flotsam - Ursula's "Baby"](https://www.readysetink.com/card/flotsam-ursulas-baby.html): Amethyst, cost 3, Character, Uncommon
+- [Flotsam - Ursula's Spy](https://www.readysetink.com/card/flotsam-ursulas-spy.html): Amethyst, cost 5, Character, Rare
+- [Flotsam - Wicked Defender](https://www.readysetink.com/card/flotsam-wicked-defender.html): cost 4, Character, Special
+- [Flotsam & Jetsam - Entangling Eels](https://www.readysetink.com/card/flotsam-jetsam-entangling-eels.html): Amethyst, cost 6, Character, Uncommon
+- [Flounder - Collector's Companion](https://www.readysetink.com/card/flounder-collectors-companion.html): Sapphire, cost 3, Character, Uncommon
+- [Flounder - Voice of Reason](https://www.readysetink.com/card/flounder-voice-of-reason.html): Sapphire, cost 1, Character, Common
+- [Jetsam - Opportunistic Eel](https://www.readysetink.com/card/jetsam-opportunistic-eel.html): Emerald, cost 7, Character, Common
+- [Jetsam - Riffraff](https://www.readysetink.com/card/jetsam-riffraff.html): Emerald, cost 3, Character, Common
+- [Jetsam - Ursula's "Baby"](https://www.readysetink.com/card/jetsam-ursulas-baby.html): Amethyst, cost 3, Character, Common
+- [Jetsam - Ursula's Spy](https://www.readysetink.com/card/jetsam-ursulas-spy.html): Amethyst, cost 4, Character, Common
+- [Jetsam - Wicked Whisperer](https://www.readysetink.com/card/jetsam-wicked-whisperer.html): cost 2, Character, Special
+- [Max - Loyal Sheepdog](https://www.readysetink.com/card/max-loyal-sheepdog.html): Amber, cost 3, Character, Common
+- [Part of Your World](https://www.readysetink.com/card/part-of-your-world.html): Amber, cost 3, Action, Rare
+- [Poor Unfortunate Souls](https://www.readysetink.com/card/poor-unfortunate-souls.html): Amethyst, cost 2, Action, Common
+- [Prince Eric - Dashing and Brave](https://www.readysetink.com/card/prince-eric-dashing-and-brave.html): Steel, cost 2, Character, Common
+- [Prince Eric - Expert Helmsman](https://www.readysetink.com/card/prince-eric-expert-helmsman.html): Ruby, cost 4, Character, Super Rare
+- [Prince Eric - Grim Groom](https://www.readysetink.com/card/prince-eric-grim-groom.html): cost 1, Character, Special
+- [Prince Eric - Noble Swordsman](https://www.readysetink.com/card/prince-eric-noble-swordsman.html): Amber, cost 5, Character, Common
+- [Prince Eric - Seafaring Prince](https://www.readysetink.com/card/prince-eric-seafaring-prince.html): Amber, cost 3, Character, Common
+- [Prince Eric - Ursula's Groom](https://www.readysetink.com/card/prince-eric-ursulas-groom.html): Amber, cost 6, Character, Uncommon
+- [Scuttle - Birdbrained](https://www.readysetink.com/card/scuttle-birdbrained.html): Sapphire, cost 5, Character, Uncommon
+- [Scuttle - Expert on Humans](https://www.readysetink.com/card/scuttle-expert-on-humans.html): Sapphire, cost 2, Character, Uncommon
+- [Sebastian - Court Composer](https://www.readysetink.com/card/sebastian-court-composer.html): Amber, cost 2, Character, Common
+- [Sebastian - Loyal Crab](https://www.readysetink.com/card/sebastian-loyal-crab.html): Amber, cost 2, Character, Rare
+- [Shark - Toothy Terror](https://www.readysetink.com/card/shark-toothy-terror.html): cost 5, Character, Special
+- [Sign the Scroll](https://www.readysetink.com/card/sign-the-scroll.html): Amber, cost 3, Action, Uncommon
+- [Signed Contract](https://www.readysetink.com/card/signed-contract.html): Emerald, cost 2, Item, Uncommon
+- [So Be It!](https://www.readysetink.com/card/so-be-it.html): Emerald, cost 2, Action, Common
+- [Spyglass Hat](https://www.readysetink.com/card/spyglass-hat.html): Sapphire, cost 3, Item, Rare
+- [The Boss is on a Roll](https://www.readysetink.com/card/the-boss-is-on-a-roll.html): Amethyst, cost 3, Action, Rare
+- [Treasures Untold](https://www.readysetink.com/card/treasures-untold.html): Sapphire, cost 6, Action, Rare
+- [Triton - Champion of Atlantica](https://www.readysetink.com/card/triton-champion-of-atlantica.html): Sapphire, cost 9, Character, Legendary
+- [Triton - Discerning King](https://www.readysetink.com/card/triton-discerning-king.html): Sapphire, cost 3, Character, Rare
+- [Triton - The Sea King](https://www.readysetink.com/card/triton-the-sea-king.html): Sapphire, cost 7, Character, Uncommon
+- [Triton - Young Prince](https://www.readysetink.com/card/triton-young-prince.html): Sapphire, cost 4, Character, Uncommon
+- [Triton's Daughters - Discordant Chorus](https://www.readysetink.com/card/tritons-daughters-discordant-chorus.html): cost 0, Character, Special
+- [Triton's Decree](https://www.readysetink.com/card/tritons-decree.html): Steel, cost 1, Action, Common
+- [Triton's Trident](https://www.readysetink.com/card/tritons-trident.html): Amethyst, cost 2, Item, Uncommon
+- [Under the Sea](https://www.readysetink.com/card/under-the-sea.html): Emerald, cost 8, Action, Rare
+- [Ursula - Created by the Vine](https://www.readysetink.com/card/ursula-created-by-the-vine.html): Amber, cost 4, Character, Rare
+- [Ursula - Deal Maker](https://www.readysetink.com/card/ursula-deal-maker.html): Sapphire, cost 3, Character, Legendary
+- [Ursula - Deceiver](https://www.readysetink.com/card/ursula-deceiver.html): Emerald, cost 2, Character, Uncommon
+- [Ursula - Deceiver of All](https://www.readysetink.com/card/ursula-deceiver-of-all.html): Emerald, cost 3, Character, Legendary
+- [Ursula - Eric's Bride](https://www.readysetink.com/card/ursula-erics-bride.html): Amber, cost 4, Character, Rare
+- [Ursula - Mad Sea Witch](https://www.readysetink.com/card/ursula-mad-sea-witch.html): Amethyst, cost 2, Character, Uncommon
+- [Ursula - Power Hungry](https://www.readysetink.com/card/ursula-power-hungry.html): Amethyst, cost 7, Character, Legendary
+- [Ursula - Sea Witch](https://www.readysetink.com/card/ursula-sea-witch.html): Amethyst, cost 3, Character, Rare
+- [Ursula - Sea Witch Queen](https://www.readysetink.com/card/ursula-sea-witch-queen.html): Amethyst, cost 7, Character, Legendary
+- [Ursula - Vanessa](https://www.readysetink.com/card/ursula-vanessa.html): Amber, cost 2, Character, Common
+- [Ursula - Voice Stealer](https://www.readysetink.com/card/ursula-voice-stealer.html): Amethyst, cost 5, Character, Super Rare
+- [Ursula - Whisper of Vanessa](https://www.readysetink.com/card/ursula-whisper-of-vanessa.html): Amethyst, cost 5, Character, Rare
+- [Ursula's Cauldron](https://www.readysetink.com/card/ursulas-cauldron.html): Amethyst, cost 2, Item, Uncommon
+- [Ursula's Garden - Full of the Unfortunate](https://www.readysetink.com/card/ursulas-garden-full-of-the-unfortunate.html): Emerald, cost 4, Location, Rare
+- [Ursula's Lair - Eye of the Storm](https://www.readysetink.com/card/ursulas-lair-eye-of-the-storm.html): Amethyst, cost 3, Location, Rare
+- [Ursula's Plan](https://www.readysetink.com/card/ursulas-plan.html): Amethyst, cost 3, Action, Uncommon
+- [Ursula's Shell Necklace](https://www.readysetink.com/card/ursulas-shell-necklace.html): Amber, cost 3, Item, Rare
+- [Ursula's Trickery](https://www.readysetink.com/card/ursulas-trickery.html): Emerald, cost 1, Action, Uncommon

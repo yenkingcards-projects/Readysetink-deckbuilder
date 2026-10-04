@@ -1,0 +1,149 @@
+# Evasive: Disney Lorcana keyword
+
+Source: https://www.readysetink.com/keywords/evasive/
+
+Can't be challenged except by a character that also has Evasive. The most common keyword in the game. Official rule 8.6. 143 cards.
+
+- [Aladdin - Misleading Phantom](https://www.readysetink.com/card/aladdin-misleading-phantom.html): cost 3, Character, Special, Evasive
+- [Anna - Ensnared Sister](https://www.readysetink.com/card/anna-ensnared-sister.html): cost 6, Character, Special, Evasive
+- [Archimedes - Electrified Owl](https://www.readysetink.com/card/archimedes-electrified-owl.html): Amethyst, cost 5, Character, Uncommon, Evasive
+- [Archimedes - Exasperated Owl](https://www.readysetink.com/card/archimedes-exasperated-owl.html): Amethyst, cost 3, Character, Common, Evasive
+- [Ariel - Adventurous Collector](https://www.readysetink.com/card/ariel-adventurous-collector.html): Ruby, cost 3, Character, Super Rare, Evasive
+- [Bashful - Riding the Rails](https://www.readysetink.com/card/bashful-riding-the-rails.html): Amethyst, cost 5, Character, Common, Evasive
+- [Basil - Hypnotized Mouse](https://www.readysetink.com/card/basil-hypnotized-mouse.html): Emerald, cost 3, Character, Common, Evasive
+- [Blue Fairy - Guiding Light](https://www.readysetink.com/card/blue-fairy-guiding-light.html): Amethyst / Sapphire, cost 2, Character, Uncommon, Evasive
+- [Blue Fairy - Rewarding Good Deeds](https://www.readysetink.com/card/blue-fairy-rewarding-good-deeds.html): Amethyst, cost 2, Character, Uncommon, Evasive
+- [Brooklyn - Second in Command](https://www.readysetink.com/card/brooklyn-second-in-command.html): Ruby, cost 2, Character, Common, Evasive
+- [Bruni - Fire Salamander](https://www.readysetink.com/card/bruni-fire-salamander.html): Amethyst, cost 4, Character, Uncommon, Evasive
+- [Bruno Madrigal - Undetected Uncle](https://www.readysetink.com/card/bruno-madrigal-undetected-uncle.html): Amethyst, cost 4, Character, Super Rare, Evasive
+- [Cheshire Cat - From the Shadows](https://www.readysetink.com/card/cheshire-cat-from-the-shadows.html): Emerald, cost 8, Character, Super Rare, Evasive
+- [Daisy Duck - Spotless Food-Fighter](https://www.readysetink.com/card/daisy-duck-spotless-food-fighter.html): Ruby, cost 2, Character, Common, Evasive
+- [Dash Parr - Dodgeball Dynamo](https://www.readysetink.com/card/dash-parr-dodgeball-dynamo.html): Ruby, cost 1, Character, Common, Evasive
+- [Dash Parr - Super Fast](https://www.readysetink.com/card/dash-parr-super-fast.html): Ruby, cost 5, Character, Rare, Evasive
+- [Dash Parr & Violet Parr - Super Siblings](https://www.readysetink.com/card/dash-parr-violet-parr-super-siblings.html): Ruby / Steel, cost 8, Character, Legendary, Evasive
+- [Diablo - Devoted Herald](https://www.readysetink.com/card/diablo-devoted-herald.html): Emerald, cost 3, Character, Legendary, Evasive
+- [Diablo - Spiteful Raven](https://www.readysetink.com/card/diablo-spiteful-raven.html): Amethyst / Emerald, cost 2, Character, Uncommon, Evasive
+- [Don Karnage - Air Pirate Leader](https://www.readysetink.com/card/don-karnage-air-pirate-leader.html): Emerald / Steel, cost 3, Character, Uncommon, Evasive
+- [Don Karnage - Prince of Pirates](https://www.readysetink.com/card/don-karnage-prince-of-pirates.html): Emerald, cost 5, Character, Common, Evasive
+- [Donald Duck - Not Again!](https://www.readysetink.com/card/donald-duck-not-again.html): Ruby, cost 5, Character, Legendary, Evasive
+- [Dr. Facilier - Fortune Teller](https://www.readysetink.com/card/dr-facilier-fortune-teller.html): Emerald, cost 7, Character, Super Rare, Evasive
+- [Dr. Facilier - Savvy Opportunist](https://www.readysetink.com/card/dr-facilier-savvy-opportunist.html): Amethyst, cost 4, Character, Common, Evasive
+- [Dumbo - Ninth Wonder of the Universe](https://www.readysetink.com/card/dumbo-ninth-wonder-of-the-universe.html): Amethyst, cost 4, Character, Legendary, Evasive
+- [Dumbo - The Flying Elephant](https://www.readysetink.com/card/dumbo-the-flying-elephant.html): Amethyst, cost 3, Character, Uncommon, Evasive
+- [Elsa - The Fifth Spirit](https://www.readysetink.com/card/elsa-the-fifth-spirit.html): Amethyst, cost 5, Character, Super Rare, Evasive
+- [Faline - Playful Fawn](https://www.readysetink.com/card/faline-playful-fawn.html): Ruby, cost 4, Character, Rare, Evasive
+- [Fidget - Ratigan's Henchman](https://www.readysetink.com/card/fidget-ratigans-henchman.html): Ruby, cost 3, Character, Common, Evasive
+- [Fidget - Sneaky Bat](https://www.readysetink.com/card/fidget-sneaky-bat.html): Emerald / Ruby, cost 4, Character, Uncommon, Evasive
+- [Flotsam - Slippery as an Eel](https://www.readysetink.com/card/flotsam-slippery-as-an-eel.html): Emerald, cost 3, Character, Common, Evasive
+- [Flynn Rider - His Own Biggest Fan](https://www.readysetink.com/card/flynn-rider-his-own-biggest-fan.html): Emerald, cost 4, Character, Rare, Evasive
+- [Frozone - Super Slick](https://www.readysetink.com/card/frozone-super-slick.html): Amethyst, cost 2, Character, Common, Evasive
+- [Gaetan Moliere - Clever Burrower](https://www.readysetink.com/card/gaetan-moliere-clever-burrower.html): Emerald, cost 4, Character, Uncommon, Evasive
+- [Genie - Hard to Grasp](https://www.readysetink.com/card/genie-hard-to-grasp.html): Amethyst, cost 4, Character, Uncommon, Evasive
+- [Genie - Of the Lamp](https://www.readysetink.com/card/genie-of-the-lamp.html): Emerald, cost 4, Character, Super Rare, Evasive
+- [Genie - On the Job](https://www.readysetink.com/card/genie-on-the-job.html): Emerald, cost 6, Character, Super Rare, Evasive
+- [Genie - Powers Unleashed](https://www.readysetink.com/card/genie-powers-unleashed.html): Emerald, cost 8, Character, Rare, Evasive
+- [Genie - Wish Fulfilled](https://www.readysetink.com/card/genie-wish-fulfilled.html): Amethyst, cost 4, Character, Rare, Evasive
+- [Go Go Tomago - Cutting Edge](https://www.readysetink.com/card/go-go-tomago-cutting-edge.html): Emerald / Sapphire, cost 4, Character, Super Rare, Evasive
+- [Go Go Tomago - Darting Dynamo](https://www.readysetink.com/card/go-go-tomago-darting-dynamo.html): Emerald, cost 2, Character, Rare, Evasive
+- [Goofy - Daredevil](https://www.readysetink.com/card/goofy-daredevil.html): Ruby, cost 5, Character, Common, Evasive
+- [Goofy - Extreme Athlete](https://www.readysetink.com/card/goofy-extreme-athlete.html): Ruby, cost 7, Character, Super Rare, Evasive
+- [Goofy - Flying Goof](https://www.readysetink.com/card/goofy-flying-goof.html): Ruby, cost 6, Character, Rare, Evasive
+- [Gwythaint - Savage Hunter](https://www.readysetink.com/card/gwythaint-savage-hunter.html): Amethyst, cost 5, Character, Uncommon, Evasive
+- [Gyro Gearloose - Eccentric Inventor](https://www.readysetink.com/card/gyro-gearloose-eccentric-inventor.html): Ruby / Sapphire, cost 3, Character, Rare, Evasive
+- [Hamish, Hubert & Harris - Troublemaking Triplets](https://www.readysetink.com/card/hamish-hubert-harris-troublemaking-triplets.html): Emerald, cost 3, Character, Common, Evasive
+- [HeiHei - Peckish Pal](https://www.readysetink.com/card/heihei-peckish-pal.html): cost 3, Character, Special, Evasive
+- [Hiro Hamada - Versatile Inventor](https://www.readysetink.com/card/hiro-hamada-versatile-inventor.html): Emerald, cost 2, Character, Uncommon, Evasive
+- [Iago - Crown Seeker](https://www.readysetink.com/card/iago-crown-seeker.html): cost 6, Character, Special, Evasive
+- [Iago - Fake Flamingo](https://www.readysetink.com/card/iago-fake-flamingo.html): Emerald, cost 4, Character, Rare, Evasive
+- [Iago - Giant Spectral Parrot](https://www.readysetink.com/card/iago-giant-spectral-parrot.html): Amethyst, cost 4, Character, Rare, Evasive
+- [Iago - Pretty Polly](https://www.readysetink.com/card/iago-pretty-polly.html): Amethyst, cost 3, Character, Common, Evasive
+- [Iduna - Alarmed Queen](https://www.readysetink.com/card/iduna-alarmed-queen.html): Ruby, cost 2, Character, Common, Evasive
+- [Isabela Madrigal - Golden Child](https://www.readysetink.com/card/isabela-madrigal-golden-child.html): Amethyst, cost 5, Character, Rare, Evasive
+- [Jafar - Striking Illusionist](https://www.readysetink.com/card/jafar-striking-illusionist.html): Amethyst, cost 7, Character, Legendary, Evasive
+- [Jasper - Dodgy Boater](https://www.readysetink.com/card/jasper-dodgy-boater.html): Ruby, cost 5, Character, Uncommon, Evasive
+- [Jebidiah Farnsworth - Cookie](https://www.readysetink.com/card/jebidiah-farnsworth-cookie.html): Ruby, cost 2, Character, Uncommon, Evasive
+- [Jetsam - Ursula's Spy](https://www.readysetink.com/card/jetsam-ursulas-spy.html): Amethyst, cost 4, Character, Common, Evasive
+- [Jiminy Cricket - Level-Headed and Wise](https://www.readysetink.com/card/jiminy-cricket-level-headed-and-wise.html): Amethyst, cost 2, Character, Rare, Evasive
+- [Jiminy Cricket - Pinocchio's Conscience](https://www.readysetink.com/card/jiminy-cricket-pinocchios-conscience.html): Amethyst, cost 2, Character, Common, Evasive
+- [Jock - Enjoying the Sights](https://www.readysetink.com/card/jock-enjoying-the-sights.html): Emerald, cost 4, Character, Common, Evasive
+- [Kaa - Secretive Snake](https://www.readysetink.com/card/kaa-secretive-snake.html): Emerald, cost 7, Character, Uncommon, Evasive
+- [Kuzco - Panicked Llama](https://www.readysetink.com/card/kuzco-panicked-llama.html): Amethyst / Emerald, cost 4, Character, Uncommon, Evasive
+- [Lena Sabrewing - Pure Energy](https://www.readysetink.com/card/lena-sabrewing-pure-energy.html): Amethyst / Steel, cost 3, Character, Uncommon, Evasive
+- [Lexington - Fearless Flier](https://www.readysetink.com/card/lexington-fearless-flier.html): Amethyst, cost 2, Character, Common, Evasive
+- [Lumiere - Fired Up](https://www.readysetink.com/card/lumiere-fired-up.html): Ruby / Sapphire, cost 5, Character, Super Rare, Evasive
+- [Lumpy - Playful Heffalump](https://www.readysetink.com/card/lumpy-playful-heffalump.html): Amethyst, cost 6, Character, Common, Evasive
+- [Madam Mim - Hummingbird](https://www.readysetink.com/card/madam-mim-hummingbird.html): Emerald, cost 2, Character, Uncommon, Evasive
+- [Madam Mim - Purple Dragon](https://www.readysetink.com/card/madam-mim-purple-dragon.html): Amethyst, cost 7, Character, Legendary, Evasive
+- [Magic Carpet - Flying Rug](https://www.readysetink.com/card/magic-carpet-flying-rug.html): Amethyst, cost 2, Character, Common, Evasive
+- [Magica De Spell - Shadow Form](https://www.readysetink.com/card/magica-de-spell-shadow-form.html): Amethyst / Emerald, cost 5, Character, Uncommon, Evasive
+- [Markowski - Space Trooper](https://www.readysetink.com/card/markowski-space-trooper.html): Ruby, cost 4, Character, Common, Evasive
+- [Maui - Half-Shark](https://www.readysetink.com/card/maui-half-shark.html): Ruby, cost 6, Character, Legendary, Evasive
+- [Meeko - Skittish Scrounger](https://www.readysetink.com/card/meeko-skittish-scrounger.html): Amethyst, cost 1, Character, Uncommon, Evasive
+- [Metal Scorpion - Deadly Statue](https://www.readysetink.com/card/metal-scorpion-deadly-statue.html): cost 7, Character, Special, Evasive
+- [Mickey Mouse - Brave Little Prince](https://www.readysetink.com/card/mickey-mouse-brave-little-prince.html): Ruby, cost 3, Character, Legendary, Evasive
+- [Mickey Mouse - Brave Little Tailor](https://www.readysetink.com/card/mickey-mouse-brave-little-tailor.html): Ruby, cost 8, Character, Legendary, Evasive
+- [Minnie Mouse - Stylish Surfer](https://www.readysetink.com/card/minnie-mouse-stylish-surfer.html): Ruby, cost 3, Character, Uncommon, Evasive
+- [Minnie Mouse - Wide-Eyed Diver](https://www.readysetink.com/card/minnie-mouse-wide-eyed-diver.html): Ruby, cost 4, Character, Rare, Evasive
+- [Mirabel Madrigal - Hopeful Dreamer](https://www.readysetink.com/card/mirabel-madrigal-hopeful-dreamer.html): Amber / Amethyst, cost 3, Character, Uncommon, Evasive
+- [Moana - Island Explorer](https://www.readysetink.com/card/moana-island-explorer.html): Ruby, cost 4, Character, Uncommon, Evasive
+- [Moana - Undeterred Voyager](https://www.readysetink.com/card/moana-undeterred-voyager.html): Ruby, cost 4, Character, Common, Evasive
+- [Mufasa - Among the Stars](https://www.readysetink.com/card/mufasa-among-the-stars.html): Amethyst / Steel, cost 7, Character, Uncommon, Evasive
+- [Mulan - Imperial General](https://www.readysetink.com/card/mulan-imperial-general.html): Ruby / Steel, cost 7, Character, Super Rare, Evasive
+- [Mushu - Stealthy Dragon](https://www.readysetink.com/card/mushu-stealthy-dragon.html): Emerald, cost 3, Character, Legendary, Evasive
+- [Olaf - Happy Passenger](https://www.readysetink.com/card/olaf-happy-passenger.html): Amethyst, cost 9, Character, Rare, Evasive
+- [Pascal - Garden Chameleon](https://www.readysetink.com/card/pascal-garden-chameleon.html): Amber / Amethyst, cost 4, Character, Uncommon, Evasive
+- [Pegasus - Cloud Racer](https://www.readysetink.com/card/pegasus-cloud-racer.html): Emerald, cost 5, Character, Uncommon, Evasive
+- [Pegasus - Flying Steed](https://www.readysetink.com/card/pegasus-flying-steed.html): Ruby, cost 2, Character, Common, Evasive
+- [Pegasus - Gift for Hercules](https://www.readysetink.com/card/pegasus-gift-for-hercules.html): Emerald, cost 1, Character, Common, Evasive
+- [Pegasus - Searching High and Low](https://www.readysetink.com/card/pegasus-searching-high-and-low.html): Ruby, cost 6, Character, Common, Evasive
+- [Perla - Nimble Seamstress](https://www.readysetink.com/card/perla-nimble-seamstress.html): Amber / Emerald, cost 3, Character, Uncommon, Evasive
+- [Peter Pan - High Flyer](https://www.readysetink.com/card/peter-pan-high-flyer.html): Ruby, cost 3, Character, Common, Evasive
+- [Peter Pan - Never Landing](https://www.readysetink.com/card/peter-pan-never-landing.html): Emerald, cost 3, Character, Common, Evasive
+- [Peter Pan - Pirate's Bane](https://www.readysetink.com/card/peter-pan-pirates-bane.html): Ruby, cost 6, Character, Rare, Evasive
+- [Peter Pan - Shadow Finder](https://www.readysetink.com/card/peter-pan-shadow-finder.html): Amethyst, cost 3, Character, Super Rare, Evasive
+- [Peter Pan's Shadow - Not Sewn On](https://www.readysetink.com/card/peter-pans-shadow-not-sewn-on.html): Amethyst, cost 4, Character, Super Rare, Evasive
+- [Pinocchio - Strings Attached](https://www.readysetink.com/card/pinocchio-strings-attached.html): Amethyst, cost 4, Character, Legendary, Evasive
+- [Pocahontas & Meeko - Adventurous Friends](https://www.readysetink.com/card/pocahontas-meeko-adventurous-friends.html): Amber / Amethyst, cost 4, Character, Legendary, Evasive
+- [Pongo - Ol' Rascal](https://www.readysetink.com/card/pongo-ol-rascal.html): Ruby, cost 4, Character, Common, Evasive
+- [Prince Phillip - Vanquisher of Foes](https://www.readysetink.com/card/prince-phillip-vanquisher-of-foes.html): Emerald, cost 9, Character, Super Rare, Evasive
+- [Randall Boggs - Envious Coworker](https://www.readysetink.com/card/randall-boggs-envious-coworker.html): Ruby, cost 2, Character, Rare, Evasive
+- [Rapunzel - High Climber](https://www.readysetink.com/card/rapunzel-high-climber.html): Emerald, cost 5, Character, Legendary, Evasive
+- [Ratigan - Criminal Mastermind](https://www.readysetink.com/card/ratigan-criminal-mastermind.html): Emerald, cost 4, Character, Common, Evasive
+- [Ratigan - Party Crasher](https://www.readysetink.com/card/ratigan-party-crasher.html): Ruby, cost 7, Character, Rare, Evasive
+- [Ray - Easygoing Firefly](https://www.readysetink.com/card/ray-easygoing-firefly.html): Emerald, cost 5, Character, Common, Evasive
+- [Ryder - Fleet-Footed Infiltrator](https://www.readysetink.com/card/ryder-fleet-footed-infiltrator.html): Amethyst, cost 4, Character, Common, Evasive
+- [Scroop - Odious Mutineer](https://www.readysetink.com/card/scroop-odious-mutineer.html): Emerald, cost 3, Character, Super Rare, Evasive
+- [Shenzi - Scar's Accomplice](https://www.readysetink.com/card/shenzi-scars-accomplice.html): Emerald, cost 3, Character, Uncommon, Evasive
+- [Shere Khan - Fearsome Tiger](https://www.readysetink.com/card/shere-khan-fearsome-tiger.html): Emerald, cost 6, Character, Legendary, Evasive
+- [Sir Hiss - Aggravating Asp](https://www.readysetink.com/card/sir-hiss-aggravating-asp.html): Emerald, cost 2, Character, Common, Evasive
+- [Sisu - Daring Visitor](https://www.readysetink.com/card/sisu-daring-visitor.html): Ruby, cost 3, Character, Uncommon, Evasive
+- [Slightly - Lost Boy](https://www.readysetink.com/card/slightly-lost-boy.html): Ruby, cost 4, Character, Uncommon, Evasive
+- [Slushy - Glacial Guster](https://www.readysetink.com/card/slushy-glacial-guster.html): Ruby, cost 4, Character, Uncommon, Evasive
+- [Squeaks - Cozy Caterpillar](https://www.readysetink.com/card/squeaks-cozy-caterpillar.html): Emerald, cost 2, Character, Common, Evasive
+- [Stitch - Covert Agent](https://www.readysetink.com/card/stitch-covert-agent.html): Emerald, cost 5, Character, Rare, Evasive
+- [Stratos - Tornado Titan](https://www.readysetink.com/card/stratos-tornado-titan.html): Amethyst, cost 5, Character, Rare, Evasive
+- [Sven - Leaping Reindeer](https://www.readysetink.com/card/sven-leaping-reindeer.html): Amethyst, cost 4, Character, Super Rare, Evasive
+- [Tick-Tock - Ever-Present Pursuer](https://www.readysetink.com/card/tick-tock-ever-present-pursuer.html): Amethyst, cost 6, Character, Common, Evasive
+- [Tigger - In the Crow's Nest](https://www.readysetink.com/card/tigger-in-the-crows-nest.html): Ruby, cost 3, Character, Rare, Evasive
+- [Tigger - Wonderful Thing](https://www.readysetink.com/card/tigger-wonderful-thing.html): Ruby, cost 6, Character, Uncommon, Evasive
+- [Tinker Bell - Fast Flier](https://www.readysetink.com/card/tinker-bell-fast-flier.html): Amethyst, cost 3, Character, Common, Evasive
+- [Tinker Bell - Insistent Fairy](https://www.readysetink.com/card/tinker-bell-insistent-fairy.html): Ruby, cost 2, Character, Legendary, Evasive
+- [Tinker Bell - Most Helpful](https://www.readysetink.com/card/tinker-bell-most-helpful.html): Emerald, cost 4, Character, Common, Evasive
+- [Tinker Bell - Peter Pan's Ally](https://www.readysetink.com/card/tinker-bell-peter-pans-ally.html): Amethyst, cost 5, Character, Common, Evasive
+- [Tinker Bell - Queen of the Azurite Fairies](https://www.readysetink.com/card/tinker-bell-queen-of-the-azurite-fairies.html): Amethyst, cost 7, Character, Uncommon, Evasive
+- [Tipo - Junior Chipmunk](https://www.readysetink.com/card/tipo-junior-chipmunk.html): Emerald, cost 2, Character, Common, Evasive
+- [Tod - Knows All the Tricks](https://www.readysetink.com/card/tod-knows-all-the-tricks.html): Emerald, cost 7, Character, Legendary, Evasive
+- [Tod - Nimble Fox](https://www.readysetink.com/card/tod-nimble-fox.html): Emerald, cost 5, Character, Common, Evasive
+- [Tod & Copper - Best of Friends](https://www.readysetink.com/card/tod-copper-best-of-friends.html): Emerald, cost 4, Character, Rare, Evasive
+- [Tuk Tuk - Lively Partner](https://www.readysetink.com/card/tuk-tuk-lively-partner.html): Ruby, cost 3, Character, Rare, Evasive
+- [Vanellope von Schweetz - Spunky Speedster](https://www.readysetink.com/card/vanellope-von-schweetz-spunky-speedster.html): Ruby, cost 2, Character, Common, Evasive
+- [Vincenzo Santorini - On the Run](https://www.readysetink.com/card/vincenzo-santorini-on-the-run.html): Ruby, cost 4, Character, Rare, Evasive
+- [Violet Parr - Learning New Powers](https://www.readysetink.com/card/violet-parr-learning-new-powers.html): Amethyst, cost 3, Character, Uncommon, Evasive
+- [Violet Sabrewing - Senior Junior Woodchuck](https://www.readysetink.com/card/violet-sabrewing-senior-junior-woodchuck.html): Amethyst, cost 2, Character, Common, Evasive
+- [Vixey - Forest Friend](https://www.readysetink.com/card/vixey-forest-friend.html): Emerald, cost 3, Character, Uncommon, Evasive
+- [Wendy Darling - Courageous Captain](https://www.readysetink.com/card/wendy-darling-courageous-captain.html): Ruby, cost 2, Character, Rare, Evasive
+- [Wendy Darling - Pirate Queen](https://www.readysetink.com/card/wendy-darling-pirate-queen.html): Amber / Ruby, cost 7, Character, Uncommon, Evasive
+- [White Rabbit - Late Again](https://www.readysetink.com/card/white-rabbit-late-again.html): Emerald, cost 2, Character, Uncommon, Evasive
+- [Wildcat - Mechanic](https://www.readysetink.com/card/wildcat-mechanic.html): Emerald, cost 3, Character, Uncommon, Evasive
+- [Yzma - Above It All](https://www.readysetink.com/card/yzma-above-it-all.html): Amethyst / Emerald, cost 7, Character, Super Rare, Evasive
+- [Zazu - Advisor to Mufasa](https://www.readysetink.com/card/zazu-advisor-to-mufasa.html): Emerald, cost 5, Character, Common, Evasive

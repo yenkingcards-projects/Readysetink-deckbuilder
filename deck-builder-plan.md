@@ -1,6 +1,6 @@
 # Ready Set Ink Deck Builder Revamp Plan
 
-Sep 23, 2026 · Ben Dacy
+Sep 23, 2026
 
 ## TL;DR
 

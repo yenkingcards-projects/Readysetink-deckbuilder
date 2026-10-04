@@ -1,0 +1,70 @@
+# DuckTales: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/ducktales/
+
+64 cards.
+
+- [Beagle Boys - Small-Time Crooks](https://www.readysetink.com/card/beagle-boys-small-time-crooks.html): Ruby / Sapphire, cost 4, Character, Uncommon
+- [Black Heron - Real Bad Egg](https://www.readysetink.com/card/black-heron-real-bad-egg.html): Steel, cost 2, Character, Uncommon
+- [Blessed Bagpipes](https://www.readysetink.com/card/blessed-bagpipes.html): Emerald, cost 2, Item, Uncommon
+- [Della Duck - Returning Mother](https://www.readysetink.com/card/della-duck-returning-mother.html): Amber, cost 4, Character, Common
+- [Della Duck - Unstoppable Mom](https://www.readysetink.com/card/della-duck-unstoppable-mom.html): Ruby, cost 2, Character, Common
+- [Della's Moon Lullaby](https://www.readysetink.com/card/dellas-moon-lullaby.html): Amber, cost 2, Action, Common
+- [Dewey - Lovable Showoff](https://www.readysetink.com/card/dewey-lovable-showoff.html): Amber, cost 4, Character, Common
+- [Dewey - Showy Nephew](https://www.readysetink.com/card/dewey-showy-nephew.html): Sapphire, cost 3, Character, Uncommon
+- [Duckburg - Funso's Funzone](https://www.readysetink.com/card/duckburg-funsos-funzone.html): Amber, cost 2, Location, Rare
+- [Duckworth - Ghost Butler](https://www.readysetink.com/card/duckworth-ghost-butler.html): Amethyst, cost 3, Character, Uncommon
+- [Emily Quackfaster - Level-Headed Librarian](https://www.readysetink.com/card/emily-quackfaster-level-headed-librarian.html): Emerald, cost 2, Character, Uncommon
+- [Fergus McDuck - Scrooge's Father](https://www.readysetink.com/card/fergus-mcduck-scrooges-father.html): Sapphire, cost 3, Character, Common
+- [Flintheart Glomgold - Lone Cheater](https://www.readysetink.com/card/flintheart-glomgold-lone-cheater.html): Sapphire, cost 4, Character, Uncommon
+- [Flintheart Glomgold - Scheming Billionaire](https://www.readysetink.com/card/flintheart-glomgold-scheming-billionaire.html): Emerald, cost 4, Character, Uncommon
+- [Gizmoduck - Duckburg Defender](https://www.readysetink.com/card/gizmoduck-duckburg-defender.html): Steel, cost 5, Character, Rare
+- [Gizmoduck - Suited Up](https://www.readysetink.com/card/gizmoduck-suited-up.html): Emerald / Steel, cost 4, Character, Uncommon
+- [Gizmosuit](https://www.readysetink.com/card/gizmosuit.html): Steel, cost 3, Item, Common
+- [Goldie O'Gilt - Cunning Prospector](https://www.readysetink.com/card/goldie-ogilt-cunning-prospector.html): Emerald, cost 3, Character, Rare
+- [Gyro Gearloose - Eccentric Inventor](https://www.readysetink.com/card/gyro-gearloose-eccentric-inventor.html): Ruby / Sapphire, cost 3, Character, Rare
+- [Gyro Gearloose - Gadget Whiz](https://www.readysetink.com/card/gyro-gearloose-gadget-whiz.html): Sapphire, cost 3, Character, Rare
+- [Headless Manhorse - Manny](https://www.readysetink.com/card/headless-manhorse-manny.html): Amber, cost 6, Character, Common
+- [Huey - Reliable Leader](https://www.readysetink.com/card/huey-reliable-leader.html): Amber, cost 2, Character, Uncommon
+- [Huey - Savvy Nephew](https://www.readysetink.com/card/huey-savvy-nephew.html): Sapphire, cost 2, Character, Rare
+- [Inspector Tezuka - Resolute Officer](https://www.readysetink.com/card/inspector-tezuka-resolute-officer.html): Steel, cost 2, Character, Common
+- [Junior Woodchuck Guidebook](https://www.readysetink.com/card/junior-woodchuck-guidebook.html): Amethyst, cost 2, Item, Common
+- [Launchpad - Exceptional Pilot](https://www.readysetink.com/card/launchpad-exceptional-pilot.html): Emerald, cost 4, Character, Common
+- [Lena Sabrewing - Mysterious Duck](https://www.readysetink.com/card/lena-sabrewing-mysterious-duck.html): Amethyst, cost 4, Character, Common
+- [Lena Sabrewing - Pure Energy](https://www.readysetink.com/card/lena-sabrewing-pure-energy.html): Amethyst / Steel, cost 3, Character, Uncommon
+- [Lena Sabrewing - Rebellious Teenager](https://www.readysetink.com/card/lena-sabrewing-rebellious-teenager.html): Amethyst, cost 2, Character, Common
+- [Louie - Chill Nephew](https://www.readysetink.com/card/louie-chill-nephew.html): Sapphire, cost 4, Character, Common
+- [Louie - One Cool Duck](https://www.readysetink.com/card/louie-one-cool-duck.html): Amber, cost 3, Character, Uncommon
+- [Lucky Dime](https://www.readysetink.com/card/lucky-dime.html): Sapphire, cost 7, Item, Legendary
+- [Magica De Spell - Ambitious Witch](https://www.readysetink.com/card/magica-de-spell-ambitious-witch.html): Amethyst, cost 2, Character, Common
+- [Magica De Spell - Conniving Sorceress](https://www.readysetink.com/card/magica-de-spell-conniving-sorceress.html): Amethyst, cost 7, Character, Super Rare
+- [Magica De Spell - Cruel Sorceress](https://www.readysetink.com/card/magica-de-spell-cruel-sorceress.html): Amethyst, cost 4, Character, Rare
+- [Magica De Spell - Shadow Form](https://www.readysetink.com/card/magica-de-spell-shadow-form.html): Amethyst / Emerald, cost 5, Character, Uncommon
+- [Magica De Spell - Shadowy Sorceress](https://www.readysetink.com/card/magica-de-spell-shadowy-sorceress.html): cost 3, Character, Special
+- [Magica De Spell - Shadowy and Sinister](https://www.readysetink.com/card/magica-de-spell-shadowy-and-sinister.html): Amethyst, cost 3, Character, Common
+- [Magica De Spell - Spiteful Sorceress](https://www.readysetink.com/card/magica-de-spell-spiteful-sorceress.html): Amethyst, cost 5, Character, Rare
+- [Magica De Spell - The Midas Touch](https://www.readysetink.com/card/magica-de-spell-the-midas-touch.html): Amethyst, cost 7, Character, Super Rare
+- [Magica De Spell - Thieving Sorceress](https://www.readysetink.com/card/magica-de-spell-thieving-sorceress.html): Amethyst, cost 4, Character, Uncommon
+- [McDuck Manor - Scrooge's Mansion](https://www.readysetink.com/card/mcduck-manor-scrooges-mansion.html): Sapphire, cost 4, Location, Common
+- [Might Solve a Mystery](https://www.readysetink.com/card/might-solve-a-mystery.html): Sapphire, cost 4, Action, Uncommon
+- [Mrs. Beakley - Former S.H.U.S.H. Agent](https://www.readysetink.com/card/mrs-beakley-former-s-h-u-s-h-agent.html): Amber, cost 4, Character, Common
+- [Or Rewrite History!](https://www.readysetink.com/card/or-rewrite-history.html): Amber, cost 3, Action, Uncommon
+- [Penumbra - Moon Alien](https://www.readysetink.com/card/penumbra-moon-alien.html): Emerald, cost 5, Character, Rare
+- [Poe De Spell - Magica's Brother](https://www.readysetink.com/card/poe-de-spell-magicas-brother.html): Amethyst, cost 3, Character, Common
+- [Scrooge McDuck - Afficionado of Antiquities](https://www.readysetink.com/card/scrooge-mcduck-afficionado-of-antiquities.html): Sapphire, cost 4, Character, Rare
+- [Scrooge McDuck - Cavern Prospector](https://www.readysetink.com/card/scrooge-mcduck-cavern-prospector.html): Amber, cost 6, Character, Rare
+- [Scrooge McDuck - On the Right Track](https://www.readysetink.com/card/scrooge-mcduck-on-the-right-track.html): Amber, cost 3, Character, Uncommon
+- [Scrooge McDuck - Resourceful Miser](https://www.readysetink.com/card/scrooge-mcduck-resourceful-miser.html): Sapphire, cost 4, Character, Legendary
+- [Scrooge McDuck - Richest Duck in the World](https://www.readysetink.com/card/scrooge-mcduck-richest-duck-in-the-world.html): Sapphire, cost 5, Character, Super Rare
+- [Scrooge McDuck - S.H.U.S.H. Agent](https://www.readysetink.com/card/scrooge-mcduck-s-h-u-s-h-agent.html): Emerald, cost 2, Character, Super Rare
+- [Scrooge McDuck - Uncle Moneybags](https://www.readysetink.com/card/scrooge-mcduck-uncle-moneybags.html): Sapphire, cost 2, Character, Uncommon
+- [Scrooge's Top Hat](https://www.readysetink.com/card/scrooges-top-hat.html): Sapphire, cost 2, Item, Uncommon
+- [Sumerian Talisman](https://www.readysetink.com/card/sumerian-talisman.html): Ruby, cost 3, Item, Uncommon
+- [Vault Door](https://www.readysetink.com/card/vault-door.html): Sapphire, cost 4, Item, Common
+- [Violet Sabrewing - Senior Junior Woodchuck](https://www.readysetink.com/card/violet-sabrewing-senior-junior-woodchuck.html): Amethyst, cost 2, Character, Common
+- [Webby Vanderquack - Enthusiastic Duck](https://www.readysetink.com/card/webby-vanderquack-enthusiastic-duck.html): Ruby, cost 3, Character, Common
+- [Webby Vanderquack - Junior Prospector](https://www.readysetink.com/card/webby-vanderquack-junior-prospector.html): Emerald, cost 4, Character, Legendary
+- [Webby Vanderquack - Knowledge Seeker](https://www.readysetink.com/card/webby-vanderquack-knowledge-seeker.html): Amber, cost 3, Character, Uncommon
+- [Webby Vanderquack - Mystery Enthusiast](https://www.readysetink.com/card/webby-vanderquack-mystery-enthusiast.html): Emerald, cost 1, Character, Common
+- [Webby's Diary](https://www.readysetink.com/card/webbys-diary.html): Amber, cost 3, Item, Uncommon
+- [White Agony Plains - Golden Lagoon](https://www.readysetink.com/card/white-agony-plains-golden-lagoon.html): Emerald, cost 2, Location, Rare

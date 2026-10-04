@@ -1,0 +1,90 @@
+# Hercules: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/hercules/
+
+84 cards.
+
+- [And Then Along Came Zeus](https://www.readysetink.com/card/and-then-along-came-zeus.html): Steel, cost 4, Action, Rare
+- [Ares - God of War](https://www.readysetink.com/card/ares-god-of-war.html): Ruby, cost 2, Character, Uncommon
+- [Arges - The Cyclops](https://www.readysetink.com/card/arges-the-cyclops.html): Steel, cost 2, Character, Common
+- [Cerberus - Three-Headed Dog](https://www.readysetink.com/card/cerberus-three-headed-dog.html): Steel, cost 5, Character, Common
+- [Cetus - Mighty Serpent](https://www.readysetink.com/card/cetus-mighty-serpent.html): Emerald, cost 6, Character, Common
+- [Everybody's Got a Weakness](https://www.readysetink.com/card/everybodys-got-a-weakness.html): Amethyst, cost 4, Action, Rare
+- [Eye of the Fates](https://www.readysetink.com/card/eye-of-the-fates.html): Sapphire, cost 4, Item, Uncommon
+- [Glimmer vs Glimmer](https://www.readysetink.com/card/glimmer-vs-glimmer.html): Ruby, cost 4, Action, Uncommon
+- [Go the Distance](https://www.readysetink.com/card/go-the-distance.html): Ruby, cost 2, Action, Common
+- [Hades - Double Dealer](https://www.readysetink.com/card/hades-double-dealer.html): Emerald, cost 4, Character, Legendary
+- [Hades - Fast Talker](https://www.readysetink.com/card/hades-fast-talker.html): Amethyst / Ruby, cost 6, Character, Rare
+- [Hades - Hotheaded Ruler](https://www.readysetink.com/card/hades-hotheaded-ruler.html): Steel, cost 6, Character, Rare
+- [Hades - Infernal Schemer](https://www.readysetink.com/card/hades-infernal-schemer.html): Sapphire, cost 7, Character, Legendary
+- [Hades - King of Olympus](https://www.readysetink.com/card/hades-king-of-olympus.html): Amber, cost 8, Character, Rare
+- [Hades - Looking for a Deal](https://www.readysetink.com/card/hades-looking-for-a-deal.html): Amethyst, cost 5, Character, Legendary
+- [Hades - Lord of the Dead](https://www.readysetink.com/card/hades-lord-of-the-dead.html): Amethyst, cost 6, Character, Rare
+- [Hades - Lord of the Underworld](https://www.readysetink.com/card/hades-lord-of-the-underworld.html): Amber, cost 4, Character, Rare
+- [Hades - Meticulous Plotter](https://www.readysetink.com/card/hades-meticulous-plotter.html): Sapphire, cost 4, Character, Uncommon
+- [Hades - Meticulous Schemer](https://www.readysetink.com/card/hades-meticulous-schemer.html): Sapphire, cost 6, Character, Uncommon
+- [Hades - Ruthless Tyrant](https://www.readysetink.com/card/hades-ruthless-tyrant.html): Amethyst / Ruby, cost 7, Character, Super Rare
+- [Hades - Strong Arm](https://www.readysetink.com/card/hades-strong-arm.html): Ruby, cost 5, Character, Legendary
+- [He Hurled His Thunderbolt](https://www.readysetink.com/card/he-hurled-his-thunderbolt.html): Steel, cost 4, Action, Uncommon
+- [Hera - Created by the Vine](https://www.readysetink.com/card/hera-created-by-the-vine.html): Amethyst, cost 5, Character, Uncommon
+- [Hera - Queen of the Gods](https://www.readysetink.com/card/hera-queen-of-the-gods.html): Emerald, cost 3, Character, Rare
+- [Hercules - Baby Demigod](https://www.readysetink.com/card/hercules-baby-demigod.html): Emerald, cost 6, Character, Legendary
+- [Hercules - Beloved Hero](https://www.readysetink.com/card/hercules-beloved-hero.html): Steel, cost 6, Character, Rare
+- [Hercules - Clumsy Kid](https://www.readysetink.com/card/hercules-clumsy-kid.html): Ruby, cost 3, Character, Common
+- [Hercules - Daring Demigod](https://www.readysetink.com/card/hercules-daring-demigod.html): Ruby, cost 5, Character, Uncommon
+- [Hercules - Divine Hero](https://www.readysetink.com/card/hercules-divine-hero.html): Steel, cost 6, Character, Rare
+- [Hercules - Hero in Training](https://www.readysetink.com/card/hercules-hero-in-training.html): Steel, cost 2, Character, Common
+- [Hercules - Manipulated Hero](https://www.readysetink.com/card/hercules-manipulated-hero.html): cost 4, Character, Special
+- [Hercules - Mighty Leader](https://www.readysetink.com/card/hercules-mighty-leader.html): Ruby, cost 4, Character, Legendary
+- [Hercules - Spectral Demigod](https://www.readysetink.com/card/hercules-spectral-demigod.html): Ruby, cost 1, Character, Common
+- [Hercules - True Hero](https://www.readysetink.com/card/hercules-true-hero.html): Steel, cost 3, Character, Common
+- [Hercules - Unwavering Demigod](https://www.readysetink.com/card/hercules-unwavering-demigod.html): Steel, cost 4, Character, Common
+- [Hercules - Young Rescuer](https://www.readysetink.com/card/hercules-young-rescuer.html): Ruby, cost 2, Character, Super Rare
+- [Hermes - Harried Messenger](https://www.readysetink.com/card/hermes-harried-messenger.html): Ruby, cost 3, Character, Common
+- [Hydra - Deadly Serpent](https://www.readysetink.com/card/hydra-deadly-serpent.html): Ruby, cost 6, Character, Legendary
+- [Hydros - Ice Titan](https://www.readysetink.com/card/hydros-ice-titan.html): Amethyst, cost 3, Character, Uncommon
+- [I Will Find My Way](https://www.readysetink.com/card/i-will-find-my-way.html): Emerald, cost 1, Action, Common
+- [Lythos - Rock Titan](https://www.readysetink.com/card/lythos-rock-titan.html): Steel, cost 4, Character, Uncommon
+- [Megara - Captivating Cynic](https://www.readysetink.com/card/megara-captivating-cynic.html): Emerald, cost 3, Character, Common
+- [Megara - Liberated One](https://www.readysetink.com/card/megara-liberated-one.html): Emerald, cost 5, Character, Uncommon
+- [Megara - Part of the Plan](https://www.readysetink.com/card/megara-part-of-the-plan.html): Amethyst, cost 3, Character, Common
+- [Megara - Pulling the Strings](https://www.readysetink.com/card/megara-pulling-the-strings.html): Emerald, cost 2, Character, Common
+- [Megara - Secret Keeper](https://www.readysetink.com/card/megara-secret-keeper.html): Emerald, cost 3, Character, Rare
+- [Nessus - River Guardian](https://www.readysetink.com/card/nessus-river-guardian.html): Ruby, cost 6, Character, Uncommon
+- [Next Stop, Olympus](https://www.readysetink.com/card/next-stop-olympus.html): Ruby, cost 2, Action, Rare
+- [Olympus Would Be That Way](https://www.readysetink.com/card/olympus-would-be-that-way.html): Steel, cost 1, Action, Common
+- [One Last Hope](https://www.readysetink.com/card/one-last-hope.html): Steel, cost 3, Action, Rare
+- [Pain - Immortal Sidekick](https://www.readysetink.com/card/pain-immortal-sidekick.html): Emerald, cost 3, Character, Uncommon
+- [Pain - Impudent Imp](https://www.readysetink.com/card/pain-impudent-imp.html): Amethyst, cost 1, Character, Common
+- [Pain - Running with Scissors](https://www.readysetink.com/card/pain-running-with-scissors.html): Amethyst, cost 4, Character, Common
+- [Pain - Underworld Imp](https://www.readysetink.com/card/pain-underworld-imp.html): Emerald, cost 2, Character, Uncommon
+- [Panic - Hammer Enthusiast](https://www.readysetink.com/card/panic-hammer-enthusiast.html): Amethyst, cost 3, Character, Common
+- [Panic - High-Strung Imp](https://www.readysetink.com/card/panic-high-strung-imp.html): Amethyst, cost 4, Character, Common
+- [Panic - Immortal Sidekick](https://www.readysetink.com/card/panic-immortal-sidekick.html): Emerald, cost 4, Character, Uncommon
+- [Panic - Underworld Imp](https://www.readysetink.com/card/panic-underworld-imp.html): Emerald, cost 3, Character, Common
+- [Pegasus - Cloud Racer](https://www.readysetink.com/card/pegasus-cloud-racer.html): Emerald, cost 5, Character, Uncommon
+- [Pegasus - Flying Steed](https://www.readysetink.com/card/pegasus-flying-steed.html): Ruby, cost 2, Character, Common
+- [Pegasus - Gift for Hercules](https://www.readysetink.com/card/pegasus-gift-for-hercules.html): Emerald, cost 1, Character, Common
+- [Pegasus - Searching High and Low](https://www.readysetink.com/card/pegasus-searching-high-and-low.html): Ruby, cost 6, Character, Common
+- [Performance Review](https://www.readysetink.com/card/performance-review.html): Amethyst, cost 2, Action, Uncommon
+- [Philoctetes - No-Nonsense Instructor](https://www.readysetink.com/card/philoctetes-no-nonsense-instructor.html): Steel, cost 4, Character, Rare
+- [Philoctetes - Trainer of Heroes](https://www.readysetink.com/card/philoctetes-trainer-of-heroes.html): Sapphire, cost 2, Character, Common
+- [Potion of Malice](https://www.readysetink.com/card/potion-of-malice.html): Emerald, cost 3, Item, Super Rare
+- [Prophetic Vision](https://www.readysetink.com/card/prophetic-vision.html): Ruby, cost 2, Action, Uncommon
+- [Pyros - Lava Titan](https://www.readysetink.com/card/pyros-lava-titan.html): Steel, cost 5, Character, Rare
+- [Rise of the Titans](https://www.readysetink.com/card/rise-of-the-titans.html): Steel, cost 3, Action, Uncommon
+- [Stopped Chaos in Its Tracks](https://www.readysetink.com/card/stopped-chaos-in-its-tracks.html): Emerald, cost 8, Action, Uncommon
+- [Stratos - Tornado Titan](https://www.readysetink.com/card/stratos-tornado-titan.html): Amethyst, cost 5, Character, Rare
+- [The Fates - Only One Eye](https://www.readysetink.com/card/the-fates-only-one-eye.html): Emerald, cost 1, Character, Common
+- [The Muses - Proclaimers of Heroes](https://www.readysetink.com/card/the-muses-proclaimers-of-heroes.html): Emerald, cost 4, Character, Rare
+- [The Return of Hercules](https://www.readysetink.com/card/the-return-of-hercules.html): Emerald, cost 5, Action, Legendary
+- [The Sword of Hercules](https://www.readysetink.com/card/the-sword-of-hercules.html): Steel, cost 2, Item, Rare
+- [The Underworld - River Styx](https://www.readysetink.com/card/the-underworld-river-styx.html): Amber, cost 2, Location, Rare
+- [Thebes - The Big Olive](https://www.readysetink.com/card/thebes-the-big-olive.html): Steel, cost 2, Location, Common
+- [Training Dummy](https://www.readysetink.com/card/training-dummy.html): Steel, cost 2, Item, Uncommon
+- [Weight Set](https://www.readysetink.com/card/weight-set.html): Steel, cost 3, Item, Rare
+- [Zero to Hero](https://www.readysetink.com/card/zero-to-hero.html): Amber, cost 2, Action, Uncommon
+- [Zeus - Defiant God](https://www.readysetink.com/card/zeus-defiant-god.html): Ruby, cost 5, Character, Uncommon
+- [Zeus - God of Lightning](https://www.readysetink.com/card/zeus-god-of-lightning.html): Amethyst, cost 4, Character, Rare
+- [Zeus - Missing His Spark](https://www.readysetink.com/card/zeus-missing-his-spark.html): Steel, cost 3, Character, Uncommon
+- [Zeus - Mr. Lightning Bolts](https://www.readysetink.com/card/zeus-mr-lightning-bolts.html): Emerald, cost 3, Character, Super Rare

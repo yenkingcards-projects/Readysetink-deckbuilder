@@ -1,0 +1,61 @@
+# Rush: Disney Lorcana keyword
+
+Source: https://www.readysetink.com/keywords/rush/
+
+The character can challenge the turn it comes into play, skipping the usual drying wait. Official rule 8.9. 55 cards.
+
+- [Abu - Bold Helmsman](https://www.readysetink.com/card/abu-bold-helmsman.html): Ruby, cost 5, Character, Common, Rush
+- [Archimedes - Messenger Owl](https://www.readysetink.com/card/archimedes-messenger-owl.html): Amethyst, cost 3, Character, Rare, Rush
+- [Audrey Ramirez - Gutsy Mechanic](https://www.readysetink.com/card/audrey-ramirez-gutsy-mechanic.html): Ruby, cost 1, Character, Common, Rush
+- [Beast - Snowfield Troublemaker](https://www.readysetink.com/card/beast-snowfield-troublemaker.html): Ruby, cost 2, Character, Super Rare, Rush
+- [Beast - Wolfsbane](https://www.readysetink.com/card/beast-wolfsbane.html): Emerald, cost 5, Character, Legendary, Rush
+- [Boo - Energetic Child](https://www.readysetink.com/card/boo-energetic-child.html): Ruby, cost 3, Character, Rare, Rush
+- [Captain Hook - Ruthless Pirate](https://www.readysetink.com/card/captain-hook-ruthless-pirate.html): Ruby, cost 7, Character, Rare, Rush
+- [Copper - On the Scent](https://www.readysetink.com/card/copper-on-the-scent.html): Ruby, cost 6, Character, Uncommon, Rush
+- [Cruella De Vil - Dodging Traffic](https://www.readysetink.com/card/cruella-de-vil-dodging-traffic.html): Ruby, cost 6, Character, Common, Rush
+- [Darkwing Duck - Darkwolf Dog](https://www.readysetink.com/card/darkwing-duck-darkwolf-dog.html): Amethyst, cost 3, Character, Common, Rush
+- [Dash Parr - Lava Runner](https://www.readysetink.com/card/dash-parr-lava-runner.html): Amethyst, cost 4, Character, Super Rare, Rush
+- [Dash Parr - Super Speedy](https://www.readysetink.com/card/dash-parr-super-speedy.html): Ruby, cost 5, Character, Uncommon, Rush
+- [Donald Duck - Vineling Rider](https://www.readysetink.com/card/donald-duck-vineling-rider.html): Ruby, cost 2, Character, Common, Rush
+- [Duckworth - Ghost Butler](https://www.readysetink.com/card/duckworth-ghost-butler.html): Amethyst, cost 3, Character, Uncommon, Rush
+- [Elsa - The Fifth Spirit](https://www.readysetink.com/card/elsa-the-fifth-spirit.html): Amethyst, cost 5, Character, Super Rare, Rush
+- [Flotsam - Ursula's Spy](https://www.readysetink.com/card/flotsam-ursulas-spy.html): Amethyst, cost 5, Character, Rare, Rush
+- [Fox Xanatos - Charismatic Outlaw](https://www.readysetink.com/card/fox-xanatos-charismatic-outlaw.html): Amethyst, cost 5, Character, Uncommon, Rush
+- [Frozone - Super Cool](https://www.readysetink.com/card/frozone-super-cool.html): Amethyst, cost 6, Character, Rare, Rush
+- [Gaston - Pure Paragon](https://www.readysetink.com/card/gaston-pure-paragon.html): Ruby, cost 9, Character, Rare, Rush
+- [Goofy - Flying Goof](https://www.readysetink.com/card/goofy-flying-goof.html): Ruby, cost 6, Character, Rare, Rush
+- [Goofy - Super Goof](https://www.readysetink.com/card/goofy-super-goof.html): Ruby, cost 4, Character, Rare, Rush
+- [Hercules - Clumsy Kid](https://www.readysetink.com/card/hercules-clumsy-kid.html): Ruby, cost 3, Character, Common, Rush
+- [Hercules - Daring Demigod](https://www.readysetink.com/card/hercules-daring-demigod.html): Ruby, cost 5, Character, Uncommon, Rush
+- [Hermes - Harried Messenger](https://www.readysetink.com/card/hermes-harried-messenger.html): Ruby, cost 3, Character, Common, Rush
+- [Kakamora - Boarding Party](https://www.readysetink.com/card/kakamora-boarding-party.html): Ruby, cost 4, Character, Uncommon, Rush
+- [Lena Sabrewing - Rebellious Teenager](https://www.readysetink.com/card/lena-sabrewing-rebellious-teenager.html): Amethyst, cost 2, Character, Common, Rush
+- [Luisa Madrigal - Magically Strong One](https://www.readysetink.com/card/luisa-madrigal-magically-strong-one.html): Amethyst, cost 4, Character, Common, Rush
+- [Madam Mim - Fox](https://www.readysetink.com/card/madam-mim-fox.html): Amethyst, cost 3, Character, Rare, Rush
+- [Magic Broom - Swift Cleaner](https://www.readysetink.com/card/magic-broom-swift-cleaner.html): Amethyst, cost 5, Character, Common, Rush
+- [March Hare - Absurd Host](https://www.readysetink.com/card/march-hare-absurd-host.html): Amethyst, cost 4, Character, Uncommon, Rush
+- [Maui - Hero to All](https://www.readysetink.com/card/maui-hero-to-all.html): Ruby, cost 5, Character, Rare, Rush
+- [Maui - Snow Slider](https://www.readysetink.com/card/maui-snow-slider.html): Ruby, cost 4, Character, Common, Rush
+- [Monstro - Infamous Whale](https://www.readysetink.com/card/monstro-infamous-whale.html): Amethyst, cost 8, Character, Rare, Rush
+- [Mor'du - Wicked with Pride](https://www.readysetink.com/card/mordu-wicked-with-pride.html): Amethyst, cost 2, Character, Common, Rush
+- [Mulan - Soldier in Training](https://www.readysetink.com/card/mulan-soldier-in-training.html): Ruby, cost 4, Character, Common, Rush
+- [Panic - Hammer Enthusiast](https://www.readysetink.com/card/panic-hammer-enthusiast.html): Amethyst, cost 3, Character, Common, Rush
+- [Peter Pan - Fearless Fighter](https://www.readysetink.com/card/peter-pan-fearless-fighter.html): Ruby, cost 3, Character, Common, Rush
+- [Peter Pan - Never Land Hero](https://www.readysetink.com/card/peter-pan-never-land-hero.html): Ruby, cost 3, Character, Common, Rush
+- [Peter Pan - Shadow Finder](https://www.readysetink.com/card/peter-pan-shadow-finder.html): Amethyst, cost 3, Character, Super Rare, Rush
+- [Peter Pan's Shadow - Not Sewn On](https://www.readysetink.com/card/peter-pans-shadow-not-sewn-on.html): Amethyst, cost 4, Character, Super Rare, Rush
+- [Queen of Hearts - Impulsive Ruler](https://www.readysetink.com/card/queen-of-hearts-impulsive-ruler.html): Ruby, cost 2, Character, Uncommon, Rush
+- [Rafiki - Mysterious Sage](https://www.readysetink.com/card/rafiki-mysterious-sage.html): Amethyst, cost 3, Character, Uncommon, Rush
+- [Rafiki - Shaman Duelist](https://www.readysetink.com/card/rafiki-shaman-duelist.html): Amethyst, cost 4, Character, Rare, Rush
+- [Scar - Tempestuous Lion](https://www.readysetink.com/card/scar-tempestuous-lion.html): Amethyst, cost 6, Character, Uncommon, Rush
+- [Scar - Vicious Cheater](https://www.readysetink.com/card/scar-vicious-cheater.html): Ruby, cost 7, Character, Legendary, Rush
+- [Snowanna Rainbeau - Cool Competitor](https://www.readysetink.com/card/snowanna-rainbeau-cool-competitor.html): Ruby, cost 3, Character, Common, Rush
+- [Stabbington Brother - Without a Patch](https://www.readysetink.com/card/stabbington-brother-without-a-patch.html): Ruby, cost 4, Character, Common, Rush
+- [Stitch - Little Rocket](https://www.readysetink.com/card/stitch-little-rocket.html): Ruby, cost 2, Character, Common, Rush
+- [Sven - Keen-Eyed Reindeer](https://www.readysetink.com/card/sven-keen-eyed-reindeer.html): Amethyst / Sapphire, cost 5, Character, Uncommon, Rush
+- [Sven - Leaping Reindeer](https://www.readysetink.com/card/sven-leaping-reindeer.html): Amethyst, cost 4, Character, Super Rare, Rush
+- [Taran - Magically Armed](https://www.readysetink.com/card/taran-magically-armed.html): Amethyst, cost 5, Character, Uncommon, Rush
+- [The Phantom Blot - Shadowy Figure](https://www.readysetink.com/card/the-phantom-blot-shadowy-figure.html): Ruby, cost 2, Character, Uncommon, Rush
+- [Turbo - Royal Hack](https://www.readysetink.com/card/turbo-royal-hack.html): Ruby, cost 2, Character, Uncommon, Rush
+- [Vanellope von Schweetz - Random Roster Racer](https://www.readysetink.com/card/vanellope-von-schweetz-random-roster-racer.html): Ruby, cost 4, Character, Rare, Rush
+- [Zeus - God of Lightning](https://www.readysetink.com/card/zeus-god-of-lightning.html): Amethyst, cost 4, Character, Rare, Rush

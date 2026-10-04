@@ -6,7 +6,7 @@ explanations are in `art-tools/README.md` — this is just the commands.
 Every command below assumes you're in the project folder:
 
 ```bash
-cd "/Users/benjamindacy/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
+cd "$HOME/Desktop/Ben/Buisness Projects/ready set ink/Documents/829git"
 ```
 
 ---

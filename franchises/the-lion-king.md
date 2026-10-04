@@ -1,0 +1,76 @@
+# The Lion King: Disney Lorcana cards
+
+Source: https://www.readysetink.com/franchises/the-lion-king/
+
+70 cards.
+
+- [Banzai - Gluttonous Predator](https://www.readysetink.com/card/banzai-gluttonous-predator.html): Emerald, cost 2, Character, Rare
+- [Banzai - Taunting Hyena](https://www.readysetink.com/card/banzai-taunting-hyena.html): Emerald, cost 2, Character, Common
+- [Be King Undisputed](https://www.readysetink.com/card/be-king-undisputed.html): Ruby, cost 4, Action, Rare
+- [Be Prepared](https://www.readysetink.com/card/be-prepared.html): Ruby, cost 7, Action, Rare
+- [Circle of Life](https://www.readysetink.com/card/circle-of-life.html): Amber, cost 8, Action, Legendary
+- [Ed - Hysterical Partygoer](https://www.readysetink.com/card/ed-hysterical-partygoer.html): Emerald, cost 4, Character, Uncommon
+- [Ed - Laughing Hyena](https://www.readysetink.com/card/ed-laughing-hyena.html): Emerald, cost 3, Character, Common
+- [Evil Comes Prepared](https://www.readysetink.com/card/evil-comes-prepared.html): Ruby, cost 2, Action, Common
+- [Hakuna Matata](https://www.readysetink.com/card/hakuna-matata.html): Amber, cost 4, Action, Common
+- [It Means No Worries](https://www.readysetink.com/card/it-means-no-worries.html): Amber, cost 9, Action, Rare
+- [Mufasa - Among the Stars](https://www.readysetink.com/card/mufasa-among-the-stars.html): Amethyst / Steel, cost 7, Character, Uncommon
+- [Mufasa - Betrayed Leader](https://www.readysetink.com/card/mufasa-betrayed-leader.html): Amber, cost 5, Character, Legendary
+- [Mufasa - Champion of the Pride Lands](https://www.readysetink.com/card/mufasa-champion-of-the-pride-lands.html): Steel, cost 7, Character, Rare
+- [Mufasa - King of the Pride Lands](https://www.readysetink.com/card/mufasa-king-of-the-pride-lands.html): Sapphire, cost 6, Character, Common
+- [Mufasa - Respected King](https://www.readysetink.com/card/mufasa-respected-king.html): Steel, cost 4, Character, Uncommon
+- [Mufasa - Ruler of Pride Rock](https://www.readysetink.com/card/mufasa-ruler-of-pride-rock.html): Sapphire, cost 8, Character, Legendary
+- [Nala - Fierce Friend](https://www.readysetink.com/card/nala-fierce-friend.html): Steel, cost 3, Character, Uncommon
+- [Nala - Mischievous Cub](https://www.readysetink.com/card/nala-mischievous-cub.html): Amber, cost 1, Character, Uncommon
+- [Nala - Romping in the Snow](https://www.readysetink.com/card/nala-romping-in-the-snow.html): Amethyst, cost 2, Character, Common
+- [Nala - Undaunted Lioness](https://www.readysetink.com/card/nala-undaunted-lioness.html): Steel, cost 2, Character, Rare
+- [Pouncing Practice](https://www.readysetink.com/card/pouncing-practice.html): Sapphire, cost 2, Action, Uncommon
+- [Pride Lands - Jungle Oasis](https://www.readysetink.com/card/pride-lands-jungle-oasis.html): Amber, cost 3, Location, Rare
+- [Pride Lands - Pride Rock](https://www.readysetink.com/card/pride-lands-pride-rock.html): Amber, cost 2, Location, Rare
+- [Pumbaa - Friendly Warthog](https://www.readysetink.com/card/pumbaa-friendly-warthog.html): Amber, cost 4, Character, Common
+- [Pumbaa - Winter Warthog](https://www.readysetink.com/card/pumbaa-winter-warthog.html): Amber, cost 6, Character, Common
+- [Rafiki - Ethereal Guide](https://www.readysetink.com/card/rafiki-ethereal-guide.html): Amethyst, cost 9, Character, Rare
+- [Rafiki - Mysterious Sage](https://www.readysetink.com/card/rafiki-mysterious-sage.html): Amethyst, cost 3, Character, Uncommon
+- [Rafiki - Mystical Fighter](https://www.readysetink.com/card/rafiki-mystical-fighter.html): Amethyst, cost 1, Character, Rare
+- [Rafiki - Shaman Duelist](https://www.readysetink.com/card/rafiki-shaman-duelist.html): Amethyst, cost 4, Character, Rare
+- [Rafiki - Shaman of the Savanna](https://www.readysetink.com/card/rafiki-shaman-of-the-savanna.html): Amethyst, cost 1, Character, Common
+- [Rafiki's Bakora Staff](https://www.readysetink.com/card/rafikis-bakora-staff.html): Emerald, cost 2, Item, Uncommon
+- [Remember Who You Are](https://www.readysetink.com/card/remember-who-you-are.html): Emerald, cost 4, Action, Rare
+- [Sarabi - Protecting the Pride](https://www.readysetink.com/card/sarabi-protecting-the-pride.html): Amber, cost 4, Character, Common
+- [Scar - Betrayer](https://www.readysetink.com/card/scar-betrayer.html): Ruby, cost 5, Character, Uncommon
+- [Scar - Created by the Vine](https://www.readysetink.com/card/scar-created-by-the-vine.html): Steel, cost 5, Character, Legendary
+- [Scar - Eerily Prepared](https://www.readysetink.com/card/scar-eerily-prepared.html): Sapphire, cost 5, Character, Super Rare
+- [Scar - Fiery Usurper](https://www.readysetink.com/card/scar-fiery-usurper.html): Ruby, cost 4, Character, Common
+- [Scar - Finally King](https://www.readysetink.com/card/scar-finally-king.html): Steel, cost 5, Character, Legendary
+- [Scar - Heartless Hunter](https://www.readysetink.com/card/scar-heartless-hunter.html): Ruby, cost 5, Character, Super Rare
+- [Scar - Mastermind](https://www.readysetink.com/card/scar-mastermind.html): Sapphire, cost 6, Character, Rare
+- [Scar - Shameless Firebrand](https://www.readysetink.com/card/scar-shameless-firebrand.html): Ruby, cost 8, Character, Rare
+- [Scar - Tempestuous Lion](https://www.readysetink.com/card/scar-tempestuous-lion.html): Amethyst, cost 6, Character, Uncommon
+- [Scar - Vengeful Lion](https://www.readysetink.com/card/scar-vengeful-lion.html): Emerald, cost 4, Character, Rare
+- [Scar - Vicious Cheater](https://www.readysetink.com/card/scar-vicious-cheater.html): Ruby, cost 7, Character, Legendary
+- [Shenzi - Head Hyena](https://www.readysetink.com/card/shenzi-head-hyena.html): Emerald, cost 5, Character, Rare
+- [Shenzi - Hyena Pack Leader](https://www.readysetink.com/card/shenzi-hyena-pack-leader.html): Emerald, cost 4, Character, Super Rare
+- [Shenzi - Scar's Accomplice](https://www.readysetink.com/card/shenzi-scars-accomplice.html): Emerald, cost 3, Character, Uncommon
+- [Simba - Adventurous Successor](https://www.readysetink.com/card/simba-adventurous-successor.html): Ruby, cost 1, Character, Common
+- [Simba - Fighting Prince](https://www.readysetink.com/card/simba-fighting-prince.html): Steel, cost 7, Character, Super Rare
+- [Simba - Future King](https://www.readysetink.com/card/simba-future-king.html): Steel, cost 1, Character, Common
+- [Simba - Happy-Go-Lucky](https://www.readysetink.com/card/simba-happy-go-lucky.html): Amber, cost 2, Character, Common
+- [Simba - King in the Making](https://www.readysetink.com/card/simba-king-in-the-making.html): Amber, cost 7, Character, Super Rare
+- [Simba - Lost Prince](https://www.readysetink.com/card/simba-lost-prince.html): Steel, cost 3, Character, Common
+- [Simba - Playful Pouncer](https://www.readysetink.com/card/simba-playful-pouncer.html): Amber, cost 2, Character, Uncommon
+- [Simba - Pride Protector](https://www.readysetink.com/card/simba-pride-protector.html): Amber, cost 5, Character, Legendary
+- [Simba - Protective Cub](https://www.readysetink.com/card/simba-protective-cub.html): Amber, cost 2, Character, Common
+- [Simba - Returned King](https://www.readysetink.com/card/simba-returned-king.html): Steel, cost 7, Character, Rare
+- [Simba - Rightful Heir](https://www.readysetink.com/card/simba-rightful-heir.html): Steel, cost 5, Character, Uncommon
+- [Simba - Rightful King](https://www.readysetink.com/card/simba-rightful-king.html): Steel, cost 5, Character, Uncommon
+- [Simba - Scrappy Cub](https://www.readysetink.com/card/simba-scrappy-cub.html): Ruby, cost 2, Character, Rare
+- [Simba - Son of Mufasa](https://www.readysetink.com/card/simba-son-of-mufasa.html): Steel, cost 6, Character, Uncommon
+- [Stampede](https://www.readysetink.com/card/stampede.html): Emerald, cost 1, Action, Common
+- [Teeth and Ambitions](https://www.readysetink.com/card/teeth-and-ambitions.html): Ruby, cost 2, Action, Rare
+- [Timon - Grub Rustler](https://www.readysetink.com/card/timon-grub-rustler.html): Amber, cost 1, Character, Common
+- [Timon - Snowball Swiper](https://www.readysetink.com/card/timon-snowball-swiper.html): Amber, cost 3, Character, Rare
+- [Unfortunate Situation](https://www.readysetink.com/card/unfortunate-situation.html): Steel, cost 4, Action, Uncommon
+- [Vicious Betrayal](https://www.readysetink.com/card/vicious-betrayal.html): Emerald, cost 1, Action, Common
+- [You Have Forgotten Me](https://www.readysetink.com/card/you-have-forgotten-me.html): Amber, cost 4, Action, Uncommon
+- [Zazu - Advisor to Mufasa](https://www.readysetink.com/card/zazu-advisor-to-mufasa.html): Emerald, cost 5, Character, Common
+- [Zazu - Steward of the Pride Lands](https://www.readysetink.com/card/zazu-steward-of-the-pride-lands.html): Emerald, cost 1, Character, Common
