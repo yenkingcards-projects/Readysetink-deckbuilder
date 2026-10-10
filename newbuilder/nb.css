@@ -1,18 +1,13 @@
-/* =========================================================================
-   THE NEW DECK BUILDER — styles.  Source: newbuilder/nb.css
-   Every rule is scoped under html.nb, which only exists with ?newbuilder=1,
-   so none of this can touch the classic builder. Colours come from the
-   site's own tokens (light and dark), so contrast follows the existing
-   audited palette. Calm by default: controls are quiet until you reach for
-   them, nothing flies, nothing flashes.
-   ========================================================================= */
+/* The deck builder's styles (newbuilder/nb.css), inlined by build_flounder.py.
+   Rules are scoped under html.nb (set on <html> in the template) so they win
+   over the older base styles in the template. Colours come from the site's
+   tokens, light and dark. Calm by default: nothing flies, nothing flashes. */
 
 /* ---- things the new layout replaces or removes ---- */
 html.nb nav.tabs,html.nb .subsw,html.nb .mtabs,html.nb #searchcol,html.nb .dgrip,
 html.nb .kofiwrap,html.nb .pullkofi,html.nb #pullQrKofi,
 html.nb #special>summary,html.nb #side>summary,html.nb .seecards,
-html.nb #special .exprow #expAll,html.nb #special .exprow #colAll,
-html.nb #clr,html.nb #clr2,html.nb #sh{display:none!important}
+html.nb #special .exprow #expAll,html.nb #special .exprow #colAll{display:none!important}
 html.nb :focus-visible{outline:3px solid var(--primary);outline-offset:2px}
 html.nb [hidden]{display:none!important}
 html.nb kbd{font:700 11px var(--sans);border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;
@@ -21,8 +16,8 @@ html.nb kbd{font:700 11px var(--sans);border:1px solid var(--line);border-bottom
 .nbsr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* ---- header: logo, five places, theme, sign in ---- */
+html.nb .logo .f{display:none}
 html.nb header{gap:12px;padding:6px 14px;flex-wrap:nowrap}
-html.nb .logo span{display:none}
 .nbnav{display:flex;align-items:center;gap:2px;min-width:0}
 .nbnav>button,.nbnav .nbmorewrap>button{display:inline-flex;align-items:center;gap:4px;font:700 13px/1 var(--sans);
   color:var(--on-dark);padding:10px 12px;border-radius:4px;min-height:40px;white-space:nowrap;background:none;border:none;cursor:pointer}
@@ -628,3 +623,11 @@ html.nb .nbh-foot kbd{background:rgba(255,255,255,.12);color:#fff;border-color:r
   .nbh-tickw{white-space:normal}
 }
 html.nb .nbh-i.on:focus-visible{outline:none}
+
+/* Guided Coconut Build: the same deck panel, beside the steps */
+#gdeck .nbopt[data-start="guided"]{display:none}
+.nbgpeek{display:none}
+@media(max-width:1023px){
+  .nbgpeek{display:flex;width:100%;justify-content:flex-start;min-height:48px;margin-top:4px}
+  .nbgpeek b{margin-left:auto}
+}

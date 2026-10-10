@@ -1,29 +1,16 @@
-/* =========================================================================
-   THE NEW DECK BUILDER  (?newbuilder=1)
-   -------------------------------------------------------------------------
-   Source file: newbuilder/nb.js. build_flounder.py inlines it at the very
-   end of the main closure in flounder-search.template.html, so it can see
-   and wrap every function above it. The spec is deck-builder-plan.md.
-
-   Ground rules this file keeps:
-   · Flag off (the default), it does two things only: records the Phase 0
-     analytics events for the classic builder, and removes its own offline
-     worker if one was installed. The classic builder is otherwise untouched.
-   · It REUSES the classic builder's engine — the search (filt/sortC), the 72
-     special searches (GROUPS), the deck functions (addCard, setCardCount,
-     undo, saveDeckPrompt …), the pull sheet and the saved-deck format. Only
-     the layout is new, which is how every power feature survives.
-   · Saved decks keep their exact format. The only new storage keys are
-     fs3_nb, fs3_nb_work (the unsaved working copy), fs3_nb_recent,
-     fs3_nb_dview, fs3_nb_theme and fs3_nb_hint.
-   · Icons are the project icon library,
-     inlined below — no emoji on the build path.
-   · Later phases plug in through NBX (bottom of this file).
-   ========================================================================= */
+/* The deck builder's layout. build_flounder.py inlines this at the end of the
+   main closure in flounder-search.template.html, so it can use every function
+   above it: the search (filt/sortC), the special searches (GROUPS), the deck
+   functions (addCard, setCardCount, undo, saveDeckPrompt…) and the pull sheet.
+   This file is the layout on top of that engine; decks keep the same format.
+   Its own storage keys: fs3_nb_work (unsaved working copy), fs3_nb_recent,
+   fs3_nb_dview, fs3_nb_theme, fs3_nb_hint. Add tabs and start options
+   through NBX at the bottom. */
 (function nbMain(){
-const NB=document.documentElement.classList.contains("nb");
+/* There used to be a "classic builder" switch stored here. */
+try{localStorage.removeItem("fs3_nb")}catch(e){}
 
-/* ===================== Phase 0 · analytics (both builders) =====================
+/* ===================== analytics =====================
    Six moments, sent to Vercel Web Analytics as custom events. On a Vercel
    plan without custom events they are simply dropped — no errors, no cost.
    The queue stub is the one Vercel's own snippet installs, so events fired
@@ -31,7 +18,7 @@ const NB=document.documentElement.classList.contains("nb");
 window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};
 const NB_T0=Date.now();
 function nbTrack(name,data){
-  try{window.va("event",{name,data:Object.assign({builder:NB?"new":"classic"},data||{})})}catch(e){}
+  try{window.va("event",{name,data:data||{}})}catch(e){}
 }
 let nbFirstAdded=false;const nbHit60=new Set();
 nbTrack("builder_opened");
@@ -46,7 +33,7 @@ nbTrack("builder_opened");
       const min=(FMT[deck().fmt]||{}).min||60;
       if(min&&tot>=min&&!nbHit60.has(DECKS.cur)){nbHit60.add(DECKS.cur);
         nbTrack("deck_reached_60",{seconds:Math.round((Date.now()-NB_T0)/1000)})}
-      if(NB)nbQueueWork();
+      nbQueueWork();
     }catch(e){}
   };
   const _save=saveDeckPrompt;
@@ -59,7 +46,6 @@ nbTrack("builder_opened");
   copyDeckLink=function(){nbTrack("deck_shared",{how:"link"});return _link.apply(this,arguments)};
   const _share=shareLink;
   shareLink=function(){nbTrack("deck_shared",{how:"share"});return _share.apply(this,arguments)};
-  {const sh=$("sh");if(sh)sh.onclick=shareLink}
   const _tcg=tcgOpen;
   tcgOpen=function(){nbTrack("deck_exported",{how:"tcgplayer"});return _tcg.apply(this,arguments)};
   /* Exports that are plain buttons rather than named functions: caught by id. */
@@ -67,16 +53,6 @@ nbTrack("builder_opened");
     const b=e.target&&e.target.closest&&e.target.closest("#dc,#pullPrint,#pullCopy,#pullProxy,#bImg,#regOpen,[data-shr=text],[data-shr=image]");
     if(b)nbTrack("deck_exported",{how:b.id||b.dataset.shr||"button"});
   },true);
-}
-
-/* ===================== flag off: stop here ===================== */
-if(!NB){
-  /* Someone who tried the new builder and switched back shouldn't keep its
-     offline worker. Only ours is removed — matched by its script name. */
-  try{if(location.protocol==="https:"&&navigator.serviceWorker&&navigator.serviceWorker.getRegistrations)
-    navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>{
-      const s=(r.active&&r.active.scriptURL)||"";if(/\/sw\.js$/.test(s))r.unregister()})).catch(()=>{})}catch(e){}
-  return;
 }
 
 /* ===================== icons ===================== */
@@ -122,7 +98,7 @@ document.addEventListener("click",e=>{if(!e.target.closest(".nbmenu"))nbCloseMen
    Existing pieces are MOVED, not rebuilt, so every handler already bound to
    them keeps working: the search box and its pills, the art/franchise/flavour
    switches, Syntax, the 72 special searches, the full Filters list, the
-   card-view settings, and the classic deck panel (the "Stats" tab). */
+   card-view settings, and the template's deck panel (the "Stats" tab). */
 const vS=$("vSearch"),WRAP=vS.querySelector(".wrap"),POOL=vS.querySelector("section.cards"),
       SCOL=$("searchcol"),OLDDECK=$("deck"),HEADER=document.querySelector("header");
 
@@ -144,8 +120,8 @@ NAV.querySelectorAll("[data-go]").forEach(b=>{if(b.dataset.go==="more")return;
   b.onclick=()=>({build:()=>showSearch(),cards:()=>showTab("tSearch"),
     decks:()=>showTab("tDecks"),coll:()=>showTab("tColl")})[b.dataset.go]()});
 
-/* More: every page the site has, straight from the same list the classic
-   Other page and hamburger read — so a game added there shows up here too. */
+/* More: every page the site has, from OTHER_GROUPS — the same list the Other
+   page reads, so a page added there shows up here too. */
 const NB_GICON={"":"star","Tools":"map-pin","Mini games":"swords"};
 function nbMoreHTML(){
   const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust");
@@ -163,8 +139,7 @@ function nbMoreHTML(){
       <button type="button" role="menuitem" data-mm="all">See everything</button>
       <button type="button" role="menuitem" data-mm="theme">${ic("theme")}Light / dark</button>
       <button type="button" role="menuitem" data-mm="keys" class="nbdesk">Keyboard shortcuts</button>
-      <button type="button" role="menuitem" data-mm="tour">Welcome tour</button>
-      <button type="button" role="menuitem" data-mm="classic">Classic builder</button></div>`;
+      <button type="button" role="menuitem" data-mm="tour">Welcome tour</button></div>`;
 }
 nbMenu($("nbMoreBtn"),$("nbMoreMenu"),()=>{$("nbMoreMenu").innerHTML=nbMoreHTML()});
 $("nbMoreMenu").addEventListener("click",e=>{
@@ -177,7 +152,6 @@ $("nbMoreMenu").addEventListener("click",e=>{
   if(k==="theme")THEMEB.click();
   if(k==="keys")nbShortcuts();
   if(k==="tour")startTour(true);
-  if(k==="classic")location.href=location.pathname+"?newbuilder=0"+location.hash;
 });
 
 /* ---- the filter bar, above the card pool ---- */
@@ -242,7 +216,7 @@ BAR.appendChild(MOREP);
  const sy=$("sy"),syh=$("syh");
  if(sy){sy.textContent="Show the search syntax";$("nbTools").appendChild(sy)}
  if(syh)$("nbTools").appendChild(syh);
- const sd=$("side");if(sd){$("nbFacets").appendChild(sd);nbForceOpen(sd,"fs3_sideopen")}}
+ const sd=$("side");if(sd){$("nbFacets").appendChild(sd);nbForceOpen(sd)}}
 $("nbClearP").onclick=()=>clearAll();
 
 /* ---- the Special searches drawer, sliding in from the left ---- */
@@ -261,16 +235,11 @@ const DRAWER=nbEl(`<aside class="nbdrawer" id="nbDrawer" role="dialog" aria-moda
    phone dock / deck sheet, which live in <main> too. */
 document.querySelector("main").appendChild(SCRIM);
 document.body.append(DRAWER);
-{const sp=$("special");if(sp){$("nbDrBody").appendChild(sp);nbForceOpen(sp,"fs3_spec")}}
-function nbForceOpen(det,key){
-  /* The classic builder remembers whether these were open; opening them here
-     shouldn't change what the classic builder shows next time. */
-  const prev=(()=>{try{return localStorage.getItem(key)}catch(e){return null}})();
+{const sp=$("special");if(sp){$("nbDrBody").appendChild(sp);nbForceOpen(sp)}}
+/* Their summary rows are hidden here, so a closed one could never be reopened. */
+function nbForceOpen(det){
   det.open=true;
-  /* Nothing in the new layout should be able to fold these shut: their
-     summary rows are hidden, so a closed one could never be reopened. */
   det.addEventListener("toggle",()=>{if(!det.open)det.open=true});
-  setTimeout(()=>{try{prev===null?localStorage.removeItem(key):localStorage.setItem(key,prev)}catch(e){}},0);
 }
 
 /* ---- the deck panel: always on screen from 1024px, a bottom sheet below ---- */
@@ -879,7 +848,7 @@ $("nbBuy").onclick=()=>{
 $("nbPullB").onclick=nbPull;
 $("nbShareB").onclick=nbShare;
 
-/* the pull sheet: the classic one, on the Decks page, for this deck */
+/* the pull sheet lives on the Decks page */
 function nbPull(){
   if(!dtotal()){toast("Add some cards first");return}
   nbCloseAll();showTab("tDecks");
@@ -1202,6 +1171,22 @@ renderDeck=function(hostId){
   if(!hostId||hostId==="deck"){try{nbPaintDeck()}catch(e){console.error(e)}}
   return r;
 };
+/* Guided Coconut Build shows this same deck panel beside its steps. renderGuide
+   rewrites its whole view, so the panel is lifted out first and put back after. */
+const nbHomeDeck=()=>{if(DECKP.parentNode!==WRAP)WRAP.appendChild(DECKP)};
+const _rgd=renderGuide;
+renderGuide=function(){nbHomeDeck();return _rgd.apply(this,arguments)};
+renderGuideDeck=function(){
+  const g=$("gdeck");if(!g)return;
+  if(DECKP.parentNode!==g){g.textContent="";
+    /* phones: the panel is a bottom sheet, so give it a button to open it */
+    const pk=nbEl(`<button type="button" class="nbbtn nbgpeek" id="nbGPeek">${ic("deck")}<span>Your deck</span><b></b></button>`);
+    pk.onclick=()=>$("nbPeek").click();
+    g.append(pk,DECKP)}
+  const min=(FMT[deck().fmt]||{}).min||0;
+  $("nbGPeek").querySelector("b").textContent=min?`${dtotal()} / ${min}`:String(dtotal());
+  try{nbPaintDeck()}catch(e){console.error(e)}
+};
 const _pdb=paintDeckBar;
 paintDeckBar=function(){_pdb.apply(this,arguments);try{nbPaintSaveState()}catch(e){}};
 const _pu=paintUndo;
@@ -1232,6 +1217,7 @@ showTab=function(t){
 };
 function nbOnTab(t){
   nbCloseAll();PREV.hidden=true;
+  if(!(t==="tDeck"&&SUB==="guided"))nbHomeDeck();
   const on={tDeck:"build",tSearch:"cards",tDecks:"decks",tColl:"coll",tOther:"more"}[t];
   const guided=t==="tDeck"&&SUB==="guided";
   NAV.querySelectorAll("[data-go]").forEach(b=>{

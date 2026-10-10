@@ -1,95 +1,65 @@
-# The new deck builder (`?newbuilder=1`)
+# The deck builder (`newbuilder/`)
 
-The rebuilt deck builder from `deck-builder-plan.md` (Roadmap Phases 0–2, the
-phone section, and the quality bar). **It is the default.** readysetink.com opens
-on its home screen, and readysetink.com/deckbuilder is the builder itself.
-vercel.json serves the same page at both addresses.
-
-## Trying it
-
-- It's on for everyone. `?newbuilder=0` (or **More → Classic builder**) switches that
-  device to the classic builder and remembers it; `?newbuilder=1` switches back.
+There is one deck builder. readysetink.com opens on its home screen and
+readysetink.com/deckbuilder is the builder (vercel.json serves the same page at
+both). The old "classic builder" and its `?newbuilder=` switch were removed on
+2026-10-10.
 
 ## Where the code is
 
 | File | What it is |
 | --- | --- |
-| `newbuilder/nb-boot.js` | 10 lines in `<head>`. Decides whether the flag is on (adds `class="nb"` to `<html>`). |
-| `newbuilder/nb.css` | All the styles. Every rule starts with `html.nb`, so none of it can affect the classic builder. |
-| `newbuilder/nb.js` | All the behaviour. Inlined at the end of the main script, inside the same closure, so it can reuse the classic engine directly. |
-| `sw.js` | Offline support. Registered only by the new builder; the classic builder removes it. |
+| `newbuilder/nb.css` | The builder's styles. Rules start with `html.nb` (set on `<html>` in the template) so they win over the template's older base styles. |
+| `newbuilder/nb.js` | The builder's layout and behaviour. Inlined at the end of the template's main script, inside the same closure, so it uses the template's engine directly. |
+| `sw.js` | Offline support, registered by nb.js. |
 
-`build_flounder.py` packs all three `newbuilder/` files into `index.html`, so the
-site is still one self-contained HTML file. The template only gained three
-placeholder comments (`/*__NB_BOOT__*/`, `/*__NB_CSS__*/`, `/*__NB_JS__*/`).
-The new code lives in separate files so that two people editing at once rarely
-touch the same lines of the 16,000-line template.
+`build_flounder.py` inlines both files into `index.html` at the
+`/*__NB_CSS__*/` and `/*__NB_JS__*/` placeholders, so the site is still one
+self-contained HTML file.
 
 ## How it works
 
-It **reuses** the classic builder's engine: the search, the 72 special
-searches, add/remove/undo, saving, the saved-deck format, the collection, and
-TCGplayer. It **moves** existing pieces into the new layout instead of rebuilding
-them (the search box, the artwork/franchise/flavour switches, Syntax, the
-special searches, the Filters list, and the classic deck panel, which becomes
-the "Stats & tools" tab). Anything already bound to those elements keeps working.
+The template is the engine: search, the 72 special searches, add/remove/undo,
+saving, the saved-deck format, the collection and TCGplayer. nb.js is the
+layout on top. It moves existing pieces into place (search box, art/franchise/
+flavour switches, Syntax, special searches, Filters, and the template's deck
+panel, which becomes the "Stats" tab) instead of rebuilding them, so anything
+already bound to them keeps working.
 
-With the flag off, `nb.js` only records the Phase 0 analytics events and stops.
+Guided Coconut Build uses the same deck panel: nb.js moves it into `#gdeck`
+while the guided view is open and back when you leave.
 
-**Saved decks keep their format.** The only new storage keys are:
-`fs3_nb` (the flag), `fs3_nb_work` (unsaved working copy: *Save still means
-Save*), `fs3_nb_recent`, `fs3_nb_dview`, `fs3_nb_theme`, `fs3_nb_hint`.
+Storage keys of its own: `fs3_nb_work` (unsaved working copy: *Save still
+means Save*), `fs3_nb_recent`, `fs3_nb_dview`, `fs3_nb_theme`, `fs3_nb_hint`.
 
-## Design choices (from Ben's first review)
+## Design rules (from Ben's reviews)
 
-- Calm by default: adding a card never re-draws card pictures (no flash), nothing
-  flies across the screen, and only the deck row that changed is highlighted.
-- Tiles show one "+ Add" until a card is in the deck, then "− n +" with just the number.
-- Cost is a two-handle slider (0 to 10+). Inkwell is a clear three-way choice in
-  Filters (Any / Inkable only / Uninkable only), not a cycling button.
-- The big card preview appears beside the card, only when hovering the picture,
-  after 1.5 seconds. It never appears over the + / − buttons.
-- Compare: the button in any card's detail view, press-and-hold on a phone, or the C key.
-- Icons are the project icon library, inlined in
-  `nb.js` as `NBI`. There are no emoji on the build path.
-- More lists every page the site has, read from the same `OTHER_GROUPS` list as the
-  classic Other page.
-- Ko-fi: the original "Support Ready Set Ink" button is on the Settings page. It
-  never appears in the builder.
-- The journey: Build → Save → Pull sheet (goes to this deck's pull sheet on Decks)
-  → Share (link, native share, list text, a square deck image, and a QR code).
+- Calm: adding a card never redraws card pictures, nothing flies across the
+  screen, only the changed deck row is highlighted.
+- Tiles show "+ Add" until a card is in the deck, then "− n +".
+- Cost is a two-handle slider (0 to 10+). Inkwell is Any / Inkable / Uninkable in Filters.
+- The big preview appears beside a card after 1.5 s of hovering its picture,
+  never over the + / − buttons.
+- Compare: card detail button, press-and-hold on a phone, or C.
+- Icons come from the project icon library (`NBI` in nb.js). No emoji on buttons.
+- More lists every page from `OTHER_GROUPS`.
+- Ko-fi lives on the Settings page only.
+- The journey: Build → Save → Pull sheet → Share (link, share sheet, text, square image, QR).
+- Home screen: console-style main menu. Deep links skip it; the logo brings it back.
+- Phones: two-across card grid and a dark "Your deck … View" bar.
 
-## Round 3 (Ben's second review)
+## Analytics
 
-- **Home screen:** a console-style main menu, after Black Ops' menu. Plain visits to the
-  new builder open on it; deep links skip it; the logo brings it back. Its menus are built
-  from `OTHER_GROUPS`. The art is `icons/rsi-meme-team-360.webp` plus an inline SVG
-  blue-striped fish.
-- **Search bar:** three fixed, labelled rows (Ink · Cost · Type). The search box never grows,
-  because pills scroll inside it. Filter counts sit on the button corners, and Clear keeps
-  its space. Nothing moves as you filter.
-- **Cost slider:** a visible track with end caps and a notch per cost. Each handle shows its
-  own number, and invisible native inputs on top handle dragging, keyboard and screen readers.
-- **Special searches:** a gold button with a twinkling sparkle and a slow shine (off with
-  reduced motion).
-- **Phones:** a two-across grid of real card pictures, and a dark "Your deck … View" tab bar.
-- **Card window:** no "(no rules text)" line; a compact label/value box; Compare in the
-  action row.
+Vercel Web Analytics custom events: `builder_opened`, `first_card_added`
+(with seconds), `deck_reached_60`, `deck_saved`, `deck_exported`,
+`deck_shared`. Dropped silently on Vercel plans without custom events.
 
-## Phase 0 analytics
+## Adding to it
 
-Sent to Vercel Web Analytics as custom events, from **both** builders (tagged
-`builder: classic|new`): `builder_opened`, `first_card_added` (with seconds),
-`deck_reached_60`, `deck_saved`, `deck_exported`, `deck_shared`. Custom
-events only show up on a Vercel plan that includes them. On other plans they
-are dropped silently.
-
-## Adding Phases 3–5
-
-Use the hooks at the bottom of `nb.js` rather than editing the panels:
+Use the hooks at the bottom of `nb.js`:
 
 ```js
 NBX.addDeckTab({id:"stats", label:"Stats", render: pane => { /* … */ }});
-NBX.addStartOption({id:"finish", icon:"✨", label:"Finish my deck", sub:"…", run: () => { /* … */ }});
+NBX.addStartOption({id:"finish", icon:"sparkles", label:"Finish my deck", sub:"…", run: () => { /* … */ }});
 NBX.addDrawerSection("<h4>…</h4>");
 ```

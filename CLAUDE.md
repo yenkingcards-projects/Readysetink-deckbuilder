@@ -71,6 +71,8 @@ unless he asks.
   — it's ~10k lines and he has a lot of context on why things are the way
   they are.
 - Don't lose user data: decks, collection, dust.
+- One version of every feature. When something changes, edit it in place — no
+  flags, no "classic" fallback, no v2 beside v1 (see HOW-WE-WORK.md).
 - You are not the only one editing this repo. Kenny's own AI session works
   here too — grep for call sites before renaming or moving anything, and
   prefer small, frequent commits over one large one.

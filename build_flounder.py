@@ -325,13 +325,10 @@ SB_URL = "https://cwevqwisucaemfsffpsy.supabase.co"
 SB_KEY = "sb_publishable_1uLIyne_6GxEPtWbQoj7jg_4R1UUfmT"
 html = html.replace("/*__SB_URL__*/", SB_URL).replace("/*__SB_KEY__*/", SB_KEY)
 
-# The new deck builder, behind ?newbuilder=1. Kept in its own files under
-# newbuilder/ rather than inside the 16k-line template, so two people (and two
-# AI sessions) editing the site at once rarely touch the same lines. Inlined
-# here so the site stays one self-contained, offline-capable HTML file.
+# The deck builder's layout lives in newbuilder/ and is inlined here, so the
+# site stays one self-contained, offline-capable HTML file.
 NB_DIR = os.path.join(HERE, "newbuilder")
-for marker, fname, closer in (("/*__NB_BOOT__*/", "nb-boot.js", "</script"),
-                              ("/*__NB_CSS__*/", "nb.css", "</style"),
+for marker, fname, closer in (("/*__NB_CSS__*/", "nb.css", "</style"),
                               ("/*__NB_JS__*/", "nb.js", "</script")):
     if marker not in html:
         sys.exit(f"! template is missing the {marker} placeholder")

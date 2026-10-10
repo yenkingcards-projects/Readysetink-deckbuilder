@@ -1,5 +1,4 @@
-/* Ready Set Ink — offline support for the new deck builder (?newbuilder=1).
-   Registered only by the new builder; the classic builder unregisters it.
+/* Ready Set Ink — offline support. Registered by the deck builder (newbuilder/nb.js).
 
    · Pages: network first, so an update always arrives when you're online;
      the last copy you loaded is used when you're not. All 2,543 cards live

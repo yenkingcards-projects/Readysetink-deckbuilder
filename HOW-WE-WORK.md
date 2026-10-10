@@ -34,6 +34,13 @@ Care is spent BEFORE the edit, not after:
 Those greps cost seconds and catch the bugs. The test suite caught almost none
 of them — it mostly caught itself.
 
+## Change things in place
+
+When a feature changes, edit it. Don't build a second version next to the
+first, don't add a flag or a "classic" fallback, don't keep the old one
+reachable. One version of everything. Retired code goes to git history (or,
+if Ben asks, to `Claude apps/readysetink_archive/` on his Mac).
+
 ## Never break
 
 - Only edit `flounder-search.template.html`. Never the built files.

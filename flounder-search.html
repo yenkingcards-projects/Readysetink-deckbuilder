@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="nb">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,22 +52,6 @@
      request 404s, the deferred script does nothing, and the page is unaffected
      — which is why it can sit in a file that has to keep working offline. -->
 <script defer src="/_vercel/insights/script.js"></script>
-<!-- The new deck builder, behind ?newbuilder=1. This line only decides whether
-     <html> gets the "nb" class; every rule and script for the new builder lives
-     in newbuilder/ and is inlined by build_flounder.py. Without the flag the
-     page is exactly what it was. -->
-<script>/* Runs in <head>, before the first paint. Decides one thing: is the new
-   builder on? It is the default. ?newbuilder=0 (More → Classic builder)
-   switches this device back to the classic builder and remembers that;
-   ?newbuilder=1 turns the new one back on. Everything else is in nb.css / nb.js. */
-(function(){try{
-  var q=new URLSearchParams(location.search).get("newbuilder"),on;
-  if(q==="0"){localStorage.setItem("fs3_nb","0");on=false}
-  else if(q==="1"){localStorage.removeItem("fs3_nb");on=true}
-  else on=localStorage.getItem("fs3_nb")!=="0";
-  if(on)document.documentElement.classList.add("nb");
-}catch(e){document.documentElement.classList.add("nb")}})();
-</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ready Set Ink","url":"https://www.readysetink.com/","description":"Disney Lorcana card search and deck builder.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.readysetink.com/#q={search_term_string}"},"query-input":"required name=search_term_string"},"@id":"https://www.readysetink.com/#website","publisher":{"@id":"https://www.readysetink.com/#organization"}},{"@type":"Organization","name":"Ready Set Ink","url":"https://www.readysetink.com/","logo":"https://www.readysetink.com/icons/icon-512.png","sameAs":["https://www.youtube.com/@readysetink"],"@id":"https://www.readysetink.com/#organization"}]}</script>
 <style>
 /* ===== ReadySetInk design system ==========================================
@@ -164,8 +148,9 @@ body.dark{
   --bevel-in:inset 0 1px 0 rgba(0,0,0,.55),inset 0 -1px 0 rgba(255,255,255,.08);
 }
 /* The few places a literal light colour was baked in and would now glare. */
-body.dark .btn.go{color:var(--carbon)}
-body.dark .btn.bad,body.dark .fastgrid button.bad{color:var(--carbon)}
+body.dark .btn.go{color:#202638}
+body.dark .btn.bad{color:#ffb0b0}
+body.dark .fastgrid button.bad{color:var(--carbon)}
 body.dark .crow.has{background:#3a3520;border-color:var(--amber-press)}
 body.dark .chip.rec{background:#3a3520}
 body.dark .acrow:hover,body.dark .acrow.on{background:#3a3520}
@@ -380,7 +365,7 @@ body.nocoll .collonly{display:none!important}
 .soonlbl{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep);
   background:var(--platinum);border:1px solid var(--hairline);border-radius:2px;padding:2px 6px}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
-.btn[disabled]:hover{background:var(--amberc)}
+.btn[disabled]:hover{border-color:var(--line)}
 
 
 .prow{margin-bottom:8px}
@@ -569,8 +554,6 @@ header{display:flex;align-items:center;gap:14px;padding:7px 12px;background:var(
 .logo b{font-size:16px;white-space:nowrap;font-family:var(--display);font-weight:900;
   color:var(--deep);background:var(--surface);border-radius:9999px;
   padding:3px 13px 4px;letter-spacing:-.02em;border:1px solid var(--chrome)}
-.logo span{font-size:12px;color:var(--on-dark-soft);font-family:var(--sans);letter-spacing:.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-@media(max-width:900px){.logo span{display:none}}
 header .sp{flex:1}
 header select{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:6px 9px;font-size:12.8px}
 
@@ -606,18 +589,17 @@ nav.tabs .navlink:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
   font-size:13.5px;color:var(--tx);font-weight:600;text-decoration:none;box-sizing:border-box}
 .othermenu button:hover,.othermenu a:hover{background:var(--canvas-soft)}
 
-/* Page titles sit under a gold hairline with a smallcaps eyebrow above. */
-/* Hero plate: the page-tinted field the box-art wordmark sits on. */
-.page h1{margin:0;padding:14px 16px;background:var(--chrome);
-  border:1px solid var(--chrome);box-shadow:var(--bevel);border-radius:6px 6px 0 0}
-.page h1+.lede{margin:0 0 16px;padding:10px 16px 12px;background:var(--canvas-soft);
-  border:1px solid var(--chrome);border-top:none;box-shadow:var(--bevel);
-  border-radius:0 0 6px 6px;color:var(--tx)}
+/* Page titles: a white card like the deck builder's panels, the intro inside it. */
+.page h1{margin:0;padding:18px 20px 6px;background:var(--surface);color:var(--tx);text-shadow:none;
+  border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0}
+.page h1:not(:has(+.lede)){border-bottom:1px solid var(--line);border-radius:8px;padding-bottom:16px;margin-bottom:16px}
+.page h1 .gi{display:none}
+.page h1+.lede{margin:0 0 16px;padding:0 20px 16px;background:var(--surface);max-width:none;
+  border:1px solid var(--line);border-top:none;border-radius:0 0 8px 8px;color:var(--tx)}
 /* Section header strip — silkscreened legend over each module. */
-.sec2{background:var(--canvas-soft);color:var(--tx);border:1px solid var(--chrome);
-  box-shadow:var(--bevel);padding:5px 10px;margin:16px 0 8px;border-radius:0;
+.sec2{background:var(--canvas-soft);color:var(--tx);border:1px solid var(--line);
+  padding:6px 12px;margin:16px 0 8px;border-radius:6px;
   font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-.sec2::before{content:"\2261  ";opacity:.6}
 /* ---- the dividers in the Other menu ----
    These name the sections of the menu — "Mini games" and so on — and they were
    the same weight and nearly the same colour as the tile headings underneath
@@ -627,9 +609,7 @@ nav.tabs .navlink:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
    accent bar, a rule under it, and the whole strip is now clearly a label
    rather than another card. */
 .ogh.sec2{background:var(--carbon);color:#fff;border-color:var(--carbon);
-  border-left:4px solid var(--amberc);letter-spacing:.13em;font-weight:800;
-  padding:7px 12px;box-shadow:0 1px 0 rgba(0,0,0,.25)}
-.ogh.sec2::before{opacity:.55}
+  letter-spacing:.13em;font-weight:800;padding:7px 12px}
 body.dark .ogh.sec2{background:var(--platinum);color:var(--tx);border-color:var(--hairline);
   border-left-color:var(--amberc)}
 
@@ -651,7 +631,7 @@ body.browse .deck,body.browse .subsw,body.browse .mtabs{display:none!important}
 body.browse .wrap{grid-template-columns:minmax(0,1fr)}
 .page{max-width:1000px;margin:0 auto;padding:0 0 32px}
 /* size only — the rule, spacing and drop cap are set once at the top */
-.page h1{font-size:30px}
+.page h1{font-size:26px}
 
 .soon{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--acc);
   border-radius:0 11px 11px 0;padding:14px 16px;margin-bottom:12px;font-size:13.44px;line-height:1.65;color:var(--tx)}
@@ -2017,26 +1997,18 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .swx.jig{animation:swjig .9s ease-in-out}
 @media(prefers-reduced-motion:reduce){.swx,.swx *{transition:none}
   .swx.jig{animation:none}}
-.btn{font-family:var(--sans);text-transform:uppercase;letter-spacing:.5px;font-size:12px;
-  font-weight:700;color:var(--carbon);background:var(--amberc);
-  border:1px solid var(--chrome);border-radius:2px;padding:5px 11px;
-  box-shadow:var(--bevel);line-height:1.1}
-.btn:hover{border-color:var(--link);background:#22375a}
-.btn.bad:hover{border-color:var(--bad);color:#ffb0b0}
-/* Amber and Nav Gold are the same yellow in the revised file, so hover can no
-   longer be a hue change — it's the pressed step of the same yellow (8.47). */
-.btn:hover{background:var(--amber-press)}
-.btn:active{box-shadow:var(--bevel-in);transform:translateY(1px)}
-/* Submit / forward — the one thing that means "commit". */
-/* Action Red is the commit colour in the revised design file, but white on
-   #e60012 is only 4.80 — under the 7:1 bar this site holds. So the label-
-   bearing "go" button takes the deeper step of the same hue (7.24), and plain
-   --signal stays on fills that carry a glyph rather than a word. */
-.btn.go{background:var(--signal-deep);border-color:var(--signal-deep);color:var(--surface)}
-.btn.go:hover{background:#8f000b}
-/* Right-rail command button: a carbon slab, sharp. */
-.btn.dark{background:var(--carbon);color:var(--surface);border-radius:0}
-.btn.outline{background:var(--surface);color:var(--tx);border-color:var(--deep);box-shadow:var(--bevel)}
+/* Buttons match the deck builder's (.nbbtn): white, rounded, sentence case.
+   .go is the one yellow "do it" button on a screen. */
+.btn{font:700 13px/1.2 var(--sans);color:var(--tx);background:var(--surface);
+  border:1px solid var(--line);border-radius:6px;padding:7px 13px;cursor:pointer}
+.btn:hover{border-color:var(--link);background:var(--surface)}
+.btn.bad{color:var(--signal-deep)}
+.btn.bad:hover{border-color:var(--signal-deep)}
+.btn:active{transform:translateY(1px)}
+.btn.go{background:var(--amberc);border-color:var(--amber-press);color:#202638}
+.btn.go:hover{background:var(--amber-press)}
+.btn.dark{background:var(--carbon);color:var(--surface);border-color:var(--carbon)}
+.btn.outline{background:var(--surface);color:var(--tx);border-color:var(--deep)}
 /* Hints used to sit on bare canvas at 1.17:1. They now carry their own pale
    inset, which is both readable and closer to the system's "inset panel". */
 .hint{font-size:12px;color:var(--tx);margin-top:7px;line-height:1.55;
@@ -3132,9 +3104,9 @@ body.noremind .c.illegal img{filter:none}
 .ruling .nlink:hover{color:#9fe6ff}
 
 /* guided — every step is always visible; unreached ones are dimmed previews */
-.glayout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:14px;align-items:start}
+.glayout{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:14px;align-items:start}
 @media(max-width:1100px){.glayout{grid-template-columns:1fr}}
-.gside{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto}
+.gside{min-width:0}
 .gstep{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:16px;margin-bottom:14px;position:relative}
 .gstep h3{font-size:15.2px;margin-bottom:3px}
 .gstep h3 .num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;
@@ -3757,21 +3729,16 @@ body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
   .lorefish,.viccrest,.seatnum,.seat.chaos,.seat.chaos::before,.seat.chaos::after{
     animation:none!important;transition:none!important}}
 </style>
-<style id="nbcss">/* =========================================================================
-   THE NEW DECK BUILDER — styles.  Source: newbuilder/nb.css
-   Every rule is scoped under html.nb, which only exists with ?newbuilder=1,
-   so none of this can touch the classic builder. Colours come from the
-   site's own tokens (light and dark), so contrast follows the existing
-   audited palette. Calm by default: controls are quiet until you reach for
-   them, nothing flies, nothing flashes.
-   ========================================================================= */
+<style id="nbcss">/* The deck builder's styles (newbuilder/nb.css), inlined by build_flounder.py.
+   Rules are scoped under html.nb (set on <html> in the template) so they win
+   over the older base styles in the template. Colours come from the site's
+   tokens, light and dark. Calm by default: nothing flies, nothing flashes. */
 
 /* ---- things the new layout replaces or removes ---- */
 html.nb nav.tabs,html.nb .subsw,html.nb .mtabs,html.nb #searchcol,html.nb .dgrip,
 html.nb .kofiwrap,html.nb .pullkofi,html.nb #pullQrKofi,
 html.nb #special>summary,html.nb #side>summary,html.nb .seecards,
-html.nb #special .exprow #expAll,html.nb #special .exprow #colAll,
-html.nb #clr,html.nb #clr2,html.nb #sh{display:none!important}
+html.nb #special .exprow #expAll,html.nb #special .exprow #colAll{display:none!important}
 html.nb :focus-visible{outline:3px solid var(--primary);outline-offset:2px}
 html.nb [hidden]{display:none!important}
 html.nb kbd{font:700 11px var(--sans);border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;
@@ -3780,8 +3747,8 @@ html.nb kbd{font:700 11px var(--sans);border:1px solid var(--line);border-bottom
 .nbsr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* ---- header: logo, five places, theme, sign in ---- */
+html.nb .logo .f{display:none}
 html.nb header{gap:12px;padding:6px 14px;flex-wrap:nowrap}
-html.nb .logo span{display:none}
 .nbnav{display:flex;align-items:center;gap:2px;min-width:0}
 .nbnav>button,.nbnav .nbmorewrap>button{display:inline-flex;align-items:center;gap:4px;font:700 13px/1 var(--sans);
   color:var(--on-dark);padding:10px 12px;border-radius:4px;min-height:40px;white-space:nowrap;background:none;border:none;cursor:pointer}
@@ -4387,6 +4354,14 @@ html.nb .nbh-foot kbd{background:rgba(255,255,255,.12);color:#fff;border-color:r
   .nbh-tickw{white-space:normal}
 }
 html.nb .nbh-i.on:focus-visible{outline:none}
+
+/* Guided Coconut Build: the same deck panel, beside the steps */
+#gdeck .nbopt[data-start="guided"]{display:none}
+.nbgpeek{display:none}
+@media(max-width:1023px){
+  .nbgpeek{display:flex;width:100%;justify-content:flex-start;min-height:48px;margin-top:4px}
+  .nbgpeek b{margin-left:auto}
+}
 </style>
 </head>
 <body>
@@ -4396,10 +4371,10 @@ html.nb .nbh-i.on:focus-visible{outline:none}
 <div id="bub"></div>
 
 <header>
-  <button type="button" class="logo" id="logo" title="Back to the deck builder"><span class="f">🐠</span><b>Ready Set Ink</b><span>the best cards are the friends you make along the way</span></button>
+  <button type="button" class="logo" id="logo" title="Back to the deck builder"><span class="f">🐠</span><b>Ready Set Ink</b></button>
   <div class="sp"></div>
   <span class="worn" id="worn"></span>
-  <button class="btn" id="acct" hidden>Sign in</button>
+  <button class="btn go" id="acct" hidden>Sign in</button>
 </header>
 
 <nav class="tabs">
@@ -4466,9 +4441,7 @@ html.nb .nbh-i.on:focus-visible{outline:none}
         </div>
       </div>
       <div class="srow">
-        <button class="btn bad" id="clr">Clear all</button>
         <button class="btn" id="sy">Syntax</button>
-        <button class="btn" id="sh">Share deck</button>
       </div>
       <div class="hint" id="syh" style="display:none">
         <code>ink:amber</code> <code>cost&gt;=3</code> <code>type:action</code> <code>rarity:rare</code> <code>set:9</code>
@@ -4512,7 +4485,6 @@ html.nb .nbh-i.on:focus-visible{outline:none}
           <option value="costdesc">Cost ↓</option>
         </select></div>
       <div class="gtools">
-        <button class="btn" id="clr2">Clear all filters</button>
         <button class="btn" id="lnk" title="Copies a link that reopens exactly this search, and opens your device's share sheet">Share your search</button>
         <!-- One menu instead of a permanent wall of keyboard hints. The legend
              is worth reading once and never again, so it lives behind a click. -->
@@ -7394,7 +7366,7 @@ function renderDeck(hostId){
           <span>About <b>${money(Math.round(all*100)/100)}</b> to buy this deck</span>
           ${COLLON&&mine<all?`<span class="dcost2"><b>${money(Math.round(mine*100)/100)}</b> of it you don't own yet</span>`:""}
           ${unknown?`<span class="dcost2">${unknown} card${unknown===1?"":"s"} with no price</span>`:""}
-          <button class="btn go" id="dbuy">🛒 Buy the missing cards</button>
+          <button class="btn go" id="dbuy">Buy the missing cards</button>
         </div>`;
       })()}
       <div class="curveW">
@@ -7420,8 +7392,8 @@ function renderDeck(hostId){
      is something you go and look at; a rules problem is something that has to
      come and find you, so it sits with the card count where you can't miss it. */
   hBelow+=`<div class="acts">
-      <button class="btn" id="dc">📋 Copy</button>
-      <button class="btn" id="dim">📥 Import deck</button>
+      <button class="btn" id="dc">Copy</button>
+      <button class="btn" id="dim">Import deck</button>
       ${illegalN?`<button class="btn bad" id="drm">Remove not legal cards (${illegalN})</button>`:""}
       <button class="btn bad" id="dx">Clear</button></div>`;
   if(tot){
@@ -7432,8 +7404,8 @@ function renderDeck(hostId){
       <div class="st">${esc(a.why)}</div>
       <div class="st" style="margin-top:9px">Early curve — green means you've hit the target</div>
       <div class="curveT">${cv.map(x=>`<div class="${x.hit?"hit":""}"><b>${x.have}</b>${x.n} ink<br><span style="opacity:.7">want ${x.want}</span></div>`).join("")}</div>
-      <div class="acts"><button class="btn" id="dh">🎴 Sample hand</button>
-        <button class="btn" id="dgf">🎣 Goldfish 1,000 hands</button></div>
+      <div class="acts"><button class="btn" id="dh">Sample hand</button>
+        <button class="btn" id="dgf">Goldfish 1,000 hands</button></div>
       <div id="hb"></div><div id="gf"></div></div></details>`;
     /* ---- "What I'd change" is shelved -------------------------------------
        Ben's call, 2026-09-06: the advice isn't good enough to be giving people
@@ -8485,7 +8457,7 @@ function renderGuide(){
     step(0,"Choose your Coconut",s1)+step(1,needBadge===1?"Pick one more ink":"Pick two more inks",s2)+
     step(2,"How many Coconuts?",s3c)+step(3,"Staples",s3)+
     step(4,"Recommended synergies",s4)+step(5,"Build it",s6)+
-    `</div><aside class="deck gside" id="gdeck"></aside></div>`;
+    `</div><aside class="gside" id="gdeck"></aside></div>`;
   renderGuideDeck();
 
   /* step 1 wiring */
@@ -8557,27 +8529,10 @@ function renderGuide(){
   g.querySelectorAll("[data-madd]").forEach(b=>b.onclick=()=>{addCard(b.dataset.madd);renderGuide()});
   if($("gdone"))$("gdone").onclick=()=>{award("coconut");showSearch()};
 }
-/* compact deck panel so you can see the build while working through the steps */
-/* The guided view gets the REAL deck panel — same stats, sort, format picker,
-   rename, save, resize and card controls. It was a stripped-down copy that
-   drifted further behind every time the real one gained something. */
+/* The guided view shows the builder's own deck panel; newbuilder/nb.js moves
+   it into #gdeck. This is the fallback if that panel isn't there. */
 function renderGuideDeck(){
-  if($("gdeck"))return renderDeck("gdeck");
-  return renderGuideDeckOld();
-}
-function renderGuideDeckOld(){
-  const el=$("gdeck");if(!el)return;
-  const d=deck(),F=FMT[d.fmt],L=dlist(),tot=dtotal();
-  el.innerHTML=`<h3>Deck — ${tot}/${F.min}</h3>
-    <div class="prog"><i style="width:${Math.min(100,tot/F.min*100)}%"></i></div>
-    ${d.coco!=null&&COCO[d.coco]?`<div class="st"><b style="color:var(--gold)">${esc(COCO[d.coco].n)} – ${esc(COCO[d.coco].v)}</b></div>`:""}
-    <div class="dgrid">${L.sort((a,b)=>a.c.c-b.c.c).map(({c,q,f})=>
-      `<div class="dcard${illegalReason(c)?" illegal":""}">${c.img?`<img src="${c.img}" title="${esc(c.f)}">`
-        :`<div class="ph">${esc(c.n)}</div>`}<span class="dq">${q}</span>
-       <div class="dbtn"><button class="m" data-gm="${esc(f)}">−</button><button class="p" data-gp="${esc(f)}">+</button></div>
-      </div>`).join("")||`<div class="empty" style="padding:16px 6px">Nothing yet.</div>`}</div>`;
-  el.querySelectorAll("[data-gp]").forEach(b=>b.onclick=()=>{addCard(b.dataset.gp);renderGuide()});
-  el.querySelectorAll("[data-gm]").forEach(b=>b.onclick=()=>{delCard(b.dataset.gm);renderGuide()});
+  if($("gdeck"))renderDeck("gdeck");
 }
 /* ===================== pull list =====================
    A pull list is what you carry to the binder, so it is ordered by how cards
@@ -11811,8 +11766,8 @@ function renderBorrow(){
       <b>Looks like you don't have ${missing.reduce((a,x)=>a+x.need,0)} of these cards</b>
       <span class="sp"></span>
       <button class="btn" id="bCust">${BORROWOPEN?"Done":"Customise"}</button>
-      <button class="btn" id="bImg" title="A square image with each card's picture and how many you need — built for sharing in iMessage">🖼️ Save image</button>
-      <button class="btn go" id="bCopy">📋 Copy the message</button>
+      <button class="btn" id="bImg" title="A square image with each card's picture and how many you need — built for sharing in iMessage">Save image</button>
+      <button class="btn go" id="bCopy">Copy the message</button>
     </div>
     <p class="bnote">Copy this and send it to someone who might lend them to you.</p>
     ${BORROWOPEN?`<div class="bcust">
@@ -12028,7 +11983,7 @@ function renderRegSheet(){
       <b>🖨️ Official registration sheet</b>
       <span class="sp"></span>
       <button class="btn" id="rgCust">${REGOPEN?"Done":"Customise"}</button>
-      <button class="btn go" id="rgPrint">🖨️ Print filled sheet</button>
+      <button class="btn go" id="rgPrint">Print filled sheet</button>
     </div>
     <p class="bnote">Ravensburger's OP Constructed decklist form, filled straight from this deck.</p>
     ${REGOPEN?`<div class="bcust">
@@ -12111,8 +12066,8 @@ function deckGallery(){
       <b>${esc(DECKS.cur)}</b>
       <span>${tot} cards · ${sorted.length} different · ${esc(inks.join(" / ")||"no ink")}</span>
       <span class="sp"></span>
-      <button class="btn" id="dgCopy">📋 Copy deck list</button>
-      <button class="btn" id="dgBig">🔍 ${DGBIG?"Smaller":"Bigger"}</button>
+      <button class="btn" id="dgCopy">Copy deck list</button>
+      <button class="btn" id="dgBig">${DGBIG?"Smaller":"Bigger"}</button>
     </div>
     <div class="dgrid${DGBIG?" big":""}">${sorted.map(({c,q})=>`
       <figure class="dgc" data-dgo="${esc(c.f)}" title="${esc(c.f)}">
@@ -12183,7 +12138,7 @@ function metaTile(d){
       d.updated?` · updated ${esc(d.updated)}`:""}</div>
     <div class="mbtns">
       <button class="btn" data-mopen="${esc(d.id)}">${open?"Hide the guide":"Read the guide"}</button>
-      <button class="btn go" data-mcopy="${esc(d.id)}">✏️ Copy &amp; edit</button>
+      <button class="btn go" data-mcopy="${esc(d.id)}">Copy &amp; edit</button>
     </div>
   </article>`;
 }
@@ -12194,7 +12149,7 @@ function metaDetail(d){
     <div class="mdh">
       <div class="minks">${metaInks(d)}</div>
       <h3>${esc(d.name||"")}</h3>
-      <button class="btn" data-mclose>✕ Close</button>
+      <button class="btn" data-mclose>Close</button>
     </div>
 
     <h4 class="msec">Why it's built this way</h4>
@@ -12218,8 +12173,8 @@ function metaDetail(d){
         <span class="dgq">${q}</span>
       </figure>`).join("")}</div>
     <div class="mbtns wide">
-      <button class="btn go" data-mcopy="${esc(d.id)}">✏️ Copy &amp; edit this deck</button>
-      <button class="btn" data-mtext="${esc(d.id)}">📋 Copy the deck list</button>
+      <button class="btn go" data-mcopy="${esc(d.id)}">Copy &amp; edit this deck</button>
+      <button class="btn" data-mtext="${esc(d.id)}">Copy the deck list</button>
     </div>
   </div>`;
 }
@@ -12385,7 +12340,7 @@ function renderDecksPage(){
       you'd actually walk your binder in. Grouped by the set that was current when you made
       each one.</p>
     <div class="dkbar">
-      <button class="btn go" id="dpImport">📥 Paste a deck list</button>
+      <button class="btn go" id="dpImport">Paste a deck list</button>
       <button class="btn" id="dpDup">⧉ Duplicate it</button>
     </div>
     <div class="erafolds">${folders}</div>
@@ -12402,7 +12357,7 @@ function renderDecksPage(){
          menu, same ⋯ pattern as the deck panel's own options. -->
     <div class="pullbar">
       <b style="font-size:13px;background:var(--canvas-soft);padding:3px 8px;border-radius:2px">Pull list</b>
-      <button class="btn go" id="pullPrint">🖨️ Print</button>
+      <button class="btn go" id="pullPrint">Print</button>
       <div class="dmwrap">
         <button class="dmbtn" id="pullMore" aria-haspopup="true" aria-expanded="false"
           title="Pull list options" style="width:auto;padding:0 10px">⋯ Options</button>
@@ -14906,7 +14861,6 @@ function showTab(t){
   document.body.classList.toggle("tdeck",t==="tDeck");
   /* Search for cards is a reference tab with no deck attached to it, so the
      one control here that acts on a deck doesn't belong on it. */
-  {const sh=$("sh");if(sh)sh.hidden=(t==="tSearch");}
   /* Ben's call: no Ko-fi ask while someone is in the middle of building. The
      affiliate line beside it stays on every tab — that one isn't optional. */
   {const kw=$("kofiwrap");if(kw)kw.hidden=(t==="tDeck");}
@@ -14965,8 +14919,6 @@ $("fb").onclick=()=>{S.fl=!S.fl;$("fb").classList.toggle("on",S.fl);
     S.cost=[null,null];S.st=[null,null];S.wi=[null,null];S.lo=[null,null]}
   else rollLbl();
   S.limit=150;render()};
-$("clr").onclick=clearAll;
-$("clr2").onclick=clearAll;
 $("lnk").onclick=copySearchLink;
 /* A link that arrives with a search in it wins over saved state, and it opens
    the drawers so you can see WHY you're looking at these cards rather than
@@ -15022,7 +14974,6 @@ $("special").ontoggle=()=>save("fs3_spec",$("special").open);
    wall in front of them. Still remembered once you have opened it yourself. */
 if(load("fs3_spec",!PHONE()))$("special").open=true;
 $("sy").onclick=()=>{const h=$("syh");h.style.display=h.style.display==="none"?"block":"none"};
-$("sh").onclick=shareLink;
 /* The masthead is a way home. One press in nine hundred and ninety-nine it is
    a way somewhere else instead — opened in a new tab, so a 1-in-999 joke can
    never cost anyone the deck they were halfway through building. */
@@ -15741,36 +15692,21 @@ if(BOOTHASH.length>1&&/[#&]dl=/.test(BOOTHASH)){
 }
 
 setTimeout(()=>{try{ACCT.boot()}catch(e){}},0);
-/* The new deck builder (?newbuilder=1) is inlined here by build_flounder.py
-   from newbuilder/nb.js -- inside this closure, and last, so it can reach every
-   function above and everything it touches is already initialised. With the
-   flag off it only records the Phase 0 analytics events and returns. */
-/* =========================================================================
-   THE NEW DECK BUILDER  (?newbuilder=1)
-   -------------------------------------------------------------------------
-   Source file: newbuilder/nb.js. build_flounder.py inlines it at the very
-   end of the main closure in flounder-search.template.html, so it can see
-   and wrap every function above it. The spec is deck-builder-plan.md.
-
-   Ground rules this file keeps:
-   · Flag off (the default), it does two things only: records the Phase 0
-     analytics events for the classic builder, and removes its own offline
-     worker if one was installed. The classic builder is otherwise untouched.
-   · It REUSES the classic builder's engine — the search (filt/sortC), the 72
-     special searches (GROUPS), the deck functions (addCard, setCardCount,
-     undo, saveDeckPrompt …), the pull sheet and the saved-deck format. Only
-     the layout is new, which is how every power feature survives.
-   · Saved decks keep their exact format. The only new storage keys are
-     fs3_nb, fs3_nb_work (the unsaved working copy), fs3_nb_recent,
-     fs3_nb_dview, fs3_nb_theme and fs3_nb_hint.
-   · Icons are the project icon library,
-     inlined below — no emoji on the build path.
-   · Later phases plug in through NBX (bottom of this file).
-   ========================================================================= */
+/* The deck builder's layout (newbuilder/nb.js), inlined by build_flounder.py
+   last inside this closure so everything above is already set up. */
+/* The deck builder's layout. build_flounder.py inlines this at the end of the
+   main closure in flounder-search.template.html, so it can use every function
+   above it: the search (filt/sortC), the special searches (GROUPS), the deck
+   functions (addCard, setCardCount, undo, saveDeckPrompt…) and the pull sheet.
+   This file is the layout on top of that engine; decks keep the same format.
+   Its own storage keys: fs3_nb_work (unsaved working copy), fs3_nb_recent,
+   fs3_nb_dview, fs3_nb_theme, fs3_nb_hint. Add tabs and start options
+   through NBX at the bottom. */
 (function nbMain(){
-const NB=document.documentElement.classList.contains("nb");
+/* There used to be a "classic builder" switch stored here. */
+try{localStorage.removeItem("fs3_nb")}catch(e){}
 
-/* ===================== Phase 0 · analytics (both builders) =====================
+/* ===================== analytics =====================
    Six moments, sent to Vercel Web Analytics as custom events. On a Vercel
    plan without custom events they are simply dropped — no errors, no cost.
    The queue stub is the one Vercel's own snippet installs, so events fired
@@ -15778,7 +15714,7 @@ const NB=document.documentElement.classList.contains("nb");
 window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};
 const NB_T0=Date.now();
 function nbTrack(name,data){
-  try{window.va("event",{name,data:Object.assign({builder:NB?"new":"classic"},data||{})})}catch(e){}
+  try{window.va("event",{name,data:data||{}})}catch(e){}
 }
 let nbFirstAdded=false;const nbHit60=new Set();
 nbTrack("builder_opened");
@@ -15793,7 +15729,7 @@ nbTrack("builder_opened");
       const min=(FMT[deck().fmt]||{}).min||60;
       if(min&&tot>=min&&!nbHit60.has(DECKS.cur)){nbHit60.add(DECKS.cur);
         nbTrack("deck_reached_60",{seconds:Math.round((Date.now()-NB_T0)/1000)})}
-      if(NB)nbQueueWork();
+      nbQueueWork();
     }catch(e){}
   };
   const _save=saveDeckPrompt;
@@ -15806,7 +15742,6 @@ nbTrack("builder_opened");
   copyDeckLink=function(){nbTrack("deck_shared",{how:"link"});return _link.apply(this,arguments)};
   const _share=shareLink;
   shareLink=function(){nbTrack("deck_shared",{how:"share"});return _share.apply(this,arguments)};
-  {const sh=$("sh");if(sh)sh.onclick=shareLink}
   const _tcg=tcgOpen;
   tcgOpen=function(){nbTrack("deck_exported",{how:"tcgplayer"});return _tcg.apply(this,arguments)};
   /* Exports that are plain buttons rather than named functions: caught by id. */
@@ -15814,16 +15749,6 @@ nbTrack("builder_opened");
     const b=e.target&&e.target.closest&&e.target.closest("#dc,#pullPrint,#pullCopy,#pullProxy,#bImg,#regOpen,[data-shr=text],[data-shr=image]");
     if(b)nbTrack("deck_exported",{how:b.id||b.dataset.shr||"button"});
   },true);
-}
-
-/* ===================== flag off: stop here ===================== */
-if(!NB){
-  /* Someone who tried the new builder and switched back shouldn't keep its
-     offline worker. Only ours is removed — matched by its script name. */
-  try{if(location.protocol==="https:"&&navigator.serviceWorker&&navigator.serviceWorker.getRegistrations)
-    navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>{
-      const s=(r.active&&r.active.scriptURL)||"";if(/\/sw\.js$/.test(s))r.unregister()})).catch(()=>{})}catch(e){}
-  return;
 }
 
 /* ===================== icons ===================== */
@@ -15869,7 +15794,7 @@ document.addEventListener("click",e=>{if(!e.target.closest(".nbmenu"))nbCloseMen
    Existing pieces are MOVED, not rebuilt, so every handler already bound to
    them keeps working: the search box and its pills, the art/franchise/flavour
    switches, Syntax, the 72 special searches, the full Filters list, the
-   card-view settings, and the classic deck panel (the "Stats" tab). */
+   card-view settings, and the template's deck panel (the "Stats" tab). */
 const vS=$("vSearch"),WRAP=vS.querySelector(".wrap"),POOL=vS.querySelector("section.cards"),
       SCOL=$("searchcol"),OLDDECK=$("deck"),HEADER=document.querySelector("header");
 
@@ -15891,8 +15816,8 @@ NAV.querySelectorAll("[data-go]").forEach(b=>{if(b.dataset.go==="more")return;
   b.onclick=()=>({build:()=>showSearch(),cards:()=>showTab("tSearch"),
     decks:()=>showTab("tDecks"),coll:()=>showTab("tColl")})[b.dataset.go]()});
 
-/* More: every page the site has, straight from the same list the classic
-   Other page and hamburger read — so a game added there shows up here too. */
+/* More: every page the site has, from OTHER_GROUPS — the same list the Other
+   page reads, so a page added there shows up here too. */
 const NB_GICON={"":"star","Tools":"map-pin","Mini games":"swords"};
 function nbMoreHTML(){
   const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust");
@@ -15910,8 +15835,7 @@ function nbMoreHTML(){
       <button type="button" role="menuitem" data-mm="all">See everything</button>
       <button type="button" role="menuitem" data-mm="theme">${ic("theme")}Light / dark</button>
       <button type="button" role="menuitem" data-mm="keys" class="nbdesk">Keyboard shortcuts</button>
-      <button type="button" role="menuitem" data-mm="tour">Welcome tour</button>
-      <button type="button" role="menuitem" data-mm="classic">Classic builder</button></div>`;
+      <button type="button" role="menuitem" data-mm="tour">Welcome tour</button></div>`;
 }
 nbMenu($("nbMoreBtn"),$("nbMoreMenu"),()=>{$("nbMoreMenu").innerHTML=nbMoreHTML()});
 $("nbMoreMenu").addEventListener("click",e=>{
@@ -15924,7 +15848,6 @@ $("nbMoreMenu").addEventListener("click",e=>{
   if(k==="theme")THEMEB.click();
   if(k==="keys")nbShortcuts();
   if(k==="tour")startTour(true);
-  if(k==="classic")location.href=location.pathname+"?newbuilder=0"+location.hash;
 });
 
 /* ---- the filter bar, above the card pool ---- */
@@ -15989,7 +15912,7 @@ BAR.appendChild(MOREP);
  const sy=$("sy"),syh=$("syh");
  if(sy){sy.textContent="Show the search syntax";$("nbTools").appendChild(sy)}
  if(syh)$("nbTools").appendChild(syh);
- const sd=$("side");if(sd){$("nbFacets").appendChild(sd);nbForceOpen(sd,"fs3_sideopen")}}
+ const sd=$("side");if(sd){$("nbFacets").appendChild(sd);nbForceOpen(sd)}}
 $("nbClearP").onclick=()=>clearAll();
 
 /* ---- the Special searches drawer, sliding in from the left ---- */
@@ -16008,16 +15931,11 @@ const DRAWER=nbEl(`<aside class="nbdrawer" id="nbDrawer" role="dialog" aria-moda
    phone dock / deck sheet, which live in <main> too. */
 document.querySelector("main").appendChild(SCRIM);
 document.body.append(DRAWER);
-{const sp=$("special");if(sp){$("nbDrBody").appendChild(sp);nbForceOpen(sp,"fs3_spec")}}
-function nbForceOpen(det,key){
-  /* The classic builder remembers whether these were open; opening them here
-     shouldn't change what the classic builder shows next time. */
-  const prev=(()=>{try{return localStorage.getItem(key)}catch(e){return null}})();
+{const sp=$("special");if(sp){$("nbDrBody").appendChild(sp);nbForceOpen(sp)}}
+/* Their summary rows are hidden here, so a closed one could never be reopened. */
+function nbForceOpen(det){
   det.open=true;
-  /* Nothing in the new layout should be able to fold these shut: their
-     summary rows are hidden, so a closed one could never be reopened. */
   det.addEventListener("toggle",()=>{if(!det.open)det.open=true});
-  setTimeout(()=>{try{prev===null?localStorage.removeItem(key):localStorage.setItem(key,prev)}catch(e){}},0);
 }
 
 /* ---- the deck panel: always on screen from 1024px, a bottom sheet below ---- */
@@ -16626,7 +16544,7 @@ $("nbBuy").onclick=()=>{
 $("nbPullB").onclick=nbPull;
 $("nbShareB").onclick=nbShare;
 
-/* the pull sheet: the classic one, on the Decks page, for this deck */
+/* the pull sheet lives on the Decks page */
 function nbPull(){
   if(!dtotal()){toast("Add some cards first");return}
   nbCloseAll();showTab("tDecks");
@@ -16949,6 +16867,22 @@ renderDeck=function(hostId){
   if(!hostId||hostId==="deck"){try{nbPaintDeck()}catch(e){console.error(e)}}
   return r;
 };
+/* Guided Coconut Build shows this same deck panel beside its steps. renderGuide
+   rewrites its whole view, so the panel is lifted out first and put back after. */
+const nbHomeDeck=()=>{if(DECKP.parentNode!==WRAP)WRAP.appendChild(DECKP)};
+const _rgd=renderGuide;
+renderGuide=function(){nbHomeDeck();return _rgd.apply(this,arguments)};
+renderGuideDeck=function(){
+  const g=$("gdeck");if(!g)return;
+  if(DECKP.parentNode!==g){g.textContent="";
+    /* phones: the panel is a bottom sheet, so give it a button to open it */
+    const pk=nbEl(`<button type="button" class="nbbtn nbgpeek" id="nbGPeek">${ic("deck")}<span>Your deck</span><b></b></button>`);
+    pk.onclick=()=>$("nbPeek").click();
+    g.append(pk,DECKP)}
+  const min=(FMT[deck().fmt]||{}).min||0;
+  $("nbGPeek").querySelector("b").textContent=min?`${dtotal()} / ${min}`:String(dtotal());
+  try{nbPaintDeck()}catch(e){console.error(e)}
+};
 const _pdb=paintDeckBar;
 paintDeckBar=function(){_pdb.apply(this,arguments);try{nbPaintSaveState()}catch(e){}};
 const _pu=paintUndo;
@@ -16979,6 +16913,7 @@ showTab=function(t){
 };
 function nbOnTab(t){
   nbCloseAll();PREV.hidden=true;
+  if(!(t==="tDeck"&&SUB==="guided"))nbHomeDeck();
   const on={tDeck:"build",tSearch:"cards",tDecks:"decks",tColl:"coll",tOther:"more"}[t];
   const guided=t==="tDeck"&&SUB==="guided";
   NAV.querySelectorAll("[data-go]").forEach(b=>{
