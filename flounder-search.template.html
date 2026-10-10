@@ -2295,7 +2295,7 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .blist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
 .brow{border:1px solid var(--hairline);border-radius:4px;background:var(--surface);overflow:hidden}
 .brow.on{border-color:var(--chrome);box-shadow:var(--bevel)}
-.bhead{display:grid;grid-template-columns:14px minmax(150px,1.1fr) 2.4fr 18px;gap:11px;
+.bhead{display:grid;grid-template-columns:34px minmax(150px,1.1fr) 2.4fr 18px;gap:11px;
   align-items:center;width:100%;text-align:left;padding:10px 12px;background:var(--canvas-soft)}
 .bhead:hover{background:var(--ice)}
 .brow.on .bhead{background:var(--carbon);color:var(--on-dark)}
@@ -2306,7 +2306,7 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .brow.on .bhead .bn em{color:var(--on-dark-soft)}
 .bhead .bt{font-size:12px;line-height:1.45;color:var(--tx)}
 .bhead .bx{text-align:right;font-size:12px}
-@media(max-width:820px){.bhead{grid-template-columns:14px 1fr 18px}.bhead .bt{display:none}}
+@media(max-width:820px){.bhead{grid-template-columns:34px 1fr 18px}.bhead .bt{display:none}}
 .bbody{padding:12px;border-top:1px solid var(--line)}
 .binks{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12.5px;margin-bottom:11px}
 .binks i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;
@@ -3349,13 +3349,21 @@ body.noremind .c.illegal img{filter:none}
 .gstep p.s{font-size:12.16px;color:var(--deep);margin-bottom:11px}
 .gprev{font-size:12px;color:var(--deep);font-style:italic}
 .gsum{font-size:12px;color:var(--good);margin-top:6px}
-.cocogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px;max-height:390px;overflow-y:auto}
-.cococ{text-align:left;background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:10px}
-.cococ:hover{border-color:var(--gold)}
-.cococ.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
-.cococ b{font-size:13.6px;display:block}
-.cococ i{font-style:italic;color:var(--gold);font-size:12px;display:block;margin-bottom:5px}
-.cococ span{font-size:12px;color:var(--deep);line-height:1.4;display:block}
+.cocogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cococ{text-align:left;background:none;border:0;padding:0;cursor:pointer}
+.cococ img{display:block;width:100%;height:auto;aspect-ratio:420/601;border-radius:7px;background:var(--panel2);
+  outline:2px solid transparent;outline-offset:2px;transition:transform .12s,outline-color .12s}
+.cococ:hover img{transform:translateY(-2px)}
+.cococ:focus-visible img,.cococ.on img{outline-color:var(--gold)}
+.cococ b{font-size:13px;display:block;margin-top:6px;line-height:1.3}
+.cococ i{font-style:normal;color:var(--deep);font-size:12px;display:block}
+.cocopick{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;padding:12px;background:var(--panel2);border:1px solid var(--gold);border-radius:4px}
+.cocopick img{width:150px;height:auto;border-radius:7px;flex:none}
+.cocopick b{font-size:16px;display:block}
+.cocopick i{font-style:normal;color:var(--deep);font-size:13px;display:block;margin-bottom:6px}
+.cocopick p{font-size:13px;line-height:1.5;margin:0 0 6px}
+.bhead .bimg{width:34px;height:auto;border-radius:3px;display:block}
+@media(max-width:560px){.cocogrid{grid-template-columns:repeat(2,minmax(0,1fr))}.cocopick img{width:110px}}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
 .pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:9px}
 .pair{text-align:left;background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:10px;position:relative}
@@ -4259,32 +4267,34 @@ const EGGS={
 const BANNED="Chip the Teacup - Gentle Soul";
 const BAN_MSG="You can't add this card because someone once said it was better than Flounder and that's simply just not true.";
 
-/* The 18 [Coconut] cards — ability text from Ravensburger's 28 Jul 2026 beta.
+/* Every [Coconut] card, ability text as printed on the beta cards (checked 10 Oct 2026).
+   Card images live in img/coconut/, named by cocoSlug(). Change the file name when
+   a card gets a new image, because /img/ is cached for a year.
    `hook` decides the recommended ink pair (by density) and `rec` highlights chips. */
 const COCO=[
- {n:"Scar",v:"Finally King",i:"Steel",t:"During your turn you pay 1 ink less for the first Ally character you play.",hook:c=>c.sub.includes("Ally"),rec:["cheap","tribal"]},
+ {n:"Scar",v:"Finally King",i:"Steel",t:"During your turn, you pay 1 ink less for the first Ally character you play.",hook:c=>c.sub.includes("Ally"),rec:["cheap","tribal"]},
  {n:"Ariel",v:"Spectacular Singer",i:"Amber",t:"Whenever a Princess character of yours sings a song, gain lore equal to her lore value.",hook:c=>c.sub.includes("Princess")||/\bsing/i.test(c.ef),rec:["sing","singtog","lore"]},
- {n:"Winnie the Pooh",v:"Hunny Wizard",i:"Amethyst",t:"Whenever you play a character without an ability, pay 1 ink to draw a card.",hook:c=>!c.tx&&c.ty==="Character",rec:["vanilla","draw"]},
+ {n:"Winnie the Pooh",v:"Hunny Wizard",i:"Amethyst",t:"Whenever you play a character without an ability, you may pay 1 ink to draw a card.",hook:c=>!c.tx&&c.ty==="Character",rec:["vanilla","draw"]},
  /* Errata'd. The free play is still capped at cost 2, so the hook pool is
     unchanged, but the payoff is now lore on a Lilo/Stitch hit rather than a
     discard replay — hence "lore" joins the recommended filters. */
  {n:"Stitch",v:"Rock Star",i:"Amber",t:"Once during your turn, you may play a character with cost 2 or less for free. If that character was named Lilo or Stitch, chosen character gets +1 lore this turn.",hook:c=>c.c<=2&&c.ty==="Character",rec:["cheap","lore","etb"]},
- {n:"Ursula",v:"Deceiver of All",i:"Emerald",t:"Your characters count as +1 cost for singing songs; characters named Ursula count as +2 instead.",hook:c=>c.sub.includes("Song"),rec:["sing","singtog"]},
+ {n:"Ursula",v:"Deceiver of All",i:"Emerald",t:"Your characters count as having +1 cost for singing songs. Your characters named Ursula count as having +2 cost instead.",hook:c=>c.sub.includes("Song"),rec:["sing","singtog"]},
  {n:"Mickey Mouse",v:"Brave Little Tailor",i:"Ruby",t:"Mickey Mouse character cards in your hand, deck and discard gain Shift 2.",hook:c=>c.n==="Mickey Mouse",rec:["shift"]},
  {n:"Mufasa",v:"Ruler of Pride Rock",i:"Sapphire",t:"Once during your turn, you may pay 5 ink to put the top 2 cards of your deck into your inkwell facedown and exerted.",hook:c=>c.c>=6,rec:["cheap","ramp","lore"]},
- {n:"Nick Wilde",v:"Wily Fox",i:"Sapphire",t:"You may run up to 4 copies of the item Pawpsicle; once during your turn, banish 4 of your items to gain 4 lore.",hook:c=>c.ty==="Item",rec:["lore","etb"]},
- {n:"Snow White",v:"Merry as the Morning",i:"Amethyst",t:"Once per game, reveal your hand; with a Snow White plus 7 or more differently-named Seven Dwarfs cards across hand, discard and play, your characters get +2 lore for the rest of the game.",hook:c=>c.sub.includes("Seven Dwarfs"),rec:["tribal","lore"]},
+ {n:"Nick Wilde",v:"Wily Fox",i:"Sapphire",t:"You can have up to 4 copies of an item card named Pawpsicle in your deck. Once during your turn, you may banish 4 of your items. If you do, gain 4 lore.",hook:c=>c.ty==="Item",rec:["lore","etb"]},
+ {n:"Snow White",v:"Merry as the Morning",i:"Amethyst",t:"Once per game during your turn, you may reveal your hand. If you have a Snow White and 7 or more Seven Dwarfs character cards with different names among the cards in your hand, in your discard, and in play, this Coconut gains \"Your characters get +2 lore.\"",hook:c=>c.sub.includes("Seven Dwarfs"),rec:["tribal","lore"]},
  /* Errata'd. The discount now covers PLAYING a Boost card as well as using the
     ability, so Boost cards are worth more — but the pool is identical, since
     every card with the Boost keyword is already a character or a location. */
- {n:"Donald Duck",v:"Fred Honeywell",i:"Emerald",t:"You pay 1 less to use Boost abilities and to play characters or locations with Boost.",hook:c=>c.kw.some(k=>k[0]==="Boost"),rec:["boostcheap","boost","cheap","ramp"]},
- {n:"Mr. Incredible",v:"Super Strong",i:"Ruby",t:"Whenever you play a Super character they gain Rush this turn, and you may exert a chosen opposing character with less strength.",hook:c=>c.sub.includes("Super"),rec:["tribal","etb"]},
- {n:"Moana",v:"Curious Explorer",i:"Sapphire",t:"During your turn, with a Moana, Heihei or Pua in play, you may ink an additional card.",hook:c=>/Moana|Heihei|Pua/.test(c.n),rec:["cheap"]},
+ {n:"Donald Duck",v:"Fred Honeywell",i:"Emerald",t:"You pay 1 ink less to use Boost abilities and to play characters or locations with Boost.",hook:c=>c.kw.some(k=>k[0]==="Boost"),rec:["boostcheap","boost","cheap","ramp"]},
+ {n:"Mr. Incredible",v:"Super Strong",i:"Ruby",t:"Whenever you play a Super character, they gain Rush this turn and you may exert chosen opposing character with less strength than them.",hook:c=>c.sub.includes("Super"),rec:["tribal","etb"]},
+ {n:"Moana",v:"Curious Explorer",i:"Sapphire",t:"During your turn, if you have a Moana, Heihei, or Pua in play, you may ink an additional card.",hook:c=>/Moana|Heihei|Pua/.test(c.n),rec:["cheap"]},
  {n:"John Silver",v:"Greedy Treasure Seeker",i:"Steel",t:"Each of your locations gains Resist +1 for each character there.",hook:c=>c.ty==="Location",rec:["heal"]},
- {n:"Robin Hood",v:"Sneaky Sleuth",i:"Emerald",t:"(You can have up to 4 copies of Robin Hood - Sneaky Sleuth in your deck.) At the start of your first turn, you may play an item card named Robin's Bow from your collection for free. Whenever you play a character named Robin Hood, deal 1 damage to chosen opposing character or location.",hook:c=>/Robin Hood/.test(c.n)||c.ty==="Item",rec:["damage","etb"]},
- {n:"Tinker Bell",v:"Giant Fairy",i:"Steel",t:"Whenever another of your abilities or actions damages an opposing character, deal 1 more damage to it.",hook:c=>/deals?\s+.{0,20}damage/i.test(c.ef),rec:["damage","pierce"]},
+ {n:"Robin Hood",v:"Sneaky Sleuth",i:"Emerald",t:"At the start of your first turn, you may play an item card named Robin's Bow from your collection for free. Whenever you play a character named Robin Hood, deal 1 damage to chosen opposing character or location.",hook:c=>/Robin Hood/.test(c.n)||c.ty==="Item",rec:["damage","etb"]},
+ {n:"Tinker Bell",v:"Giant Fairy",i:"Steel",t:"Whenever one of your other abilities or actions deals damage to an opposing character, deal 1 damage to that character.",hook:c=>/deals?\s+.{0,20}damage/i.test(c.ef),rec:["damage","pierce"]},
  {n:"Sisu",v:"Emboldened Warrior",i:"Ruby",t:"All characters with more strength than each opposing character can quest the turn they're played.",hook:c=>(c.st||0)>=5,rec:["pump","chall","staple"]},
- {n:"Pocahontas",v:"Peacekeeper",i:"Amber",t:"Once during your turn, choose a character. Until the start of your next turn they get +1 lore, can't challenge, and must quest if able.",hook:c=>(c.lo||0)>=2,rec:["lore","nochal"]},
+ {n:"Pocahontas",v:"Peacekeeper",i:"Amber",t:"Once during your turn, you may choose a character. Until the start of your next turn, they get +1 lore and can't challenge and must quest if able.",hook:c=>(c.lo||0)>=2,rec:["lore","nochal"]},
  {n:"Dumbo",v:"Ninth Wonder of the Universe",i:"Amethyst",t:"You may use the exert abilities of your characters the turn they're played.",/* EXERT abilities, not every activated one. `at:["activated"]` includes
    cards whose activated ability has no exert cost at all — Cobra Bubbles
    was being pulled in and starred, which is the opposite of the point. An
@@ -4311,8 +4321,23 @@ const COCO=[
   hook:c=>(c.c||0)>=5,rec:["ready","heal"]},
  {n:"Darkwing Duck & Launchpad",v:"St. Canard's Finest",i:"Sapphire",i2:"Steel",
   t:"During your turn, whenever an opposing character is banished in a challenge, gain 1 lore. If they were a Villain character, gain 3 lore instead.",
-  hook:c=>c.kw.some(k=>k[0]==="Challenger")||(c.st||0)>=5,rec:["chall","pump"]}
+  hook:c=>c.kw.some(k=>k[0]==="Challenger")||(c.st||0)>=5,rec:["chall","pump"]},
+ {n:"The Vine",v:"Towering Stalk",i:"Steel",
+  t:"Once during your turn, for each Floodborn character you have in play, you may pay 1 ink less for the next Floodborn character you play this turn.",
+  hook:c=>c.sub.includes("Floodborn"),rec:["shift","cheap","tribal"]},
+ {n:"Merida",v:"Wisp Conjurer",i:"Amethyst",
+  t:"Once during your turn, you may have the next character you play this turn enter play exerted. Whenever a character of yours enters play exerted, you may pay 1 ink to gain 1 lore.",
+  hook:c=>c.ty==="Character"&&((c.c||0)<=3||/enters? play exerted|\bready\b/i.test(c.ef||"")),rec:["cheap","ready","lore"]},
+ {n:"Pete",v:"Bad Guy",i:"Emerald",
+  t:"Whenever you play an action, if it's the second action you played this turn, chosen opposing character gains Reckless and can't challenge your characters or locations until the start of your next turn.",
+  hook:c=>c.ty==="Action",rec:["cheap","restrict","draw"]},
+ {n:"The Black Cauldron",v:"",i:"Amber",
+  t:"Whenever one of your characters is banished, you may put that card from your discard under one of your items named The Black Cauldron faceup.",
+  hook:c=>c.ty==="Character"&&(/when(ever)? this character is banished/i.test(c.ef||"")||(c.c||0)<=2),rec:["onban","recur","cheap"]}
 ];
+/* File name of a Coconut's card image: "Scar - Finally King" -> scar-finally-king */
+const cocoSlug=co=>(co.n+" "+co.v).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const cocoImg=co=>"/img/coconut/"+(co.img||cocoSlug(co))+".webp";
 /* A single-ink Coconut locks one ink; a duo Coconut (`i2` set) locks two.
    Everything that reads a Coconut's ink goes through this rather than `.i`
    directly, so the two shapes don't need separate code paths. */
@@ -5135,7 +5160,7 @@ let DECKS=load(K_DECKS,{cur:"New deck",list:{"New deck":{fmt:"infinity",coco:nul
    literal name "Main"; the starting deck is now the draft, so it names the
    constant rather than a string that has already changed once. */
 const tipsOn=()=>TAB!=="tSearch"&&DECKS.cur===DRAFT&&!dtotal();
-const G={coco:null,pair:null,copies:null,staples:null,mode:null};
+const G={coco:null,pair:null,copies:null,staples:null,mode:null,cocoOpen:false};
 /* Nick Wilde's Coconut text calls out one item by name, so that step offers it
    directly instead of making you go and search for it. */
 const COCO_EXTRA={"Nick Wilde":{f:"Pawpsicle",n:4,why:"his Coconut lets you run up to 4 copies"}};
@@ -7689,7 +7714,11 @@ const COCO_PLAN={
 "Peter Pan & Tinker Bell":{p:"Evasive is the whole deck: give it to a body that can't be answered, then let it snowball into free lore once it's already unstoppable.",t:["Ink, cheap body.","Ink, another one — you're setting up who gets the buff.","Ink, Peter Pan & Tinker Bell, then hand out Evasive and start pushing lore no one can block."],g:"One character nobody can touch, getting stronger every turn you leave it alone."},
 "Aladdin & Genie":{p:"A card-draw shell where hitting your third draw of the turn is the entire payoff. Load up on cheap draw so three-in-a-turn is routine, not a stretch.",t:["Ink, a cheap cantrip.","Ink, another draw effect.","Ink, Aladdin & Genie, then chain a third draw and bank the lore."],g:"Turn a normal draw-heavy turn into a free two lore, over and over."},
 "Belle & Beast":{p:"Big bodies that keep coming back for more. Anything you own that's cost 5 or more turns every ready into a card, so the deck leans on Resist and readying effects to keep the trigger firing.",t:["Ink, cheap body.","Ink, hold for the big stuff.","Ink, Belle & Beast, then ready your fatty and draw off it."],g:"Never run out of gas once your top end sticks — every ready is a card."},
-"Darkwing Duck & Launchpad":{p:"An aggressive challenge deck that gets paid for every banish — triple if the target's a Villain. Built around Challenger and big bodies that win the fight and cash in.",t:["Ink, cheap body.","Ink, a challenger.","Ink, Darkwing Duck & Launchpad, then start banishing their board and collecting lore for it."],g:"Race on combat, not just lore. Every trade you win pays you directly."}};
+"Darkwing Duck & Launchpad":{p:"An aggressive challenge deck that gets paid for every banish — triple if the target's a Villain. Built around Challenger and big bodies that win the fight and cash in.",t:["Ink, cheap body.","Ink, a challenger.","Ink, Darkwing Duck & Launchpad, then start banishing their board and collecting lore for it."],g:"Race on combat, not just lore. Every trade you win pays you directly."},
+"The Vine":{p:"A Floodborn swarm that snowballs. Every Floodborn on the board knocks 1 off the next one, so cheap Floodborn come first and the big ones and Shift targets land way ahead of schedule.",t:["Ink, a cheap Floodborn.","Ink, another Floodborn, now 1 cheaper.","Ink, The Vine, then drop a big Floodborn for half price."],g:"Flood the board with Floodborn faster than they can clear it."},
+"Merida":{p:"Every character you play can come in exerted and turn 1 ink into 1 lore. Run lots of cheap characters so you play two or three a turn and cash each one in.",t:["Ink, a cheap character.","Ink, two cheap characters, pay 1 for lore off one.","Ink, Merida, then every body you play is a lore."],g:"Win on lore from playing cards, not from questing."},
+"Pete":{p:"Two actions a turn and their best character turns Reckless and can't touch your board. Cheap actions and card draw keep you hitting that second action every turn.",t:["Ink, a cheap action or a body.","Ink, two cheap actions, lock down their best character.","Ink, Pete, and keep chaining two actions a turn."],g:"Keep their board from fighting yours while you quest."},
+"The Black Cauldron":{p:"Your banished characters go under the Cauldron instead of staying dead, and the Cauldron plays them back. Cheap characters that trade away, and ones that want to be banished, keep it fed.",t:["Ink, a cheap character.","Ink, The Black Cauldron.","Ink, trade a character away and tuck it under the Cauldron."],g:"Every trade comes back. Out-last them."}};
 const COCO_CURVE=[0,4,10,12,11,8,6,5];   // by cost, 0..7+ — 56 cards
 function cocoDeck(idx){
   const co=COCO[idx];if(!co)return null;
@@ -7894,9 +7923,13 @@ function renderGuide(){
       <button data-gt="built" class="${GTAB==="built"?"on":""}">See fully built decks</button>
     </div>`;
   if(GTAB!=="built"){
-    s1+=`<p class="s">Its ink locks in automatically. All ${COCO.length} beta cards, real ability text.</p>
-      <input class="mini" id="gq" placeholder="search coconuts…" style="max-width:320px">
-      <div class="cocogrid" id="cg" style="margin-top:9px"></div>`;
+    s1+=(co?`<div class="cocopick"><img src="${cocoImg(co)}" alt="${esc(co.n+(co.v?" - "+co.v:""))}">
+        <div><b>${esc(co.n)}</b>${co.v?`<i>${esc(co.v)}</i>`:""}
+        <p>${coInks(co).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>${i2}`).join(" ")}</p>
+        <p>${esc(co.t)}</p>${G.cocoOpen?"":`<button class="btn" id="gchange">Change Coconut</button>`}</div></div>`:"")+
+      (co&&!G.cocoOpen?"":`<p class="s">Pick one. Its ink locks in. All ${COCO.length} beta Coconuts.</p>
+      <input class="mini" id="gq" placeholder="Search Coconuts" style="max-width:320px">
+      <div class="cocogrid" id="cg" style="margin-top:9px"></div>`);
   }else{
     const openIdx=GBUILT;
     s1+=`<p class="s">A complete, legal 60 for every Coconut — three inks, singleton,
@@ -7907,8 +7940,8 @@ function renderGuide(){
       const on=openIdx===i;
       s1+=`<div class="brow${on?" on":""}">
         <button class="bhead" data-built="${i}">
-          ${coInks(c).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>`).join("")}
-          <span class="bn">${esc(c.n)} <em>${esc(c.v)}</em></span>
+          <img class="bimg" src="${cocoImg(c)}" alt="" loading="lazy" decoding="async">
+          <span class="bn">${coInks(c).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>`).join("")}${esc(c.n)} <em>${esc(c.v)}</em></span>
           <span class="bt">${esc(c.t)}</span>
           <span class="bx">${on?"▾":"▸"}</span>
         </button>
@@ -8038,15 +8071,17 @@ function renderGuide(){
   const draw=()=>{if(!$("cg"))return;
     const q=($("gq")&&$("gq").value||"").toLowerCase();
     $("cg").innerHTML=COCO.map((c,i)=>({c,i})).filter(({c})=>!q||(c.n+" "+c.v+" "+coInks(c).join(" ")+" "+c.t).toLowerCase().includes(q))
-      .map(({c,i})=>`<button class="cococ${G.coco===i?" on":""}" data-c="${i}">
-        <b>${coInks(c).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>`).join("")}${esc(c.n)}</b><i>"${esc(c.v)}" · ${coInks(c).join("/")}</i>
-        <span>${esc(c.t)}</span></button>`).join("");
+      .map(({c,i})=>`<button class="cococ${G.coco===i?" on":""}" data-c="${i}" title="${esc(c.t)}">
+        <img src="${cocoImg(c)}" alt="${esc(c.n+(c.v?" - "+c.v:""))}" loading="lazy" decoding="async" width="420" height="601">
+        <b>${coInks(c).map(i2=>`<span class="dot" style="background:${HEX[i2]}"></span>`).join("")}${esc(c.n)}</b>
+        ${c.v?`<i>${esc(c.v)}</i>`:""}</button>`).join("");
     $("cg").querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{
-      const i=+b.dataset.c;G.coco=i;G.pair=null;G.copies=null;G.staples=null;G.mode=null;
+      const i=+b.dataset.c;G.coco=i;G.cocoOpen=false;G.pair=null;G.copies=null;G.staples=null;G.mode=null;
       const d=deck();d.fmt="coconut";d.coco=i;markDirty(true);
       S.ink=new Set(coInks(COCO[i]));renderGuide();render()})};
   draw();
   if($("gq"))$("gq").oninput=draw;
+  if($("gchange"))$("gchange").onclick=()=>{G.cocoOpen=true;renderGuide()};
 
   g.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{
     G.pair=b.dataset.p.split("|");G.copies=null;G.staples=null;G.mode=null;

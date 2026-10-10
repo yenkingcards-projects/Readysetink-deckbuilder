@@ -115,6 +115,25 @@ grep -n "beta cards\|Coconuts each with a stack" flounder-search.template.html
 `${COCO.length}` interpolations don't need touching; a few spots (guided-build
 intro copy, a code comment) hardcode a number in English.
 
+## Step 4b — the card image
+
+Every Coconut shows its card image in the picker. Save it as
+`img/coconut/<slug>.webp`, 420px wide, WebP quality 80. The slug is
+`cocoSlug(co)`: name + version, lowercased, non-letters to hyphens
+(`Scar - Finally King` -> `scar-finally-king`, `The Black Cauldron` with no
+version -> `the-black-cauldron`).
+
+```bash
+python3 -c "
+from PIL import Image
+im=Image.open('SRC.jpg').convert('RGB')
+im.resize((420,round(420*im.height/im.width)),Image.LANCZOS).save('img/coconut/SLUG.webp','WEBP',quality=80,method=6)"
+```
+
+If an existing Coconut gets errata with a new image, give the file a new name
+(e.g. `scar-finally-king-v2`) and set `img:"scar-finally-king-v2"` on that entry — `/img/` is cached for a year, so
+overwriting the old file won't reach people who already loaded it.
+
 ## Step 5 — build, don't hand-verify in a browser by default
 
 ```bash
