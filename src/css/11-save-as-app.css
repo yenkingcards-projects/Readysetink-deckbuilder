@@ -1,0 +1,191 @@
+/* ===== save as an app ===== */
+.a2hsinfo{margin-top:8px;border:1px solid var(--line2);border-radius:6px;
+  background:var(--canvas-soft);overflow:hidden}
+.a2hsinfo>summary{list-style:none;cursor:pointer;padding:12px 14px;font-size:13px;color:var(--tx)}
+.a2hsinfo>summary::-webkit-details-marker{display:none}
+.a2hsinfo>summary b{display:block;font-size:14px;margin-bottom:2px}
+.a2hsbody{padding:2px 14px 14px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.a2hsplat h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep);margin:0 0 6px}
+.a2hsplat ol{margin:0;padding-left:20px;font-size:12.5px;line-height:1.6;color:var(--tx)}
+.a2hsplat li{margin-bottom:2px}
+/* No ⓘ on the tile any more — just the one buy button, full width. The
+   fuller explanation lives in the card's own popup instead. */
+.c .prc{display:flex;align-items:center;justify-content:flex-end;gap:5px;width:100%;
+  border-top:1px solid var(--line2);padding:3px 7px;font-size:12px;font-weight:800;
+  color:var(--deep);text-align:right;background:var(--canvas-soft);cursor:pointer}
+.c .prc:hover{background:var(--acc);color:#fff}
+.c .prc .shipnote{font-weight:600;font-size:10px;opacity:.7}
+.c .prc:hover .shipnote{opacity:.85}
+.c .prc .buyicon{font-size:11px;opacity:.75}
+.c .prc:hover .buyicon{opacity:1}
+.c .i{position:absolute;top:6px;right:6px;width:30px;height:30px;border-radius:50%;background:rgba(4,14,26,.92);
+  border:1px solid var(--line2);font-size:15.2px;font-weight:700;display:grid;place-items:center;color:#cfe6f7;z-index:5}
+.c .i:hover{background:var(--acc);color:var(--surface)}
+/* linger on a card and the ⓘ starts glowing, as a nudge that there's more to read */
+@keyframes iglow{to{box-shadow:0 0 0 3px rgba(255,199,64,.5),0 0 20px 5px rgba(255,199,64,.7);
+  border-color:var(--gold);color:var(--gold)}}
+.c:hover .i{animation:iglow .7s ease 7s forwards}
+/* first-run nudge, only while the deck is untouched (see tipsOn()) */
+.tipadd{position:absolute;top:30%;left:8px;right:8px;transform:translateY(-50%);
+  background:rgba(6,20,38,.94);border:1px solid var(--acc);color:var(--link);
+  border-radius:2px;padding:6px 4px;font-size:12px;font-weight:800;text-align:center;
+  z-index:6;display:none;pointer-events:none}
+.c:hover .tipadd{display:block}
+@media(hover:none){.tipadd{display:none!important}}
+/* Search for cards is a reference tab and cannot add to a deck. tipsOn() and
+   the tile builder already check TAB, but tiles rendered on the Deck builder
+   tab survive a tab switch, so their add affordances were still on screen over
+   in Search. body.browse is set by showTab(), so this guard cannot go stale. */
+body.browse .tipadd,
+body.browse .c .qty,
+body.browse .c .shift{display:none!important}
+.c .q{position:absolute;bottom:32px;right:5px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:1px 6px;border-radius:2px}
+/* The stepper is now a full-width bar in the flow, under the art, where the
+   name used to sit — always on, even at zero, so there is one obvious place to
+   press on every tile instead of a control that only appears after you have
+   already worked out how to add a card. Minus LEFT, plus RIGHT: the plus is the
+   one you want, so it gets the right-hand end and the green. */
+/* The bar has to read as CONTROLS, not as more card. Card art runs to a dark
+   border at the bottom, so a dark bar under it looked like part of the picture.
+   This one is a light plate with a hard rule above it and real gaps between the
+   three buttons — the same chrome the rest of the site uses for things you
+   press, so the eye files it as UI on sight. */
+.c .qty{display:flex;align-items:stretch;gap:2px;padding:3px;
+  background:var(--platinum);border-top:3px solid var(--carbon)}
+.c .qty button{flex:1 1 0;height:32px;border:1px solid var(--line);border-radius:2px;
+  background:var(--surface);color:var(--carbon);
+  font-size:20px;font-weight:800;line-height:1;display:grid;place-items:center;
+  cursor:pointer;transition:background .12s,color .12s,border-color .12s}
+.c .qty button.p{color:#0a6b45;border-color:#8fd3b8}
+.c .qty button.m{color:#a3122a;border-color:#e6a6b0}
+.c .qty button.p:hover{background:var(--good);color:#053221;border-color:var(--good)}
+.c .qty button.m:hover{background:var(--bad);color:#fff;border-color:var(--bad)}
+.c .qty button:active{filter:brightness(.94)}
+/* This is an <input> rather than a <span> now — type a number, press Enter,
+   done. It has to look like it always did, so: no browser chrome, centred
+   text, and the same box. width:0 with flex-basis 42px keeps an input from
+   using its default size attribute as a minimum and stretching the row. */
+.c .qty .n{flex:0 0 42px;width:0;text-align:center;font-family:inherit;
+  display:grid;place-items:center;font-size:15px;font-weight:900;
+  border-radius:2px;background:var(--canvas-soft);color:var(--deep);border:1px solid var(--line)}
+/* A card that is in the deck says so loudly — the count block goes solid Action
+   Yellow, which is the only colour on the page that means "this one". */
+.c .qty.has .n{background:var(--amberc);color:#2a1f00;border-color:var(--amber-press)}
+.c .qty .n:focus{outline:2px solid var(--link);outline-offset:-2px;background:var(--surface);color:var(--tx)}
+/* Chrome and Safari put stepper arrows on a numeric field; there are already
+   two perfectly good buttons either side of this one. */
+.c .qty .n::-webkit-outer-spin-button,.c .qty .n::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.c .qty.has{border-top-color:var(--amberc)}
+/* shift-target prompt, centred on the art */
+.c .shift{position:absolute;top:50%;left:6px;right:6px;transform:translateY(-50%);
+  background:rgba(6,20,38,.93);border:1px solid var(--gold);color:var(--gold);border-radius:2px;
+  padding:5px 4px;font-size:12px;font-weight:700;text-align:center;line-height:1.25}
+.c .shift:hover{background:var(--gold);color:#06263f}
+/* Locations sit normal in the grid; dwell half a second and the whole card
+   pops out as a proper landscape card, well clear of its portrait box.
+   overflow:visible is what lets it escape the tile. The ⓘ stays above it.
+
+   Gated on a real pointer, and that gate is the whole bug fix for touch. This
+   was plain :hover, and a phone has no hover — the FIRST tap fires the
+   browser's emulated one. So tapping a location rotated it 90° and blew it up
+   to 1.95x under your finger, which covered the −/+ row you were reaching for
+   (that's "adding locations is bugged"), and threw the ⓘ to left:-79.2%, well
+   off the side of the screen, which is why there was no way to read a
+   location's details on a phone at all.
+
+   On touch a location is now simply a card: it sits still, +/− work like any
+   other card's, and the ⓘ stays where the ⓘ always is. The landscape view
+   isn't lost — the detail modal already renders locations in a proper
+   landscape frame, and it's a one-column layout under 820px. */
+.c.loc img{transform:none;transition:transform .28s 0s}
+@media (hover:hover) and (pointer:fine){
+  .c.loc:hover{z-index:90;overflow:visible;transform:none}
+  .c.loc:hover img{transform:rotate(90deg) scale(1.95);transition-delay:.5s;border-radius:2px;
+    outline:2px solid var(--acc);outline-offset:4px;
+    box-shadow:0 22px 60px -12px rgba(0,0,0,.92)}
+  /* The preview is far bigger than its tile, so the ⓘ would otherwise be
+     stranded in the middle of the artwork. Percentages on right AND margin-top
+     both resolve against the tile's width, which is the only dimension the
+     preview is sized from — so these two numbers park it on the preview's
+     corner. Measured, not guessed: the preview spans -86% to 186% of tile
+     width, and -27.8% to 167.2% of it vertically.
+
+     It parks on the TOP RIGHT. It used to fly to the top LEFT, which meant the
+     one button on a card that never moves — every other card keeps its ⓘ at
+     top:6px right:6px — jumped the full width of a card-and-a-half the moment
+     you hovered, and you had to go and find it. Same corner as always now,
+     just on the bigger card. */
+  .c.loc:hover .i{right:-79.2%;left:auto;top:0;margin-top:-21.7%;transition-delay:.5s;z-index:95}
+  .c.loc:hover .tags{opacity:0;transition:opacity .2s .5s}
+}
+/* In the detail view a location gets a wider modal and a true landscape frame.
+   The image is sized to the frame's HEIGHT so rotating it fills the width exactly. */
+.modal.loc{max-width:1040px;grid-template-columns:480px 1fr}
+@media(max-width:820px){.modal.loc{grid-template-columns:1fr;max-width:640px}}
+/* The landscape box is sized with padding-top, NOT aspect-ratio: percentage
+   padding always resolves against the frame's own width, so the grid row can't
+   squash it and no browser can opt out. align-self:start stops the modal's grid
+   stretching it to the height of the text column. */
+.locframe{position:relative;width:100%;height:0;padding-top:71.7%;align-self:start;
+  overflow:hidden;background:var(--platinum);border-radius:2px}
+@media(max-width:820px){.locframe{border-radius:2px}}
+/* 71.7% of the frame width makes the upright card exactly one frame-width tall,
+   so turning it 90° lands it flush inside the box with nothing to clip. */
+.locframe img{position:absolute;top:50%;left:50%;width:71.7%;height:auto;max-width:none;
+  transform:translate(-50%,-50%) rotate(90deg);display:block;border-radius:2px}
+.locnote{background:var(--platinum);border:1px solid var(--line);border-left:2px solid var(--acc);
+  border-radius:0 8px 8px 0;padding:10px 12px;margin-top:12px;font-size:12.16px;line-height:1.55;color:var(--tx)}
+.locnote b{color:var(--link);display:block;margin-bottom:5px;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.locnote li{margin:0 0 3px 16px}
+.locnote .src{color:var(--deep);font-size:12px;margin-top:6px}
+.c .tags{position:absolute;top:5px;left:5px;display:flex;flex-direction:column;gap:3px;max-width:74%}
+.c .tags span{background:rgba(4,14,26,.86);border:1px solid var(--line2);font-size:12px;padding:1px 5px;border-radius:2px;color:#bcd7ee}
+.c .tags span.rat{background:rgba(255,80,80,.93);border-color:#ff9a9a;color:#fff;text-decoration:line-through;font-weight:700}
+.c .tags span.tomb{background:rgba(18,18,24,.95);border-color:#5a5a5a;color:#ddd}
+.c .tags span.ban{background:rgba(220,30,30,.95);border-color:#ff8080;color:#fff;font-weight:800}
+.c .tags span.quest{background:rgba(220,30,30,.95);border-color:#ff8080;color:#fff;font-weight:800;
+  line-height:1.25;text-transform:uppercase;letter-spacing:.02em}
+.c.banned img,.c.banned .ph{filter:grayscale(.65) brightness(.72)}
+/* Not legal in the current format/inks. Deliberately NOT a full-card wash —
+   just a small strip above the name, same idea as the shift-target list, so the
+   art stays readable and the +/− buttons keep working. */
+.c.illegal{border-color:#ff2d78}
+/* The "not legal" notice has been in both places now. It started across the
+   artwork and was moved out to its own strip under the card, because a solid
+   bar over the art hid the one part of the tile anyone is looking at. But a
+   strip under the card makes the tile taller than its neighbours, so a grid of
+   cards jumps around as legality changes — which is worse.
+
+   Back over the art, then, but not solid: a translucent band centred on the
+   picture, dark enough behind the text to read cleanly and light enough to see
+   the art through. The band is parked with margin-top:69.7% — a percentage
+   margin resolves against WIDTH, and the art is 940/674 of the tile width, so
+   half of that is 69.7%, which is the middle of the picture whatever size the
+   tile happens to be. (Same trick as the location ⓘ.) top/bottom percentages
+   would resolve against height and drift as the tile grows. */
+.c.illegal .why{position:absolute;left:6px;right:6px;top:0;margin-top:69.7%;
+  transform:translateY(-50%);z-index:6;border-radius:3px;
+  background:rgba(9,24,48,.72);border:1px solid rgba(255,255,255,.34);
+  box-shadow:0 3px 12px rgba(0,0,0,.45);
+  color:#fff;font-size:12px;font-weight:800;text-align:center;padding:5px 6px;line-height:1.3;
+  cursor:pointer;text-transform:uppercase;letter-spacing:.4px}
+@supports (backdrop-filter:blur(2px)){
+  .c.illegal .why{backdrop-filter:blur(2px) saturate(.9)}}
+.c.illegal .why span{display:block;font-weight:400;text-transform:none;letter-spacing:0;opacity:.95;
+  font-size:12px;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+/* Press the tag and it offers to stop showing you tags. Under the tag, as its
+   own thing, so the offer is obviously about the tag you just pressed. */
+.c.illegal .why .whyoff{display:none}
+.c.illegal .why.open .whyoff{display:block;position:absolute;left:0;right:0;top:100%;margin-top:5px;
+  background:var(--surface);color:var(--tx);border:1px solid var(--chrome);border-radius:2px;
+  box-shadow:0 4px 14px rgba(0,0,0,.4);font-size:11.5px;font-weight:700;padding:5px 4px;
+  text-transform:none;letter-spacing:0;cursor:pointer}
+.c.illegal .why.open .whyoff:hover{background:var(--amberc);color:var(--carbon);border-color:var(--amber-press)}
+/* reminder tags can be switched off wholesale */
+body.noremind .c .why,body.noremind .c .tags,body.noremind .c .quest{display:none}
+body.noremind .c.illegal{border-color:var(--deep)}
+body.noremind .c.illegal img{filter:none}
+.mcard.illegal{border-color:#ff2d78;box-shadow:0 0 0 1px #ff2d78 inset}
+.mcard.illegal img{filter:saturate(.4) brightness(.7)}
+.mcard .no{position:absolute;bottom:0;left:0;right:0;background:rgba(255,45,120,.92);color:#fff;
+  font-size:12px;font-weight:800;text-align:center;padding:1px}

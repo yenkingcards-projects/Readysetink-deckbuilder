@@ -1,0 +1,572 @@
+/* ===== the three search-widening switches ================================
+   A real sliding knob rather than another grey button, so it reads as a mode
+   you flip rather than an action you fire.
+
+   Three things were wrong with these and they all came from the same place —
+   each switch had been styled on its own rather than as one of a set:
+
+   1. The label used to sit on a coloured chip, and the chip colour was set by
+      `.swx.on .lb` while each variant then overrode only the TEXT colour. In
+      light mode --gold resolves to the same #1f4da8 as --link, so franchise-on
+      was literally blue text on a blue chip, and flavor text was nearly as
+      bad. The chip is gone entirely: the hue now lives in the border, the wash
+      and the knob, and the label is just text that goes to full strength. No
+      colour is ever printed on top of the same colour again.
+   2. They were inline-flex, so each one was as wide as its own words and the
+      row read as three unrelated parts. They are a grid of equal columns now —
+      same width, same height, same weight, because they carry the same weight.
+   3. Franchise ran on --gold, which is only actually gold in dark mode. It
+      runs on --amber instead, so the three hues stay distinct in both themes,
+      which was the point of colouring them differently in the first place. */
+/* ---- the art switch leads ----
+   One wide primary control and two small ones beside it. Prominence by
+   hierarchy rather than by size: nothing here is bigger than it needs to be,
+   but you can tell at a glance which of the three the site is built around. */
+.artrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:stretch;
+  margin-top:8px}
+/* Was a 2px border plus the same glowing box-shadow every other switch gets —
+   at full row width that read as a giant plate before you'd even touched the
+   search box. One thin hairline border, no separate shadow layer of its own
+   (it still gets the shared .swx.on wash when active), and tighter padding so
+   it sits flush with the search field above it instead of looming over it. */
+.swx.art{padding:5px 9px;gap:8px;border-width:1px;min-height:34px}
+.swx.art .kn{width:32px;height:18px}
+.swx.art .kn i{width:14px;height:14px}
+.swx.art .swi svg{width:11px;height:11px}
+.swx.art.on .kn i{transform:translateX(14px)}
+/* Toned down from a headline treatment (14px/800, its own glow, a
+   self-triggered wiggle) to sit as a plain button that happens to be first
+   in the row — cute, not a spotlight. */
+.artlb{display:flex;flex-direction:column;gap:1px;min-width:0;text-align:left}
+.artlb b{font-size:12.5px;font-weight:700;color:var(--tx);line-height:1.2}
+.artlb span{font-size:10.5px;font-weight:500;color:var(--deep);line-height:1.3}
+/* Off, it says what you're missing rather than nothing at all. */
+.swx.art:not(.on) .artlb b{color:var(--deep)}
+/* Grid rather than a wrapping flex: the label owns the top line and the two
+   extras sit beside each other under it. As flex they stacked one per line,
+   which made a row of small controls as tall as the big one next to it and
+   undid the hierarchy the whole change is for. */
+.alsorow{display:grid;grid-template-columns:auto auto;gap:5px 6px;align-content:center;
+  padding-left:12px;border-left:1px solid var(--hairline)}
+.alsolbl{grid-column:1/-1;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--deep);line-height:1}
+.swx.wee{padding:4px 9px;gap:7px;min-height:32px}
+.swx.wee .kn{width:32px;height:18px}
+.swx.wee .kn i{width:14px;height:14px}
+.swx.wee .swi svg{width:10px;height:10px}
+.swx.wee.on .kn i{transform:translateX(14px)}
+.swx.wee .lb{font-size:11.5px}
+.toggles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch}
+.swx{display:flex;align-items:center;gap:10px;width:100%;min-height:42px;
+  padding:6px 12px;border-radius:3px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);cursor:pointer;position:relative;
+  transition:background .22s,border-color .22s,box-shadow .22s}
+.swx .kn{width:44px;height:24px;border-radius:2px;background:#16273f;border:1px solid var(--line2);
+  position:relative;flex:none;transition:background .25s,border-color .25s}
+.swx .kn i{position:absolute;top:1px;left:1px;width:20px;height:20px;border-radius:50%;
+  background:#3a5680;display:grid;place-items:center;font-size:12px;font-style:normal;
+  transition:transform .3s cubic-bezier(.5,1.7,.5,1),background .25s,color .25s}
+/* Drawn icons: one grid, one stroke weight, and they take their colour from
+   the knob they sit in rather than carrying their own. That is the thing an
+   emoji can never do — these go dark on the amber knob and white on the blue
+   one without three separate images. */
+.swx .swi{color:rgba(255,255,255,.72);transition:color .25s}
+.swx .swi svg{width:13px;height:13px;display:block}
+.swx.on .swi{color:#0b1220}
+.swx .swi .sd,.swx .swi .pg,.swx .swi .qm,.swx .swi .qd{transition:opacity .25s}
+/* ...and each one moves a little when its switch is on. Slow, small, and
+   nothing loops faster than a breath. */
+.swx.on .swi .sd{animation:swdot 2.1s ease-in-out infinite}
+.swx.on .swi .sd2{animation-delay:.25s}
+.swx.on .swi .sd3{animation-delay:.5s}
+@keyframes swdot{0%,70%,100%{opacity:1}35%{opacity:.25}}
+.swx.on .swi .pg{transform-origin:12px 12px;animation:swpage 2.6s ease-in-out infinite}
+@keyframes swpage{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.72)}}
+.swx.on .swi .qm,.swx.on .swi .qd{animation:swsay 1.9s ease-in-out infinite}
+.swx.on .swi .qd{animation-delay:.3s}
+@keyframes swsay{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){
+  .swx.on .swi *{animation:none!important}}
+.swx .lb{font-size:12.5px;font-weight:700;color:var(--deep);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;transition:color .22s}
+.swx:hover{background:var(--platinum);border-color:var(--muted)}
+/* One shape for "on", three hues through it.
+
+   The tint is painted as a gradient layer ON TOP of the same --canvas-soft the
+   switch already has when it's off, rather than replacing the background with
+   a translucent colour. A translucent wash composites against the page, and
+   the page here is periwinkle, so amber-at-14%-over-periwinkle came out a
+   muddy grey — an "on" switch looked like it was made of a different material
+   from an "off" one. Same base, hue laid over it: the two states are now
+   obviously the same object in two states.
+
+   The inset ring is what makes it read as lit rather than merely tinted,
+   without the outer glow the old one used, which bled onto its neighbours. */
+.swx.on .kn i{transform:translateX(20px);filter:none}
+.swx.on .lb{color:var(--tx)}
+.swx.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(47,111,237,.16),rgba(47,111,237,.16));
+  border-color:var(--acc2);
+  box-shadow:inset 0 0 0 1px rgba(47,111,237,.4),0 2px 10px -6px rgba(47,111,237,.9)}
+/* The full-width art tile doesn't need the outer glow the small switches use —
+   at that size it read as a spotlight rather than a control. Inset ring only. */
+.swx.art.on{box-shadow:inset 0 0 0 1px rgba(47,111,237,.4)}
+.swx.on .kn{background:rgba(47,111,237,.28);border-color:var(--acc2)}
+.swx.on .kn i{background:var(--acc2)}
+/* franchise runs amber, so the three are never confused at a glance */
+.swx.sto.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(217,154,43,.2),rgba(217,154,43,.2));
+  border-color:var(--amber);
+  box-shadow:inset 0 0 0 1px rgba(217,154,43,.42),0 2px 10px -6px rgba(217,154,43,.9)}
+.swx.sto.on .kn{background:rgba(217,154,43,.3);border-color:var(--amber)}
+.swx.sto.on .kn i{background:var(--amber)}
+/* flavor text runs amethyst, the third colour in the row */
+.swx.flav.on{background:var(--canvas-soft) linear-gradient(0deg,rgba(143,107,176,.2),rgba(143,107,176,.2));
+  border-color:var(--amethyst);
+  box-shadow:inset 0 0 0 1px rgba(143,107,176,.42),0 2px 10px -6px rgba(143,107,176,.9)}
+.swx.flav.on .kn{background:rgba(143,107,176,.32);border-color:var(--amethyst)}
+.swx.flav.on .kn i{background:var(--amethyst)}
+.swx:active .kn i{width:26px}
+/* Ben, 2026-09-07: these were eating the top of a phone screen. They stacked
+   because "Search flavor text" could not fit a third of the width beside a
+   44px knob — so the labels lost the word "Search", which the row's own
+   position under the search box already says, and now all three fit across in
+   one line instead of three stacked bars. The knob shrinks a little and the
+   whole row went from about 150px of a phone screen to about 40px. */
+@media(max-width:640px){
+  .swx{padding:5px 7px;gap:7px;min-height:38px}
+  .swx .kn{width:34px;height:20px}
+  .swx .kn i{width:16px;height:16px}
+  .swx .swi svg{width:11px;height:11px}
+  .swx.on .kn i{transform:translateX(14px)}
+  .swx .lb{font-size:11.5px}
+  /* The art switch keeps the full width of the phone — it is the feature —
+     and the two extras share one slim line under it. */
+  .artrow{grid-template-columns:1fr;gap:7px}
+  .alsorow{padding-left:0;border-left:0;gap:6px;
+    grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);align-items:center}
+  .alsolbl{grid-column:auto}
+  .swx.art{padding:8px 11px;gap:10px}
+  .swx.art .kn{width:44px;height:24px}
+  .swx.art .kn i{width:20px;height:20px}
+  .swx.art.on .kn i{transform:translateX(20px)}
+  .swx.wee{flex:1;min-height:34px}
+}
+/* Same narrow-layout rules as the phone breakpoint just above, applied
+   unconditionally inside .searchcol — the column is ~270px wide on every
+   screen size now, not just on phones, and without this the art tile's own
+   two-line label wrapped word-by-word down the column (grid-template-columns:
+   minmax(0,1fr) auto has nowhere near enough room at that width). */
+.searchcol .swx{padding:5px 7px;gap:7px;min-height:38px}
+.searchcol .swx .kn{width:34px;height:20px}
+.searchcol .swx .kn i{width:16px;height:16px}
+.searchcol .swx .swi svg{width:11px;height:11px}
+.searchcol .swx.on .kn i{transform:translateX(14px)}
+.searchcol .swx .lb{font-size:11.5px}
+.searchcol .artrow{grid-template-columns:1fr;gap:7px}
+.searchcol .alsorow{padding-left:0;border-left:0;gap:6px;
+  grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);align-items:center}
+.searchcol .alsolbl{grid-column:auto}
+/* No more size bump over its neighbours — same knob, same padding as every
+   other switch in the column, so it reads as first among equals rather than
+   a headline banner over two footnotes. */
+.searchcol .swx.wee{flex:1;min-height:34px}
+.searchcol .srow{flex-wrap:wrap}
+/* A playful wiggle-and-pop when you land on the search page with art search
+   already on — Ben's call: this is the one search no other Lorcana tool
+   does, so the switch gets to show off a little every time you arrive,
+   rather than just sitting there being correct. Bigger and bouncier than a
+   polite nudge on purpose; a small scale pop sells "hey, remember me" better
+   than rotation alone. */
+@keyframes swjig{
+  0%,100%{transform:rotate(0) translateX(0) scale(1)}
+  15%{transform:rotate(-6deg) translateX(-3px) scale(1.05)}
+  30%{transform:rotate(5deg) translateX(3px) scale(1.06)}
+  45%{transform:rotate(-4deg) translateX(-2px) scale(1.03)}
+  60%{transform:rotate(3deg) translateX(2px) scale(1.02)}
+  75%{transform:rotate(-1.5deg) translateX(-1px) scale(1.01)}
+  90%{transform:rotate(1deg) translateX(0) scale(1)}}
+.swx.jig{animation:swjig .9s ease-in-out}
+@media(prefers-reduced-motion:reduce){.swx,.swx *{transition:none}
+  .swx.jig{animation:none}}
+/* Buttons match the deck builder's (.nbbtn): white, rounded, sentence case.
+   .go is the one yellow "do it" button on a screen. */
+.btn{font:700 13px/1.2 var(--sans);color:var(--tx);background:var(--surface);
+  border:1px solid var(--line);border-radius:6px;padding:7px 13px;cursor:pointer}
+.btn:hover{border-color:var(--link);background:var(--surface)}
+.btn.bad{color:var(--signal-deep)}
+.btn.bad:hover{border-color:var(--signal-deep)}
+.btn:active{transform:translateY(1px)}
+.btn.go{background:var(--amberc);border-color:var(--amber-press);color:#202638}
+.btn.go:hover{background:var(--amber-press)}
+.btn.dark{background:var(--carbon);color:var(--surface);border-color:var(--carbon)}
+.btn.outline{background:var(--surface);color:var(--tx);border-color:var(--deep)}
+/* Hints used to sit on bare canvas at 1.17:1. They now carry their own pale
+   inset, which is both readable and closer to the system's "inset panel". */
+.hint{font-size:12px;color:var(--tx);margin-top:7px;line-height:1.55;
+  background:var(--canvas-soft);border:1px solid var(--hairline);
+  box-shadow:var(--bevel-in);padding:6px 9px;border-radius:2px}
+.hint code{background:var(--surface);border:1px solid var(--hairline);border-radius:2px;
+  padding:0 4px;color:var(--deep)}
+.hint code{background:var(--platinum);border:1px solid var(--line);padding:0 4px;border-radius:2px;color:var(--deep)}
+
+/* flounder button — lives with the chips, keeps its gold */
+.fbtn{position:relative;display:inline-flex;align-items:center;gap:9px;padding:8px 20px;border-radius:2px;
+  font-weight:800;font-size:14.4px;color:#06263f;overflow:hidden;
+  background:var(--link);color:var(--surface);
+  box-shadow:0 6px 20px -8px rgba(247,201,92,.7),inset 0 0 0 1px rgba(255,255,255,.45)}
+.fbtn:hover{transform:translateY(-1px)}
+.fbtn.on{outline:2px solid var(--gold);outline-offset:3px}
+.fbtn .fi{font-size:1.1rem;animation:swim 2.6s ease-in-out infinite}
+@keyframes swim{0%,100%{transform:translateX(0) rotate(-6deg)}50%{transform:translateX(5px) rotate(6deg)}}
+.fbtn::after{content:"";position:absolute;top:50%;left:50%;width:120px;height:120px;margin:-60px 0 0 -60px;
+  border-radius:50%;opacity:0;pointer-events:none;
+  background:conic-gradient(from 0deg,transparent 0 62%,rgba(255,255,255,.8) 78%,transparent 88%)}
+.fbtn:hover::after{opacity:.5;animation:sp 2.2s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* chip groups */
+/* flex-shrink:0 matters here: .special lives inside .searchcol, a flex column
+   with its own overflow-y:auto. A flex item with overflow other than visible
+   gets an automatic minimum size of 0, so without this it quietly shrinks to
+   fit the column instead of the column scrolling — its own overflow:hidden
+   then clips most of the chip groups with no way to reach them. */
+.special{margin-top:14px;border:1px solid var(--line);border-radius:2px;background:var(--panel);overflow:hidden;flex-shrink:0}
+.special>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:12px 14px;
+  font-size:14.72px;font-weight:700}
+.special>summary::-webkit-details-marker{display:none}
+.special>summary::before{content:"▸";color:var(--link);transition:transform .15s;font-size:1rem}
+.special[open]>summary::before{transform:rotate(90deg)}
+.special>summary .cnt{margin-left:auto;font-size:12px;color:var(--deep);font-weight:500}
+.specialbody{padding:0 14px 14px}
+.exprow{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.groups{margin-top:2px}
+.grp{margin-bottom:8px}
+.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--tx);
+  font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--deep);margin:0 0 5px 2px;font-weight:700}
+.grp>summary::-webkit-details-marker{display:none}
+.grp>summary::before{content:"▸";transition:transform .15s}
+.grp[open]>summary::before{transform:rotate(90deg)}
+.grp>summary .gn{margin-left:auto;color:var(--deep);font-weight:700;text-transform:none;letter-spacing:0}
+.grp>summary:hover{color:var(--tx)}
+/* ---- the Coconut block, last in Special searches ---- */
+.cocogrp{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.cocohint{font-size:12px;color:var(--deep);margin:0 0 9px 2px;max-width:70ch}
+.cocorow{display:flex;align-items:flex-start;gap:9px;flex-wrap:wrap;
+  padding:7px 0;border-bottom:1px solid var(--line)}
+.cocorow:last-child{border-bottom:none}
+.cocon{display:flex;align-items:center;gap:6px;flex:0 0 210px;text-align:left;
+  font-size:13px;font-weight:700;color:var(--link);padding:2px 0}
+.cocon:hover{color:var(--deep);text-decoration:underline}
+.cocon em{font-style:normal;font-weight:400;color:var(--deep);font-size:12px}
+.cocon .ci{width:10px;height:10px;border-radius:50%;flex:none;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.35)}
+.ci.amber{background:var(--amber)}.ci.amethyst{background:var(--amethyst)}
+.ci.emerald{background:var(--emerald)}.ci.ruby{background:var(--ruby)}
+.ci.sapphire{background:var(--sapphire)}.ci.steel{background:var(--steel)}
+.cocorow .chips{flex:1;min-width:200px}
+@media(max-width:600px){.cocon{flex-basis:100%}}
+/* small card grid used inside guided steps */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;max-height:400px;overflow-y:auto;margin-top:9px}
+.mcard{position:relative;border-radius:2px;overflow:hidden;background:var(--surface);border:1px solid var(--chrome)}
+.mcard:hover{border-color:var(--link)}
+.mcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;cursor:pointer}
+/* Was dark blue on a blue plate — unreadable. White plate, carbon text. */
+.mcard .t{padding:5px 6px;font-size:12px;line-height:1.3;background:var(--surface);
+  color:var(--tx);border-top:1px solid var(--line)}
+.mcard .badge{position:absolute;top:3px;right:3px;background:var(--good);color:#053221;font-size:12px;font-weight:800;padding:0 4px;border-radius:2px}
+/* ---- guided: pick vs prebuilt ---- */
+.gtabs{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:11px}
+.gtabs button{font-size:12.5px;font-weight:700;padding:8px 15px;border:1px solid var(--chrome);
+  border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
+.gtabs button:hover{background:var(--platinum)}
+.gtabs button.on{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.gtabs .or{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--deep)}
+.blist{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.brow{border:1px solid var(--hairline);border-radius:4px;background:var(--surface);overflow:hidden}
+.brow.on{border-color:var(--chrome);box-shadow:var(--bevel)}
+.bhead{display:grid;grid-template-columns:34px minmax(150px,1.1fr) 2.4fr 18px;gap:11px;
+  align-items:center;width:100%;text-align:left;padding:10px 12px;background:var(--canvas-soft)}
+.bhead:hover{background:var(--ice)}
+.brow.on .bhead{background:var(--carbon);color:var(--on-dark)}
+.brow.on .bhead .bt{color:var(--on-dark-soft)}
+.bhead .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.bhead .bn{font-size:13.5px;font-weight:700}
+.bhead .bn em{font-style:normal;font-weight:400;color:var(--deep);display:block;font-size:12px}
+.brow.on .bhead .bn em{color:var(--on-dark-soft)}
+.bhead .bt{font-size:12px;line-height:1.45;color:var(--tx)}
+.bhead .bx{text-align:right;font-size:12px}
+@media(max-width:820px){.bhead{grid-template-columns:34px 1fr 18px}.bhead .bt{display:none}}
+.bbody{padding:12px;border-top:1px solid var(--line)}
+.binks{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12.5px;margin-bottom:11px}
+.binks i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.binks .bsing{color:var(--deep)}
+.bcols{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px}
+.bcol h4{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--deep);
+  margin-bottom:5px;border-bottom:1px solid var(--line);padding-bottom:3px}
+.bcol h4 span{float:right;color:var(--tx)}
+.bcard{display:block;width:100%;text-align:left;font-size:12.5px;line-height:1.35;
+  padding:3px 5px;border-radius:2px;color:var(--tx)}
+.bcard:hover{background:var(--amberc);color:var(--carbon)}
+.bcard b{margin-right:4px}
+.bcard em{font-style:normal;color:var(--deep);display:block;font-size:11.5px}
+.bcard:hover em{color:var(--carbon)}
+.bplan{background:var(--canvas-soft);border:1px solid var(--hairline);border-left:4px solid var(--amberc);
+  border-radius:4px;padding:12px 14px;margin-bottom:13px}
+.bplan .bp{font-size:13.5px;line-height:1.6;color:var(--tx);margin:0 0 10px;max-width:82ch}
+.bturns{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-bottom:10px}
+.bturns div{background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:7px 9px;font-size:12.5px;line-height:1.45;color:var(--tx)}
+.bturns span{display:block;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--link);margin-bottom:3px}
+.bgoal{margin:0;font-size:13px;line-height:1.55;color:var(--tx)}
+.bgoal b{color:var(--link)}
+.bkey{font-size:11px;color:var(--deep)}
+.bhand{background:var(--surface);border:1px solid var(--hairline);border-radius:4px;
+  padding:11px 13px;margin-bottom:13px}
+.bhand h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--link);margin-bottom:8px}
+.bhcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}
+.bhc{display:flex;align-items:center;gap:7px;text-align:left;padding:6px 8px;
+  border:1px solid var(--line);border-radius:3px;background:var(--canvas-soft);color:var(--tx)}
+.bhc:hover{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.bhcost{flex:none;width:20px;height:20px;border-radius:50%;background:var(--carbon);color:var(--amberc);
+  font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.bhn{flex:1;min-width:0;font-size:12px;font-weight:700;line-height:1.25}
+.bhn em{display:block;font-style:normal;font-weight:400;font-size:11px;color:var(--deep)}
+.bhc:hover .bhn em{color:var(--carbon)}
+.bhink{color:var(--link);font-size:11px}
+.bhc:hover .bhink{color:var(--carbon)}
+.bhnote{font-size:11.5px;color:var(--deep);margin:8px 0 0}
+.bcard.top{background:#fff8d6;border-left:3px solid var(--amberc);font-weight:700}
+.bcard.top:hover{background:var(--amberc)}
+.bstar{color:var(--amber-press);margin-right:3px}
+.bacts{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
+.mlist{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.mlist button{background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:4px 8px;font-size:12px;color:var(--deep);text-align:left}
+.mlist button:hover{border-color:var(--link);color:var(--tx)}
+.toggle{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--deep);cursor:pointer}
+/* Special searches now lives in the same narrow left column as Filters (see
+   .searchcol), same reasoning as the Filters masonry removal above — three
+   chips squeezed side by side in a ~300px column was the cluttered, cramped
+   read Ben flagged. One column, same as everywhere else in that column. */
+.chips{display:grid;grid-template-columns:1fr;gap:6px}
+.chip{display:flex;align-items:center;justify-content:space-between;gap:6px;background:var(--platinum);
+  border:1px solid var(--line);border-radius:4px;padding:7px 10px;font-size:12.48px;color:var(--deep);text-align:left;box-shadow:var(--bevel-in);color:var(--tx);font-size:12px}
+.chip:hover{border-color:var(--deep);color:var(--tx)}
+.chip .n{font-size:12px;color:var(--deep);font-variant-numeric:tabular-nums}
+.chip.on{background:var(--acc);border-color:var(--link);color:var(--surface);font-weight:700}
+/* On the selected chip the fill is deep blue, where #07394f was 1.57:1 —
+   invisible, and caught by a both-themes audit the moment the collection page put
+   counts inside selected chips. White is 7.82 on that fill. */
+.chip.on .n{color:var(--surface)}
+/* Recommendation highlighting is yellow — the highlighter-pen read. A thin
+   yellow line on platinum is barely 1.3:1 against the surface, so the state is
+   carried by a pale yellow fill plus a 2px ring, not by the line alone.
+   Ring only on a chip that's also selected, so "chosen" still wins. */
+.chip.rec{border-color:var(--amber-press);box-shadow:0 0 0 2px var(--amberc) inset;
+  background:#fff8d6}
+.chip.on.rec{background:var(--acc);border-color:var(--amber-press)}
+.chip.dead{opacity:.4}
+
+/* layout */
+/* Filters left the grid, so the wrap is cards + deck. */
+/* The deck column is draggable on desktop. --deckw is written by the grip and
+   restored from localStorage, so a wide deck panel with big card images is a
+   preference, not something you re-drag every visit. */
+/* 420, not 330: three columns of card at the new size instead of two and a
+   half. Only the default moves — a width you've dragged yourself is saved and
+   still wins. */
+.wrap{display:grid;
+  grid-template-columns:var(--searchw,270px) minmax(0,1fr) var(--deckw,420px);
+  gap:14px;margin-top:14px;align-items:start}
+/* Search + Filters, sticky on the left — the same chrome and the same
+   position:sticky/max-height recipe .deck already uses on the right, so the
+   two read as a matching pair rather than one designed control and one
+   bolted-on afterthought. Independently scrollable: a long Filters list
+   scrolls itself instead of carrying the whole page down with it. */
+.searchcol{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;
+  box-shadow:var(--bevel);position:sticky;top:64px;max-height:calc(100vh - 80px);
+  overflow-y:auto;padding:11px;display:flex;flex-direction:column;gap:10px}
+.searchcol .special,.searchcol .special.filters{margin-top:0}
+.grpsel{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--deep);font-weight:700}
+.grpsel select{font:inherit;font-size:12px;color:var(--tx);background:var(--canvas-soft);
+  border:1px solid var(--hairline);border-radius:3px;padding:4px 6px}
+/* The grip hangs off .wrap, not off .deck — inside the deck panel it was
+   clipped by overflow-y:auto and scrolled away with the card list. */
+.wrap{position:relative}
+.dgrip{position:absolute;top:0;bottom:0;width:14px;cursor:col-resize;z-index:6;
+  right:calc(var(--deckw,420px) + 3px)}
+.dgrip::before{content:"";position:absolute;left:5px;top:50%;transform:translateY(-50%);
+  width:4px;height:46px;border-radius:2px;background:var(--hairline);transition:background .12s}
+.dgrip:hover::before,.dgrip.on::before{background:var(--amberc)}
+body.resizing{cursor:col-resize;user-select:none}
+@media(max-width:900px){.dgrip{display:none}.wrap{--deckw:auto!important}}
+/* Same three widths the deck column already used — just doubled, one per
+   sticky column, so both fold away at the point neither has room to be a
+   column anymore rather than sitting there squeezed. */
+@media(max-width:1520px){.wrap{grid-template-columns:var(--searchw,270px) minmax(0,1fr)}}
+@media(max-width:1240px){.wrap{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;padding-bottom:74px}}
+.deck,.cards{background:var(--surface);border:1px solid var(--chrome);border-radius:6px;box-shadow:var(--bevel)}
+.deck{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow-y:auto;padding:11px}
+@media(max-width:1240px){.searchcol{position:static;max-height:none}}
+@media(max-width:900px){.deck,.searchcol{position:static;max-height:none}}
+
+/* ---- Filters, wearing the Special-searches suit ----
+   Filters is back in a narrow left column (see .searchcol) after a spell as a
+   full-width bar, so the multi-column masonry packing that bar needed is gone
+   too — that's what was making sections visibly jump and reflow past each
+   other whenever one changed height. A single column has nothing to reflow
+   into; each section just keeps its place. */
+/* Every custom <summary> on the site draws its own ▸ and hides the browser's.
+   `list-style:none` and the -webkit- pseudo were doing that job, but current
+   Chrome still paints ::marker on a flex summary — a 2px dot pushed to the far
+   right by the count span's margin-left:auto. Invisible in a 230px sidebar,
+   obvious once the filters went full width. */
+.special>summary::marker,.grp>summary::marker,details.sec>summary::marker,
+.otherset>summary::marker,.hidwrap>summary::marker{content:"";font-size:0}
+/* Readability, not density — but not a ragged field of cards either.
+
+   This was a grid with align-items:start, so every card kept its natural
+   height and a row was as tall as its tallest member: Set is one dropdown,
+   Classification is a 230px scrolling list, and side by side that left a
+   column of dead space under the short one. Thirteen cards of wildly
+   different heights on a 4-column grid is what "disjointed" looked like.
+
+   Columns pack them instead: each card falls into the next gap rather than
+   waiting for a row to end, so the block has a flat bottom and no holes. The
+   reason this was a grid in the first place — a section splitting across a
+   column break mid-list — is what break-inside:avoid is for, and it is
+   supported everywhere now. Same cards, same styling, no voids. */
+#sidebody{display:flex;flex-direction:column;gap:10px}
+#sidebody>details{margin:0;width:100%}
+.filters details.sec{border:1px solid var(--hairline);border-radius:4px;
+  background:var(--canvas-soft);box-shadow:var(--bevel-in);overflow:hidden}
+.filters details.sec>summary{padding:9px 11px;font-size:11.5px;letter-spacing:.08em;
+  color:var(--tx);background:var(--platinum);border-bottom:1px solid transparent}
+.filters details.sec[open]>summary{border-bottom-color:var(--hairline)}
+.filters details.sec>summary:hover{background:var(--ice)}
+.filters .sb{padding:10px 11px}
+/* One height for every scrolling list in the block, so a card is either short
+   because it holds three buttons or exactly this tall because it holds a list
+   — and never some third height in between. */
+.filters .list{max-height:230px}
+/* The four "filter this list" boxes were each inheriting a slightly different
+   size from wherever they sat. One rule, matching the filter buttons. */
+.filters .mini{width:100%;font-size:12.5px;padding:5px 9px;margin-bottom:7px;
+  border:1px solid var(--chrome);border-radius:2px;background:var(--surface);color:var(--tx)}
+.filters .mini:focus{outline:2px solid var(--link);outline-offset:-2px}
+.filters select{width:100%;font-size:12.5px;padding:5px 7px}
+.filters .secn{color:var(--link);font-weight:700}
+.filters>summary .cnt{background:var(--amberc);color:var(--carbon);border-radius:2px;
+  padding:1px 7px;font-weight:700;font-size:11px}
+.filters>summary .cnt:empty{display:none;}
+@media print{.filters{display:none!important}}
+
+details.sec{border-bottom:1px solid var(--line)}
+details.sec:last-child{border-bottom:none}
+details.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;padding:8px 2px;
+  font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--link);font-weight:700}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary::before{content:"▸";color:var(--deep);transition:transform .15s}
+details.sec[open]>summary::before{transform:rotate(90deg)}
+/* Was ".c", which is ALSO the card-tile class — so this empty count span
+   quietly inherited the tile's white fill and 1px chrome border and painted
+   itself as a 2px dot at the right of every filter heading. Renamed rather
+   than patched, because the collision would come back the next time a tile
+   style changed. */
+details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text-transform:none;letter-spacing:0;font-weight:500}
+.sb{padding:2px 0 10px}
+/* ---- filter button groups ----
+   Every group of these used to be a plain wrapping flex row, so the shape a
+   group took was an accident of how long its words happened to be: the six
+   inks broke 4-and-2 or 5-and-1 depending on the panel width, and the last row
+   trailed off wherever it ran out. They all snap to the same three-column
+   rhythm now, and no row is ever left ragged.
+
+   The six inks are two rows of three, because that is what six inks ARE — the
+   game has three pairs of them and you read them as a block, not as a
+   sentence that wraps. Dual Ink then sits alone underneath, in the middle
+   column, because it isn't a seventh ink: it's a question about the other six.
+   Giving it its own centred row says that without a word of explanation. */
+.inks{display:flex;flex-wrap:wrap;gap:6px}
+.inkgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.inkgrid .dual{grid-column:2}
+/* Five card types, and each one carries a count, so three across can't hold
+   "Character 1905" in a 278px column without breaking the word off the number.
+   Two across fits it, and the fifth goes in the middle of its own row — the
+   same move Dual Ink makes, for the same reason: the odd one out gets its own
+   line rather than an awkward gap beside it. */
+.tygrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.tygrid .ic:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 3px)}
+/* "Cannot be inked" is three words and will not fit a third of this column, and
+   a label that breaks across two lines mid-phrase looks like an accident. One
+   per row, full width: three options, three clean lines. */
+.iwstack{flex-direction:column}
+.iwstack .ic{width:100%}
+/* gap, not a space in the markup: making these flex containers means the
+   whitespace between the label and its count is discarded, which is what
+   turned "Character 1905" into "Character1905". */
+.ic{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:5px;
+  min-height:30px;border:1px solid var(--chrome);border-radius:2px;padding:4px 9px;font-size:12px;
+  color:var(--tx);background:var(--surface);box-shadow:var(--bevel);
+  transition:background .15s,border-color .15s,color .15s}
+.ic:hover{border-color:var(--deep);color:var(--tx)}
+.ic.on{color:#06121f;font-weight:700}
+/* These six were written as [data-v=...] and the buttons have always emitted
+   data-ink, so not one of them has ever matched: every selected ink rendered
+   as the same plain white button and Amber looked exactly like Steel. */
+.ic[data-ink=Amber].on{background:var(--amber);border-color:var(--amber)}
+.ic[data-ink=Amethyst].on{background:var(--amethyst);border-color:var(--amethyst);color:#fff}
+.ic[data-ink=Emerald].on{background:var(--emerald);border-color:var(--emerald)}
+.ic[data-ink=Ruby].on{background:var(--ruby);border-color:var(--ruby);color:#fff}
+.ic[data-ink=Sapphire].on{background:var(--sapphire);border-color:var(--sapphire);color:#fff}
+.ic[data-ink=Steel].on{background:var(--steel);border-color:var(--steel)}
+.ic.dual.on{background:linear-gradient(100deg,var(--amethyst),var(--emerald));border-color:transparent;color:#fff}
+.cap{font-size:12px;color:var(--gold);margin-top:6px}
+.list{max-height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:1px}
+.list label{display:flex;align-items:center;gap:6px;font-size:12.16px;padding:2px 3px;border-radius:2px;cursor:pointer}
+.list label:hover{background:var(--panel2)}
+.list label input{accent-color:var(--link);flex-shrink:0}
+.list label .lb{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.list label .lc{font-size:12px;color:var(--deep);font-variant-numeric:tabular-nums}
+.list label.z{opacity:.34}
+.mini{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:4px 7px;font-size:12px;margin-bottom:5px}
+.rng{display:flex;gap:5px;align-items:center;font-size:12px;color:var(--deep)}
+.rng input{width:52px;background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:4px 6px;font-size:12px}
+.side select{width:100%;background:var(--surface);border:1px solid var(--carbon);border-radius:2px;padding:5px 7px;font-size:12.32px}
+
+.rbar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 11px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.rbar .ct{font-size:12.64px;color:var(--deep)}.rbar .ct b{color:var(--tx)}
+.rbar select{background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:5px 8px;font-size:12.16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:14px;padding:13px}
+/* On a 390px phone a 215px minimum resolves to exactly ONE card per row, so
+   the grid became a 79,000px column of single cards — you could not scan
+   results, only scroll past them. 150px gives two, which is the difference
+   between browsing and paging. The Columns setting still overrides this. */
+@media(max-width:620px){.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px;padding:9px}}
+.c{position:relative;border-radius:4px;overflow:hidden;background:var(--periwinkle);border:1px solid var(--chrome);
+  transition:transform .18s 0s,border-color .13s,box-shadow .18s}
+/* dwell for a second and the card blows up in place */
+/* The highlight is yellow and sits outside the tile as a ring. A blue border
+   on a blue-grey canvas barely registered — the card just looked like it had a
+   slightly different edge. Yellow is the only hue on the page that means
+   "here", so a ring of it reads instantly against the periwinkle. */
+/* Three layers, in order: the crisp 3px ring that says exactly where the card
+   ends, then two soft amber halos at 14px and 30px that bleed outward, then the
+   drop shadow that lifts it off the page. The ring is what keeps it legible —
+   glow on its own reads as blur rather than selection — and the halos are what
+   make it glow. Both halos are pure alpha, so they layer over card art and
+   canvas alike without tinting either. */
+.c:hover{border-color:var(--amber-press);z-index:60;transform:scale(1.55);
+  box-shadow:
+    0 0 0 3px var(--amberc),
+    0 0 14px 2px rgba(255,212,0,.72),
+    0 0 30px 10px rgba(255,212,0,.34),
+    0 18px 44px -10px rgba(0,0,0,.85);
+  transition-delay:1s,0s,1s}
+@media(hover:none){.c:hover{transform:none;box-shadow:none}}
+.c img,.c .ph{width:100%;aspect-ratio:674/940;display:block;cursor:pointer;object-fit:cover;background:var(--platinum)}
+.c .ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:12px;color:var(--deep)}
+/* The card name used to be printed here, under a picture of the card with its
+   name printed on it. The strip is now the stepper, which is the one control
+   people actually reach for. */

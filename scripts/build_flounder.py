@@ -33,7 +33,7 @@ NOTE_KINDS = [
      "d": "A video featuring this card — paste the link."},
 ]
 
-from paths import (TEMPLATE, SITE as INDEX, TAG_TPL, TAG_OUT, NOTE_TPL, NOTE_OUT,
+from paths import (app_template, SITE as INDEX, TAG_TPL, TAG_OUT, NOTE_TPL, NOTE_OUT,
                    ART_TAGS as TAGS_F, CARD_RULES as RULES_F, RSI_NOTES as NOTES_F,
                    META_DECKS as META_F, PRICES as PRICES_F, CARD_DB as CARDDB,
                    BUILDER as NB_DIR, PUBLIC, SERVED_DATA)
@@ -285,8 +285,7 @@ payload = {"generated": time.strftime("%Y-%m-%d"), "sets": setinfo, "cards": out
            "priced": PRICE_DATE}
 
 # ---------------------------------------------------------------- 4. inject
-with open(TEMPLATE, encoding="utf-8") as f:
-    html = f.read()
+html = app_template()
 if "/*__DATA__*/" not in html:
     sys.exit("! template is missing the /*__DATA__*/ placeholder")
 if "/*__METADECKS__*/" not in html:

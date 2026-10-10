@@ -1,0 +1,192 @@
+/* ===== card detail: one idea per row, generous spacing ====================
+   The old header ran cost/strength/willpower/lore/inks/inkable/legality
+   together as one line of same-size grey text, so nothing led and everything
+   competed. Numbers now sit in tiles, ink is a colour not a word, and the
+   yes/no facts are quiet pills underneath. */
+.mc{padding:20px 20px 18px}
+.mc h2{font-size:1.4rem;line-height:1.18;letter-spacing:-.01em}
+.mc .vv{color:var(--gold);font-size:14.4px;margin-top:2px}
+/* Kept for screen readers, which don't get the picture. */
+.mname{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+/* The facts you can't read off the art, as label-over-value pairs rather than
+   a run-on line of dot-separated fragments. Two columns so set and franchise
+   sit side by side instead of stacking into a tall list. */
+.mfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:9px 16px;
+  margin:0 0 12px}
+.mfacts>div{min-width:0}
+.mfacts dt{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--deep);margin-bottom:2px}
+.mfacts dd{font-size:13.5px;font-weight:700;color:var(--tx);line-height:1.35;
+  display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.mfacts dd i{font-style:normal;font-weight:600;color:var(--deep)}
+.mfacts .dot{width:11px;height:11px;border-radius:50%;flex:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 11px}
+/* min-width:0 let the tile shrink below its own label, so WILLPOWER and
+   STRENGTH spilled out over the neighbouring tile. max-content stops the tile
+   collapsing under its widest child; .stats already wraps, so the row reflows
+   instead of overflowing. */
+.stt{flex:1 1 68px;background:var(--platinum);border:1px solid var(--line);border-radius:2px;
+  padding:9px 7px;text-align:center;min-width:max-content}
+.stt b{display:block;font-size:1.3rem;font-weight:800;line-height:1.1}
+.stt i{display:block;font-style:normal;font-size:12px;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--deep);margin-top:4px}
+.stt.cost b{color:var(--link)}
+.stt.lore b{color:var(--gold)}
+.stt.art{flex:2 1 150px}
+.stt.art b{font-size:15.2px;color:var(--deep)}
+.stt.art i{text-transform:none;letter-spacing:.01em;font-size:12px;color:var(--deep)}
+.flags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.flag{font-size:12px;font-weight:600;padding:3px 10px;border-radius:2px;
+  border:1px solid var(--line);color:var(--deep)}
+.flag.yes{border-color:rgba(63,217,149,.45);color:var(--good)}
+.flag.no{border-color:rgba(255,107,107,.4);color:#ff9d9d}
+.flag.star{border-color:rgba(247,201,92,.5);color:var(--gold)}
+.bdgs{margin-bottom:13px}
+/* other printings drawer */
+.prints{margin-top:14px;border:1px solid var(--line);border-radius:2px;background:var(--platinum);overflow:hidden}
+.prints>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;
+  padding:10px 13px;font-size:12.48px;font-weight:700;color:var(--link)}
+.prints>summary::-webkit-details-marker{display:none}
+.prints>summary::before{content:"\25B8";transition:transform .15s}
+.prints[open]>summary::before{transform:rotate(90deg)}
+.prints>summary .cnt{margin-left:auto;font-size:12px;color:var(--deep);font-weight:600;
+  border:1px solid var(--line);border-radius:2px;padding:1px 8px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:9px;padding:0 13px 13px}
+.pcard{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--panel2);
+  padding:0 0 6px;text-align:center;transition:border-color .15s,transform .15s}
+.pcard:hover{border-color:var(--deep);transform:translateY(-2px)}
+.pcard.on{border-color:var(--link);box-shadow:0 0 0 1px var(--acc) inset}
+.pcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;background:var(--platinum)}
+.pcard .ps{display:block;font-size:12px;color:var(--deep);margin-top:5px;padding:0 4px;line-height:1.25}
+.pcard .pr2{display:block;font-size:12px;color:var(--deep);padding:0 4px}
+.pcard.on .ps{color:var(--link)}
+.mc .tx{white-space:pre-wrap;font-size:13.6px;line-height:1.62;background:var(--platinum);border-left:2px solid var(--acc);padding:12px 14px;border-radius:0 8px 8px 0}
+/* Scoped to .mc deliberately: a bare .tx.big already exists for the card
+   reader and loses to .mc .tx on source order, so it would have done nothing
+   here. With the numbers and the chips gone the ability is what this column
+   is for, so it gets the size to match. */
+.mc .tx.big{font-size:15.5px;line-height:1.65;padding:14px 16px}
+.mc .fl{font-style:italic;color:var(--deep);font-size:12.48px;margin-top:8px}
+.bdg{display:inline-block;font-size:12px;padding:2px 7px;border-radius:2px;background:#0d2439;border:1px solid var(--line2);color:#a9d8ee;margin:0 3px 4px 0}
+.bdg.g{background:#2b2410;border-color:#5c4a1a;color:var(--gold)}
+.mx{position:absolute;top:10px;right:12px;width:42px;height:42px;border-radius:50%;
+  background:var(--bad);color:#fff;font-size:1.4rem;font-weight:800;line-height:1;z-index:10;
+  box-shadow:0 4px 14px -4px rgba(0,0,0,.7)}
+.mx:hover{background:#ff3b3b}
+@media(max-width:680px){.mx{width:52px;height:52px;font-size:1.8rem;top:8px;right:8px}}
+.rel{margin-top:12px}.rel b{font-size:12px;color:var(--link)}
+.rel .rl{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.rel .rl button{background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:3px 8px;font-size:12px;color:var(--deep)}
+.rel .rl button:hover{border-color:var(--link);color:var(--tx)}
+.rulings{margin-top:16px;max-height:300px;overflow-y:auto}
+.rulings h4{font-size:12px;color:var(--link);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+.ruling{background:var(--platinum);border:1px solid var(--line);border-left:2px solid var(--gold);
+  border-radius:0 8px 8px 0;padding:9px 11px;margin-bottom:7px}
+.ruling .q{font-size:12.64px;font-weight:700;color:var(--gold);margin-bottom:4px}
+.ruling .a{font-size:12.48px;line-height:1.5;color:var(--tx)}
+.ruling .src{font-size:12px;color:var(--deep);margin-top:5px}
+/* community notes are visually distinct from official Q&A so nobody mistakes
+   one for the other — teal rail and a different heading colour */
+.rulings.rsi h4{color:var(--good)}
+.ruling.rsin .a{color:#d9e6f2}
+.ruling.rsin .kind{font-size:12px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.07em;margin-bottom:5px}
+.ruling .nlink{display:inline-block;margin-top:7px;font-size:12px;font-weight:700;
+  color:var(--link);text-decoration:none;border-bottom:1px solid currentColor}
+.ruling .nlink:hover{color:#9fe6ff}
+
+/* guided — every step is always visible; unreached ones are dimmed previews */
+.glayout{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:14px;align-items:start}
+@media(max-width:1100px){.glayout{grid-template-columns:1fr}}
+.gside{min-width:0}
+.gstep{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:16px;margin-bottom:14px;position:relative}
+.gstep h3{font-size:15.2px;margin-bottom:3px}
+.gstep h3 .num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;
+  background:var(--panel2);border:1px solid var(--line2);font-size:12px;margin-right:8px;color:var(--deep)}
+.gstep.done h3 .num{background:var(--good);border-color:var(--good);color:#053221;font-weight:800}
+.gstep.active{border-color:var(--link);box-shadow:0 0 0 1px var(--acc) inset}
+.gstep.active h3 .num{background:var(--acc);border-color:var(--link);color:var(--surface);font-weight:800}
+.gstep.locked{opacity:.5}
+.gstep.locked .gbody{max-height:74px;overflow:hidden;position:relative}
+.gstep.locked .gbody::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,var(--panel))}
+.gstep p.s{font-size:12.16px;color:var(--deep);margin-bottom:11px}
+.gprev{font-size:12px;color:var(--deep);font-style:italic}
+.gsum{font-size:12px;color:var(--good);margin-top:6px}
+.cocogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cococ{text-align:left;background:none;border:0;padding:0;cursor:pointer}
+.cococ img{display:block;width:100%;height:auto;aspect-ratio:420/601;border-radius:7px;background:var(--panel2);
+  outline:2px solid transparent;outline-offset:2px;transition:transform .12s,outline-color .12s}
+.cococ:hover img{transform:translateY(-2px)}
+.cococ:focus-visible img,.cococ.on img{outline-color:var(--gold)}
+.cococ b{font-size:13px;display:block;margin-top:6px;line-height:1.3}
+.cococ i{font-style:normal;color:var(--deep);font-size:12px;display:block}
+.cocopick{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;padding:12px;background:var(--panel2);border:1px solid var(--gold);border-radius:4px}
+.cocopick img{width:150px;height:auto;border-radius:7px;flex:none}
+.cocopick b{font-size:16px;display:block}
+.cocopick i{font-style:normal;color:var(--deep);font-size:13px;display:block;margin-bottom:6px}
+.cocopick p{font-size:13px;line-height:1.5;margin:0 0 6px}
+.bhead .bimg{width:34px;height:auto;border-radius:3px;display:block}
+@media(max-width:560px){.cocogrid{grid-template-columns:repeat(2,minmax(0,1fr))}.cocopick img{width:110px}}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:9px}
+.pair{text-align:left;background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:10px;position:relative}
+.pair:hover{border-color:var(--link)}
+.pair.on{border-color:var(--link);box-shadow:0 0 0 2px var(--acc) inset}
+.pair .t{font-size:13.28px;font-weight:700;margin-bottom:5px}
+.pair .tag{font-size:12px;padding:1px 6px;border-radius:2px;font-weight:800;margin-left:5px}
+/* recommendation strength is shown, not hidden: rainbow = clear favourite */
+.pair.rec-strong{border:2px solid transparent;
+  background:linear-gradient(var(--panel2),var(--panel2)) padding-box,
+             linear-gradient(95deg,var(--amber),var(--ruby),var(--amethyst),var(--sapphire),var(--emerald),var(--steel)) border-box;
+  background-size:auto,300% 100%;animation:rain 6s linear infinite}
+.pair.rec-strong .tag{background:linear-gradient(95deg,var(--amber),var(--ruby),var(--amethyst),var(--sapphire),var(--emerald));
+  background-size:300% 100%;animation:rain 6s linear infinite;color:#161616}
+.pair.rec-ok{border-color:var(--good);box-shadow:0 0 0 1px var(--good) inset}
+.pair.rec-ok .tag{background:var(--good);color:#053221}
+.pair.rec-close{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.pair.rec-close .tag{background:var(--gold);color:var(--surface)}
+.stap{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap}
+.stap div{font-size:12px;color:var(--deep);background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:2px 6px}
+.pkgs{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.pkg{border:1px solid var(--line);border-radius:2px;padding:7px 13px;font-size:12.64px;color:var(--deep);font-weight:600}
+.pkg:hover{border-color:var(--link);color:var(--tx)}
+.pkg.rainbow{border:none;color:#111;font-weight:800;
+  background:linear-gradient(95deg,var(--amber),var(--ruby),var(--amethyst),var(--sapphire),var(--emerald),var(--steel));
+  background-size:300% 100%;animation:rain 6s linear infinite}
+@keyframes rain{to{background-position:300% 0}}
+
+/* mobile tabs — deliberately large */
+.sitefoot{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  padding:12px 16px;background:var(--canvas-soft);border-top:1px solid var(--line2)}
+.kofiwrap{display:inline-flex;align-items:center}
+/* Ko-fi's own widget wiggles its cup icon every 3s, forever — noticeable
+   enough to read as a nag rather than a quiet footer link. Their script
+   injects its own <style> with animation:kofi-wiggle 3s infinite (not
+   flagged !important) after page load; overriding just the -duration
+   longhand here, with !important so load order can't win the fight,
+   stretches the same wiggle out to something closer to ambient than urgent. */
+.kofiwrap .kofiimg{animation-duration:9s!important}
+.affnote{font-size:11px;color:var(--deep);text-align:center;max-width:440px;line-height:1.4}
+/* .mtabs is fixed-position and only shown on narrow screens (deck builder,
+   not search-browse) — this padding is flat rather than conditional on that,
+   so it costs a little extra whitespace on pages without .mtabs but never
+   lets that bar cover the footer on the page that has it. */
+@media(max-width:900px){.sitefoot{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}}
+.mtabs{display:none;position:fixed;bottom:0;left:0;right:0;z-index:120;background:rgba(12,24,40,.97);border-top:1px solid var(--line)}
+.mtabs button{flex:1;padding:18px 6px;font-size:1rem;color:var(--deep);font-weight:700}
+.mtabs button.on{color:var(--amberc);box-shadow:inset 0 3px 0 var(--amberc)}
+/* Three screens now instead of two — Search (the art tile, Special searches,
+   Filters — everything that used to just pile up above the card grid on a
+   phone), Cards, and Deck. Same three-state pattern as before: one body class
+   per non-default tab, and "neither class" is Cards, same as "not .mdeck"
+   used to mean Cards back when Search and Cards were the same screen. */
+@media(max-width:900px){body.tdeck .mtabs{display:flex}
+  body.tdeck .searchcol,body.tdeck .cards,body.tdeck .deck{display:none}
+  body.tdeck.msearch .searchcol{display:flex}
+  body.tdeck.mdeck .deck{display:block}
+  body.tdeck:not(.msearch):not(.mdeck) .cards{display:block}}
+.toast{position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--acc);
+  padding:10px 17px;border-radius:2px;font-size:13.12px;z-index:300;opacity:0;pointer-events:none;transition:opacity .25s;max-width:88vw;text-align:center}
+.toast.on{opacity:1}

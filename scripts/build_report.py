@@ -40,7 +40,7 @@ import sys
 import time
 from datetime import date, datetime, timedelta
 
-from paths import DATA, SITE as SRC, TEMPLATE as TPL, HISTORY as HIST, REPORT
+from paths import DATA, SITE as SRC, HISTORY as HIST, REPORT, app_template
 KEEP = 12
 
 # How much of a drop is a bug rather than a Tuesday. These are deliberately
@@ -146,8 +146,7 @@ def integrity(data):
 
     def block(start, end):
         try:
-            with open(TPL, encoding="utf-8") as f:
-                t = f.read()
+            t = app_template()
             i = t.index(start)
             return t[i:t.index(end, i)]
         except Exception:

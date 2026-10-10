@@ -37,7 +37,7 @@ Then read:
 
 | Folder | What's in it | Edit it? |
 |---|---|---|
-| `src/` | `flounder-search.template.html` (the app) and `builder/` (the deck builder's css/js) | Yes |
+| `src/` | The app: page shell (`flounder-search.template.html`), `css/`, `js/` (one file per area, see `src/README.md`), and `builder/` (the deck builder) | Yes |
 | `data/` | `card-db.json` (all card data), `card-prices.json`, and the hand-authored `art-tags.json`, `card-rules.json`, `rsi-notes.json`, `meta-decks.json` | Carefully, see below |
 | `public/` | What readysetink.com serves (`vercel.json` → `outputDirectory: public`) | Only the hand-made folders listed below |
 | `scripts/` | The build (`build_flounder.py`, `gen_pages.py`, `build_report.py`, `fetch_cards.py`, `build_rules.py`), `paths.py`, `smoke.js` | Yes |
@@ -65,7 +65,7 @@ has its own CLAUDE.md), `roadmap/`, `icons/`, `img/` (Coconut card images live i
 - Card names must match exactly as `Name - Version` (e.g. `Elsa - Snow Queen`)
   across the hand-authored files or they fail silently. Check
   `docs/BUILD-REPORT.md` after every build; it flags names that stopped resolving.
-- Ask Ben before structural changes to `src/flounder-search.template.html`.
+- Ask Ben before structural changes to the app in `src/`.
 - Don't lose user data: decks, collection, dust.
 - One version of every feature. When something changes, edit it in place: no
   flags, no "classic" fallback, no v2 beside v1 (see docs/HOW-WE-WORK.md).

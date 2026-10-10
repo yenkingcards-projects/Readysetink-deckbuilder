@@ -88,7 +88,7 @@ that as hearsay until Impact shows you your own terms.
 https://docs.tcgplayer.com/docs/tcgplayer-affiliate-program — that page links
 the Impact signup form. I can't apply on your behalf and shouldn't try.
 
-**The code is already wired.** In `src/flounder-search.template.html`:
+**The code is already wired.** In `src/js/03-collection-and-prices.js`:
 
 ```js
 const TCG_AFF = "";   // put your Impact partner id here

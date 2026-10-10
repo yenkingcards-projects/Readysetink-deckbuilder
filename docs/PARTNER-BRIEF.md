@@ -19,7 +19,7 @@ data files, and those files are where we need help. More on that below.
   in. It works offline, opened straight off a disk. That's deliberate — don't
   break it by adding a fetch or a framework.
 - **You never edit `public/index.html`.** It's generated. Edit
-  `src/flounder-search.template.html`, then run `python3 scripts/build_flounder.py`.
+  `src/` (see `src/README.md`), then run `python3 scripts/build_flounder.py`.
 - **The card data is ours.** `data/card-db.json` in the repo. A normal build reads it
   off disk and never touches the network (~1 second). `--refresh` re-fetches
   from LorcanaJSON + Lorcast.
@@ -115,7 +115,7 @@ carry his voice. Leave this one alone unless he asks.
 2. **Never bulk-overwrite these files.** They're hand-authored and
    irreplaceable. Add entries, don't regenerate.
 3. Run `node scripts/smoke.js` before pushing.
-4. Ask Ben before changing anything in `src/flounder-search.template.html` — it's
+4. Ask Ben before structural changes to the app in `src/` — it's
    ~10k lines and he's got a lot of context on why things are the way they are.
 
 ---
@@ -154,7 +154,7 @@ the public card pages, so a wrong answer is worse than no answer.
 - Never regenerate or bulk-overwrite `data/art-tags.json`, `data/card-rules.json` or
   `data/rsi-notes.json` — they're hand-authored and irreplaceable. Append only.
 - Don't edit `public/index.html` or anything in `public/card/` — both are generated. The only
-  editable source is `src/flounder-search.template.html`, and check with Ben before
+  editable source is in `src/`, and check with Ben before
   touching it.
 - After changes: `python3 scripts/build_flounder.py` then `node scripts/smoke.js`. Read
   `docs/BUILD-REPORT.md` — it flags any card name that stopped resolving.

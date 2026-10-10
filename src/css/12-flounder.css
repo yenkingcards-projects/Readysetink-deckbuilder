@@ -1,0 +1,183 @@
+/* ===== Flounder gets the hero treatment =====================================
+   A rainbow ring drawn as a masked gradient border (so it hugs the rounded
+   corners), plus a beam of light that opens up out of the top once the card
+   has finished blowing up. overflow:visible is what lets the beam escape. */
+.c.flounder{border-color:transparent}
+.c.flounder::after{content:"";position:absolute;inset:0;border-radius:2px;padding:2px;
+  pointer-events:none;z-index:7;
+  background:linear-gradient(90deg,#ff4d6d,#ffb84d,#ffe74d,#5cff9d,#4dd2ff,#9b6bff,#ff4d6d);
+  background-size:300% 100%;animation:fbow 4.5s linear infinite;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask-composite:exclude}
+@keyframes fbow{to{background-position:300% 0}}
+.c.flounder:hover{overflow:visible;box-shadow:0 18px 44px -10px rgba(0,0,0,.85),0 0 34px -4px rgba(120,220,255,.55)}
+.c.flounder:hover::before{content:"";position:absolute;left:50%;bottom:99%;width:230%;height:150%;
+  transform:translateX(-50%);pointer-events:none;z-index:1;filter:blur(7px);opacity:0;
+  background:conic-gradient(from 205deg at 50% 100%,transparent 0deg,
+    rgba(255,150,220,.30) 14deg,rgba(190,235,255,.52) 28deg,rgba(255,255,255,.66) 40deg,
+    rgba(190,235,255,.52) 52deg,rgba(180,255,210,.30) 66deg,transparent 80deg);
+  animation:fbeam .55s ease 1s forwards}
+@keyframes fbeam{from{opacity:0;transform:translateX(-50%) scaleY(.72)}
+                 to{opacity:1;transform:translateX(-50%) scaleY(1)}}
+@media(hover:none){.c.flounder:hover::before{display:none}}
+.c.add{animation:pop .45s ease}
+@keyframes pop{0%{box-shadow:0 0 0 0 rgba(63,217,149,.9)}100%{box-shadow:0 0 0 13px rgba(63,217,149,0)}}
+.more{grid-column:1/-1;text-align:center;padding:14px}
+.empty{padding:42px 14px;text-align:center;color:var(--deep);font-size:13px;background:var(--surface)}
+
+/* deck */
+.deck h3{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--link);margin:13px 0 7px;font-weight:700}
+.deck h3:first-child{margin-top:0}
+.deck select,.deck input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:6px 8px;font-size:12.48px}
+.row{display:flex;gap:5px;align-items:center}
+.prog{height:6px;background:var(--platinum);border-radius:2px;overflow:hidden;margin:8px 0 4px}
+.prog i{display:block;height:100%;background:var(--gold);transition:width .3s}
+.dl{display:flex;align-items:center;gap:7px;background:var(--panel2);border:1px solid var(--line);border-radius:2px;padding:5px 8px;font-size:12.32px;margin-bottom:3px}
+.dl .q{color:var(--link);font-weight:700}
+.dl .n{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}
+.dl button{color:var(--deep);padding:0 5px;border-radius:2px}
+.dl button:hover{background:var(--bad);color:#fff}
+.wn{font-size:12px;color:#ffb3b3;line-height:1.35}
+.okm{font-size:12px;color:var(--good)}
+.acts{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+.st{font-size:12px;color:var(--deep);margin-top:7px}
+.curve{display:flex;align-items:flex-end;gap:3px;height:50px;margin:9px 0 3px}
+.curve div{flex:1;background:var(--acc2);border-radius:2px;min-height:2px;position:relative}
+.curve div b{position:absolute;top:-13px;left:0;right:0;text-align:center;font-size:12px;color:var(--deep);font-weight:500}
+.cx{display:flex;gap:3px;font-size:12px;color:var(--deep)}.cx div{flex:1;text-align:center}
+/* ---- deck stats ---- */
+.dstats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
+.dstat{background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:4px;
+  box-shadow:var(--bevel-in);padding:7px 4px;text-align:center}
+.dstat b{display:block;font-size:17px;font-weight:800;color:var(--tx);line-height:1.15}
+.dstat i{font-style:normal;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep)}
+.dstat.warn{background:#fff2f2;border-color:var(--bad)}
+.dstat.warn b{color:var(--bad)}
+.curveW{display:flex;align-items:flex-end;gap:3px;height:96px;margin:4px 0 5px}
+.cbar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+  height:100%;gap:2px}
+.cbar .cn{font-size:11px;font-weight:700;color:var(--tx);min-height:14px}
+.cbar .cfill{width:100%;background:var(--primary);border-radius:2px 2px 0 0;min-height:2px}
+.cbar .cl{font-size:11px;color:var(--deep)}
+.inkleg,.tyleg{display:flex;flex-wrap:wrap;gap:4px 11px;font-size:11.5px;color:var(--tx);margin-top:5px}
+.inkleg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.tyleg{color:var(--deep);border-top:1px solid var(--line);padding-top:6px;margin-top:7px}
+.inkleg b,.tyleg b{color:var(--tx)}
+/* ---- the deck panel's two menus ---- */
+.dmenus{margin-left:auto;display:flex;gap:5px}
+.dmbtn{width:32px;height:28px;display:grid;place-items:center;font-size:15px;line-height:1;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:2px;
+  box-shadow:var(--bevel);color:var(--tx);cursor:pointer}
+.dmbtn:hover{background:var(--platinum);border-color:var(--deep)}
+.dmbtn[aria-expanded=true]{background:var(--amberc);color:var(--carbon);border-color:var(--amber-press)}
+.dmwrap{position:relative}
+.dmpanel{position:absolute;right:0;top:2px;z-index:60;min-width:222px;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:3px;
+  box-shadow:0 10px 30px -8px rgba(0,0,0,.5);padding:6px}
+.dmpanel.wide{min-width:250px}
+.dmi{display:flex;align-items:center;gap:9px;width:100%;text-align:left;
+  padding:7px 9px;font-size:13px;font-weight:600;color:var(--tx);
+  background:none;border:none;border-radius:2px;cursor:pointer}
+.dmi i{font-style:normal;width:18px;text-align:center;flex:none;opacity:.9}
+.dmi:hover{background:var(--platinum)}
+.dmi[disabled]{opacity:.4;cursor:default}
+.dmi[disabled]:hover{background:none}
+.dmi.bad{color:var(--bad)}
+.dmi.bad:hover{background:rgba(178,0,14,.1)}
+.dmsep{height:1px;background:var(--line);margin:5px 2px}
+.dmlbl{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--deep);padding:5px 9px 3px}
+.dmpanel .fmtpick{margin:0 4px 4px;background:none;border:none;box-shadow:none;padding:0}
+.dmpanel .fmtlbl{display:none}
+.dmpanel .vtog{margin:0 4px 6px;display:flex;gap:4px}
+.dmpanel .vtog button{flex:1}
+.dmpanel .dsortrow{margin:0 4px 4px;flex-direction:column;align-items:stretch;gap:4px}
+.dmpanel .dsortrow select{width:100%}
+/* A plain sentence that happens to be a link, rather than a button pretending
+   to be prose — same colour and weight as the text around it. */
+.lnkbtn{background:none;border:none;padding:0;font:inherit;color:var(--link);
+  font-weight:700;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.lnkbtn:hover{color:var(--deep)}
+/* "Work in progress", said once, in the one place it belongs: across the top
+   of the page it applies to. Amber because that is what amber is for here. */
+.wipnote{margin:0 0 16px;padding:9px 12px;text-align:center;
+  background:var(--amberc);color:var(--carbon);border:1px solid var(--amber-press);
+  border-radius:2px;font-size:12.5px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.11em}
+.dsortrow{display:flex;align-items:center;gap:7px;margin:12px 0 2px}
+.dsortrow label{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--deep)}
+.dsortrow select{flex:1;font-size:12.5px;padding:4px 6px}
+.ibar{display:flex;height:8px;border-radius:2px;overflow:hidden;margin:6px 0}
+/* 84px was a thumbnail — you could tell a card was there, not which card. At
+   116px the art reads and the name plate is legible, which is the difference
+   between a list of your deck and a look at it. auto-fill still means a wider
+   panel just gets more columns. */
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(116px,1fr));gap:8px;margin-top:9px}
+.dcard{position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--line);background:var(--panel2)}
+.dcard img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block}
+/* How many copies, top right. It used to be a small green chip top left, and
+   it had two problems: on green or bright art it disappeared, and a bare "3"
+   sitting on a card looks like it belongs to the art rather than to you. So:
+   the same near-black the +/− bar at the bottom of this card already uses, a
+   hairline of light around it and a shadow under it so it separates from any
+   art underneath, and an "x" after the number so it reads as a quantity at a
+   glance instead of a number that happens to be there. The x is dimmed and
+   smaller because the digit is the thing you're actually scanning for. */
+.dcard .dq{position:absolute;top:3px;right:3px;min-width:21px;text-align:center;
+  background:rgba(4,14,26,.92);color:#fff;font-size:13px;font-weight:800;line-height:1.35;
+  padding:1px 5px;border-radius:3px;border:1px solid rgba(255,255,255,.38);
+  box-shadow:0 1px 3px rgba(0,0,0,.55)}
+.dcard .dq i{font-style:normal;font-size:.82em;font-weight:700;opacity:.7;margin-left:1px}
+.dcard .dbtn{position:absolute;bottom:2px;left:2px;right:2px;display:flex;justify-content:space-between;gap:3px}
+.dcard .dbtn button{flex:1;background:rgba(4,14,26,.92);border:1px solid var(--line2);border-radius:2px;
+  color:var(--tx);font-size:12px;font-weight:800;line-height:1.15}
+.dcard .dbtn button.m:hover{background:var(--bad);border-color:var(--bad)}
+.dcard .dbtn button.p:hover{background:var(--good);color:#053221;border-color:var(--good)}
+.vtog{display:flex;gap:3px;margin-left:auto}
+.vtog button{border:1px solid var(--line);border-radius:2px;padding:2px 8px;font-size:12px;color:var(--deep)}
+.vtog button.on{background:var(--acc);border-color:var(--link);color:var(--surface);font-weight:700}
+.deck h3.hd{display:flex;align-items:center;gap:6px}
+/* ---- format picker, inside the deck panel ----
+   Segmented buttons rather than a dropdown: three options that change the
+   rules of the deck should all be visible at once, and the one in force should
+   be obvious without opening anything. */
+.fmtpick{margin:10px 0 12px;padding:9px 10px;background:var(--canvas-soft);
+  border:1px solid var(--hairline);border-radius:4px;box-shadow:var(--bevel-in)}
+.fmtlbl{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--deep);margin-bottom:6px}
+.fmtbtns{display:flex;gap:0}
+.fmtb{flex:1;padding:7px 4px;font-size:12.5px;font-weight:700;
+  background:var(--surface);color:var(--tx);
+  border:1px solid var(--chrome);border-right-width:0;cursor:pointer}
+.fmtb:first-child{border-radius:2px 0 0 2px}
+.fmtb:last-child{border-right-width:1px;border-radius:0 2px 2px 0}
+.fmtb:hover{background:var(--platinum)}
+.fmtb.on{background:var(--amberc);color:var(--carbon);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -2px 0 var(--amber-press);
+  position:relative;z-index:1;border-color:var(--carbon)}
+.fmtwhy{margin-top:7px;font-size:11.5px;line-height:1.5;color:var(--tx)}
+.curveT{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+.curveT div{border:1px solid var(--line);border-radius:2px;padding:6px 4px;text-align:center;font-size:12px;color:var(--deep)}
+.curveT div.hit{border-color:var(--good);box-shadow:0 0 0 1px var(--good) inset;color:var(--good)}
+.curveT div b{display:block;font-size:1rem;color:var(--tx)}
+.curveT div.hit b{color:var(--good)}
+.arch{display:inline-block;padding:4px 12px;border-radius:2px;font-size:12.8px;font-weight:800;margin-top:8px}
+.arch.aggro{background:#f0625f;color:var(--surface)}.arch.midrange{background:var(--gold);color:var(--surface)}
+.arch.control{background:var(--sapphire);color:#04263d}.arch.other{background:var(--panel2);color:var(--deep);border:1px solid var(--line)}
+.hand{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:8px}
+.hand img{width:100%;border-radius:2px;display:block}
+
+/* modal */
+.mbg{position:fixed;inset:0;background:rgba(32,38,56,.8);display:none;align-items:center;justify-content:center;padding:18px;z-index:200;}
+.mbg.on{display:flex}
+/* 250px was a thumbnail of the thing you clicked to look at. The point of
+   opening a card is to SEE the card, and with the stat tiles and the
+   classification chips gone the right-hand column no longer needs the room.
+   380px, and the modal grew to hold it. */
+.modal{background:var(--surface);border:2px solid var(--chrome);border-radius:6px;max-width:940px;width:100%;
+  max-height:88vh;overflow-y:auto;display:grid;grid-template-columns:380px 1fr;position:relative}
+@media(max-width:860px){.modal{grid-template-columns:320px 1fr}}
+@media(max-width:680px){.modal{grid-template-columns:1fr}}
+.modal>img{width:100%;display:block}

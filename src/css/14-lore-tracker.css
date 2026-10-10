@@ -1,0 +1,532 @@
+/* ===================== lore tracker =====================
+   A tracker is used with a phone flat on the table between two people who are
+   looking at it from opposite sides. That single fact drives every decision
+   here: the numbers are enormous, the opposing seat is rotated 180°, the taps
+   are huge, and nothing important is ever in a corner.
+
+   It is also the one screen on this site somebody uses while a stranger waits,
+   so it never hides a control behind a hover or an animation. */
+/* The tracker takes the whole screen, so the site chrome goes away while it is
+   open. This is not decoration: `main` is `position:relative;z-index:1`, so a
+   z-index of 200 in here still paints UNDERNEATH the header, which sits outside
+   main at 60. Raising the number can never win that argument — the competing
+   elements have to go. body.loreon is removed by showTab the moment you are on
+   any other page, so it can't get stuck on. */
+body.loreon header,body.loreon nav.tabs,body.loreon .mtabs,body.loreon #bub{display:none!important}
+body.loreon{overflow:hidden}
+.lorewrap{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;
+  background:var(--carbon);color:#fff;overscroll-behavior:none;touch-action:manipulation}
+.loreseats{flex:1;display:grid;gap:6px;padding:6px;min-height:0}
+.loreseats.p1{grid-template-rows:1fr}
+.loreseats.p2{grid-template-rows:1fr 1fr}
+.loreseats.p3{grid-template-rows:1fr 1fr;grid-template-columns:1fr 1fr}
+.loreseats.p3 .seat:nth-child(3){grid-column:1/-1}
+.loreseats.p4{grid-template-rows:1fr 1fr;grid-template-columns:1fr 1fr}
+.seat{position:relative;border-radius:10px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;overflow:hidden;min-height:0;
+  border:2px solid rgba(255,255,255,.14)}
+/* Seats above the middle line face the other way. Two players sit opposite;
+   with three or four everyone gets a corner and the far side is flipped. */
+.seat.flip{transform:rotate(180deg)}
+.seatname{position:absolute;top:8px;left:0;right:0;text-align:center;
+  font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  opacity:.75;cursor:pointer;padding:4px}
+/* The score's own face. There are no web fonts on this site by design, so
+   this is a system stack picked for its NUMERALS rather than a download:
+   SF Pro Display on Apple, Segoe UI Variable Display on Windows, Roboto
+   through system-ui on Android, and Arial Black as the floor — the same
+   family the logo already uses, so the fallback is still on brand.
+   The rest of what makes a big number look modern is not the family anyway:
+   lining tabular figures so the digits don't jump as they change, and
+   negative tracking, because display sizes need tighter spacing than the
+   metrics a face ships with. */
+.seatnum{font-family:"SF Pro Display","Segoe UI Variable Display","Helvetica Neue",
+    system-ui,-apple-system,"Arial Black",Arial,sans-serif;
+  font-size:clamp(76px,20vh,190px);font-weight:800;line-height:.82;
+  letter-spacing:-.035em;
+  font-variant-numeric:tabular-nums lining-nums;
+  font-feature-settings:"tnum" 1,"lnum" 1;
+  text-shadow:0 4px 0 rgba(0,0,0,.28);
+  transition:transform .12s}
+.seatnum.seatpop{transform:scale(1.14)}
+/* Minus and plus at opposite ends of the seat, not a pair in the middle.
+   These are pressed with a thumb, at speed, by someone looking at the table
+   rather than the screen — two 80px circles ten pixels apart is a mis-tap
+   waiting to happen, and a mis-tap here costs somebody the game. */
+/* Ben's call, 2026-09-07: closer together. The old note here argued for the
+   opposite — two big circles at opposite ends of the seat, because a mis-tap
+   costs somebody the game. That reasoning is answered by the half-seat tap
+   zones added above: the enormous targets are now the sides of the screen, so
+   these two can sit as a proper pair in the middle without being the only
+   thing you can hit. */
+.seatbtns{display:flex;justify-content:center;align-items:center;gap:clamp(18px,6vw,44px);
+  width:100%;margin-top:6px;
+  position:absolute;left:0;right:0;bottom:clamp(10px,3vh,26px);
+  pointer-events:none;z-index:3}
+.seatbtns .lorebtn{pointer-events:auto}
+/* Half a seat each, behind everything else in it. Sized to stop short of the
+   name at the top and the buttons at the bottom, so renaming a seat and
+   pressing full screen still work. */
+.seattap{position:absolute;top:clamp(44px,9vh,86px);bottom:clamp(72px,15vh,132px);
+  width:50%;border:0;background:none;padding:0;cursor:pointer;z-index:1;
+  -webkit-tap-highlight-color:transparent}
+.seattap.tapminus{left:0}
+.seattap.tapplus{right:0}
+.seattap:disabled{pointer-events:none}
+/* A breath of feedback so a tap on empty space still feels like a press. */
+.seattap:active{background:rgba(255,255,255,.07)}
+/* The running total of what you have just tapped in, under the score. It
+   fades on its own once you stop — the point is to catch "did that go in?"
+   at a glance mid-turn, not to be another number on the table. */
+/* Anchored under the centred score rather than left at its static position,
+   where it landed on top of the number. The modifiers are sdup/sddown and
+   not up/down: `.up` is already the deck-upgrade card, and a bare `up` on
+   this element gave it that card's white background and border. */
+.seatdelta{position:absolute;top:50%;margin-top:clamp(46px,10vh,96px);
+  left:0;right:0;text-align:center;pointer-events:none;
+  font-size:clamp(20px,4.6vh,38px);font-weight:900;line-height:1;
+  font-variant-numeric:tabular-nums;opacity:0;transition:opacity .45s ease;
+  text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.seatdelta.sdup{color:#8ef5a8}
+.seatdelta.sddown{color:#ffb0b0}
+.seatdelta.sdshow{opacity:.95;transition:opacity .1s ease}
+/* .lorebtn, not .lb — .lb was already the label inside every switch and every
+   filter row, and a bare .lb rule in here turned all of them into 86px
+   circles. Same reason .lorefish is not .fish: the aquarium already owns it. */
+/* Glass: a translucent pane over the seat colour rather than a black disc on
+   top of it, with a blurred backdrop, a bright top edge where the light would
+   catch and a soft inner shadow at the foot. The seat's own colour shows
+   through, which is what makes it read as glass and not as a hole. */
+.lorebtn{width:clamp(66px,14vh,104px);height:clamp(66px,14vh,104px);border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);
+  background:linear-gradient(160deg,rgba(255,255,255,.34),rgba(255,255,255,.08) 46%,rgba(0,0,0,.16));
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.65),
+             inset 0 -8px 18px rgba(0,0,0,.22),
+             0 6px 18px rgba(0,0,0,.28);
+  color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45);
+  font-size:clamp(32px,7vh,50px);font-weight:700;line-height:1;cursor:pointer;
+  display:grid;place-items:center;
+  transition:transform .08s,box-shadow .12s,background .12s}
+@supports (backdrop-filter:blur(6px)){
+  .lorebtn{backdrop-filter:blur(7px) saturate(1.25);
+    background:linear-gradient(160deg,rgba(255,255,255,.26),rgba(255,255,255,.05) 46%,rgba(0,0,0,.12))}}
+.lorebtn:active{transform:scale(.92);
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.5),inset 0 6px 16px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.25)}
+.lorebtn:hover{background:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.12) 46%,rgba(0,0,0,.14))}
+.lorebtn:disabled{opacity:.3;cursor:not-allowed}
+.seatwon{position:absolute;bottom:8px;left:0;right:0;text-align:center;
+  font-size:12px;font-weight:900;letter-spacing:.08em}
+.seatwon span{background:var(--amberc);color:#2a1f00;padding:3px 10px;border-radius:999px;
+  margin:0 3px;display:inline-block}
+/* The full-screen toggle, moved off the shared bar and into the "You" seat's
+   own tile -- semi-opaque so it reads as part of the tile, not a control
+   floating on top of it. flip never applies to this seat (loreRenderOrder
+   always keeps data index 0 in an unflipped slot), so it never needs its
+   own counter-rotation. */
+.seatfs{position:absolute;bottom:8px;right:8px;width:34px;height:34px;border-radius:50%;
+  background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.32);color:rgba(255,255,255,.85);
+  font-size:16px;display:grid;place-items:center;opacity:.65;transition:opacity .15s,background .15s;z-index:2}
+.seatfs:hover,.seatfs:active{opacity:1;background:rgba(0,0,0,.4)}
+/* the bar down the side */
+.lorebar{display:flex;align-items:center;gap:8px;padding:8px 10px;
+  background:rgba(0,0,0,.4);border-top:1px solid rgba(255,255,255,.14);flex-wrap:wrap;
+  overflow:hidden;max-height:80px;opacity:1;
+  transition:max-height .3s ease,opacity .22s ease,padding .3s ease}
+body.lorefs .lorebar{max-height:0;opacity:0;padding-top:0;padding-bottom:0;
+  border-top-color:transparent;pointer-events:none}
+.lorebar .sp{flex:1}
+.lbtn{padding:11px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.08);color:#fff;font-size:13.5px;font-weight:800;cursor:pointer;
+  min-height:44px}
+.lbtn:hover{background:rgba(255,255,255,.2)}
+.lbtn:disabled{opacity:.35;cursor:not-allowed}
+.loreplayers{display:flex;align-items:center;gap:5px}
+.loreplayers .lbtn{min-width:44px;padding-inline:12px}
+.lorecount{min-width:66px;text-align:center;font-size:13px;font-weight:900}
+.lbtn.judge{background:var(--amberc);color:#2a1f00;border-color:var(--amberc);font-size:16px}
+.lbtn.judge.on{background:var(--bad);border-color:var(--bad);color:#fff}
+.lbtn.exit{background:transparent}
+.lorelock{font-size:12px;font-weight:800;color:var(--amberc);letter-spacing:.06em}
+/* ---- full-screen minimal chrome ----------------------------------------
+   Cross-faded with the bar above rather than swapped instantly -- entering
+   and leaving full screen is one smooth motion, not a hard cut. All three
+   sit right on top of .loreseats (a sibling, positioned relative to
+   .lorewrap) so they read as part of the table, not a bar bolted on. */
+.lorefsback,.lorefsgear,.lorefsjudge{position:absolute;opacity:0;pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease;z-index:40}
+body.lorefs .lorefsback,body.lorefs .lorefsgear,body.lorefs .lorefsjudge{
+  opacity:1;pointer-events:auto}
+.lorefsback,.lorefsgear{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  font-size:18px;transform:scale(.8)}
+body.lorefs .lorefsback,body.lorefs .lorefsgear{transform:scale(1)}
+.lorefsback{top:calc(10px + env(safe-area-inset-top,0px));left:calc(10px + env(safe-area-inset-left,0px));
+  background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85)}
+.lorefsback:hover{background:rgba(0,0,0,.4)}
+.lorefsgear{top:calc(10px + env(safe-area-inset-top,0px));right:calc(10px + env(safe-area-inset-right,0px));
+  background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.24);color:rgba(255,255,255,.7)}
+.lorefsgear:hover{background:rgba(0,0,0,.32)}
+/* The judge control, on the table's side rather than top or bottom, so it
+   belongs to neither seat and both players can reach it. Real frosted
+   glass (backdrop-filter), not a fake gradient, because there's real
+   content behind it to blur. */
+.lorefsjudge{top:50%;right:calc(9px + env(safe-area-inset-right,0px));
+  transform:translateY(-50%) scale(.85);writing-mode:vertical-rl;text-orientation:mixed;
+  padding:18px 9px;border-radius:999px;background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.5);color:#fff;font-size:14.5px;font-weight:800;
+  letter-spacing:.05em;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+body.lorefs .lorefsjudge{transform:translateY(-50%) scale(1)}
+.lorefsjudge.off{opacity:.35!important}
+/* ---- judge panel ----
+   Named .jpanel, not .judge: the JUDGE button is .lbtn.judge, and a bare
+   .judge rule gave that button position:absolute;inset:0;z-index:210 — an
+   invisible full-screen button sitting on top of every +/− on the tracker.
+   Caught only because a click test said the wrong element was in the way. */
+.jpanel{position:absolute;inset:0;z-index:210;background:var(--surface);color:var(--tx);
+  display:flex;flex-direction:column;overflow:hidden}
+/* Standalone Judge (Other tab, no lore board) isn't a fixed fullscreen
+   takeover like the in-game one -- it stays a normal page under the site's
+   own header/nav, so .jpanel just needs a positioned box of real height to
+   fill instead of the .lorewrap fixed layer the in-game version nests in. */
+#judgepage{position:relative;min-height:70vh}
+.judgehd{display:flex;align-items:center;gap:10px;padding:12px 14px;
+  background:var(--carbon);color:#fff;flex-wrap:wrap}
+.judgehd h2{margin:0;font-size:18px}
+.judgehd .sp{flex:1}
+.judgehd .jback{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
+.judgehd .jback:hover{background:rgba(255,255,255,.18);border-color:#fff}
+.judgeq{width:100%;padding:13px 15px;font-size:16px;border:2px solid var(--acc);
+  border-radius:6px;background:var(--surface);color:var(--tx)}
+.judgebody{flex:1;overflow:auto;padding:12px 14px 40px;-webkit-overflow-scrolling:touch}
+.jintro{display:flex;align-items:flex-start;gap:10px;background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;padding:11px 12px;margin-bottom:12px}.jintro .ji{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--carbon);color:#fff;display:grid;place-items:center;font-size:17px}.jintro b{display:block;font-size:14px;margin-bottom:2px}.jintro span{font-size:12.5px;line-height:1.45;color:var(--deep)}.jcount{font-size:12px;color:var(--deep);margin:4px 0 10px}
+.jgroup{margin-top:16px}
+/* The board builder used to live inside a <details> nested in the home list —
+   which meant every re-render (e.g. tapping +Ink) rebuilt that <details> from
+   scratch, and whether it came back open depended on JCASE having cards on
+   it. Adjust ink with an empty board and the very next render closed the
+   whole thing under you. It's its own jgo() screen now, same as "rules" or
+   "case" — a plain page that stays however JSTACK says it should, with
+   nothing to accidentally collapse. */
+.jadvhd{margin:2px 0 14px;font-size:13px;color:var(--tx)}
+.jadvhd b{text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;color:var(--deep)}
+.jgroup h3{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--deep);margin:0 0 7px;padding-bottom:5px;border-bottom:1px solid var(--line2)}
+.jhit{display:grid;grid-template-columns:44px 1fr;gap:11px;align-items:center;width:100%;
+  text-align:left;background:var(--canvas-soft);border:1px solid var(--line2);
+  border-radius:5px;padding:9px 11px;margin-bottom:6px;cursor:pointer;min-height:52px}
+.jhit:hover{border-color:var(--acc)}
+.jhit img{width:44px;aspect-ratio:674/940;object-fit:cover;border-radius:3px;display:block}
+.jhit .ji{width:44px;height:44px;border-radius:50%;background:var(--carbon);color:#fff;
+  display:grid;place-items:center;font-size:20px}
+.jhit b{font-size:15px;display:block}
+.jhit span{font-size:12.5px;color:var(--deep);display:block;margin-top:1px}
+/* a card, opened */
+.jcard{display:grid;grid-template-columns:240px 1fr;gap:20px;margin-top:6px}
+@media(max-width:700px){.jcard{grid-template-columns:1fr}}
+.jcard img{width:100%;border-radius:8px;display:block}
+.jcard h1{font-size:26px;margin:0 0 2px;line-height:1.1}
+.jcard .jv{font-size:16px;color:var(--deep);margin-bottom:10px}
+.jstats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.jstats div{background:var(--canvas-soft);border-radius:4px;padding:7px 13px;text-align:center;min-width:64px}
+.jstats b{display:block;font-size:20px;line-height:1}
+.jstats i{font-style:normal;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep)}
+.jtext{background:var(--canvas-soft);border-left:4px solid var(--acc);padding:13px 15px;
+  border-radius:0 4px 4px 0;white-space:pre-wrap;font-size:15px;line-height:1.6;margin:12px 0}
+/* Any keyword printed on the card is a button. That is the whole trick: the
+   thing you are arguing about is on the card, so the card is the index. */
+.kwlink{display:inline;background:var(--amberc);color:#2a1f00;font-weight:800;
+  border:0;border-radius:3px;padding:0 5px;cursor:pointer;font-size:inherit;
+  font-family:inherit;line-height:inherit}
+.kwlink:hover{background:var(--amber-press);text-decoration:underline}
+.jrule{background:var(--surface);border:1px solid var(--line2);border-left:5px solid var(--acc);
+  border-radius:0 5px 5px 0;padding:14px 16px;margin-bottom:10px}
+.jrule h4{margin:0 0 6px;font-size:17px}
+.jrule p{margin:0 0 8px;font-size:14.5px;line-height:1.6}
+.jrule p:last-child{margin-bottom:0}
+.jrule.official{border-left-color:var(--good)}
+.jrule.rsi{border-left-color:var(--gold,#e0a800)}
+.jrule .jsrc{font-size:11.5px;color:var(--deep);margin-top:7px}
+.jrule .jsrc a,.jsources a{color:var(--link);font-weight:800}.jsources{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.jsources a{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:12px;text-decoration:none}.jsources a:hover{border-color:var(--acc);text-decoration:underline}.jambig{border-left:4px solid var(--amberc);background:var(--canvas-soft);padding:10px 12px;border-radius:0 5px 5px 0;margin:8px 0 12px;font-size:12.5px;line-height:1.5}
+.jrule .jq{font-weight:800}
+.jseeaslo{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.jseeaslo button{font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);color:var(--tx);cursor:pointer}
+.jseeaslo button:hover{border-color:var(--acc)}
+.jnote{font-size:12px;color:var(--deep);line-height:1.5;background:var(--canvas-soft);
+  border-radius:4px;padding:10px 12px;margin-top:14px}
+.jback{background:transparent;border:1px solid var(--line);border-radius:999px;
+  padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;color:var(--tx)}
+.jresolved{display:block;width:100%;margin:18px 0 4px;padding:13px 16px;border:0;
+  border-radius:6px;background:var(--good);color:#062718;font-size:15px;font-weight:900;cursor:pointer}
+.jresolved:hover{filter:brightness(1.08)}
+.jcites{margin-top:12px;padding-top:10px;border-top:1px solid var(--line2)}
+.jcites b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);margin-bottom:5px}
+.jcite{display:flex;align-items:baseline;gap:7px;font-size:12px;line-height:1.45;margin:3px 0}
+.jcite code{font-family:inherit;font-weight:900;color:var(--good);background:var(--canvas-soft);padding:2px 5px;border-radius:3px}
+.jsteps{display:flex;align-items:center;justify-content:center;gap:8px;margin:2px 0 12px;
+  color:var(--deep);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.jsteps span{display:flex;align-items:center;gap:5px}.jsteps i{width:22px;height:22px;border-radius:50%;
+  background:var(--carbon);color:#fff;display:grid;place-items:center;font-style:normal}
+.jsteps b{height:1px;flex:0 1 54px;background:var(--line)}
+.jtable{position:relative;border:1px solid #234d3f;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#184b3a,#10382e 56%,#174332);box-shadow:inset 0 0 60px rgba(0,0,0,.28)}
+.jzone{padding:13px;min-height:170px;color:#fff}.jzone.them{border-bottom:1px solid rgba(255,255,255,.12)}
+.jzonelabel{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px;
+  font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.72)}
+.jfield{display:flex;align-items:center;justify-content:center;gap:9px;min-height:128px;overflow-x:auto;padding:3px}
+.jboardrow{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:10px;align-items:stretch}
+.jinkwell{border-left:1px solid rgba(255,255,255,.18);padding-left:10px;display:flex;flex-direction:column;justify-content:center}
+.jinkwell h4{margin:0 0 7px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.7)}
+.jinkcount{font-size:24px;font-weight:900;line-height:1}.jinkcount span{font-size:11px;font-weight:700;color:rgba(255,255,255,.66)}
+.jinkbar{height:7px;border-radius:99px;background:rgba(0,0,0,.3);overflow:hidden;margin:8px 0}.jinkbar i{display:block;height:100%;background:#79d5ae}
+.jinkbuttons{display:grid;grid-template-columns:1fr 1fr;gap:4px}.jinkbuttons button{border:1px solid rgba(255,255,255,.28);border-radius:4px;
+  background:rgba(255,255,255,.1);color:#fff;padding:6px 4px;font-size:10px;font-weight:900;cursor:pointer}.jinkbuttons button:disabled{opacity:.3;cursor:not-allowed}
+.jempty{color:rgba(255,255,255,.58);font-size:13px;text-align:center}
+.jaddcard{flex:0 0 78px;aspect-ratio:674/940;border:2px dashed rgba(255,255,255,.42);border-radius:7px;
+  background:rgba(0,0,0,.15);color:#fff;font-size:12px;font-weight:900;cursor:pointer;padding:8px}
+.jaddcard:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.jplaycard{position:relative;flex:0 0 88px;background:#081d18;border:2px solid rgba(255,255,255,.28);
+  border-radius:8px;padding:4px;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.jplaycard.shifted{margin-left:9px;box-shadow:-7px 7px 0 #314e68,-13px 13px 0 #182c3e,0 8px 15px rgba(0,0,0,.4)}
+.jshiftbadge{position:absolute;left:-13px;bottom:37px;background:#6d5cc7;color:#fff;border:1px solid rgba(255,255,255,.5);
+  border-radius:999px;padding:3px 6px;font-size:8px;font-weight:900;z-index:2;pointer-events:none}
+.jplaycard.active{border-color:var(--amberc);box-shadow:0 0 0 2px rgba(255,199,65,.35)}
+.jplaycard.target{border-color:#74b9ff;box-shadow:0 0 0 2px rgba(116,185,255,.3)}
+.jplaycard img{display:block;width:100%;aspect-ratio:674/940;object-fit:cover;border-radius:4px}
+.jplaycard strong{display:block;color:#fff;font-size:10px;line-height:1.2;margin:5px 1px 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jcardroles{display:grid;grid-template-columns:1fr 1fr;gap:3px}.jcardroles button{border:0;border-radius:3px;
+  padding:4px 2px;font-size:9px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.13);color:#fff}
+.jcardtools{display:grid;grid-template-columns:1fr;gap:3px;margin-top:3px}.jcardtools button{border:1px solid rgba(255,255,255,.2);border-radius:3px;
+  padding:4px 2px;font-size:9px;font-weight:800;cursor:pointer;background:transparent;color:rgba(255,255,255,.8)}
+.jcardroles button.on{background:var(--amberc);color:#2a1f00}.jcardroles button[data-jrole="target"].on{background:#74b9ff;color:#071d30}
+.jcardremove{position:absolute;right:-7px;top:-7px;width:23px;height:23px;border-radius:50%;border:1px solid rgba(255,255,255,.5);
+  background:#8e2b2b;color:#fff;font-weight:900;cursor:pointer;display:grid;place-items:center}
+.jaction{padding:13px;background:rgba(3,15,12,.66);border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15)}
+.jaction label{display:block;color:#fff;font-size:12px;font-weight:900;margin-bottom:6px}
+.jaction input{width:100%;padding:11px 12px;border-radius:5px;border:1px solid rgba(255,255,255,.35);background:#fff;color:#14202c;font-size:14px}
+.jcasego{display:block;width:100%;margin-top:9px;padding:12px;border:0;border-radius:5px;background:var(--amberc);
+  color:#2a1f00;font-weight:900;font-size:14px;cursor:pointer}.jcasego:disabled{opacity:.42;cursor:not-allowed}
+.jquick{display:flex;justify-content:center;margin:11px 0}.jquick button{border:1px solid var(--line);background:var(--surface);
+  color:var(--tx);padding:8px 14px;border-radius:999px;font-weight:800;cursor:pointer}
+.jcasecontext{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+.jcasecontext div{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:5px;padding:9px 11px}
+.jcasecontext b{display:block;font-size:11px;text-transform:uppercase;color:var(--deep);margin-bottom:3px}
+.jpickerintro{text-align:center;padding:12px;margin-bottom:10px;background:var(--canvas-soft);border-radius:6px}
+@media(max-width:620px){.jzone{min-height:150px;padding:9px}.jboardrow{grid-template-columns:1fr}.jinkwell{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:8px 0 0}.jfield{min-height:110px;justify-content:flex-start}.jplaycard{flex-basis:75px}.jaddcard{flex-basis:68px}.jsteps{font-size:9px}}
+/* ---- victory ---- */
+.vic{position:absolute;inset:0;z-index:220;display:grid;place-items:center;
+  background:rgba(4,14,26,.9);backdrop-filter:blur(4px);overflow:hidden}
+.viccrest{position:relative;text-align:center;padding:30px 36px;border-radius:14px;
+  background:linear-gradient(160deg,#2b3a63,#141c33);
+  border:3px solid var(--amberc);box-shadow:0 0 0 6px rgba(255,212,0,.18),0 30px 80px -20px #000;
+  animation:crest .5s cubic-bezier(.2,1.4,.4,1)}
+@keyframes crest{from{transform:scale(.5) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+.viccrest h1{margin:0;font-size:clamp(38px,9vw,76px);line-height:1;letter-spacing:.06em;
+  color:var(--amberc);text-shadow:0 4px 0 rgba(0,0,0,.4)}
+.viccrest p{margin:10px 0 0;font-size:18px;color:#dbe8f7}
+.vicwho{font-size:clamp(22px,5vw,34px);font-weight:900;color:#fff;margin-top:4px}
+/* Every seat's lore, side by side — the winner's picked out by size, glow
+   and colour rather than being the only number on screen. */
+.vicscores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.vicscore{display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:10px 16px;border-radius:10px;background:rgba(255,255,255,.08);
+  min-width:76px;transition:transform .3s}
+.vicscore .vsname{font-size:11px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.06em;color:rgba(255,255,255,.65)}
+.vicscore .vsnum{font-size:clamp(26px,6vw,42px);font-weight:900;
+  font-variant-numeric:tabular-nums;color:#fff;line-height:1.1}
+.vicscore.winner{background:rgba(255,212,0,.16);box-shadow:0 0 0 2px var(--amberc),0 0 24px rgba(255,212,0,.5);
+  animation:vicwin 1.1s ease infinite}
+.vicscore.winner .vsnum{color:var(--amberc)}
+@keyframes vicwin{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.viccrest.solo .vicscore{min-width:120px;padding:16px 26px}
+.vicbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.vicbtns .lbtn{background:rgba(255,255,255,.12)}
+.vicbtns .lbtn.go{background:var(--amberc);color:#2a1f00;border-color:var(--amberc)}
+.lorefish{position:absolute;font-size:30px;pointer-events:none;will-change:transform,opacity;
+  animation:fishfw 2.4s ease-out forwards}
+@keyframes fishfw{
+  0%{transform:translate(0,0) scale(.3) rotate(0);opacity:0}
+  12%{opacity:1}
+  100%{transform:translate(var(--fx),var(--fy)) scale(1.1) rotate(var(--fr));opacity:0}}
+/* ---- setup wizard ---- */
+.setupwrap{align-items:center;justify-content:center;padding:20px}
+.setupbody{max-width:420px;width:100%;background:rgba(0,0,0,.32);border-radius:14px;padding:24px 22px;text-align:center}
+.setupbody h1{margin:0 0 6px;font-size:26px}
+.setupsub{margin:0 0 18px;font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.4}
+.segrow{margin-bottom:16px;text-align:left}
+.segrow>b{display:block;font-size:11px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.07em;color:rgba(255,255,255,.62);margin-bottom:7px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.segbtn{flex:1;min-width:64px;padding:11px 8px;border-radius:7px;border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.07);color:#fff;font-weight:800;font-size:13px;cursor:pointer;min-height:44px}
+.segbtn:hover{background:rgba(255,255,255,.16)}
+.segbtn.on{background:var(--amberc);color:#2a1f00;border-color:var(--amberc)}
+.seginput{display:flex;align-items:center;gap:8px;margin-top:8px}
+.seginput label{font-size:12.5px;color:rgba(255,255,255,.75)}
+.seginput input{width:74px;padding:8px 9px;border-radius:6px;border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.95);color:#111;font-size:14px;font-weight:700}
+.seatcolrow{display:flex;flex-wrap:wrap;gap:7px}
+.seatcol{flex:1 1 130px;min-height:56px;border-radius:8px;border:1px solid rgba(255,255,255,.32);
+  color:#fff;cursor:pointer;padding:8px 10px;display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:center;gap:2px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.seatcol:hover{border-color:#fff}
+.scname{font-size:13.5px;font-weight:900}
+.scink{font-size:11px;font-weight:700;opacity:.85}
+/* The way back to a match you left. A row, not a dialog — it is an offer,
+   and the screen it sits on is the one you wanted anyway. */
+.resumebar{width:100%;margin-bottom:16px;font-size:12.5px;font-weight:800;
+  background:rgba(255,212,0,.16);border-color:rgba(255,212,0,.5)}
+.resumebar:hover{background:rgba(255,212,0,.3)}
+.setupdefault{display:flex;align-items:center;gap:8px;justify-content:center;
+  font-size:13px;color:rgba(255,255,255,.8);margin:14px 0 4px;cursor:pointer}
+.setupgo{width:100%;margin-top:14px;padding:15px;font-size:16px}
+.namegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.nameinput{padding:10px 11px;border-radius:6px;border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.95);color:#111;font-size:14px;font-weight:700;min-height:44px}
+.nameinput::placeholder{color:#767676;font-weight:500}
+/* Who won which game, on the victory screen — the thing both players are
+   actually trying to remember when the match ends. */
+.vicseries{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:12px 0 4px}
+.vicseries span{display:flex;flex-direction:column;gap:1px;align-items:center;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);
+  border-radius:8px;padding:7px 13px;font-size:13.5px;font-weight:800;color:#fff}
+.vicseries span b{font-size:10.5px;font-weight:900;text-transform:uppercase;
+  letter-spacing:.09em;opacity:.66}
+.vicseries span.toplay{opacity:.45;font-weight:600;font-style:italic}
+.tourreminder{margin-top:10px;padding:10px 12px;border-radius:7px;
+  background:rgba(255,193,71,.14);border:1px solid rgba(255,193,71,.4)}
+/* Centred. It sits inside .segrow, which is left-aligned for the rows of
+   tap-buttons — this is a notice, not a row of controls, and it read as a
+   ragged block hanging off the left of the card. */
+.tourreminder p{font-size:12.8px;color:rgba(255,255,255,.9);line-height:1.5;margin:0;
+  text-align:center}
+.tourreminder p+p{margin-top:7px}
+/* ---- choice sheet (setup steps, duck picker, colour picker) ---- */
+.choicesheet{max-width:420px;width:100%}
+.choicelist{display:flex;flex-direction:column;gap:7px;margin:4px 0 14px;max-height:52vh;overflow:auto}
+.choiceopt{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  width:100%;text-align:left;background:var(--canvas-soft);border:1px solid var(--line2);
+  border-radius:6px;padding:11px 13px;cursor:pointer;min-height:44px}
+.choiceopt.on{border-color:var(--acc);background:var(--acc);color:#fff}
+.choiceopt .cotxt{display:flex;flex-direction:column;gap:2px}
+.choiceopt .cotxt b{font-size:14.5px}
+.choiceopt .cotxt span{font-size:12px;opacity:.8;font-weight:400}
+.choiceopt .cochk{width:20px;height:20px;border-radius:5px;border:2px solid currentColor;flex:0 0 auto}
+.choiceopt.on .cochk{background:#fff;position:relative}
+.choiceopt.on .cochk::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;
+  color:var(--acc);font-size:13px;font-weight:900}
+.swatchgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:6px 0 16px}
+.swatch{width:100%;aspect-ratio:1;border-radius:50%;border:3px solid transparent;cursor:pointer;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.swatch:hover{transform:scale(1.08)}
+.swatch.on{border-color:var(--tx);box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--tx)}
+/* Ink-combo seat colours: frosted glass (the soft white wash) over a
+   sparkly gem base (the glints) over the real ink gradient -- see inkBg(). */
+.inkswatchgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));
+  gap:10px;margin:6px 0 16px;max-height:56vh;overflow-y:auto;padding-right:2px}
+.inkswatch{position:relative;aspect-ratio:1;border-radius:12px;border:2px solid rgba(0,0,0,.12);
+  cursor:pointer;display:flex;align-items:flex-end;padding:7px;text-align:left;
+  font-size:10.5px;font-weight:800;color:#fff;line-height:1.2;
+  text-shadow:0 1px 3px rgba(0,0,0,.65);letter-spacing:.01em;transition:transform .12s}
+.inkswatch:hover{transform:scale(1.05)}
+.inkswatch.on{border-color:#fff;box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--tx)}
+/* ---- in-game settings panel ---- */
+.setupreadout{font-size:12.5px;color:var(--deep);text-align:center;margin-bottom:14px;
+  background:var(--canvas-soft);border-radius:6px;padding:8px}
+.settingsrow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;
+  background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;
+  padding:11px 13px;margin-bottom:7px;cursor:pointer;min-height:52px}
+.settingsrow:hover{border-color:var(--acc)}
+/* Drawn icons, one grid and one stroke weight, instead of five emoji from
+   five different type designers at five different optical sizes. */
+.srico.srdraw{background:var(--carbon);display:grid;place-items:center;color:#fff}
+.srico.srdraw svg{width:19px;height:19px;display:block}
+/* The log, folded, at the foot of the panel. */
+.lslog{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;overflow:hidden}
+.lslog>summary{display:flex;align-items:center;gap:12px;padding:11px 13px;cursor:pointer;
+  list-style:none;min-height:52px}
+.lslog>summary::-webkit-details-marker{display:none}
+.lslog>summary::marker{content:"";font-size:0}
+.lslog>summary:hover{background:var(--platinum)}
+.lslog[open]>summary{border-bottom:1px solid var(--line2)}
+.lslogbody{padding:9px 11px 11px}
+.lslogbody .lorelog{margin:0}
+.srico{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--carbon);
+  display:grid;place-items:center;font-size:17px;color:#fff}
+.srtxt{display:flex;flex-direction:column;gap:2px}
+.srtxt b{font-size:14.5px}
+.srtxt span{font-size:12px;color:var(--deep)}
+/* ---- the game log ----------------------------------------------------
+   Every change to every score, newest last, so a disagreement about the
+   score has somewhere to go other than two people's memories. */
+.lorelog{background:var(--canvas-soft);border:1px solid var(--line2);border-radius:6px;
+  max-height:290px;overflow:auto;-webkit-overflow-scrolling:touch}
+.lorelog .llrow{display:flex;align-items:center;gap:9px;padding:7px 11px;
+  border-bottom:1px solid rgba(51,74,136,.16);font-size:13px}
+.lorelog .llrow:last-child{border-bottom:none}
+.lorelog .lldot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.lorelog .llwho{font-weight:800;flex:0 0 auto;max-width:9em;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.lorelog .lld{font-weight:900;font-variant-numeric:tabular-nums}
+.lorelog .lld.llup{color:#1a7f3c}
+.lorelog .lld.lldown{color:var(--bad)}
+.lorelog .llto{color:var(--deep);font-size:12px}
+.lorelog .llt{margin-left:auto;color:var(--deep);font-size:11.5px;
+  font-variant-numeric:tabular-nums}
+.lorelog .llgame{padding:6px 11px;background:var(--platinum);font-size:11px;
+  font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--deep);
+  position:sticky;top:0}
+.llempty{padding:16px 12px;text-align:center;font-size:12.5px;color:var(--deep)}
+/* ---- pick up where you left off ---- */
+/* Its own card, same plate the setup wizard uses, rather than loose text on
+   the canvas — the two screens are the same moment in the flow and should
+   look like it. */
+.loreresume{display:flex;flex-direction:column;align-items:center;gap:14px;
+  max-width:420px;width:100%;background:rgba(0,0,0,.32);border-radius:14px;
+  padding:26px 22px;text-align:center;color:#fff}
+.loreresume h1{font-size:clamp(24px,5vw,38px);margin:0;font-weight:900;letter-spacing:-.02em}
+.loreresume p{font-size:14px;line-height:1.55;max-width:44ch;color:rgba(255,255,255,.82);margin:0}
+.lrscore{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:2px 0 4px}
+.lrscore span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:999px;padding:7px 15px;font-weight:900;font-size:15px}
+.lrbtns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
+.lrbtns .lbtn{flex:1 1 150px;justify-content:center}
+/* The one you almost always want, in the site's own act-here yellow — the
+   same weight the JUDGE button carries, so the hierarchy reads at a glance. */
+.lbtn.prime{background:var(--amberc);color:#2a1f00;border-color:var(--amberc);font-weight:900}
+.lbtn.prime:hover{background:var(--amber-press)}
+/* ---- lore bar extras ---- */
+.lbtn.duck{background:#ffdca8;color:#4a2a00;border-color:#ffdca8;font-weight:900}
+.lbtn.judge.off{background:rgba(255,255,255,.08);color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.2)}
+/* ---- seat colour themes ---- */
+.seat.stripes{background:repeating-linear-gradient(135deg,#1c5fa8 0 22px,#4a8fd6 22px 44px)}
+/* Chaos is a disco ball. The base colour still flips on its own odd prime
+   rhythm underneath (see scheduleChaos), but the seat now carries a grid of
+   mirrored facets over it and a highlight that wanders across them, which
+   is what makes a ball read as a ball rather than as a light that keeps
+   changing colour. Both layers are pseudo-elements, so nothing here fights
+   the inline background the JS writes. */
+.seat.chaos{transition:background .22s ease}
+.seat.chaos::after{content:"";position:absolute;inset:-25%;pointer-events:none;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 50%,
+      rgba(255,255,255,.20) 0deg 5deg, rgba(0,0,0,.18) 5deg 10deg),
+    repeating-linear-gradient(0deg,
+      rgba(255,255,255,.13) 0 16px, rgba(0,0,0,.15) 16px 32px);
+  mix-blend-mode:overlay;opacity:.7;animation:discospin 11s linear infinite}
+.seat.chaos::before{content:"";position:absolute;inset:-40%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.55),rgba(255,255,255,0) 20%);
+  mix-blend-mode:screen;animation:discoglint 4.2s ease-in-out infinite alternate}
+@keyframes discospin{to{transform:rotate(360deg)}}
+@keyframes discoglint{from{transform:translate(-8%,-5%)}to{transform:translate(24%,16%)}}
+.seat.chaos.jolt{animation:seatjolt .35s ease}
+@keyframes seatjolt{0%{transform:scale(1) rotate(0)}30%{transform:scale(1.025) rotate(-1deg)}
+  60%{transform:scale(1.015) rotate(1deg)}100%{transform:scale(1) rotate(0)}}
+/* ---- judge panel additions ---- */
+.jtimer{font-weight:900;font-variant-numeric:tabular-nums;color:var(--amberc);font-size:14px}
+.jreminder{background:var(--bad);color:#fff;font-weight:800;font-size:13px;line-height:1.4;
+  padding:11px 14px;text-align:center}
+@media(prefers-reduced-motion:reduce){
+  .lorefish,.viccrest,.seatnum,.seat.chaos,.seat.chaos::before,.seat.chaos::after{
+    animation:none!important;transition:none!important}}

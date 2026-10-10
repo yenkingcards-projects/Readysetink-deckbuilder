@@ -1,0 +1,303 @@
+/* ===== patron / prestige / respects / quiz polish ======================== */
+.patron{background:rgba(201,162,39,.09);
+  border:1px solid rgba(247,201,92,.45);border-radius:2px;padding:15px 18px;margin-bottom:18px}
+.patron.on{border-color:rgba(63,217,149,.45);background:rgba(63,217,149,.08)}
+.patron b{display:block;font-size:15.2px;margin-bottom:4px;color:var(--gold)}
+.patron.on b{color:var(--good)}
+.patron p{font-size:12.96px;color:var(--tx);line-height:1.6;margin-bottom:10px}
+.prestige{background:rgba(143,107,176,.12);
+  border:1px solid rgba(185,140,255,.5);border-radius:2px;padding:15px 18px;margin:16px 0}
+.prestige b{display:block;color:#d5b8ff;font-size:15.2px;margin-bottom:4px}
+.prestige p{font-size:12.96px;color:var(--tx);margin-bottom:10px}
+.prestige.done{border-color:rgba(247,201,92,.6)}
+@keyframes radiate{0%,100%{filter:hue-rotate(0) brightness(1)}50%{filter:hue-rotate(40deg) brightness(1.35)}}
+.tit.radiant{border-color:#d5b8ff;box-shadow:0 0 22px -4px rgba(185,140,255,.75);animation:radiate 3s ease-in-out infinite}
+.worn.radiant{border-color:#d5b8ff;color:#e6d4ff;animation:radiate 3s ease-in-out infinite}
+
+
+/* .rdonly (the "reference only" banner) was removed — the Search tab simply
+   has no deck controls, which says it without a label. Kept out of the sheet
+   rather than left as dead CSS. */
+.wtit{color:var(--on-dark-soft);font-weight:700}
+.wtit.pr .tt{color:var(--on-dark-soft)}
+.gtools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 13px 0}
+/* ---- tactile deck building ---------------------------------------------- */
+/* the ghost that flies to the rail */
+.fly{position:fixed;z-index:400;pointer-events:none;border-radius:4px;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+  transition:transform .42s cubic-bezier(.35,.9,.4,1),opacity .42s ease-in}
+/* the tile itself acknowledges the press */
+.c.add{animation:cpop .42s cubic-bezier(.3,1.4,.5,1)}
+@keyframes cpop{0%{transform:scale(1)}34%{transform:scale(1.09)}100%{transform:scale(1)}}
+.c.dragging{opacity:.45}
+/* the deck rail lights up while you're dragging, and harder when you're over it */
+body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
+.deck.over{outline:3px solid var(--link);outline-offset:-5px;background:var(--canvas-soft)}
+/* the count reacts so you can feel the deck grow without looking away */
+.bump{animation:bump .38s cubic-bezier(.3,1.5,.5,1)}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.34)}100%{transform:scale(1)}}
+/* keyboard cursor */
+/* The keyboard cursor gets the same halo as hover, so building with the arrow
+   keys looks like building with the mouse. Outline rather than box-shadow for
+   the ring itself, because the outline survives the tile's overflow:hidden. */
+.c.kb{outline:3px solid var(--amberc);outline-offset:2px;z-index:20;
+  box-shadow:0 0 14px 2px rgba(255,212,0,.66),0 0 30px 10px rgba(255,212,0,.3)}
+.kbhint{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;
+  color:var(--tx);background:var(--canvas-soft);border:1px solid var(--hairline);
+  box-shadow:var(--bevel-in);padding:6px 10px;border-radius:2px}
+/* ---- card view settings ---- */
+/* Icon-only now — the word "settings" next to a gear was saying the same
+   thing twice, and it's an aria-label/title away from being just as clear. */
+.cvset{position:relative}
+.cvset>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;padding:0;border:1px solid var(--chrome);
+  border-radius:2px;background:var(--surface);color:var(--tx);box-shadow:var(--bevel)}
+.cvset>summary::marker{content:"";font-size:0}
+.cvset>summary::-webkit-details-marker{display:none}
+.cvset .gearic{display:block;line-height:0;transition:transform .4s cubic-bezier(.3,1.4,.4,1)}
+.cvset .gearic svg{width:17px;height:17px;display:block}
+.cvset>summary:hover .gearic{transform:rotate(90deg)}
+.cvset>summary:hover{background:var(--platinum)}
+.cvset[open]>summary{background:var(--carbon);color:var(--on-dark);border-color:var(--carbon)}
+@media(prefers-reduced-motion:reduce){.cvset .gearic{transition:none}}
+.cvbody{position:absolute;top:calc(100% + 5px);left:0;z-index:80;min-width:330px;
+  display:flex;flex-direction:column;gap:9px;padding:11px;
+  background:var(--surface);border:1px solid var(--chrome);border-radius:4px;
+  box-shadow:0 14px 34px -12px rgba(0,0,0,.5)}
+@media(max-width:900px){.cvbody{position:static;min-width:0;box-shadow:none;border:none;padding:9px 0}}
+.kbhint kbd{font-family:var(--sans);font-size:12px;font-weight:700;background:var(--surface);
+  border:1px solid var(--chrome);border-bottom-width:2px;border-radius:2px;padding:1px 5px;
+  color:var(--tx)}
+@media(max-width:900px){.kbhint{display:none}}
+@media(prefers-reduced-motion:reduce){.fly{display:none}.c.add,.bump{animation:none}}
+
+/* ---- answer reveal ------------------------------------------------------
+   When you get it right the card comes up over the question, big enough to
+   actually read. It sits above the clue rather than beside it, because the
+   clue is what you want to compare it against. */
+.qreveal{position:relative;margin:0 0 14px;padding:14px;display:flex;gap:16px;align-items:center;
+  background:var(--surface);border:2px solid var(--chrome);box-shadow:var(--bevel);border-radius:6px;
+  animation:qrise .34s cubic-bezier(.2,.9,.3,1.2)}
+.qreveal img{width:min(320px,42vw);height:auto;display:block;border:1px solid var(--chrome);border-radius:6px}
+.qrn{flex:1;min-width:120px}
+.qrn b{display:block;font-family:var(--display);font-weight:900;font-size:22px;color:var(--tx);line-height:1.1}
+.qrn span{display:block;font-size:13px;color:var(--deep);margin-top:2px}
+@keyframes qrise{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+@media(max-width:620px){.qreveal{flex-direction:column;align-items:flex-start}
+  .qreveal img{width:100%;max-width:340px}}
+/* ---- leaderboards (framework only) --------------------------------------
+   Every mini game gets the same shelf. It is deliberately inert until accounts
+   exist — a local high score is not a leaderboard, and faking one would teach
+   people the numbers mean nothing. LB_LIVE flips it on. */
+.lbrd{margin-top:14px;background:var(--platinum);border:1px solid var(--chrome);
+  box-shadow:var(--bevel-in);padding:10px 12px;border-radius:4px}
+.lbrd h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--deep);margin-bottom:6px}
+.lbrd .lbrow{display:flex;justify-content:space-between;font-size:12px;color:var(--tx);
+  padding:3px 0;border-bottom:1px dotted var(--muted)}
+.lbrd .lbrow:last-child{border-bottom:none}
+.lbrd .lbsoon{font-size:12px;color:var(--deep);margin-top:6px}
+.lbrd .lbme{font-weight:700}
+
+/* ---- prestige flair ----------------------------------------------------
+   Fifteen tiers, each visibly better than the last. Frames arrive at 3, a
+   second frame at 10, and the top tiers move. Everything is layered on the
+   same element so a title can be dropped anywhere (dust page, masthead, deck
+   header) and bring its own flair with it. */
+.pr{position:relative}
+.prb{font-size:12px;font-weight:700;vertical-align:.35em;margin-left:5px;
+  background:var(--carbon);color:var(--amberc);padding:1px 4px;border-radius:2px}
+.pr .tt{color:var(--link)}
+.pr.p2 .tt{color:#1f5fd8}
+.pr.p3,.pr.p4{box-shadow:inset 0 0 0 2px var(--shimmer)}
+.pr.p5,.pr.p6{box-shadow:inset 0 0 0 2px var(--primary),0 0 0 1px var(--shimmer)}
+.pr.p5 .tt,.pr.p6 .tt{background:linear-gradient(92deg,#2f6fed,#7cc4ff,#2f6fed);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.pr.p7,.pr.p8,.pr.p9{box-shadow:inset 0 0 0 2px var(--primary),0 0 0 2px var(--shimmer)}
+.pr.p7 .tt,.pr.p8 .tt,.pr.p9 .tt{background:linear-gradient(92deg,#2f6fed,#a9c8ef,#38a3ff,#2f6fed);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:prshine 5s linear infinite}
+.pr.p10,.pr.p11,.pr.p12{box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 4px var(--primary),
+  0 0 0 2px var(--shimmer)}
+.pr.p10 .tt,.pr.p11 .tt,.pr.p12 .tt{background:linear-gradient(92deg,#2f6fed,#ffffff,#38a3ff,#2f6fed);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:prshine 3.4s linear infinite}
+.pr.p13,.pr.p14{box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 5px var(--primary),
+  0 0 0 3px var(--shimmer);animation:prpulse 3s ease-in-out infinite}
+.pr.p13 .tt,.pr.p14 .tt{background:linear-gradient(92deg,#2f6fed,#fff,#7cc4ff,#38a3ff,#fff,#2f6fed);
+  background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:prshine 2.4s linear infinite}
+.pr.p15{box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 6px var(--primary),
+  0 0 0 3px var(--shimmer),0 0 22px 2px rgba(56,163,255,.75);
+  animation:prpulse 2.2s ease-in-out infinite}
+.pr.p15 .tt{background:linear-gradient(92deg,#2f6fed,#fff,#7cc4ff,#38a3ff,#fff,#2f6fed);
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:prshine 1.7s linear infinite}
+.pr.p15::after{content:"";position:absolute;inset:-6px;pointer-events:none;
+  border:1px solid rgba(56,163,255,.55);animation:prpulse 2.2s ease-in-out infinite reverse}
+@keyframes prshine{to{background-position:220% 0}}
+@keyframes prpulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.22)}}
+@media(prefers-reduced-motion:reduce){.pr *{animation:none!important}.pr{animation:none!important}}
+.titb{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.hidwrap>summary{cursor:pointer;background:var(--canvas-soft);color:var(--tx);
+  border:1px solid var(--chrome);box-shadow:var(--bevel);padding:5px 10px;margin:16px 0 0;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;list-style:none}
+.hidwrap>summary::-webkit-details-marker{display:none}
+.hidwrap>summary::before{content:"\25B8  ";display:inline-block;transition:transform .15s}
+.hidwrap[open]>summary::before{transform:rotate(90deg)}
+/* a title riding along on a deck header */
+.dtitle{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.5px;padding:2px 7px;border:1px solid var(--chrome);background:var(--canvas-soft);
+  color:var(--tx);margin-left:8px;vertical-align:.1em}
+
+/* ---- foiling ------------------------------------------------------------
+   LorcanaJSON ships a greyscale foilMask per printing marking exactly which
+   parts of the art are foiled. Two stacked background layers do the work:
+   the sheen multiplied by the mask (so light only appears where foil is),
+   then the whole layer screened onto the card. No mask-image support needed,
+   which matters because mask-mode:luminance is still uneven across browsers.
+
+   Only special foils get this. Silver is on 3,310 printings and lighting all
+   of them would turn the grid into a slot machine. */
+.foil{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:.85;
+  background-image:var(--sheen),var(--fm);
+  background-blend-mode:multiply;
+  background-size:260% 260%,100% 100%;
+  background-position:120% 0,center;
+  background-repeat:no-repeat;
+  transition:background-position 0s}
+.foil.run{animation:sheen 4.6s linear infinite}
+@keyframes sheen{from{background-position:130% 0,center}to{background-position:-70% 0,center}}
+/* In the grid it waits until you're interested; in the modal it just runs. */
+.c .foil{opacity:.7}
+.c:hover .foil{animation:sheen 3.2s linear infinite}
+@media(prefers-reduced-motion:reduce){.foil{animation:none!important}
+  .foil{background-position:38% 0,center}}
+.timg{position:relative;display:block}
+.timg>img{display:block;width:100%}
+.foilbadge{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--gold);border:1px solid rgba(201,162,39,.4);padding:2px 6px;margin-left:7px;
+  vertical-align:.15em}
+
+/* ---- hidden mouse-shaped symbol reveal ---- */
+/* align-self:start, or the grid stretches this wrapper to the height of the
+   text column and the overlay's 100% stops matching the art's 100%. */
+.mimg{position:relative;display:block;align-self:start}
+.mimg>img{display:block;width:100%}
+/* A location's art is rotated and inset inside its frame, so the overlay has to
+   copy that geometry exactly rather than filling the frame. */
+.locframe .syml{top:50%;left:50%;right:auto;bottom:auto;width:71.7%;aspect-ratio:674/940;
+  transform:translate(-50%,-50%) rotate(90deg)}
+.syml{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .45s}
+.syml.on{opacity:1}
+.sym{position:absolute;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);
+  border:2px solid #fff;background:radial-gradient(circle,rgba(255,255,255,.28),rgba(255,255,255,0) 70%);
+  box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 22px 7px rgba(255,255,255,.75);
+  animation:sympulse 1.9s ease-in-out infinite}
+.syml.small .sym{border-width:1.5px;box-shadow:0 0 0 1px rgba(0,0,0,.5),0 0 12px 3px rgba(255,255,255,.7)}
+/* On a grid tile the layer covers the art only, not the quantity bar under it,
+   and it rides the same rotation a hovered location gets. */
+.c .syml{top:0;left:0;right:0;bottom:auto;aspect-ratio:674/940;z-index:6}
+@media (hover:hover) and (pointer:fine){
+  .c.loc:hover .syml{transform:rotate(90deg) scale(1.95);transition-delay:.5s}
+}
+@keyframes sympulse{0%,100%{box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 18px 5px rgba(255,255,255,.6)}
+  50%{box-shadow:0 0 0 2px rgba(0,0,0,.5),0 0 30px 11px rgba(255,255,255,.95)}}
+@media(prefers-reduced-motion:reduce){.sym{animation:none}}
+.hexbar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:13.12px;color:var(--deep);margin:14px 0}
+.hexbar b{color:var(--tx)}
+.hexwrap{overflow-x:auto;padding:6px 0}
+.hexboard{position:relative;margin:0 auto}
+.hex{position:absolute;transform:translate(-50%,-50%);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  background:var(--panel2);border:none;display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:var(--deep);transition:background .2s,transform .18s}
+.hex.open2{background:#1b3557;color:var(--link);cursor:pointer}
+.hex.open2:hover{background:#25497a;transform:translate(-50%,-50%) scale(1.06)}
+.hex.mine{background:#27503f;color:#a8d9bd}
+.hex.lost{background:#3a1c22;color:#ff9d9d}
+.hex[disabled]{cursor:default}
+.hexq{display:grid;grid-template-columns:110px 1fr;gap:14px;background:var(--platinum);
+  border:1px solid var(--line);border-radius:2px;padding:14px;margin-top:14px}
+@media(max-width:560px){.hexq{grid-template-columns:1fr}}
+.hqi{width:100%;border-radius:2px;display:block}
+.hqb p{font-size:15.2px;margin-bottom:10px}
+.symbox{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--platinum);
+  border:1px solid var(--line);border-left:2px solid var(--gold);border-radius:0 9px 9px 0;
+  padding:9px 12px;margin:11px 0}
+.symt{font-size:12.8px;color:var(--deep)}
+.respect{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--platinum);
+  border:1px solid var(--line);border-radius:2px;padding:10px 13px;margin-top:12px}
+.respect label{font-size:12.64px;color:var(--deep)}
+.respect input{width:52px;text-align:center;font-size:1rem;font-weight:800;background:var(--panel2);
+  border:1px solid var(--line2);border-radius:2px;padding:6px}
+.respect .rcount{font-size:12px;color:var(--deep);margin-left:auto}
+.gstage{position:relative}
+.gframe.reveal img{transition:width .5s ease,left .5s ease,top .5s ease}
+.gx{position:absolute;inset:0;display:grid;place-items:center;font-size:9rem;color:#ff4d4d;
+  text-shadow:0 0 24px rgba(255,0,0,.7);pointer-events:none;animation:xstamp .35s ease}
+@keyframes xstamp{from{transform:scale(2.4);opacity:0}to{transform:none;opacity:1}}
+.btn.outline{border-color:var(--gold);color:var(--gold)}
+.btn.outline:hover:not([disabled]){background:rgba(247,201,92,.12)}
+/* ===== dust & secrets =================================================== */
+/* The masthead chip. Scoped away from .tit because a title box on this page
+   also carries "worn" as a state class, and this rule was landing on it whole:
+   the equipped title's box got 12px gold bold text, a second border, and
+   white-space:nowrap -- which is why its description ran straight out through
+   the side of its own box while every other box wrapped normally. */
+.worn:not(.tit){font-size:12px;font-weight:800;color:var(--gold);border:1px solid rgba(247,201,92,.45);
+  border-radius:2px;padding:3px 11px;white-space:nowrap}
+.tits{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:10px;margin-bottom:6px}
+/* The grid already stretches every box in a row to the tallest one. Without
+   this that extra height became slack under the short ones and every button
+   sat at a different level, so a row of titles read as four boxes that had
+   nothing to do with each other. Column flex + margin-top:auto pins the
+   buttons to the foot of the box, and the row lines up. */
+.tit{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:13px 15px;
+  display:flex;flex-direction:column}
+.tit>.titb,.tit>button{margin-top:auto}
+.tit>button{align-self:flex-start}
+.tit.own{border-color:rgba(247,201,92,.45)}
+.tit.worn{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.tit .tt{font-size:15.2px;font-weight:800;color:var(--gold);margin-bottom:3px}
+.tit .td{font-size:12px;color:var(--deep);line-height:1.5;margin-bottom:10px;min-height:2.2em}
+/* The blur is gone. titleFace() withholds the name before it is ever
+   rendered, so there is nothing left to blur — and blurring the literal
+   string "???" only looked like a rendering fault. The "?" badge below
+   stays: that is what says "mystery" rather than "broken". */
+.tit.hid:not(.own) .tt{color:var(--deep);letter-spacing:.18em}
+.tit.hid:not(.own) .td{font-style:italic}
+.lockd{font-size:12px;color:var(--deep);border:1px dashed var(--line2);border-radius:2px;padding:3px 11px;display:inline-block}
+.hn{font-size:12px;color:var(--tx);font-weight:700;margin-left:6px}
+.tit.blur{position:relative;overflow:hidden}
+.tit.blur::after{content:"?";position:absolute;top:13px;right:15px;font-size:1.4rem;
+  font-weight:800;color:var(--gold);opacity:.55}
+.dbal{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;background:var(--panel);
+  border:1px solid var(--line);border-left:2px solid var(--gold);border-radius:0 12px 12px 0;
+  padding:14px 17px;margin-bottom:20px}
+.dbal b{color:var(--tx)!important;font-size:2rem;font-weight:800;color:var(--gold);line-height:1}
+.dbal span{font-size:12.8px;color:var(--deep)}
+.dbal i{flex:1 0 100%;font-style:normal;font-size:12px;color:var(--deep);margin-top:4px}
+/* This rule had font-size and text-transform declared twice, the second of
+   each quietly overriding the first, and its colour never applied at all —
+   .sec2 above sets color with !important, so var(--link) here lost every
+   time. Cleaned up, and the !important removed from the other rule so a
+   heading can actually be styled. */
+h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
+  letter-spacing:.11em;font-weight:800;margin:22px 0 9px}
+.secs{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:11px}
+.sec3{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px 16px;
+  display:flex;flex-direction:column}
+.sec3>button{margin-top:auto;align-self:flex-start}
+.sec3.open{border-left:2px solid var(--good)}
+.sec3 .q2{font-size:13.92px;font-weight:700;margin-bottom:9px;line-height:1.4}
+.sec3 .a2{font-size:12.8px;line-height:1.65;color:var(--tx)}
+.achs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px}
+.ach{display:flex;align-items:center;gap:11px;background:var(--panel);border:1px solid var(--line);
+  border-radius:4px;padding:10px 13px;opacity:.62}
+.ach.done{opacity:1;border-color:rgba(63,217,149,.4)}
+.ach .am{font-size:1rem;color:var(--deep);width:16px}
+.ach.done .am{color:var(--good)}
+.ach b{display:block;font-size:13.6px}
+.ach i{display:block;font-style:normal;font-size:12px;color:var(--deep);margin-top:1px}
+.ach .ad{margin-left:auto;font-size:12.16px;font-weight:800;color:var(--gold);white-space:nowrap}

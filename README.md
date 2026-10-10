@@ -10,7 +10,7 @@ Ravensburger.
 ## Layout
 
 ```
-src/       the app: flounder-search.template.html and builder/ (deck builder css/js)
+src/       the app: page shell, css/, js/ (one file per area) and builder/ — see src/README.md
 data/      card-db.json (all card data) and the hand-authored art tags, rulings, notes, meta decks
 public/    what the site serves. The build writes most of it; see CLAUDE.md for the hand-made folders
 scripts/   the build, page generator, build report, card fetcher, smoke test

@@ -35,3 +35,24 @@ NOTE_TPL   = os.path.join(TOOLS, "notes.template.html")
 NOTE_OUT   = os.path.join(TOOLS, "flounder-notes.html")
 REPORT     = os.path.join(DOCS, "BUILD-REPORT.md")
 HISTORY    = os.path.join(ROOT, ".build-history")
+CSS_DIR    = os.path.join(SRC, "css")
+JS_DIR     = os.path.join(SRC, "js")
+
+
+def app_template():
+    """The full app template: the page shell in src/flounder-search.template.html
+    with src/css/*.css and src/js/*.js stitched in, in file-name order.
+    The JS files are consecutive pieces of ONE script (01-boot opens the
+    closure, 27-accounts closes it), so their order matters."""
+    import glob
+    with open(TEMPLATE, encoding="utf-8") as f:
+        html = f.read()
+    for marker, folder, ext in (("/*__CSS__*/", CSS_DIR, "css"), ("/*__JS__*/", JS_DIR, "js")):
+        if html.count(marker) != 1:
+            raise SystemExit(f"! {TEMPLATE} needs exactly one {marker}")
+        parts = []
+        for p in sorted(glob.glob(os.path.join(folder, "*." + ext))):
+            with open(p, encoding="utf-8") as f:
+                parts.append(f.read())
+        html = html.replace(marker, "".join(parts))
+    return html
