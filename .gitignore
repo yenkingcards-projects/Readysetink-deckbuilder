@@ -1,57 +1,31 @@
-# Local authoring tools — generated, and not meant to be published.
-# The tagger and the notes editor are how Ben writes art-tags.json and
-# rsi-notes.json. They live at their own URLs; publishing them from this repo
-# would put an editing UI on the public site.
-flounder-tagger.html
-flounder-notes.html
+# Local authoring tools, built into tools/ by scripts/build_flounder.py.
+# They are how Ben writes data/art-tags.json and data/rsi-notes.json, so they
+# never go on the public site.
+tools/flounder-tagger.html
+tools/flounder-notes.html
 
-# Generated. index.html is committed because it is what the host serves;
-# flounder-search.html is the identical build output the test suites read,
-# so it does not need to be in the repo.
-flounder-search.html
+# The art tagger's local scratch. art-cache/ is the downloaded card art
+# (gigabytes). set-outputs/ and the run log are raw tagger output already
+# merged into data/art-tags.json. Backups are written before every cleanup.
+art-cache/
+tools/art-tools/set-outputs/
+tools/art-tools/overnight-run.log
+tools/art-tools/backups/
+*.leakfix-backup-*
 
-# Test screenshots
-_shot_*.png
+# Build fingerprints: a record of what this machine built. docs/BUILD-REPORT.md
+# is the committed, human-readable version.
+.build-history/
+
+# Per-developer notes
+CLAUDE.local.md
+**/CLAUDE.local.md
 
 # Junk
 .DS_Store
 node_modules/
 __pycache__/
 *.pyc
-
-# Build fingerprints. Small, but they are a local record of what YOUR machine
-# built and when — they belong to the machine, not the repo. BUILD-REPORT.md is
-# committed on purpose: it is the human-readable "what changed" for each build.
-.build-history/
-
-# scratch from syncing files onto this machine
-_to_delete/il*
-_wtest
-
-# The old Playwright suites (tests/, run-tests.sh, _test_v*.js at the top level)
-# were removed from the repo in the lore-tracker commit. None of them knew about
-# the welcome tour added later, so on a first visit the overlay swallowed their
-# clicks and 38 of 40 hung instead of reporting anything — broken tests that
-# look like coverage. smoke.js is the ship gate, as HOW-WE-WORK says.
-# They are still in git history if they are ever wanted back.
-tests/
-run-tests.sh
-_test_*.js
-
-# replaced by the real logo icons in icons/ and favicon.ico
-icon.svg
-
-# The art-tagging pipeline's local scratch. art-cache/ is the downloaded card
-# art itself (gigabyte-scale) — the site serves art from Lorcast URLs via
-# card-db.json, never from here. set-outputs/ and the run log are raw/backup
-# tagger output already merged into the committed art-tags.json; regenerate
-# either by re-running the tagger, never by hand-editing what's here.
-art-cache/
-art-tools/set-outputs/
-art-tools/overnight-run.log
+_shot_*.png
 .vercel
 .env*
-
-# Per-developer notes, never committed
-CLAUDE.local.md
-**/CLAUDE.local.md

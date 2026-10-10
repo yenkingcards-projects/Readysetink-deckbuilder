@@ -1,58 +1,21 @@
-# Files that are part of the repo but must not be served from readysetink.com.
-# The whole repo root is otherwise public: internal notes, build scripts, test
-# files and database schemas were all fetchable by URL. robots.txt can't hide
-# files; leaving them out of the deploy does.
-#
-# NOT listed on purpose: glossary.md, THIRD_PARTY_NOTICES.md (attribution), agent-gate/ (a future middleware.js imports it at build
-# time), *.json data files, forms/, newbuilder/, tournament/ (the app loads them).
+# Only public/ is served (vercel.json: outputDirectory). These are files inside
+# public/ that are part of a hand-made folder but must not be fetchable by URL.
 
-# Internal docs and per-developer notes
-# Root-level markdown: listed by name so the public glossary.md stays served.
-/BUILD-REPORT.md
-/CARD-DATA.md
-/CLANS-design.md
-/CLAUDE.md
-/HOW-WE-WORK.md
-/PARTNER-BRIEF.md
-/PRICES.md
-/README.md
-/SIGNIN-FIX.md
-/UPLOAD.md
-/deck-builder-plan.md
-/*.rtf
-CLAUDE.local.md
-**/CLAUDE.local.md
-customrules/CLAUDE.md
-newbuilder/README.md
-tournament/tests/
+# customrules.readysetink.com: its dev notes, build script and tests
+/public/customrules/CLAUDE.md
+/public/customrules/CLAUDE.local.md
+/public/customrules/README.md
+/public/customrules/build.py
+/public/customrules/test.js
+/public/customrules/formats/*.source.txt
 
-# Build, tagging and test tooling
-*.py
-*.command
-/__pycache__
-/_wtest
-/_to_delete
-/_test_*.js
-/smoke.js
-/run-tests.sh
-/tests
-/art-tools
-/Start Tagging
-/Start Tagger Improvement
-/mickey examples
-/.claude
-/*.template.html
-
-# Database schemas
-/supabase-*.sql
-
-# Screenshots and scratch images
-/*.png
+# My Lorcana Journal's tests
+/public/tournament/tests
 
 # Held back until finished. Draft legal pages still contain [BRACKETED] blanks,
 # and the 402 payment gate is dormant and unannounced. Remove a line when its
 # page is ready to be public.
-/privacy
-/terms
-/fan-content
-/agent-gate
+/public/privacy
+/public/terms
+/public/fan-content
+/public/agent-gate

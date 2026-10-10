@@ -1,0 +1,55 @@
+# How we work
+
+Ben says what he wants. I change it. I ship it. He tells me what's wrong.
+He is the QA. That is faster and more accurate than anything I do alone.
+
+## Rules
+
+1. **No verification theatre.** 45 minutes of checking still shipped bugs, so
+   the checking bought nothing. Quality comes from reading the code before
+   editing it — not from testing after.
+2. **No tests.** None. `smoke.js` only if a change could white-screen the site
+   (new JS at boot, a rewritten render function). Otherwise skip it.
+3. **No screenshots** unless Ben asks or the change can't be described.
+4. **No investigation** he didn't request. Found something odd? One line, move on.
+5. **Batch.** Ten asks = one build, one ship.
+6. **Reply in 1–3 lines.** What changed. Anything he must know. Nothing else.
+   No recaps, no "why this was interesting", no lists of what I considered.
+7. **Never re-read a file I just wrote.** Never re-run a passing command.
+8. **Sync before you start.** Kenny pushes independently — `git fetch && git
+   status` before touching anything, every session. If behind, `git pull`
+   (stash local untracked scratch first if it complains, don't delete it).
+   Then check `docs/BUILD-REPORT.md`'s numbers before trusting any doc's claim
+   about what's built — docs go stale, the repo doesn't.
+
+## Caring, cheaply
+
+Care is spent BEFORE the edit, not after:
+
+- Grep for every call site of a thing before moving or renaming it.
+- Changing markup an id points at? Check what binds that id.
+- Changing a class name? Check nothing else uses it.
+- Touching a render function? Check what re-runs it and what re-binds after.
+
+Those greps cost seconds and catch the bugs. The test suite caught almost none
+of them — it mostly caught itself.
+
+## Change things in place
+
+When a feature changes, edit it. Don't build a second version next to the
+first, don't add a flag or a "classic" fallback, don't keep the old one
+reachable. One version of everything. Retired code goes to git history (or,
+if Ben asks, to `Claude apps/readysetink_archive/` on his Mac).
+
+## Never break
+
+- Edit `src/` and `data/`, never the built files in `public/` (CLAUDE.md lists the hand-made folders there).
+- Never touch `data/art-tags.json` or `data/rsi-notes.json` — hand-written, irreplaceable.
+- Don't lose user data: decks, collection, dust.
+
+## Build
+
+    python3 scripts/build_flounder.py
+
+Commit what it changed in `public/` with your source change and push. Vercel
+serves `public/` as-is. That's the deploy.
