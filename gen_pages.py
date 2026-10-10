@@ -622,7 +622,7 @@ HUBS = [
         ]),
         ("It connects to your decks", [
             "Build a deck and the site knows which cards you already have — the "
-            "borrow list and the shopping list are both built from the gap.",
+            "borrow list and the pull sheet are both built from the gap.",
             "Export the lot to a spreadsheet whenever you like, with prices and a "
             "total value.",
         ]),

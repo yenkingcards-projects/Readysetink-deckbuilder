@@ -148,7 +148,7 @@ NAV.querySelectorAll("[data-go]").forEach(b=>{if(b.dataset.go==="more")return;
    Other page and hamburger read — so a game added there shows up here too. */
 const NB_GICON={"":"star","Tools":"map-pin","Mini games":"swords"};
 function nbMoreHTML(){
-  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust")||(!SUGGON&&p==="shop");
+  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust");
   const item=([t,,page])=>isPageLink(page)
     ?`<a role="menuitem" href="${esc(page)}"${isExternalLink(page)?` target="_blank" rel="noopener"`:""}>${esc(t)}${isExternalLink(page)?" ↗":""}</a>`
     :`<button type="button" role="menuitem" data-op="${esc(page)}">${esc(t)}</button>`;
@@ -156,10 +156,9 @@ function nbMoreHTML(){
   const build=`<div class="nbmcol"><h4>${ic("deck")}Deck building</h4>
       <button type="button" role="menuitem" data-mm="guided">Guided Coconut Build</button>
       <button type="button" role="menuitem" data-op="meta">Top decks</button>
-      <button type="button" role="menuitem" data-mm="pull">Pull sheet for this deck</button>
-      ${hidden("shop")?"":`<button type="button" role="menuitem" data-op="shop">Shopping list</button>`}</div>`;
+      <button type="button" role="menuitem" data-mm="pull">Pull sheet for this deck</button></div>`;
   return `<div class="nbmcols">${build}${groups.map(gr=>`<div class="nbmcol"><h4>${ic(NB_GICON[gr.g]||"star")}${esc(gr.g||"Around the site")}</h4>
-      ${gr.chips.filter(([,,p])=>!(gr.g===""&&(p==="meta"||p==="shop"))).map(item).join("")}</div>`).join("")}</div>
+      ${gr.chips.filter(([,,p])=>!(gr.g===""&&p==="meta")).map(item).join("")}</div>`).join("")}</div>
     <div class="nbmfoot">
       <button type="button" role="menuitem" data-mm="all">See everything</button>
       <button type="button" role="menuitem" data-mm="theme">${ic("theme")}Light / dark</button>
@@ -1270,7 +1269,7 @@ const NB_FISH=`<svg class="nbh-fish" viewBox="0 0 420 280" aria-hidden="true">
 </svg>`;
 const NB_HICON={build:"deck",cards:"search",decks:"cards",games:"swords",map:"map-pin",ink:"star",rules:"book",lore:"inkwell",more:"menu"};
 function nbHomeMenus(){
-  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust")||(!SUGGON&&p==="shop");
+  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust");
   const fromGroup=g=>((OTHER_GROUPS.find(x=>x.g===g)||{chips:[]}).chips).filter(([,,p])=>p&&!hidden(p))
     .map(([t,d,p])=>isPageLink(p)?{l:t,d,href:p}:{l:t,d,op:p});
   const games=fromGroup("Mini games");

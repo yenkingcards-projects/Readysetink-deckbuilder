@@ -1222,33 +1222,6 @@ body.fffaux #bub,body.fffaux .sitefoot{display:none!important}
     radial-gradient(circle at 70% 95%,rgba(255,255,255,.05) 3px,transparent 4px);
   animation:tbub 9s linear infinite}
 @keyframes tbub{to{background-position:0 -420px,0 -520px}}
-/* ===== clicker ========================================================== */
-.clcombo{margin-top:10px;padding:6px 12px;border-radius:2px;text-align:center;
-  background:var(--amberc);color:var(--carbon);font-weight:900;font-size:13px;
-  letter-spacing:.14em;text-transform:uppercase;animation:clpulse .5s ease-in-out infinite alternate}
-@keyframes clpulse{from{transform:scale(1)}to{transform:scale(1.04)}}
-@media(prefers-reduced-motion:reduce){.clcombo{animation:none}}
-.clickwrap{display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
-/* touch-action here as well as in JS, so the browser knows before the first
-   tap rather than after. user-select and the tap highlight are what stop rapid
-   tapping selecting the image and flashing a grey box over it. */
-.clickcard{position:relative;padding:0;border:none;background:none;line-height:0;
-  touch-action:manipulation;user-select:none;-webkit-user-select:none;
-  -webkit-tap-highlight-color:transparent;
-  border-radius:2px;overflow:visible;transition:transform .09s}
-.clickcard img{width:min(320px,70vw);border-radius:2px;display:block;
-  box-shadow:0 20px 50px -18px #000}
-.clickcard.pop{transform:scale(.97)}
-.heart{position:absolute;pointer-events:none;font-size:1.5rem;
-  animation:floatup 1.4s ease-out forwards}
-@keyframes floatup{from{opacity:1;transform:translate(-50%,-50%)}
-  to{opacity:0;transform:translate(calc(-50% + var(--dx)),-190px) scale(1.5)}}
-.clickhud{display:flex;flex-direction:column;gap:9px}
-.clickhud div{background:var(--platinum);border:1px solid var(--line);border-radius:2px;
-  padding:14px 20px;text-align:center;min-width:170px}
-.clickhud b{display:block;font-size:1.8rem;font-weight:800;color:var(--tx);line-height:1}
-.clickhud i{display:block;font-style:normal;font-size:12px;text-transform:uppercase;
-  letter-spacing:.09em;color:var(--deep);margin-top:6px}
 /* ===== patron / prestige / respects / quiz polish ======================== */
 .patron{background:rgba(201,162,39,.09);
   border:1px solid rgba(247,201,92,.45);border-radius:2px;padding:15px 18px;margin-bottom:18px}
@@ -1265,23 +1238,6 @@ body.fffaux #bub,body.fffaux .sitefoot{display:none!important}
 .tit.radiant{border-color:#d5b8ff;box-shadow:0 0 22px -4px rgba(185,140,255,.75);animation:radiate 3s ease-in-out infinite}
 .worn.radiant{border-color:#d5b8ff;color:#e6d4ff;animation:radiate 3s ease-in-out infinite}
 
-.rall{border:1px solid var(--line);border-left:2px solid var(--gold);background:var(--panel);
-  padding:12px 15px;margin:16px 0 20px;font-size:13.76px;color:var(--deep)}
-.rall b{color:var(--tx)}
-.rsbar{height:3px;background:var(--platinum);margin-top:9px;overflow:hidden}
-.rsbar i{display:block;height:100%;background:var(--gold)}
-.rsdone{font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.09em;
-  color:var(--deep);margin-left:auto}
-.rsdone em{color:var(--gold);font-style:normal;font-weight:700}
-.rnum{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--deep);
-  border:1px solid var(--line2);padding:2px 6px;margin-right:9px}
-.rlogo{height:26px;width:auto;margin-right:10px;object-fit:contain}
-.rset.complete{border-color:rgba(201,162,39,.45)}
-.rset.complete .rsh b::after{content:"✦";color:var(--gold);margin-left:8px;font-size:.8em}
-.rink{position:relative;overflow:hidden}
-.rink u{position:absolute;left:0;bottom:0;height:2px;background:var(--ic);opacity:.55;text-decoration:none}
-.rink.done{border-color:rgba(201,162,39,.5)}
-.rink.done span{color:var(--gold)}
 
 /* .rdonly (the "reference only" banner) was removed — the Search tab simply
    has no deck controls, which says it without a label. Kept out of the sheet
@@ -1417,56 +1373,6 @@ body.dragging-card .deck{outline:2px dashed var(--link);outline-offset:-5px}
 .dtitle{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;
   letter-spacing:.5px;padding:2px 7px;border:1px solid var(--chrome);background:var(--canvas-soft);
   color:var(--tx);margin-left:8px;vertical-align:.1em}
-
-/* ---- Outpost ---- */
-.ores{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;margin:12px 0}
-.ore{background:var(--platinum);border:1px solid var(--chrome);box-shadow:var(--bevel-in);
-  padding:6px 12px;min-width:96px;border-radius:4px}
-.ore b{display:block;font-size:17px;font-weight:900;font-family:var(--display);color:var(--tx);line-height:1.1}
-.ore i{display:block;font-style:normal;font-size:12px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.5px;color:var(--deep)}
-.ore u{display:block;text-decoration:none;font-size:12px;color:var(--deep)}
-.hexwrap{overflow:auto;padding:8px;background:var(--carbon);
-  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:4px 4px;
-  border:1px solid var(--chrome);box-shadow:var(--bevel)}
-.hexboard{position:relative;margin:0 auto}
-.hex{position:absolute;transform:translate(-50%,-50%);
-  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
-  background:var(--tc);border:none;display:flex;align-items:center;justify-content:center;
-  color:var(--surface);transition:filter .15s,transform .15s;filter:brightness(.42) saturate(.5)}
-/* Terrain tints run light to dark, so a fixed glyph colour fails on one end.
-   A dark glyph with a light halo reads on every tint. */
-/* Terrain tints run light to dark and each hex is filtered on top of that, so
-   no flat glyph colour works everywhere. White with a hard dark halo does. */
-.hex .hg{font-size:17px;color:#fff;
-  text-shadow:0 1px 0 #000,0 -1px 0 #000,1px 0 0 #000,-1px 0 0 #000,0 0 5px rgba(0,0,0,.9)}
-.hex .hlv{position:absolute;right:22%;bottom:20%;font-size:12px;font-weight:700;
-  background:var(--carbon);padding:0 3px;border-radius:2px}
-.hex.open2{filter:brightness(.78);cursor:pointer}
-.hex.open2:hover{filter:brightness(1);transform:translate(-50%,-50%) scale(1.07)}
-.hex.mine{filter:none;box-shadow:inset 0 0 0 2px var(--shimmer);cursor:pointer}
-.hex.mine:hover{transform:translate(-50%,-50%) scale(1.05)}
-.hex.sel{box-shadow:inset 0 0 0 3px var(--surface);z-index:5}
-.hexq{margin-top:12px;background:var(--surface);border:1px solid var(--chrome);
-  box-shadow:var(--bevel);border-radius:6px;overflow:hidden}
-.hexq.empty{padding:14px;color:var(--deep);font-size:12px;max-width:none;line-height:1.5}
-.hqt{background:var(--tc);padding:7px 12px;color:var(--surface);
-  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.hqt b{font-family:var(--display);font-weight:900;font-size:15px}
-.hqt span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.9}
-.hqb{padding:12px}
-.hqy{font-size:12px;color:var(--tx);margin-bottom:10px}
-.hqy b{color:var(--tx)}
-.blds{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px}
-.bld{text-align:left;background:var(--platinum);border:1px solid var(--hairline);
-  box-shadow:var(--bevel-in);padding:8px 10px;border-radius:4px;color:var(--tx)}
-.bld b{display:block;font-size:12px;margin-bottom:3px}
-.bld i{display:block;font-style:normal;font-size:12px;color:var(--deep);line-height:1.35;margin-bottom:5px}
-.bld u{display:block;text-decoration:none;font-size:12px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.5px;color:var(--deep)}
-.bld.ok{background:var(--canvas-soft);border-color:var(--deep)}
-.bld.ok u{color:var(--link)}
-.bld[disabled]{opacity:.5;cursor:default}
 
 /* ---- foiling ------------------------------------------------------------
    LorcanaJSON ships a greyscale foilMask per printing marking exactly which
@@ -1680,97 +1586,6 @@ h3.sec2{font-family:var(--sans);font-size:12.5px;text-transform:uppercase;
 .gful img{width:74px;border-radius:2px;display:block;flex:none}
 .gful b{display:block;color:var(--tx);font-size:14.72px}
 .gful span{display:block;font-size:12px;color:var(--deep);font-weight:500}
-/* ===== card reader ====================================================== */
-.rsets{display:flex;flex-direction:column;gap:10px}
-.rset{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:13px 15px}
-/* The set's own art over its name, both centred, with everything about the set
-   stacked under it — a masthead for the set rather than a line of facts. */
-.rsh{display:flex;flex-direction:column;align-items:center;text-align:center;
-  gap:3px;margin-bottom:11px}
-.rsh b{font-size:16px;line-height:1.2}
-.rsh span{font-size:12px;color:var(--deep)}
-.rlogowrap{display:grid;place-items:center;min-height:34px;margin-bottom:2px}
-.rlogo{max-height:52px;max-width:220px;width:auto;display:block}
-/* Shown until the logo loads, and left in place for good if there is no file
-   for that set — the img removes itself on error and this is what is behind. */
-.rnum{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;
-  background:var(--carbon);color:#fff;font-size:13px;font-weight:900}
-.rlogo+.rnum{display:none}
-/* Six inks, two rows of three, every button the same size. They were an
-   inline-flex row, so each one was as wide as its own word — Amethyst wide,
-   Ruby narrow — and six different-sized buttons read as a ransom note. */
-.rinks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
-.rink{display:flex;align-items:center;justify-content:flex-start;gap:7px;
-  border:1px solid var(--line);border-radius:2px;
-  padding:7px 11px;font-size:12.64px;font-weight:600;color:var(--deep);background:var(--platinum);
-  transition:border-color .15s,color .15s,transform .15s}
-.rink span{margin-left:auto}
-@media(max-width:520px){.rinks{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.rink i{width:12px;height:12px;border-radius:50%;background:var(--ic);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
-.rink span{font-size:12px;color:var(--deep);font-weight:700}
-.rink:hover{border-color:var(--ic);color:var(--tx);transform:translateY(-1px)}
-.resume{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--gold);
-  border-radius:0 11px 11px 0;padding:12px 15px;margin-bottom:16px}
-.resume b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--gold);margin-bottom:7px}
-.readwrap{max-width:1180px;margin:0 auto;padding:10px 13px 40px}
-.rbar2{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:9px}
-.rbar2 b{font-size:14.72px}
-.rbar2 .sp{flex:1}
-.rct{font-size:12.48px;color:var(--deep);font-variant-numeric:tabular-nums}
-.rprog{height:4px;background:var(--platinum);border-radius:2px;overflow:hidden;margin-bottom:16px}
-.rprog i{display:block;height:100%;background:var(--gold);transition:width .25s}
-.reader{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:24px;align-items:start}
-@media(max-width:820px){.reader{grid-template-columns:1fr}}
-.rimg img{width:100%;border-radius:2px;display:block;box-shadow:0 20px 50px -18px #000}
-.rimg .ph{aspect-ratio:674/940;display:grid;place-items:center;background:var(--panel);
-  border-radius:2px;color:var(--deep);padding:20px;text-align:center}
-.rtext h2{font-size:1.7rem;line-height:1.15}
-.rtext .vv{color:var(--gold);font-size:1.02rem;margin-top:2px}
-.tx.big{font-size:1.02rem;line-height:1.75;padding:16px 18px}
-.rnav{display:flex;gap:9px;margin-top:18px}
-.rnav button{flex:1;padding:11px;font-size:14.72px}
-.rnav button[disabled]{opacity:.35;pointer-events:none}
-/* The stage is a fixed frame so the Next button never moves, however long the
-   card's rules text is — you can sit with a finger on it and keep clicking. */
-/* A real fixed frame, not a minimum. Cards carrying rulings are two or three
-   times taller than plain ones, so a min-height still let the Next button walk
-   down the page. The card scrolls INSIDE the frame instead. */
-/* The frame USED to be a fixed height with the card scrolling inside it, to
-   stop the Next button walking down the page. That traded away the thing the
-   page is for: a card with three rulings had its rulings below the fold of an
-   inner scroller nobody noticed. The page scrolls now, the card is whole, and
-   the edge arrows stay reachable because they're sticky rather than pinned. */
-.rstage{position:relative;min-height:430px}
-.reader{overflow:visible;padding-right:8px;align-content:start}
-.rnav{max-width:720px;margin:16px auto 0}
-.reader{transition:transform .17s ease,opacity .17s ease}
-.reader.outL{transform:translateX(-9%);opacity:0}
-.reader.outR{transform:translateX(9%);opacity:0}
-.reader.inR{animation:rslideR .26s ease}
-.reader.inL{animation:rslideL .26s ease}
-@keyframes rslideR{from{transform:translateX(9%);opacity:0}to{transform:none;opacity:1}}
-@keyframes rslideL{from{transform:translateX(-9%);opacity:0}to{transform:none;opacity:1}}
-@media(prefers-reduced-motion:reduce){.reader{transition:none;animation:none!important}}
-/* No gradient. The dark fade down both edges read as a vignette over the card
-   art — it dimmed the thing you came to look at in order to advertise a button
-   you can also reach with the arrow keys, a swipe, or the pair of buttons under
-   the card. Plain transparent hit areas, visible on hover, invisible otherwise. */
-.redge{position:absolute;top:0;bottom:0;width:52px;z-index:6;font-size:2rem;color:var(--deep);
-  background:transparent;border-radius:0;opacity:.35;
-  display:grid;place-items:center;transition:color .15s,background .15s,opacity .15s}
-.redge>*{position:sticky;top:45vh}
-.redge.right{right:0}
-.redge.left{left:0}
-.rstage:hover .redge{opacity:1}
-.redge:hover{color:var(--link);background:rgba(79,208,247,.09)}
-.redge[disabled]{opacity:.2;pointer-events:none}
-@media(min-width:1100px){.redge{width:64px}}
-.rflav{font-style:italic;color:var(--deep);font-size:14.4px;line-height:1.6;margin-top:12px;
-  padding-left:14px;border-left:2px solid var(--line2);white-space:pre-wrap}
-.rtags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
-.rtext .rulings{max-height:none}
 /* ===== decks page + pull list =========================================== */
 /* One collapsible per set-era. Same <details> chrome as Special searches and
    Filters (border/summary/▸), so a third kind of "drawer of things" on this
@@ -2843,17 +2658,6 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
   border-bottom:1px solid var(--line2);padding-bottom:3px}
 .dgh:first-child{margin-top:2px}
 .dgh span{font-weight:700;letter-spacing:0;text-transform:none;opacity:.75}
-/* shopping list bundles */
-.shopb{display:flex;gap:14px;align-items:center;justify-content:space-between;
-  background:var(--surface);border:1px solid var(--line2);border-radius:3px;
-  padding:12px 14px;margin:0 0 10px}
-.shopb p{margin:3px 0 0;font-size:13px;color:var(--deep)}
-.shopb b{font-size:15px}
-.shopb .shopn{display:inline-block;margin-top:5px;font-size:12px;font-weight:800;
-  background:var(--canvas-soft);border-radius:2px;padding:2px 7px}
-.shopb.off{opacity:.62}
-.shopb button{white-space:nowrap}
-.shopmain{min-width:0;flex:1}
 /* ===== save as an app ===== */
 .a2hsinfo{margin-top:8px;border:1px solid var(--line2);border-radius:6px;
   background:var(--canvas-soft);overflow:hidden}
@@ -2864,22 +2668,6 @@ details.sec>summary .secn{margin-left:auto;font-size:12px;color:var(--deep);text
 .a2hsplat h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--deep);margin:0 0 6px}
 .a2hsplat ol{margin:0;padding-left:20px;font-size:12.5px;line-height:1.6;color:var(--tx)}
 .a2hsplat li{margin-bottom:2px}
-.shoplist{margin-top:9px}
-.shoplist>summary{cursor:pointer;font-size:12.5px;font-weight:800;color:var(--link);
-  list-style:none;display:inline-block;border-bottom:1px dotted var(--line2)}
-.shoplist>summary::-webkit-details-marker{display:none}
-.shoplist ol{margin:8px 0 0;padding:0 0 0 22px;max-height:260px;overflow:auto;
-  font-size:13px;line-height:1.5}
-.shoplist li{display:flex;gap:8px;align-items:baseline;padding:1px 0}
-.shoplist li span{flex:1;min-width:0}
-.shoplist li i{color:var(--deep);font-style:normal}
-.shoplist li em{font-style:normal;font-size:11.5px;color:var(--deep);white-space:nowrap}
-.shoplist li b{font-variant-numeric:tabular-nums}
-.shoptip{background:var(--canvas-soft);border:1px solid var(--acc);border-left:5px solid var(--acc);
-  border-radius:3px;padding:14px 16px;margin:0 0 16px}
-.shoptip b{font-size:15px}
-.shoptip p{margin:6px 0 0;font-size:13.5px;line-height:1.55}
-.shoptip .shoptip2{color:var(--deep);font-size:13px}
 /* No ⓘ on the tile any more — just the one buy button, full width. The
    fuller explanation lives in the card's own popup instead. */
 .c .prc{display:flex;align-items:center;justify-content:flex-end;gap:5px;width:100%;
@@ -4775,7 +4563,6 @@ html.nb .nbh-i.on:focus-visible{outline:none}
 <section class="view" id="vDecks"><div id="deckspage"></div></section>
 <section class="view" id="vMeta"><div id="metapage"></div></section>
 
-<section class="view" id="vRead"><div id="readpage"></div></section>
 
 <section class="view" id="vGuess"><div id="guesspage"></div></section>
 
@@ -4797,8 +4584,6 @@ html.nb .nbh-i.on:focus-visible{outline:none}
 <section class="view" id="vWorld"><div id="worldpage"></div></section>
 
 <section class="view" id="vAqua"><div id="aquapage"></div></section>
-<section class="view" id="vClick"><div id="clickpage"></div></section>
-<section class="view" id="vHex"><div id="hexpage"></div></section>
 
 <section class="view" id="vCred"><div id="credpage"></div></section>
 
@@ -4806,7 +4591,6 @@ html.nb .nbh-i.on:focus-visible{outline:none}
 
 <section class="view" id="vAccount"><div id="accountpage"></div></section>
 
-<section class="view" id="vShop"><div id="shoppage"></div></section>
 
 <section class="view" id="vLore"><div id="lorepage"></div></section>
 
@@ -5115,9 +4899,6 @@ const imgURL=u=>{
   return u};
 let PRICE_SRC=c=>c.p;
 let PRICES=load("fs3_prices",false);
-/* Shopping suggestions are OFF until you ask for them. A site that opens by
-   telling you what to buy is a shop; this one isn't. */
-let SUGGON=load("fs3_suggon",false);
 function rawPrice(c){
   if(!PRICE_SRC||!c)return null;
   try{const v=PRICE_SRC(c);return typeof v==="number"&&isFinite(v)&&v>0?v:null}
@@ -10284,12 +10065,6 @@ function renderAqua(){
   paintFX();
 }
 
-/* ===================== give Flounder a click ===================== */
-const CLICKKEY="fs3_click";
-/* ===================== the Inklands — hex claim game =====================
-   Nineteen hexes, each holding a real card. Answer the hex's question and it's
-   yours. You can only claim a hex touching land you already hold, so the board
-   has a shape to it rather than being nineteen unrelated questions. */
 /* ===== leaderboards — framework only ====================================
    Shape, storage key and render are all here; the fetch is not, because there
    is no server yet. Every game calls leaderboard(id) and gets the same shelf,
@@ -10304,8 +10079,6 @@ const LB_GAMES={
   flavour:{t:"Guess the flavour text",unit:"streak"},
   reveal: {t:"Guess from the facts", unit:"streak"},
   aqua:   {t:"Aquarium",             unit:"fed"},
-  click:  {t:"Clicker",              unit:"clicks"},
-  hex:    {t:"Outpost",              unit:"hexes held"},
 };
 const lbBest=id=>(load(LBKEY,{})[id]||0);
 function lbPost(id,score){
@@ -10323,313 +10096,6 @@ function leaderboard(id){
     <div class="lbsoon">Ranked boards arrive with accounts. Your best is kept on this device
       until then, and it will carry over.</div>
   </div>`;
-}
-
-/* ===================== OUTPOST — phase 1 =====================
-   A real-time-ish strategy board, not a quiz. Hexes have terrain, terrain
-   produces resources, resources buy buildings, buildings produce more and
-   extend how far you can reach. No card questions anywhere — this is a game
-   about a map, and tying it to card trivia was the thing that made it feel
-   like a worksheet.
-
-   Everything lives in localStorage and ticks on wall-clock time, so it keeps
-   producing while the tab is shut — capped, deliberately, so that checking in
-   twice a day is as good as living in it. See OUTPOST-design.md. */
-const HEXKEY="fs3_out";
-const OUT_CAP_H=8;                      // hours of offline production banked
-const TERRAIN={
-  shallows:{n:"Shallows", ink:2, stone:0, lore:0, c:"#4d84a8", g:"≈"},
-  deep:    {n:"Deep water",ink:5,stone:0, lore:0, c:"#2f4f7a", g:"≋", nobuild:true},
-  reef:    {n:"Reef",     ink:0, stone:3, lore:0, c:"#5d8a72", g:"▲"},
-  wreck:   {n:"Wreck",    ink:1, stone:2, lore:0, c:"#7a6a4a", g:"⚓"},
-  archive: {n:"Archive",  ink:0, stone:0, lore:1, c:"#8298cf", g:"✦"},
-};
-const BUILDINGS={
-  keep:   {n:"Keep",     d:"Your capital. Upgrading it raises the cap on everything else.",
-           cost:{ink:0,stone:0,lore:0}, mult:1.0, reach:1, max:5},
-  harvest:{n:"Harvester",d:"Doubles what this hex produces, and again at each level.",
-           cost:{ink:40,stone:10,lore:0}, mult:1.0, reach:0, max:5},
-  depot:  {n:"Depot",    d:"Raises how much you can bank while you're away.",
-           cost:{ink:30,stone:25,lore:0}, mult:0, reach:0, max:5},
-  beacon: {n:"Beacon",   d:"Extends your claim one hex further in every direction.",
-           cost:{ink:60,stone:40,lore:1}, mult:0, reach:1, max:3},
-};
-const OUT_R=4;                            // radius-4 board = 61 hexes
-let OUT=null;
-
-function outCells(){
-  const o=[];
-  for(let q=-OUT_R;q<=OUT_R;q++)for(let r=-OUT_R;r<=OUT_R;r++)
-    if(Math.abs(q+r)<=OUT_R)o.push({q,r});
-  return o;
-}
-/* The board is generated from a seed so it is stable across reloads without
-   storing 61 terrain strings. Same seed, same world. */
-function outSeeded(seed){
-  let x=seed>>>0;
-  return()=>{x^=x<<13;x>>>=0;x^=x>>17;x^=x<<5;x>>>=0;return x/4294967296};
-}
-function newOutpost(){
-  const seed=(Date.now()^(Math.random()*1e9))>>>0;
-  const rnd=outSeeded(seed);
-  const cells=outCells().map(({q,r})=>{
-    const d=Math.max(Math.abs(q),Math.abs(r),Math.abs(q+r));
-    let t;
-    const roll=rnd();
-    if(d===0)t="shallows";
-    else if(roll<0.34)t="shallows";
-    else if(roll<0.55)t="reef";
-    else if(roll<0.72)t="deep";
-    else if(roll<0.90)t="wreck";
-    else t="archive";
-    return {q,r,t,owned:d===0,b:d===0?"keep":null,lv:d===0?1:0};
-  });
-  OUT={seed,cells,ink:60,stone:20,lore:0,t:Date.now(),sel:null,built:1};
-  saveOut();
-}
-const saveOut=()=>save(HEXKEY,OUT);
-const outAt=(q,r)=>OUT.cells.find(c=>c.q===q&&c.r===r);
-const OUT_DIRS=[[1,0],[1,-1],[0,-1],[-1,0],[-1,1],[0,1]];
-
-/* Reach: 1 from the Keep, plus 1 per Beacon level anywhere you hold. */
-function outReach(){
-  return 1+OUT.cells.filter(c=>c.owned&&c.b==="beacon")
-                    .reduce((a,c)=>a+c.lv,0);
-}
-function outClaimable(h){
-  if(h.owned)return false;
-  const reach=outReach();
-  return OUT.cells.some(c=>c.owned&&outDist(c,h)<=reach);
-}
-const outDist=(a,b)=>(Math.abs(a.q-b.q)+Math.abs(a.r-b.r)+Math.abs(a.q+a.r-b.q-b.r))/2;
-
-/* What a single hex yields per hour, at its current level. */
-function outYield(h){
-  const T=TERRAIN[h.t]; if(!h.owned)return {ink:0,stone:0,lore:0};
-  const m=h.b==="harvest"?Math.pow(2,h.lv):1;
-  return {ink:T.ink*m,stone:T.stone*m,lore:T.lore*m};
-}
-function outRates(){
-  return OUT.cells.reduce((a,h)=>{const y=outYield(h);
-    a.ink+=y.ink;a.stone+=y.stone;a.lore+=y.lore;return a},{ink:0,stone:0,lore:0});
-}
-function outCapHours(){
-  const dep=OUT.cells.filter(c=>c.owned&&c.b==="depot").reduce((a,c)=>a+c.lv,0);
-  return OUT_CAP_H+dep*4;
-}
-/* Wall-clock production, capped. Runs on open and every few seconds after. */
-function outTick(){
-  if(!OUT)return;
-  const now=Date.now();
-  const hrs=Math.min((now-OUT.t)/3600000,outCapHours());
-  if(hrs<=0){OUT.t=now;return}
-  const r=outRates();
-  OUT.ink  +=r.ink*hrs;
-  OUT.stone+=r.stone*hrs;
-  OUT.lore +=r.lore*hrs;
-  OUT.t=now;saveOut();
-}
-const outCost=(key,lv)=>{
-  const c=BUILDINGS[key].cost, f=Math.pow(1.85,lv);
-  return {ink:Math.round(c.ink*f),stone:Math.round(c.stone*f),lore:Math.ceil(c.lore*f)};
-};
-const outCan=c=>OUT.ink>=c.ink&&OUT.stone>=c.stone&&OUT.lore>=c.lore;
-function outPay(c){
-  if(!outCan(c))return false;
-  OUT.ink-=c.ink;OUT.stone-=c.stone;OUT.lore-=c.lore;return true;
-}
-const CLAIM_COST=h=>({ink:25+OUT.cells.filter(c=>c.owned).length*9,stone:5,lore:0});
-
-function outClaim(h){
-  if(!outClaimable(h))return;
-  const c=CLAIM_COST(h);
-  if(!outPay(c)){toast("Not enough to claim that");return}
-  h.owned=true;saveOut();renderOutpost();
-}
-function outBuild(h,key){
-  if(!h.owned||TERRAIN[h.t].nobuild)return;
-  const lv=h.b===key?h.lv:0;
-  if(lv>=BUILDINGS[key].max){toast("Already at maximum");return}
-  if(h.b&&h.b!==key){toast("Clear the existing building first");return}
-  if(!outPay(outCost(key,lv))){toast("Not enough resources");return}
-  h.b=key;h.lv=lv+1;OUT.built=(OUT.built||0)+1;
-  if(OUT.built>=12)unlockHidden("h_hex");
-  lbPost("hex",OUT.cells.filter(c=>c.owned).length);
-  saveOut();renderOutpost();
-}
-const OUTNUM=n=>n>=10000?Math.round(n).toLocaleString("en-US")
-  :n>=100?Math.round(n):Math.round(n*10)/10;
-
-function renderOutpost(){
-  if(!OUT)OUT=load(HEXKEY,null);
-  if(!OUT||!OUT.cells)newOutpost();
-  outTick();
-  const r=outRates(),S=40,reach=outReach();
-  const owned=OUT.cells.filter(c=>c.owned).length;
-  const sel=OUT.sel!=null?OUT.cells[OUT.sel]:null;
-  $("hexpage").innerHTML=`<div class="page">
-    <button class="btn" id="hxExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">⬢</span>Outpost</h1>
-    <p class="lede">Claim ground, build on it, upgrade it. Production banks while you're away,
-      up to ${outCapHours()} hours' worth.</p>
-
-    <div class="ores">
-      <div class="ore"><b>${OUTNUM(OUT.ink)}</b><i>Ink</i><u>+${OUTNUM(r.ink)}/h</u></div>
-      <div class="ore"><b>${OUTNUM(OUT.stone)}</b><i>Stone</i><u>+${OUTNUM(r.stone)}/h</u></div>
-      <div class="ore"><b>${OUTNUM(OUT.lore)}</b><i>Lore</i><u>+${OUTNUM(r.lore)}/h</u></div>
-      <div class="ore"><b>${owned}</b><i>Hexes held</i><u>reach ${reach}</u></div>
-      <button class="btn" id="hxNew" style="margin-left:auto">New world</button>
-    </div>
-
-    <div class="hexwrap"><div class="hexboard" style="width:${S*2*9.4}px;height:${S*1.5*9+S*2}px">
-      ${OUT.cells.map((h,i)=>{
-        const T=TERRAIN[h.t];
-        const x=S*Math.sqrt(3)*(h.q+h.r/2)+S*8.2, y=S*1.5*h.r+S*6.4;
-        const can=outClaimable(h);
-        const cls=h.owned?"mine":can?"open2":"far";
-        return `<button class="hex ${cls}${OUT.sel===i?" sel":""}" data-h="${i}"
-          style="left:${x}px;top:${y}px;width:${S*2}px;height:${S*2.31}px;--tc:${T.c}"
-          title="${esc(T.n)}${h.b?" · "+esc(BUILDINGS[h.b].n)+" "+h.lv:""}">
-          <span class="hg">${h.b?BLD_GLYPH[h.b]:T.g}</span>
-          ${h.lv?`<span class="hlv">${h.lv}</span>`:""}</button>`}).join("")}
-    </div></div>
-
-    ${leaderboard("hex")}
-    <div id="hexq">${sel?outPanel(sel):
-      `<div class="hexq empty">Pick a hex. Bright is yours, pale is in reach, dark is too far.</div>`}</div>
-  </div>`;
-  $("hxExit").onclick=()=>{stopOut();OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
-  $("hxNew").onclick=()=>{if(confirm("Abandon this world and generate a new one?")){
-    newOutpost();renderOutpost()}};
-  $("hexpage").querySelectorAll("[data-h]").forEach(bt=>bt.onclick=()=>{
-    OUT.sel=+bt.dataset.h;saveOut();renderOutpost()});
-  const cl=$("hxClaim");if(cl)cl.onclick=()=>outClaim(sel);
-  $("hexpage").querySelectorAll("[data-build]").forEach(bt=>bt.onclick=()=>
-    outBuild(sel,bt.dataset.build));
-  if(!OUT.timer)OUT.timer=1;
-  startOut();
-}
-const BLD_GLYPH={keep:"★",harvest:"✜",depot:"▣",beacon:"◈"};
-
-function outPanel(h){
-  const T=TERRAIN[h.t],y=outYield(h);
-  const can=outClaimable(h),cc=CLAIM_COST(h);
-  return `<div class="hexq">
-    <div class="hqt" style="--tc:${T.c}"><b>${esc(T.n)}</b>
-      <span>${h.owned?(h.b?`${esc(BUILDINGS[h.b].n)} · level ${h.lv}`:"Held · empty"):
-        can?"Within reach":"Too far to reach"}</span></div>
-    <div class="hqb">
-      <div class="hqy">Produces
-        ${["ink","stone","lore"].filter(k=>y[k]).map(k=>
-          `<b>${OUTNUM(y[k])}</b> ${k}/h`).join(" · ")||"<b>nothing</b> until you hold it"}</div>
-      ${!h.owned?(can
-        ? `<button class="btn go" id="hxClaim">Claim — ${cc.ink} ink · ${cc.stone} stone</button>`
-        : `<div class="hint">Out of reach. Claim something closer, or raise a Beacon.</div>`)
-       : TERRAIN[h.t].nobuild
-        ? `<div class="hint">Nothing can be built on open water — it just produces.</div>`
-        : `<div class="blds">${Object.entries(BUILDINGS).filter(([k])=>k!=="keep"||h.b==="keep")
-            .map(([k,B])=>{
-              const lv=h.b===k?h.lv:0;
-              const maxed=lv>=B.max, blocked=h.b&&h.b!==k;
-              const c=outCost(k,lv);
-              return `<button class="bld${outCan(c)&&!maxed&&!blocked?" ok":""}"
-                data-build="${k}" ${maxed||blocked?"disabled":""}>
-                <b>${BLD_GLYPH[k]} ${esc(B.n)}${lv?" "+lv:""}</b>
-                <i>${esc(B.d)}</i>
-                <u>${maxed?"Maximum":blocked?"Occupied":
-                  `${c.ink} ink${c.stone?" · "+c.stone+" stone":""}${c.lore?" · "+c.lore+" lore":""}`}</u>
-              </button>`}).join("")}</div>`}
-    </div></div>`;
-}
-/* The board re-renders on a slow timer so production visibly ticks up. */
-let OUTTIMER=null;
-function startOut(){if(OUTTIMER)return;
-  OUTTIMER=setInterval(()=>{if(!$("hexpage")||!$("vHex").classList.contains("on")){stopOut();return}
-    outTick();
-    const r=outRates(),o=$("hexpage").querySelectorAll(".ore b");
-    if(o.length>=3){o[0].textContent=OUTNUM(OUT.ink);o[1].textContent=OUTNUM(OUT.stone);
-      o[2].textContent=OUTNUM(OUT.lore)}
-  },3000)}
-function stopOut(){if(OUTTIMER){clearInterval(OUTTIMER);OUTTIMER=null}}
-
-function renderClicker(){
-  const fish=CARDS.find(c=>c.f==="Flounder - Voice of Reason")||CARDS.find(c=>c.n==="Flounder");
-  const st=load(CLICKKEY,{clicks:0});
-  $("clickpage").innerHTML=`<div class="page">
-    <button class="btn" id="clExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">💙</span>Click on fish</h1>
-    <p class="lede">That's it. That's the game. He likes it.</p>
-    <div class="clickwrap">
-      <button class="clickcard" id="clCard">
-        ${fish&&fish.img?`<img src="${esc(fish.img)}" alt="Flounder">`:""}
-      </button>
-      <div class="clickhud">
-        <div><b id="clN">${N(st.clicks)}</b><i>clicks, all time</i></div>
-        <div><b id="clD">0</b><i>dust this visit</i></div>
-        <div><b id="clR">0.0</b><i>per second</i></div>
-      </div>
-      <div class="clcombo" id="clCombo" hidden></div>
-    </div>
-    ${leaderboard("click")}
-  </div>`;
-  const card=$("clCard");let earned=0;
-  if(!card)return;
-  /* pointerdown, not click, and touch-action on the element itself.
-
-     On a phone this was unusable: tapping fast is exactly the gesture a
-     browser reads as double-tap-to-zoom, so the page lurched in and out and
-     the taps that did land arrived 300ms late. touch-action:manipulation tells
-     the browser this element has no double-tap gesture, which removes both the
-     zoom and the delay; firing on pointerdown rather than click means the
-     heart appears under your finger the instant it lands, which is the entire
-     point of a clicker. preventDefault stops the tap turning into a text
-     selection when you rattle through twenty of them. */
-  card.style.touchAction="manipulation";
-  /* The rate readout is the whole "minimal but satisfying" ask: nothing to
-     manage, nothing to buy, just the game noticing how fast you are going and
-     saying so. Timestamps in a rolling two-second window, decayed by a timer
-     so it falls back to zero when you stop rather than freezing on your best
-     number. Parked on AQ-style cleanup via the exit handler below. */
-  const taps=[];
-  let rateTimer=null;
-  const paintRate=()=>{
-    const now=performance.now();
-    while(taps.length&&now-taps[0]>2000)taps.shift();
-    const r=taps.length/2;
-    const el=$("clR");if(el)el.textContent=r.toFixed(1);
-    const cb=$("clCombo");
-    if(cb){
-      const hot=r>=6;
-      cb.hidden=!hot;
-      if(hot)cb.textContent=r>=12?"UNSTOPPABLE":r>=9?"ON FIRE":"NICE";
-    }
-    if(!taps.length&&rateTimer){clearInterval(rateTimer);rateTimer=null}
-  };
-  card.onpointerdown=e=>{
-    e.preventDefault();
-    taps.push(performance.now());
-    if(!rateTimer)rateTimer=setInterval(paintRate,120);
-    paintRate();
-    /* This is the clicker, not the aquarium — it has its own card and reads its
-       own rect. (A careless global find-and-replace while fixing the tank's
-       layout thrashing pointed this line at the tank's cached rect, which does
-       not exist on this page; every tap threw and the counter never moved.) */
-    const r=card.getBoundingClientRect();
-    const h=document.createElement("span");h.className="heart";
-    h.textContent=["💙","💚","💛","🩵","💖"][Math.floor(Math.random()*5)];
-    h.style.left=(e.clientX-r.left)+"px";h.style.top=(e.clientY-r.top)+"px";
-    h.style.setProperty("--dx",(Math.random()*60-30)+"px");
-    card.appendChild(h);setTimeout(()=>h.remove(),1400);
-    st.clicks++;save(CLICKKEY,st);lbPost("click",st.clicks);
-    if(dustGain(1))earned++;
-    $("clN").textContent=N(st.clicks);$("clD").textContent=N(earned);
-    card.classList.remove("pop");void card.offsetWidth;card.classList.add("pop");
-    if(st.clicks>=500)unlockHidden("h_click");
-  };
-  /* Bound after the timer exists so leaving the page takes it with us. */
-  const ex=$("clExit");
-  if(ex)ex.onclick=()=>{if(rateTimer)clearInterval(rateTimer);
-    OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
 }
 
 /* ===================== worldbuilding =====================
@@ -11448,7 +10914,6 @@ const ACHIEVEMENTS=[
  {id:"sharp",     d:5,  t:"Sharp eye",         w:"Get one right in Guess the card"},
  {id:"eagle",     d:15, t:"Eagle eye",         w:"Guess right without zooming out once"},
  {id:"streak5",   d:15, t:"On a roll",         w:"Five correct guesses in a row"},
- {id:"reader",    d:15, t:"Read the room",     w:"Finish a whole ink in Read every card"},
  {id:"coconut",   d:15, t:"Coconut convert",   w:"Finish the Guided Coconut Build"},
  {id:"curator",   d:10, t:"Curator",           w:"Tag ten cards as staples"},
  {id:"quiz",      d:10, t:"Quizmaster",        w:"Win a round of any guessing game"},
@@ -11531,7 +10996,8 @@ const HIDDEN=[
     ??? rows above. Nobody should be able to see that this one exists. */
  {id:"h_aqua",  t:"Aquarist",         h:"Feed a certain fish rather a lot.",
   d:"Twenty-five snacks. He remembers who feeds him."},
- {id:"h_click", t:"Affectionate",     h:"Show one card an unreasonable amount of love.",
+ /* retired: Click on fish was removed — kept so anyone who earned it keeps the title */
+ {id:"h_click", t:"Affectionate", secret:true,     h:"Show one card an unreasonable amount of love.",
   d:"Five hundred clicks. That's not a hobby, that's a relationship."},
  {id:"h_rat2",  t:"What Did You Call Me?", h:"Search for a rat. Then look one in the eye.",
   d:"He is a GREAT man. And you searched “rat”."},
@@ -11543,7 +11009,8 @@ const HIDDEN=[
   d:"Sixty-one. You had one job."},
  {id:"h_rabbit", t:"Rabbit Season",    h:"Add a Rabbit to a deck at the right time of year.",
   d:"March or April. You found the rabbit in rabbit season."},
- {id:"h_hex",    t:"Cartographer",     h:"Raise twelve buildings in Outpost.",
+ /* retired: Outpost was removed — kept so anyone who earned it keeps the title */
+ {id:"h_hex",    t:"Cartographer", secret:true,     h:"Raise twelve buildings in Outpost.",
   dust:25000},
  {id:"h_100",    t:"One Hundred Friends", secret:true, dust:10000000,
   h:"", d:"One hundred Flounder. The best cards really are the friends you make along the way."},
@@ -11980,256 +11447,6 @@ function renderGuess(){
     if(pickedRight)toast(`+${GQ.won} · streak ${GS.streak}`);
   });
 }
-
-/* ===================== card reader =====================
-   "Read every card in order" — a teleprompter for Ben's set-walkthrough videos
-   and a browsable archive for everyone else.
-
-   Sections are set × ink. A dual-ink card appears under BOTH of its inks on
-   purpose: someone watching the Steel video wants the Amber/Steel cards in it.
-   Grouping by the exact ink string instead ("Amber/Steel" as its own section)
-   produced 125 sections, 46 of them with fewer than five cards — unusable as a
-   menu, and nobody is filming a one-card video. */
-let RD=load("fs3_read",null);          // {set, ink, i} — the position, kept even after you leave
-let RVIEW=load("fs3_rview","menu");    // "menu" | "read" — what is actually on screen
-const INKORDER=["Amber","Amethyst","Emerald","Ruby","Sapphire","Steel"];
-const readSets=()=>[...new Set(CARDS.map(c=>c.s))]
-  .filter(code=>CARDS.some(c=>c.s===code))
-  .sort((a,b)=>String((DATA.sets[a]||{}).d).localeCompare(String((DATA.sets[b]||{}).d)));
-function readSection(set,ink){
-  return CARDS.filter(c=>c.s===set&&(c.co||[]).includes(ink))
-    .sort((a,b)=>{const x=numKey(a.num),y=numKey(b.num);
-      return x[0]-y[0]||String(x[1]).localeCompare(String(y[1]))});
-}
-/* what you'd actually say out loud, in the order you'd say it */
-function readScript(c){
-  const bits=[];
-  bits.push(c.v?`${c.n} — ${c.v}`:c.n);
-  bits.push([`${c.c} ink`,(c.co||[]).join(" / "),c.ty,
-    c.ik?"inkable":"not inkable"].filter(Boolean).join(" · "));
-  if(c.st!=null)bits.push(`${c.st} strength · ${c.wi} willpower · ${c.lo} lore`);
-  if(c.sub.length)bits.push(c.sub.join(" · "));
-  bits.push(c.tx||"(no rules text)");
-  return bits.join("\n");
-}
-/* ===== what you've actually read =========================================
-   A Set holds card FULL NAMES, not counters, because a dual-ink card appears
-   under both of its inks and a counter would double-count it — and because
-   re-reading a card you've already seen must not push the number past the
-   total. Names are the only thing that can't drift. */
-const SEENKEY="fs3_seen";
-let SEEN=new Set(load(SEENKEY,[]));
-function markRead(f){
-  if(!f||SEEN.has(f))return false;
-  SEEN.add(f);save(SEENKEY,[...SEEN]);
-  return true;
-}
-const readDone=(code,ink)=>readSection(code,ink).filter(c=>SEEN.has(c.f)).length;
-function readTotals(){
-  let seen=0,tot=0,sets=0;
-  readSets().forEach(code=>{
-    const inks=INKORDER.map(i=>readSection(code,i)).filter(a=>a.length);
-    if(!inks.length)return;
-    // union across inks, so a dual-ink card counts once for the set
-    const all=new Set(),got=new Set();
-    inks.forEach(a=>a.forEach(c=>{all.add(c.f);if(SEEN.has(c.f))got.add(c.f)}));
-    seen+=got.size;tot+=all.size;
-    if(got.size>=all.size&&all.size)sets++;
-  });
-  return {seen,tot,sets};
-}
-/* Set logos are not in either data source, and they are Ravensburger's art —
-   they have to be dropped in by hand. Put a file at /sets/<code>.png and it
-   appears here on its own; there is no flag to remember to flip, because the
-   img falls back to the number badge the moment the file 404s. That way a set
-   that has art and a set that doesn't can sit side by side and neither looks
-   broken. */
-const setLogo=(code,meta)=>
-  `<span class="rlogowrap">
-    <img class="rlogo" src="sets/${esc(code)}.png" alt="" loading="lazy"
-      onerror="this.remove()">
-    <span class="rnum">${esc(String(code))}</span>
-  </span>`;
-
-function readMenu(){
-  const rows=readSets().map(code=>{
-    const meta=DATA.sets[code]||{},n=CARDS.filter(c=>c.s===code).length;
-    const inks=INKORDER.map(i=>[i,readSection(code,i).length]).filter(x=>x[1]);
-    if(!inks.length)return "";
-    const done=inks.map(([i,k])=>[i,k,readDone(code,i)]);
-    const setSeen=done.reduce((a,x)=>a+x[2],0),setTot=done.reduce((a,x)=>a+x[1],0);
-    const inksDone=done.filter(x=>x[2]>=x[1]).length;
-    const whole=setSeen>=setTot;
-    return `<div class="rset${whole?" complete":""}">
-      <div class="rsh">
-        ${setLogo(code,meta)}
-        <b>${esc(meta.name||("Set "+code))}</b>
-        <span>${n} cards · ${esc(String(meta.d||"").slice(0,4))}</span>
-        <span class="rsdone">${whole
-          ? `<em>Complete</em> · all ${inks.length} inks read`
-          : `${N(setSeen)} / ${N(setTot)} read${inksDone?` · ${inksDone} ink${inksDone===1?"":"s"} finished`:""}`}</span>
-      </div>
-      <div class="rsbar"><i style="width:${setTot?Math.round(setSeen/setTot*100):0}%"></i></div>
-      <div class="rinks">${done.map(([i,k,d])=>{
-        const full=d>=k;
-        return `<button class="rink${full?" done":""}" data-set="${esc(code)}" data-ink="${esc(i)}"
-          style="--ic:${HEX[i]||"#666"}" title="${d} of ${k} read">
-          <i></i>${esc(i)}<span>${full?"✦ all "+k:d+" / "+k}</span>
-          <u style="width:${k?Math.round(d/k*100):0}%"></u></button>`}).join("")}</div></div>`;
-  }).join("");
-  return `<div class="page">
-    <button class="btn" id="rExit" style="margin-bottom:12px">← Other</button>
-    <h1><span class="gi">📖</span>Read every card</h1>
-    <p class="lede">Every card in the game, one at a time, big enough to actually read.
-      Pick a set and an ink.</p>
-    ${(()=>{const t=readTotals();return `<div class="rall">
-      <b>${N(t.seen)}</b> of <b>${N(t.tot)}</b> cards read across the whole game${
-        t.sets?` · <b>${t.sets}</b> set${t.sets===1?"":"s"} complete`:""}
-      <div class="rsbar"><i style="width:${t.tot?Math.round(t.seen/t.tot*100):0}%"></i></div>
-    </div>`})()}
-    ${RD?`<div class="resume"><b>Pick up where you left off</b>
-      <button class="btn go" id="rResume">${esc(SETNAME(RD.set))} · ${esc(RD.ink)} — card ${RD.i+1}</button></div>`:""}
-    <div class="rsets">${rows}</div>
-    <!-- The licence line belongs on any page that leans on Ravensburger's
-         material — here that is every card in the game, plus their set art
-         once the logos are dropped in. Same wording as Settings. -->
-    <div class="legal">
-      <b>Disney Lorcana TCG</b>
-      <p>Ready Set Ink is unofficial fan content. Not published, endorsed or
-        approved by Disney or Ravensburger.</p>
-      <p>© Disney. Disney Lorcana is operated by Ravensburger, an official
-        licensee of Disney.</p>
-    </div>
-  </div>`;
-}
-function readView(){
-  const list=readSection(RD.set,RD.ink);
-  if(!list.length){RD=null;return readMenu()}
-  RD.i=Math.max(0,Math.min(RD.i,list.length-1));
-  save("fs3_read",RD);
-  const c=list[RD.i],pct=((RD.i+1)/list.length*100).toFixed(1);
-  markRead(c.f);        // seeing it is reading it — that's the whole exercise
-  const notes=(c.ru||[]).length+(c.rsi||[]).length;
-  return `<div class="readwrap">
-    <div class="rbar2">
-      <button class="btn" id="rBack">← All sets</button>
-      <b>${esc(SETNAME(RD.set))} · ${esc(RD.ink)}</b>
-      <span class="rct">${RD.i+1} / ${list.length}</span>
-      <div class="sp"></div>
-      <button class="btn" id="rScript">📄 Copy script</button>
-    </div>
-    <div class="rprog"><i style="width:${pct}%"></i></div>
-    <div class="rstage" id="rstage">
-      <button class="redge left" id="rPrev2" aria-label="Previous card"${RD.i?"":" disabled"}><span>‹</span></button>
-      <button class="redge right" id="rNext2" aria-label="Next card"><span>›</span></button>
-      <div class="reader" id="rslide">
-        <div class="rimg">${cImgL(c)?`<img src="${esc(cImgL(c))}" alt="${esc(c.f)}">`
-          :`<div class="ph">${esc(c.f)}</div>`}</div>
-        <div class="rtext">
-          <h2>${esc(c.n)}</h2>${c.v?`<div class="vv">${esc(c.v)}</div>`:""}
-          <div class="mline">
-            ${(c.co||[]).map(i=>`<span class="dot" style="background:${HEX[i]||"#666"}"></span>`).join("")}
-            <span>${esc((c.co||[]).join(" / "))}</span><span class="sep">·</span>
-            <span>${esc(c.ty)}</span><span class="sep">·</span><span>#${esc(String(c.num))}</span>
-            <span class="sep">·</span><span>${esc(c.r)}</span>
-            ${(c.ar||[]).length?`<span class="sep">·</span><span>🖌 ${esc(c.ar.join(" · "))}</span>`:""}</div>
-          <div class="stats">
-            <div class="stt cost"><b>${c.c}</b><i>Cost</i></div>
-            ${c.st!=null?`<div class="stt"><b>${c.st}</b><i>Strength</i></div>`:""}
-            ${c.wi!=null?`<div class="stt"><b>${c.wi}</b><i>Willpower</i></div>`:""}
-            ${c.lo!=null?`<div class="stt lore"><b>${c.lo}</b><i>Lore</i></div>`:""}</div>
-          ${c.sub.length?`<div class="bdgs">${c.sub.map(x=>`<span class="bdg">${esc(x)}</span>`).join("")}</div>`:""}
-          <div class="tx big">${esc(c.tx)||"(no rules text)"}</div>
-          ${c.fl?`<div class="rflav">${esc(c.fl)}</div>`:""}
-          ${(c.tg||[]).length?`<div class="rtags">${c.tg.slice(0,14).map(t=>
-            `<span class="bdg">${esc(t)}</span>`).join("")}</div>`:""}
-          ${(c.ru||[]).length?`<div class="rulings"><h4>From set notes (${c.ru.length})</h4>${
-            c.ru.map(r=>`<div class="ruling"><div class="q">${esc(r.q)}</div>
-              <div class="a">${esc(r.a)}</div>
-              ${r.s?`<div class="src">Official set release notes — ${esc(r.s)}</div>`:""}</div>`).join("")}</div>`:""}
-          ${(c.rsi||[]).length?`<div class="rulings rsi"><h4>Ready Set Ink notes (${c.rsi.length})</h4>${
-            c.rsi.map(r=>{const k=KIND(r.k);
-              return `<div class="ruling rsin" style="border-left-color:${k.c}">
-              <div class="kind" style="color:${k.c}">${k.i} ${esc(k.l)}</div>
-              <div class="a">${esc(r.t)}</div></div>`}).join("")}</div>`:""}
-        </div>
-      </div>
-    </div>
-    <div class="rnav">
-      <button class="btn" id="rPrev"${RD.i?"":" disabled"}>← Previous</button>
-      <button class="btn go" id="rNext">${RD.i+1<list.length?"Next card →":"Finish ✓"}</button>
-    </div>
-    <div class="hint" style="text-align:center">← → arrows, space, or swipe · Esc for the menu${
-      notes?` · this card has ${notes} note${notes===1?"":"s"} below`:""}</div>
-  </div>`;
-}
-/* Slide the card off one way and the next one in from the other, like turning a
-   wheel. Direction matters: going back should feel like going back. */
-function readGo(dir){
-  /* The slide animation defers the position change by 170ms. Press Next twice
-     quickly on the last card and the second press lands after RD has already
-     been cleared by the first — so both the entry and the deferred callback
-     have to tolerate RD being gone. */
-  if(!RD)return;
-  const n=readSection(RD.set,RD.ink).length;
-  const next=RD.i+dir;
-  if(next<0)return;
-  if(next>=n){                                   // past the end = finished
-    markRead(readSection(RD.set,RD.ink).slice(-1)[0]?.f);
-    const inks=INKORDER.map(i=>readSection(RD.set,i)).filter(a=>a.length);
-    const all=new Set();inks.forEach(a=>a.forEach(x=>all.add(x.f)));
-    const whole=[...all].every(f=>SEEN.has(f));
-    toast(whole?`${SETNAME(RD.set)} — every card read`:`${RD.ink} finished`);
-    award("reader");
-    RD=null;save("fs3_read",null);RVIEW="menu";save("fs3_rview",RVIEW);renderRead();return;
-  }
-  const sl=$("rslide");
-  if(!sl||window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    RD.i=next;renderRead();return;
-  }
-  sl.classList.add(dir>0?"outL":"outR");
-  setTimeout(()=>{if(!RD)return;RD.i=next;renderRead();
-    const s2=$("rslide");if(s2){s2.classList.add(dir>0?"inR":"inL");
-      setTimeout(()=>s2.classList.remove("inR","inL"),260)}},170);
-}
-function renderRead(){
-  $("readpage").innerHTML=(RD&&RVIEW==="read")?readView():readMenu();
-  const $$=(id,fn)=>{const e=$(id);if(e)e.onclick=fn};
-  $("readpage").querySelectorAll("[data-ink]").forEach(b=>b.onclick=()=>{
-    RD={set:b.dataset.set,ink:b.dataset.ink,i:0};RVIEW="read";save("fs3_rview",RVIEW);renderRead()});
-  $$("rResume",()=>{RVIEW="read";save("fs3_rview",RVIEW);renderRead()});
-  $$("rExit",()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")});
-  $$("rBack",()=>{RVIEW="menu";save("fs3_rview",RVIEW);renderRead()});
-  $$("rPrev", ()=>readGo(-1));
-  $$("rNext", ()=>readGo(1));
-  $$("rPrev2",()=>readGo(-1));
-  $$("rNext2",()=>readGo(1));
-  /* Swipe. 45px of travel and mostly-horizontal, so scrolling the page doesn't
-     flick you to the next card by accident. */
-  const st=$("rstage");
-  if(st){let x0=null,y0=null;
-    st.addEventListener("touchstart",e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
-    st.addEventListener("touchend",e=>{
-      if(x0==null)return;
-      const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
-      x0=null;
-      if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5)readGo(dx<0?1:-1);
-    },{passive:true});
-  }
-  $$("rScript",()=>{const list=readSection(RD.set,RD.ink);
-    const txt=[`${SETNAME(RD.set)} — ${RD.ink}`,`${list.length} cards`,""]
-      .concat(list.map((c,i)=>`--- ${i+1} of ${list.length} ---\n${readScript(c)}`)).join("\n\n");
-    navigator.clipboard.writeText(txt).then(()=>toast(`Script for ${list.length} cards copied`),
-      ()=>toast("Copy failed"))});
-}
-document.addEventListener("keydown",e=>{
-  if(!$("vRead").classList.contains("on")||!RD||RVIEW!=="read")return;
-  if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
-  const n=readSection(RD.set,RD.ink).length;
-  if(e.key==="ArrowRight"||e.key===" "){e.preventDefault();readGo(1)}
-  else if(e.key==="ArrowLeft"){e.preventDefault();readGo(-1)}
-  else if(e.key==="Escape"){RVIEW="menu";save("fs3_rview",RVIEW);renderRead()}
-});
 
 /* Collection controls inside the card modal — one row per printing, because
    this is where you land after finding a card you just pulled. Hidden wholesale
@@ -13348,7 +12565,7 @@ const OTHER=[
    PATRON gates the patron dust grant, which is off until the money side is
    real, because dust is unenforceable client-side and a patron perk that any
    visitor can mint is worse than no perk. */
-const OFF=["start","err","leak","world","cred","upg","hex"];
+const OFF=["start","err","leak","world","cred","upg"];
 const PATRON_ON=false;
 
 /* ===================== lore tracker =====================
@@ -14844,9 +14061,7 @@ const OTHER_GROUPS=[
    ["Contribute","Write notes that get saved right on a card, or just send in a suggestion — the vague search only works because people describe cards.","contrib"],
    ["Judge","The quickest way to check a card interaction — search by name, or go advanced and build out the board state.","judge"],
    ["My Lorcana Journal","Log your events and matches, see your best and toughest matchups, prep for the next one, and a Top Cut calculator for match day.","/match-history/"],
-   ["Shopping list","The staples you haven't got, grouped into what you'd buy at a few different budgets. Straight into a TCGplayer cart.","shop"],
    ["Recommended decks","Lists that have actually won something, with the card-by-card reasoning. Copy one straight into the deck builder.","meta"],
-   ["Read every card","A carousel through every card at your own pace. Pick a set and an ink, and it tracks what you've already seen.","read"],
    ["Getting started","New here? Start with this.","start"],
    ["Error cards","What counts as an error, what gets replaced, and every known errata.","err"],
    ["Deck upgrades","Point it at a deck and it tells you what's wrong and what to add.","upg"],
@@ -14874,8 +14089,6 @@ const OTHER_GROUPS=[
    ["Guess the flavour text","Do you actually read the cards?","quiz:flavour"],
    ["Guess from the facts","Cost, then strength, then willpower, then artist… only the real gamer Illumineers make it through this one.","quiz:reveal"],
    ["Blue Striped Fish Aquarium","Inspired by our favorite fish. Leave him swimming, sprinkle food, earn dust, go full screen and forget about it.","aqua"],
-   ["Click on fish","The dopamine of clicking “like,” except this one deserves it.","click"],
-   ["Outpost","Sixty-one hexes. Terrain produces, you claim and build and upgrade. It keeps going while the tab is shut.","hex"],
  ]},
  {g:"Coming soon",chips:[
 
@@ -15323,7 +14536,6 @@ function renderPrefs(){
     </div>
     ${row("Collection tracking","pfColl",COLLON)}
     ${row("Card prices","pfPrice",PRICES)}
-    ${row("Shopping suggestions","pfSugg",SUGGON)}
     ${row("Mini games","pfGames",GAMESON)}
     ${row("Dust","pfDust",DUSTON)}
     ${darkOK()
@@ -15367,8 +14579,6 @@ function renderPrefs(){
     v=>v?"Collection features on":"Collection features off");
   flip("pfPrice",()=>PRICES,v=>setPrices(v),
     v=>v?"Prices on":"Prices off");
-  flip("pfSugg",()=>SUGGON,v=>{SUGGON=v;save("fs3_suggon",v);renderOther()},
-    v=>v?"Shopping list added to Other":"Shopping list hidden");
   flip("pfGames",()=>GAMESON,v=>{GAMESON=v;save("fs3_gameson",v)},
     v=>v?"Mini games on":"Mini games off");
   flip("pfDust",()=>DUSTON,v=>{DUSTON=v;save("fs3_duston",v)},
@@ -15382,7 +14592,6 @@ function renderPrefs(){
     COLLON=on;save(K_COLLON,on);
     GAMESON=on;save("fs3_gameson",on);
     DUSTON=on;save("fs3_duston",on);
-    SUGGON=on;save("fs3_suggon",on);
     PRICES=on&&!!priceDate();save("fs3_prices",PRICES);
     renderOther();renderPrefs();applyPrefs();
     toast(on?"Everything switched on":"Stripped back to search and decks")};
@@ -15398,7 +14607,6 @@ function renderPrefs(){
      COLLON=true;save(K_COLLON,true);
      GAMESON=true;save("fs3_gameson",true);
      DUSTON=true;save("fs3_duston",true);
-     SUGGON=false;save("fs3_suggon",false);
      setPrices(false);
      applyPrefs();renderOther();
      OPAGE="";save("fs3_opage",OPAGE);showTab("tDeck");
@@ -15424,113 +14632,6 @@ function renderPrefs(){
    }}
   applyPrefs();
 }
-/* ===================== shopping list =====================
-   Off unless you switched it on. It answers one question — of the cards this
-   site keeps calling staples, which have you not got — and then offers a few
-   sized shopping trips rather than one 200-card wall.
-
-   The budget bundles use the baked price snapshot, so they're a guide rather
-   than a quote — the page says so. If a build ever ships without prices they
-   disable themselves and the two bundles that need no prices still work. */
-const SHOP_BUDGETS=[20,50,100];
-function shopMissing(){
-  /* Staples not in your collection at all. Quantity 1 each: a shopping list is
-     "get one of these", and anyone who wants a playset can change the number in
-     the cart, which is one click there and a whole settings argument here. */
-  return CARDS.filter(c=>isStar(c.f)&&legal(c)&&ownedByName(c)===0)
-    .sort((a,b)=>(a.sn||"").localeCompare(b.sn||"")||a.n.localeCompare(b.n))
-    .map(c=>({c,q:1}))}
-function renderShop(){
-  const miss=shopMissing();
-  const newest=SETS.length?SETS[0]:null;
-  const inNewest=newest?miss.filter(x=>x.c.s===newest[0]):[];
-  const priced=miss.map(x=>({...x,p:rawPrice(x.c)})).filter(x=>x.p!=null);
-  const haveFeed=priced.length>0;
-  /* Cheapest first, take while the running total fits. Cheap-first is what
-     actually maximises how many staples you come home with. */
-  const budget=n=>{
-    const out=[];let sum=0;
-    priced.slice().sort((a,b)=>a.p-b.p).forEach(x=>{
-      if(sum+x.p<=n){out.push(x);sum+=x.p}});
-    return {rows:out,sum}};
-  /* Every bundle opens its own list. A shopping page that only says "18 cards"
-     is asking you to trust it with your money sight unseen — the point of a
-     shopping list is that you read it before you buy it. */
-  const bundle=(id,title,note,rows,disabled,why)=>{
-    const sum=rows.reduce((a,x)=>a+(x.p||0),0);
-    return `<div class="shopb${disabled?" off":""}">
-      <div class="shopmain">
-        <b>${esc(title)}</b><p>${esc(note)}</p>
-        ${disabled?`<span class="soonlbl">${esc(why)}</span>`
-          :`<span class="shopn">${rows.length} card${rows.length===1?"":"s"}${
-             haveFeed&&sum?" · about "+money(sum):""}</span>`}
-        ${rows.length?`<details class="shoplist"><summary>See the ${rows.length} cards</summary>
-          <ol>${rows.map(x=>`<li><span>${esc(x.c.n)}${x.c.v?` <i>${esc(x.c.v)}</i>`:""}</span>
-            <em>${esc(x.c.sn||"")}</em>${x.p!=null?`<b>${money(x.p)}</b>`:""}</li>`).join("")}</ol>
-        </details>`:""}
-      </div>
-      <button class="btn go" data-buy="${esc(id)}"${disabled||!rows.length?" disabled":""}>🛒 Open in TCGplayer</button>
-    </div>`};
-  const bundles={};
-  const add=(id,t,n,rows,dis,why)=>{bundles[id]=rows;return bundle(id,t,n,rows,dis,why)};
-  const html=[
-    ...SHOP_BUDGETS.map(n=>add("b"+n,`About $${n} of staples`,
-      `The most staples you can get for around $${n}, cheapest first — the quickest way to make a deck legal on a budget.`,
-      haveFeed?budget(n).rows:[],!haveFeed,"No prices in this build")),
-    add("newest","Every staple from "+(newest?newest[1].n:"the newest set"),
-      "The current set only — what you'll see across the table this season.",
-      inNewest,false),
-    add("all","Every staple I'm missing",
-      "The whole list, every set. Big — read it before you buy it.",
-      miss,false)
-  ].join("");
-  const totalValue=priced.reduce((a,x)=>a+x.p,0);
-  $("shoppage").innerHTML=`<div class="page">
-    <button class="btn" id="shopBack">← Back to Other</button>
-    <h1><span class="gi">🛒</span>Shopping list</h1>
-    <p class="lede">${miss.length
-      ? `You're missing <b>${miss.length}</b> of the cards this site calls staples${
-          haveFeed&&totalValue?`, worth roughly <b>${money(totalValue)}</b> all together`:""}.
-         Pick a size below. Each one loads straight into a TCGplayer cart as one of each —
-         change the numbers there if you want playsets.`
-      : `You aren't missing a single staple. Nothing to sell you.`}</p>
-    <!-- The most valuable thing on this page and it isn't ours. Buying thirty
-         singles from thirty sellers means thirty lots of shipping, which
-         regularly costs more than the cards. Said plainly, above the buttons,
-         not buried in a footnote nobody reads. -->
-    <div class="shoptip">
-      <b>Use the cart optimizer when you get there</b>
-      <p>TCGplayer's cart has an <b>Optimize Cart</b> step — always use it. It works out
-        which combination of sellers gets your whole list to you for the least money.
-        Twenty singles from twenty different sellers is twenty lots of shipping, and
-        that is usually more than the cards cost. One click, and it is the difference
-        between a $25 order and a $60 one.</p>
-      <p class="shoptip2">Two more things worth doing on their side: set a
-        <b>minimum seller rating</b> so nothing turns up creased, and open the
-        <b>condition</b> filter — Lightly Played plays exactly the same as Near Mint
-        and is routinely a third cheaper.</p>
-    </div>
-    ${COLLON?"":`<div class="legal"><b>Collection tracking is off</b>
-      <p>This page works out what you're missing from your collection, and there
-        isn't one. Switch collection tracking on in Settings and it'll have
-        something to go on — until then it's assuming you own nothing.</p></div>`}
-    ${html}
-    <div class="legal">
-      ${haveFeed?`<p>Every number on this page is the REAL market price from a snapshot
-        taken on ${esc(priceDate())} — not the rounded price shown on the cards. Budgets
-        that round themselves into a joke would send you to a checkout with the wrong
-        amount of money. What you actually pay is whatever TCGplayer says when you get
-        there, and the cart optimizer will usually beat the number shown here.</p>`:""}
-      <p>We may earn an affiliate commission from purchases made through links on this
-        website. It costs you nothing, and it never changes which cards this page
-        suggests — staples are picked by what wins games, and the list would be
-        identical with no commission at all.</p></div>
-  </div>`;
-  $("shopBack").onclick=()=>{OPAGE="";save("fs3_opage",OPAGE);showTab("tOther")};
-  $("shoppage").querySelectorAll("[data-buy]").forEach(b=>b.onclick=()=>
-    tcgOpen(bundles[b.dataset.buy]||[],"that bundle is empty"));
-}
-
 /* ===================== welcome tour =====================
    Shown once, on a first visit or after Reset setup in Settings. Five cards
    about what this site has that the other Lorcana tools don't, then an
@@ -15589,12 +14690,7 @@ const TOURSET=[
   why:"A rough market price under each card, from a snapshot. Off by default.",
   opts:()=>[[0,"No, just the cards",""],[1,"Yes, show prices",""]],
   get:()=>PRICES?1:0,
-  set:v=>setPrices(!!v&&!!priceDate())},
- {k:"sugg",t:"Shopping suggestions?",
-  why:"A page that works out which staples you're missing and groups them into what you'd buy at a few budgets. Off by default.",
-  opts:()=>[[0,"No thanks",""],[1,"Yes, add the shopping list",""]],
-  get:()=>SUGGON?1:0,
-  set:v=>{SUGGON=!!v;save("fs3_suggon",SUGGON);renderOther()}}
+  set:v=>setPrices(!!v&&!!priceDate())}
 ];
 function tourSparkle(host){
   if(!host)return;
@@ -15719,7 +14815,6 @@ function applyPrefs(){
 function applyCollPref(){document.body.classList.toggle("nocoll",!COLLON)}
 
 const OPAGES={
-  read:  ["vRead",   ()=>renderRead()],
   guess: ["vGuess",  ()=>renderGuess()],
   dust:  ["vDust",   ()=>renderDust()],
   quiz:  ["vQuiz",   ()=>renderQuiz()],
@@ -15731,13 +14826,10 @@ const OPAGES={
   leak:  ["vLeak",   ()=>renderLeaks()],
   world: ["vWorld",  ()=>renderWorld()],
   aqua:  ["vAqua",   ()=>renderAqua()],
-  click: ["vClick",  ()=>renderClicker()],
-  hex:   ["vHex",    ()=>renderOutpost()],
   cred:  ["vCred",   ()=>renderCredits()],
   links: ["vLinks",  ()=>renderLinks()],
   account:["vAccount",()=>renderAccount()],
   pref:  ["vPref",   ()=>renderPrefs()],
-  shop:  ["vShop",   ()=>renderShop()],
   lore:  ["vLore",   ()=>{LORE_FRESH=true;renderLore()}],
   judge: ["vJudge",  ()=>renderStandaloneJudge()],
   meta:  ["vMeta",   ()=>renderMetaPage()],
@@ -15747,7 +14839,7 @@ const OPAGES={
 /* The three guessing games are "quiz:ability", "quiz:flavour", "quiz:reveal",
    so this matches on the prefix — listing them individually is how the next
    one added would quietly escape the switch. */
-const GAMEPAGES=["guess","quiz","aqua","click","hex"];
+const GAMEPAGES=["guess","quiz","aqua"];
 const isGamePage=p=>GAMEPAGES.some(g=>p===g||p.indexOf(g+":")===0);
 /* A tile's "page" is one of three things: an internal view name ("dust"), a
    same-site path ("/match-history/"), or a full URL off to another
@@ -15759,8 +14851,7 @@ const isExternalLink=p=>/^https?:\/\//.test(p);
 function renderOther(){
   const hidden=p=>OFF.includes(p)
     ||(!GAMESON&&isGamePage(p))
-    ||(!DUSTON&&p==="dust")
-    ||(!SUGGON&&p==="shop");
+    ||(!DUSTON&&p==="dust");
   const groups=OTHER_GROUPS
     .map(gr=>({...gr,chips:gr.chips.filter(([,,page])=>!hidden(page))}))
     .filter(gr=>gr.chips.length);
@@ -15785,7 +14876,7 @@ function renderOther(){
    reading — the tab bar is for the four things you come here to DO. Its view
    and its renderer are unchanged; only the way in moved. */
 const TABS=["tDeck","tSearch","tColl","tDecks","tOther"];
-const VIEWS=["vSearch","vGuide","vColl","vDecks","vMeta","vOther","vRead","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vClick","vHex","vCred","vPref","vShop","vLore","vJudge","vLinks","vAccount"];
+const VIEWS=["vSearch","vGuide","vColl","vDecks","vMeta","vOther","vGuess","vDust","vQuiz","vContrib","vErr","vStart","vUp","vMick","vLeak","vWorld","vAqua","vCred","vPref","vLore","vJudge","vLinks","vAccount"];
 /* TAB is read from storage HERE rather than being left at "tDeck" until
    showTab() runs at the bottom of the file. The grid is rendered before that
    line, and tile() and bindGrid() both branch on TAB — so booting straight
@@ -16105,8 +15196,7 @@ $("tLore").onclick=()=>{OPAGE="lore";save("fs3_opage",OPAGE);showTab("tOther")};
 function renderOtherMenu(){
   const hidden=p=>OFF.includes(p)
     ||(!GAMESON&&isGamePage(p))
-    ||(!DUSTON&&p==="dust")
-    ||(!SUGGON&&p==="shop");
+    ||(!DUSTON&&p==="dust");
   $("otherMenu").innerHTML=OTHER_GROUPS.map(gr=>{
     const chips=gr.chips.filter(([,,page])=>page&&!hidden(page));
     if(!chips.length)return"";
@@ -16805,7 +15895,7 @@ NAV.querySelectorAll("[data-go]").forEach(b=>{if(b.dataset.go==="more")return;
    Other page and hamburger read — so a game added there shows up here too. */
 const NB_GICON={"":"star","Tools":"map-pin","Mini games":"swords"};
 function nbMoreHTML(){
-  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust")||(!SUGGON&&p==="shop");
+  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust");
   const item=([t,,page])=>isPageLink(page)
     ?`<a role="menuitem" href="${esc(page)}"${isExternalLink(page)?` target="_blank" rel="noopener"`:""}>${esc(t)}${isExternalLink(page)?" ↗":""}</a>`
     :`<button type="button" role="menuitem" data-op="${esc(page)}">${esc(t)}</button>`;
@@ -16813,10 +15903,9 @@ function nbMoreHTML(){
   const build=`<div class="nbmcol"><h4>${ic("deck")}Deck building</h4>
       <button type="button" role="menuitem" data-mm="guided">Guided Coconut Build</button>
       <button type="button" role="menuitem" data-op="meta">Top decks</button>
-      <button type="button" role="menuitem" data-mm="pull">Pull sheet for this deck</button>
-      ${hidden("shop")?"":`<button type="button" role="menuitem" data-op="shop">Shopping list</button>`}</div>`;
+      <button type="button" role="menuitem" data-mm="pull">Pull sheet for this deck</button></div>`;
   return `<div class="nbmcols">${build}${groups.map(gr=>`<div class="nbmcol"><h4>${ic(NB_GICON[gr.g]||"star")}${esc(gr.g||"Around the site")}</h4>
-      ${gr.chips.filter(([,,p])=>!(gr.g===""&&(p==="meta"||p==="shop"))).map(item).join("")}</div>`).join("")}</div>
+      ${gr.chips.filter(([,,p])=>!(gr.g===""&&p==="meta")).map(item).join("")}</div>`).join("")}</div>
     <div class="nbmfoot">
       <button type="button" role="menuitem" data-mm="all">See everything</button>
       <button type="button" role="menuitem" data-mm="theme">${ic("theme")}Light / dark</button>
@@ -17927,7 +17016,7 @@ const NB_FISH=`<svg class="nbh-fish" viewBox="0 0 420 280" aria-hidden="true">
 </svg>`;
 const NB_HICON={build:"deck",cards:"search",decks:"cards",games:"swords",map:"map-pin",ink:"star",rules:"book",lore:"inkwell",more:"menu"};
 function nbHomeMenus(){
-  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust")||(!SUGGON&&p==="shop");
+  const hidden=p=>OFF.includes(p)||(!GAMESON&&isGamePage(p))||(!DUSTON&&p==="dust");
   const fromGroup=g=>((OTHER_GROUPS.find(x=>x.g===g)||{chips:[]}).chips).filter(([,,p])=>p&&!hidden(p))
     .map(([t,d,p])=>isPageLink(p)?{l:t,d,href:p}:{l:t,d,op:p});
   const games=fromGroup("Mini games");
