@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/motunui-island-paradise.html
 
 > REINCARNATION Whenever a character is banished while here, you may put that card into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.21 foil

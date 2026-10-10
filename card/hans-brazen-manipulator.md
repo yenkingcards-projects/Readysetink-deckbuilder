@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/hans-brazen-manipulator.html
 > JOSTLING FOR POWER King and Queen characters can't quest.
 > GROWING INFLUENCE At the start of your turn, if an opponent has 2 or more ready characters in play, gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.31 foil

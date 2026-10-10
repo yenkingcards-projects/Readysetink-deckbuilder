@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/donald-duck-flustered-sorcerer.html
 
 Flavor text: When it comes to magic spells, proper pronunciation is key.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.18 regular, $4.02 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.16 regular, $4.01 foil

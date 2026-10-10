@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hans-thirteenth-in-line.html
 
 Flavor text: Tired of being last, he decided to cut the line.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.97 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $0.98 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/demona-betrayer-of-the-clan.html
 > Challenger +2 (While challenging, this character gets +2 ¤.)
 > STONE BY DAY If you have 3 or more cards in your hand, this character can't ready.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.32 foil

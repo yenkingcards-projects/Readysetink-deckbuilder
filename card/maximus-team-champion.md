@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/maximus-team-champion.html
 
 Flavor text: It's easy to get carried away when it comes to tug-of-war.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.72 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.85 foil

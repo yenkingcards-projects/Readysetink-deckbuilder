@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ursulas-lair-eye-of-the-storm.html
 > SLIPPERY HALLS Whenever a character is banished in a challenge while here, you may return them to your hand.
 > SEAT OF POWER Characters named Ursula get +1 ◊ while here.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.64 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.65 foil

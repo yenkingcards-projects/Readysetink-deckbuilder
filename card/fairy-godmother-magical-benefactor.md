@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fairy-godmother-magical-benefactor.html
 > Boost 3 ⬡ (Once during your turn, you may pay 3 ⬡ to put the top card of your deck facedown under this character.)
 > STUNNING TRANSFORMATION Whenever you put a card under this character, you may banish chosen opposing character. If you do, their player may reveal the top card of their deck. If that card is a character or item card, they may play it for free. Otherwise, they put it on the bottom of their deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.96 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.94 foil

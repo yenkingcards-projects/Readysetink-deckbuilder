@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/emily-quackfaster-level-headed-libraria
 Flavor text: “Hana's Herborium? The book that Illumineer wrote?
 Our only copy has been checked out, sadly.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.39 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/willie-the-giant-ghost-of-christmas-pre
 > Boost 3 ⬡ (Once during your turn, you may pay 3 ⬡ to put the top card of your deck facedown under this character.)
 > THE FOOD OF GENEROSITY This character can't quest or challenge unless you put a card under him this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.41 foil

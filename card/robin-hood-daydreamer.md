@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/robin-hood-daydreamer.html
 
 Flavor text: “Some days, it's nice to let the river do the running.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.41 foil

@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/hercules-mighty-leader.html
 - Q: Does Hercules’s ability Ever Vigilant apply when he’s challenging, too?
   A: No. The difference between a challenging character and one that’s being challenged is whether they’re the active player’s character or the opponent’s character. The active player declares which of their characters is the challenger, and the opposing character they chose is the one being challenged. So Ever Vigilant doesn’t make Hercules immune from all challenge damage. He can’t be dealt damage when he’s challenging (or outside of a challenge), but he can be dealt damage if he’s being challenged. Have further questions about any cards? Join the community at discord.gg/disneylorcana and ask away! We’re a friendly bunch.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $5.98 regular, $9.00 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $5.36 regular, $8.99 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/elsa-spirit-of-winter.html
 
 Flavor text: Ice is stronger than you may think.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $5.24 regular, $62.00 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $4.96 regular, $64.94 foil

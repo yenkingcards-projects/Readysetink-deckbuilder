@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/judy-hopps-uncovering-clues.html
 
 > THOROUGH INVESTIGATION When you play this character and whenever she quests, look at the top 3 cards of your deck. You may reveal a Detective character card and put it into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.98 regular, $2.47 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.00 regular, $2.44 foil

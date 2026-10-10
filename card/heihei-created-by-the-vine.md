@@ -20,4 +20,4 @@ Flavor text: A copy with even less sense than the original.
 - Q: If I quest with Heihei – Created by the Vine, does his Botanical Remedy ability trigger?
   A: Yes, Heihei recognizes his Floodborn classification and will trigger this ability when he quests. (We don’t know, however, where he’ll end up.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.75 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $0.71 foil

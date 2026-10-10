@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-bare-necessities.html
 
 Flavor text: Forget about your worries and your strife....
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.30 regular, $0.76 foil

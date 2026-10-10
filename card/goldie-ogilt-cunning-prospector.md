@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/goldie-ogilt-cunning-prospector.html
 > CLAIM JUMPER When you play this character, chosen opponent reveals their hand and discards a location card of your choice.
 > STRIKE GOLD Whenever this character quests, you may put a location card from chosen player's discard on the bottom of their deck to gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.38 foil

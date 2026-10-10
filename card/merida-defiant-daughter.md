@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/merida-defiant-daughter.html
 
 Flavor text: “‘Stay in camp, Merida.’ ‘Be an example, Merida.’ What could it hurt to go out and explore? I'll stay on the vine and they'll never even know.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.22 foil

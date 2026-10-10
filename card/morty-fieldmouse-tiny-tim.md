@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/morty-fieldmouse-tiny-tim.html
 > HOLIDAY SPIRIT Once during your turn, whenever you put a card under one of your other characters, put the top card of your deck facedown under this character.
 > HOLIDAY CHEER This character gets +1 ◊ for each card under him.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.54 foil

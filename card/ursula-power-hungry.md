@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ursula-power-hungry.html
 
 Flavor text: The first Rule of Villainy: If you're going to be evil, you've got to have style.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.40 regular, $20.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.48 regular, $20.52 foil

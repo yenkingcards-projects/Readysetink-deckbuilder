@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/mrs-beakley-former-s-h-u-s-h-agent.html
 
 Flavor text: Initiator of the STOP protocol: Strategic Termination of Progression.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.24 foil

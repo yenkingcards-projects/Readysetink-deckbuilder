@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/one-jump-ahead.html
 
 Flavor text: Gotta eat to live, gotta steal to eat— Tell you all about it when I got the time
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.85 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.87 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/rajah-ghostly-tiger.html
 
 Flavor text: He may be spectral, but the danger is very real.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.32 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/genie-investigative-mind.html
 
 Flavor text: “You know, most books are a lot more compelling when you read the pages in order...”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.19 foil

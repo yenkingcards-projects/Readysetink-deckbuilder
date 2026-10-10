@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/carl-fredricksen-loving-husband.html
 
 Flavor text: “You know, Ellie, I think we're going to be together forever.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular

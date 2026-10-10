@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mike-wazowski-well-rounded-entertainer.
 
 Flavor text: “Hey, good evening, how are ya? Nice to see ya. I tell you it's great to be here in...your room. Where are you from?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.22 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/glean.html
 
 Flavor text: “This could be just the thing I need to get my invention working.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.20 foil

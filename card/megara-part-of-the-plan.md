@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/megara-part-of-the-plan.html
 Flavor text: “The sooner we get this done, the sooner I'm free...
 of you.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.18 foil

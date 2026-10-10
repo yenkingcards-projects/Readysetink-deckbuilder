@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/queen-of-hearts-unpredictable-bully.htm
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Queen of Hearts.)
 > IF I LOSE MY TEMPER... Whenever another character is played, put a damage counter on them.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $1.75 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.37 regular, $1.76 foil

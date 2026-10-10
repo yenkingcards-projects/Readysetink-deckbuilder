@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/daisy-duck-secret-agent.html
 
 > THWART Whenever this character quests, each opponent chooses and discards a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.31 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-white-rose-jewel-of-the-garden.html
 Flavor text: “You can learn a lot of things from the flowers...”
 —Alice
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.59 foil

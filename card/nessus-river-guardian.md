@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/nessus-river-guardian.html
 
 Flavor text: He sent the eels away when they came with the sea witch's offer. He didn't need her help making trouble.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.15 foil

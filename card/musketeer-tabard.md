@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/musketeer-tabard.html
 
 Flavor text: There's no such thing as a lone musketeer.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.86 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $0.87 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/chief-bogo-calling-the-shots.html
 > MY JURISDICTION During your turn, this character can't be dealt damage.
 > DEPUTIZE Your other characters gain the Detective classification.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.33 foil

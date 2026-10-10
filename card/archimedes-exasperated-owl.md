@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/archimedes-exasperated-owl.html
 
 Flavor text: “Hmph. What does an owl have to do to get a little peace and quiet around here?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.19 foil

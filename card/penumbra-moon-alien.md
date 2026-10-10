@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/penumbra-moon-alien.html
 
 Flavor text: “You will treat the vastly superior Moon with respect, or you will suffer the ultimate consequence.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.37 foil

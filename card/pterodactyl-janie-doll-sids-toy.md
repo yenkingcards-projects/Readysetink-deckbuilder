@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pterodactyl-janie-doll-sids-toy.html
 Flavor text: “The first step of her transformation is complete.”
 —Sid
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.27 foil

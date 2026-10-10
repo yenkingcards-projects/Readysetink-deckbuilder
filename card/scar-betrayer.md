@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scar-betrayer.html
 
 Flavor text: The second Rule of Villainy: Never settle for second place.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.28 foil

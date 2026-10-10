@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fred-major-science-enthusiast.html
 
 Flavor text: “Don't be alarmed. It is just a suit. This is not my real face and body.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.23 foil

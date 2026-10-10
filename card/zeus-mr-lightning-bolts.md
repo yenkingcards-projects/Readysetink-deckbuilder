@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/zeus-mr-lightning-bolts.html
 
 Flavor text: “Ha! Now watch your old man work!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.59 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.60 foil

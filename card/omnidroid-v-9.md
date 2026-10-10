@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/omnidroid-v-9.html
 > Shift 2 ⬡ (You may pay 2 ⬡ to play this on top of one of your characters named Omnidroid.)
 > ENEMY DETECTED When you play this character, if you used Shift to play it, you may deal 2 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular

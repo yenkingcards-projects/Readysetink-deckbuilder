@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/genie-on-the-job.html
 
 Flavor text: “Can your friends go ‘Abracadabra, let 'er rip’ and then make the sucker disappear?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.33 regular, $2.00 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.29 regular, $2.02 foil

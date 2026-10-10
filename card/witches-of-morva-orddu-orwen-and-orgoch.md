@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/witches-of-morva-orddu-orwen-and-orgoch
 
 Flavor text: What are you willing to give up in exchange for power?
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.45 foil

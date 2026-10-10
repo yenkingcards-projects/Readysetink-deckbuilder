@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/eeyore-hunny-scholar.html
 
 Flavor text: “It's okay. Pile more things on. I'll be fine.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.86 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.80 foil

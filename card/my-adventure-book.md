@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/my-adventure-book.html
 
 Flavor text: “Thanks for the adventure—now go have a new one! Love, Ellie”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.54 foil

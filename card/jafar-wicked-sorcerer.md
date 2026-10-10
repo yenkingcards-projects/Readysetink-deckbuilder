@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/jafar-wicked-sorcerer.html
 
 Flavor text: “Enough skulking about. It's time to show that sniveling sultan what a sorcerer can do.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.21 foil

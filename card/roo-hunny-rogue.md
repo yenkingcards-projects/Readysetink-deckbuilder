@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/roo-hunny-rogue.html
 - Q: If I have two Roo - Hunny Rogue characters in play, do they count for each other’s abilities?
   A: Yes. “Another Hunny character” means a Hunny character that isn’t itself, regardless of the name of the character. Each Roo sees the other Roo as “another” Hunny character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.81 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.79 foil

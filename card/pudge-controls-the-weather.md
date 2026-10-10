@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pudge-controls-the-weather.html
 Flavor text: “How many sandwiches will I need to feed you to make all this snow melt?”
 —Lilo
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.88 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.87 foil

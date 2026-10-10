@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cheshire-cat-inexplicable.html
 > Boost 2 ⬡ (Once during your turn, you may pay 2 ⬡ to put the top card of your deck facedown under this character.)
 > IT'S LOADS OF FUN Whenever you put a card under this character, you may move up to 2 damage counters from chosen character to chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $5.19 regular, $18.06 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $5.02 regular, $18.06 foil

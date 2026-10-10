@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mittens-sassy-street-cat.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > NO THANKS NECESSARY Once during your turn, whenever a card is put into your inkwell, your other characters with Bodyguard get +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.67 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.67 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/aladdin-vigilant-guard.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > SAFE PASSAGE Whenever one of your Ally characters quests, you may remove up to 2 damage from this character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.67 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.67 foil

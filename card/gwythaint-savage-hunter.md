@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gwythaint-savage-hunter.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > SWOOPING STRIKE Whenever this character quests, each opponent chooses and exerts one of their ready characters.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.45 foil

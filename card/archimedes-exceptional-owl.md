@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/archimedes-exceptional-owl.html
 
 Flavor text: Archazia's library was a treasure trove of knowledge even for such an educated owl.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.21 foil

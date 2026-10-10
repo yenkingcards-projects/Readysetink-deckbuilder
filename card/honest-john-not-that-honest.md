@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/honest-john-not-that-honest.html
 
 Flavor text: “A thing like that ought to be worth a fortune to someone!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.26 foil

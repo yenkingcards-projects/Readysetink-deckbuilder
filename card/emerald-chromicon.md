@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/emerald-chromicon.html
 Flavor text: “Trust in the winds of change.”
 —Inscription
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $1.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $1.22 foil

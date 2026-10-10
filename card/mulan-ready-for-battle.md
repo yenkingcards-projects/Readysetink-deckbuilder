@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/mulan-ready-for-battle.html
 > NOBLE SPIRIT If you have a character in play with damage, you pay 1 ⬡ less to play this character.
 > FIGHTING SPIRIT If you have a character in play with 5 ¤ or more, you pay 1 ⬡ less to play this character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.32 foil

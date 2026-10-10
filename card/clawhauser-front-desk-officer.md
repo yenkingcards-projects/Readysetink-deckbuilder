@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/clawhauser-front-desk-officer.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > Singer 4 (This character counts as cost 4 to sing songs.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.62 foil

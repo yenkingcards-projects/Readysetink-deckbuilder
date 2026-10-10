@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jasmine-royal-commodore.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Jasmine.)
 > RULER OF THE SEAS When you play this character, if you used Shift to play her, return all other exerted characters to their players' hands.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.77 regular, $3.72 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.74 regular, $3.78 foil

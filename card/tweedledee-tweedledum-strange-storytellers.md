@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tweedledee-tweedledum-strange-storytell
 Flavor text: “You can't leave yet! Don't you want to hear the ending?”
 —Tweedledee
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.24 foil

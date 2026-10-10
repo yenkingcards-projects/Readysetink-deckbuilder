@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/peter-pan-lost-boy-leader.html
 
 Flavor text: The Illumineers needed someone to find a missing spellbook, and Peter was the first to volunteer.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.13 foil

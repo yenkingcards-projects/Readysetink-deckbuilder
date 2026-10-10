@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/aurora-tranquil-princess.html
 
 Flavor text: Her music fills the Illuminary's gardens with joy and light.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.24 foil

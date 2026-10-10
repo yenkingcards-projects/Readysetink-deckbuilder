@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/healing-touch.html
 Flavor text: “The heart is not so easily changed, but the head can be persuaded.”
 —Grand Pabbie
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.15 foil

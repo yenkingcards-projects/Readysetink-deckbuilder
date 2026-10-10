@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/king-candy-royal-racer.html
 
 Flavor text: “Get off of my track!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $1.52 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $1.50 foil

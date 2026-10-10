@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hercules-baby-demigod.html
 > Ward (Opponents can't choose this character except to challenge.)
 > STRONG LIKE HIS DAD 3 ⬡ — Deal 1 damage to chosen damaged character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.53 regular, $1.64 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.48 regular, $1.57 foil

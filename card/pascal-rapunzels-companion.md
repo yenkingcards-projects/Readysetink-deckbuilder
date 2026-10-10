@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pascal-rapunzels-companion.html
 
 Flavor text: A true friend is always there for you, whether you can see them or not.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.86 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.82 foil

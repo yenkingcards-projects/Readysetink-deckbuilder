@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/hermes-harried-messenger.html
 
 Flavor text: “What do you mean, ‘late’? Kid, I was ahead of my time before time was invented.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.21 foil

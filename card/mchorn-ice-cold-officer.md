@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/mchorn-ice-cold-officer.html
 
 Flavor text: “If this storm keeps up, every neighborhood will be like Tundratown.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.24 foil

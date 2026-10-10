@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/worlds-greatest-criminal-mind.html
 > (A character with cost 3 or more can ⟳ to sing this song for free.)
 > Banish chosen character with 5 ¤ or more.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.42 regular, $3.73 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.42 regular, $3.73 foil

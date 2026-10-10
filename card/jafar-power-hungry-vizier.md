@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jafar-power-hungry-vizier.html
 
 Flavor text: “The broken crown's power is formidable, but not enough. With both halves of the Hexwell Crown, I could rule all of Lorcana!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.53 foil

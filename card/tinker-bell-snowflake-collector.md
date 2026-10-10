@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tinker-bell-snowflake-collector.html
 > (Only characters with Evasive can challenge them.)
 > SPECTACULAR FIND While you have 7 or more cards in your hand, this character gets +3 ◊.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.04 regular, $2.90 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.05 regular, $2.81 foil

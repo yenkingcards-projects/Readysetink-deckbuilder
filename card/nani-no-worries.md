@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/nani-no-worries.html
 Flavor text: “For a warming winter tea, add the following Lorcana spices to your cup: frosted peppercorns, silver cardamom, wishing star anise.”
 —Hana's Herborium
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.20 foil

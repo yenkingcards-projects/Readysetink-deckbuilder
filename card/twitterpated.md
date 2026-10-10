@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/twitterpated.html
 
 Flavor text: A mysterious phenomenon that makes you feel both invincible and vulnerable at the same time.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.27 foil

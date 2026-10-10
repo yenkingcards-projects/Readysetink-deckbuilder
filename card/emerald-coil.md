@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/emerald-coil.html
 
 Flavor text: The coil Martin wore lifted his spirits as well as his body.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.25 foil

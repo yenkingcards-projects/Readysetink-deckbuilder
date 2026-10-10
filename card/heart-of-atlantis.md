@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/heart-of-atlantis.html
 Flavor text: “It's what's keeping you—all of Atlantis—alive!”
 —Milo Thatch
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.35 foil

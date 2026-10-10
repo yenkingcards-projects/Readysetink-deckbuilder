@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/peter-pan-never-land-prankster.html
 > LOOK INNOCENT This character enters play exerted.
 > CAN'T TAKE A JOKE? While this character is exerted, each opposing player can't gain lore unless one of their characters has challenged this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.93 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $0.92 foil

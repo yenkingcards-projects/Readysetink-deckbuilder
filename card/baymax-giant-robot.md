@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/baymax-giant-robot.html
 > Universal Shift 4 (You may pay 4 ⬡ to play this on top of any one of your characters.)
 > FUNCTIONALITY IMPROVED When you play this character, if you used Shift to play him, remove all damage from him.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $1.08 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $1.06 foil

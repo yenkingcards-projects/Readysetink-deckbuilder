@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jasmine-rebellious-princess.html
 
 Flavor text: Even the smallest mouse can make the biggest difference.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.34 foil

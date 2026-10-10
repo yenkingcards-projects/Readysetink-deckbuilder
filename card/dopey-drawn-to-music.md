@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/dopey-drawn-to-music.html
 > TONGUE-TIED This character can't ⟳ to sing songs.
 > DISTANT MELODY Once during your turn, whenever you play a song, this character gets +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular

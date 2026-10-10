@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fix-it-felix-jr-niceland-steward.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Fix-It Felix, Jr.)
 > BUILDING TOGETHER Your locations get +2 ⛉.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.18 foil

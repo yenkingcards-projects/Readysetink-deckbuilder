@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mr-smee-steadfast-mate.html
 
 Flavor text: “Captain Hook'd like a word with ya.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.50 foil

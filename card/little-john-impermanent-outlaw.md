@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/little-john-impermanent-outlaw.html
 > Boost 3 ⬡ (Once during your turn, you may pay 3 ⬡ to put the top card of your deck facedown under this character.)
 > READY TO RASSLE Whenever you put a card under this character, ready him.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.79 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.27 regular, $1.79 foil

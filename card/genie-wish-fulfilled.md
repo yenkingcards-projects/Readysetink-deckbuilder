@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/genie-wish-fulfilled.html
 
 Flavor text: “Oh, does that feel good!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.59 regular, $3.59 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.73 regular, $3.75 foil

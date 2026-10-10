@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/buzz-lightyear-providing-cover.html
 > • You may return an action card with cost 2 or less from your discard to your hand.
 > • You may play an action with cost 2 or less for free.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.65 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.60 foil

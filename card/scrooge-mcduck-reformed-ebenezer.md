@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-reformed-ebenezer.html
 > SPREADING JOY When you play this character, you may put a card from the top of your deck facedown under each of your other characters. If you do, those characters gain Ward until the start of your next turn.
 > (Opponents can't choose them except to challenge.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.81 regular, $6.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.71 regular, $6.41 foil

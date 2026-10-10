@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/ursula-deceiver.html
 
 > YOU'LL NEVER EVEN MISS IT When you play this character, chosen opponent reveals their hand and discards a song card of your choice.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $1.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $1.11 foil

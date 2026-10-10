@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kida-creative-thinker.html
 > Ward (Opponents can't choose this character except to challenge.)
 > KEY TO THE PUZZLE ⟳ — Look at the top 2 cards of your deck. Put one into your inkwell facedown and exerted and the other on the top of your deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.43 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.25 regular, $1.41 foil

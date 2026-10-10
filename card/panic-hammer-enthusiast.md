@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/panic-hammer-enthusiast.html
 Flavor text: Pain: “Are you sure this is gonna work?”
 Panic: “We're about to find out!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.18 foil

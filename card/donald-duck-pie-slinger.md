@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/donald-duck-pie-slinger.html
 > HUMBLE PIE When you play this character, if you used Shift to play him, each opponent loses 2 lore.
 > RAGING DUCK While an opponent has 10 or more lore, this character gets +6 ¤.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.76 regular, $4.76 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.76 regular, $4.87 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/violet-parr-learning-new-powers.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > DEFLECT When you play this character, you may move 1 damage from chosen character to chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.82 foil

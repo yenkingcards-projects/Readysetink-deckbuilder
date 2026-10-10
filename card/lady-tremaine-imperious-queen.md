@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/lady-tremaine-imperious-queen.html
 
 Flavor text: The twelfth Rule of Villainy: If you don't have a throne, take one.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.33 regular, $1.43 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.33 regular, $1.43 foil

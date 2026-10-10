@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/imperial-bow.html
 
 > WITHIN RANGE ⟳, 1 ⬡ — Chosen Hero character gains Challenger +2 and Evasive this turn. (They get +2 ¤ while challenging. They can challenge characters with Evasive.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.27 foil

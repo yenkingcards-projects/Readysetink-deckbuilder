@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/cower-before-me.html
 
 > Up to 2 chosen opposing characters can't challenge during their next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.02 regular, $0.18 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/training-dummy.html
 > HANDLE WITH CARE ⟳, 2 ⬡ — Chosen character gains Bodyguard until the start of your next turn.
 > (An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.15 foil

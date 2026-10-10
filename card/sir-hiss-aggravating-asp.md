@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sir-hiss-aggravating-asp.html
 
 Flavor text: Prince John isn't the only one collecting “taxes”!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.15 foil

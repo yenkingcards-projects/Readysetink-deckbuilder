@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mayor-winddancer-actor-turned-politicia
 
 Flavor text: It's the role of a lifetime, and it'll take every bit of his considerable charm and fabulous mane to get it right.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.64 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.65 foil

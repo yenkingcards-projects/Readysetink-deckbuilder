@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/li-shang-generals-son.html
 
 Flavor text: His training was unsurpassed, but it was his courage that would see him through this fight.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.14 foil

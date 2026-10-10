@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/daisy-duck-musketeer-spy.html
 
 Flavor text: She has a talent for thwarting hidden schemes.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.21 foil

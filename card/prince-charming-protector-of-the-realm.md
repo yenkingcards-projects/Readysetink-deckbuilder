@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/prince-charming-protector-of-the-realm.
 > Bodyguard (This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > PROTECTIVE PRESENCE Each turn, only one character can challenge.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.70 regular, $5.70 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.36 regular, $5.99 foil

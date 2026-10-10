@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/flora-good-fairy.html
 
 Flavor text: “Don't fuss, dear! A flick of the wrist will turn these briars into something beautiful.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.14 foil

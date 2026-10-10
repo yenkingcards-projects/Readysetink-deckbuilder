@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scroop-odious-mutineer.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > DO SAY HELLO TO MR. ARROW When you play this character, you may pay 3 ⬡ to banish chosen damaged character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.44 foil

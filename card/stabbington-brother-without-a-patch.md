@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/stabbington-brother-without-a-patch.htm
 > Rush (This character can challenge the turn they're played.)
 > GET 'EM! Your other characters named Stabbington Brother gain Rush.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.14 foil

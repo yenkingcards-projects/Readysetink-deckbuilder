@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/little-john-camp-cook.html
 
 Flavor text: “You're in for a real treat, Rob. Tonight's house special is my famous outlaw grub. Made from the finest whatever we could find!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.38 foil

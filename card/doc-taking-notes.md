@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/doc-taking-notes.html
 
 Flavor text: “Oh boy! Now this is a change grant...uh, a ranged pant...a strange plant!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular

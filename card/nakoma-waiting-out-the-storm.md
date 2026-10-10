@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/nakoma-waiting-out-the-storm.html
 
 Flavor text: “Come sit by the fire. It will keep you warm until this storm blows over.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.29 foil

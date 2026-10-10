@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/snow-white-well-wisher.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Snow White.)
 > WISHES COME TRUE Whenever this character quests, you may return a character card from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.57 regular, $9.78 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.59 regular, $9.78 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/iago-pretty-polly.html
 Flavor text: “Your majesty certainly has a way with dumb animals.”
 —Jafar
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.16 foil

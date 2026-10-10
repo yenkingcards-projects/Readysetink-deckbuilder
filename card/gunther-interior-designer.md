@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gunther-interior-designer.html
 
 Flavor text: “I hate to cover this trap door. It really pulls the room together!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.14 foil

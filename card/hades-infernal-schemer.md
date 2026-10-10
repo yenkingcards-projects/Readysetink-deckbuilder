@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hades-infernal-schemer.html
 
 Flavor text: “He's gotta have a weakness, because everybody's got a weakness.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $9.58 regular, $27.89 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $9.23 regular, $27.89 foil

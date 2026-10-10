@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/elsa-the-fifth-spirit.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > CRYSTALLIZE When you play this character, exert chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.86 regular, $1.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.89 regular, $1.33 foil

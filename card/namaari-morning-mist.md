@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/namaari-morning-mist.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > BLADES This character can challenge ready characters.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.64 regular, $4.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.65 regular, $4.23 foil

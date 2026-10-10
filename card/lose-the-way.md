@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lose-the-way.html
 Flavor text: “Well, when one's lost, I suppose it's good advice to stay where you are until someone finds you.”
 —Alice
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.18 foil

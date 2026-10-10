@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/elinor-bespelled-queen.html
 
 Flavor text: She had a lot to learn about being a bear, but protecting her family came naturally.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.27 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/pico-helpful-toucan.html
 
 Flavor text: He spotted a mysterious glow in the mountains nearby. Could it be the missing piece of the prophecy?
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.12 foil

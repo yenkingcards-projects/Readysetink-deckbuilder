@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-sweetheart-princess.html
 > ROYAL FAVOR Your characters named Mickey Mouse gain Support. (Whenever they quest, you may add their ¤ to another chosen character's ¤ this turn.)
 > BYE BYE, NOW Whenever this character quests, you may banish chosen exerted character with 5 ¤ or more.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.80 regular, $16.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.80 regular, $16.78 foil

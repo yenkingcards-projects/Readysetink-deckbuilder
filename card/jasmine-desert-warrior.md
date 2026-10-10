@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/jasmine-desert-warrior.html
 
 > CUNNING MANEUVER When you play this character and whenever she's challenged, each opponent chooses and discards a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.47 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.47 foil

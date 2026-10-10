@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/flotsam-slippery-as-an-eel.html
 
 Flavor text: “You're in our world now.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.19 foil

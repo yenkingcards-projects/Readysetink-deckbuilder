@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/hundred-acre-wood-hunny-campsite.html
 > HOME AWAY FROM HOME Characters get +1 ⛉ while here.
 > HUNNY QUEST Hunny characters get +1 ◊ while here.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.41 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/honeymaren-northuldra-guide.html
 
 Flavor text: “It's said to be a bridge between us and the magic of nature.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.28 foil

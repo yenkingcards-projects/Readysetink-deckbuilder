@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-quick-thinking-inventor.ht
 
 Flavor text: This puts the Frosting Flinger 2000 to shame.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.20 foil

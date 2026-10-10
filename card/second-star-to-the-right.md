@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/second-star-to-the-right.html
 
 Flavor text: Lead us to the land we dream of
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.72 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.70 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lucky-the-15th-puppy.html
 > You may put each character card with cost 2 or less into your hand. Put the rest on the bottom of your deck in any order.
 > PUPPY LOVE Whenever this character quests, if you have 4 or more other characters in play, your other characters get +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.58 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.59 foil

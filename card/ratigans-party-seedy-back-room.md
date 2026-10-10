@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/ratigans-party-seedy-back-room.html
 
 > MISFITS' REVELRY While you have a damaged character here, this location gets +2 ◊.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.17 foil

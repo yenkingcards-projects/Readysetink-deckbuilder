@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mufasa-champion-of-the-pride-lands.html
 
 Flavor text: Even his name makes enemies quiver in fear.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.33 foil

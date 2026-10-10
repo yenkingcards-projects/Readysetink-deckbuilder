@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/alice-clumsy-as-can-be.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Alice.)
 > ACCIDENT PRONE Whenever this character quests, put 1 damage counter on each other character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.66 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.66 foil

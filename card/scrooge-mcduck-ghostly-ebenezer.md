@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-ghostly-ebenezer.html
 
 Flavor text: This grim future is but one possibility.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $7.73 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.41 regular, $7.51 foil

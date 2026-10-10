@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-carpenter-dinner-companion.html
 
 Flavor text: The Carpenter's stomach growled as he clenched his hammer tight...
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.08 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.09 foil

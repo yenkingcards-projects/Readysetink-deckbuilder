@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/magical-hunny-staff.html
 > SPELL OF SWIFTNESS ⟳, 2 ⬡ — Chosen Hunny character of yours gains Evasive until the start of your next turn.
 > (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $0.84 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.25 regular, $0.84 foil

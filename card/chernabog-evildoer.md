@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/chernabog-evildoer.html
 
 Flavor text: Darkness calls to minions everywhere.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.84 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.27 regular, $0.86 foil

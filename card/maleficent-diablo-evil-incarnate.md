@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/maleficent-diablo-evil-incarnate.html
 > FOOLS! You may put 5 character cards from your discard on the bottom of your deck in any order to shift this character for free.
 > RAVEN'S CALL During your turn, whenever this character exerts, draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.55 regular, $1.55 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.54 regular, $1.55 foil

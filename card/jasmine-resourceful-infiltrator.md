@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/jasmine-resourceful-infiltrator.html
 > JUST WHAT YOU NEED When you play this character, you may give another chosen character Resist +1 until the start of your next turn.
 > (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.35 foil

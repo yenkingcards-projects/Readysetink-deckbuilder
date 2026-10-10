@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-pirate-lookout.html
 
 Flavor text: Minnie leaned forward. Could it be true? Was this the island at last?
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $0.36 foil

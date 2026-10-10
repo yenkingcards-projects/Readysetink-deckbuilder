@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/seven-dwarfs-mine-secure-fortress.html
 
 > MOUNTAIN DEFENSE During your turn, the first time you move a character here, you may deal 1 damage to chosen character. If the moved character is a Knight, deal 2 damage instead.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.68 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $0.67 foil

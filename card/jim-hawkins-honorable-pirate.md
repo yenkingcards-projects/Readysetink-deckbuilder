@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/jim-hawkins-honorable-pirate.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > HIRE A CREW When you play this character, look at the top 4 cards of your deck. You may reveal any number of Pirate character cards and put them into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.20 foil

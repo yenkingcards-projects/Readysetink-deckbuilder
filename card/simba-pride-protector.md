@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/simba-pride-protector.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Simba.)
 > UNDERSTAND THE BALANCE At the end of your turn, if this character is exerted, you may ready your other characters.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.11 regular, $3.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.10 regular, $3.37 foil

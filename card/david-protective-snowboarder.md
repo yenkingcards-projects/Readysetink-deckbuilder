@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/david-protective-snowboarder.html
 
 Flavor text: “These snowboards are pretty sweet—and they make great shields!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.44 foil

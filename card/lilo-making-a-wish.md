@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/lilo-making-a-wish.html
 
 Flavor text: “A falling star...I have to make a wish!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.92 regular, $2.48 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.96 regular, $2.50 foil

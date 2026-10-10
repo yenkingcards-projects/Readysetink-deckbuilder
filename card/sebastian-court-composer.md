@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sebastian-court-composer.html
 
 Flavor text: “I should be writing symphonies, not tagging along after some headstrong teenager.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.24 foil

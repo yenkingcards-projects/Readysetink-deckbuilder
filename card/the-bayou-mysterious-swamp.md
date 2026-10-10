@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-bayou-mysterious-swamp.html
 
 Flavor text: A place to find what you need, not just what you want.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.25 foil

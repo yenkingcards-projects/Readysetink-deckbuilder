@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/lilo-causing-an-uproar.html
 > STOMPIN' TIME! During your turn, if you've played 3 or more actions this turn, you may play this character for free.
 > RAAAWR! When you play this character, ready chosen character. They can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.80 regular, $8.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.68 regular, $8.62 foil

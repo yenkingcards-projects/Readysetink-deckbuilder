@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/pumbaa-friendly-warthog.html
 
 Flavor text: “You gotta put your behind in your past.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.24 foil

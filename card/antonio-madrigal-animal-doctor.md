@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/antonio-madrigal-animal-doctor.html
 
 > HEALING HANDS When you play this character, you may remove up to 3 damage from chosen character of yours. If you removed damage this way, put the top card of your deck into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.22 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/big-mama-clever-and-calming.html
 
 Flavor text: “Gather 'round, little ones. Let Big Mama teach you how to stay warm in the snow!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.30 foil

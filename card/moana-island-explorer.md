@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/moana-island-explorer.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > ADVENTUROUS SPIRIT Whenever this character challenges another character, another chosen character of yours gets +3 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $1.36 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $1.30 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/happy-lively-knight.html
 
 > BURST OF SPEED During your turn, this character gains Evasive. (They can challenge characters with Evasive.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.36 foil

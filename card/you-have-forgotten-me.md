@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/you-have-forgotten-me.html
 Flavor text: “You are more than what you have become.”
 —Mufasa
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $1.71 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $1.76 foil

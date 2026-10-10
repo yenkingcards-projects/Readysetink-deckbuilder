@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/milo-thatch-undaunted-scholar.html
 
 Flavor text: “Okay, we rotated the globe to move the mural into position. We have the coordinates. Let's go!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.72 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.72 foil

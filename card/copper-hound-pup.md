@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/copper-hound-pup.html
 Flavor text: “How's this for a huntin' dog? He's just a little runt now, but he'll grow.”
 —Amos Slade
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.19 foil

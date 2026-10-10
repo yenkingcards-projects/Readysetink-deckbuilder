@@ -25,4 +25,4 @@ Flavor text: “Listen up. I've got a special job for you.”
 - Q: Can I shift Posey – Vampire Potato onto Morph – Little Imitator?
   A: Yes. Posey’s Potato Shift ability says she shifts onto an item called Potato, but Morph’s ability allows him to be a legal choice to shift onto, even though his name isn’t the same and he isn’t an item.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.82 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.80 foil

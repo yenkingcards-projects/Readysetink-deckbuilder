@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-curious-child.html
 Flavor text: “Whatever gift awaits will be just as special as you.”
 —Alma Madrigal
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.14 foil

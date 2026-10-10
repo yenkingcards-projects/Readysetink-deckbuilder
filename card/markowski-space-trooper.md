@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/markowski-space-trooper.html
 
 Flavor text: “Just what we needed—a new place to fight bugs.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.10 foil

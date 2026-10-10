@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/jumba-jookiba-prolific-inventor.html
 > WELCOMING CROWD For each character you have in play, you pay 1 ⬡ less to play this character.
 > I AM HELPING Whenever this character quests, you may remove all damage from chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.70 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.70 foil

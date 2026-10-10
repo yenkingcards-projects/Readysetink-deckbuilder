@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/belles-favorite-book.html
 
 Flavor text: Some stories stay with you forever.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $0.93 foil

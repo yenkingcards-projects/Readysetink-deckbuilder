@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/goofy-knight-for-a-day.html
 
 Flavor text: It's a banner day for Sir Goofy, who is steeled to prove his mettle against anyone courting trouble— joust in case.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $1.00 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.33 regular, $1.04 foil

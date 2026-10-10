@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/part-of-your-world.html
 
 Flavor text: What would I give If I could live out of these waters?
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $1.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $1.42 foil

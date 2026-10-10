@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/jetsam-ursulas-baby.html
 
 Flavor text: He snatched the trident from the betrayed glimmer.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.18 foil

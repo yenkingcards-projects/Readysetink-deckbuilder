@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/white-rabbits-pocket-watch.html
 
 Flavor text: “No wonder you're late. Why, this watch is exactly two days slow.” —The Mad Hatter
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $1.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $1.10 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mr-big-shrewd-tycoon.html
 
 Flavor text: “You've done me a great service.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.40 foil

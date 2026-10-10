@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/chef-louis-in-over-his-head.html
 Flavor text: “When added to a clear soup, the pale, triple- pointed leaves of Trispiritus can have a restorative effect. CAUTION: DO NOT confuse it with Three Thorns, which causes itchy rashes.”
 —Hana's Herborium
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.23 foil

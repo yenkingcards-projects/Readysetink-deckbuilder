@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/woody-buzz-lightyear-best-buddies.html
 > TO INFINITY... When you play this character, if chosen opponent has more cards in their hand than you, draw cards until you have the same number.
 > ...AND BEYOND! Whenever this character quests, you may play a card with cost 2 or less for free.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.01 regular, $4.07 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.23 regular, $4.17 foil

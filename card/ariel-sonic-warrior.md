@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ariel-sonic-warrior.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Ariel.)
 > AMPLIFIED VOICE Whenever you play a song, you may pay 2 ⬡ to deal 3 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.48 regular, $3.00 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.43 regular, $3.00 foil

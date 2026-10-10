@@ -22,4 +22,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-minnie-mouse-adventuring-d
 - Q: If I use Duo Shift to play Mickey Mouse & Minnie Mouse – Adventuring Duo on top of a dry Mickey Mouse and a drying Minnie Mouse, what happens? What if the Mickey Mouse they’re shifting onto is ready but the Minnie Mouse is exerted?
   A: If you shift on top of a dry character and a drying character, the shifted character will be drying. If you shift them on top of a ready character and an exerted character, they’ll be exerted. Piercing Attack / Omnidroid – Ultimate Iteration Piercing Attack
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.55 regular, $13.49 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $3.51 regular, $13.38 foil

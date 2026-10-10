@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/peter-pans-shadow-not-sewn-on.html
 > Rush (This character can challenge the turn they're played.)
 > TIPTOE Your other characters with Rush gain Evasive.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $0.63 foil

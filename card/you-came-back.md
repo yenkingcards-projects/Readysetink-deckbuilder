@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/you-came-back.html
 Flavor text: “Nobody gets left behind.”
 —Stitch
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $1.17 foil

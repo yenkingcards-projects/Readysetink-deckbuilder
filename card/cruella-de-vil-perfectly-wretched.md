@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/cruella-de-vil-perfectly-wretched.html
 
 Flavor text: “It's ink couture, darling. I wear only the best!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.21 foil

@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/julietas-arepas.html
 - Q: When I play Shepherd’s Journal, if I choose not to look at the top card of my deck, do I still have to put it on either the top of my deck or into my discard?
   A: No. The word “may” allows you to choose whether that part of the effect happens. If you choose not to do what’s described, that part doesn’t happen. Since there’s no card to reference for the “it” in the second part of the effect, there’s nothing to move.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.17 foil

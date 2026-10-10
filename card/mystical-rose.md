@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/mystical-rose.html
 
 Flavor text: Ink surrounded Belle's last hope to heal the Beast. With no other choice, she reached out for it...
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.47 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.47 foil

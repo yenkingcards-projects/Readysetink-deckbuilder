@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/basil-undercover-detective.html
 > INCAPACITATE When you play this character, you may return chosen character to their player's hand.
 > INTERFERE Whenever this character quests, chosen opponent discards a card at random.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $1.95 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.29 regular, $1.78 foil

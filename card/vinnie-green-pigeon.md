@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/vinnie-green-pigeon.html
 
 Flavor text: “That's quite a predicament you're in. Glad it ain't me.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $1.67 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $1.67 foil

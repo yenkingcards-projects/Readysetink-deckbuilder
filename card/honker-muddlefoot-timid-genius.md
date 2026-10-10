@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/honker-muddlefoot-timid-genius.html
 Flavor text: “It's clear you're the brains of this operation, Honker.”
 —Darkwing Duck
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.16 foil

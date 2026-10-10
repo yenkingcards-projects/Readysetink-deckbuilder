@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rhino-one-sixteenth-wolf.html
 
 Flavor text: “I eat danger for breakfast.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.66 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.66 foil

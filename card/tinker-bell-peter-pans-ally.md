@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tinker-bell-peter-pans-ally.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > LOYAL AND DEVOTED Your characters named Peter Pan gain Challenger +1. (They get +1 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.26 foil

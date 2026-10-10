@@ -20,4 +20,4 @@ Flavor text: “This town ain't big enough for the two of us.”
 - Q: Can the opposing character chosen with Woody’s Move Along ability still sing songs?
   A: Yes, the chosen character can still sing songs or pay any ! costs. The ability simply means that the player must quest with the character before they can end their turn if the character is ready and able to quest.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.29 foil

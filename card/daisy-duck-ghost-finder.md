@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/daisy-duck-ghost-finder.html
 
 Flavor text: “If I'm reading this right, these aren't actually ghosts at all! Boy, you're lucky I came along on this one.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.18 foil

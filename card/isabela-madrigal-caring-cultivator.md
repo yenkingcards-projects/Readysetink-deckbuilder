@@ -22,4 +22,4 @@ Source: https://www.readysetink.com/card/isabela-madrigal-caring-cultivator.html
 - Q: If I remove 2 damage from one of my characters, will I resolve Isabela’s Do No Wrong ability twice?
   A: No. The ability triggers only once, no matter how much damage was removed. You’ll gain lore equal to the damage removed.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.44 foil

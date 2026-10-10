@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/lilo-stitch-fun-loving-friends.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.00 regular, $4.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.02 regular, $4.11 foil

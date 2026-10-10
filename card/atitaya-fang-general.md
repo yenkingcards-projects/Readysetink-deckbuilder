@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/atitaya-fang-general.html
 
 Flavor text: “Spears of Fang, stand strong and tall. We are the last line of defense and we will not fall!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.20 foil

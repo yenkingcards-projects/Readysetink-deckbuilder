@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cinderella-ballroom-sensation.html
 
 Flavor text: With a magical dress and a song in her heart, she dazzled everyone at the ball.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.05 regular, $6.91 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.06 regular, $6.83 foil

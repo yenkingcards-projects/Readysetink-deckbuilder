@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/meilin-lee-lead-vocalist.html
 > Singer 3 (This character counts as cost 3 to sing songs.)
 > BAND LOYALTY This character can't sing songs without Sing Together.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.95 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.96 foil

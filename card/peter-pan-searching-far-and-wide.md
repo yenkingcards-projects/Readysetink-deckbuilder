@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/peter-pan-searching-far-and-wide.html
 
 Flavor text: “I've already checked the whole jungle. He's got to be around here somewhere!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular

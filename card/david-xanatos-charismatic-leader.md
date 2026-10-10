@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/david-xanatos-charismatic-leader.html
 > LEARN FROM EVERYTHING During your turn, whenever one of your characters is banished, draw a card.
 > WHAT ARE YOU WAITING FOR? Whenever this character quests, chosen character gains Rush this turn. (They can challenge the turn they're played.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $1.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $1.19 foil

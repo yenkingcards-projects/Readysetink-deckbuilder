@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mrs-hasagawa-fruit-vendor.html
 
 Flavor text: The old woman turned as the vine's shadow fell over her fruit stand. “Hello, dear! More mangoes today?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.20 foil

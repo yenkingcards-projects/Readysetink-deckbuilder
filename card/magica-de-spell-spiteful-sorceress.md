@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/magica-de-spell-spiteful-sorceress.html
 
 Flavor text: “I am the stuff of nightmares lurking in the hidden recesses of your mind!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.38 foil

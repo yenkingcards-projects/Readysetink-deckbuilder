@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/moana-chosen-by-the-ocean.html
 
 Flavor text: “You know who you are.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.44 foil

@@ -20,4 +20,4 @@ Flavor text: “I don't care what the Fates say. I make my own destiny.”
 - Q: If I have only Hercules – Young Rescuer in my hand and play him, can I still resolve his Heroic Sacrifice ability?
   A: Yes. Discarding your hand doesn’t require that you have any cards in your hand. disneylorcana.com
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.79 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.27 regular, $0.82 foil

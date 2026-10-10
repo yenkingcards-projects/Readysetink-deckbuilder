@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/piglet-very-small-animal.html
 
 Flavor text: For a very small animal, he has an awfully big heart.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.31 foil

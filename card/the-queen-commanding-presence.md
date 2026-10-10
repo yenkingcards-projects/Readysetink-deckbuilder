@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-queen-commanding-presence.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named The Queen.)
 > WHO IS THE FAIREST? Whenever this character quests, chosen opposing character gets -4 ¤ this turn and chosen character gets +4 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.33 regular, $0.22 foil

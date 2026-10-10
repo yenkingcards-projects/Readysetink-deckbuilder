@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/belle-strange-but-special.html
 
 Flavor text: “Far-off places, daring sword fights, magic spells, a prince in disguise...”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $6.02 regular, $37.81 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $5.96 regular, $37.90 foil

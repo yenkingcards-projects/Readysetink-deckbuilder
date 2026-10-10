@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tamatoa-so-shiny.html
 
 Flavor text: “Watch me dazzle like a diamond in the rough!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.59 regular, $5.10 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.61 regular, $5.10 foil

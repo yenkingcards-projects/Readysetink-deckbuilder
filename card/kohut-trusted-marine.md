@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/kohut-trusted-marine.html
 
 Flavor text: “Ma'am! I am a highly trained instrument of tactical superiority! Maybe we could find someone else for the gruntwork! Ma'am!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.10 foil

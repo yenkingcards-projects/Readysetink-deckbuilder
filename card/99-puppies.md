@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/99-puppies.html
 Flavor text: “Two, four, six, and three is nine, plus two is 11...”
 —Roger
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.30 foil

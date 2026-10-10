@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-wardrobe-perceptive-friend.html
 
 Flavor text: “Time to try something new, dear.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.20 foil

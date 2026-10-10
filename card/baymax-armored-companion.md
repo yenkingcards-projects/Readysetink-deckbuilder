@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/baymax-armored-companion.html
 
 > THE TREATMENT IS WORKING When you play this character and whenever he quests, you may remove up to 2 damage from another chosen character of yours. Gain 1 lore for each 1 damage removed this way.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.85 regular, $4.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.12 regular, $4.62 foil

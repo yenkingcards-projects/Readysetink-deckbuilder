@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/gaston-intellectual-powerhouse.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Gaston.)
 > DEVELOPED BRAIN When you play this character, look at the top 3 cards of your deck. You may put one into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.19 foil

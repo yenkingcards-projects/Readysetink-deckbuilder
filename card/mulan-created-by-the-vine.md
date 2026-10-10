@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mulan-created-by-the-vine.html
 
 Flavor text: This replica is just as good in a fight as the original—no training necessary.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.31 foil

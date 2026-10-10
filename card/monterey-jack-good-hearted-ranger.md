@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/monterey-jack-good-hearted-ranger.html
 
 Flavor text: “There's only one thing I like more than cheese— nothin'.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.44 foil

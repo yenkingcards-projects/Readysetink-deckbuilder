@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kanga-nurturing-mother.html
 
 Flavor text: “My, you've had an awfully big adventure. Now it's time to rest.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.62 foil

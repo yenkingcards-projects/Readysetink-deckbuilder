@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/powerline-taking-the-stage.html
 Flavor text: “Goin' to the Powerline concert. Ah! It's unbelievable, man.”
 —P.J. Pete
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.54 foil

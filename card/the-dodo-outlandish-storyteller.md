@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-dodo-outlandish-storyteller.html
 
 Flavor text: “And there I was in the cave below the palace when suddenly sand began pouring down. Did I stop? No! What's a little sand?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.20 foil

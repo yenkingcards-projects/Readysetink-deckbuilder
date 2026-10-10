@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/maximus-relentless-stallion.html
 
 > NO ESCAPE If you discarded a card this turn, this character gains Challenger +2 and can challenge ready characters this turn. (They get +2 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.34 foil

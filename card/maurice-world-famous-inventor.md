@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/maurice-world-famous-inventor.html
 > GIVE IT A TRY Whenever this character quests, you pay 2 ⬡ less for the next item you play this turn.
 > IT WORKS! Whenever you play an item, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $1.43 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $1.43 foil

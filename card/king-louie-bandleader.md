@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/king-louie-bandleader.html
 
 Flavor text: “Hold up, cuz. Why not sit back and enjoy some sweet beats?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.12 foil

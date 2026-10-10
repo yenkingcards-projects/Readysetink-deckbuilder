@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-queen-cruelest-of-all.html
 
 Flavor text: She'd seen what the ink could do for other glimmers. What could it do for her?
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.16 foil

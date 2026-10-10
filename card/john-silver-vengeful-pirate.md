@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/john-silver-vengeful-pirate.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > I AIN'T GONE SOFT! Whenever you play an action that isn't a song, you may deal 1 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.26 foil

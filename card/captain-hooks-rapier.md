@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/captain-hooks-rapier.html
 > GET THOSE SCURVY BRATS! During your turn, whenever one of your characters banishes another character in a challenge, you may pay 1 ⬡ to draw a card.
 > LET'S HAVE AT IT! Your characters named Captain Hook gain Challenger +1. (They get +1 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.13 foil

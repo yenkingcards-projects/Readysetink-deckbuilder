@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/basil-disguised-detective.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Basil.)
 > TWISTS AND TURNS During your turn, whenever a card is put into your inkwell, you may pay 1 ⬡ to have chosen opponent choose and discard a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.40 foil

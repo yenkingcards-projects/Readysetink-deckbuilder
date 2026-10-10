@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/dont-be-nervous.html
 
 > Search your deck for a Princess character card, reveal that card to all players, and put it into your hand. Then, shuffle your deck. If you have 2 or more Seven Dwarfs characters in play, draw 2 cards and gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $0.61 foil

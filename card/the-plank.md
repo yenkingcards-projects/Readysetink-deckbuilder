@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-plank.html
 
 Flavor text: It's a once-in-a-lifetime view.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.11 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/flower-shy-skunk.html
 
 Flavor text: His sweet nature outmatches all the blooms in the meadow.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.50 foil

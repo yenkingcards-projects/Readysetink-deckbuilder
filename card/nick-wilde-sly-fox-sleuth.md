@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/nick-wilde-sly-fox-sleuth.html
 
 Flavor text: “Okay, Nick, it's time to use those superior sleuthing skills to find a way out of this. Wait, why am I talking to myself?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.26 foil

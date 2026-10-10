@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/goofy-super-goof.html
 
 Flavor text: Never underestimate the power of a Goof.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $1.51 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.30 regular, $1.43 foil

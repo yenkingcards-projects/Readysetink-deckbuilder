@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/or-rewrite-history.html
 
 Flavor text: Every day they're out there making DuckTales! Woo-oo!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.56 foil

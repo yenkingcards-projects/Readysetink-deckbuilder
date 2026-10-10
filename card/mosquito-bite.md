@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mosquito-bite.html
 Flavor text: “Don't move. A mosquito has chosen me as her perch.
 She's so...beautiful.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.26 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/when-you-need-help-just-call.html
 > (A character with cost 3 or more can ⟳ to sing this song for free.)
 > If an opponent has more characters in play than you, you may play a character with cost 4 or less for free.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.34 foil

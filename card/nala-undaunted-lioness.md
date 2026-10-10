@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/nala-undaunted-lioness.html
 > DETERMINED DIVERSION While this character has no damage, she gets +1 ◊ and gains Resist +1.
 > (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.79 regular, $3.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.79 regular, $3.26 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/elsa-ice-maker.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Elsa.)
 > WINTER WALL Whenever this character quests, you may exert chosen character. If you do and you have a character named Anna in play, the chosen character can't ready at the start of their next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $1.66 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $1.66 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mariano-guzman-handsome-suitor.html
 
 Flavor text: The puzzles of the heart are trickier than anything Archazia could come up with.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.10 foil

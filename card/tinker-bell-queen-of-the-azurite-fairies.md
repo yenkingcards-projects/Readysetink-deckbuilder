@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tinker-bell-queen-of-the-azurite-fairie
 > Evasive (Only characters with Evasive can challenge this character.)
 > SHINING EXAMPLE Whenever this character quests, your other Fairy characters get +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.59 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.60 foil

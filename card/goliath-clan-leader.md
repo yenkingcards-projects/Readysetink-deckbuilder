@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/goliath-clan-leader.html
 > DUSK TO DAWN At the end of each player's turn, if they have more than 2 cards in their hand, they choose and discard cards until they have 2. If they have fewer than 2 cards in their hand, they draw until they have 2.
 > STONE BY DAY If you have 3 or more cards in your hand, this character can't ready.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $9.79 regular, $12.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $9.87 regular, $12.50 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/powerline-worlds-greatest-rock-star.htm
 > Singer 9 MASH-UP Once during your turn, whenever this character sings a song, look at the top 4 cards of your deck. You may reveal a song card with cost 9 or less and play it for free.
 > Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.75 regular, $8.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $3.72 regular, $5.13 foil

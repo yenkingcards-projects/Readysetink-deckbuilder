@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/on-your-feet-now.html
 
 Flavor text: “Catch them! Before they get away!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.22 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/shenzi-head-hyena.html
 > STICK AROUND FOR DINNER This character gets +1 ¤ for each other Hyena character you have in play.
 > WHAT HAVE WE GOT HERE? Whenever one of your Hyena characters challenges a damaged character, gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.42 foil

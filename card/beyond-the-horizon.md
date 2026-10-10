@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/beyond-the-horizon.html
 > Sing Together 7 (Any number of your or your teammates' characters with total cost 7 or more may ⟳ to sing this song for free.)
 > Choose any number of players. They discard their hands and draw 3 cards each.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $2.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $2.13 foil

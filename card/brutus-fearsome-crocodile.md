@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/brutus-fearsome-crocodile.html
 
 Flavor text: He's identical to Nero in cruelty and classiness.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular

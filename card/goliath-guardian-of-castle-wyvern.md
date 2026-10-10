@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/goliath-guardian-of-castle-wyvern.html
 > BE CAREFUL, ALL OF YOU Whenever one of your Gargoyle characters challenges another character, gain 1 lore.
 > STONE BY DAY If you have 3 or more cards in your hand, this character can't ready.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.52 foil

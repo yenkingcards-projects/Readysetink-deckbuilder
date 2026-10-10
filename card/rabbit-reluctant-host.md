@@ -13,4 +13,4 @@ Flavor text: Pooh: “Isn't there anybody here at all?”
 Rabbit: “Nobody!”
 Pooh: “Somebody's there...because somebody must have said ‘Nobody.’”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.18 foil

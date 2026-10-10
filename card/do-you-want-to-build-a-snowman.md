@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/do-you-want-to-build-a-snowman.html
 > • YES! You gain 3 lore.
 > • NO! They choose a character of theirs and put that card on the bottom of their deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $1.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.28 regular, $1.31 foil

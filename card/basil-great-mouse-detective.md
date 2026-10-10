@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/basil-great-mouse-detective.html
 
 Flavor text: A solution always presents itself.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.52 foil

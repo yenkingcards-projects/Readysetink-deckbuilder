@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rama-vigilant-father.html
 
 Flavor text: With cubs to protect, any strange sound must be investigated.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.10 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.11 foil

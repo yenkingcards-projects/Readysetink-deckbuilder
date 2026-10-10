@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/the-headless-horseman-relentless-spirit
 
 Flavor text: If you hear hoofbeats in the dark, don't look back.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.23 foil

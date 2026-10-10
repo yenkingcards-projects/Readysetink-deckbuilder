@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/pete-born-to-cheat.html
 
 > I CLOBBER YOU! Whenever this character quests while he has 5 ¤ or more, return chosen character with 2 ¤ or less to their player's hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.31 foil

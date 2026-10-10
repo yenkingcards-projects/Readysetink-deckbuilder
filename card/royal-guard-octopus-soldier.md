@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/royal-guard-octopus-soldier.html
 
 > HEAVILY ARMED Whenever you draw a card, this character gains Challenger +1 this turn. (They get +1 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.94 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cinderella-stouthearted.html
 > Resist +2 (Damage dealt to this character is reduced by 2.)
 > THE SINGING SWORD Whenever you play a song, this character may challenge ready characters this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.56 regular, $1.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.57 regular, $1.68 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-heros-duty.html
 
 Flavor text: “I got that medal in the bag.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.37 foil

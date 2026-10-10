@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/maid-marian-badminton-ace.html
 > GOOD SHOT During an opponent's turn, whenever one of your Ally characters takes damage, deal 1 damage to chosen opposing character.
 > FAIR PLAY Your characters named Lady Kluck gain Resist +1. (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.76 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.75 foil

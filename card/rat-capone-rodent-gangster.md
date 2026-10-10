@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rat-capone-rodent-gangster.html
 
 Flavor text: “Listen here, you no good, dirty cat. We had a deal! Yeah, a deal, see? And you gotta honor it!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.19 foil

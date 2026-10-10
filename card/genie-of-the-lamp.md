@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/genie-of-the-lamp.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > LET'S MAKE SOME MAGIC While this character is exerted, your other characters get +2 ¤.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.87 regular, $1.69 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.83 regular, $1.68 foil

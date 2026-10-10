@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/and-then-along-came-zeus.html
 
 Flavor text: He hurled his thunderbolt—He zapped Locked those suckers in a vault—They're trapped And on his own stopped chaos in its tracks
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.78 regular, $2.51 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.76 regular, $2.70 foil

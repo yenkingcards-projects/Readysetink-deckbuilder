@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/belle-always-reading.html
 
 Flavor text: “I just finished the most wonderful story about a beanstalk and an ogre...”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.18 foil

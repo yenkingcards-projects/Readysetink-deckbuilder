@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mattias-arendelle-general.html
 
 Flavor text: “You must move quickly before the trap resets. Go!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.15 foil

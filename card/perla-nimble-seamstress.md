@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/perla-nimble-seamstress.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.30 foil

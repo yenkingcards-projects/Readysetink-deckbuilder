@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-drum-major.html
 > PARADE ORDER When you play this character, if you used Shift to play her, you may search your deck for a character card and reveal that card to all players.
 > Shuffle your deck and put that card on top of it.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.51 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.52 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/perplexing-signposts.html
 Flavor text: Alice: “I just wanted to ask you which way I ought to go.”
 Cheshire Cat: “Well, that depends on where you want to get to.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.37 foil

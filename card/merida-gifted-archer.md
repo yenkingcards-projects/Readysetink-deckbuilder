@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merida-gifted-archer.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Merida.)
 > FIERCE PROTECTION While this character is exerted, whenever an opposing character challenges, you may deal 1 damage to the challenging character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $0.37 foil

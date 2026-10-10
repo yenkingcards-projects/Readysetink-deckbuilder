@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dopey-always-playful.html
 
 Flavor text: He's a real gem.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.29 foil

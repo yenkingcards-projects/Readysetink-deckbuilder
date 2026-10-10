@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cursed-merfolk-ursulas-handiwork.html
 Flavor text: “Now it's happened once or twice, someone couldn't pay the price...”
 —Ursula
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.38 regular, $0.88 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.40 regular, $0.93 foil

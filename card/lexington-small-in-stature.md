@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lexington-small-in-stature.html
 > Alert (This character can challenge as if they had Evasive.)
 > STONE BY DAY If you have 3 or more cards in your hand, this character can't ready.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $1.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $1.29 foil

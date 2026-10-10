@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mirage-super-recruiter.html
 
 Flavor text: “The Supers aren't gone, Mr. Incredible. You're still here. You can still do great things.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.16 foil

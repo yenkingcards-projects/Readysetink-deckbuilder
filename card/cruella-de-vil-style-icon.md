@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/cruella-de-vil-style-icon.html
 - Q: Does Cruella De Vil – Style Icon’s ability Out of Season trigger when an opponent’s character with cost 2 or less is banished?
   A: Yes. Out of Season doesn’t specify that the banished character must be yours, so it applies whenever your opponents’ characters are banished, too.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.91 regular, $4.93 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.78 regular, $5.00 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/madam-mim-hummingbird.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > JUST HOW I LIKE IT All cards in your hand count as having ◉.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.39 foil

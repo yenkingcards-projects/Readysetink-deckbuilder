@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lady-tremaine-wicked-stepmother.html
 
 Flavor text: “If your chores are done, then clearly you don't have enough of them.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.04 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $1.07 foil

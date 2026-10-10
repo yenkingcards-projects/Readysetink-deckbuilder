@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/mushus-rocket.html
 > I NEED FIREPOWER When you play this item, chosen character gains Rush this turn. (They can challenge the turn they're played.)
 > HITCH A RIDE 2 ⬡, Banish this item — Chosen character gains Rush this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.28 foil

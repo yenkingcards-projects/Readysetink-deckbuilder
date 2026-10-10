@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sisu-empowered-sibling.html
 > Shift 6 (You may pay 6 ⬡ to play this on top of one of your characters named Sisu.)
 > I GOT THIS! When you play this character, banish all opposing characters with 2 ¤ or less.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.78 regular, $5.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.84 regular, $5.35 foil

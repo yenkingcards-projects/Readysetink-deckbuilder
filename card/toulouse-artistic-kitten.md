@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/toulouse-artistic-kitten.html
 
 Flavor text: He squeezed more paint from the tube and wiggled in delight. Archazia was fun, even if she was a giant owl. She had so many new colors to paint with!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.19 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/aladdin-street-rat.html
 
 Flavor text: It can be hard to tell the difference between a diamond in the rough and someone who's just, well, rough.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.23 foil

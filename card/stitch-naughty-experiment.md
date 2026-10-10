@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/stitch-naughty-experiment.html
 
 Flavor text: “Hi.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.21 foil

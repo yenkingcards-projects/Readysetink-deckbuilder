@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/yokai-enigmatic-inventor.html
 
 > TIME TO UPGRADE Whenever this character quests, you may return one of your items to your hand to pay 2 ⬡ less for the next item you play this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.35 foil

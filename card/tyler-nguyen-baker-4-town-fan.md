@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/tyler-nguyen-baker-4-town-fan.html
 
 Flavor text: “I can't believe they're right there! This is the best day of my life!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.16 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/syndrome-evil-inventor.html
 
 Flavor text: The fifth Rule of Villainy: The best way to get revenge on your enemies? Lots of practice.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.22 foil

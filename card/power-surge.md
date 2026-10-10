@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/power-surge.html
 Flavor text: Sulley: “What was that?”
 Mike: “I have no idea, but it would be really great if it didn't do it again.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.28 foil

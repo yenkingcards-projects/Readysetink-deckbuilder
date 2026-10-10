@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/ursulas-garden-full-of-the-unfortunate.
 
 > ABANDON HOPE While you have an exerted character here, opposing characters get -1 ◊.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.38 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/mike-wazowski-heroic-climber.html
 
 > FIND A FRIEND When you play this character and whenever he quests, each player reveals the top card of their deck. If it's a character card, they may put it into their hand. Otherwise, put it on the bottom of their deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.55 regular, $4.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.34 regular, $3.89 foil

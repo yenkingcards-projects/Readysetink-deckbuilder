@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/magica-de-spell-shadow-form.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > DANCE OF DARKNESS When you play this character, you may return another chosen character of yours to your hand to draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.41 foil

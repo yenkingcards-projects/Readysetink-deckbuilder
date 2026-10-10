@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/goofy-groundbreaking-chef.html
 
 Flavor text: “You're just in time for Surprise à la Goof!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.14 regular, $2.80 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.13 regular, $2.81 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/nanis-payback.html
 Flavor text: “Older sister's wrath is even more dangerous than Hamsterviel.”
 —Jumba Jookiba
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.71 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.69 foil

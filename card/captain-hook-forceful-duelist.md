@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/captain-hook-forceful-duelist.html
 
 Flavor text: He loves to make light of a foe's predicament.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $1.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $1.21 foil

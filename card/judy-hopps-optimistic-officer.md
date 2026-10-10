@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/judy-hopps-optimistic-officer.html
 
 Flavor text: “I'll get to the bottom of what happened with that locked lorebook. You can count on me!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.54 foil

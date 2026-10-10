@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/scar-heartless-hunter.html
 Flavor text: “It's for the greater good. I'm sure you understand.”
 —Scar
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.66 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.66 foil

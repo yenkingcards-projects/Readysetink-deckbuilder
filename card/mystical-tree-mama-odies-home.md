@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/mystical-tree-mama-odies-home.html
 > NOT BAD At the start of your turn, you may move 1 damage counter from chosen character here to chosen opposing character.
 > HARD-EARNED WISDOM At the start of your turn, if you have a character named Mama Odie here, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.29 foil

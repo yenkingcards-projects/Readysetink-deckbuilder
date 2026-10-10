@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/ludwig-von-drake-self-proclaimed-genius
 
 Flavor text: “So you see, there's a dark void at the edge of Lorcana. A complete absence of electromagnetic radiation! What's it made of? I don't know! The light's just gone. Kaput!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.28 foil

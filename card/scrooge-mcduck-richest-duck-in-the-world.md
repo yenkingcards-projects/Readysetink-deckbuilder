@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-richest-duck-in-the-worl
 
 Flavor text: He can make money anywhere.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.29 foil

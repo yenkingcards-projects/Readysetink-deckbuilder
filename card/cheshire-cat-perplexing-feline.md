@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cheshire-cat-perplexing-feline.html
 Flavor text: “He's not your average cat, after all. Then again, what cat is?”
 —Archazia
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.16 foil

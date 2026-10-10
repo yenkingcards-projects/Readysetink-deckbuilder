@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/taran-pig-keeper.html
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 > FOLLOW THE PIG Whenever this character quests, you may return a character card named Hen Wen from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.21 foil

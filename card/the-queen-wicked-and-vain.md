@@ -20,4 +20,4 @@ Flavor text: Sublime beauty matched with peerless cunning. Is there any question
 - Q: If I have The Queen – Wicked and Vain in play and an effect makes me exert her, do I get to draw a card with her I Summon Thee ability?
   A: No. When an ability has a cost, the card’s player must pay that cost to use the ability. If another effect exerts The Queen, you haven’t paid the cost for I Summon Thee, so you don’t get to draw the card. Additionally, you won’t be able to use I Summon Thee until The Queen is readied.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $1.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $1.21 foil

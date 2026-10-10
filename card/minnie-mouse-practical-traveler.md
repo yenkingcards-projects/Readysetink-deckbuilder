@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-practical-traveler.html
 
 Flavor text: “I found a shortcut just over the ridge. We'll be at the oasis in no time!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.33 foil

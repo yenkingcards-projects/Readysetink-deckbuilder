@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/peter-pan-shadow-finder.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > FLY, OF COURSE! Your other characters with Evasive gain Rush.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.27 regular, $1.63 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $1.63 foil

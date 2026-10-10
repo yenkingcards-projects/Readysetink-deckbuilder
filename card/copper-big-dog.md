@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/copper-big-dog.html
 
 Flavor text: “I'll clear this ol' vine out, if I have to do it one root at a time.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.28 foil

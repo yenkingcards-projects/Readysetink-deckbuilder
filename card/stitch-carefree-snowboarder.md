@@ -21,4 +21,4 @@ Flavor text: “First one down the mountain gets all the marshmallows for their 
 - Q: Can I return Stitch – Carefree Snowboarder with Alien’s He Has Been Chosen ability?
   A: No. The ability applies only to cards named Alien, not cards that just have the Alien classification. disneylorcana.com
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.85 regular, $1.73 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.96 regular, $1.76 foil

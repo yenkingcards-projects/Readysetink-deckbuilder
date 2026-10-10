@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/magical-maid-feather-duster.html
 Flavor text: “Have you ever seen anything so beautiful?” she asked, marveling at the Amethyst trees.
 “No, cherie,” Lumiere replied, never taking his eyes off her. “I have not.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.20 foil

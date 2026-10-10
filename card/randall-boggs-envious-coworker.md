@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/randall-boggs-envious-coworker.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > AFTER-HOURS PROJECT While all cards in your inkwell are exerted, this character gets +2 ◊.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.29 regular, $0.63 foil

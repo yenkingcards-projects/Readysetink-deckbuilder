@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/merlin-goat.html
 Flavor text: “He always was a stubborn old goat.”
 —Madam Mim
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $1.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $1.16 foil

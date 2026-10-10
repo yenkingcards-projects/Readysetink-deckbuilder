@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/sleepys-flute.html
 
 > A SILLY SONG ⟳ — If you played a song this turn, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.79 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $0.78 foil

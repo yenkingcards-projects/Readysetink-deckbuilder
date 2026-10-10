@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/sven-reindeer-steed.html
 
 > REINDEER GAMES When you play this character, you may ready chosen character. They can't quest or challenge for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.43 foil

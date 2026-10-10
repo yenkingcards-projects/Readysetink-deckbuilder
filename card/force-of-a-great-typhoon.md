@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/force-of-a-great-typhoon.html
 
 Flavor text: Once you find your center You are sure to win
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.26 foil

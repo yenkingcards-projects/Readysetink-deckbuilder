@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scroop-backstabber.html
 
 Flavor text: Always keep him in front of you. And downwind, if possible.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.13 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/kronk-unlicensed-investigator.html
 Flavor text: “Maybe this one's a chromicon. Probably not.
 I really should have paid more attention when that wizard guy was talking...”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.14 foil

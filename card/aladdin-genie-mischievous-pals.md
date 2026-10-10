@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/aladdin-genie-mischievous-pals.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Aladdin or Genie.)
 > SLEIGHT OF HAND When you play this character, you may put any number of cards from your hand on the bottom of your deck in any order. If you do, draw that number of cards plus 1.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.46 regular, $2.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.48 regular, $2.18 foil

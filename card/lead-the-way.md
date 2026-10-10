@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/lead-the-way.html
 
 Flavor text: “We have what it takes to find our way through this maze, together! Hold on—we're going in!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.12 foil

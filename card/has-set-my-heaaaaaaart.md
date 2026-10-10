@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/has-set-my-heaaaaaaart.html
 
 Flavor text: He's not real smart And yet, he's touched my little cowhide heart
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.24 foil

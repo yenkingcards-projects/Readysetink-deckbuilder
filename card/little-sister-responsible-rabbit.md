@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/little-sister-responsible-rabbit.html
 
 Flavor text: As Skippy's older sister, she's had lots of experience putting things back together.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.13 foil

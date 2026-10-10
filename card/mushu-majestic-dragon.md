@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/mushu-majestic-dragon.html
 > INTIMIDATING AND AWE-INSPIRING Whenever one of your characters challenges, they gain Resist +2 during that challenge. (Damage dealt to them is reduced by 2.)
 > GUARDIAN OF LOST SOULS During your turn, whenever one of your characters banishes another character in a challenge, gain 2 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.76 regular, $2.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.77 regular, $2.49 foil

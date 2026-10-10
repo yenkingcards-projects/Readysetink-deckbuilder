@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cri-kee-part-of-the-team.html
 Flavor text: “You were so focused on me and Mulan that you forgot about my man Cri-Kee here. And that was a mistake!”
 —Mushu
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.15 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pouncing-practice.html
 Flavor text: “Check out this cool trick my dad taught me!”
 —Simba
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.28 foil

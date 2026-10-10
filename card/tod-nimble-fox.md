@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/tod-nimble-fox.html
 Flavor text: “Look, I counted to ten before I started climbing.
 You all should have found better hiding spots than the top of a tree.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.17 foil

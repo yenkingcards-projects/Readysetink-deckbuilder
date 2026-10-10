@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/voyage.html
 
 Flavor text: “We were voyagers! Why'd we stop?” —Moana
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.12 foil

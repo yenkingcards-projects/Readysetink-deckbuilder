@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mother-gothel-selfish-manipulator.html
 
 Flavor text: “Great. Now I'm the bad guy.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $1.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.25 regular, $1.26 foil

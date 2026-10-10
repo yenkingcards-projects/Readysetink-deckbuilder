@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hen-wens-visions.html
 Flavor text: “Hen Wen, from you I do beseech Knowledge that lies beyond my reach...”
 —Taran
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.17 foil

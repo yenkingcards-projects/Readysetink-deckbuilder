@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/abu-bold-helmsman.html
 Flavor text: “Port, Abu! Port! To the left! ABU! The other way!”
 —Aladdin
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.12 foil

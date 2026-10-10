@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/anna-mystical-majesty.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Anna.)
 > EXCEPTIONAL POWER When you play this character, exert all opposing characters.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.78 foil

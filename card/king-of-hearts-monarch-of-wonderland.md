@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/king-of-hearts-monarch-of-wonderland.ht
 
 Flavor text: “By order of the king. You heard what she said!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.17 foil

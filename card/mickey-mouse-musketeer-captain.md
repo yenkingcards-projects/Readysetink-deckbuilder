@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-musketeer-captain.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Mickey Mouse.)
 > Bodyguard, Support MUSKETEERS UNITED When you play this character, if you used Shift to play him, you may draw a card for each character with Bodyguard you have in play.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.21 regular, $24.98 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.28 regular, $26.20 foil

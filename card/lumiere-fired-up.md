@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/lumiere-fired-up.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > SACREBLEU! Whenever one of your items is banished, this character gets +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.91 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.86 foil

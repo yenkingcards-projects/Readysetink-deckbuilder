@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/kristoff-official-ice-master.html
 Flavor text: Kristoff: “You want to talk about a supply and demand problem? I sell ice for a living.”
 Anna: “Ooh, that's a rough business to be in right now. I mean, that is really—ah, mm. That's unfortunate.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.20 foil

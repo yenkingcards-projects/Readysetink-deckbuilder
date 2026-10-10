@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/joshua-sweet-the-doctor.html
 
 Flavor text: “Heading out to the Inklands? Come on back if you need patching up.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.12 foil

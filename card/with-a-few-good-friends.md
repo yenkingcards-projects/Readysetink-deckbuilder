@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/with-a-few-good-friends.html
 - Q: How do I determine the ink type of the characters I have in play?
   A: There are symbols on the left side of the card below the name and version, on the same line where the classifications are listed. These symbols represent the six different ink types in Disney Lorcana. A card can have one or two symbols, and the card is the ink type of each ink type symbol listed on it. For example, With a Few Good Friends has the Amethyst ink type symbol, so it has the Amethyst ink type. One and Only One and Only
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.48 regular, $1.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.49 regular, $1.37 foil

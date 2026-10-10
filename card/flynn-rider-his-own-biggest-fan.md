@@ -21,4 +21,4 @@ Source: https://www.readysetink.com/card/flynn-rider-his-own-biggest-fan.html
 - Q: If I quest with Anna – Soothing Sister and choose Flynn Rider – His Own Biggest Fan from my discard for Anna’s Warm Heart ability, how much lore do I gain?
   A: You gain 1 lore from questing with Anna and 4 lore from Flynn, for a total of 5 lore! Flynn’s One Last, Big Score ability doesn’t apply when he’s not in play, so his {L} isn’t reduced. disneylorcana.com
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.74 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $0.74 foil

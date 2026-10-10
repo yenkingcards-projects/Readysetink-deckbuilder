@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/snow-white-fair-hearted.html
 
 Flavor text: Friendship is the best armor of all.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.83 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $0.93 foil

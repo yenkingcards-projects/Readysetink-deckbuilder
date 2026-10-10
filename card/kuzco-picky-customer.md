@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/kuzco-picky-customer.html
 Flavor text: “Give me the chili cheese sampler, hold the chili and put the cheese on the side. Oh, and extra gravy...
 Hey! Are you listening? I'm ordering here!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular

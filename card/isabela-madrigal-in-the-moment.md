@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/isabela-madrigal-in-the-moment.html
 
 Flavor text: “I just made something unexpected. Something sharp, something new.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $1.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $1.17 foil

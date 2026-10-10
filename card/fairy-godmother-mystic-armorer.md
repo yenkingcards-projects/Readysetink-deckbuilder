@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fairy-godmother-mystic-armorer.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Fairy Godmother.)
 > FORGET THE COACH, HERE'S A SWORD Whenever this character quests, your characters gain Challenger +3 and “When this character is banished in a challenge, return this card to your hand” this turn. (They get +3 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.97 regular, $3.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.00 regular, $3.67 foil

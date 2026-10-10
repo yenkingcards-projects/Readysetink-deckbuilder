@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/akela-forest-runner.html
 
 Flavor text: “Follow me, if you can,” Akela said, bounding into the Bitterwood. “The hunt is on!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.17 foil

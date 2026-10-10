@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/john-silver-stern-captain.html
 > Resist +2 (Damage dealt to this character is reduced by 2.)
 > DON'T JUST SIT THERE! At the start of your turn, deal 1 damage to each opposing ready character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.72 regular, $2.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.79 regular, $2.17 foil

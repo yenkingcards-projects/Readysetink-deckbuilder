@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/jetsam-riffraff.html
 
 Flavor text: “There must be powerful lore here, very powerful.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.11 foil

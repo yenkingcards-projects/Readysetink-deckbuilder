@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/olaf-trusting-companion.html
 
 Flavor text: “Isn't this Kristoff's hat? If he went this way, he'll be caught in that storm!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.25 foil

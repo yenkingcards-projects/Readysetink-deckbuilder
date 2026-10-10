@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/alpha-pack-leader.html
 
 Flavor text: “Now we will find the small mailman and The One Who Smells of Prunes.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.27 foil

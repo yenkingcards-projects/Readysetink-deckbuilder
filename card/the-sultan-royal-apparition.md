@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-sultan-royal-apparition.html
 > Vanish (When an opponent chooses this character for an action, banish them.)
 > COMMANDING PRESENCE Whenever one of your Illusion characters quests, exert chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.48 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.49 foil

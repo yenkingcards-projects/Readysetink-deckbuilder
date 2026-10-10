@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/babyhead-leader-of-sids-toys.html
 > TIGHTEN THE BOLTS Whenever you pay 2 ⬡ or less to play a card, chosen character gets +2 ¤ this turn.
 > REPLACEMENT PARTS During your turn, whenever one of your other characters is banished, draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.40 regular, $1.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.34 regular, $1.34 foil

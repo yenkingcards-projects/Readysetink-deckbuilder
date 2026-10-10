@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/posey-vampire-potato.html
 Flavor text: “She's alive! Alive, I tell you!”
 —Dr. Bushroot
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.42 foil

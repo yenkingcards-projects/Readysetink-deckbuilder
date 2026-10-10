@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/robin-hood-beloved-outlaw.html
 
 Flavor text: “You call this an ambush? Tsk, tsk. It's barely a bushwhack.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.29 foil

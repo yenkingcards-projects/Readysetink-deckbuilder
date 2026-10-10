@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hamm-piggy-bank.html
 
 Flavor text: “Can you hurry up, Woody? I think these flowers are aiming to break the bank, if you know what I mean!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.41 regular, $8.77 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.38 regular, $8.64 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/rafiki-mysterious-sage.html
 
 Flavor text: “The past can hurt. But the way I see it, you can either run from it or learn from it.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.37 foil

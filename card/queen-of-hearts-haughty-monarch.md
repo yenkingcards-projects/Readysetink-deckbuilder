@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/queen-of-hearts-haughty-monarch.html
 
 Flavor text: She'll go wherever she pleases, no matter who she has to step on to get there.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $0.97 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $0.95 foil

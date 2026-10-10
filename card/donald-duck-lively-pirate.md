@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/donald-duck-lively-pirate.html
 
 Flavor text: “Aye aye, Captain! I'll get it done.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.83 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.82 foil

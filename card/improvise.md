@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/improvise.html
 Flavor text: Shan-Yu: “It looks like you're out of ideas.”
 Mulan: “Not quite!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.27 foil

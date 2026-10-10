@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ratigan-nefarious-criminal.html
 
 Flavor text: “Why stop the show when you can simply steal it?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.63 regular, $1.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.54 regular, $1.40 foil

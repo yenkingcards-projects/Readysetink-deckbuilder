@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/sven-leaping-reindeer.html
 > Challenger +3 (While challenging, this character gets +3 ¤.)
 > Evasive (Only characters with Evasive can challenge this character.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.12 regular, $4.75 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.09 regular, $4.75 foil

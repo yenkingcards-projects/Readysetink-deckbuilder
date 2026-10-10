@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cy-bug-invasive-enemy.html
 Flavor text: “Cy-Bugs are like a virus. They don't know they're in a game.”
 —Calhoun
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.12 foil

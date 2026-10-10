@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/marshmallow-cranky-climber.html
 
 Flavor text: “GO AWAY!!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.71 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $0.71 foil

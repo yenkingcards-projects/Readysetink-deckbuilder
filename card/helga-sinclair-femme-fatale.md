@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/helga-sinclair-femme-fatale.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Helga Sinclair.)
 > THIS CHANGES EVERYTHING Whenever this character quests, you may deal 3 damage to chosen damaged character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.41 foil

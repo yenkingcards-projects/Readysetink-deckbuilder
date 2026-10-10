@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/horace-no-good-scoundrel.html
 
 Flavor text: “Well, they ain't in here, Jasper.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.18 foil

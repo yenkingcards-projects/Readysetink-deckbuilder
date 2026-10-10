@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-library-a-gift-for-belle.html
 
 > LOST IN A BOOK Whenever a character is banished while here, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $1.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $1.38 foil

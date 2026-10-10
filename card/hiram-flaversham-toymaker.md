@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hiram-flaversham-toymaker.html
 
 Flavor text: His creations are even more wondrous with the Illuminary's resources at his fingertips.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.38 regular, $4.51 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.36 regular, $4.51 foil

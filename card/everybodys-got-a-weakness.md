@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/everybodys-got-a-weakness.html
 
 > Move 1 damage counter from each damaged character you have in play to chosen opposing character. Draw a card for each damage counter moved this way.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $2.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.27 regular, $1.98 foil

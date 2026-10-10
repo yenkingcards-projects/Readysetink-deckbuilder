@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/mirabel-madrigal-family-guardian.html
 
 > MIRACULOUS PROTECTION Whenever you remove damage from one of your characters, you may ready them. If you do, they can't quest or challenge for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.43 foil

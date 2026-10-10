@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/kashekim-ancient-ruler.html
 
 Flavor text: “You presume much, to think you are welcome here.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.19 foil

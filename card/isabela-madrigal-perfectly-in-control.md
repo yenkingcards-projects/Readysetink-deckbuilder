@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/isabela-madrigal-perfectly-in-control.h
 > FEEL BETTER When you play this character and whenever she quests, you may move all damage from chosen character of yours to this character.
 > SELF-CARE At the end of your turn, you may remove all damage from this character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.05 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $1.06 foil

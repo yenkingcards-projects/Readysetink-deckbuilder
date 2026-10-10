@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/repair.html
 
 Flavor text: “I'm thinkin' about opening a shop here. What do you think?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.09 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.10 foil

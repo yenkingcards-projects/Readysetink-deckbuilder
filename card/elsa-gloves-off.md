@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/elsa-gloves-off.html
 
 Flavor text: The power of ice may not stop the flood, but it will help protect Lorcana.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.34 foil

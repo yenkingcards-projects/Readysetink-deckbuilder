@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/jafar-aspiring-ruler.html
 
 Flavor text: “At last, both halves of the crown belong to me!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.42 foil

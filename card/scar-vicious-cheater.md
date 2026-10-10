@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/scar-vicious-cheater.html
 > Rush (This character can challenge the turn they're played.)
 > DADDY ISN'T HERE TO SAVE YOU During your turn, whenever this character banishes another character in a challenge, you may ready this character. He can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.28 regular, $11.82 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.25 regular, $12.00 foil

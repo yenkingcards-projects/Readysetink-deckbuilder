@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/shere-khan-fearsome-tiger.html
 > ON THE HUNT Whenever this character quests, banish chosen opposing damaged character.
 > Then, you may put 1 damage counter on another chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.58 regular, $1.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.51 regular, $2.05 foil

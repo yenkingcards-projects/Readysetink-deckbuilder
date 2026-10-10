@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/genie-wonderful-trickster.html
 > YOUR REWARD AWAITS Whenever you play a card, draw a card.
 > FORBIDDEN TREASURE At the end of your turn, put all the cards in your hand on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.49 regular, $2.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.50 regular, $2.13 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/beast-wolfsbane.html
 
 Flavor text: “I'll take on all of you if I have to!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.36 regular, $16.89 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.41 regular, $16.89 foil

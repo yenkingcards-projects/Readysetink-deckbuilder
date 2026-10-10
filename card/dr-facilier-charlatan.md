@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/dr-facilier-charlatan.html
 
 Flavor text: “Enchantée. A tip of the hat from Dr. Facilier.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.20 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pleakley-arctic-naturalist.html
 
 Flavor text: “Amazing! This storm has created all sorts of new life forms. I will call you ‘Avis frigida.’”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.42 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.40 foil

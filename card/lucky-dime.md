@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/lucky-dime.html
 
 Flavor text: This one simple coin changed Scrooge's life forever.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.17 regular, $2.55 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.19 regular, $2.58 foil

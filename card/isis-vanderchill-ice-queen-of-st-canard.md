@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/isis-vanderchill-ice-queen-of-st-canard
 Flavor text: Darkwing: “Just cool it, lady.”
 Launchpad: “I think you might want to rephrase that, DW.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $1.80 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $1.74 foil

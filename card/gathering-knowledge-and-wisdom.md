@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/gathering-knowledge-and-wisdom.html
 
 Flavor text: “Just think! All this knowledge was under our noses the whole time. We only had to look in the right place.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.34 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.32 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/darkwing-duck-crime-fighter.html
 
 Flavor text: “I am the terror that flaps in the night! I am the chill that runs up your spine! I am Darkwing Duck.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.47 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.47 foil

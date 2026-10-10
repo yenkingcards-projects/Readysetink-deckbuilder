@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/prince-john-greediest-of-all.html
 
 Flavor text: “Taxes! Taxes! Beautiful, lovely taxes!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.60 regular, $3.99 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.64 regular, $3.86 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/marshmallow-persistent-guardian.html
 Flavor text: “Hey! We were just talking about you! All good things, all good things.”
 —Olaf
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.77 foil

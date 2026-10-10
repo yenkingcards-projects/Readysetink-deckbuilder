@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/stitch-alien-troublemaker.html
 Flavor text: “Ah! Finally, a good use for his destructive instincts.”
 —Jumba Jookiba
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.39 regular, $0.78 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.38 regular, $0.75 foil

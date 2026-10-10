@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/carl-fredricksen-on-the-move.html
 > MOVING PARTNER Whenever you play a location, you may move this character and up to 1 of your other characters to that location for free.
 > ADVENTURE AWAITS Whenever this character quests while at a location, draw cards equal to that location's ◊.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $0.75 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.31 regular, $0.71 foil

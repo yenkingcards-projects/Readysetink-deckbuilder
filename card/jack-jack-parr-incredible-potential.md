@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/jack-jack-parr-incredible-potential.htm
 > • action or item, this character gets +2 ◊ this turn.
 > • location, banish chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.56 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.63 regular, $0.92 foil

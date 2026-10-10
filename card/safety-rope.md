@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/safety-rope.html
 > GRAB HOLD! When you play this item, you may put a character card from your discard on the top of your deck.
 > PACK IT UP At the end of your turn, you may banish this item to draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.34 foil

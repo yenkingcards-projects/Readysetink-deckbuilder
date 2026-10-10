@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/diablo-devoted-herald.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > CIRCLE FAR AND WIDE During each opponent's turn, whenever they draw a card while this character is exerted, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $7.56 regular, $11.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $7.71 regular, $11.44 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/malicious-mean-and-scary.html
 
 Flavor text: My sneer could curdle dairy
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.70 regular, $3.69 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.71 regular, $3.68 foil

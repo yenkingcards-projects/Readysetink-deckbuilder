@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cogsworth-talking-clock.html
 
 Flavor text: “This has gone far enough. I'm in charge here.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.31 foil

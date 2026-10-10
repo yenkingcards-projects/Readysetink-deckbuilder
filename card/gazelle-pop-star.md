@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/gazelle-pop-star.html
 
 Flavor text: “Good evening, Lorcana! We're here tonight to celebrate what's possible when we stand together as one.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.14 foil

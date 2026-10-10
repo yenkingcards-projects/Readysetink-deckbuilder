@@ -18,4 +18,4 @@ Source: https://www.readysetink.com/card/dunbroch-family-tapestry.html
 - Q: If a player doesn’t have any character cards in their discard, do they still shuffle their deck?
   A: No. Since there are no cards for that player to shuffle into the deck, the shuffle doesn’t happen for them.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.24 foil

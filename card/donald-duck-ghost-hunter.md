@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/donald-duck-ghost-hunter.html
 Flavor text: “Let's show those rotten ghosts who's in charge!
 You go first.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.23 foil

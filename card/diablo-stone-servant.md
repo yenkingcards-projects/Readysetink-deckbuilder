@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/diablo-stone-servant.html
 > CRUEL INTENT While you have a Villain character in play, this character gets +2 ¤ and +1 ◊.
 > VILLAINOUS BOND While this character is exerted, your Villain characters can't be challenged.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.62 regular, $1.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.68 regular, $1.62 foil

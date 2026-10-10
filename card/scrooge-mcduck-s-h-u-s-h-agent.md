@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/scrooge-mcduck-s-h-u-s-h-agent.html
 > BACKUP PLAN When you play this character, draw a card, then choose and discard a card.
 > ON THE MOVE When this character is challenged, return this card to your hand. (No damage is dealt in that challenge.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.53 regular, $1.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.40 regular, $1.29 foil

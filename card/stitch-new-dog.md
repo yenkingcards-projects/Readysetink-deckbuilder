@@ -13,4 +13,4 @@ Flavor text: Lilo: “David! I got a new dog!”
 David: “Auwe!...You sure it's a dog?”
 Lilo: “Uh-huh. He used to be a collie before he got ran over.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.59 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.60 foil

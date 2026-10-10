@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tod-copper-best-of-friends.html
 > Shift 2 ⬡ (You may pay 2 ⬡ to play this on top of one of your characters named Tod or Copper.)
 > Evasive (Only characters with Evasive can challenge this character.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.62 regular, $1.65 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.56 regular, $1.55 foil

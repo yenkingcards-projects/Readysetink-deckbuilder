@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/bolt-superdog.html
 > MARK OF POWER Whenever you ready this character, gain 1 lore for each other undamaged character you have in play.
 > BOLT STARE ⟳ — Banish chosen Illusion character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $1.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $1.12 foil

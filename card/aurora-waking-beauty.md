@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/aurora-waking-beauty.html
 > Singer 5 (This character counts as cost 5 to sing songs.)
 > SWEET DREAMS Whenever you remove 1 or more damage from a character, ready this character. She can't quest or challenge for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.44 regular, $5.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.44 regular, $5.18 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/clawhauser-donut-detective.html
 
 Flavor text: It was only a crumb, but Clawhauser knew it was a small piece of a larger mystery.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.15 foil

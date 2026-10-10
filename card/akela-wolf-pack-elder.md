@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/akela-wolf-pack-elder.html
 
 Flavor text: A wise leader does not shy away from difficult decisions when the safety of the pack is at stake.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.22 foil

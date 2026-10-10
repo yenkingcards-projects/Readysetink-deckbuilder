@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/wee-dingwall-scrappy-lad.html
 
 Flavor text: “No big flower's gonnae block our way, Da. I'll tear it apart with me own hands.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.20 foil

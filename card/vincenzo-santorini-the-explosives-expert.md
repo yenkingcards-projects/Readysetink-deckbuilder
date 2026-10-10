@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/vincenzo-santorini-the-explosives-exper
 
 Flavor text: “Never be afraid to make a big entrance.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.28 regular, $3.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $3.19 foil

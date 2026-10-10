@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/megavolt-electrical-menace.html
 Flavor text: “This guy's a real live wire!”
 —Launchpad
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.26 foil

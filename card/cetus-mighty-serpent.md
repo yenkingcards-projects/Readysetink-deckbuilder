@@ -13,4 +13,4 @@ Flavor text: “Okay, so this vine? Not in my plans. But I'm a resourceful god. 
 Bring out the sea serpent.”
 —Hades
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.17 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/bend-to-my-will.html
 
 Flavor text: “At last! This is where your luck runs out!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.08 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.27 regular, $1.14 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/we-could-be-immortals.html
 > Your Inventor characters gain Resist +6 this turn. Then, put this card into your inkwell facedown and exerted.
 > (Damage dealt to them is reduced by 6.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.61 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $0.61 foil

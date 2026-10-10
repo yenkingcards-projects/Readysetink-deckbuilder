@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/olaf-friendly-snowman.html
 
 Flavor text: “I'm Olaf and I like warm hugs!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.69 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.70 foil

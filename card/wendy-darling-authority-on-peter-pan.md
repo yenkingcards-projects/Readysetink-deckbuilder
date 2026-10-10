@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wendy-darling-authority-on-peter-pan.ht
 > Ward (Opponents can't choose this character except to challenge.)
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.41 foil

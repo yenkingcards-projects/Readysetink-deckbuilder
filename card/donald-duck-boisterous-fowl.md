@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/donald-duck-boisterous-fowl.html
 
 Flavor text: “Who you callin' boisterous, buster?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.36 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/copper-champion-of-the-forest.html
 > Shift 3 ⬡ (You may pay 3 ⬡ to play this on top of one of your characters named Copper.)
 > MORE TO EXPLORE Whenever this character quests, your characters with Evasive get +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $0.46 foil

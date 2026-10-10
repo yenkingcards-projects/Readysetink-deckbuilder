@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/omnidroid-v-10.html
 > Shift 4 ⬡ (You may pay 4 ⬡ to play this on top of one of your characters named Omnidroid.)
 > ELECTRO-ARMOR While there's a card under this character, it gains Resist +2. (Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.74 regular, $3.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.70 regular, $3.26 foil

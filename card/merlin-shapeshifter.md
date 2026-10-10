@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merlin-shapeshifter.html
 
 Flavor text: “Oh, blast it all—I can't make up my mind.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.18 foil

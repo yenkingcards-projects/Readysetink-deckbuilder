@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/shield-of-virtue.html
 
 Flavor text: “Arm thyself with this enchanted Shield of Virtue and this mighty Sword of Truth, for these weapons of righteousness will triumph over evil.” —Flora
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.27 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/wreck-it-ralph-big-lug.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Wreck-It Ralph.)
 > BACK ON TRACK When you play this character and whenever he quests, you may return a Racer character card with cost 6 or less from your discard to your hand. If you do, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $1.09 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $1.09 foil

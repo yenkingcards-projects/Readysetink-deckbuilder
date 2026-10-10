@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tinker-bell-very-clever-fairy.html
 
 Flavor text: She lives in a world of possibilities.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.30 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/goofy-flying-goof.html
 
 Flavor text: “Hold on to yer hat!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.58 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $1.57 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ruby-coil.html
 
 Flavor text: Venturo felt a spark from his arm coil, and energy flooded his strained muscles.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.20 foil

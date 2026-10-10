@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ratigan-party-crasher.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > DELIGHTFULLY WICKED Your damaged characters get +2 ¤.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.38 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/lilo-junior-cake-decorator.html
 
 Flavor text: “Peanut butter and pineapple! This'll be the best cake ever!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.23 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/under-the-sea.html
 
 Flavor text: Such wonderful things surround you
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.61 regular, $6.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.46 regular, $6.75 foil

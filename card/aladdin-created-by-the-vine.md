@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/aladdin-created-by-the-vine.html
 Flavor text: “Wait, that's not an Aladdin glimmer—that's a vineling replica!”
 —Shanzay, an Illumineer
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $0.39 foil

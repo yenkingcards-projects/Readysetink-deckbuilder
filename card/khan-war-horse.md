@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/khan-war-horse.html
 Flavor text: “When the whole world changes around you, remember that Khan will always be the same— steadfast and true.”
 —Fa Zhou
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.13 foil

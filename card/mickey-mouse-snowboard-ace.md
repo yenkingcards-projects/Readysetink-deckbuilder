@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-snowboard-ace.html
 
 Flavor text: “Now, that's what I call shredding!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.49 foil

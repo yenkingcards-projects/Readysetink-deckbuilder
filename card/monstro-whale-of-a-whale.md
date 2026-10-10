@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/monstro-whale-of-a-whale.html
 Flavor text: The great beast breached the surface of the Azurite Sea, and the cry went out, “Monstro!
 Monstro!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.20 foil

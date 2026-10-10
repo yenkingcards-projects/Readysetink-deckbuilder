@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/snow-white-lost-in-the-forest.html
 
 Flavor text: “Why, you're all alone, just like me.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.29 foil

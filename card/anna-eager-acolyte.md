@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/anna-eager-acolyte.html
 
 Flavor text: “Okay, I can totally move small stuff. I need something bigger...Where's Kristoff's sled?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.25 foil

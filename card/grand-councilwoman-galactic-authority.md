@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/grand-councilwoman-galactic-authority.h
 
 Flavor text: “Mr. Pleakley?! Are you responsible for this snowball? You are a member of the Galactic Council—have some self-respect!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.41 foil

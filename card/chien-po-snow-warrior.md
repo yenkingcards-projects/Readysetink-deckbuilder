@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/chien-po-snow-warrior.html
 
 Flavor text: “Stay right here, little snowball. I'll come get you when it's time for your date with Ling's face.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.18 foil

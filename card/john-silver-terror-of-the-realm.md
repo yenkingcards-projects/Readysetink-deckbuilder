@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/john-silver-terror-of-the-realm.html
 
 Flavor text: “Strange things be at the edge of the map: sea witches, entangled glimmers, and whatnot. I'll stay with me ship, thank you.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.31 foil

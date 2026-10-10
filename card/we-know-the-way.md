@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/we-know-the-way.html
 > Reveal the top card of your deck. If it has the same name as the chosen card, you may play the revealed card for free.
 > Otherwise, put it into your hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $3.50 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $3.50 foil

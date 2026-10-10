@@ -18,4 +18,4 @@ Source: https://www.readysetink.com/card/nana-canine-caregiver.html
 - Q: If I don’t have any cards in my hand when I play Nana – Canine Caregiver, can I still choose to return a character to their player’s hand?
   A: No. You need to choose and discard a card when you play her in order to return a character to their player’s hand. Discarding a card is a cost you have to pay in order to get the effect. If you don’t discard a card, nothing in the rest of the sentence happens.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.25 foil

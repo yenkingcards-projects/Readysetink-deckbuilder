@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/visiting-christmas-past.html
 Flavor text: “What's wrong, Scrooge? I thought you enjoyed looking down on the world!”
 —The Ghost of Christmas Past
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.46 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/perdita-devoted-mother.html
 
 Flavor text: Her pups will follow her anywhere.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.97 regular, $2.34 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.98 regular, $2.40 foil

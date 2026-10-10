@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/king-louie-king-of-swing.html
 
 Flavor text: “Come on, groove with ol' King Louie. You cats need to relax!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.16 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/prince-phillip-dragonslayer.html
 Flavor text: “The road to true love may be barred by still many more dangers, which you alone will have to face.”
 —Flora
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.41 foil

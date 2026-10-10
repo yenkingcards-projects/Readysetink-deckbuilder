@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mrs-incredible-helen-parr.html
 
 Flavor text: “You can do this. I believe in you. Now let's show them what we can do!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.21 foil

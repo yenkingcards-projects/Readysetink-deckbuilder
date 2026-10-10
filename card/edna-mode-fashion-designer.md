@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/edna-mode-fashion-designer.html
 > NO CAPES! When you play this character, you may return chosen item with cost 2 or less to its player's hand. If you do, its player draws a card.
 > MAKING SUPERS FABULOUS Whenever this character quests, your Super characters get +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $0.41 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pua-protective-pig.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > FREE FRUIT When this character is banished, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.28 foil

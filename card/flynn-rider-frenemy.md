@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/flynn-rider-frenemy.html
 
 Flavor text: “You guys look busy—I'll just keep an eye on this lore for you.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.96 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $1.05 foil

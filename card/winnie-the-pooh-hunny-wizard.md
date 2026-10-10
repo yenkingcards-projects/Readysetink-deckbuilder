@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/winnie-the-pooh-hunny-wizard.html
 
 Flavor text: He'd always felt a kinship with honey. They were both golden, and sweet, and likely to end up in sticky situations.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $2.97 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $3.04 foil

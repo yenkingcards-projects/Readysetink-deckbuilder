@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/half-hexwell-crown.html
 
 Flavor text: The broken crown holds dark and mysterious powers.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.32 foil

@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/daisy-duck-isabel.html
 Flavor text: “You loved your gold more than that precious creature. And you lost her forever.”
 —Ghost of Christmas Past, to Scrooge
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.25 foil

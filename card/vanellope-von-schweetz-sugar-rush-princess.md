@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/vanellope-von-schweetz-sugar-rush-princ
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Vanellope von Schweetz.)
 > I HEREBY DECREE Whenever you play another Princess character, all opposing characters get -1 ¤ until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $0.76 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.30 regular, $0.76 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/buzz-lightyear-jungle-ranger.html
 > TAKE CHARGE When you play this character, you may return an action card with cost 7 or less from your discard to your hand.
 > ADVANCED TRAINING Whenever you play an action, chosen character gets +1 ◊ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.87 regular, $5.84 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.83 regular, $6.07 foil

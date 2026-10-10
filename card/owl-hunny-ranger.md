@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/owl-hunny-ranger.html
 > HUNNY ALLIANCE While you have another Hunny character in play, this character gains Resist +2.
 > (Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.40 foil

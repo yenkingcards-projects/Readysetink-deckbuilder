@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/frozone-super-cool.html
 > Rush (This character can challenge the turn they're played.)
 > JUST CHILL When you play this character, if you have another Super character in play, you may exert chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.44 foil

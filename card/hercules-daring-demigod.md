@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hercules-daring-demigod.html
 > Rush (This character can challenge the turn they're played.)
 > Reckless (This character can't quest and must challenge each turn if able.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.29 foil

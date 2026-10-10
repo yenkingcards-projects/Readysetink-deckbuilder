@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/pete-pastry-chomper.html
 
 Flavor text: His half-baked scheme to whisk away the food almost worked. But in the end, he got his just desserts.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.12 foil

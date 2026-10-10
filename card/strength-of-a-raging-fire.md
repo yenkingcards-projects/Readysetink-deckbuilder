@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/strength-of-a-raging-fire.html
 
 Flavor text: Tranquil as a forest But on fire within
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.32 regular, $5.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $3.33 regular, $5.42 foil

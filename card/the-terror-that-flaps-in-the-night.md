@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-terror-that-flaps-in-the-night.html
 Flavor text: “The first rule of superheroing is always utilize the element of surprise.”
 —Darkwing Duck
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.80 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.82 foil

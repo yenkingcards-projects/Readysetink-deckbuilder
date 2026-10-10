@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hades-looking-for-a-deal.html
 
 Flavor text: “I'm kind of on a schedule here—I got plans for August.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $26.88 regular, $40.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $26.56 regular, $40.38 foil

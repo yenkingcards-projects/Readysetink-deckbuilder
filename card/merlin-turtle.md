@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/merlin-turtle.html
 
 Flavor text: “Don't rush me, now—this is important.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.19 foil

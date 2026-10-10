@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/go-go-tomago-mechanical-engineer.html
 
 Flavor text: “Check it out! This ‘ink’ offers so many possibilities.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.19 foil

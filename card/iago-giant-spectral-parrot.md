@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/iago-giant-spectral-parrot.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > Vanish (When an opponent chooses this character for an action, banish them.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.35 regular, $0.73 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.36 regular, $0.72 foil

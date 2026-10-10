@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-detective.html
 
 Flavor text: Wherever the seaweed had come from, Mickey was sure of one thing: something fishy was going on.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.65 foil

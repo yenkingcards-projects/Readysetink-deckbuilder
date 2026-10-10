@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lilo-escape-artist.html
 
 Flavor text: “You can't keep me away from the fun!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.60 regular, $3.83 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.62 regular, $3.89 foil

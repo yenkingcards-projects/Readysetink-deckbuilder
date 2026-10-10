@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/sleepy-deep-sleeper.html
 
 Flavor text: A warm breeze, fragrant smells, and a gently swinging vine...Who wouldn't fall asleep?
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular

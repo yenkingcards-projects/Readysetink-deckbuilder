@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/attack-of-the-vine.html
 
 > Your Floodborn characters gain Resist +2 and can challenge ready characters this turn. (Damage dealt to them is reduced by 2.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.46 foil

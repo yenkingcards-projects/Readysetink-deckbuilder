@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-ghost-hunter.html
 
 Flavor text: It's hard to catch a ghost without going somewhere spooky.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.19 foil

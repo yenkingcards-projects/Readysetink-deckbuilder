@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/jasmine-disguised.html
 
 Flavor text: “Try to understand. I've never done a thing on my own. I've never had any real friends....I've never even been outside the palace walls.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.20 foil

@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/negaduck-evil-doppelganger.html
 Flavor text: “Only someone so dastardly, so despicable, so disdainful of the utterly defenseless would dare perform such a deed!”
 —Darkwing Duck
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.20 foil

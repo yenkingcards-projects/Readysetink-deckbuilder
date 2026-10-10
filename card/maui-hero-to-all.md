@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/maui-hero-to-all.html
 
 Flavor text: “What I believe you were trying to say is ‘Thank you.’”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.86 regular, $4.65 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.90 regular, $4.66 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/gaetan-moliere-the-mole.html
 
 Flavor text: “Fascinating. This shouldn't exist, yet it does. It may be older than the Great Illuminary itself.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.24 foil

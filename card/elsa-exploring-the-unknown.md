@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/elsa-exploring-the-unknown.html
 
 Flavor text: “This world still has secrets to uncover.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.30 foil

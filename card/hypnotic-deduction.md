@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hypnotic-deduction.html
 Flavor text: “A security device! Easily defeated, of course. Once I make room for the crown, I...can...bring...it...
 to...him.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.16 foil

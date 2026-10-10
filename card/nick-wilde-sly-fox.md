@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/nick-wilde-sly-fox.html
 > Shift 1 (You may pay 1 ⬡ to play this on top of one of your characters named Nick Wilde.)
 > YOU CAN'T TOUCH ME While you have an item in play, this character can't be challenged.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.22 foil

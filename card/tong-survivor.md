@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tong-survivor.html
 
 Flavor text: “I too wish to join this fellowship of Druun butt-kickery.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.02 regular, $0.16 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/robin-hood-sneaky-sleuth.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Robin Hood.)
 > CLEVER PLAN This character gets +1 ◊ for each opposing damaged character in play.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.40 foil

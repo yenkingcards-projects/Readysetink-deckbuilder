@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/aurelian-gyrosensor.html
 Flavor text: “It can point you toward lost lore, but if you're not careful, it'll lead you off a cliff.”
 —Venturo, an Illumineer
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.30 foil

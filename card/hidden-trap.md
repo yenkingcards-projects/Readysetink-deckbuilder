@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hidden-trap.html
 > • Banish chosen item.
 > • Chosen opposing character gets -2 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.19 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-prince-never-gives-up.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.32 foil

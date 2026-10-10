@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/the-vine-towering-stalk.html
 > SATURATE Your other exerted Floodborn characters gain Bodyguard.
 > HOSTILE SWARM During an opponent's turn, whenever one of your Floodborn characters is banished, deal 1 damage to each opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $1.75 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $1.67 foil

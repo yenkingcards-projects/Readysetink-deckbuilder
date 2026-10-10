@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/hercules-unwavering-demigod.html
 
 Flavor text: “That maze wasn't so bad! Let's see what this island has in store for us.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.16 foil

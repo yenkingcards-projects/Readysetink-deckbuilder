@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/milo-thatch-king-of-atlantis.html
 
 Flavor text: “You don't know what you're tampering with.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.54 regular, $1.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.65 regular, $1.32 foil

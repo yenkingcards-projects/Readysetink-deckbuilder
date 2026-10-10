@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/madam-mim-cheating-spellcaster.html
 Flavor text: “She only wants rules so she can break them!”
 —Archimedes
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.44 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/stolen-scimitar.html
 
 Flavor text: Sometimes you've got to take what you can get.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.18 foil

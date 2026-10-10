@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/elsas-ice-palace-place-of-solitude.html
 
 > ETERNAL WINTER When you play this location, choose an exerted character. While this location is in play, that character can't ready at the start of their turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.29 regular, $0.53 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.25 regular, $0.53 foil

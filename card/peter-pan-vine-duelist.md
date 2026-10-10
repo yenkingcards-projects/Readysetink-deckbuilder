@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/peter-pan-vine-duelist.html
 
 Flavor text: “Come on, you big bully. You've gotta be faster than that!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.35 foil

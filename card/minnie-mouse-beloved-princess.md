@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-beloved-princess.html
 
 Flavor text: Wherever the princess goes, her musketeers are ...well, they're around somewhere, probably.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.46 foil

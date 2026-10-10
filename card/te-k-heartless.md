@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/te-k-heartless.html
 Flavor text: Maui: “Ever defeat a lava monster?”
 Moana: “No. Have you?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.00 regular, $15.79 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.14 regular, $15.87 foil

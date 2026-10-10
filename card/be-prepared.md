@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/be-prepared.html
 
 Flavor text: Our teeth and ambitions are bared!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.43 regular, $7.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.62 regular, $7.23 foil

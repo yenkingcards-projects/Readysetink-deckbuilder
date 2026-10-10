@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/suzy-master-seamstress.html
 
 Flavor text: The devoted mice were excited to surprise Cinderella with a new dress. Smiling, Archazia gave them a spool of magic thread. “This will make it perfect,” she said.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.15 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hades-lord-of-the-dead.html
 
 Flavor text: “You could say I'm big on the catch, not so much on the release.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.69 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.67 foil

@@ -20,4 +20,4 @@ Flavor text: “My big dumb sister said I had to wear warm clothes, so I took AL
 - Q: Does Lilo’s ability prevent all damage to her during her opponents’ turns?
   A: No. It applies only the first time that she would take damage during each opponent’s turn. It doesn’t apply to damage she would take after that.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.71 regular, $3.85 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.65 regular, $3.85 foil

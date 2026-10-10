@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hide-away.html
 Flavor text: Fauna: “Oh my! We dropped some...”
 Merryweather: “You mean you dropped some!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.31 foil

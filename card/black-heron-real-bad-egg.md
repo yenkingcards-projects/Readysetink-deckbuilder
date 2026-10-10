@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/black-heron-real-bad-egg.html
 
 Flavor text: “You may have bested me before, McDuck, but not this time!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.91 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.92 foil

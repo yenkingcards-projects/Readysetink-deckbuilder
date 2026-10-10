@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/woody-waiting-for-a-friend.html
 
 Flavor text: “Starin' over the jungle from this huge vine I think back to when I was laughin' and feelin' fine My friends were all around to welcome me back home But now I'm lost in Lorcana and oh so alone”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.46 foil

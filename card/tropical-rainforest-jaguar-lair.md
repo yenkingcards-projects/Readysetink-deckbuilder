@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/tropical-rainforest-jaguar-lair.html
 
 > SNACK TIME Opposing damaged characters gain Reckless. (They can't quest and must challenge if able.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.25 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/nathaniel-flint-notorious-pirate.html
 Flavor text: “Flint's secret trove was never found, but stories have persisted that it remains hidden...”
 —Narrator
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.93 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $0.94 foil

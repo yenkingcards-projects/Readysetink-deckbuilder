@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/meilin-lee-losing-control.html
 
 > RED PANDA POWER When you play this character, look at the top 4 cards of your deck. You may reveal a Red Panda character card or a song card and put it into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.79 regular, $2.06 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.76 regular, $1.92 foil

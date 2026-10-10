@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/simba-playful-pouncer.html
 
 Flavor text: Like Zazu always says, practice makes perfect!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.30 foil

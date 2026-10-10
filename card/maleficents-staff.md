@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/maleficents-staff.html
 
 > BACK, FOOLS! Whenever one of your opponents' characters, items, or locations is returned to their hand from play, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.72 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.71 foil

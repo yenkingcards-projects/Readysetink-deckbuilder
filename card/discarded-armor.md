@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/discarded-armor.html
 
 > FOUND EQUIPMENT ⟳ — If you discarded a card this turn, chosen character of yours gains Resist +1 until the start of your next turn. (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.25 foil

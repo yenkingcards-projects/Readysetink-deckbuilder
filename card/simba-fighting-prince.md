@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/simba-fighting-prince.html
 
 Flavor text: He's ready to restore the Pride Lands to their former glory.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.72 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.72 foil

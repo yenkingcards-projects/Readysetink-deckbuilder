@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/tinker-bell-finding-a-way.html
 Flavor text: “Tink, what do you see over there? Do you think we can get in?”
 —Peter Pan
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.66 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.65 foil

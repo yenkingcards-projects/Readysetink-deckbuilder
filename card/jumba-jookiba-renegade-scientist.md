@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/jumba-jookiba-renegade-scientist.html
 Flavor text: “Created something? Ha! But that would be irresponsible and unethical. I would never, ever...
 make more than one.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.27 foil

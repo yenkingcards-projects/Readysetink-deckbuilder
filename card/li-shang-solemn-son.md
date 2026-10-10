@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/li-shang-solemn-son.html
 
 Flavor text: “My father was strict and stern, but he made me who I am.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.16 foil

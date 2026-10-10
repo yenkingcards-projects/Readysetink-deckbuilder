@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/ming-lee-giant-red-panda.html
 - Q: If I challenge with Ming Lee – Giant Red Panda and resolve her Path of Destruction ability, when I ready her during the challenge, does it remove her from the challenge?
   A: No. Once a character is declared as a challenger or being challenged, they can only be removed from the challenge if they leave play before the process of the challenge is complete. Prophetic Vision Prophetic Vision
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.46 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.44 foil

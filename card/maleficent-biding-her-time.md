@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/maleficent-biding-her-time.html
 
 Flavor text: “One mustn't rush these things, or the greatest plan might come to nothing.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.64 regular, $2.06 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.66 regular, $2.02 foil

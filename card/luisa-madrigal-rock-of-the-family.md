@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/luisa-madrigal-rock-of-the-family.html
 
 Flavor text: There's no way Ursula's creatures are getting to that donkey.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.10 foil

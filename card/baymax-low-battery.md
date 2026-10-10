@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/baymax-low-battery.html
 
 Flavor text: “Processing data from Archazia's thought scrolls is taking a great deal of power. Extreme battery saver protocol engaged.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.22 foil

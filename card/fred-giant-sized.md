@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fred-giant-sized.html
 > Shift 5 (You may pay 5 ⬡ to play this on top of one of your characters named Fred.)
 > I LIKE WHERE THIS IS HEADING Whenever this character quests, reveal cards from the top of your deck until you reveal a Floodborn character card. Put that card into your hand and shuffle the rest into your deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.92 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.89 foil

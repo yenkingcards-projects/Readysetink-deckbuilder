@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/berlioz-mischievous-kitten.html
 
 Flavor text: “Look what I found! Can we stay here and play?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.13 foil

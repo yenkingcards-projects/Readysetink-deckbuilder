@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kuzco-wanted-llama.html
 
 Flavor text: “So there I was. Perfectly in control of the situation.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.36 foil

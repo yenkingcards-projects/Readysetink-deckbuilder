@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/vanellope-von-schweetz-sugar-rush-champ
 
 Flavor text: “Look, the code may say I'm a princess, but I know who I really am....”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.33 foil

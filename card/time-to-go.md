@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/time-to-go.html
 Flavor text: “What are you doing here when there's a rogue horseman out there? Have you lost your head?”
 —Gaston
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.32 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/philoctetes-no-nonsense-instructor.html
 > YOU GOTTA STAY FOCUSED Your Hero characters gain Challenger +1. (They get +1 ¤ while challenging.)
 > SHAMELESS PROMOTER Whenever you play a Hero character, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.50 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.51 foil

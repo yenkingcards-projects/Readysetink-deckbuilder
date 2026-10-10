@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/hamish-hubert-harris-making-mischief.ht
 > STAY QUIET This character may enter play exerted.
 > CLEVER TRAP At the end of your turn, if this character is exerted, chosen opposing character can't ready at the start of their next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.32 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/don-karnage-prince-of-pirates.html
 
 Flavor text: “You didn't expect to find me here, did you? Well neither did I.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.13 foil

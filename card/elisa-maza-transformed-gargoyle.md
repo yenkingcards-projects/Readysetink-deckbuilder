@@ -21,4 +21,4 @@ Flavor text: “I'll never get the hang of jumping off rooftops.”
 - Q: What does “printed value” mean?
   A: The printed value of a card’s characteristic is what’s physically printed on the card, regardless of any adjustments that may apply. For example, if Elisa Maza is given +1 {S} from an effect, her {S} value becomes 5, but the card’s printed value is still 4. disneylorcana.com Anna – Soothing Sister / Flynn Rider – His Own Biggest Fan Anna – Soothing Sister
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.61 foil

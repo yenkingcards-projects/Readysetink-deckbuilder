@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/peter-pan-tinker-bell-fast-friends.html
 > Shift 4 ⬡ (You may pay 4 ⬡ to play this on top of one of your characters named Peter Pan or Tinker Bell.)
 > YOU CAN FLY! Your characters gain Evasive. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.71 regular, $3.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.73 regular, $3.22 foil

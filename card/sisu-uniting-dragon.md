@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/sisu-uniting-dragon.html
 
 > TRUST BUILDS TRUST Whenever this character quests, reveal the top card of your deck. If it's a Dragon character card, put it into your hand and repeat this effect. Otherwise, put it on either the top or the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.51 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.51 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pete-ghost-of-christmas-future.html
 > Boost 1 ⬡ (Once during your turn, you may pay 1 ⬡ to put the top card of your deck facedown under this character.)
 > FOREBODING GLANCE Whenever this character quests, look at a number of cards from the top of your deck equal to the number of cards under him. Put one into your hand and put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.55 regular, $4.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.63 regular, $4.41 foil

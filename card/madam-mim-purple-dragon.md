@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/madam-mim-purple-dragon.html
 
 Flavor text: “Did I say no purple dragons? Did I?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.35 regular, $5.70 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.37 regular, $5.75 foil

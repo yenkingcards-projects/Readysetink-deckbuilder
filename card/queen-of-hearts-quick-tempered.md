@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/queen-of-hearts-quick-tempered.html
 Flavor text: “You know, we could make her really angry. Shall we try?”
 —Cheshire Cat
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.18 foil

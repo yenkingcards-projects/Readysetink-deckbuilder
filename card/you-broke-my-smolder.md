@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/you-broke-my-smolder.html
 
 Flavor text: “You know, this happens a lot more often than you'd think.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $1.56 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $1.40 foil

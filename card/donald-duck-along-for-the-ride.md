@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/donald-duck-along-for-the-ride.html
 
 Flavor text: “Where are the brakes on this doggone thing?!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.26 foil

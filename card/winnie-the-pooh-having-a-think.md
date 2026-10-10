@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/winnie-the-pooh-having-a-think.html
 
 Flavor text: When he thought, he thought in the most thoughtful way he could think.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.95 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $1.94 foil

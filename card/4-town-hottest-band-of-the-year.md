@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/4-town-hottest-band-of-the-year.html
 
 Flavor text: “I never met nobody...like you.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.49 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/alice-growing-girl.html
 > GOOD ADVICE Your other characters gain Support. (Whenever they quest, you may add their ¤ to another chosen character's ¤ this turn.)
 > WHAT DID I DO? While this character has 10 ¤ or more, she gets +4 ◊.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.25 regular, $11.92 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.23 regular, $12.03 foil

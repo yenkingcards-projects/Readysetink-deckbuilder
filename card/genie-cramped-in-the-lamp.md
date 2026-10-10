@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/genie-cramped-in-the-lamp.html
 
 Flavor text: “Ten thousand years will give you such a crick in the neck!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.21 foil

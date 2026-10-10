@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/aurora-dreaming-guardian.html
 
 Flavor text: As the princess slumbered, her power awoke.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $0.41 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/yao-imperial-soldier.html
 
 Flavor text: “I'm gonna hit you so hard, it'll make your ancestors dizzy.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.14 foil

@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/kida-protector-of-atlantis.html
 
 Flavor text: “She has been chosen.” —King Kashekim Nedakh
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.95 regular, $2.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.97 regular, $2.44 foil

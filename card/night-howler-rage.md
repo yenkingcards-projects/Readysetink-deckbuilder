@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/night-howler-rage.html
 Flavor text: “I think someone is targeting predators on purpose and making them go savage!”
 —Judy Hopps
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.13 foil

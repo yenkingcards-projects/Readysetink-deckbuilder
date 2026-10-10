@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/captain-hook-ruthless-pirate.html
 
 Flavor text: “You wouldn't dare fight old Hook man-to-man!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.96 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.99 foil

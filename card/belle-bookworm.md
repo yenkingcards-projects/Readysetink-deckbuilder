@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/belle-bookworm.html
 
 Flavor text: There's nothing more tempting than a pile of unread books.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.41 foil

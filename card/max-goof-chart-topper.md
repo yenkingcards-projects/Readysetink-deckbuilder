@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/max-goof-chart-topper.html
 > Shift 4 ⬡ (You may pay 4 ⬡ to play this on top of one of your characters named Max Goof.)
 > NUMBER ONE HIT Whenever this character quests, you may play a song card with cost 4 or less from your discard for free, then put it on the bottom of your deck instead of into your discard.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $27.43 regular, $24.77 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $29.44 regular, $27.43 foil

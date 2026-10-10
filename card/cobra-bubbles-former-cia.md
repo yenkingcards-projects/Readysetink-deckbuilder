@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cobra-bubbles-former-cia.html
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > THINK ABOUT WHAT'S BEST 2 ⬡ — Draw a card, then choose and discard a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.32 foil

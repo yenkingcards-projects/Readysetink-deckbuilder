@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/alan-a-dale-loyal-bard.html
 
 Flavor text: “When the vine was loomin' large And had us all feelin' down Ol' Martin stood up, took charge And now we're Illuminary bound”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.21 foil

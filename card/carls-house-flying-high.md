@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/carls-house-flying-high.html
 
 > MOVING DAY Once during your turn, you may move chosen character from here to another location for free. If you do, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.70 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.31 regular, $0.72 foil

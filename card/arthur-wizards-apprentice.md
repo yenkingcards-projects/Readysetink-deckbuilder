@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/arthur-wizards-apprentice.html
 
 Flavor text: “Hmm .. what spell should I try next?”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.36 regular, $1.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.32 regular, $1.07 foil

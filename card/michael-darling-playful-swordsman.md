@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/michael-darling-playful-swordsman.html
 
 Flavor text: “Hoist the colors! Prepare to fight! Teddy bear at the ready!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.13 foil

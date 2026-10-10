@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ursulas-trickery.html
 
 Flavor text: “How dare you double-cross me!” Ursula shouted, lunging at the other glimmer.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.30 foil

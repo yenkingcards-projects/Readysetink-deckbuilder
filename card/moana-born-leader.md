@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/moana-born-leader.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Moana.)
 > WELCOME TO MY BOAT Whenever this character quests while at a location, ready all other characters here. They can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.18 foil

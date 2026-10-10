@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-colonel-old-sheepdog.html
 
 Flavor text: His training was invaluable in infiltrating the palace.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.31 foil

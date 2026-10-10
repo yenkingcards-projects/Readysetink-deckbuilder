@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/the-queen-hateful-rival.html
 
 Flavor text: “A cobweb's strand to hold her fast An eagle's eye to see her well Sands of time to steal her past Thus I cast my magic spell!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.17 foil

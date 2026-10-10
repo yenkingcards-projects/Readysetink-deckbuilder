@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-mrs-cratchit.html
 > Ward (Opponents can't choose this character except to challenge.)
 > A MOTHER'S LOVE When you play this character, you may put the top card of your deck facedown under one of your characters or locations with Boost. If you do, draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.58 foil

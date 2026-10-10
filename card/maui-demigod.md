@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/maui-demigod.html
 
 Flavor text: When the gods gift you a boat, you take it. The boat's owner is optional.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.83 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.82 foil

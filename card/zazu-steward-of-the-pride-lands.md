@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/zazu-steward-of-the-pride-lands.html
 
 Flavor text: “I'd be lyin' if I said I ran the place, but welcome to the Pride Lands all the same!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.14 foil

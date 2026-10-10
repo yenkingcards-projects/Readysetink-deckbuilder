@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/chernabog-unnatural-force.html
 
 > DARK DANCE When you play this character, you may shuffle chosen opposing character into their player's deck. If you do, that player may play a character from their discard for free.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.99 regular, $13.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.48 regular, $12.29 foil

@@ -21,4 +21,4 @@ And I'll be shooting for my own hand.”
 - Q: If I play Can’t Hold It Back Anymore and move damage to chosen opposing character, will Merida’s Steady Aim ability deal another 2 damage?
   A: No. Moving damage isn’t the same as dealing damage. An action has to “deal” damage for Steady Aim to trigger. Have further questions about any cards? Join the community at discord.gg/disneylorcana and ask away! We’re a friendly bunch.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.64 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/chief-bogo-respected-officer.html
 
 Flavor text: “We can confirm the ink flood was caused by an explosion. We have it under control—now clear the area.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.69 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $0.69 foil

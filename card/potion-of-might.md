@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/potion-of-might.html
 
 > VILE CONCOCTION 1 ⬡, Banish this item — Chosen character gets +3 ¤ this turn. If a Villain character is chosen, they get +4 ¤ instead.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.17 foil

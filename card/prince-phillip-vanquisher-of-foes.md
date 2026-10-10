@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/prince-phillip-vanquisher-of-foes.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > SWIFT AND SURE When you play this character, banish all opposing damaged characters.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.01 regular, $6.05 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.10 regular, $6.08 foil

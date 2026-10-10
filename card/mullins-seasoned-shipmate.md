@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mullins-seasoned-shipmate.html
 
 Flavor text: “Anything for you, Mr. Smee! Except me share o' the plunder...”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.02 regular, $0.09 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.02 regular, $0.08 foil

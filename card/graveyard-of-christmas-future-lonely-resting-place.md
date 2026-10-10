@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/graveyard-of-christmas-future-lonely-re
 > NEW ARRIVAL Whenever you move a character here, put the top card of your deck under this location facedown.
 > ANOTHER CHANCE At the start of your turn, you may put all cards from under this location into your hand. If you do, banish this location.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.96 foil

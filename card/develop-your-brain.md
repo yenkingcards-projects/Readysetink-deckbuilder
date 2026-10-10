@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/develop-your-brain.html
 Flavor text: “Knowledge, wisdom—there's the real power!”
 —Merlin
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.68 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.71 foil

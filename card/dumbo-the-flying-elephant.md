@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dumbo-the-flying-elephant.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > AERIAL DUO When you play this character, chosen character gains Evasive until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.98 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $2.32 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/little-john-resourceful-outlaw.html
 > OKAY, BIG SHOT While this character is exerted, your characters with Bodyguard gain Resist +1 and get +1 ◊.
 > (Damage dealt to them is reduced by 1.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.47 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $0.49 foil

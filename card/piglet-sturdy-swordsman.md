@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/piglet-sturdy-swordsman.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > NOT SO SMALL ANYMORE While you have no cards in your hand, this character can challenge ready characters.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.67 regular, $2.70 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.70 regular, $2.74 foil

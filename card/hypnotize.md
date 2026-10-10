@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/hypnotize.html
 
 Flavor text: “Look me in the eye when I'm speaking to you.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.31 foil

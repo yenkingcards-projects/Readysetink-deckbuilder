@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/friends-on-the-other-side.html
 
 Flavor text: The cards, the cards the cards will tell...
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $1.09 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $1.05 foil

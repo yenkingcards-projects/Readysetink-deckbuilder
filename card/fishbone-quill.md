@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fishbone-quill.html
 Flavor text: “If you want to cross the bridge, my sweet, you've got to pay the toll.”
 —Ursula
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.06 regular, $2.86 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.03 regular, $2.99 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/cheshire-cat-from-the-shadows.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > WICKED SMILE ⟳ — Banish chosen damaged character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.36 regular, $1.06 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.36 regular, $1.08 foil

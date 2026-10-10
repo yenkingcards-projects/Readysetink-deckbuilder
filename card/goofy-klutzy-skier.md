@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/goofy-klutzy-skier.html
 Flavor text: “Skiing really is quite simple, once you get the hang of it.”
 —Narrator
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.40 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/belle-beast-certain-as-the-sun.html
 > INSPIRING DANCE Whenever this character quests, ready all cards in your inkwell.
 > APPRECIATIVE AUDIENCE 6 ⬡ — Ready your other characters. They can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $2.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.38 regular, $2.17 foil

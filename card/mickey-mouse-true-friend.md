@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-true-friend.html
 
 Flavor text: As long as he's around, newcomers to the Great Illuminary will always get a warm welcome.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $8.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $8.63 foil

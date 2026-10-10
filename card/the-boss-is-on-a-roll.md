@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/the-boss-is-on-a-roll.html
 
 Flavor text: Go ahead! Make your choice!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $0.36 foil

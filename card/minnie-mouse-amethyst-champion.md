@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/minnie-mouse-amethyst-champion.html
 
 > MYSTICAL BALANCE Whenever one of your other Amethyst characters is banished in a challenge, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $1.11 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.22 regular, $1.14 foil

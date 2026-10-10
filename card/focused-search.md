@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/focused-search.html
 
 > Look at the top 4 cards of your deck. You may reveal a character card named Kevin or an item card and put it into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.20 foil

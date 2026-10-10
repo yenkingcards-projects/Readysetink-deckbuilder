@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/john-smith-undaunted-protector.html
 > Bodyguard (This character may enter play exerted. An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 > DO YOUR WORST Opponents must choose this character for actions and abilities if able.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.80 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $0.80 foil

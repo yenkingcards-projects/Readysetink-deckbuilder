@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/mrs-incredible-created-by-the-vine.html
 Flavor text: The vine's copy took her most valuable possession:
 her identity.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.17 regular, $0.38 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.17 regular, $0.39 foil

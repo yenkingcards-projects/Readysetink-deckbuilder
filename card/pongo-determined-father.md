@@ -20,4 +20,4 @@ Flavor text: “We'll find our way. I know we will!”
 - Q: If I have 3 copies of Pongo – Determined Father in play, how many times can I use his Twilight Bark ability per turn?
   A: 3 times. You can use it once for each copy of Pongo – Determined Father you have in play. Note that if you return Pongo to your hand and then play him again, you can use his Twilight Bark ability again because the card resets when it leaves play.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.27 foil

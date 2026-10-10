@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/casa-madrigal-courtyard.html
 
 > HEALING HOME Whenever a character quests while here, you may remove up to 2 damage from them. Then, you may remove up to 2 damage from this location.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.35 foil

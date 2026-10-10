@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/philoctetes-trainer-of-heroes.html
 
 Flavor text: “Ya gotta be the best to train the best. And I train the best!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.22 foil

@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/jingle-joe-sids-toy.html
 
 > TURN OUT THE LIGHT During your turn, whenever one of your other Toy characters is banished, chosen character of yours gains Evasive until the start of your next turn. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.24 foil

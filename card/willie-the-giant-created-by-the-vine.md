@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/willie-the-giant-created-by-the-vine.ht
 
 Flavor text: The vine's embrace helped shield its replicas from harm.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.23 foil

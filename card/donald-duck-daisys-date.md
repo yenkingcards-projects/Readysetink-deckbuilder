@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/donald-duck-daisys-date.html
 
 Flavor text: He keeps his eye on the prize.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.18 foil

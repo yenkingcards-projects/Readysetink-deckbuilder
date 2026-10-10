@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/b-e-n-eccentric-robot.html
 
 > Support (Whenever this character quests, you may add their ¤ to another chosen character's ¤ this turn.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.18 foil

@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/king-candy-sovereign-of-sugar.html
 
 Flavor text: “My sweet subjects, I can without a pinch of hesitation assure you that I have never been so happy.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.14 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.14 foil

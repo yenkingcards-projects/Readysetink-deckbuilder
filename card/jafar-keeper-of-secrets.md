@@ -20,4 +20,4 @@ Flavor text: There's more than one way to bury secrets.
 - Q: I have a Queen of Hearts – Sensing Weakness and a Jafar – Keeper of Secrets in play and 1 card in my hand. If I challenge my opponent’s Flounder – V oice of Reason, how much damage does Flounder take?
   A: 2 damage. Let the Game Begin applies as soon as a challenge is declared, so you draw a card before the challenge itself has happened. With his Hidden Wonders ability, Jafar then gains 2 Strength for the total of 2 cards you now have in your hand. Dinner Bell Dinner Bell
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $1.71 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $1.69 foil

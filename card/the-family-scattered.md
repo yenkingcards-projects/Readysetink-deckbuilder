@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/the-family-scattered.html
 - Q: My opponent challenged and banished my Buzz Lightyear – Space Ranger on their turn. Can I now play Buzz’s Arm?
   A: No. The Buzz’s Arm ability Missing Piece doesn’t affect when the item can be played, only that it can be played for free. You still need to adhere to the normal timing restriction of playing cards only on your turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.22 regular, $0.49 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $0.49 foil

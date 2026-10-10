@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/abu-illusory-pachyderm.html
 > Vanish (When an opponent chooses this character for an action, banish them.)
 > GRASPING TRUNK Whenever this character quests, gain lore equal to the ◊ of chosen opposing character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.32 foil

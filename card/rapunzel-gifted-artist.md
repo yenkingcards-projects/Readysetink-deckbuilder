@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rapunzel-gifted-artist.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Rapunzel.)
 > LET YOUR POWER SHINE Whenever you remove 1 or more damage from one of your characters, you may draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $0.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.60 foil

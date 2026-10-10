@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/mr-snoops-inept-businessman.html
 Flavor text: “This is simple, Snoops! I want that lore! The one that shines like a diamond!”
 —Madame Medusa
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.12 foil

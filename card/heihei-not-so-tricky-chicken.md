@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/heihei-not-so-tricky-chicken.html
 > EAT ANYTHING When you play this character, exert chosen opposing item. It can't ready at the start of its next turn.
 > OUT TO LUNCH During your turn, this character gains Evasive. (They can challenge characters with Evasive.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.28 foil

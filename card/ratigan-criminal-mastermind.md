@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/ratigan-criminal-mastermind.html
 
 Flavor text: “I've outdone myself this time! Soon I will have everything I deserve. Riches...power...an entire kingdom at my feet!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.16 foil

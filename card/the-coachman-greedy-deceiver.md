@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-coachman-greedy-deceiver.html
 
 > WILD RIDE While 2 or more characters of yours are exerted, this character gets +2 ¤ and gains Evasive. (Only characters with Evasive can challenge them.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.25 foil

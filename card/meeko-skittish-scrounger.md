@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/meeko-skittish-scrounger.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > BOTTOMLESS PIT At the end of your turn, if this character is exerted, choose and discard a card or banish him.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.49 foil

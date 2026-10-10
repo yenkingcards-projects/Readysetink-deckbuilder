@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mother-gothel-withered-and-wicked.html
 
 Flavor text: Her feelings are written all over her face.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.61 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.61 foil

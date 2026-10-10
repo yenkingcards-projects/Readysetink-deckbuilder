@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/pepa-madrigal-calm-before-the-storm.htm
 - Q: If I move damage from one of my characters this turn, would that cause Pepa’s Silver Lining ability to trigger?
   A: Yes. Moving damage counts as removing damage. You first remove the damage from one card in order to put it on another.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.51 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/robin-hood-archery-contestant.html
 
 Flavor text: “For a second there, I thought this might be a real challenge.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.20 foil

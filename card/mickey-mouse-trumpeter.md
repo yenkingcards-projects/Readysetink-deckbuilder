@@ -18,4 +18,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-trumpeter.html
 - Q: If I use Mickey Mouse – Trumpeter’s Sound the Call ability, can I play a character using their Shift ability for free?
   A: It depends. “For free” applies only to the ink cost of playing a card, not to any other costs of playing it. If the Shift cost of the character you want to play is just ink, you can play them using their Shift ability for free. However, if their Shift cost includes other costs, those would still need to be paid.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.75 regular, $23.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.78 regular, $24.17 foil

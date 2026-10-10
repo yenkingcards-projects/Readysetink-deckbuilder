@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tuk-tuk-lively-partner.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > ON A ROLL When you play this character, you may move him and one of your other characters to the same location for free. The other character gets +2 ¤ this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.16 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.28 foil

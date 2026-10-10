@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/evil-comes-prepared.html
 
 > Ready chosen character of yours. They can't quest for the rest of this turn. If a Villain character is chosen, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.19 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.19 foil

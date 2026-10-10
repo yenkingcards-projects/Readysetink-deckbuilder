@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/hes-got-a-sword.html
 Flavor text: “We've all got swords!”
 —Razoul
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.25 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.27 foil

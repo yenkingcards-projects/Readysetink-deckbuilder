@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/marie-favored-kitten.html
 
 Flavor text: “Find yourself another Illumineer. This one's taken.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.23 foil

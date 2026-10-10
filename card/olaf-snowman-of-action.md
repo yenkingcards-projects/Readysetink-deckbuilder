@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/olaf-snowman-of-action.html
 > ABOUT TIME! For each action card in your discard, you pay 1 ⬡ less to play this character.
 > CHAOTIC COLLISION When you play this character, each opponent loses 2 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.14 regular, $9.96 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.05 regular, $10.00 foil

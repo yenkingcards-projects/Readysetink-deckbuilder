@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rapunzel-sunshine.html
 
 Flavor text: “We can all make the world a little brighter in our own way.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.23 foil

@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/rapunzel-flynn-rider-unlikely-pair.html
 > CLEVER SWAP Whenever this character quests, you may draw a card, then choose and discard a card.
 > FRESH START During your turn, whenever you discard a character card, you may play that character from your discard. (You pay all costs.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.74 regular, $3.06 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.62 regular, $2.82 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/shes-your-person.html
 > • Remove up to 3 damage from chosen character.
 > • Remove up to 3 damage from each of your characters with Bodyguard.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.29 foil

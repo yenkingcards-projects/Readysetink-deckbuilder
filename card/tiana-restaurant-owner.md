@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tiana-restaurant-owner.html
 
 Flavor text: “The only way to get what you want in this world is through hard work.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.42 regular, $8.83 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.40 regular, $8.90 foil

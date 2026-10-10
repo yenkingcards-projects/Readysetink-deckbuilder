@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/windstorm.html
 > Deal 1 damage to each opposing character and location.
 > Then, deal 2 damage to each opposing character with Evasive and each opposing location with Evasive.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.35 regular, $0.94 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.58 regular, $0.95 foil

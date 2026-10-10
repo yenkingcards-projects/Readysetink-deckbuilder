@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mother-gothel-unwavering-schemer.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Mother Gothel.)
 > THE WORLD IS DARK When you play this character, each opponent chooses one of their characters and returns that card to their hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $1.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $1.20 foil

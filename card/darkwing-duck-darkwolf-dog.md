@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/darkwing-duck-darkwolf-dog.html
 
 Flavor text: “I am the terrier that yaps in the night. I am the schnauzer that digs up your petunias. I am Darkwolf Dog!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.17 foil

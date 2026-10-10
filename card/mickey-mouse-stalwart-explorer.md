@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-stalwart-explorer.html
 
 Flavor text: Mickey knew just where to start searching for the Sorcerer's Hat, but he didn't expect it to be guarded.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.32 foil

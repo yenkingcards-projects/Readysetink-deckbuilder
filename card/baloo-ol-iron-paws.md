@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/baloo-ol-iron-paws.html
 
 Flavor text: “Now, move. That's it. Now give me a big bear growl. Scare me.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.64 regular, $1.79 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.69 regular, $1.81 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/we-dont-talk-about-bruno.html
 
 Flavor text: Your fate is sealed when your prophecy is read!
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.32 regular, $1.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.32 regular, $1.40 foil

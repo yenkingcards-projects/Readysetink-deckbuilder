@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pongo-ol-rascal.html
 
 Flavor text: “At first I had no particular plan, just anything to attract attention. You know, stir things up a bit.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.22 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.22 foil

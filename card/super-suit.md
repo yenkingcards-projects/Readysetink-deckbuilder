@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/super-suit.html
 > SIMPLE, ELEGANT When you play this item, if you have a Hero character in play, gain 1 lore.
 > SUIT UP ⟳, 2 ⬡ — If you played a Hero character this turn, draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.29 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.29 foil

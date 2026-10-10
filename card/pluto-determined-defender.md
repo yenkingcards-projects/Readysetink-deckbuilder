@@ -25,4 +25,4 @@ Source: https://www.readysetink.com/card/pluto-determined-defender.html
 - Q: If I have Ursula’s Shell Necklace in play and exert a cost 3 character to sing a cost 2 song, can I use the difference of 1 ink to use its Now, Sing! ability to draw a card?
   A: No. Ink costs, including the cost to use an ability like Now, Sing!, must be paid with ink from your inkwell. Using a character with a higher cost than necessary to sing a song doesn’t generate ink. Queen of Hearts – Sensing Weakness / Jafar – Keeper of Secrets Queen of Hearts – Sensing Weakness
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.35 foil

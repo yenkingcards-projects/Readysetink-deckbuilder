@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/captain-hook-underhanded.html
 > INSPIRES DREAD While this character is exerted, opposing Pirate characters can't quest.
 > UPPER HAND Whenever this character is challenged, draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $0.63 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.62 foil

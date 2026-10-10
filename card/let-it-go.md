@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/let-it-go.html
 
 Flavor text: It's time to see what I can do To test the limits and break through
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.47 regular, $13.99 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $3.38 regular, $13.99 foil

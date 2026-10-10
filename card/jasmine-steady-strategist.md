@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/jasmine-steady-strategist.html
 > Shift 2 (You may pay 2 ⬡ to play this on top of one of your characters named Jasmine.)
 > ALWAYS PLANNING Whenever this character quests, look at the top 3 cards of your deck. You may reveal an Ally character card and put it into your hand. Put the rest on the bottom of your deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.37 regular, $1.77 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.38 regular, $1.77 foil

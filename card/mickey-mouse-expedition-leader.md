@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/mickey-mouse-expedition-leader.html
 > LONG JOURNEY This character may enter play exerted.
 > SECRET PATH While this character is exerted, whenever one of your other characters quests, chosen opposing character gets -2 ¤ until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.19 regular, $4.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.20 regular, $4.38 foil

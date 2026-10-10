@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/daisy-duck-pirate-captain.html
 
 Flavor text: “The answers we're looking for are on the other side of that maze, I just know it!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $1.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $0.99 foil

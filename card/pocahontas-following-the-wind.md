@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pocahontas-following-the-wind.html
 Flavor text: “She has her mother's spirit. She goes wherever the wind takes her.”
 —Kekata
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.76 regular, $5.62 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.58 regular, $5.62 foil

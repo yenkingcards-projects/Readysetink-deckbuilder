@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/robin-hood-capable-fighter.html
 Flavor text: “Capable? You don't know the half of it.”
 —Little John
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.15 regular, $0.41 foil

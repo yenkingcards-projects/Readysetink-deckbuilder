@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/king-candy-sweet-abomination.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named King Candy.)
 > CHANGING THE CODE When you play this character, you may draw 2 cards, then put a card from your hand on the bottom of your deck.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.30 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.31 foil

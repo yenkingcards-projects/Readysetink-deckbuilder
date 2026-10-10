@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/the-prince-searching-for-his-love.html
 
 Flavor text: “Forest deep and highest mountain are nothing to a true heart. I hear my love's voice in every bird's song and see her beauty in the golden light.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.39 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.44 foil

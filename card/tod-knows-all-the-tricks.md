@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/tod-knows-all-the-tricks.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > IMPRESSIVE LEAPS Twice during your turn, whenever this character is chosen for an action or an item's ability, you may ready him.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $2.60 regular, $4.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $2.58 regular, $4.19 foil

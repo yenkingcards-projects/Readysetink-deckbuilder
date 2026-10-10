@@ -13,4 +13,4 @@ Flavor text: “Sometimes I don't even know whose side you're on,” Darkwing sa
 “The same side I've always been on,” Morgana replied.
 “Mine.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.16 foil

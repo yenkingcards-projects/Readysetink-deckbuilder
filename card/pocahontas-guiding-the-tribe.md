@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/pocahontas-guiding-the-tribe.html
 
 Flavor text: “These vines are far from natural. They must end somewhere.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.36 regular, $2.50 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.19 regular, $2.47 foil

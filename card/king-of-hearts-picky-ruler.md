@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/king-of-hearts-picky-ruler.html
 Flavor text: “You there! You can't be here in the state you're in.
 Begone before the Queen sees this mess!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.18 regular, $1.09 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $1.05 foil

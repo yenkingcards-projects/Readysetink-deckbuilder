@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/bruno-madrigal-oasis-oracle.html
 - Q: If I move damage from one of my characters this turn, would that cause Bruno’s Find That Vision ability to trigger?
   A: Yes. Moving damage counts as removing damage. You first remove the damage from one card in order to put it on another. disneylorcana.com Julieta’s Arepas Julieta's Arepas
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.14 regular, $0.35 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.36 foil

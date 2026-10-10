@@ -21,4 +21,4 @@ Source: https://www.readysetink.com/card/buzz-lightyear-on-the-way.html
 - Q: Does Buzz’s World’s Greatest Toy ability trigger if I use a payment modifier to play a higher-cost card for 2 {I} or less?
   A: Yes. That ability only cares about the total ink cost paid to play a card, which is determined after all payment modifiers are applied. As long as you paid no more than 2 {I} to play a card, the World’s Greatest Toy ability triggers. The same holds true for his Secret Mission ability. For example, if you played a cost 3 card and modified the payment to pay 1 {I} less, you paid a total ink cost of 2 {I} and the ability triggers. The Family Scattered The Family Scattered
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.43 regular, $0.74 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.56 regular, $0.73 foil

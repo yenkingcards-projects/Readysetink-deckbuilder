@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/the-magic-feather.html
 > NOW YOU CAN FLY! When you play this item, choose a character of yours. While this item is in play, that character gains Evasive. (Only characters with Evasive can challenge them.)
 > GROUNDED 3 ⬡ — Return this item to your hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.26 regular, $1.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.26 regular, $1.32 foil

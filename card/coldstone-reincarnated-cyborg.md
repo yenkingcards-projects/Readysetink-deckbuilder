@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/coldstone-reincarnated-cyborg.html
 Flavor text: “It's alive! Alive! I've always wanted to say that.”
 —Xanatos
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.45 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.53 foil

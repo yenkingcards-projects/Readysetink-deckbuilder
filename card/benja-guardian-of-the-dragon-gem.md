@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/benja-guardian-of-the-dragon-gem.html
 
 Flavor text: “Don't mistake spirit for skill.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.33 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.31 foil

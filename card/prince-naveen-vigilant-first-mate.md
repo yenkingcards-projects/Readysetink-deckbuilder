@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/prince-naveen-vigilant-first-mate.html
 > Bodyguard (This character may enter play exerted.
 > An opposing character who challenges one of your characters must choose one with Bodyguard if able.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.21 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.21 foil

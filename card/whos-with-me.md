@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/whos-with-me.html
 
 Flavor text: “Don't forget, the purple unicorn is mine!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.36 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.36 foil

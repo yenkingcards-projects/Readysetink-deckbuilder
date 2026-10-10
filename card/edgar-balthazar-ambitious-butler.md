@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/edgar-balthazar-ambitious-butler.html
 Flavor text: “All these traps, all these locks, all these machines...
 If they think that's going to stop me, they've sorely underestimated Edgar Balthazar!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.11 foil

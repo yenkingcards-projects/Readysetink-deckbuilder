@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/captain-hook-thinking-a-happy-thought.h
 > Challenger +3 (While challenging, this character gets +3 ¤.)
 > STOLEN DUST Characters with cost 3 or less can't challenge this character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $1.01 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $1.02 foil

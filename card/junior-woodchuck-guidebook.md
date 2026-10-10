@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/junior-woodchuck-guidebook.html
 Flavor text: “How come ghosts get a whole section, but not were-ducks?!”
 —Huey
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $2.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $2.39 foil

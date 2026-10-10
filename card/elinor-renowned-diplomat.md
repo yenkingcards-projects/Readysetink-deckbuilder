@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/elinor-renowned-diplomat.html
 
 > COORDINATED EFFORTS At the end of your turn, if you have 3 or more exerted characters in play, deal 1 damage to chosen opposing character, gain 1 lore, and draw a card.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $7.35 regular, $16.20 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $7.63 regular, $16.08 foil

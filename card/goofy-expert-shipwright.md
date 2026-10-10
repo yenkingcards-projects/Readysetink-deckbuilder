@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/goofy-expert-shipwright.html
 > Ward (Opponents can't choose this character except to challenge.)
 > CLEVER DESIGN Whenever this character quests, chosen character gains Ward until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.15 regular, $0.98 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.16 regular, $0.98 foil

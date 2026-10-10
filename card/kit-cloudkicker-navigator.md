@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kit-cloudkicker-navigator.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Kit Cloudkicker.)
 > Ward (Opponents can't choose this character except to challenge.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.17 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.17 foil

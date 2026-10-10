@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/rafiki-shaman-duelist.html
 > Rush (This character can challenge the turn they're played.)
 > SURPRISING SKILL When you play this character, he gains Challenger +4 this turn. (They get +4 ¤ while challenging.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.55 foil

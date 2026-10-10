@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/maleficent-exultant-spellcaster.html
 
 Flavor text: “Such destruction! Look around—vines as far as the eye can see. And here we sit, at the heart of it.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.29 foil

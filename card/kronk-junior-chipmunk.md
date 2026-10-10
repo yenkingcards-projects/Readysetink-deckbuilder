@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/kronk-junior-chipmunk.html
 > Resist +1 (Damage dealt to this character is reduced by 1.)
 > SCOUT LEADER During your turn, whenever this character banishes another character in a challenge, you may deal 2 damage to chosen character.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.44 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.45 foil

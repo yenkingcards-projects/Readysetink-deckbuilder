@@ -20,4 +20,4 @@ Flavor text: “I haven't had this much excitement in 200 years.”
 - Q: Can I choose when to use Grandmother Willow’s Smooth the Way ability?
   A: No, because there’s no “may” in the ability. If you play Grandmother Willow, the discount applies to the very next character you play that turn. On later turns when you have Grandmother Willow already in play, you pay 1 {I} less for the first character you play each turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $3.38 regular, $6.27 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $3.18 regular, $6.27 foil

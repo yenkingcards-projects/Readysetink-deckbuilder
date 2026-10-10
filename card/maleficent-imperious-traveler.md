@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/maleficent-imperious-traveler.html
 
 Flavor text: “Bind this glimmer, fiendish flowers!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.14 regular, $0.31 foil

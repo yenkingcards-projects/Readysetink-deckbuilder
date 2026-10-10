@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/rajah-devoted-protector.html
 
 Flavor text: He's determined to protect his friends, no matter what forms they take.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.42 foil

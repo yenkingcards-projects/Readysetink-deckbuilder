@@ -12,4 +12,4 @@ Source: https://www.readysetink.com/card/de-vil-manor-cruellas-estate.html
 Flavor text: “They say the ol' place is haunted, or bewitched, or some such fiddle-faddle.”
 —Colonel
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.03 regular, $0.14 foil

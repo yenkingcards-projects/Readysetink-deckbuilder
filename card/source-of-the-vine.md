@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/source-of-the-vine.html
 Flavor text: “Soon it'll drain every drop of ink in Lorcana...”
 —Hana, an Illumineer
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.46 regular, $1.18 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.45 regular, $1.06 foil

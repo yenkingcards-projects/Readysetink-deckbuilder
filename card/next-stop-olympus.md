@@ -13,4 +13,4 @@ Source: https://www.readysetink.com/card/next-stop-olympus.html
 > If you have a character with 5 ¤ or more in play, you pay 2 ⬡ less to play this action.
 > Ready chosen character. They can't quest for the rest of this turn. The next time they challenge another character this turn, gain 1 lore.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.25 regular, $1.07 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.23 regular, $1.07 foil

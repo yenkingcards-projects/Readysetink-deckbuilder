@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/chief-tui-weaving-a-tale.html
 
 Flavor text: “And still a spark of hope burned in their hearts...”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.12 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.12 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/mr-smee-captain-of-the-jolly-roger.html
 > Shift 4 (You may pay 4 ⬡ to play this on top of one of your characters named Mr. Smee.)
 > RAISE THE COLORS When you play this character, you may deal damage to chosen character equal to the number of your other Pirate characters in play.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $0.57 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.21 regular, $0.59 foil

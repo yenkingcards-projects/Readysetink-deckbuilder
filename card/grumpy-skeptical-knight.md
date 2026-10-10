@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/grumpy-skeptical-knight.html
 > BOON OF RESILIENCE While one of your Knight characters is at a location, that character gains Resist +2. (Damage dealt to them is reduced by 2.)
 > BURST OF SPEED During your turn, this character gains Evasive. (They can challenge characters with Evasive.)
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.54 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.25 regular, $0.55 foil

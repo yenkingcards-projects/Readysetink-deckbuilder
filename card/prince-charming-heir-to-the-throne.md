@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/prince-charming-heir-to-the-throne.html
 
 Flavor text: He'd searched across the Inklands for the young woman who'd stolen his heart at the ball, only to find more mysteries.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.19 regular, $0.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.19 regular, $0.60 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/christopher-robin-joining-the-fun.html
 
 Flavor text: The air was crisp and clear. “A perfect morning for a snowball fight,” said Christopher Robin.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.21 regular, $2.59 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.20 regular, $2.56 foil

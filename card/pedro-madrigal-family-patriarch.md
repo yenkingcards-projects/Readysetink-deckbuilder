@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/pedro-madrigal-family-patriarch.html
 - Q: When I play this character, if I have another copy of Pedro Madrigal in play, can I remove the damage from that copy?
   A: No. The “him” in the Devoted Family ability refers to this character only, not another character in play with the same name.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.26 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/fix-it-felix-jr-pint-sized-hero.html
 
 Flavor text: “A trap is just a puzzle that's not very friendly.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.32 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.32 foil

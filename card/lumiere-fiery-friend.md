@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lumiere-fiery-friend.html
 
 Flavor text: “The invaders are at our gates, mes amis! It's time to show them what we're made of.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.20 regular, $1.42 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.18 regular, $1.42 foil

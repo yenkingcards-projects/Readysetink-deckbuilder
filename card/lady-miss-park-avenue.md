@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lady-miss-park-avenue.html
 > Shift 3 (You may pay 3 ⬡ to play this on top of one of your characters named Lady.)
 > SOMETHING WONDERFUL When you play this character, you may return up to 2 character cards with cost 2 or less each from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.41 regular, $4.60 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.43 regular, $4.18 foil

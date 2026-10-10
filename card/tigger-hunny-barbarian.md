@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/tigger-hunny-barbarian.html
 > Reckless (This character can't quest and must challenge each turn if able.)
 > PROTECTIVE CHARGE Once during your turn, whenever this character challenges another character, you may ready chosen Hunny character. If you do, that character can't quest for the rest of this turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.43 regular, $0.75 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.35 regular, $0.76 foil

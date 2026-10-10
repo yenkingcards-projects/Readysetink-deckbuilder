@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/cogsworth-majordomo.html
 
 Flavor text: “If it's a fight they want, we'll be ready for them.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.15 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.15 foil

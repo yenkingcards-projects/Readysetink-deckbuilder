@@ -19,4 +19,4 @@ Source: https://www.readysetink.com/card/merida-wisp-conjurer.html
 - Q: Do I exert Merida – Wisp Conjurer after she enters play to draw the card?
   A: No. Like with a character with Bodyguard, you choose if you want Merida to enter play already exerted. If you do, you’ll draw a card. The choice is made as you put Merida into play.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.71 regular, $3.58 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.78 regular, $3.34 foil

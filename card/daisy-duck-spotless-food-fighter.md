@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/daisy-duck-spotless-food-fighter.html
 
 Flavor text: She has an unblemished record.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.14 foil

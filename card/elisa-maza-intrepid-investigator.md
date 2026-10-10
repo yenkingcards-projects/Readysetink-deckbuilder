@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/elisa-maza-intrepid-investigator.html
 Flavor text: “Now, you can let me look the place over, or I can come back with a warrant and a lot more cops.
 Your call.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.13 regular, $0.41 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.13 regular, $0.41 foil

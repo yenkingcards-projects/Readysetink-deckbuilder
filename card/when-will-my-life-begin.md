@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/when-will-my-life-begin.html
 
 Flavor text: Stuck in the same place I've always been...
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.14 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/john-silver-ships-cook.html
 
 Flavor text: “At the end of the day, it's the simplest tools that come through for you in a pinch.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.05 regular, $0.31 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.05 regular, $0.31 foil

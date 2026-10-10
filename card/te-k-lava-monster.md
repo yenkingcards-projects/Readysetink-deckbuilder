@@ -17,4 +17,4 @@ Source: https://www.readysetink.com/card/te-k-lava-monster.html
 Flavor text: “You wanna get to Te Fiti, you have to go through a whole ocean of bad. Not to mention Te Kā.”
 —Maui
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.13 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.13 foil

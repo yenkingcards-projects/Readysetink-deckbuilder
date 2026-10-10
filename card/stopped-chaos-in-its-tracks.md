@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/stopped-chaos-in-its-tracks.html
 > Sing Together 8 (Any number of your or your teammates' characters with total cost 8 or more may ⟳ to sing this song for free.)
 > Return up to 2 chosen characters with 3 ¤ or less each to their player's hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.09 regular, $0.43 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.42 foil

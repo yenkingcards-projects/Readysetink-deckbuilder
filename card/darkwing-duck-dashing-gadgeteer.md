@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/darkwing-duck-dashing-gadgeteer.html
 
 Flavor text: “I've got things in here that haven't even been tested yet!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.24 regular, $0.76 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $0.79 foil

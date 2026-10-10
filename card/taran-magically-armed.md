@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/taran-magically-armed.html
 > Rush (This character can challenge the turn they're played.)
 > WEAKEN THE CAULDRON When you play this character, put up to 2 cards from chosen player's discard on the bottom of their deck in any order.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.07 regular, $0.40 foil

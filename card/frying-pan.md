@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/frying-pan.html
 
 Flavor text: It's a fine piece of cookware, but as a weapon it's truly stunning.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.07 regular, $0.26 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.26 foil

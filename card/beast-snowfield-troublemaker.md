@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/beast-snowfield-troublemaker.html
 > Rush (This character can challenge the turn they're played.)
 > DYNAMIC MANEUVER Whenever this character challenges, if he's at a location, he takes no damage from the challenge.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.30 regular, $0.73 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.32 regular, $0.73 foil

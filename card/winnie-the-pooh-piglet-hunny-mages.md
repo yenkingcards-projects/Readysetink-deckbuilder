@@ -20,4 +20,4 @@ Source: https://www.readysetink.com/card/winnie-the-pooh-piglet-hunny-mages.html
 - Q: If I quest with Winnie the Pooh & Piglet – Hunny Mages and I have another Amethyst character in play, how much lore do I gain?
   A: You gain 2 lore. The ink types of Winnie the Pooh & Piglet are Amethyst and Sapphire. Even though there are a total of 3 ink type symbols across all cards you have in play, the ability only counts how many unique ink types exist among your cards in play. Since you only have Amethyst and Sapphire ink types in play, Winnie the Pook & Piglet have 2 " and you gain 2 lore. With a Few Good Friends With a Few Good Friends
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $1.07 regular, $7.06 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $1.12 regular, $7.71 foil

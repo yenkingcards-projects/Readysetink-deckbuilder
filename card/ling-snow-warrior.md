@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ling-snow-warrior.html
 
 Flavor text: “If I keep carrying these, I'll be as strong as Chien-Po!”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.12 regular, $0.37 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.37 foil

@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/chip-retrieval-expert.html
 > THERE YOU ARE! When you play this character, you may return a character card with 4 ⛉ or more from your discard to your hand.
 > FRIENDLY ASSIST Your characters named Dale get +1 ⛉.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.11 regular, $0.23 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.11 regular, $0.23 foil

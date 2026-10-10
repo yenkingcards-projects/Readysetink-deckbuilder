@@ -14,4 +14,4 @@ Source: https://www.readysetink.com/card/ludwig-von-drake-all-around-expert.html
 > SUPERIOR MIND When you play this character, chosen opponent reveals their hand and discards a non-character card of your choice.
 > LASTING LEGACY When this character is banished, you may put this card into your inkwell facedown and exerted.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.38 regular, $1.86 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.38 regular, $1.86 foil

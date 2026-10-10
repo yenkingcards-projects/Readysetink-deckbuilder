@@ -13,4 +13,4 @@ Flavor text: Raya: “Nothing gets past Tuk Tuk. Nothing.”
 Sisu: “Except butterflies! Oh, and birds!”
 Raya: “Fine. Most things don't get past Tuk Tuk.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.04 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.24 foil

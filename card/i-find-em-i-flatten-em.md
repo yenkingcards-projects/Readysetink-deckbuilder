@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/i-find-em-i-flatten-em.html
 
 Flavor text: I don't ask how hard the work is Got a rough, indestructible surface
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.06 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.06 regular, $0.41 foil

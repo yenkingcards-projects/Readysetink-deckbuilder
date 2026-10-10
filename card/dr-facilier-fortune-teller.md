@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/dr-facilier-fortune-teller.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > YOU'RE IN MY WORLD Whenever this character quests, chosen opposing character can't quest during their next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.23 regular, $0.52 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.24 regular, $0.50 foil

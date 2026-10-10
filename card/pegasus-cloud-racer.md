@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/pegasus-cloud-racer.html
 > Evasive (Only characters with Evasive can challenge this character.)
 > HOP ON! When you play this character, if you used Shift to play him, your characters gain Evasive until the start of your next turn.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.40 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.12 regular, $0.40 foil

@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/ariel-whoseit-collector.html
 
 Flavor text: “You want thingamabobs? I got twenty.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.37 regular, $3.80 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.37 regular, $3.80 foil

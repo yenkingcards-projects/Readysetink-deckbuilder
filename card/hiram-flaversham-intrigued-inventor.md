@@ -11,4 +11,4 @@ Source: https://www.readysetink.com/card/hiram-flaversham-intrigued-inventor.htm
 
 Flavor text: He'll find a way to make anything mouse-sized.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.10 regular, $0.55 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.10 regular, $0.56 foil

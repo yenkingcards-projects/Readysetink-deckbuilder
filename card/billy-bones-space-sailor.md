@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/billy-bones-space-sailor.html
 
 Flavor text: “He'll be comin' soon. Can't let them find this.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.28 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.08 regular, $0.28 foil

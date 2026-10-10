@@ -15,4 +15,4 @@ Source: https://www.readysetink.com/card/lyle-tiberius-rourke-crystallized-comma
 > Shift 4 ⬡ (You may pay 4 ⬡ to play this on top of one of your characters named Lyle Tiberius Rourke.)
 > PLAN'S CHANGED When you play this character, put the top 2 cards of your deck into your discard. Then, you may return an action card with cost 4 or less from your discard to your hand.
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.08 regular, $0.24 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.09 regular, $0.23 foil

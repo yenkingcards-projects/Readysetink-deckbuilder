@@ -16,4 +16,4 @@ Source: https://www.readysetink.com/card/kaa-suspicious-serpent.html
 
 Flavor text: “It's bessst to play it s-ssafe.”
 
-Market price (USD, snapshot from 2026-10-03; a rough guide, not a live quote): $0.03 regular, $0.16 foil
+Market price (USD, snapshot from 2026-10-10; a rough guide, not a live quote): $0.04 regular, $0.17 foil
