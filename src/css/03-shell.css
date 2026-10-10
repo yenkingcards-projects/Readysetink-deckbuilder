@@ -1,0 +1,40 @@
+/* ===== tab shell ======================================================== */
+.subsw{display:flex;gap:6px;padding:10px 13px 0;max-width:1600px;margin:0 auto}
+.subsw.hide{display:none}
+.subsw button{padding:7px 15px;border-radius:2px;font-size:12.8px;font-weight:700;
+  color:var(--deep);border:1px solid var(--line);background:var(--platinum)}
+.subsw button:hover{color:var(--tx);border-color:var(--deep)}
+.subsw button.on{background:var(--link);border-color:var(--link);color:var(--surface)}
+/* Search-for-cards is the same grid without the deck rail, so browsing gets
+   the full width. One class rather than a second copy of the whole view. */
+body.browse .deck,body.browse .subsw,body.browse .mtabs{display:none!important}
+/* Filters left the grid; the deck panel is hidden here. So Search is one
+   full-width column of cards — this still reserved 250px for a sidebar that
+   is no longer in .wrap, squeezing the grid into a single column. */
+body.browse .wrap{grid-template-columns:minmax(0,1fr)}
+.page{max-width:1000px;margin:0 auto;padding:0 0 32px}
+/* size only — the rule, spacing and drop cap are set once at the top */
+.page h1{font-size:26px}
+
+.soon{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--acc);
+  border-radius:0 11px 11px 0;padding:14px 16px;margin-bottom:12px;font-size:13.44px;line-height:1.65;color:var(--tx)}
+.soon b{color:var(--link);display:block;margin-bottom:5px}
+.soon p{margin-bottom:8px}.soon p:last-child{margin-bottom:0}
+.soon li{margin:0 0 4px 18px}
+.ogh{margin-top:26px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+/* color/text-decoration reset: a tile can render as an <a> (internal path or
+   external URL) as easily as a <button>, and without this it picks up the
+   browser's default link blue + underline instead of matching its siblings. */
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:15px;text-align:left;
+  display:block;color:inherit;text-decoration:none}
+.tile:hover{border-color:var(--deep)}
+.tile.ready{border-left:2px solid var(--good)}
+.tile h3{font-size:15.36px;margin-bottom:4px}
+.tile p{font-size:12.16px;color:var(--deep);line-height:1.55}
+.tile .st2{color:var(--deep);display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.08em;padding:2px 8px;border-radius:2px;margin-top:9px;
+  border:1px solid var(--line2);color:var(--deep);color:var(--deep)}
+/* --good is an alias of brand primary (4.55 on white); the ready state uses
+   the deep step so the label reads as comfortably as the rest. */
+.tile.ready .st2{border-color:var(--link);color:var(--deep)}

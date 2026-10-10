@@ -1,0 +1,242 @@
+/* ===== decks page + pull list =========================================== */
+/* One collapsible per set-era. Same <details> chrome as Special searches and
+   Filters (border/summary/▸), so a third kind of "drawer of things" on this
+   site still reads as the same kind of control. */
+.erafolds{margin-bottom:8px}
+.erafold{margin-bottom:10px;border:1px solid var(--line);border-radius:4px;
+  background:var(--panel);overflow:hidden}
+.erafold>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:10px;
+  padding:11px 14px;font-size:14px;font-weight:700}
+.erafold>summary::-webkit-details-marker,.erafold>summary::marker{content:"";font-size:0}
+.erafold>summary::before{content:"▸";color:var(--link);transition:transform .15s;font-size:1rem}
+.erafold[open]>summary::before{transform:rotate(90deg)}
+.erafn{color:var(--tx)}
+.erafd{font-size:12px;font-weight:500;color:var(--deep);font-variant-numeric:tabular-nums}
+.erafc{margin-left:auto;font-size:12px;font-weight:500;color:var(--deep)}
+.erafold>.dkgrid{padding:0 14px 14px;margin-bottom:0}
+.dkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:11px;margin-bottom:22px}
+/* Unselected decks sit back on platinum; the one you're editing comes forward
+   onto white. --panel and --surface resolve to the same white in the light
+   palette, so using those two would have made the difference invisible. */
+.dkcard{background:var(--platinum);border:1px solid var(--line);border-radius:4px;padding:14px;text-align:left;
+  position:relative;border-left:5px solid var(--line)}
+.dkcard:hover{border-color:var(--deep)}
+/* The selected deck used to be marked with --gold, which in the light palette
+   resolves to the same deep blue as :hover — so the current deck looked
+   identical to whichever one your mouse happened to be over. It now gets the
+   Action Yellow rail, a lifted plate and a badge saying so in words. */
+.dkcard.on{border-color:var(--chrome);border-left-color:var(--amberc);
+  background:var(--surface);box-shadow:var(--bevel),0 0 0 2px var(--chrome)}
+.dkcard.on h3{color:var(--tx)}
+/* Rename sits inside the deck card. It's a <span role=button> rather than a
+   real <button> because the card itself is already a button and HTML forbids
+   nesting one inside another — the browser silently unnests them, which breaks
+   the card's own click handler. Keyboard support is wired by hand to make up
+   for it. */
+.dkname{cursor:text;border-bottom:1px dashed transparent;padding-bottom:1px}
+.dkcard:hover .dkname{border-bottom-color:var(--link)}
+.dkname:hover{color:var(--link)}
+.dkname:focus{outline:2px solid var(--link);outline-offset:2px}
+.dkren{position:absolute;right:9px;bottom:9px;font-size:11px;font-weight:700;
+  color:var(--link);background:var(--surface);border:1px solid var(--line);
+  border-radius:2px;padding:2px 7px;opacity:0;transition:opacity .12s;cursor:pointer}
+.dkcard:hover .dkren,.dkcard:focus-within .dkren{opacity:1}
+.dkren:hover{background:var(--amberc);color:var(--carbon);border-color:var(--carbon)}
+.dkren:focus{opacity:1;outline:2px solid var(--link);outline-offset:1px}
+@media(hover:none){.dkren{opacity:1}}
+.dkcur{display:inline-block;margin-left:7px;vertical-align:2px;
+  background:var(--amberc);color:var(--carbon);font-size:10px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:2px;
+  border:1px solid var(--hairline)}
+.dkcard h3{font-size:15.2px;margin-bottom:3px}
+.dkcard .dm{font-size:12px;color:var(--deep)}
+.dkcard .inks{display:flex;gap:3px;margin-top:8px}
+.dkcard .inks i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.pullbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.pullbar select{background:var(--platinum);border:1px solid var(--line);border-radius:2px;padding:7px 10px;font-size:12.8px}
+.pull{background:#fff;color:#111;border-radius:2px;padding:22px 26px}
+.pull h2{font-size:1.15rem;margin-bottom:2px;color:#111}
+.pull .sub{font-size:12.16px;color:#555;margin-bottom:14px}
+.pull .grp{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
+  color:#666;border-bottom:1px solid #ddd;padding-bottom:3px;margin:16px 0 7px}
+/* Fixed layout, because the sheet is one <table> per group and auto layout
+   sized each of them to its own longest card name -- so the quantity, the
+   number and the rarity landed at a different place in every section. With
+   every column but the name pinned, the whole sheet reads as one list. */
+.pull table{width:100%;border-collapse:collapse;font-size:13.12px;table-layout:fixed}
+.pull td{padding:3px 4px;border-bottom:1px solid #eee;vertical-align:top}
+.pull td.q{width:48px;font-weight:800;text-align:right;color:#111}
+.pull td.no{width:78px;color:#666;font-variant-numeric:tabular-nums}
+.pull td.ra{width:92px;color:#666;font-size:12px}
+/* Ink as a colour and a word. The dots are decoration on a mono printout, so
+   the name carries it there; on screen the colour is what you actually scan. */
+.pull td.ink{width:112px;color:#444;font-size:12px;white-space:nowrap}
+.pull td.ink i{display:inline-block;width:9px;height:9px;border-radius:50%;
+  margin-right:4px;vertical-align:-1px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.pull td.ink i+span{margin-left:2px}
+.pullimg .pink{display:block;font-size:9.5px;color:#666;margin-top:1px}
+.pullimg .pink i{display:inline-block;width:7px;height:7px;border-radius:50%;
+  margin-right:3px;vertical-align:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+/* One row of boxes, left-justified, in a column sized to hold four across —
+   which is the legal maximum in every format that has one, so a real deck
+   never wraps. Anything past four wraps onto another line instead of running
+   off the side; the cell was white-space:nowrap before, which is what held
+   three thousand boxes in a single unwrappable line and blew the table open. */
+.pull td.chk{width:80px;padding-right:9px}
+.pullbox{display:flex;flex-wrap:wrap;gap:3px;justify-content:flex-start}
+.pull .tot{margin-top:14px;font-size:12.8px;font-weight:700;color:#111}
+/* Real checkboxes, not a decorative span — clickable on screen (state
+   persists per deck via PULLCHECKKEY) and native checkboxes already print
+   their checked state faithfully, so the same markup does both jobs. One per
+   copy needed: a 4-of shows four boxes, a 2-of shows two. */
+.pchk{width:13px;height:13px;margin:0;accent-color:#111}
+/* Under a card image the boxes centre, because the whole figure does. */
+.pullimg .chk .pullbox{justify-content:center}
+.pull .also{font-size:10.5px;font-style:italic;color:#888;margin-top:1px;font-weight:400}
+/* image view */
+.pullimgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-bottom:6px}
+.pullimg{margin:0;text-align:center}
+.pullimg img{width:100%;border-radius:5px;display:block}
+.pullimg .pullph{width:100%;aspect-ratio:5/7;border-radius:5px;background:#eee;color:#888;
+  display:grid;place-items:center;font-size:10.5px;padding:4px;text-align:center}
+.pullimg figcaption{font-size:10.5px;color:#333;margin-top:3px;line-height:1.3}
+.pullimg figcaption i{display:block;font-style:italic;color:#888;font-size:9.5px}
+.pullimg .chk{margin-top:4px}
+/* QR codes — always rendered (handy on screen too, not just on paper), sized
+   to stay modest so two of them don't push a short deck onto a second page
+   by themselves. */
+/* ---- the sheet's masthead: title on the left, its QR on the right ---- */
+.pullhead{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
+  padding-bottom:10px;margin-bottom:4px;border-bottom:2px solid #222}
+.pullhtxt{min-width:0}
+/* The figure is exactly as wide as the code it holds, so "text-align:center"
+   centres the caption on the code and not on some other box. The caption used
+   to carry max-width:120px inside a 104px figure: the text was free to be
+   wider than the QR, and centring it inside 120px left it visibly off to one
+   side of a 104px square. That is the whole reason it looked crooked. */
+.pullqr{margin:0;flex:0 0 auto;width:104px;text-align:center}
+.pullqr figcaption{font-size:9.5px;line-height:1.3;color:#666;margin-top:4px;
+  width:100%;max-width:100%;text-align:center;word-break:break-word}
+.qrbox{width:104px;height:104px;display:grid;place-items:center;background:#f4f4f4;border-radius:4px}
+.qrbox img{width:100%;height:100%}
+/* The Ko-fi ask only appears once a deck has been saved more than five times,
+   and when it does it is a footnote, not a billboard: small code, one line of
+   plain thanks, no exclamation marks. */
+.pullkofi{display:flex;align-items:center;gap:10px;justify-content:center;
+  margin-top:14px;padding-top:10px;border-top:1px solid #eee;
+  max-width:420px;margin-left:auto;margin-right:auto}
+.pullkofi p{font-size:10px;line-height:1.45;color:#8a8a8a;margin:0}
+/* The second sentence gets its own line rather than trailing an orphaned
+   "It" off the end of the first one, whatever width the block ends up. */
+.pullkofi p span{display:block}
+.qrbox.wee{width:58px;height:58px;flex:0 0 58px;background:transparent}
+/* Fit to 1 page — same markup, tighter numbers. Applied on screen too (not
+   only behind @media print) so what you see before printing is what you
+   get, rather than a surprise once the sheet comes out of the printer. */
+.pull.compact{padding:12px 16px}
+.pull.compact h2{font-size:1rem;margin-bottom:1px}
+.pull.compact .sub{font-size:10.5px;margin-bottom:7px}
+.pull.compact .grp{margin:8px 0 4px;padding-bottom:2px;font-size:10.5px}
+.pull.compact table{font-size:11px}
+.pull.compact td{padding:1.5px 4px}
+.pull.compact .also{font-size:9.5px}
+.pull.compact .pullqr{margin-top:10px;padding-top:8px;gap:16px}
+.pull.compact .pullqr{width:76px}
+.pull.compact .qrbox{width:76px;height:76px}
+.pull.compact .qrbox.wee{width:48px;height:48px;flex:0 0 48px}
+.pull.compact .pullimgs{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
+/* ---- proxy slips ----
+   Real card size in millimetres, so a printed slip sleeves properly instead of
+   floating. mm rather than px because this is the one thing on the site whose
+   physical size is the whole point — px would come out a different size on
+   every printer. */
+.pxsheet{background:#fff;color:#111;border:1px solid var(--line);border-radius:2px;
+  padding:14px;margin-top:16px}
+.pxhead{border-bottom:2px solid #222;padding-bottom:8px;margin-bottom:12px}
+.pxhead b{display:block;font-size:15px}
+.pxhead span{display:block;font-size:11px;color:#666;margin-top:3px}
+.pxnone{margin-top:16px;padding:14px;background:var(--canvas-soft);border:1px solid var(--hairline);
+  border-radius:2px;font-size:13px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+/* Said on screen before you print, and again on the printed page — someone
+   who picks a slip up off a table should be able to read what it is. */
+.pxwarn{margin:0 0 14px;padding:11px 13px;background:#fff8e1;border:1px solid #e0b400;
+  border-left:4px solid #e0b400;border-radius:2px;color:#3a2f00}
+.pxwarn b{font-size:13px}
+.pxwarn p{margin:5px 0 0;font-size:11.5px;line-height:1.5}
+.pxgrid{display:grid;grid-template-columns:repeat(3,63mm);gap:0;justify-content:center}
+.pxs{width:63mm;height:88mm;border:1px dashed #999;padding:3.5mm 3.5mm 3mm;
+  display:flex;flex-direction:column;color:#111;background:#fff;
+  font-family:var(--sans);overflow:hidden}
+/* Across the face, above the text, in the flow — so trimming it off means
+   cutting into the rules text the slip exists for. */
+.pxband{background:#111;color:#fff;font-size:6pt;font-weight:800;letter-spacing:.08em;
+  text-align:center;padding:.9mm 0;margin:-1mm -1mm 1.5mm;border-radius:.5mm}
+.pxtop{display:flex;align-items:center;justify-content:space-between;font-size:9pt}
+.pxcost{font-weight:900;font-size:13pt;line-height:1}
+.pxink{font-size:8pt;font-weight:700;color:#444;text-transform:uppercase;letter-spacing:.05em}
+.pxname{font-weight:900;font-size:11.5pt;line-height:1.1;margin-top:2mm}
+.pxver{font-size:8.5pt;font-style:italic;color:#333;line-height:1.15;margin-top:.5mm}
+.pxty{font-size:7.5pt;color:#555;margin-top:1.5mm;
+  border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:1mm 0}
+.pxtx{flex:1;font-size:8pt;line-height:1.3;margin-top:1.5mm;overflow:hidden;white-space:pre-wrap}
+.pxfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:2mm;margin-top:1mm}
+.pxstats{font-weight:900;font-size:11pt;white-space:nowrap}
+.pxmark{font-size:5pt;color:#666;text-align:right;line-height:1.15;
+  letter-spacing:.02em;max-width:34mm}
+@media print{
+  body{background:#fff}
+  /* Printing with the slips open prints the slips and nothing else — you are
+     about to cut these up. */
+  body.proxying .pull,body.proxying #regBox,body.proxying .borrow,
+  body.proxying .dkgal,body.proxying .swapbox{display:none!important}
+  body.proxying #proxyBox{display:block!important}
+  .pxsheet{border:none;padding:0;margin:0}
+  .pxhead{display:none}
+  /* The notice prints. It is the first thing on the sheet, above the slips. */
+  .pxwarn{background:none;border:none;border-bottom:1px solid #999;border-radius:0;
+    padding:0 0 6px;margin:0 0 6px;color:#000}
+  .pxwarn b{font-size:9pt}
+  .pxwarn p{font-size:7.5pt}
+  .pxgrid{gap:0}
+  /* A slip must never be split across two sheets of paper. */
+  .pxs{break-inside:avoid;page-break-inside:avoid}
+  /* .dkbar is Paste a deck list / Share the deck I'm editing / Duplicate it —
+     page-management actions, not part of the sheet you'd actually carry to a
+     shop. .sitefoot is the Ko-fi widget; it gets its own QR code inside
+     .pull instead (see .pullqr above), so the animated on-page version has
+     no reason to print. */
+  header,nav.tabs,.mtabs,#bub,.pullbar,.dkbar,.dkgrid,.sitefoot,.page h1,.lede,.toast{display:none!important}
+  /* A pull sheet is a shopping list you carry to a shop. The Community Code
+     disclaimer is a condition of publishing the SITE, not of every sheet of
+     paper it prints. The running footer is gone entirely now, but the rule
+     stays as a belt-and-braces guard for the Settings block, in case anyone
+     ever prints that page. */
+  .foot,.legal{display:none!important}
+  .view{display:none!important}.view#vDecks{display:block!important}
+  .pull{padding:0;border-radius:0}
+  /* A set group should not be split across a page break with its heading
+     stranded at the bottom of the previous one. */
+  .pull .grp{break-after:avoid;page-break-after:avoid}
+  .pull tr,.pullimg{break-inside:avoid;page-break-inside:avoid}
+  @page{margin:10mm}
+  .page{max-width:none;padding:0}
+}
+
+/* search field + pills */
+.sfield{display:flex;flex-wrap:wrap;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);
+  border-radius:2px;padding:7px 8px}
+.sfield:focus-within{border-color:var(--link)}
+/* Placeholder text is an invitation, not content — it should sit back far
+   enough that an empty box doesn't read as a full one. This is deliberately
+   below the contrast floor the rest of the site holds to, which is allowed:
+   WCAG exempts placeholder text, and nothing here is information you need. The
+   two rules are merged because the later, weaker one used to win and quietly
+   undo the opacity set above it. */
+.sfield input{flex:1;min-width:160px;background:none;border:none;outline:none;padding:5px 6px;font-size:14.72px}
+#q::placeholder,.sfield input::placeholder{color:var(--deep);opacity:.38}
+.pill{display:inline-flex;align-items:center;gap:5px;background:var(--panel2);border:1px solid var(--line2);
+  border-radius:2px;padding:3px 5px 3px 9px;font-size:12px;max-width:250px}
+.pill .pt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pill .x{padding:0 4px;border-radius:2px;color:var(--deep)}
+.pill .x:hover{background:var(--bad);color:#fff}
+.srow{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap;align-items:center}

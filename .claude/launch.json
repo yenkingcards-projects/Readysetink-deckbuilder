@@ -4,7 +4,7 @@
     {
       "name": "rsi-static",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8743"],
+      "runtimeArgs": ["-m", "http.server", "8743", "-d", "public"],
       "port": 8743
     }
   ]

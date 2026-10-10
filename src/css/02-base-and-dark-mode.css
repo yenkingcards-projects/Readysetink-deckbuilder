@@ -1,0 +1,498 @@
+/* ===================== dark mode =====================
+   A second palette, not an inversion. Every value below was measured against
+   the surface it actually lands on and clears the same AAA (7:1) bar the light
+   theme holds — this was found by auditing both themes, so a dark-only regression
+   can't slip through.
+
+   Two things flip rather than darken:
+   · The action red goes LIGHTER and takes a dark label. White on any red dark
+     enough to sit on this background is around 3:1; a light coral with carbon
+     text is 7.38. Same logic that put --signal-deep in the light theme,
+     pointing the other way.
+   · The bevel reverses. The design system's depth is "bright top edge, shadow
+     beneath". On a dark canvas the bright edge has to be much subtler or every
+     plate glows. */
+body.dark{
+  --canvas:#161b28; --canvas-soft:#252d40; --periwinkle:#212838;
+  --lavender:#2b3350; --ice:#243044; --platinum:#2a3145; --surface:#212838;
+  --carbon:#0e121b; --chrome:#3f4a68; --muted:#4a5573; --hairline:#64719a;
+  --primary:#5a8ff0; --signal:#ff7a70; --signal-deep:#ff7a70;
+  --amberc:#ffd400; --navgold:#ffd400; --amber-press:#e6bf00;
+  --action-orange:#ffab5e; --shimmer:#7fb2ff;
+  --link:#9dc0ff; --deep:#b6cff8; --teal:#5fc4dc; --decksred:#ff8f85;
+  --bg:#161b28; --bg2:#0e121b; --panel:#212838; --panel2:#212838;
+  --line:#64719a; --line2:#3f4a68;
+  --tx:#e9eefb; --mut:#b6cff8; --dim:#b6cff8;
+  --on-dark:#e9eefb; --on-dark-soft:#c3d2f0;
+  --acc:#9dc0ff; --acc2:#5a8ff0; --gold:#ffd400; --good:#6fd39a; --bad:#ff8f85;
+  --bevel:inset 0 1px 0 rgba(255,255,255,.10),inset 0 -1px 0 rgba(0,0,0,.55);
+  --bevel-in:inset 0 1px 0 rgba(0,0,0,.55),inset 0 -1px 0 rgba(255,255,255,.08);
+}
+/* The few places a literal light colour was baked in and would now glare. */
+body.dark .btn.go{color:#202638}
+body.dark .btn.bad{color:#ffb0b0}
+body.dark .fastgrid button.bad{color:var(--carbon)}
+body.dark .crow.has{background:#3a3520;border-color:var(--amber-press)}
+body.dark .chip.rec{background:#3a3520}
+body.dark .acrow:hover,body.dark .acrow.on{background:#3a3520}
+body.dark .pull{background:var(--surface);color:var(--tx)}
+body.dark .pull h2,body.dark .pull td.q{color:var(--tx)}
+body.dark .pull .sub,body.dark .pull td.no,body.dark .pull td.ra{color:var(--deep)}
+body.dark .pull td{border-bottom-color:var(--line2)}
+body.dark .cfm,body.dark .modal{background:var(--surface)}
+/* Matches the light theme's .38. Dark mode needs a touch more alpha to read at
+   all against the slate field, but not so much that an empty box looks full. */
+body.dark #q::placeholder,body.dark .sfield input::placeholder{color:var(--deep);opacity:.45}
+/* Native form controls don't inherit the theme — a select left alone renders
+   its own dark text on the OS chrome and disappears here. */
+body.dark select,body.dark input,body.dark textarea,body.dark option{
+  background:var(--surface);color:var(--tx);border-color:var(--line)}
+body.dark input[type=file]{color:var(--tx)}
+/* Printing is always on white paper, whatever the screen is doing. */
+@media print{body.dark{--surface:#fff;--tx:#111;--platinum:#fff;--deep:#555}}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--canvas);color:var(--tx);min-height:100vh;font-size:14px;line-height:1.5;
+  font-family:var(--sans);
+  /* the faceplate's brushed grain */
+  background-image:repeating-linear-gradient(90deg,
+    rgba(255,255,255,.035) 0 1px,transparent 1px 3px);
+  background-attachment:fixed}
+button,select,input,textarea{font-family:var(--sans);color:inherit}
+button{cursor:pointer;background:none;border:none}
+
+/* ---- the chrome voice: uppercase Arial Bold, half a pixel of tracking ---- */
+h1,h2,h3,h4{font-family:var(--sans);font-weight:700}
+h1{font-size:26px;line-height:1.1;font-family:var(--display);font-weight:900;
+  letter-spacing:0;color:#ffffff;
+  /* box-art logotype: heavy outline plus a hard offset shadow, no blur */
+  text-shadow:2px 2px 0 var(--carbon),
+    -1px -1px 0 var(--chrome),1px -1px 0 var(--chrome),
+    -1px 1px 0 var(--chrome),1px 1px 0 var(--chrome)}
+.lede{font-size:14px;line-height:1.6;color:var(--tx);max-width:78ch}
+.gi{font-size:.9em;margin-right:6px;vertical-align:.04em}
+
+
+/* ---- collection checklist ---- */
+.collbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0 10px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
+  padding:8px 10px;border-radius:2px;color:var(--tx)}
+.collbar .sp{flex:1}
+/* [hidden] sets display:none at the lowest priority, so any display rule of
+   our own silently beats it. This one has to say so explicitly. */
+.clist{display:flex;flex-direction:column;gap:4px}
+.clist[hidden]{display:none}
+.crow{display:flex;align-items:center;gap:10px;background:var(--surface);
+  border:1px solid var(--line);border-radius:4px;padding:6px 10px;box-shadow:var(--bevel-in)}
+.crow.has{background:#fff8d6;border-color:var(--amber-press)}
+.crow .cnum{font-variant-numeric:tabular-nums;color:var(--deep);font-weight:700;min-width:46px}
+.crow .cnm{flex:1;color:var(--tx);min-width:0}
+.crow .cnm i{font-style:normal;color:var(--deep)}
+.crow .crar{color:var(--deep);font-size:12px;min-width:74px}
+.crow .cq{display:flex;align-items:center;gap:4px}
+/* The label belongs to the button beside it, so it sits tight against the
+   minus rather than floating in a wide column of its own. */
+.crow .cq{gap:4px;margin-left:10px}
+.crow .cq em{font-style:normal;font-size:11px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--deep);margin-right:2px}
+.crow .cq b{min-width:20px;text-align:center;font-variant-numeric:tabular-nums}
+.crow .cq button{width:24px;height:24px;border:1px solid var(--chrome);border-radius:2px;
+  background:var(--amberc);color:var(--carbon);font-weight:800;line-height:1;
+  box-shadow:var(--bevel)}
+.crow .cq button:hover{background:var(--amber-press)}
+@media(max-width:760px){.crow{flex-wrap:wrap}.crow .crar{display:none}}
+/* ---- settings rows ---- */
+.prow{display:flex;align-items:center;gap:16px;background:var(--surface);
+  border:1px solid var(--line);border-radius:4px;padding:10px 12px;box-shadow:var(--bevel-in)}
+.prow p{color:var(--tx);margin-top:3px;max-width:60ch}
+.prow>div{flex:1}
+/* Every collection affordance hides behind one class — see applyCollPref(). */
+body.nocoll .collonly{display:none!important}
+
+
+/* The borrow list is a thing you send someone, not part of the sheet you walk
+   your binder with, so it is kept off the printout entirely. */
+@media print{.borrow{display:none!important}}
+/* ---- borrow list ---- */
+.borrow{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+  box-shadow:var(--bevel-in);padding:12px 14px;margin-bottom:14px}
+.borrow .bhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.borrow .bhead .sp{flex:1}
+.borrow .bhead b{color:var(--tx)}
+.borrow .bnote{color:var(--deep);font-size:12px;margin:4px 0 8px}
+.borrow .btext{width:100%;background:var(--platinum);border:1px solid var(--hairline);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:9px 11px;color:var(--tx);
+  font-family:var(--sans);font-size:13px;line-height:1.5;resize:vertical}
+.bcust{background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:2px;
+  box-shadow:var(--bevel-in);padding:10px 12px;margin-bottom:10px;
+  display:flex;flex-wrap:wrap;gap:10px}
+.bcust label{display:flex;flex-direction:column;gap:3px;font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.bcust input,.bcust select{background:var(--surface);border:1px solid var(--line);
+  border-radius:2px;padding:5px 7px;font-size:13px;color:var(--tx);
+  text-transform:none;letter-spacing:0;font-weight:400;min-width:180px}
+.bpick{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.bpick>b{flex:1 1 100%;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.bcust .bchk{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:400;
+  text-transform:none;letter-spacing:0;color:var(--tx);flex-direction:row}
+.bchk i{font-style:normal;color:var(--deep)}
+/* .bcust input sets a 180px floor so the text fields line up in a row. A
+   checkbox inherited it too, which stretched the box and pushed its own
+   label most of a column away from it. */
+.bcust .bchk input[type=checkbox]{min-width:0;width:auto;padding:0;flex:0 0 auto}
+
+
+.bsave{flex:1 1 100%;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  border-top:1px dotted var(--muted);padding-top:9px;margin-top:2px}
+.bsave span{font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--deep)}
+/* The filled sheet, live, under the fields that fill it. */
+.rgprev{flex:1 1 100%;margin-top:12px;border:1px solid var(--chrome);border-radius:2px;
+  overflow:hidden;background:var(--platinum)}
+.rgprevh{display:flex;align-items:baseline;gap:8px;padding:6px 10px;font-size:10.5px;
+  font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--deep);
+  background:var(--canvas-soft);border-bottom:1px solid var(--hairline)}
+.rgprevh span{text-transform:none;letter-spacing:0;font-weight:600;font-size:11px}
+.rgprev iframe{display:block;width:100%;height:min(70vh,760px);border:0;background:#fff}
+@media(max-width:680px){.rgprev iframe{height:56vh}}
+@media print{.rgprev{display:none!important}}
+
+
+/* ---- confirm box ---- */
+.cfmbg{position:fixed;inset:0;background:rgba(32,38,56,.62);display:grid;place-items:center;z-index:900}
+.cfm{background:var(--surface);border:2px solid var(--chrome);border-radius:6px;
+  box-shadow:var(--bevel);padding:18px 20px;max-width:440px;width:calc(100% - 32px)}
+.cfm h3{font-size:15px;color:var(--tx);margin-bottom:6px}
+.cfm p{color:var(--tx);margin-bottom:14px}
+.cfmb{display:flex;gap:8px;justify-content:flex-end}
+/* ---- hover preview ---- */
+.cpv{position:fixed;z-index:950;pointer-events:none;width:250px;
+  border:2px solid var(--chrome);border-radius:6px;box-shadow:0 18px 44px -10px rgba(0,0,0,.8);
+  background:var(--platinum);overflow:hidden}
+.cpv img{display:block;width:100%}
+/* ---- collection sub-tabs ---- */
+/* Illumineer's Quest sets, folded away under one block. */
+.otherset{margin-top:9px;border:1px solid var(--hairline);border-radius:4px;
+  background:var(--canvas-soft);box-shadow:var(--bevel-in)}
+.otherset>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;
+  padding:8px 11px;font-size:11.5px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--tx)}
+.otherset>summary::-webkit-details-marker{display:none}
+.otherset>summary::before{content:"▸";font-size:11px;transition:transform .15s}
+.otherset[open]>summary::before{transform:rotate(90deg)}
+.otherset>summary .n{background:var(--surface);border:1px solid var(--line);
+  border-radius:2px;padding:1px 7px;font-size:11px;letter-spacing:0;color:var(--deep)}
+.otherset .chips{padding:0 11px 11px}
+.fastlede{color:var(--tx);font-size:13.5px;line-height:1.6;margin:14px 0 12px;max-width:70ch}
+.ctabs{display:flex;gap:0;margin:14px 0 0}
+.ctabs button{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  padding:7px 14px;border:1px solid var(--chrome);background:var(--platinum);color:var(--tx);
+  box-shadow:var(--bevel);border-right:none}
+.ctabs button:last-child{border-right:1px solid var(--chrome)}
+.ctabs button.on{background:var(--carbon);color:var(--amberc)}
+.fastgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-top:10px}
+.fastgrid button{text-align:left;padding:10px 12px}
+.fastgrid button.bad{background:var(--bad);color:var(--surface);border-color:var(--bad)}
+.fastnote{color:var(--deep);font-size:12px;margin:10px 0 0}
+
+
+/* ---- rarity symbols ---- */
+.rsym{width:14px;height:14px;flex:0 0 14px;vertical-align:-2px;margin-right:5px}
+.crar{display:flex;align-items:center;gap:0}
+
+
+/* ---- collection rows in the card modal ---- */
+/* ---- in my collection ----
+   Each row is one printing with a Normal and a Foil counter. It used to be a
+   wrapping flex row with the two counters as bare −/number/+ runs, so on a
+   narrow modal the Foil group wrapped under the Normal one and you could no
+   longer tell which count belonged to which word. The counters are now fixed
+   little steppers on a grid: the printing takes the space that's left, the two
+   steppers keep their size, and a row that has to wrap wraps as two whole
+   steppers rather than breaking one in half. */
+.mcoll{margin-top:12px;background:var(--canvas-soft);border:1px solid var(--hairline);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:10px 11px}
+.mcoll>b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;
+  font-weight:800;color:var(--deep);margin-bottom:7px}
+.mcr{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--surface);
+  border:1px solid var(--line);border-radius:2px;padding:6px 9px;margin-bottom:5px}
+.mcr:last-child{margin-bottom:0}
+.mcn{flex:1 1 150px;display:flex;align-items:center;color:var(--tx);min-width:0;
+  font-size:12.5px;font-weight:700}
+.mcn i{font-style:normal;font-weight:600;color:var(--deep);margin-left:5px}
+.mcr .cq{display:grid;grid-template-columns:auto 26px 22px 26px;align-items:center;gap:0;
+  flex:none;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--canvas-soft)}
+.mcr .cq em{font-style:normal;font-size:10px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--deep);padding:0 7px}
+.mcr .cq button{height:24px;border:none;border-left:1px solid var(--line);
+  background:var(--surface);color:var(--tx);font-size:13px;font-weight:800;line-height:1;cursor:pointer}
+.mcr .cq button:hover{background:var(--platinum)}
+.mcr .cq b{height:24px;display:grid;place-items:center;font-size:12.5px;font-weight:800;
+  border-left:1px solid var(--line);background:var(--surface);
+  font-variant-numeric:tabular-nums}
+
+
+/* ---- csv import ---- */
+.imp{margin-top:14px;background:var(--surface);border:1px solid var(--line);
+  box-shadow:var(--bevel-in);border-radius:4px;padding:11px 13px}
+.imp>b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep)}
+.imp p{color:var(--tx);margin:5px 0 9px;max-width:70ch}
+.imp input[type=file]{font-size:12px;color:var(--tx)}
+.impok{color:var(--tx)}
+.impbad{color:var(--bad);font-weight:700}
+.impmiss{color:var(--deep);font-size:12px}
+.impbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+
+
+.soonlbl{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--deep);
+  background:var(--platinum);border:1px solid var(--hairline);border-radius:2px;padding:2px 6px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn[disabled]:hover{border-color:var(--line)}
+
+
+.prow{margin-bottom:8px}
+.prow.soon{opacity:.6}
+.prow.soon b{color:var(--deep)}
+#prefBack{margin-bottom:14px}
+
+
+/* ---- deck bar ----
+   Three rows, three different jobs. The panel title ("Deck", plus the 👁/⋯
+   menus) is small housekeeping, so it stays out of the way top-left; the
+   deck's ink pair is the other small fact worth knowing at a glance, so it
+   balances the title on the right rather than competing with the name for
+   the middle of the panel. The deck's actual NAME is the one thing in this
+   header you came to read, so it's the only thing centered and full-size.
+   Count/format/last-edited used to sit as a left-aligned line under the
+   progress bar; now it reads as a footer — centered, small, below the bar,
+   the way a caption reads rather than a label. */
+.dtop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+.dtitle{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--deep);display:flex;align-items:center;gap:6px}
+.dinks{display:flex;align-items:center;gap:4px;justify-content:flex-end}
+.dpip{width:11px;height:11px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.35)}
+/* Deck name / unsaved, at the top of the deck panel. */
+.dhead{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:9px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
+  border-radius:2px;padding:8px 10px;text-align:center}
+.dhname{min-width:0;display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+.dhead b{color:var(--tx);font-size:14px;overflow:hidden;text-overflow:ellipsis}
+.dbdirty{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  background:var(--amberc);color:var(--carbon);border:1px solid var(--amber-press);
+  border-radius:2px;padding:2px 6px}
+.dbdirty[hidden]{display:none}
+.dfoot{font-size:12px;color:var(--deep);margin-top:7px;text-align:center}
+/* ---- the save burst ---- */
+.spark{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:940}
+@media(prefers-reduced-motion:reduce){.spark{display:none}}
+
+
+.npin{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:2px;
+  padding:8px 10px;font-size:14px;color:var(--tx);margin-bottom:14px;font-family:var(--sans)}
+
+
+/* ---- deck gallery ---- */
+.dkgal{margin:14px 0}
+.dgh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px;
+  background:var(--canvas-soft);border:1px solid var(--hairline);box-shadow:var(--bevel-in);
+  border-radius:2px;padding:7px 10px}
+.dgh .sp{flex:1}
+.dgh b{color:var(--tx)}
+.dgh span{color:var(--deep);font-size:12px}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px}
+.dgrid.big{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.dgc{position:relative;margin:0;background:var(--surface);border:1px solid var(--chrome);
+  border-radius:4px;overflow:hidden;box-shadow:var(--bevel);cursor:pointer}
+.dgc:hover{border-color:var(--amber-press);box-shadow:0 0 0 3px var(--amberc),var(--bevel)}
+.dgc img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;background:var(--platinum)}
+.dgph{aspect-ratio:674/940;display:grid;place-items:center;text-align:center;padding:8px;
+  background:var(--platinum);color:var(--deep);font-size:12px}
+.dgq{position:absolute;top:4px;left:4px;background:var(--carbon);color:var(--amberc);
+  font-weight:800;font-size:13px;padding:1px 7px;border-radius:2px;border:1px solid var(--amber-press)}
+.dgc figcaption{padding:5px 6px;font-size:12px;color:var(--tx);line-height:1.25}
+@media print{.dkgal{display:none!important}}
+
+/* ---- recommended decks -------------------------------------------------
+   Reading surfaces only: every word on this page sits on white, platinum or
+   pale sky, never on bare canvas, so the AAA bar holds the same way it does
+   on the rest of the site. */
+.msetbar{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0 6px}
+.msetone{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--deep);margin:12px 0 4px;display:inline-block;background:var(--canvas-soft);
+  border:1px solid var(--hairline);border-radius:2px;padding:4px 9px}
+.mblock{margin-bottom:26px}
+/* The block heading already carries a pale-sky plate; the blurb continues it
+   downward rather than sitting on bare canvas, where carbon is 3.44:1. Same
+   move the page lede makes under its own h1 -- reading surfaces are plates. */
+.mblock>.sec2{margin-bottom:0}
+.mblurb{font-size:13px;line-height:1.6;color:var(--tx);max-width:78ch;margin:0 0 12px;
+  padding:9px 12px 10px;background:var(--canvas-soft);border:1px solid var(--chrome);
+  border-top:none;box-shadow:var(--bevel);border-radius:0 0 4px 4px}
+.mnone,.mcount{font-size:12px;color:var(--deep);margin-top:9px;display:inline-block;
+  background:var(--canvas-soft);border:1px solid var(--hairline);border-radius:2px;
+  padding:4px 9px}
+.mnone{font-style:italic}
+.mtiles{margin-top:4px}
+.mtile{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--line);
+  border-radius:4px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:3px}
+.mtile:hover{border-color:var(--deep)}
+.mtile.on{border-color:var(--chrome);border-left-color:var(--amberc);
+  box-shadow:var(--bevel),0 0 0 2px var(--chrome)}
+.mtile h3{font-size:15.2px;margin:0}
+.march{font-size:12.16px;color:var(--deep);line-height:1.5;margin:0}
+.mmeta{font-size:11.5px;color:var(--deep);margin-top:2px}
+.minks{display:flex;gap:3px;margin-bottom:6px}
+.minks i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.mbtns{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.mbtns.wide{margin-top:14px}
+/* The guide panel is full width under its own block's grid rather than inside
+   a tile: the write-ups are paragraphs, and a paragraph in a 240px tile is a
+   column of two-word lines. */
+.mdet{background:var(--surface);border:1px solid var(--chrome);border-radius:4px;
+  box-shadow:var(--bevel);padding:16px 18px;margin-top:12px}
+.mdh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.mdh h3{font-size:16px;margin:0;flex:1}
+.mdh .minks{margin-bottom:0}
+.msec{font-family:var(--sans);font-size:12px;font-weight:900;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--link);border-bottom:1px solid var(--line2);
+  padding-bottom:4px;margin:18px 0 9px}
+.msub{font-size:12.5px;font-weight:800;color:var(--tx);margin:11px 0 4px}
+.mp{font-size:13.5px;line-height:1.65;color:var(--tx);max-width:78ch}
+.mul{margin:0;padding-left:18px;max-width:78ch}
+.mul li{font-size:13px;line-height:1.6;color:var(--tx);margin-bottom:5px}
+.mul.good li::marker{color:var(--good)}
+.mul.bad li::marker{color:var(--bad)}
+.msw{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 22px}
+.mgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.mgc{position:relative;margin:0;background:var(--surface);border:1px solid var(--chrome);
+  border-radius:4px;overflow:hidden;box-shadow:var(--bevel);cursor:pointer}
+.mgc:hover{border-color:var(--amber-press);box-shadow:0 0 0 3px var(--amberc),var(--bevel)}
+.mgc img{width:100%;aspect-ratio:674/940;object-fit:cover;display:block;background:var(--platinum)}
+
+
+/* ---- search suggestions ---- */
+.acbox{position:relative;z-index:70;margin:-4px 0 10px;background:var(--surface);
+  border:1px solid var(--chrome);border-radius:2px;box-shadow:var(--bevel);overflow:hidden}
+.acbox[hidden]{display:none}
+.acrow{display:flex;width:100%;align-items:baseline;gap:10px;text-align:left;
+  padding:7px 11px;border:none;border-bottom:1px solid var(--line);background:var(--surface);
+  color:var(--tx)}
+.acrow:last-child{border-bottom:none}
+.acrow:hover,.acrow.on{background:#fff8d6}
+.acn{flex:1}
+.acn i{font-style:normal;color:var(--deep)}
+.acm{font-size:12px;color:var(--deep);white-space:nowrap}
+/* ---- did you mean ---- */
+.dym{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--amber-press);
+  box-shadow:var(--bevel-in);border-radius:2px;padding:10px 12px;margin:10px 13px;color:var(--tx)}
+.dym b{margin-right:6px}
+.dym button{background:var(--platinum);border:1px solid var(--line);border-radius:2px;
+  padding:3px 9px;margin:3px 5px 0 0;color:var(--deep);font-weight:700}
+.dym button:hover{background:#fff8d6;border-color:var(--amber-press)}
+
+
+.prow.locked{opacity:.75}
+.prow.locked b{display:flex;align-items:center;gap:8px}
+
+/* --carbon is the SLAB colour (nav, footer, dark buttons). --tx is the TEXT
+   colour. They are the same value in the light theme, which is why the two got
+   conflated — and why dark mode surfaced 37 places where dark text sat on a
+   dark plate. Text uses --tx; only labels sitting on a light accent fill
+   (Action Yellow) keep --carbon, because that fill stays light in both themes. */
+/* ---- plates ---- */
+.plate{background:var(--canvas);border:1px solid var(--chrome);box-shadow:var(--bevel)}
+.inset{background:var(--platinum);border:1px solid var(--hairline);box-shadow:var(--bevel-in)}
+/* Chamfer, not radius — the machined faceplate edge. */
+.chamfer{clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px)}
+
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:var(--line2);border-radius:0}
+
+/* drifting bubbles */
+#bub{display:none}
+#bub i{position:absolute;bottom:-70px;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,rgba(232,220,192,.20),rgba(201,162,39,.05) 62%,transparent 72%);
+  animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-118vh) translateX(var(--dx,0px));opacity:0}}
+@media(prefers-reduced-motion:reduce){#bub{display:none}*{animation:none!important;transition:none!important}}
+header,nav,main,.mtabs{position:relative;z-index:1}
+
+/* The masthead of a printed volume: solid, ruled off with a gold hairline
+   under a heavier ink line, no blur and no translucency. */
+/* The command layer: a carbon slab with a halftone dot-matrix, like a speaker
+   grille. Sharp corners, no blur, no translucency. */
+header{display:flex;align-items:center;gap:14px;padding:7px 12px;background:var(--carbon);
+  background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:4px 4px;
+  border-bottom:2px solid var(--chrome);
+  position:sticky;top:0;z-index:60;flex-wrap:wrap;min-height:34px}
+.logo{display:flex;align-items:baseline;gap:9px;min-width:0;
+  background:none;border:none;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.logo:hover b{text-decoration:underline;text-underline-offset:3px}
+.logo:focus-visible{outline:2px solid var(--amberc);outline-offset:3px}
+.logo .f{font-size:17px;animation:bob 3.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-4px) rotate(5deg)}}
+/* the racetrack logo pill — one of the only round things in the system */
+.logo b{font-size:16px;white-space:nowrap;font-family:var(--display);font-weight:900;
+  color:var(--deep);background:var(--surface);border-radius:9999px;
+  padding:3px 13px 4px;letter-spacing:-.02em;border:1px solid var(--chrome)}
+header .sp{flex:1}
+header select{background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:6px 9px;font-size:12.8px}
+
+/* Tabs as index entries — smallcaps, letterspaced, marked with a gold rule
+   rather than a filled tab. */
+/* The pale-sky secondary strip under the carbon bar. Layered command
+   hierarchy — do not flatten these into one. */
+nav.tabs{display:flex;gap:0;padding:0 8px;background:var(--canvas-soft);
+  border-bottom:1px solid var(--chrome);box-shadow:var(--bevel);flex-wrap:wrap}
+nav.tabs button,nav.tabs .navlink{font-family:var(--sans);color:var(--tx);padding:6px 14px;font-size:12px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-radius:0;
+  border-right:1px solid rgba(51,74,136,.3)}
+nav.tabs button:hover,nav.tabs .navlink:hover{background:rgba(255,255,255,.4)}
+nav.tabs button.on{background:var(--carbon);color:var(--amberc)}
+/* The two off-site links (Map, The Ink List) sit in the same row as the
+   tab buttons and need to look like one of them, not like a stray link. */
+nav.tabs .navlink{display:inline-flex;align-items:center;text-decoration:none;white-space:nowrap}
+nav.tabs .navlink:focus-visible{outline:2px solid var(--tx);outline-offset:-3px}
+/* The Other tab jumps straight to the Lore tracker (its default landing
+   page) — everything else in the Other menu used to need a detour through
+   there first, then "Tools" back out to the grid. This hamburger sits next
+   to the tab so any of those pages is one click from anywhere on the site. */
+.otherwrap{display:flex}
+#tOtherMenu{padding:6px 10px;font-size:14px;border-right:1px solid rgba(51,74,136,.3)}
+.othermenu{position:fixed;z-index:960;min-width:240px;max-width:300px;
+  max-height:70vh;overflow:auto;background:var(--surface);color:var(--tx);
+  border:1px solid var(--chrome);border-radius:0 0 6px 6px;box-shadow:0 10px 30px rgba(0,0,0,.3);
+  padding:6px}
+.othermenu h4{margin:10px 8px 4px;font-size:10.5px;font-weight:900;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--deep)}
+.othermenu h4:first-child{margin-top:6px}
+.othermenu button,.othermenu a{display:block;width:100%;text-align:left;padding:9px 8px;border-radius:4px;
+  font-size:13.5px;color:var(--tx);font-weight:600;text-decoration:none;box-sizing:border-box}
+.othermenu button:hover,.othermenu a:hover{background:var(--canvas-soft)}
+
+/* Page titles: a white card like the deck builder's panels, the intro inside it. */
+.page h1{margin:0;padding:18px 20px 6px;background:var(--surface);color:var(--tx);text-shadow:none;
+  border:1px solid var(--line);border-bottom:none;border-radius:8px 8px 0 0}
+.page h1:not(:has(+.lede)){border-bottom:1px solid var(--line);border-radius:8px;padding-bottom:16px;margin-bottom:16px}
+.page h1 .gi{display:none}
+.page h1+.lede{margin:0 0 16px;padding:0 20px 16px;background:var(--surface);max-width:none;
+  border:1px solid var(--line);border-top:none;border-radius:0 0 8px 8px;color:var(--tx)}
+/* Section header strip — silkscreened legend over each module. */
+.sec2{background:var(--canvas-soft);color:var(--tx);border:1px solid var(--line);
+  padding:6px 12px;margin:16px 0 8px;border-radius:6px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+/* ---- the dividers in the Other menu ----
+   These name the sections of the menu — "Mini games" and so on — and they were
+   the same weight and nearly the same colour as the tile headings underneath
+   them, so the menu read as one long undifferentiated list and you couldn't
+   see where one group ended and the next began. A section heading has to be
+   more contrasted than the things it contains, not the same: dark ink on the
+   accent bar, a rule under it, and the whole strip is now clearly a label
+   rather than another card. */
+.ogh.sec2{background:var(--carbon);color:#fff;border-color:var(--carbon);
+  letter-spacing:.13em;font-weight:800;padding:7px 12px}
+body.dark .ogh.sec2{background:var(--platinum);color:var(--tx);border-color:var(--hairline);
+  border-left-color:var(--amberc)}
+
+main{padding:12px 12px 32px;max-width:1800px;margin:0 auto}
+.view{display:none}.view.on{display:block}

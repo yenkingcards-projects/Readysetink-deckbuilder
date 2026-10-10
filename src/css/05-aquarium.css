@@ -1,0 +1,360 @@
+/* ===== aquarium ========================================================= */
+/* ---- Feed Flounder ----------------------------------------------------
+   Ben's standalone game, moved into the site. It was written to own the whole
+   viewport; here it lives in a box, so every measurement reads the element's
+   own rect. Full screen therefore just makes the box bigger. */
+.ffgame{position:relative;height:min(66vh,560px);border-radius:6px;overflow:hidden;
+  border:1px solid var(--chrome);box-shadow:var(--bevel);cursor:crosshair;isolation:isolate;
+  touch-action:none;user-select:none;color:#fff;
+  background:radial-gradient(circle at 20% 20%,rgba(92,215,235,.22),transparent 35%),
+    radial-gradient(circle at 75% 70%,rgba(45,157,202,.22),transparent 32%),
+    linear-gradient(#0d5672 0%,#0b4867 45%,#072e4b 72%,#041d31 100%)}
+.ffgame:fullscreen{height:100%;border-radius:0}
+.ffgame:-webkit-full-screen{height:100%;border-radius:0}
+/* iOS Safari will not put a <div> in real full screen — only a <video>. Rather
+   than tell somebody on an iPhone that they cannot have the thing the button
+   offers, the tank pins itself over the viewport instead. Not the same feature;
+   indistinguishable from the sofa. */
+.ffgame.faux{position:fixed;inset:0;height:auto;width:auto;z-index:500;border-radius:0;border:none}
+body.fffaux{overflow:hidden}
+/* Full screen has to mean full screen. The masthead and the tab bar are both
+   sticky, and they kept painting straight over the top of the tank — across
+   the dust HUD, in the one mode somebody actually sits and plays. z-index
+   didn't settle it, so they go away entirely, which is what the lore tracker
+   already does with body.loreon a few hundred lines down. */
+body.fffaux header,body.fffaux nav.tabs,body.fffaux .subsw,
+body.fffaux #bub,body.fffaux .sitefoot{display:none!important}
+.ffgame::before{content:"";position:absolute;inset:-10%;pointer-events:none;opacity:.35;
+  background:repeating-radial-gradient(ellipse at 20% -10%,rgba(255,255,255,.08) 0 2px,transparent 3px 42px);
+  transform:rotate(-8deg);animation:ffwater 12s linear infinite alternate}
+@keyframes ffwater{from{transform:translate3d(-2%,0,0) rotate(-8deg)}
+  to{transform:translate3d(2%,2%,0) rotate(-5deg)}}
+.ffhud{position:absolute;z-index:20;top:14px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:10px;padding:8px 15px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(4,24,39,.42);
+  backdrop-filter:blur(12px);font-weight:900;font-size:16px;white-space:nowrap}
+.ffhud b{font-variant-numeric:tabular-nums}
+.ffdusti{width:22px;height:22px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff6a8,#ffd54a 32%,#df9423 68%,#805018);
+  box-shadow:0 0 18px rgba(255,211,75,.65)}
+.fftitle{position:absolute;z-index:20;top:64px;left:50%;transform:translateX(-50%);
+  text-align:center;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.fftitle h2{font-size:clamp(24px,5vw,46px);line-height:.95;margin:0;font-weight:900;
+  letter-spacing:-.04em;color:#fff}
+.fftitle p{margin:6px 0 0;opacity:.78;font-weight:700;font-size:13px}
+.ffcard{position:absolute;z-index:10;width:104px;height:145px;left:50%;top:55%;
+  transform:translate(-50%,-50%);border-radius:10px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.38),transparent 18%),
+    linear-gradient(#53c9ec 0 54%,#eed248 55% 100%);
+  border:5px solid #ead85b;
+  box-shadow:0 14px 35px rgba(0,0,0,.38),0 0 0 2px rgba(33,92,116,.9) inset;
+  will-change:transform,left,top}
+.ffcard::before{content:"FLOUNDER";position:absolute;left:8px;right:8px;bottom:28px;
+  background:rgba(19,48,71,.84);border-radius:5px;padding:5px 4px;font-size:10.5px;
+  font-weight:900;text-align:center;letter-spacing:.08em;color:#fff5aa}
+.ffcard::after{content:"🐠";position:absolute;inset:11px 8px 53px;display:grid;
+  place-items:center;font-size:54px;border-radius:6px;border:2px solid rgba(255,255,255,.45);
+  background:radial-gradient(circle,#97efff 0,#29a6df 65%,#1472a4)}
+/* ---- Zombie Mode (100k dust) — the card sheds its whole frame down to just
+   the emoji, and a ring of swords orbits it. The swords live in the DOM
+   always (like the ff2-layer effects above) so toggling the class is enough
+   — nothing to build or tear down. */
+.ffcard.ff-zombie{background:none;border:none;box-shadow:none}
+.ffcard.ff-zombie::before{display:none}
+.ffcard.ff-zombie::after{background:none;border:none;box-shadow:none;font-size:64px}
+/* ---- zombie mode ------------------------------------------------------
+   Not a skin any more. The tank pulls back, the food stops, and waves of
+   zombies swim at you while a ring of blades turns around Flounder — so the
+   blades live in the TANK's coordinates rather than inside the card's own
+   box. Parented to the card they could never be wider than the card, which
+   is exactly what was wrong with them. */
+.ffgame.zmode{height:min(84vh,760px)}
+.ffgame.zmode .ffweed{opacity:.2}
+.ffgame.zmode .fftitle,.ffgame.zmode .ffhint{display:none}
+/* The run stats live top-left, which is where the wave/hearts/brains HUD has
+   to be — the dust pill owns the centre and the buttons own the right. The
+   visit stats are the least urgent of the three, so they go to the floor. */
+.ffgame.zmode .ffstats{top:auto;bottom:12px}
+.zsword{position:absolute;z-index:12;font-size:23px;pointer-events:none;
+  transform:translate(-50%,-50%);filter:drop-shadow(0 2px 4px rgba(0,0,0,.55))}
+.zomb{position:absolute;z-index:11;font-size:27px;pointer-events:none;
+  transform:translate(-50%,-50%);filter:drop-shadow(0 2px 5px rgba(0,0,0,.5))}
+.zomb.big{font-size:42px}
+.zomb.hurt{filter:drop-shadow(0 0 7px #ff5f5f) brightness(1.7)}
+/* The run's own HUD, opposite the dust pill so the two never collide. */
+.zhud{position:absolute;z-index:22;top:14px;left:14px;display:flex;flex-direction:column;
+  gap:5px;align-items:flex-start;pointer-events:none;font-weight:900}
+.zhud .zrow{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(4,24,39,.46);
+  backdrop-filter:blur(12px);font-size:14px;white-space:nowrap}
+.zhud .zhp{letter-spacing:1px;font-size:15px}
+.zhud b{font-variant-numeric:tabular-nums}
+/* Between waves, and at the end. Both sit OVER the water rather than
+   replacing it — the tank keeps moving behind them, which is what makes a
+   breather read as a breather rather than as a page change. */
+.zpanel{position:absolute;z-index:30;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(520px,calc(100% - 32px));max-height:calc(100% - 32px);overflow:auto;
+  background:rgba(4,24,39,.9);border:1px solid rgba(255,255,255,.2);border-radius:10px;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);padding:16px 18px;color:#fff;
+  backdrop-filter:blur(14px)}
+.zpanel h3{font-size:20px;margin:0 0 2px;font-weight:900;letter-spacing:-.02em;color:#fff}
+.zpanel .zsub{font-size:12.5px;color:#bcd7ea;margin-bottom:12px;line-height:1.5}
+.zgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(224px,1fr));gap:8px}
+.zbuy{display:flex;flex-direction:column;gap:2px;text-align:left;padding:9px 11px;
+  border-radius:6px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);
+  color:#fff;font-family:inherit;cursor:pointer}
+.zbuy:hover:not(:disabled){border-color:#ffd400;background:rgba(255,212,0,.12)}
+.zbuy:disabled{opacity:.42;cursor:default}
+.zbuy b{font-size:13.5px;font-weight:800}
+.zbuy i{font-style:normal;font-size:11.5px;color:#bcd7ea;line-height:1.4}
+.zbuy .zc{font-size:12px;font-weight:900;color:#ffd400;margin-top:3px}
+.zbuy .zlv{font-size:11px;color:#9fc0d8;font-weight:700}
+.zpanel .zgo{margin-top:12px;width:100%;padding:11px;border-radius:6px;border:none;
+  background:#ffd400;color:#202638;font-weight:900;font-size:14px;cursor:pointer;
+  font-family:inherit;text-transform:uppercase;letter-spacing:.06em}
+.zpanel .zgo:hover{background:#ffe452}
+.zpop{position:absolute;z-index:24;font-weight:900;font-size:14px;color:#8ef5a8;
+  pointer-events:none;transform:translate(-50%,-50%);text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.zpop.bad{color:#ff8080}
+.zpop.big{font-size:22px;color:#ffd400}
+.zpop.huge{font-size:34px;color:#fff;text-shadow:0 0 20px #ff9c3c,0 3px 10px rgba(0,0,0,.7)}
+/* ---- the epic layer ---------------------------------------------------
+   A wave game lives or dies on what happens in the quarter-second after a
+   kill. Everything below is that quarter-second: the ring the blade leaves,
+   the number that jumps, the screen kicking, the water getting redder the
+   deeper you are. None of it changes a rule; all of it is why you go again. */
+.zring{position:absolute;z-index:10;border-radius:50%;pointer-events:none;
+  border:2px solid rgba(255,255,255,.85);transform:translate(-50%,-50%)}
+.zbit{position:absolute;z-index:14;pointer-events:none;font-size:15px;
+  transform:translate(-50%,-50%)}
+/* The wave call. Big, brief, and gone before it is in the way. */
+.zbanner{position:absolute;z-index:26;left:50%;top:40%;transform:translate(-50%,-50%);
+  font-weight:900;font-size:clamp(34px,8vw,86px);letter-spacing:-.035em;color:#fff;
+  pointer-events:none;white-space:nowrap;text-align:center;line-height:.95;
+  text-shadow:0 0 28px rgba(120,220,255,.8),0 6px 18px rgba(0,0,0,.65)}
+.zbanner small{display:block;font-size:.28em;letter-spacing:.14em;text-transform:uppercase;
+  color:#bcd7ea;margin-top:6px;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.zbanner.boss{color:#ffd400;text-shadow:0 0 34px rgba(255,84,52,.95),0 6px 18px rgba(0,0,0,.75)}
+.zbanner.best{color:#8ef5a8;text-shadow:0 0 30px rgba(80,255,150,.8),0 6px 18px rgba(0,0,0,.7)}
+/* A boss is only a boss if you can watch its health go down. */
+.zbossbar{position:absolute;z-index:23;top:70px;left:50%;transform:translateX(-50%);
+  width:min(430px,72%);pointer-events:none}
+.zbossbar .zbn{font-size:11.5px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;
+  color:#ffd7d7;text-align:center;margin-bottom:4px;text-shadow:0 2px 8px rgba(0,0,0,.75)}
+.zbossbar .zbb{height:11px;border-radius:999px;background:rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.3);overflow:hidden}
+.zbossbar .zbf{height:100%;width:100%;background:linear-gradient(90deg,#ff4d4d,#ffd400);
+  transition:width .12s linear}
+/* Drops. They bob so they read as "come and get me" rather than as scenery. */
+.zpick{position:absolute;z-index:13;font-size:28px;pointer-events:none;
+  filter:drop-shadow(0 0 11px rgba(255,255,255,.8));animation:zpickbob 1.05s ease-in-out infinite alternate}
+@keyframes zpickbob{from{transform:translate(-50%,-50%) scale(1)}
+  to{transform:translate(-50%,-50%) scale(1.2)}}
+@keyframes zshake{0%,100%{transform:translate(0,0)}20%{transform:translate(-6px,4px)}
+  40%{transform:translate(6px,-4px)}60%{transform:translate(-4px,-5px)}80%{transform:translate(5px,3px)}}
+.ffgame.zshake{animation:zshake .26s}
+.ffgame.zquake{animation:zshake .5s 2}
+/* Frenzy lights the blades up so you can see the buff rather than read it. */
+.ffgame.zfrenzy .zsword{filter:drop-shadow(0 0 12px #ffd400) brightness(1.45)}
+.ffgame.zgold .zomb{filter:drop-shadow(0 0 9px #ffd400) saturate(1.4)}
+.zsword.in{font-size:18px}
+/* The water gets redder the deeper you get. Pure atmosphere, one variable. */
+.zheat{position:absolute;inset:0;z-index:8;pointer-events:none;opacity:0;
+  transition:opacity 1.4s ease;
+  background:radial-gradient(circle at 50% 62%,rgba(120,0,0,0) 30%,rgba(96,0,26,.62) 100%)}
+@media(prefers-reduced-motion:reduce){
+  .ffgame.zshake,.ffgame.zquake{animation:none}
+  .zpick{animation:none}}
+.zflash{position:absolute;inset:0;z-index:9;pointer-events:none;
+  background:rgba(255,40,40,.28);opacity:0;transition:opacity .14s}
+.ffgame.zhit .zflash{opacity:1;transition:none}
+/* Kept for the card ring, which is now only ever empty — the blades moved
+   into the tank. Left in place so nothing that still writes the class breaks. */
+.ffswords{position:absolute;inset:-30px;display:none;pointer-events:none;
+  animation:ffswordspin 3s linear infinite}
+.ffswords span{position:absolute;left:50%;top:50%;font-size:20px;
+  transform:translate(-50%,-50%) rotate(var(--a)) translateY(-58px) rotate(calc(-1 * var(--a)))}
+@keyframes ffswordspin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.ffswords{animation:none}}
+.ffood{position:absolute;z-index:7;will-change:transform}
+.ffood.zombie{width:32px;height:32px;font-size:27px;display:grid;place-items:center;
+  filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+.ffood.pellet{width:16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#ffe69a,#c98132 42%,#744422 77%);
+  box-shadow:0 2px 5px rgba(0,0,0,.3)}
+.ffood.pellet.rare{width:20px;height:20px;
+  background:radial-gradient(circle at 32% 28%,#fff,#fff38d 28%,#ffd23f 58%,#f19d22 80%);
+  box-shadow:0 0 20px rgba(255,226,65,.85)}
+.ffood.potato,.ffood.coconut{display:grid;place-items:center;line-height:1;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.28))}
+.ffood.potato{width:38px;height:38px;font-size:34px}
+.ffood.coconut{width:46px;height:46px;font-size:42px}
+.ffbub{position:absolute;z-index:3;border-radius:50%;pointer-events:none;
+  border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.07)}
+.ffpop{position:absolute;z-index:30;font-weight:900;color:#ffe76a;pointer-events:none;
+  text-shadow:0 2px 10px #000;white-space:nowrap;animation:ffpop .7s ease-out forwards}
+.ffpop.special{font-size:19px;color:#fff3ae}
+@keyframes ffpop{0%{opacity:0;transform:translate(-50%,-20%) scale(.7)}
+  20%{opacity:1}100%{opacity:0;transform:translate(-50%,-120%) scale(1.25)}}
+.ffhint{position:absolute;z-index:20;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:12.5px;font-weight:800;opacity:.72;padding:8px 13px;border-radius:999px;
+  background:rgba(0,0,0,.18);white-space:nowrap;transition:opacity .5s}
+.ffhint.hide{opacity:0}
+/* Shown after 2s with no finger/cursor on the water — see the idle timer in
+   renderAqua(). Lets someone know the tank noticed they stepped away, rather
+   than just quietly changing how touches behave with no explanation. */
+.ffpause{position:absolute;z-index:20;bottom:16px;left:50%;transform:translateX(-50%);
+  font-size:12px;font-weight:800;opacity:0;padding:8px 13px;border-radius:999px;
+  background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.18);white-space:nowrap;
+  transition:opacity .4s;pointer-events:none}
+.ffgame.ffidle .ffpause{opacity:.85}
+.ffweed{position:absolute;bottom:-8px;z-index:2;width:24px;height:150px;opacity:.45;
+  border-radius:80% 10% 0 0;background:linear-gradient(#2f9478,#14594f);transform-origin:bottom}
+.ffweed.s1{left:6%;transform:rotate(-7deg)}
+.ffweed.s2{left:12%;height:110px;transform:rotate(12deg)}
+.ffweed.s3{right:7%;height:185px;transform:rotate(9deg)}
+.ffweed.s4{right:14%;height:105px;transform:rotate(-11deg)}
+@media(max-width:600px){.ffcard{width:88px;height:124px}.ffcard::after{font-size:44px}}
+@media(prefers-reduced-motion:reduce){.ffgame::before{animation:none}}
+
+/* ---- effect layers worn on the card ---- */
+.ff2-layer{position:absolute;inset:-6px;border-radius:14px;pointer-events:none;display:none}
+.ffcard.ff-bubbles .ff2-bubbles{display:block;box-shadow:0 0 22px rgba(164,236,255,.28),inset 0 0 16px rgba(196,246,255,.15);animation:ff2Pulse 1.8s ease-in-out infinite alternate}
+.ffcard.ff-shimmer .ff2-shimmer{display:block;background:linear-gradient(115deg,transparent 22%,rgba(255,255,255,.08) 34%,rgba(255,255,255,.95) 48%,rgba(255,244,166,.48) 54%,transparent 69%);background-size:240% 100%;mix-blend-mode:screen;animation:ff2Sweep 2.1s linear infinite}
+.ffcard.ff-sapphire .ff2-sapphire{display:block;box-shadow:0 0 28px rgba(67,207,255,.9),0 0 56px rgba(46,122,255,.45),inset 0 0 18px rgba(156,242,255,.24);animation:ff2Sapphire 1.6s ease-in-out infinite alternate}
+.ffcard.ff-sparkles .ff2-sparkles{display:block;box-shadow:0 0 18px rgba(255,233,126,.34),0 0 32px rgba(255,248,191,.18);animation:ff2Pulse 1s ease-in-out infinite alternate}
+.ffcard.ff-water .ff2-water{display:block;background:repeating-radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.27) 0 2px,rgba(47,190,235,.10) 4px 15px,transparent 17px 28px);mix-blend-mode:soft-light;animation:ff2Water 2.1s linear infinite}
+.ffcard.ff-legendary .ff2-legendary{display:block;background:linear-gradient(125deg,rgba(255,0,102,.30),rgba(255,225,74,.34),rgba(67,255,219,.34),rgba(81,128,255,.35),rgba(218,85,255,.32),rgba(255,0,102,.30));background-size:360% 360%;mix-blend-mode:screen;box-shadow:0 0 24px rgba(255,229,92,.35),0 0 42px rgba(255,104,229,.34),0 0 64px rgba(87,229,255,.35);animation:ff2Foil 2.5s ease infinite}
+.ffcard.ff-abyss .ff2-abyss{display:block;border:1px solid rgba(216,145,255,.48);background:radial-gradient(circle,transparent 38%,rgba(89,20,145,.14) 70%,rgba(174,72,255,.28));box-shadow:0 0 34px rgba(180,76,255,.95),inset 0 0 24px rgba(99,22,160,.24);animation:ff2Abyss 1.8s ease-in-out infinite alternate}
+.ff2p{position:absolute;z-index:45;pointer-events:none;transform:translate(-50%,-50%);will-change:transform,opacity}
+.ff2star{color:#fff7ad;line-height:1;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,224,73,.95)}
+.ff2dot{width:5px;height:5px;border-radius:50%;background:#d2f6ff;box-shadow:0 0 10px rgba(117,228,255,.9)}
+.ff2bubble{border-radius:50%;border:1px solid rgba(225,252,255,.95);background:rgba(177,238,255,.22);box-shadow:0 0 10px rgba(124,224,255,.55)}
+.ff2rainbow{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,#fff,rgba(255,255,255,.4) 20%,rgba(255,122,220,.85) 55%,rgba(80,211,255,.9));box-shadow:0 0 14px rgba(255,194,95,.8),0 0 22px rgba(143,255,252,.65)}
+.ff2void{width:7px;height:7px;border-radius:50%;background:#d495ff;box-shadow:0 0 14px rgba(194,113,255,.98),0 0 28px rgba(63,6,112,.98)}
+@keyframes ff2Pulse{from{opacity:.45;transform:scale(.99)}to{opacity:1;transform:scale(1.02)}}
+@keyframes ff2Sweep{0%{background-position:170% 0}100%{background-position:-80% 0}}
+@keyframes ff2Sapphire{from{opacity:.62;transform:scale(.99)}to{opacity:1;transform:scale(1.025)}}
+@keyframes ff2Water{0%{background-position:0 0}100%{background-position:28px 18px}}
+@keyframes ff2Foil{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+@keyframes ff2Abyss{from{opacity:.5;transform:scale(.98)}to{opacity:1;transform:scale(1.03)}}
+@media(prefers-reduced-motion:reduce){.ff2-layer{animation:none!important}}
+/* ---- in-game chrome -------------------------------------------------------
+   The tank owns its own controls now. Everything here is positioned inside
+   #ffgame, so it comes along into full screen instead of being left behind on
+   a page nobody can see. */
+/* calc()+env() rather than plain 12px: in real or faux full screen on a
+   notched phone, a flat 12px sits the exit button right under the notch or
+   the status bar overlay — reachable in theory, un-tappable in practice.
+   env() falls back to 0 on anything without a notch, so this costs nothing
+   elsewhere. */
+.ffbar{position:absolute;right:calc(12px + env(safe-area-inset-right));
+  top:calc(12px + env(safe-area-inset-top));z-index:22;display:flex;gap:8px}
+.ffib{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.22);background:rgba(4,24,39,.5);backdrop-filter:blur(12px);
+  color:#eaf6ff;font-family:var(--sans);font-size:13px;font-weight:800;cursor:pointer;
+  transition:background .14s,border-color .14s,transform .14s}
+.ffib:hover{background:rgba(4,24,39,.78);border-color:rgba(255,255,255,.5);transform:translateY(-1px)}
+.ffib.on{background:var(--amberc);border-color:var(--amberc);color:#2a1f00}
+/* On a narrow screen the labels go and the icons stay — two round buttons. */
+@media(max-width:620px){.ffib span{display:none}.ffib{padding:9px 11px}}
+.ffstats{position:absolute;left:12px;top:12px;z-index:21;display:flex;gap:14px;flex-wrap:wrap;
+  padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(4,24,39,.42);backdrop-filter:blur(12px);pointer-events:none;
+  font-family:var(--sans);font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;
+  color:#bfe0f2}
+.ffstats b{color:#fff;font-size:14px;font-variant-numeric:tabular-nums;margin-right:3px}
+@media(max-width:620px){.ffstats{display:none}}
+/* The shop drawer. Slides up over the water rather than replacing it, so the
+   fish keeps swimming behind whatever you are buying. */
+.ffdraw{position:absolute;left:0;right:0;bottom:0;z-index:30;max-height:78%;
+  display:flex;flex-direction:column;
+  background:linear-gradient(rgba(4,24,39,.86),rgba(2,14,26,.96));
+  backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.2);
+  animation:ffup .22s ease}
+.ffdraw[hidden]{display:none}
+@keyframes ffup{from{transform:translateY(14%);opacity:0}to{transform:none;opacity:1}}
+.ffdh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 16px 10px;color:#eaf6ff}
+.ffdh b{font-size:17px}
+.ffdh span{flex:1;font-size:12px;color:#a9c9dd;line-height:1.4}
+.ffx2{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);color:#eaf6ff;font-size:15px;cursor:pointer;flex:0 0 auto}
+.ffx2:hover{background:var(--bad);border-color:var(--bad);color:#fff}
+/* ---- the shop ---- */
+.ffshop{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:9px;
+  overflow:auto;padding:0 16px 16px;-webkit-overflow-scrolling:touch}
+.ffx{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:5px;
+  padding:11px 12px;display:flex;flex-direction:column;gap:6px}
+.ffx.own{border-color:rgba(255,255,255,.34);background:rgba(255,255,255,.1)}
+.ffx.on{border-color:var(--amberc);box-shadow:0 0 0 1px var(--amberc) inset}
+.ffxn{font-size:13.5px;font-weight:800;color:#fff;display:flex;align-items:center;gap:7px}
+.ffxlive{background:var(--amberc);color:var(--carbon);font-size:9.5px;font-weight:800;
+  letter-spacing:.08em;padding:1px 6px;border-radius:2px}
+.ffxd{font-size:12px;line-height:1.45;color:#a9c9dd;flex:1}
+.ffx .btn{width:100%}
+.tank{position:relative;height:min(60vh,520px);border-radius:6px;overflow:hidden;cursor:crosshair;
+  /* water: a shaft of light from the top left, deeper and colder toward the floor */
+  background:
+    radial-gradient(120% 80% at 22% -10%,rgba(180,235,255,.16),transparent 58%),
+    linear-gradient(#12403f,#0b2a2c 52%,#071c1f);
+  border:1px solid var(--line2);box-shadow:inset 0 14px 46px rgba(0,0,0,.55)}
+/* caustics — two slow-drifting light nets, the thing that reads as "underwater" */
+.tank::before{content:"";position:absolute;inset:-20%;pointer-events:none;opacity:.16;
+  background-image:
+    repeating-linear-gradient(64deg,rgba(190,240,255,.5) 0 2px,transparent 2px 26px),
+    repeating-linear-gradient(-58deg,rgba(190,240,255,.38) 0 2px,transparent 2px 34px);
+  animation:caust 42s ease-in-out infinite alternate;mix-blend-mode:screen}
+@keyframes caust{from{transform:translate(-3%,-2%) scale(1)}to{transform:translate(3%,2%) scale(1.06)}}
+/* gravel floor and the plants standing in it */
+.tank .floor{position:absolute;left:0;right:0;bottom:0;height:34px;pointer-events:none;
+  background:linear-gradient(#2a2b22,#191a14);
+  box-shadow:inset 0 6px 12px rgba(0,0,0,.5)}
+.tank .floor::after{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:radial-gradient(circle at 8% 40%,#4a4a3a 2.5px,transparent 3px),
+    radial-gradient(circle at 26% 70%,#3e3f30 3px,transparent 3.5px),
+    radial-gradient(circle at 47% 30%,#55553f 2px,transparent 2.5px),
+    radial-gradient(circle at 68% 62%,#43442f 3px,transparent 3.5px),
+    radial-gradient(circle at 88% 44%,#4f5038 2.5px,transparent 3px);
+  background-size:120px 34px}
+.tank .weed{position:absolute;bottom:26px;width:14px;transform-origin:50% 100%;pointer-events:none;
+  animation:sway 11s ease-in-out infinite alternate}
+.tank .weed i{display:block;width:100%;border-radius:60% 60% 0 0;
+  background:linear-gradient(#3f8f5c,#1e5c3a)}
+@keyframes sway{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+.tank .castle{position:absolute;bottom:28px;right:9%;width:74px;height:66px;pointer-events:none;
+  opacity:.5;background:
+    linear-gradient(#5a5348,#3b3730) 0 18px/18px 48px no-repeat,
+    linear-gradient(#5a5348,#3b3730) 28px 0/20px 66px no-repeat,
+    linear-gradient(#5a5348,#3b3730) 56px 18px/18px 48px no-repeat;
+  filter:drop-shadow(0 3px 6px rgba(0,0,0,.5))}
+.tank .fish{position:absolute;width:70px;left:0;top:0;border-radius:2px;z-index:3;
+  will-change:transform;filter:drop-shadow(0 6px 14px rgba(0,0,0,.6));transition:none}
+/* Flakes are little tumbling specks, not an emoji. A coconut is an event. */
+.tank .food{position:absolute;pointer-events:none;z-index:2}
+.tank .flake{width:7px;height:5px;border-radius:40%;background:#c98b3f;
+  box-shadow:0 0 3px rgba(201,139,63,.6);animation:tumble 6s linear infinite}
+@keyframes tumble{from{transform:rotate(0) scaleX(1)}50%{transform:rotate(180deg) scaleX(.4)}
+  to{transform:rotate(360deg) scaleX(1)}}
+.tank .coco{font-size:1.35rem;filter:drop-shadow(0 0 7px rgba(201,162,39,.85));
+  animation:cocospin 9s linear infinite}
+@keyframes cocospin{to{transform:rotate(360deg)}}
+.tank .bub2{position:absolute;bottom:30px;width:6px;height:6px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.75),rgba(255,255,255,.12) 70%);
+  animation:brise linear infinite}
+@keyframes brise{to{transform:translateY(calc(-1 * var(--h,420px))) translateX(var(--dx,8px));opacity:0}}
+@keyframes sink{from{transform:translateY(-24px);opacity:0}to{transform:none;opacity:1}}
+.tankhud{position:absolute;left:12px;top:12px;display:flex;gap:14px;flex-wrap:wrap;z-index:4;
+  font-family:var(--sans);font-size:12px;text-transform:uppercase;letter-spacing:.08em;
+  color:#cfe8e0;background:rgba(4,16,18,.55);padding:7px 12px;border:1px solid rgba(201,162,39,.22);
+  pointer-events:none}
+.tankhud b{color:#fff}
+.feedbtn{position:absolute;right:12px;bottom:44px;z-index:4}
+.fsbtn{position:absolute;right:12px;top:12px;z-index:4}
+/* Full screen: the tank becomes the whole display, chrome and all. */
+.tank:fullscreen{height:100vh;width:100vw;border:none;border-radius:0}
+.tank:-webkit-full-screen{height:100vh;width:100vw;border:none;border-radius:0}
+.tank .bubbles{position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 20% 90%,rgba(255,255,255,.06) 2px,transparent 3px),
+    radial-gradient(circle at 70% 95%,rgba(255,255,255,.05) 3px,transparent 4px);
+  animation:tbub 9s linear infinite}
+@keyframes tbub{to{background-position:0 -420px,0 -520px}}

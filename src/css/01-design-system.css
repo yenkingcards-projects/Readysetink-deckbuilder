@@ -1,0 +1,63 @@
+/* ===== ReadySetInk design system ==========================================
+   A brushed-periwinkle console faceplate. Every region is a beveled metal
+   plate; the nav, rail buttons and footer are a carbon-navy command layer with
+   halftone texture; corners are sharp or chamfered, never uniformly rounded.
+   Depth is hard bevels — a bright top edge and a chrome-indigo shadow line —
+   never a blurred drop shadow. Warm colour does not exist in this palette; the
+   accents are the blues specified in READYSETINK_DESIGN.md. */
+:root{
+  /* surface */
+  --canvas:#6578a8; --canvas-soft:#dce7f5; --periwinkle:#ffffff;
+  --lavender:#aebde8; --ice:#d9e7f2; --platinum:#e4e7eb; --surface:#ffffff;
+  --carbon:#202638; --chrome:#334a88; --muted:#52648f; --hairline:#68779b;
+  /* accent — Action Red / Yellow / Orange, per the hex values in
+     READYSETINK_DESIGN_CONTRAST_REVISED.md. The front matter is the spec; the
+     prose in that file still quotes the previous blue hexes and is stale.
+     --periwinkle stays white: the revised file gives it #91a7d6, but ink on
+     that is 6.23 and this token is the card-tile surface, which carries the
+     card name. Reading surfaces stay white / platinum / pale sky. */
+  --primary:#2f6fed; --signal:#e60012; --amberc:#ffd400; --navgold:#ffd400;
+  --action-orange:#f58220;
+  /* Same trick as --link/--deep, applied to Action Red. White on #e60012 is
+     only 4.80, so anything carrying a word uses the deeper step: 7.24. Plain
+     --signal is for fills that carry a glyph or no text at all. */
+  --signal-deep:#b2000e; /* 7.24 on white */
+  --amber-press:#e6bf00; /* pressed yellow — 8.47 with carbon */
+  /* Decorative brand-blue highlight. NOT an accent: the design file's own
+     "Don't" says warm colour must always mean "act here", so the prestige
+     frames and owned hexes keep the blue they had rather than turning red. */
+  --shimmer:#38a3ff;
+  /* A link has to read on white AND platinum AND pale sky. Brand primary only
+     manages 4.55 / 3.38 / 2.64, so links use a deeper step of the same hue:
+     7.82 / 6.30 / 6.25. Fills keep primary; text that must be blue uses this. */
+  --link:#1f4da8;      /* 7.82 on white · 6.30 on platinum · 6.25 on pale sky */
+  --deep:#153a80;      /* 10.78 on white — small text and dense labels        */
+  --teal:#23758a; --decksred:#b51f2a;
+  /* ---- text tokens, contrast-checked -------------------------------------
+     The periwinkle canvas cannot carry small text: carbon on it is 3.44:1 and
+     white is 4.37:1, both short of AA. That is not a flaw in the palette — the
+     canvas is chassis, and the design system puts reading surfaces on white,
+     platinum and pale sky. So every text token below is only ever used on a
+     light plate or on carbon, and nothing small sits on bare canvas.
+        carbon on white 15.05 · on platinum 12.13 · on pale-sky 12.03
+        ink-soft on white 9.01 · on platinum  7.26 · on pale-sky 7.20
+        white / pale-sky / yellow on carbon  15.05 / 12.03 / 10.51       */
+  --bg:#6578a8; --bg2:#202638; --panel:#ffffff; --panel2:#ffffff;
+  --line:#68779b; --line2:#334a88;
+  --tx:#202638; --mut:#3b4966; --dim:#3b4966;
+  --on-dark:#e8f0fb; --on-dark-soft:#dce7f5;
+  /* --bad is the error/destructive fill and carries white text in several
+     hover states. The revised file's error red #b51f2a is only 6.57 on white,
+     so the functional token uses the deeper step; #b51f2a stays on --decksred,
+     which is a hero tint and carries no text. */
+  --acc:#1f4da8; --acc2:#2f6fed; --gold:#1f4da8; --good:#2f6fed; --bad:#b2000e;
+  --amber:#d99a2b; --amethyst:#8f6bb0; --emerald:#4e9c6b; --ruby:#c05a55;
+  --sapphire:#4d84a8; --steel:#8d97a3; --ink:#202638;
+  --sans:Arial,Helvetica,sans-serif;
+  --serif:Arial,Helvetica,sans-serif;
+  --display:"Arial Black","Arial Bold",Arial,Helvetica,sans-serif;
+  /* the bevel, defined once */
+  --bevel:inset 0 1px 0 rgba(255,255,255,.34),inset 0 -1px 0 var(--chrome);
+  --bevel-in:inset 0 1px 0 var(--chrome),inset 0 -1px 0 rgba(255,255,255,.28);
+}
+

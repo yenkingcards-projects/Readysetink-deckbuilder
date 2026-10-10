@@ -1,0 +1,87 @@
+{
+  "updated": "2026-09-05",
+  "blocks": [
+    {
+      "id": "early",
+      "label": "Early set",
+      "blurb": "The first few weeks, before the format settles. Fast lists built mostly out of cards people already own."
+    },
+    {
+      "id": "mid",
+      "label": "Mid set",
+      "blurb": "Where things land once everyone has done their homework. These have answers to the early lists and to each other."
+    },
+    {
+      "id": "champs",
+      "label": "Set Champs",
+      "blurb": "What to sleeve for a Set Championship. Heavier on interaction, and built expecting to see the mirror."
+    }
+  ],
+  "decks": [
+    {
+      "id": "13-champs-amber-amethyst",
+      "set": "13",
+      "block": "champs",
+      "inks": ["Amber", "Amethyst"],
+      "name": "Amber/Amethyst Midrange",
+      "archetype": "Discount the curve, take the board, grind them out",
+      "credit": "",
+      "updated": "2026-09-05",
+      "cards": {
+        "Stitch - Carefree Surfer": 4,
+        "Demona - Scourge of the Wyvern Clan": 4,
+        "Gaston - Superior Archer": 4,
+        "Grandmother Willow - Ancient Advisor": 4,
+        "Rafiki - Mystical Fighter": 4,
+        "The Horseman Strikes!": 4,
+        "Luisa Madrigal - Pushing Through": 4,
+        "Luisa Madrigal - Confident Climber": 3,
+        "Nakoma - Waiting Out the Storm": 3,
+        "Isis Vanderchill - Ice Queen of St. Canard": 4,
+        "Sven - Leaping Reindeer": 2,
+        "Tigger - Bouncing All the Way": 4,
+        "Cheshire Cat - Inexplicable": 4,
+        "Dumbo - The Flying Elephant": 3,
+        "Besties, Assemble!": 4,
+        "Ohana Means Family": 1,
+        "Hamm - Piggy Bank": 4
+      },
+      "why": "Two discounters that stack. Grandmother Willow takes 1 off the next character every turn for free, Hamm takes another 1 off for an exert, and together they land a 6-drop on turn four and a 7-drop on five. The rest of the list is built to cash that in: 51 characters means there is always a body worth discounting, and the one-ink Challengers keep trading up while the expensive half of the curve is still coming down. The removal is split on purpose — Gaston answers anything with 5 strength or more, The Horseman Strikes! answers Evasive, and Tigger bounces the cheap utility neither of them can touch.",
+      "lines": [
+        "Turn 1 Luisa Madrigal - Pushing Through, turn 3 Shift Confident Climber onto her. A 6/4 for three ink, two turns before anyone should have one.",
+        "Willow and Hamm both discount the next character and they stack, so Demona comes down on four.",
+        "Demona exerts their whole board and refills both hands to 3. Play her the turn a tapped board turns into a free lore swing, not just as a 6-drop.",
+        "Cheshire Cat's Boost moves 2 damage off your character and onto theirs — it finishes a wounded blocker while he grows.",
+        "Luisa Confident Climber pulls damage onto herself, then dumps all of it onto one opposing character once she is carrying 3 or more.",
+        "Ohana Means Family on a loaded Stitch or Luisa: every point of damage healed is a card drawn.",
+        "Dumbo hands Evasive to whoever needs to get through — or to whoever needs to stop being challenged."
+      ],
+      "against": [
+        "Wide boards of 3- and 4-strength characters. Gaston needs 5 strength and Horseman needs Evasive, so a swarm of medium bodies dodges both.",
+        "Fast starts. Willow is uninkable and most of the deck is 1 lore a body, so an aggro deck that ignores the board can be up 8 before the discounts matter.",
+        "Decks that keep refilling your hand. Demona can't ready while you hold 3 or more cards, so being drawn cards turns her into a 6-cost wall.",
+        "Removal on Luisa Madrigal - Pushing Through before you Shift. Lose her and the turn-3 spike is just another five-drop."
+      ],
+      "mulligan": "Keep a discounter — Willow or Hamm — and something to do on one, which means Rafiki, Luisa Pushing Through, or Besties, Assemble! to go and find one. Ship the top of the curve. Stitch is a 7-drop you will draw later, one Demona is plenty, and a second Luisa Confident Climber with no Pushing Through under her is a five-cost card you cannot Shift.",
+      "priorities": [
+        "Turn 2 is for a discounter, not for the biggest thing in hand. The whole curve assumes one is already out.",
+        "Empty your hand. Demona wants you under 3 cards and the discounts only fire once a turn, so holding cards wastes both.",
+        "Save Gaston for something that actually has 5 strength. Nothing else in the deck answers those.",
+        "Challenge freely with Rafiki and Luisa Pushing Through. They cost one ink and are there to trade up, not to sit.",
+        "Count the lore before you play Demona. Exerting their board is worth more as a swing turn than as tempo."
+      ],
+      "strengths": [
+        "Two stacking discounts pull the whole curve forward a full turn.",
+        "Real card advantage — Stitch, Demona, Horseman and Ohana all draw.",
+        "51 characters, so it almost never draws a hand with nothing to do.",
+        "One-ink Challengers that trade up all game long."
+      ],
+      "weaknesses": [
+        "Conditional removal: 5+ strength or Evasive only.",
+        "Mostly 1-lore bodies, so it grinds rather than races.",
+        "10 uninkable cards, and one of them is a card you want on turn two.",
+        "Demona actively fights against a full hand."
+      ]
+    }
+  ]
+}

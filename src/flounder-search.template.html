@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<title>Ready Set Ink — Disney Lorcana card search and deck builder</title>
+<!-- A crawler does not run the app, so everything it can learn about this page
+     has to be here in the head. The per-card pages under /card/ are what
+     actually get indexed (see gen_pages.py); this block is what makes the app
+     itself look like something when it is pasted into Discord or shared. All
+     absolute URLs, because a relative og:image resolves to nothing. -->
+<meta name="description" content="Search every Disney Lorcana card by what it does — or by what is in the artwork. Free deck builder with pull sheets, official rulings, collection tracking and shareable deck links. No account needed.">
+<link rel="canonical" href="https://www.readysetink.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ready Set Ink">
+<meta property="og:title" content="Ready Set Ink — Disney Lorcana card search and deck builder">
+<meta property="og:description" content="Search every Lorcana card by what it does, or by what is in the artwork. Free deck builder with pull sheets, rulings and shareable deck links.">
+<meta property="og:url" content="https://www.readysetink.com/">
+<meta property="og:image" content="https://www.readysetink.com/icons/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ready Set Ink — Disney Lorcana card search and deck builder">
+<meta name="twitter:description" content="Search every Lorcana card by what it does, or by what is in the artwork. Free, no account needed.">
+<meta name="theme-color" content="#202638">
+<link rel="manifest" href="/manifest.webmanifest">
+<!-- Icons. Several, because every platform wants a different one:
+       .ico       — the address bar and old bookmarks
+       32/192/512 — Chrome, and the Android home screen
+       apple-touch-icon — iOS. It must be OPAQUE: iOS flattens transparency to
+                    black, and this logo has a black ring, so a transparent
+                    version bleeds into the corners and loses its edge.
+     The maskable one lives in the manifest with 20% padding, because Android
+     crops home-screen icons to a circle and would otherwise slice the ring
+     with the wording on it clean off. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Ready Set Ink">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Vercel Web Analytics. Counts page views and where they came from; no
+     cookies, no fingerprint, no personal data, nothing sold to anybody. It is
+     here because every product decision on this site has so far been a guess:
+     nobody knows which searches people actually run, which card page Google
+     sends them to, or where they give up. One script, and the guessing stops.
+
+     It only resolves on Vercel. Opened from a file or any other host the
+     request 404s, the deferred script does nothing, and the page is unaffected
+     — which is why it can sit in a file that has to keep working offline. -->
+<script defer src="/_vercel/insights/script.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ready Set Ink","url":"https://www.readysetink.com/","description":"Disney Lorcana card search and deck builder.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.readysetink.com/#q={search_term_string}"},"query-input":"required name=search_term_string"},"@id":"https://www.readysetink.com/#website","publisher":{"@id":"https://www.readysetink.com/#organization"}},{"@type":"Organization","name":"Ready Set Ink","url":"https://www.readysetink.com/","logo":"https://www.readysetink.com/icons/icon-512.png","sameAs":["https://www.youtube.com/@readysetink"],"@id":"https://www.readysetink.com/#organization"}]}</script>
+<style>
+/*__CSS__*/</style>
+<style id="nbcss">/*__NB_CSS__*/</style>
+</head>
+<body>
+<h1 style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0">Ready Set Ink: Disney Lorcana card search and deck builder</h1>
+<!-- rainbow gradient for the Enchanted ring, defined once -->
+
+<div id="bub"></div>
+
+<header>
+  <button type="button" class="logo" id="logo" title="Back to the deck builder"><span class="f">🐠</span><b>Ready Set Ink</b></button>
+  <div class="sp"></div>
+  <span class="worn" id="worn"></span>
+  <button class="btn go" id="acct" hidden>Sign in</button>
+</header>
+
+<nav class="tabs">
+  <button id="tDeck" class="on">Deck builder</button>
+  <button id="tSearch">Search for cards</button>
+  <button id="tColl" class="collonly">My collection</button>
+  <button id="tDecks">Decks</button>
+  <button id="tLore">Lore tracker</button>
+  <a class="navlink" href="https://map.readysetink.com/" target="_blank" rel="noopener">Map</a>
+  <a class="navlink" href="https://inklist.readysetink.com/" target="_blank" rel="noopener">The Ink List ↗</a>
+  <span class="otherwrap">
+    <button id="tOther">Other</button>
+    <button id="tOtherMenu" aria-label="Other menu" aria-haspopup="true" aria-expanded="false">☰</button>
+  </span>
+</nav>
+<!-- A sibling of the ".otherwrap" it opens from, not a child of it: nested
+     inside nav.tabs it kept losing to unrelated page content that turned out
+     to sit in its own stacking context, no matter how high its z-index went.
+     Positioned in JS from the button's own rect instead of CSS anchoring, so
+     moving it here doesn't cost it its place under the hamburger. -->
+<div class="othermenu" id="otherMenu" hidden></div>
+
+<div class="subsw" id="subsw">
+  <button id="mManual" class="on">Build manually</button>
+  <button id="mGuided">🥥 Guided Coconut Build</button>
+</div>
+
+<main>
+<section class="view on" id="vSearch">
+  <!-- The deck bar used to run full-width across the top of the page: deck
+       name, "unsaved", and Save, a long way from the deck panel they describe.
+       All three moved inside the panel. Everything about a deck now lives in
+       one box. -->
+  <div class="sfield" id="sf"><input id="q" type="text" placeholder="Describe a card — &ldquo;blue dog&rdquo;, &ldquo;castle at night&rdquo; — or type its name"></div>
+  <!-- ---- the one thing this site does that the others don't ----------------
+       Art search was sitting as one of three equal switches, which said it was
+       one of three equal features. It isn't: every other deck builder can
+       search a card's name and its rules text, and none of them can find
+       Stitch from "blue dog". So it leads — its own row, its own size, its own
+       sentence saying what it's for — and Franchise and Flavour sit under it
+       as the smaller extras they are. -->
+  <div class="wrap">
+    <!-- Search + Special searches + Filters, together, as one sticky column —
+         a left-hand mirror of .deck's right-hand sticky column. This lived as
+         three full-width bars stacked above .wrap until now: the art tile
+         spanned the whole page, Special searches and Filters were both long
+         full-width drawers, and every one of them pushed the actual cards
+         further down the page. Filters in particular already tried a left
+         column once (see the removed note here) and was pulled back out for
+         looking like "a scrollbar with words on it" — this version borrows
+         .deck's own chrome (surface/border/bevel, same sticky top/max-height)
+         instead of a bare vertical strip, so it reads as a matching panel
+         rather than a sidebar bolted on the side. -->
+    <aside class="searchcol" id="searchcol">
+      <div class="artrow">
+        <button class="swx art" id="tgTag" aria-pressed="false">
+          <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.6-.7 1.6-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-4.4-4-8-9-8Z"/><circle class="sd sd1" cx="7.7" cy="11.5" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd2" cx="11" cy="7.9" r="1.05" fill="currentColor" stroke="none"/><circle class="sd sd3" cx="15.4" cy="8.9" r="1.05" fill="currentColor" stroke="none"/></svg></i></span><span class="artlb"><b>Search the artwork</b><span id="tgTagSub">Type what you remember seeing, not the card name</span></span></button>
+        <div class="alsorow">
+          <span class="alsolbl">Also search</span>
+        <button class="swx sto wee" id="tgSto" aria-pressed="false">
+          <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.2c2.6-.9 5-.9 7.4.6v12c-2.4-1.5-4.8-1.5-7.4-.6V5.2Z"/><path class="pg" d="M21 5.2c-2.6-.9-5-.9-7.4.6v12c2.4-1.5 4.8-1.5 7.4-.6V5.2Z"/><path d="M12 5.8v12.6"/></svg></i></span><span class="lb">Franchise</span></button>
+        <button class="swx flav wee" id="tgFlav" aria-pressed="false">
+          <span class="kn"><i class="swi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12.4c0 3.7-3.6 6.7-8 6.7-.9 0-1.8-.1-2.6-.35L4.6 21l1.1-3.5A6.4 6.4 0 0 1 4 12.4c0-3.7 3.6-6.7 8-6.7s8 3 8 6.7Z"/><path class="qm" d="M9.6 10.9c.9-.6 1.9.1 1.6 1.1-.2.7-1 .9-1.3 1.6"/><circle class="qd" cx="14.4" cy="12.1" r=".95" fill="currentColor" stroke="none"/></svg></i></span><span class="lb">Flavour</span></button>
+        </div>
+      </div>
+      <div class="srow">
+        <button class="btn" id="sy">Syntax</button>
+      </div>
+      <div class="hint" id="syh" style="display:none">
+        <code>ink:amber</code> <code>cost&gt;=3</code> <code>type:action</code> <code>rarity:rare</code> <code>set:9</code>
+        <code>keyword:rush</code> <code>class:princess</code> <code>story:frozen</code> <code>text:"draw a card"</code>
+        <code>flavor:"business cards"</code>
+        <code>-inkwell</code> <code>vanilla</code> <code>artist:kole</code>
+        <code>$40</code> <code>$10-40</code> <code>price&gt;=20</code> <code>legendary</code> · combine freely,
+        e.g. <code>amber legendary $40</code> — bare words fuzzy-match, everything ANDs together
+      </div>
+      <details class="special" id="special">
+        <summary>✨ Special searches<span class="cnt" id="specialCnt"></span></summary>
+        <div class="specialbody">
+          <div class="exprow">
+            <button class="fbtn" id="fb"><span class="fi">🐠</span><span id="fbl">Flounder</span></button>
+            <label class="grpsel"><span>Jump to</span>
+              <select id="grpJump"><option value="">— a category —</option></select>
+            </label>
+            <button class="btn" id="expAll">Expand all</button>
+            <button class="btn" id="colAll">Collapse all</button>
+          </div>
+          <div class="groups" id="groups"></div>
+          <!-- Both drawers are tall enough that the results end up well below the
+               fold. This is the way back down. -->
+          <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
+        </div>
+      </details>
+      <details class="special filters" id="side">
+        <summary><span>Filters</span><span class="cnt" id="fcnt"></span></summary>
+        <div class="specialbody"><div id="sidebody"></div>
+          <div class="seecards"><button class="btn go" data-seecards="1">See the cards ↓</button></div>
+        </div>
+      </details>
+    </aside>
+    <section class="cards">
+      <div class="rbar"><div class="ct" id="ct">—</div>
+        <select id="sort">
+          <option value="set">Set — newest first</option>
+          <option value="setold">Set — oldest first</option>
+          <option value="name">Name</option>
+          <option value="cost">Cost ↑</option>
+          <option value="costdesc">Cost ↓</option>
+        </select></div>
+      <div class="gtools">
+        <button class="btn" id="lnk" title="Copies a link that reopens exactly this search, and opens your device's share sheet">Share your search</button>
+        <!-- One menu instead of a permanent wall of keyboard hints. The legend
+             is worth reading once and never again, so it lives behind a click. -->
+        <details class="cvset" id="cvset">
+          <summary aria-label="Card view settings" title="Card view settings"><i class="gearic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></i></summary>
+          <div class="cvbody">
+            <button class="btn" id="tgRemind">Reminder tags <b class="sw">ON</b></button>
+            <button class="btn" id="tgPrice">Prices: off</button>
+            <label class="cvcols">Columns
+              <select id="gcols">
+                <option value="0">Auto</option>
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option><option value="6">6</option>
+              </select></label>
+            <div class="kbhint"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> move
+              · <kbd>Enter</kbd> add · <kbd>4</kbd> playset · <kbd>⌫</kbd> remove
+              · <kbd>/</kbd> search · drag a card to the deck</div>
+          </div>
+        </details>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+    <aside class="deck" id="deck" style="position:relative"></aside>
+  </div>
+</section>
+
+<section class="view" id="vGuide"><div id="guide"></div></section>
+
+<section class="view" id="vColl">
+  <div class="page">
+    <h1><span class="gi">📦</span>My collection</h1>
+    <p class="lede">Mark which printings you actually own, then let the pull list tell you
+      exactly what to fetch out of your binder for a deck.</p>
+    <div id="collSum"></div>
+    <div id="collBody"></div>
+  </div>
+</section>
+
+<section class="view" id="vPref">
+  <div class="page">
+    <h1><span class="gi">⚙️</span>Settings</h1>
+    <p class="lede">Changes how the site behaves for you.</p>
+    <div id="prefBody"></div>
+  </div>
+</section>
+
+<section class="view" id="vDecks"><div id="deckspage"></div></section>
+<section class="view" id="vMeta"><div id="metapage"></div></section>
+
+
+<section class="view" id="vGuess"><div id="guesspage"></div></section>
+
+<section class="view" id="vDust"><div id="dustpage"></div></section>
+
+<section class="view" id="vQuiz"><div id="quizpage"></div></section>
+
+<section class="view" id="vContrib"><div id="contribpage"></div></section>
+
+<section class="view" id="vErr"><div id="errpage"></div></section>
+<section class="view" id="vStart"><div id="startpage"></div></section>
+
+<section class="view" id="vUp"><div id="uppage"></div></section>
+
+<section class="view" id="vMick"><div id="mickpage"></div></section>
+
+<section class="view" id="vLeak"><div id="leakpage"></div></section>
+
+<section class="view" id="vWorld"><div id="worldpage"></div></section>
+
+<section class="view" id="vAqua"><div id="aquapage"></div></section>
+
+<section class="view" id="vCred"><div id="credpage"></div></section>
+
+<section class="view" id="vLinks"><div id="linkspage"></div></section>
+
+<section class="view" id="vAccount"><div id="accountpage"></div></section>
+
+
+<section class="view" id="vLore"><div id="lorepage"></div></section>
+
+<section class="view" id="vJudge"><div id="judgepage"></div></section>
+
+<section class="view" id="vOther">
+  <div class="page">
+    <h1><span class="gi">✨</span>Other</h1>
+    <p class="lede">The bits that aren't deck building.</p>
+    <div id="otherTiles"></div>
+  </div>
+</section>
+</main>
+<!-- The running footer is gone at Ben's request — the Disney/Ravensburger
+     disclaimer moved to a permanent block at the top of Settings and the full
+     version on Sources, rather than repeating itself under every screen.
+
+     This small strip is a DIFFERENT thing, added back deliberately: a Ko-fi
+     link and the affiliate disclosure the TCGplayer buy links need. Kept to
+     one line on purpose — the point of removing the old footer was that it
+     was a repeating wall of text, not that a footer itself is unwelcome. -->
+<footer class="sitefoot" id="sitefoot">
+  <span class="kofiwrap" id="kofiwrap">
+    <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+    <script type="text/javascript">kofiwidget2.init('Support Ready Set Ink', '#001aff', 'J2E225ZV4T');kofiwidget2.draw();</script>
+  </span>
+  <span class="affnote">Buy links go to TCGplayer through Ready Set Ink's affiliate link — it may earn a small commission, at no extra cost to you.</span>
+  <span class="affnote"><a href="/card/">Cards</a> · <a href="/sets/">Sets</a> · <a href="/franchises/">Franchises</a> · <a href="/characters/">Characters</a> · <a href="/inks/">Inks</a> · <a href="/keywords/">Keywords</a> · <a href="/glossary/">Glossary</a> · <a href="/learn/how-to-play-lorcana/">How to play</a> · <a href="/deck-builder/">Deck builder</a> · <a href="/meta-decks/">Meta decks</a> · <a href="/data/">Data</a></span>
+</footer>
+
+<div class="mtabs"><button id="mS">✨ Search</button><button id="mC" class="on">🔍 Cards</button><button id="mD">🗂️ Deck <span id="mN">0</span></button></div>
+<!-- There used to be a literal ${""} here. It was a template-literal fragment
+     stranded in plain HTML — nothing evaluates this file as a template, so the
+     browser printed the four characters on the page, just under the footer. -->
+<div class="mbg" id="mbg"><div class="modal" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+<!-- The welcome tour. Empty until startTour() fills it; hidden the rest of the
+     time. Lives here rather than being created in JS so the CSS above it can
+     be read next to everything else's. -->
+<div class="tourbg" id="tourbg" hidden><div class="tour" id="tour"></div></div>
+
+<script>var DATA=/*__DATA__*/;var KINDS=/*__KINDS__*/;var METAD=/*__METADECKS__*/;</script>
+<script>
+/*__JS__*/</script>
+</body>
+</html>
